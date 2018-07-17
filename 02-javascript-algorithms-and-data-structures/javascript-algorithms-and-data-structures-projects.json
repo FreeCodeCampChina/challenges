@@ -78,30 +78,6 @@
         "String.prototype.toLowerCase()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Verifica si es palíndromo",
-          "description": [
-            "Crea una función que devuelva <code>true</code> si una cadena de texto dada es un palíndromo, y que devuelva <code>false</code> en caso contrario",
-            "Un palíndromo es una palabra u oración que se escribe de la misma forma en ambos sentidos, sin tomar en cuenta signos de puntuación, espacios y sin distinguir entre mayúsculas y minúsculas.",
-            "Tendrás que quitar los caracteres no alfanuméricos (signos de puntuación, espacioes y símbolos) y transformar las letras a minúsculas para poder verificar si el texto es palíndromo.",
-            "Te proveeremos textos en varios formatos, como \"racecar\", \"RaceCar\", and \"race CAR\" entre otros.",
-            "También vamos a pasar cadenas con símbolos especiales, tales como <code>\"2A3*3a2\"</code>, <code>\"2A3 3a2\"</code>, y <code>\"2_A3*3#A2\"</code>.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Procure por Palíndromos",
-          "description": [
-            "Retorne <code>true</code> se o texto fornecida é um palíndromo. Caso contrário, retorne <code>false</code>.",
-            "Um <dfn>palíndromo</dfn> é uma palavra ou sentença que é soletrada da mesma maneira tanto para a frente quanto para trás, ignorando pontuação, maiúsculas e minúsculas, e espaçamento.",
-            "<strong>Nota</strong><br>Você precisará remover <strong>todos caracteres não alfanuméricos</strong> (pontuação, espaços e símbolos) e transformar todas as letras em maiúsculas ou minúsculas para procurar por palíndromos.",
-            "Nós vamos passar textos de vários formatos, tais como <code>\"racecar\"</code>, <code>\"RaceCar\"</code> e <code>\"race CAR\"</code> entre outras.",
-            "Nós também vamos passar textos com símbolos especiais, tais como <code>\"2A3*3a2\"</code>, <code>\"2A3  3a2\"</code> e <code>\"2_A3*3#A2\"</code>.",
-            "Lembre-se de usar <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se você ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -247,24 +223,6 @@
       ],
       "isRequired": true,
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Convertior de números romanos",
-          "description": [
-            "Convierte el número dado en numeral romano.",
-            "Todos los <a href=\"http://www.mathsisfun.com/roman-numerals.html\" target=\"_blank\">numerales romanos</a> en las respuestas deben estar en mayúsculas.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "fr": {
-          "title": "Convertir en chiffres romains",
-          "description": [
-            "Convertis le nombre donné en chiffres romains.",
-            "Tous les <a href=\"http://www.mathsisfun.com/roman-numerals.html\" target=\"_blank\">chiffres romains</a> doivent être en lettres capitales.",
-            "N'oublie pas d'utiliser <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Lire-Chercher-Demander</a> si tu es bloqué. Essaye de trouver un partenaire. Écris ton propre code."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -320,28 +278,6 @@
       "challengeType": 5,
       "isRequired": true,
       "releasedOn": "January 1, 2016",
-      "translations": {
-        "es": {
-          "title": "Cifrado César",
-          "description": [
-            "Uno de los <dfn>cifrados</dfn> más simples y ampliamente conocidos es el <code>cifrado César</code>, también llamado <code>cifrado por desplazamiento</code>. En un <code>cifrado por desplazamiento</code> los significados de las letras se desplazan por una cierta cantidad.",
-            "Un uso moderno común es el cifrado <a href=\"https://es.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> , donde los valores de las letras se desplazan 13 espacios. De esta forma 'A' &harr; 'N', 'B' &harr;  'O' y así.",
-            "Crea una función que tome una cadena de texto cifrada en <a href=\"https://es.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> como argumento y que devuelva la cadena de texto decodificada.",
-            "Todas las letras que se te pasen van a estar en mayúsculas. No transformes ningún caracter no-alfabético (por ejemplo: espacios, puntuación). Simplemente pásalos intactos.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Cifra de César",
-          "description": [
-            "Uma das mais simples e mais conhecidas <dfn>cifras</dfn> é a <code>cifra de César</code>, também conhecida como <code>cifra de troca</code>. Em uma <code>cifra de troca</code> os significados das letras são deslocados por um determinado valor.",
-            "Um uso moderno comum é a cifra <a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a>, aonde os valores das letras são deslocados por 13 lugares. Logo 'A' &harr; 'N', 'B' &harr;  'O' e assim por diante.",
-            "Escreva uma função que recebe um texto criptografado com <a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> como entrada e retorna o texto desencriptado.",
-            "Todas as letras serão maiúsculas. Não transforme nenhum caracter não alfanuméricos (como espaços, pontuação), mas passe-os adiante.",
-            "Lembre-se de usar <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se você ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -489,38 +425,6 @@
       ],
       "challengeType": 5,
       "isRequired": true,
-      "translations": {
-        "es": {
-          "title": "Valida Números Telefónicos de los EEUU",
-          "description": [
-            "Haz que la función devuelva true (verdadero) si el texto introducido parece un número válido en los EEUU.",
-            "El usuario debe llenar el campo del formulario de la forma que desee siempre y cuando tenga el formato de un número válido en los EEUU. Los números mostrados a continuación tienen formatos válidos en los EEUU:",
-            "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
-            "Para esta prueba se te presentará una cadena de texto como por ejemplo: <code>800-692-7753</code> o <code>8oo-six427676;laskdjf</code>. Tu trabajo consiste en validar o rechazar el número telefónico tomando como base cualquier combinación de los formatos anteriormente presentados. El código de área es requrido. Si el código de país es provisto, debes confirmar que este es <code>1</code>. La función debe devolver true si la cadena de texto es un número telefónico válido en los EEUU; de lo contrario, debe devolver false.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "Verifica i numeri telefonici degli Stati Uniti",
-          "description": [
-            "Ritorna <code>true</code> se la stringa passata come argomento è un numero valido negli Stati Uniti.",
-            "L'utente può digitare qualunque stringa nel campo di inserimento, purchè sia un numero di telefono valido negli Stati Uniti. Qui sotto alcuni esempi di numeri di telefono validi negli Stati Uniti (fai riferimento ai test per le altre varianti):",
-            "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
-            "In questo problema ti saranno presentate delle stringe come <code>800-692-7753</code> o <code>8oo-six427676;laskdjf</code>. Il tuo obiettivo è di validare o rigettare il numero di telefono basato su una qualunque combinazione dei formati specificati sopra. Il prefisso di zona è obbligatorio. Se il prefisso nazionale è presente, devi confermare che corrisponda a <code>1</code>. Ritorna <code>true</code> se la stringa è un numero di telefono valido negli Stati Uniti; altrimenti ritorna <code>false</code>.",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Valida números telefônicos dos EUA",
-          "description": [
-            "Retorna <code>true</code> se a string passada é um número telefônico válido nos EUA.",
-            "O usuário pode preencher o campo de qualquer maneira com tanto que seja um número válido nos EUA. Os seguintes exemplos são formatos válidos para números de telefone nos EUA (baseie-se nos testes abaixo para outras variações):",
-            "<blockquote>555-555-5555\n(555)555-5555\n(555) 555-5555\n555 555 5555\n5555555555\n1 555 555 5555</blockquote>",
-            "Para esse desafio será dado a você uma string como <code>800-692-7753</code> ou <code>8oo-six427676;laskdjf</code>. Seu trabalho é validar ou rejeitar o número de telefone dos EUA baseado nos exmplos de formatos fornecidos acima. O código de área é obrigatório. Se o código do país for fornecido, você deve confirmar que o código do país é <code>1</code>. Retorne <code>true</code> se a string é um número válido nos EUA; caso contrário retorne <code>false</code>.",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -587,39 +491,6 @@
         "Floating Point Guide"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Cambio Exacto",
-          "description": [
-            "Crea una función que simule una caja registradora que acepte el precio de compra como el primer argumento, la cantidad recibida como el segundo argumento, y la cantidad de dinero disponible en la registradora (cid) como tercer argumento",
-            "cid es un arreglo bidimensional que lista la cantidad de dinero disponible",
-            "La función debe devolver la cadena de texto \"Insufficient Funds\" si el cid es menor al cambio requerido. También debe devolver \"Closed\" si el cid es igual al cambio",
-            "De no ser el caso, devuelve el cambio en monedas y billetes, ordenados de mayor a menor denominación.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "Cambio Esatto",
-          "description": [
-            "Scrivi una funzione che simuli un registro di cassa chiamata <code>checkCashRegister()</code> che accetti il prezzo degli articoli come primo argomento (<code>price</code>), la somma pagata (<code>cash</code>), e la somma disponibile nel registratore di cassa (<code>cid</code>) come terzo argomento.",
-            "<code>cid</code> è un array a due dimensioni che contiene la quantità di monete e banconote disponibili.",
-            "Ritorna la stringa <code>\"Insufficient Funds\"</code> se la quantità di denaro disponibile nel registratore di cassa non è abbastanza per restituire il resto. Ritorna la stringa <code>\"Closed\"</code> se il denaro disponibile è esattamente uguale al resto.",
-            "Altrimenti, ritorna il resto in monete e banconote, ordinate da quelle con valore maggiore a quelle con valore minore.",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Troco Exato",
-          "description": [
-            "Crie uma função que simula uma caixa registradora chamada <code>checkCashRegister()</code> e aceita o valor da compra como primeiro argumento (<code>price</code>), pagamento como segundo argumento (<code>cash</code>), e o dinheiro na caixa registradora (<code>cid</code>) como terceiro argumento.",
-            "<code>cid</code> é uma matriz bidimensional que lista o dinheiro disponível.",
-            "Retorne a string <code>\"Insufficient Funds\"</code> se o dinheiro na caixa registradora é menor do que o troco ou se não é possível retornar o troco exato. Retorne a string <code>\"Closed\"</code> se o dinheiro na caixa é igual ao troco.",
-            "Case cotrário, retorne o troco em moedas e notas, ordenado do maior para menor.",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código.",
-            "<table class='table table-striped'><tr><th>Currency Unit</th><th>Amount</th></tr><tr><td>Penny</td><td>$0.01 (PENNY)</td></tr><tr><td>Nickel</td><td>$0.05 (NICKEL)</td></tr><tr><td>Dime</td><td>$0.1 (DIME)</td></tr><tr><td>Quarter</td><td>$0.25 (QUARTER)</td></tr><tr><td>Dollar</td><td>$1 (DOLLAR)</td></tr><tr><td>Five Dollars</td><td>$5 (FIVE)</td></tr><tr><td>Ten Dollars</td><td>$10 (TEN)</td></tr><tr><td>Twenty Dollars</td><td>$20 (TWENTY)</td></tr><tr><td>One-hundred Dollars</td><td>$100 (ONE HUNDRED)</td></tr></table>"
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",

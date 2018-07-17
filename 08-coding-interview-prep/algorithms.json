@@ -78,32 +78,6 @@
         "Symmetric Difference"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Diferencia Simétrica",
-          "description": [
-            "Crea una función que acepte dos o más arreglos y que devuelva un arreglo conteniendo la diferenia simétrica entre ambos",
-            "En Matemáticas, el término 'diferencia simétrica' se refiere a los elementos en dos conjuntos que están en el primer conjunto o en el segundo, pero no en ambos.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "Differenza Simmetrica",
-          "description": [
-            "Crea una funzione che accetti due o più array e che ritorni un array contenente la <dfn>differenza simmetrica</dfn> (<code>&xutri;</code> o <code>&oplus;</code>) degli stessi.",
-            "Dati due insiemi (per esempio l'insieme <code>A = {1, 2, 3}<code> e l'insieme <code>B = {2, 3, 4}</code>, il termine matematico \"differenza simmetrica\" di due insiemi è l'insieme degli elementi che sono in almeno uno dei due insiemi, ma non in entrambi (<code>A &xutri; B = C = {1, 4}</code>). Per ogni differenza simmetrica aggiuntiva che fai (per esempio su un insieme <code>D = {2, 3}</code>), devi prendere l'insieme degli elementi che sono in almeno uno dei due insiemi ma non in entrambi (<code>C &xutri; D = {1, 4} &xutri; {2, 3} = {1, 2, 3, 4}</code>).",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Diferença Simétrica",
-          "description": [
-            "Crie uma função que recebe duas ou mais matrizes e retorna a matriz <dfn>diferença simétrica</dfn> (<code>&xutri;</code> ou <code>&oplus;</code>) das matrizes fornecidas.",
-            "Dado dois conjuntos (por exemplo conjunto <code>A = {1, 2, 3}</code> e conjunto <code>B = {2, 3, 4}</code>), o termo matemático \"diferença simétrica\" dos dois cojuntos é o conjunto dos elementos que estão em um dos conjuntos, mas não nos dois (<code>A &xutri; B = C = {1, 4}</code>). Para cada diferença simétrica adicional que você faz (digamos em um terceiro conjunto <code>D = {2, 3}</code>), voce deve retornar o conjunto no qual os elementos estão em um dos conjuntos mas não nos dois (<code>C &xutri; D = {1, 4} &xutri; {2, 3} = {1, 2, 3, 4}</code>). O conjunto final deve ter somentes valores únicos (<em>sem números repetidos</em>).",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -161,29 +135,6 @@
         "Global Array Object"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Actualizando el Inventario",
-          "description": [
-            "Compara y actualiza el inventario actual, almacenado en un arreglo bidimensional, contra otro arreglo bidimensional de inventario nuevo. Actualiza las cantidades en el inventario actual y, en caso de recibir una nueva mercancía, añade su nombre y la cantidad recibida al arreglo del inventario en orden alfabético.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "Aggiornamento dell'Inventario",
-          "description": [
-            "Confronta e aggiorna l'inventario, contenuto in un array bidimensionale, con un secondo array bidimensionale relativo ad una nuova consegna. Aggiorna le quantità disponibili in inventario (dentro <code>arr1</code>). Se uno degli articoli non è presente nell'inventario, aggiungi allo stesso il nuovo articolo e la sua quantità. Ritorna un array con l'inventario aggiornato, che deve essere ordinato alfabeticamente per articolo.",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Atualizando Inventário",
-          "description": [
-            "Compare e atualize o inventário armazenado em um matriz 2D contra uma segunda matriz 2D de uma entrega recente. Atualize a quantidade de itens no inventário atual (em <code>arr1</code>). Se um item não pode ser encontrado, adicione um novo item e a sua quantidade na matriz do inventário. O inventário retornado deve estar em ordem alfabética por item.",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -275,32 +226,6 @@
         "RegExp"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Sin Repeticiones, por Favor",
-          "description": [
-            "Crea una función que devuelva el número total de permutaciones de las letras en la cadena de texto provista, en las cuales no haya letras consecutivas repetidas",
-            "Por ejemplo, 'aab' debe retornar 2 porque, del total de 6 permutaciones posibles, solo 2 de ellas no tienen repetida la misma letra (en este caso 'a').",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "Niente Ripetizioni, per Favore",
-          "description": [
-            "Ritorna il numero totale di permutazioni della stringa passata che non hanno lettere consecutive riptetute. Assumi che tutti i caratteri nella stringa passata siano unici.",
-            "Per esempio, <code>aab</code> deve ritornare 2, perchè la stringa ha 6 permutazioni possibili in totale (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), ma solo 2 di loro (<code>aba</code> e <code>aba</code>) non contengono la stessa lettera (in questo caso <code>a</code> ripetuta).",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Sem repetição, por favor",
-          "description": [
-            "Retorne o número total de permutações da string fornecida que não tem letras consecutivas repetidas. Assuma que todos os caracteres na string fornecida são únicos.",
-            "Por exemplo, <code>aab</code> deve retornar 2 porque tem um total de 6 permutações (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), mas somente duas delas (<code>aba</code> and <code>aba</code>) não tem a mesma letra (nesse caso <code>a</code>) se repetindo.",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -359,41 +284,6 @@
         "Array.prototype.reduce()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "En Parejas",
-          "description": [
-            "Crea una función que devuelva la suma de todos los índices de los elementos de 'arr' que pueden ser emparejados con otro elemento de tal forma que la suma de ambos equivalga al valor del segundo argumento, 'arg'. Si varias combinaciones son posibles, devuelve la menor suma de índices. Una vez un elemento ha sido usado, no puede ser usado de nuevo para emparejarlo con otro elemento.",
-            "Por ejemplo, pairwise([1, 4, 2, 3, 0, 5], 7) debe devolver 11 porque 4, 2, 3 y 5 pueden ser emparejados para obtener una suma de 7",
-            "pairwise([1, 3, 2, 4], 4) devolvería el valor de 1, porque solo los primeros dos elementos pueden ser emparejados para sumar 4. ¡Recuerda que el primer elemento tiene un índice de 0!",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "it": {
-          "title": "A Coppie",
-          "description": [
-            "Dato un array <code>arr</code>, trova le coppie di elementi la cui somma è uguale al secondo argomento passato <code>arg</code>. Ritorna quindi la somma dei loro indici.",
-            "Se ci sono più coppie possibili che hanno lo stesso valore numerico ma indici differenti, ritorna la somma degli indici minore. Una volta usato un elemento, lo stesso non può essere riutilizzato per essere accoppiato con un altro.",
-            "Per esempio <code>pairwise([7, 9, 11, 13, 15], 20)</code> ritorna <code>6</code>. Le coppia la cui somma è 20 sono <code>[7, 13]</code> e <code>[9, 11]</code>. Possiamo quindi osservare l'array con i loro indici e valori.",
-            "<table class=\"table\"><tr><th><strong>Indice</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Valore</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
-            "Qui sotto prendiamo gli indici corrispondenti e li sommiamo.",
-            "7 + 13 = 20 &#8594; Indici 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indici 1 + 2 = 3<br>3 + 3 = 6 &#8594 Ritorna <code>6</code>",
-            "Ricorda di usare <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leggi-Cerca-Chiedi</a> se rimani bloccato. Prova a programmare in coppia. Scrivi il codice da te."
-          ]
-        },
-        "pt-br": {
-          "title": "Emparelhados",
-          "description": [
-            "Dado uma matriz <code>arr</code>, encontre pares de elementos no qual a soma é igual ao segundo argumento <code>arg</code> e retorne a soma dos seus indices.",
-            "Se multiplos pares tem o mesmo elemento numérico mas indices diferentes, retorne a soma dos menores indices. Uma vez que um elemento é usado, este não pode ser emparelhado novamente com outro elemento.",
-            "Por exemplo <code>pairwise([7, 9, 11, 13, 15], 20)</code> retorna <code>6</code>. Os pares que somam 20 são <code>[7, 13]</code> e <code>[9, 11]</code>. Nós podemos então criar a matriz com seus indices e valores.",
-            "<table class=\"table\"><tr><th><strong>Index</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
-            "Abaixo nós pegamos os índices correspondentes e somá-los.",
-            "7 + 13 = 20 &#8594; Indices 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indices 1 + 2 = 3<br>3 + 3 = 6 &#8594 Retorna <code>6</code>",
-            "Lembre-se de usar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Ler-Procurar-Perguntar</a> se você ficar preso. Tente programar em par. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -441,7 +331,6 @@
       ],
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "releasedOn": "February 17, 2017",
       "files": {
         "indexjs": {
@@ -497,7 +386,6 @@
       ],
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "releasedOn": "February 17, 2017",
       "files": {
         "indexjs": {
@@ -553,7 +441,6 @@
       ],
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "releasedOn": "February 17, 2017",
       "files": {
         "indexjs": {
@@ -610,7 +497,6 @@
       ],
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "releasedOn": "February 17, 2017",
       "files": {
         "indexjs": {
@@ -670,7 +556,6 @@
       ],
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "releasedOn": "February 17, 2017",
       "files": {
         "indexjs": {

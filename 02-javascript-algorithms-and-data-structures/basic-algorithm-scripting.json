@@ -44,23 +44,6 @@
       ],
       "challengeType": 1,
       "isRequired": true,
-      "translations": {
-        "es": {
-          "title": "Convierte celsius a fahrenheit",
-          "description": [
-            "Para probar tu aprendizaje, crearás una solucion \"desde cero\". Coloca tu código entre las líneas indicadas y este será probado contra multiples casos de prueba.",
-            "El algoritmo para convertir de Celsius a Fahrenheit consiste en multiplicar la temperatura en grados Celsius por 9/5 y al resultado agregarle 32.",
-            "Se te da una variable <code>celsius</code> representando una temperatura en Celsius. Crea una variable <code>fahrenheit</code> y aplica el algoritmo para asignar la correspondiente temperatura en Fahrenheit."
-          ]
-        },
-        "pt-br": {
-          "title": "Converta Celsius para Fahrenheit",
-          "description": [
-            "O algoritmo para converter de Celsius para Fahrenheit é a temperatura em Celsius vezes <code>9/5</code> mais <code>32</code>.",
-            "Você recebe uma variável <code>celsius</code> representando uma temperatura em Celsius. Use a variável <code>fahrenheit</code> já definida e aplique o algoritmo para atribuir a ela a temperatura correspondente em Fahrenheit."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -117,26 +100,6 @@
         "Array.prototype.join()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Invierte el texto",
-          "description": [
-            "Invierte la cadena de texto que se te provee",
-            "Puede que necesites convertir la cadena de texto en un arreglo antes de que puedas invertirla",
-            "El resultado debe ser una cadena de texto",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Inverta uma string",
-          "description": [
-            "Inverta a string fornecida.",
-            "Talvez você tenha que transformar a string num array antes de invertê-la.",
-            "Seu resultado deve ser uma string.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -195,28 +158,6 @@
         "Arithmetic Operators"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Factoriza un número",
-          "description": [
-            "Crea una función que devuelva el factorial del número entero que se te provee",
-            "El factorial de un número entero positivo n es la multiplicación de todos los enteros positivos menores o iguales a n",
-            "Los factoriales son comúnmente representados con la notación <code>n!</code>",
-            "Por ejemplo: <code>5! = 1 * 2 * 3 * 4 * 5 = 120</code>",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Determine o fatorial de um número",
-          "description": [
-            "Retorne o fatorial do inteiro fornecido.",
-            "Se o inteiro é representado pela letra n, o seu fatorial é o produto de todos os inteiros positivos menores ou iguais a n.",
-            "Por exemplo: <code>5! = 1 * 2 * 3 * 4 * 5 = 120</code>",
-            "Apenas inteiros maiores ou iguais a zero serão fornecidos à função.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -277,24 +218,6 @@
         "String.length"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Encuentra la palabra más larga",
-          "description": [
-            "Crea una función que devuelva la longitud de la palabra más larga en una frase dada",
-            "El resultado debe ser un número",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Encontre a palavra mais longa de uma string",
-          "description": [
-            "Retorne o tamanho da palavra mais longa da frase fornecida.",
-            "Sua resposta deve ser um número.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -346,25 +269,6 @@
         "Comparison Operators"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Devuelve el mayor entero de cada arreglo",
-          "description": [
-            "Crea una función que devuelva un arreglo que contenga el mayor de los números de cada sub-arreglo que recibe. Para simplificar las cosas, el arreglo que recibirá tendrá exactamente 4 sub-arreglos",
-            "Recuerda que puedes iterar a través de un arreglo con un búcle simple, y acceder a cada miembro utilizando la sintaxis arr[i].",
-            "Si escribes tu propio test con Chai.js, asegúrate de utilizar un operador de igualdad estricto en lugar de un operador de igualdad cuando compares arreglos. ",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Retorne os maiores números de arrays",
-          "description": [
-            "Retorne um array contendo o maior número de cada sub-array fornecido. Para simplificar, o array fornecido conterá exatamente 4 sub-arrays.",
-            "Lembre-se, você pode iterar por um array com um simples <code>for</code> e acessar cada membro do array com a sintaxe <code>arr[i]</code>.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -446,23 +350,6 @@
         "String.prototype.substring()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Confirma la terminación",
-          "description": [
-            "Verifica si una cadena de texto (primer argumento) termina con otra cadena de texto (segundo argumento).",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Confirme o final",
-          "description": [
-            "Verifique se uma string (primeiro argumento, <code>str</code>) termina com a string alvo fornecida (segundo argumento, <code>target</code>).",
-            "Esse desafio <em>pode</em> ser resolvido com o método <code>.endsWith()</code>, que foi introduzido na ES2015. Mas para o propósito desse desafio, nós gostaríamos que, ao invés dele, você usasse algum dos métodos de substring do JavaScript.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -527,22 +414,6 @@
         "Global String Object"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Repite el Texto Repite el Texto",
-          "description": [
-            "Repite una cadena de texto dada (primer argumento) <code>num</code> veces (segundo argumento). Retorna una cadena de texto vacía si <code>num</code> es un número negativo.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Repita uma string Repita uma string",
-          "description": [
-            "Repita uma string <code>str</code> dada (primeiro argumento) <code>num</code> vezes (segundo argumento). Retorne uma string vazia se <code>num</code> não for um número positivo.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -602,22 +473,6 @@
         "String.prototype.slice()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Trunca una Cadena de Texto",
-          "description": [
-            "Trunca una cadena de texto (primer argumento) si su longitud es mayor que un máximo de caracteres dado (segundo argumento). Devuelve la cadena de texto truncada con una terminación \"...\".",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Trunque uma string",
-          "description": [
-            "Trunque uma string (primeiro argumento) se ela for mais longa do que o comprimento máximo dado (segundo argumento). Retorne a string truncada com um <code>...</code> no final.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -661,29 +516,6 @@
       ],
       "isRequired": true,
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Buscando la verdad",
-          "description": [
-            "Crea una función que busque dentro de un vector (primer argumento) y que devuelva el primer elemento que pase una prueba de verdad (segundo argumento).",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Achado não é roubado",
-          "description": [
-            "Crie uma função que itera sobre um array (primeiro argumento) e retorna o primeiro elemento do array que retornar <code>true</code> para uma função de teste (segundo argumento). Se nenhum elemento passar no teste, retorne <code>undefined</code>.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        },
-        "fr": {
-          "title": "Détecteur de mensonges",
-          "description": [
-            "Crée une fonction qui parcourt un tableau (premier argument) et renvoie le premier élément du tableau qui passe le test (second argument).",
-            "N'oublie pas d'utiliser <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Lire-Chercher-Demander</a> si tu es bloqué. Essaye de trouver un partenaire. Écris ton propre code."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -760,32 +592,6 @@
       ],
       "isRequired": true,
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "¡Bu!",
-          "description": [
-            "Crea una función que verifique si el valor que se le pasa es de tipo booleano. Haz que la función devuelva true o false según corresponda.",
-            "Los primitivos booleanos primitivos son: true y false",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Bu!",
-          "description": [
-            "Verifique se um valor é classificado como um primitivo booleano. Retorne <code>true</code> ou <code>false</code>.",
-            "Primitivos booleanos são <code>true</code> e <code>false</code>.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Tente programar em par. Escreva seu próprio código."
-          ]
-        },
-        "fr": {
-          "title": "Boo !",
-          "description": [
-            "Crée une fonction qui vérifie qu'une valeur est de type booléen. Renvoie true ou false.",
-            "Les primitives booléennes sont true ou false.",
-            "N'oublie pas d'utiliser <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Lire-Chercher-Demander</a> si tu es bloqué. Essaye de trouver un partenaire. Écris ton propre code."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -838,24 +644,6 @@
         "String.prototype.split()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Aplica formato de título",
-          "description": [
-            "Crea una función que devuelva la cadena de texto que recibe con la primera letra de cada palabra en mayúscula. Asegúrate de que el resto de las letras sean minúsculas",
-            "Para este ejercicio, también debes poner en mayúscula conectores como \"the\" y \"of\".",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Transforme Uma String Num Título",
-          "description": [
-            "Retorne a string fornecida com a primeira letra de cada palavra em maiúsculo. Certifique-se de que o resto da palavra esteja minúsculo.",
-            "Para o propósito desse exercício, você também deve deixar maiúscula a primeira letra das palavras de ligação como \"the\" e \"of\".",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -919,17 +707,6 @@
         "Array.prototype.splice()"
       ],
       "challengeType": 5,
-      "translations": {
-        "pt-br": {
-          "title": "Slice e splice",
-          "description": [
-            "Você recebe dois arrays e um índice.",
-            "Use os métodos de array <code>slice</code> e <code>splice</code> para copiar cada elemento do primeiro array para o segundo array, em ordem.",
-            "Comece a inserir elementos no índice <code>n</code> do segundo array.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -987,25 +764,6 @@
         "Array.prototype.filter()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Detector de Mentiras",
-          "description": [
-            "Remueve todos los valores falsy de un arreglo dado",
-            "En JavaScript, los valores falsy son los siguientes: <code>false</code>, <code>null</code>, <code>0</code>, <code>\"\"</code>, <code>undefined</code>, y <code>NaN</code>.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Detector de mentiras",
-          "description": [
-            "Remova todos os valores falsos de um array.",
-            "Valores falsos em JavaScript são <code>false</code>, <code>null</code>, <code>0</code>, <code>\"\"</code>, <code>undefined</code> e <code>NaN</code>.",
-            "Dica: Tente converter cada valor para um booleano.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1107,26 +865,6 @@
         "Array.prototype.sort()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "¿Cuál es mi Asiento?",
-          "description": [
-            "Devuelve el menor índice en el que un valor (segundo argumento) debe ser insertado en un arreglo (primer argumento) una vez ha sido ordenado.",
-            "Por ejemplo, where([1,2,3,4], 1.5) debe devolver 1 porque el segundo argumento de la función (1.5) es mayor que 1 (con índice 0 en el arreglo), pero menor que 2 (con índice 1).",
-            "Mientras que <code>where([20,3,5], 19)</code> debe devolver <code>2</code> porque una vez ordenado el arreglo se verá com <code>[3,5,20]</code> y <code>19</code> es menor que <code>20</code> (índice 2) y mayor que <code>5</code> (índice 1).",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Onde é meu lugar?",
-          "description": [
-            "Retorne o menor índice no qual um valor (segundo argumento) deve ser inserido num array (primeiro argumento) depois que ele foi ordenado. O valor retornado deve ser um número.",
-            "Por exemplo, <code>getIndexToIns([1,2,3,4], 1.5)</code> deve retornar <code>1</code> porque <code>1.5</code> é maior que <code>1</code> (índice 0), mas menor que <code>2</code> (índice 1).",
-            "Da mesma forma, <code>getIndexToIns([20,3,5], 19)</code> deve retornar <code>2</code> porque, depois de ordenado, o array será <code>[3,5,20]</code> e <code>19</code> é menor que <code>20</code> (índice 2) e maior que <code>5</code> (index 1).",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1201,28 +939,6 @@
         "String.prototype.indexOf()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "Mutaciones",
-          "description": [
-            "Crea una función que devuelva <code>true</code> si la cadena de texto del primer elemento de un arreglo contiene todas las letras de la cadena de texto del segundo elemento del arreglo.",
-            "Por ejemplo, <code>[\"hello\", \"Hello\"]</code>, debe devolver <code>true</code> porque todas las letras en la segunda cadena de texto están presentes en la primera, sin distinguir entre mayúsculas y minúsculas.",
-            "En el caso de <code>[\"hello\", \"hey\"]</code> la función debe devolver false porque la cadena de texto \"hello\" no contiene una \"y\".",
-            "Finalmente, <code>[\"Alien\", \"line\"]</code>, la función debe devolver <code>true</code> porque todas las letras en \"line\" están presentes en \"Alien\".",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Mutações",
-          "description": [
-            "Retorne <code>true</code> se a string no primeiro elemento do array contiver todas as letras da string no segundo elemento do array.",
-            "Por exemplo, para os argumentos <code>[\"hello\", \"Hello\"]</code>, sua função deve retornar <code>true</code>, porque todas as letras da segunda string estão presentes na primeira, ignorando maiúsculas e minúsculas.",
-            "Para os argumentos <code>[\"hello\", \"hey\"]</code>, sua função deve retornar <code>false</code> porque a string \"hello\" não contém um \"y\".",
-            "Finalmente, para <code>[\"Alien\", \"line\"]</code>, sua função deve retornar <code>true</code> porque todas as letras em \"line\" estão presentes em \"Alien\".",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1286,22 +1002,6 @@
         "Array.prototype.slice()"
       ],
       "challengeType": 5,
-      "translations": {
-        "es": {
-          "title": "En mil Pedazos",
-          "description": [
-            "Escribe una función que parta un arreglo (primer argumento) en fragmentos de una longitud dada (segundo argumento) y los devuelva en forma de un arreglo bidimensional.",
-            "Recuerda utilizar <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Leer-Buscar-Preguntar</a> si te sientes atascado. Intenta programar en pareja. Escribe tu propio código."
-          ]
-        },
-        "pt-br": {
-          "title": "Em pedaços",
-          "description": [
-            "Escreva uma função que divide um array (primeiro argumento) em grupos de comprimento <code>size</code> (segundo argumento) e retorna esses grupos num array bidimensional.",
-            "Lembre-se de <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Ler-Pesquisar-Perguntar</a> se ficar travado. Escreva seu próprio código."
-          ]
-        }
-      },
       "files": {
         "indexjs": {
           "key": "indexjs",

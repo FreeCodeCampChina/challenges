@@ -48,19 +48,7 @@ var source = [
   '08-coding-interview-prep/data-structures.json',
   '08-coding-interview-prep/take-home-projects.json',
   '08-coding-interview-prep/rosetta-code.json',
-  '08-coding-interview-prep/project-euler.json',
-
-  
-  '09-certificates/responsive-web-design-certificate.json'
-  '09-certificates/javascript-algorithms-and-data-structures-certificate.json',
-  '09-certificates/front-end-libraries-certificate.json',
-  '09-certificates/data-visualization-certificate.json',
-  '09-certificates/apis-and-microservices-certificate.json',
-  '09-certificates/information-security-and-quality-assurance-certificate.json',
-  '09-certificates/legacy-front-end-certificate.json',
-  '09-certificates/legacy-data-visualization-certificate.json',
-  '09-certificates/legacy-back-end-certificate.json',
-  
+  '08-coding-interview-prep/project-euler.json' 
 ];
 for(var j=0;j<source.length;j++){
   var res = fs.readFileSync(source[j],'utf-8')
