@@ -1,12 +1,3 @@
-# branch
-master 分支存放的是最新的英文课程，此分支会有专人来更新。
-
-middle 分支存放的是稳定的英文课程，此分支会有专人 compare master 分支后再更新。
-
-translate 分支是仓库的默认分支，也是翻译者和审批者唯一需要关注的分支。
-
-publish 分支作为仓库的发布分支，这个分支会进入到 curriculum 代码库中。
-
 # challenges
 challenges 指的不仅是课程本身，也是每个开源项目贡献者会遇到的挑战。
 
