@@ -11,6 +11,6 @@ challenges 指的不仅是课程本身，也是每个开源项目贡献者会遇
 
 4、收获 GitHub 认可的 contributions
 
-5、获得 FreeCodeCamp 中文社区的认可
+5、获得 freeCodeCamp 中文社区的认可
 
 感兴趣的小伙伴可以传送到 [Wiki](https://github.com/FreeCodeCampChina/challenges/wiki) 了解更多详情。
