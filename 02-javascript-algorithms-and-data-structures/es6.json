@@ -8,33 +8,33 @@
       "id": "587d7b87367417b2b2512b3f",
       "title": "Explore Differences Between the var and let Keywords",
       "description": [
-        "使用<code>var</code>关键字来声明变量的会出现变量声明覆盖而不会报错的问题.",
+        "使用 <code>var</code> 关键字来声明变量,会出现重复声明导致变量被覆盖却不会报错的问题.",
         "<blockquote>var camper = 'James';<br>var camper = 'David';<br>console.log(camper);<br>// logs 'David'</blockquote>",
-        "看上面的代码,<code>camper</code>最初声明为<code>James</code>,然后又被覆盖成了<code>David</code>",
-        "在小型的应用中,你可能不会遇到这样的问题,但是当你的代码规模变得更加庞大的时候,就可能会在你不经意的时候产生变量的覆盖",
-        "Because this behavior does not throw an error, searching and fixing bugs becomes more difficult.<br>",
-        "A new keyword called <code>let</code> was introduced in ES6 to solve this potential issue with the <code>var</code> keyword.",
-        "If you were to replace <code>var</code> with <code>let</code> in the variable declarations of the code above, the result would be an error.",
+        "看上面的代码, <code>camper</code> 最初声明为 <code>James</code>,然后又被覆盖成了 <code>David</code>.",
+        "在小型的应用中,你可能不会遇到这样的问题,但是当你的代码规模变得更加庞大的时候,就可能会在你不经意的时候产生变量的覆盖.",
+        "因为这样的行为并不会报错,导致 debug 变得更加困难.<br>",
+        "在 ES6 中使用了新的关键字 <code>let</code> 来解决 <code>var</code> 关键字可能带来的问题.",
+        "如果你在上面的代码中,使用了 <code>let</code> 关键字来代替 <code>var</code>关键字,结果会是一个报错.",
         "<blockquote>let camper = 'James';<br>let camper = 'David'; // throws an error</blockquote>",
-        "This error can be seen in the console of your browser.",
-        "So unlike <code>var</code>, when using <code>let</code>, a variable with the same name can only be declared once.",
-        "Note the <code>\"use strict\"</code>. This enables Strict Mode, which catches common coding mistakes and \"unsafe\" actions. For instance:",
+        "这个错误可以在浏览器的控制台里被看见.",
+        "与 <code>var</code> 不同的是, 当使用 <code>let</code> 的时候,同一名字的变量只能被声明一次.",
+        "请注意 <code>\"use strict\"</code>.这代表着开启了严格模式, 用于检测常见的代码错误以及\"不安全\"的行为,例如:",
         "<blockquote>\"use strict\";<br>x = 3.14; // throws an error because x is not declared</blockquote>",
         "<hr>",
-        "Update the code so it only uses the <code>let</code> keyword."
+        "请更新这段代码,并且在其中只使用 <code>let</code> 关键字"
       ],
       "tests": [
         {
-          "text": "<code>var</code> does not exist in code.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'<code>var</code> does not exist in code.');"
+          "text": "在代码中不应存在 <code>var</code>.",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'在代码中不应存在 <code>var</code>.');"
         },
         {
-          "text": "<code>catName</code> should be <code>Oliver</code>.",
-          "testString": "assert(catName === \"Oliver\", '<code>catName</code> should be <code>Oliver</code>.');"
+          "text": "<code>catName</code> 变量的值应该为 <code>Oliver</code>.",
+          "testString": "assert(catName === \"Oliver\", '<code><code>catName</code> 变量的值应该为 <code>Oliver</code>.');"
         },
         {
-          "text": "<code>quote</code> should be <code>\"Oliver says Meow!\"</code>",
-          "testString": "assert(quote === \"Oliver says Meow!\", '<code>quote</code> should be <code>\"Oliver says Meow!\"</code>');"
+          "text": "<code>quote</code> 变量的值应该为 <code>\"Oliver says Meow!\"</code>",
+          "testString": "assert(quote === \"Oliver says Meow!\", '<code>quote</code> 变量的值应该为 <code>\"Oliver says Meow!\"</code>');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
