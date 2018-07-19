@@ -8,29 +8,29 @@
       "id": "587d7b87367417b2b2512b3f",
       "title": "Explore Differences Between the var and let Keywords",
       "description": [
-        "使用 <code>var</code> 关键字来声明变量,会出现重复声明导致变量被覆盖却不会报错的问题.",
+        "使用 <code>var</code> 关键字来声明变量,会出现重复声明导致变量被覆盖却不会报错的问题。",
         "<blockquote>var camper = 'James';<br>var camper = 'David';<br>console.log(camper);<br>// logs 'David'</blockquote>",
-        "看上面的代码, <code>camper</code> 最初声明为 <code>James</code>,然后又被覆盖成了 <code>David</code>.",
-        "在小型的应用中,你可能不会遇到这样的问题,但是当你的代码规模变得更加庞大的时候,就可能会在你不经意的时候产生变量的覆盖.",
-        "因为这样的行为并不会报错,导致 debug 变得更加困难.<br>",
-        "在 ES6 中使用了新的关键字 <code>let</code> 来解决 <code>var</code> 关键字可能带来的问题.",
-        "如果你在上面的代码中,使用了 <code>let</code> 关键字来代替 <code>var</code>关键字,结果会是一个报错.",
+        "看上面的代码, <code>camper</code> 最初声明为 <code>James</code>,然后又被覆盖成了 <code>David</code>。",
+        "在小型的应用中,你可能不会遇到这样的问题,但是当你的代码规模变得更加庞大的时候,就可能会在你不经意的时候产生变量的覆盖",
+        "因为这样的行为并不会报错，导致 debug 变得更加困难。<br>",
+        "在 ES6 中使用了新的关键字 <code>let</code> 来解决 <code>var</code> 关键字可能带来的问题。",
+        "如果你在上面的代码中，使用了 <code>let</code> 关键字来代替 <code>var</code>关键字,结果会是一个报错。",
         "<blockquote>let camper = 'James';<br>let camper = 'David'; // throws an error</blockquote>",
-        "这个错误可以在浏览器的控制台里被看见.",
-        "与 <code>var</code> 不同的是, 当使用 <code>let</code> 的时候,同一名字的变量只能被声明一次.",
-        "请注意 <code>\"use strict\"</code>.这代表着开启了严格模式, 用于检测常见的代码错误以及\"不安全\"的行为,例如:",
+        "可以在可以在浏览器的控制台里看见这个错误。",
+        "与 <code>var</code> 不同的是, 当使用 <code>let</code> 的时候,同一名字的变量只能被声明一次。",
+        "请注意 <code>\"use strict\"</code>。这代表着开启了严格模式, 用于检测常见的代码错误以及\"不安全\"的行为,例如:",
         "<blockquote>\"use strict\";<br>x = 3.14; // throws an error because x is not declared</blockquote>",
         "<hr>",
         "请更新这段代码,并且在其中只使用 <code>let</code> 关键字"
       ],
       "tests": [
         {
-          "text": "在代码中不应存在 <code>var</code>.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'在代码中不应存在 <code>var</code>.');"
+          "text": "在代码中不应存在 <code>var</code>。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'在代码中不应存在 <code>var</code>。');"
         },
         {
-          "text": "<code>catName</code> 变量的值应该为 <code>Oliver</code>.",
-          "testString": "assert(catName === \"Oliver\", '<code><code>catName</code> 变量的值应该为 <code>\"Oliver\"</code>.');"
+          "text": "<code>catName</code> 变量的值应该为 <code>Oliver</code>。",
+          "testString": "assert(catName === \"Oliver\", '<code><code>catName</code> 变量的值应该为 <code>\"Oliver\"</code>。');"
         },
         {
           "text": "<code>quote</code> 变量的值应该为 <code>\"Oliver says Meow!\"</code>",
@@ -65,30 +65,29 @@
       "id": "587d7b87367417b2b2512b40",
       "title": "Compare Scopes of the var and let Keywords",
       "description": [
-        "当你使用 <code>var</code> 关键字来声明一个变量的时候,这个变量会被声明成全局变量,或是函数内的局部变量.",
-        "<code>let</code> 关键字的作用类似,但会有一些额外的特性. 当你使用 <code>let</code> 关键字在代码块,语句或者表达式里声明变量的时候,这个变量的作用域就在当前的代码块,语句或表达式之中.",
+        "当你使用 <code>var</code> 关键字来声明一个变量的时候,这个变量会被声明成全局变量,或是函数内的局部变量。",
+        "<code>let</code> 关键字的作用类似,但会有一些额外的特性。 当你使用 <code>let</code> 关键字在代码块,语句或者表达式里声明变量的时候,这个变量的作用域就在当前的代码块,语句或表达式之中。",
         "举个例子:",
         "<blockquote>var numArray = [];<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;numArray.push(i);<br>}<br>console.log(numArray);<br>// returns [0, 1, 2]<br>console.log(i);<br>// returns 3</blockquote>",
-        "当使用 <code>var</code> 关键字的时候, <code>i</code> 会被声明成全局变量. 当 <code>i++</code> 执行的时候, 它会改变全局变量的值. 这段代码可以看做下面这样:",
+        "当使用 <code>var</code> 关键字的时候, <code>i</code> 会被声明成全局变量。 当 <code>i++</code> 执行的时候, 它会改变全局变量的值。 这段代码可以看做下面这样:",
         "<blockquote>var numArray = [];<br>var i;<br>for (i = 0; i < 3; i++) {<br>&nbsp;&nbsp;numArray.push(i);<br>}<br>console.log(numArray);<br>// returns [0, 1, 2]<br>console.log(i);<br>// returns 3</blockquote>",
-        "这个行为在你一个创建函数用来存储在 for 循环中使用的 <code>i</code> 变量的时候,会出现问题.这是因为函数存储的值会因为全局变量 <code>i</code>的变化而不断的改变.",
+        "这个行为在你一个创建函数用来存储在 for 循环中使用的 <code>i</code> 变量的时候,会出现问题。这是因为函数存储的值会因为全局变量 <code>i</code>的变化而不断的改变。",
         "<blockquote>var printNumTwo;<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if(i === 2){<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// returns 3</blockquote>",
-        "可以看到, <code>printNumTwo()</code> 打印了 3 而不是 2. 这是因为 <code>i</code> 发生了改变,并且函数 <code>printNumTwo()</code> 返回的是全局变量 <code>i</code>的值,而不是 for 循环中创建函数时 <code>i</code> 的值.The <code>let</code> 关键字就不会有这种现象:",
+        "可以看到, <code>printNumTwo()</code> 打印了 3 而不是 2。 这是因为 <code>i</code> 发生了改变,并且函数 <code>printNumTwo()</code> 返回的是全局变量 <code>i</code>的值,而不是 for 循环中创建函数时 <code>i</code> 的值。The <code>let</code> 关键字就不会有这种现象:",
         "<blockquote>'use strict';<br>let printNumTwo;<br>for (let i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if (i === 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// returns 2<br>console.log(i);<br>// returns \"i is not defined\"</blockquote>",
-        "<code>i</code> 在全局作用域中没有声明,所以它没有被定义, 它只会在 for 循环的语句中被声明. 因为在循环语句中的 <code>let</code>关键字创建了拥有独一无二的值 (0, 1, 或 2) 的三个不同 <code>i</code> 变量,所以 <code>printNumTwo()</code> 返回了正确的值.",
+        "<code>i</code> 在全局作用域中没有声明,所以它没有被定义, 它只会在 for 循环的语句中被声明。 因为在循环语句中的 <code>let</code>关键字创建了拥有独一无二的值 (0, 1, 或 2) 的三个不同 <code>i</code> 变量,所以 <code>printNumTwo()</code> 返回了正确的值。",
         "<hr>",
-        "Fix the code so that <code>i</code> declared in the if statement is a separate variable than <code>i</code> declared in the first line of the function. Be certain not to use the <code>var</code> keyword anywhere in your code.",
-        "修改这段代码,使得在 if 语句中声明的 <code>i</code> 变量与在函数的第一行声明的 <code>i</code> 变量是彼此独立的. 请注意不要在你的代码的任何地方使用 <code>var</code> 关键字",
-        "这个练习说明了使用 <code>var</code> 与 <code>let</code>关键字声明变量时,作用域之间的不同.当编写类似这个练习中的函数的时候,通常来说最好还是使用不同的变量名,用于避免困惑."
+        "修改这段代码,使得在 if 语句中声明的 <code>i</code> 变量与在函数的第一行声明的 <code>i</code> 变量是彼此独立的。 请注意不要在你的代码的任何地方使用 <code>var</code> 关键字。",
+        "这个练习说明了使用 <code>var</code> 与 <code>let</code>关键字声明变量时,作用域之间的不同。当编写类似这个练习中的函数的时候,通常来说最好还是使用不同的变量名,用于避免困惑。"
       ],
       "tests": [
         {
-          "text": "<code>var</code> 不应该在代码中存在.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'<code>var</code> 不应该在代码中存在.');"
+          "text": "<code>var</code> 不应该在代码中存在。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g),'<code>var</code> 不应该在代码中存在。');"
         },
         {
-          "text": "在 if 语句中声明的 <code>i</code> 变量的值是 \"block scope\".",
-          "testString": "getUserInput => assert(getUserInput('index').match(/(i\\s*=\\s*).*\\s*.*\\s*.*\\1('|\")block\\s*scope\\2/g), '在 if 语句中声明的 <code>i</code> 变量应该是 \"block scope\".');"
+          "text": "在 if 语句中声明的 <code>i</code> 变量的值是 \"block scope\"。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/(i\\s*=\\s*).*\\s*.*\\s*.*\\1('|\")block\\s*scope\\2/g), '在 if 语句中声明的 <code>i</code> 变量应该是 \"block scope\"。');"
         },
         {
           "text": "<code>checkScope()</code> 应当 返回 \"function scope\"",
