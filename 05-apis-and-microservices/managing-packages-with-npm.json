@@ -55,25 +55,25 @@
       "id": "587d7fb4367417b2b2512bfd",
       "title": "Add Keywords to Your package.json",
       "description": [
-        "The keywords-field is where you can describe your project using related keywords.",
-        "Example",
+        "你可以在 keywords 字段中使用相关的关键字描述项目。",
+        "例子",
         "<code>\"keywords\": [ \"descriptive\", \"related\", \"words\" ],</code>",
-        "As you can see, this field is structured as an array of double-quoted strings.",
-        "Instructions",
-        "Add an array of suitable strings to the keywords-field in the package.json of your Glitch project.",
-        "One of the keywords should be freecodecamp."
+        "正如你所见，这个字段的结构是一个包含双引号字符串的数组。",
+        "说明",
+        "在 Glitch 项目的 package.json 中，给 keywords 添加适当的字符串数组。",
+        "关键词之一应该是 freecodecamp。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"keywords\" key",
+          "text": "package.json 应该有一个有效的 \"keywords\" 键",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.keywords, '\"keywords\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" field should be an Array",
+          "text": "\"keywords\" 应该是一个数组",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.isArray(packJson.keywords, '\"keywords\" is not an array'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" should include \"freecodecamp\"",
+          "text": "\"keywords\" 中应该包含关键词 \"freecodecamp\"",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);     assert.include(packJson.keywords, 'freecodecamp', '\"keywords\" does not include \"freecodecamp\"'); },  xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -85,17 +85,17 @@
       "id": "587d7fb4367417b2b2512bfe",
       "title": "Add a License to Your package.json",
       "description": [
-        "The license-field is where you inform users of your project what they are allowed to do with it.",
-        "Some common licenses for open source projects include MIT and BSD. http://choosealicense.com is a great resource if you want to learn more about what license could fit your project.",
-        "License information is not required. Copyright laws in most countries will give you ownership of what you create by default. However, it’s always a good practice to explicitly state what users can and can’t do.",
-        "Example",
+        "license 字段是你告知用户你的项目允许用在什么地方。",
+        "开源项目的一些常用许可证包括 MIT 和 BSD。如果你想了解更多适合你项目的许可证的信息，那么 http://choosealicense.com 是一个不错的网站。",
+        "许可证信息并不是必须的。大多数国家的版权法会默认让你拥有自己创作的作品的所有权。 但是，明确说明用户可以做什么和不能做什么始终是一个很好的做法。",
+        "例子",
         "<code>\"license\": \"MIT\",</code>",
-        "Instructions",
-        "Fill the license-field in the package.json of your Glitch project as you find suitable."
+        "说明",
+        "在 Glitch 项目的 package.json 中填写合适的 license 字段。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"license\" key",
+          "text": "package.json 应该有一个有效的 \"license\" 键",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.license, '\"license\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -107,15 +107,15 @@
       "id": "587d7fb4367417b2b2512bff",
       "title": "Add a Version to Your package.json",
       "description": [
-        "The version is together with name one of the required fields in a package.json. This field describes the current version of your project.",
-        "Example",
+        "在 package.json 中 version 和 name 是所必填的字段之一。version 字段描述了当前项目的版本。",
+        "例子",
         "<code>\"version\": \"1.2\",</code>",
-        "Instructions",
-        "Add a version to the package.json in your Glitch project."
+        "说明",
+        "在 Glitch 项目中的 package.json 中添加一个版本号。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"version\" key",
+          "text": "package.json 应该包含一个有效的 \"version\" 键",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.version, '\"version\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -127,23 +127,23 @@
       "id": "587d7fb4367417b2b2512c00",
       "title": "Expand Your Project with External Packages from npm",
       "description": [
-        "One of the biggest reasons to use a package manager is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, npm automatically installs everything for you. But how can npm know exactly what your project needs? Meet the dependencies-section of your package.json.",
-        "In the dependencies-section, packages your project require are stored using the following format:",
+        "使用包管理器的最大原因之一是它们强大的依赖管理特性。在新的计算机上开始一个项目时，不用手动确认你已安装所有的依赖，npm 会自动为你安装它们。但是 npm 如何准确的知道你项目需要哪些依赖呢？ 我们来看看 package.json 中 dependencies 这一部分。",
+        "在 dependencies 这一部分, 你的项目需要按照下面这种格式来存储这些依赖包：",
         "<code>\"dependencies\": {</code>",
         "<code>  \"package-name\": \"version\",</code>",
         "<code>  \"express\": \"4.14.0\"</code>",
         "<code>}</code>",
-        "Instructions",
-        "Add version 2.14.0 of the package moment to the dependencies-field of your package.json",
-        "Moment is a handy library for working with time and dates."
+        "说明",
+        "在 package.json 的 dependencies 字段中添加一个版本号为 2.14.0 的 moment 包",
+        "Moment 是一个非常方便的库，它用来处理时间和日期。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should include \"moment\"",
+          "text": "\"dependencies\" 应该包含 \"moment\"",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" version should be \"2.14.0\"",
+          "text": "\"moment\" 的版本应该是 \"2.14.0\"",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.14\\.0/, 'Wrong version of \"moment\" installed. It should be 2.14.0'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
