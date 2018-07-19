@@ -8,24 +8,24 @@
       "id": "587d78b0367417b2b2512b08",
       "title": "Create a Media Query",
       "description": [
-        "Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.",
-        "Media Queries consist of a media type, and if that media type matches the type of device the document is displayed on, the styles are applied. You can have as many selectors and styles inside your media query as you want.",
-        "Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:",
+        "媒体查询是 CSS3 中可以根据不同可视窗口大小设置不同样式的新技术，可视窗口是用户在网页上的可见区域，根据访问网站的设备不同而不同",
+        "媒体查询由媒体类型组成，如果媒体类型与文档显示的设备类型匹配，则应用对应的样式。你可以在你的媒体查询中用上你想用的选择器和样式。",
+        "下面是一个媒体查询的例子：当设备宽度小于等于 100px 时返回的内容",
         "<code>@media (max-width: 100px) { /* CSS Rules */ }</code>",
-        "and the following media query returns the content when the device's height is more than or equal to 350px:",
+        "以下媒体查询当设备高度大于等于 350px 时返回内容:",
         "<code>@media (min-height: 350px) { /* CSS Rules */ }</code>",
-        "Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.",
+        "只有当媒体类型与当前设备匹配时，才应用媒体查询中的 CSS 。",
         "<hr>",
-        "Add a media query, so that the <code>p</code> tag has a <code>font-size</code> of 10px when the device's height is less than or equal to 800px."
+        "增加一个媒体查询，当设备的高度小于或等于 800px 时，<code>p</code> 标签的 <code>font-size</code> 为 10px"
       ],
       "tests": [
         {
-          "text": "Your <code>p</code> element should have the <code>font-size</code> of 10px when the device <code>height</code> is less than or equal to 800px.",
-          "testString": "assert($('p').css('font-size') == '10px', 'Your <code>p</code> element should have the <code>font-size</code> of 10px when the device <code>height</code> is less than or equal to 800px.');"
+          "text": "当设备 <code>height</code> 小于或等于 800px 时，你的 <code>p</code> 元素 <code>font-size</code> 应为 10px。",
+          "testString": "assert($('p').css('font-size') == '10px', '当设备 <code>height</code> 小于或等于 800px 时，你的 <code>p</code> 元素 <code>font-size</code> 应为 10px。');"
         },
         {
-          "text": "Declare a <code>@media</code> query for devices with a <code>height</code> less than or equal to 800px.",
-          "testString": "assert(code.match(/@media\\s?\\(max-height:\\s*?800px\\)/g), 'Declare a <code>@media</code> query for devices with a <code>height</code> less than or equal to 800px.');"
+          "text": "给 <code>height</code> 小于或等于 800px 的设备声明一个 <code>@media</code> 查询",
+          "testString": "assert(code.match(/@media\\s?\\(max-height:\\s*?800px\\)/g), '给 <code>height</code> 小于或等于 800px 的设备声明一个 <code>@media</code> 查询');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -58,26 +58,26 @@
       "id": "587d78b1367417b2b2512b09",
       "title": "Make an Image Responsive",
       "description": [
-        "Making images responsive with CSS is actually very simple. Instead of applying an absolute width to an element:",
+        "用 CSS 来做图片自适应其实很简单。取代使用绝对宽度应用于元素:",
         "<code>img { width: 720px; }</code>",
-        "You can use:",
+        "你可以这样:",
         "<blockquote>img {<br>&nbsp;&nbsp;max-width: 100%;<br>&nbsp;&nbsp;display: block;<br>&nbsp;&nbsp;height: auto;<br>}</blockquote>",
         "The <code>max-width</code> property of 100% scales the image to fit the width of its container, but the image won't stretch wider than its original width. Setting the <code>display</code> property to block changes the image from an inline element (its default), to a block element on its own line. The <code>height</code> property of auto keeps the original aspect ratio of the image.",
         "<hr>",
-        "Add style rules for the <code>img</code> tag to make it responsive to the size of its container. It should display as a block-level element, it should fit the full width of its container without stretching, and it should keep its original aspect ratio."
+        "给 <code>img</code> 标签增加样式规则使它自适应容器尺寸。应该声明为块级元素，适应它容器的宽度并且保持原本的宽高比而不拉伸。"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have a <code>max-width</code> set to 100%.",
-          "testString": "assert(code.match(/max-width:\\s*?100%;/g), 'Your <code>img</code> tag should have a <code>max-width</code> set to 100%.');"
+          "text": "你的 <code>img</code> 标签应设置 <code>max-width</code> 为 100%。",
+          "testString": "assert(code.match(/max-width:\\s*?100%;/g), '你的 <code>img</code> 标签应该包含 <code>max-width</code> 为 100% 的样式。');"
         },
         {
-          "text": "Your <code>img</code> tag should have a <code>display</code> set to block.",
-          "testString": "assert($('img').css('display') == 'block', 'Your <code>img</code> tag should have a <code>display</code> set to block.');"
+          "text": "你的 <code>img</code> 标签应设置 <code>display</code> 为 block。",
+          "testString": "assert($('img').css('display') == 'block', '你的 <code>img</code> 标签应该设置 <code>display</code> 为 block。');"
         },
         {
-          "text": "Your <code>img</code> tag should have a <code>height</code> set to auto.",
-          "testString": "assert(code.match(/height:\\s*?auto;/g), 'Your <code>img</code> tag should have a <code>height</code> set to auto.');"
+          "text": "你的 <code>img</code> 标签应设置 <code>height</code> 为 auto。",
+          "testString": "assert(code.match(/height:\\s*?auto;/g), '你的 <code>img</code> 标签应设置 <code>height</code> 为 auto。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
