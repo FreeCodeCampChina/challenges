@@ -58,9 +58,9 @@
       "id": "587d78b1367417b2b2512b09",
       "title": "Make an Image Responsive",
       "description": [
-        "用 CSS 来做图片自适应其实很简单。取代使用绝对宽度应用于元素:",
+        "用 CSS 来做图片自适应其实很简单。取代于在元素上使用绝对宽度外:",
         "<code>img { width: 720px; }</code>",
-        "你可以这样:",
+        "你可以这样用：",
         "<blockquote>img {<br>&nbsp;&nbsp;max-width: 100%;<br>&nbsp;&nbsp;display: block;<br>&nbsp;&nbsp;height: auto;<br>}</blockquote>",
         "The <code>max-width</code> property of 100% scales the image to fit the width of its container, but the image won't stretch wider than its original width. Setting the <code>display</code> property to block changes the image from an inline element (its default), to a block element on its own line. The <code>height</code> property of auto keeps the original aspect ratio of the image.",
         "<hr>",
@@ -105,20 +105,20 @@
       "id": "587d78b1367417b2b2512b0a",
       "title": "Use a Retina Image for Higher Resolution Displays",
       "description": [
-        "The simplest way to make your images appear \"retina\" (and optimize them for retina displays) is to define their <code>width</code> and <code>height</code> values as only half of what the original file is.",
-        "Here is an example of an image that is only using half of the original height and width:",
+        "使图片出现 \"retina\" （优化在高分辨率设备下的展示）最简单的方式是定义它们的 <code>width</code> 和 <code>height</code> 值为源文件宽高的一半。",
+        "这是一个图片宽高设置为源文件宽高一半的例子：",
         "<blockquote>&lt;style&gt;<br>&nbsp;&nbsp;img { height: 250px; width: 250px; }<br>&lt;/style&gt;<br>&lt;img src=&quot;coolPic500x500&quot; alt=&quot;A most excellent picture&quot;&gt;</blockquote>",
         "<hr>",
-        "Set the <code>width</code> and <code>height</code> of the <code>img</code> tag to half of their original values. In this case, both the original <code>height</code> and the original <code>width</code> are 200px."
+        "设置 <code>img</code> 标签的 <code>width</code> 和 <code>height</code> 为它们原始宽高的一半。在这个例子中，原始 <code>height</code> 和原始 <code>width</code> 的值都为 200px。"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have a <code>width</code> of 100 pixels.",
-          "testString": "assert($('img').css('width') == '100px', 'Your <code>img</code> tag should have a <code>width</code> of 100 pixels.');"
+          "text": "你的 <code>img</code> 标签应含有 100 像素的 <code>width</code>。",
+          "testString": "assert($('img').css('width') == '100px', '你的 <code>img</code> 标签应含有 100 像素的 <code>width</code>。');"
         },
         {
-          "text": "Your <code>img</code> tag should have a <code>height</code> of 100 pixels.",
-          "testString": "assert($('img').css('height') == '100px', 'Your <code>img</code> tag should have a <code>height</code> of 100 pixels.');"
+          "text": "你的 <code>img</code> 标签应含有 100 像素的 <code>height</code>。",
+          "testString": "assert($('img').css('height') == '100px', '你的 <code>img</code> 标签应含有 100 像素的 <code>height</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -146,20 +146,20 @@
       "id": "587d78b1367417b2b2512b0c",
       "title": "Make Typography Responsive",
       "description": [
-        "Instead of using <code>em</code> or <code>px</code> to size text, you can use viewport units for responsive typography. Viewport units, like percentages, are relative units, but they are based off different items. Viewport units are relative to the viewport dimensions (width or height) of a device, and percentages are relative to the size of the parent container element.",
-        "The four different viewport units are:",
-        "<ul><li><code>vw: 10vw</code> would be 10% of the viewport's width.</li><li><code>vh: 3vh</code> would be 3% of the viewport's height.</li><li><code>vmin: 70vmin</code> would be 70% of the viewport's smaller dimension (height vs. width).</li><li><code>vmax: 100vmax</code> would be 100% of the viewport's bigger dimension (height vs. width).</li></ul>",
+        "除了用 <code>em</code> 或 <code>px</code> 去设置文本大小, 你还可以用视窗单位来控制排版。视窗单位，如百分比，是相对单位，但它们基于不同的元素。视口单元相对于设备的视口尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。",
+        "四个不同的视窗单位分别是：",
+        "<ul><li><code>vw: 10vw</code> 视窗宽度的 10%。</li><li><code>vh: 3vh</code> 视窗高度的 3%。</li><li><code>vmin: 70vmin</code> 视窗中较小纬度的 70%  (高度 vs. 宽度).</li><li><code>vmax: 100vmax</code> 视窗中较大纬度的 100%  (高度 vs. 宽度)。</li></ul>",
         "<hr>",
-        "Set the <code>width</code> of the <code>h2</code> tag to 80% of the viewport's width and the <code>width</code> of the paragraph as 75% of the viewport's smaller dimension."
+        "设置 <code>h2</code> 标签的 <code>width</code> 为视窗宽度的 80%，并且段落 <code>width</code> 为小尺寸视窗的 75%。"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> tag should have a <code>width</code> of 80vw.",
-          "testString": "assert(code.match(/h2\\s*?{\\s*?width:\\s*?80vw;\\s*?}/g), 'Your <code>h2</code> tag should have a <code>width</code> of 80vw.');"
+          "text": "你的 <code>h2</code> 标签的 <code>width</code> 应为 80vw。",
+          "testString": "assert(code.match(/h2\\s*?{\\s*?width:\\s*?80vw;\\s*?}/g), '你的 <code>h2</code> 标签的 <code>width</code> 应为 80vw。');"
         },
         {
-          "text": "Your <code>p</code> tag should have a <code>width</code> of 75vmin.",
-          "testString": "assert(code.match(/p\\s*?{\\s*?width:\\s*?75vmin;\\s*?}/g), 'Your <code>p</code> tag should have a <code>width</code> of 75vmin.');"
+          "text": "你的 <code>p</code> 标签的 <code>width</code> 应为 75vmin。",
+          "testString": "assert(code.match(/p\\s*?{\\s*?width:\\s*?75vmin;\\s*?}/g), '你的 <code>p</code> 标签的 <code>width</code> 应为 75vmin。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
