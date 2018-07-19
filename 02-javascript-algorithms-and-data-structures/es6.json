@@ -8,10 +8,10 @@
       "id": "587d7b87367417b2b2512b3f",
       "title": "Explore Differences Between the var and let Keywords",
       "description": [
-        "One of the biggest problems with declaring variables with the <code>var</code> keyword is that you can overwrite variable declarations without an error.",
+        "使用<code>var</code>关键字来声明变量的会出现变量声明覆盖而不会报错的问题.",
         "<blockquote>var camper = 'James';<br>var camper = 'David';<br>console.log(camper);<br>// logs 'David'</blockquote>",
-        "As you can see in the code above, the <code>camper</code> variable is originally declared as <code>James</code> and then overridden to be <code>David</code>.",
-        "In a small application, you might not run into this type of problem, but when your code becomes larger, you might accidentally overwrite a variable that you did not intend to overwrite.",
+        "看上面的代码,<code>camper</code>最初声明为<code>James</code>,然后又被覆盖成了<code>David</code>",
+        "在小型的应用中,你可能不会遇到这样的问题,但是当你的代码规模变得更加庞大的时候,就可能会在你不经意的时候产生变量的覆盖",
         "Because this behavior does not throw an error, searching and fixing bugs becomes more difficult.<br>",
         "A new keyword called <code>let</code> was introduced in ES6 to solve this potential issue with the <code>var</code> keyword.",
         "If you were to replace <code>var</code> with <code>let</code> in the variable declarations of the code above, the result would be an error.",
