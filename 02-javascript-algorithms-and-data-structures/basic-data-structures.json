@@ -161,11 +161,11 @@
       "id": "587d78b2367417b2b2512b0f",
       "title": "Remove Items from an Array with pop() and shift()",
       "description": [
-        "Both <code>push()</code> and <code>unshift()</code> have corresponding methods that are nearly functional opposites: <code>pop()</code> and <code>shift()</code>. As you may have guessed by now, instead of adding, <code>pop()</code> <em>removes</em> an element from the end of an array, while <code>shift()</code> removes an element from the beginning. The key difference between <code>pop()</code> and <code>shift()</code> and their cousins <code>push()</code> and <code>unshift()</code>, is that neither method takes parameters, and each only allows an array to be modified by a single element at a time.",
+        "<code>push()</code> 和 <code>unshift()</code> 都分别有一个作用基本与之相反的函数：<code>pop()</code> 和 <code>shift()</code>。您现在或许已经猜到，与插入元素相反，<code>pop()</code> 从数组的末尾 <em>移除</em> 一个元素，而 <code>shift()</code> 从数组的开头移除一个元素。<code>pop()</code> 与 <code>shift()</code> 以及对应的 <code>push()</code> 与 <code>unshift()</code> 的关键不同点是，前者不能接受一个参数，而且每次只能修改数组中的一个元素。",
         "让我们来看如下例子：",
-        "<blockquote>let greetings = ['whats up?', 'hello', 'see ya!'];<br><br>greetings.pop();<br>// now equals ['whats up?', 'hello']<br><br>greetings.shift();<br>// now equals ['hello']</blockquote>",
-        "We can also return the value of the removed element with either method like this:",
-        "<blockquote>let popped = greetings.pop();<br>// returns 'hello'<br>// greetings now equals []</blockquote>",
+        "<blockquote>let greetings = ['whats up?', 'hello', 'see ya!'];<br><br>greetings.pop();<br>// 现在等于 ['whats up?', 'hello']<br><br>greetings.shift();<br>// 现在等于 ['hello']</blockquote>",
+        "对于上述两个方法中的任意一个，我们都可以返回被其移除的元素：",
+        "<blockquote>let popped = greetings.pop();<br>// 返回 'hello'<br>// greetings 现在等于 []</blockquote>",
         "<hr>",
         "我们已经定义了一个 <code>popShift</code> 函数，它会接收一个数组作为输入参数并返回一个新的数组。请您修改这个函数，使用 <code>pop()</code> 和 <code>shift()</code> 来移除输入的数组的第一个元素和最后一个元素，并将这两个被移除的元素赋值给对应的变量，使得返回的数组包含它们的值。"
       ],
@@ -210,13 +210,13 @@
       "id": "587d78b2367417b2b2512b10",
       "title": "Remove Items Using splice()",
       "description": [
-        "Ok, so we've learned how to remove elements from the beginning and end of arrays using <code>shift()</code> and <code>pop()</code>, but what if we want to remove an element from somewhere in the middle? Or remove more than one element at once? Well, that's where <code>splice()</code> comes in. <code>splice()</code> allows us to do just that: <strong>remove any number of consecutive elements</strong> from anywhere in an array.",
-        "<code>splice()</code> can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of <code>splice()</code> are integers which represent indexes, or positions, of the array that <code>splice()</code> is being called upon. And remember, arrays are <em>zero-indexed</em>, so to indicate the first element of an array, we would use <code>0</code>. <code>splice()</code>'s first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete. For example:",
-        "<blockquote>let array = ['today', 'was', 'not', 'so', 'great'];<br><br>array.splice(2, 2);<br>// remove 2 elements beginning with the 3rd element<br>// array now equals ['today', 'was', 'great']</blockquote>",
-        "<code>splice()</code> not only modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:",
-        "<blockquote>let array = ['I', 'am', 'feeling', 'really', 'happy'];<br><br>let newArray = array.splice(3, 2);<br>// newArray equals ['really', 'happy']</blockquote>",
+        "Ok，我们已经学到了如何利用 <code>shift()</code> 和 <code>pop()</code> 从数组的开头或者末尾移除元素，但如果我们想移除数组中间的一个元素呢？或者想一次移除多个元素呢？这时候我们就需要 <code>splice()</code> 了。<code>splice()</code> 让我们可以从数组中的任意位置 <strong>移除任意数量的连续的元素</strong>。",
+        "<code>splice()</code> 最多可以接受 3 个参数，但现在我们先关注前两个。<code>splice()</code> 的前两个参数是代表被调用 <code>splice()</code> 的数组中的索引或者位置的整数。记住，数组的索引是 <em>从0开始的</em>（<em>zero-indexed</em>），所以我们要用 <code>0</code> 来指示数组中的第一个元素。<code>splice()</code> 的第一个参数代表从数组中的哪个索引开始移除元素，而第二个参数指示要从数组中删除多少个元素。例如：",
+        "<blockquote>let array = ['today', 'was', 'not', 'so', 'great'];<br><br>array.splice(2, 2);<br>// 从第 3 个元素开始，删除 2 个元素<br>// 现在该数组等于 ['today', 'was', 'great']</blockquote>",
+        "<code>splice()</code> 不仅从被调用的数组中移除元素，还会返回一个包含被移除元素的数组：",
+        "<blockquote>let array = ['I', 'am', 'feeling', 'really', 'happy'];<br><br>let newArray = array.splice(3, 2);<br>// newArray 等于 ['really', 'happy']</blockquote>",
         "<hr>",
-        "We've defined a function, <code>sumOfTen</code>, which takes an array as an argument and returns the sum of that array's elements. Modify the function, using <code>splice()</code>, so that it returns a value of <code>10</code>."
+        "我们已经定义了一个 <code>sumOfTen</code> 函数，它接受一个数组作为输入参数，并返回数组中所有元素的和。请您修改这个函数，利用 <code>splice()</code>，使得它返回 <code>10</code>。"
       ],
       "tests": [
         {
@@ -567,7 +567,7 @@
       "id": "587d7b7b367417b2b2512b16",
       "title": "Create complex multi-dimensional arrays",
       "description": [
-        "Awesome! You have just learned a ton about arrays! This has been a fairly high level overview, and there is plenty more to learn about working with arrays, much of which you will see in later sections. But before moving on to looking at <dfn>Objects</dfn>, lets take one more look, and see how arrays can become a bit more complex than what we have seen in previous challenges.",
+        "很好！您已经学到很多关于数组的知识了！但这些只是一个大概，您还有很多关于数组的东西要学，您将在接下来的小节中看到很多这些新知识。但在您继续去学习<dfn>对象</dfn>（<dfn>Objects</dfn>）之前，让我们再花一点时间看一看，数组怎样能够变得比之前的挑战中更复杂一点。",
         "One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, known as a <dfn>multi-dimensional</dfn>, or nested array. Consider the following example:",
         "<blockquote>let nestedArray = [ // top, or first level - the outer most array<br>&nbsp;&nbsp;['deep'], // an array within an array, 2 levels of depth<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;['deeper'], ['deeper'] // 2 arrays nested 3 levels deep<br>&nbsp;&nbsp;],<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['deepest'], ['deepest'] // 2 arrays nested 4 levels deep<br>&nbsp;&nbsp;&nbsp;&nbsp;],<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['deepest-est?'] // an array nested 5 levels deep<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;]<br>];</blockquote>",
         "While this example may seem convoluted, this level of complexity is not unheard of, or even unusual, when dealing with large amounts of data.",
@@ -925,21 +925,21 @@
       "id": "587d7b7d367417b2b2512b1d",
       "title": " Iterate Through the Keys of an Object with a for...in Statement",
       "description": [
-        "Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a <dfn>for...in</dfn> statement. For our <code>users</code> object, this could look like:",
+        "有时候你会需要遍历一个对象中的所有键。这需要 JavaScript 中的一个特殊语法：<dfn>for...in</dfn> 语句。以遍历 <code>users</code> 对象的键为例：",
         "<blockquote>for (let user in users) {<br>&nbsp;&nbsp;console.log(user);<br>};<br><br>// logs:<br>Alan<br>Jeff<br>Sarah<br>Ryan</blockquote>",
-        "In this statement, we defined a variable <code>user</code>, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console.",
-        "<strong>NOTE:</strong><br>Objects do not maintain an ordering to stored keys like arrays do; thus a keys position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.",
+        "在这个语句中，我们定义了一个 <code>user</code> 变量，您可以看到，这个变量在 for...in 语句对对象的每一个键的遍历中都会被重置。",
+        "<strong>注意：</strong><br>跟数组不同，对象不会维持其中的键的顺序，因此一个对象中某个键的位置，或者说它出现的相对顺序，在引用或访问该键时是不确定的。",
         "<hr>",
-        "We've defined a function, <code>countOnline</code>; use a <dfn>for...in</dfn> statement within this function to loop through the users in the <code>users</code> object and return the number of users whose <code>online</code> property is set to <code>true</code>."
+        "我们已经定义了一个 <code>countOnline</code> 函数，请在其中使用一个 <dfn>for...in</dfn> 语句来遍历 <code>users</code> 对象中的用户，并返回 <code>online</code> 属性为 <code>true</code> 的用户的数量。"
       ],
       "tests": [
         {
-          "text": "The <code>users</code> object contains users <code>Jeff</code> and <code>Ryan</code> with <code>online</code> set to <code>true</code> and users <code>Alan</code> and <code>Sarah</code> with <code>online</code> set to <code>false</code>",
-          "testString": "assert(users.Alan.online === false && users.Jeff.online === true &&  users.Sarah.online === false &&  users.Ryan.online === true, 'The <code>users</code> object contains users <code>Jeff</code> and <code>Ryan</code> with <code>online</code> set to <code>true</code> and users <code>Alan</code> and <code>Sarah</code> with <code>online</code> set to <code>false</code>');"
+          "text": "<code>users</code> 对象中应该包含 <code>online</code> 为 <code>true</code> 的用户对象 <code>Jeff</code> 和 <code>Ryan</code> 以及 <code>online</code> 为 <code>false</code> 的用户对象 <code>Alan</code> 和 <code>Sarah</code>",
+          "testString": "assert(users.Alan.online === false && users.Jeff.online === true &&  users.Sarah.online === false &&  users.Ryan.online === true, '<code>users</code> 对象中应该包含 <code>online</code> 为 <code>true</code> 的用户对象 <code>Jeff</code> 和 <code>Ryan</code> 以及 <code>online</code> 为 <code>false</code> 的用户对象 <code>Alan</code> 和 <code>Sarah</code>');"
         },
         {
-          "text": "The function <code>countOnline</code> returns the number of users with the <code>online</code> property set to <code>true</code>",
-          "testString": "assert((function() { users.Harry = {online: true}; users.Sam = {online: true}; users.Carl = {online: true}; return countOnline(users) })() === 5, 'The function <code>countOnline</code> returns the number of users with the <code>online</code> property set to <code>true</code>');"
+          "text": "<code>countOnline</code> 函数应该返回 <code>online</code> 属性为 <code>true</code> 的用户的数量",
+          "testString": "assert((function() { users.Harry = {online: true}; users.Sam = {online: true}; users.Carl = {online: true}; return countOnline(users) })() === 5, '<code>countOnline</code> 函数应该返回 <code>online</code> 属性为 <code>true</code> 的用户的数量');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -987,18 +987,18 @@
       "id": "587d7b7d367417b2b2512b1e",
       "title": "Generate an Array of All Object Keys with Object.keys()",
       "description": [
-        "We can also generate an array which contains all the keys stored in an object using the <code>Object.keys()</code> method and passing in an object as the argument. This will return an array with strings representing each property in the object. Again, there will be no specific order to the entries in the array.",
+        "我们还可以输入一个对象作为参数来调用 <code>Object.keys()</code> 方法，使其生成一个包含对象中所有键的数组。这会返回一个由对象中所有键的名称（字符串）组成的数组。再次说明，这个数组中的项的顺序是不确定的。",
         "<hr>",
-        "Finish writing the <code>getArrayOfUsers</code> function so that it returns an array containing all the properties in the object it receives as an argument."
+        "请您完成 <code>getArrayOfUsers</code> 函数，使其返回一个包含输入的对象的所有属性的数组。"
       ],
       "tests": [
         {
-          "text": "The <code>users</code> object only contains the keys <code>Alan</code>, <code>Jeff</code>, <code>Sarah</code>, and <code>Ryan</code>",
-          "testString": "assert('Alan' in users && 'Jeff' in users && 'Sarah' in users && 'Ryan' in users && Object.keys(users).length === 4, 'The <code>users</code> object only contains the keys <code>Alan</code>, <code>Jeff</code>, <code>Sarah</code>, and <code>Ryan</code>');"
+          "text": "<code>users</code> 对象应该只包含 <code>Alan</code>、<code>Jeff</code>、<code>Sarah</code> 和 <code>Ryan</code> 这 4 个键",
+          "testString": "assert('Alan' in users && 'Jeff' in users && 'Sarah' in users && 'Ryan' in users && Object.keys(users).length === 4, '<code>users</code> 对象应该只包含 <code>Alan</code>、<code>Jeff</code>、<code>Sarah</code> 和 <code>Ryan</code> 这 4 个键');"
         },
         {
-          "text": "The <code>getArrayOfUsers</code> function returns an array which contains all the keys in the <code>users</code> object",
-          "testString": "assert((function() { users.Sam = {}; users.Lewis = {}; let R = getArrayOfUsers(users); return (R.indexOf('Alan') !== -1 && R.indexOf('Jeff') !== -1 && R.indexOf('Sarah') !== -1 && R.indexOf('Ryan') !== -1 && R.indexOf('Sam') !== -1 && R.indexOf('Lewis') !== -1); })() === true, 'The <code>getArrayOfUsers</code> function returns an array which contains all the keys in the <code>users</code> object');"
+          "text": "<code>getArrayOfUsers</code> 函数应该返回一个包含 <code>users</code> 对象中所有键的数组",
+          "testString": "assert((function() { users.Sam = {}; users.Lewis = {}; let R = getArrayOfUsers(users); return (R.indexOf('Alan') !== -1 && R.indexOf('Jeff') !== -1 && R.indexOf('Sarah') !== -1 && R.indexOf('Ryan') !== -1 && R.indexOf('Sam') !== -1 && R.indexOf('Lewis') !== -1); })() === true, '<code>getArrayOfUsers</code> 函数应该返回一个包含 <code>users</code> 对象中所有键的数组');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -1046,7 +1046,7 @@
       "id": "587d7b7d367417b2b2512b1f",
       "title": "Modify an Array Stored in an Object",
       "description": [
-        "Now you've seen all the basic operations for JavaScript objects. You can add, modify, and remove key-value pairs, check if keys exist, and iterate over all the keys in an object. As you continue learning JavaScript you will see even more versatile applications of objects. Additionally, the optional Advanced Data Structures lessons later in the curriculum also cover the ES6 <dfn>Map</dfn> and <dfn>Set</dfn> objects, both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, you're fully prepared to begin tackling more complex problems using JavaScript!",
+        "现在您已经接触到 JavaScript 对象的所有运算。您可以增加、修改和移除键值对，检查某个键是否存在，并且遍历一个对象中的所有键。在您继续学习 JavaScript 的过程中，您会看到更 versatile applications of objects. Additionally, the optional Advanced Data Structures lessons later in the curriculum also cover the ES6 <dfn>Map</dfn> and <dfn>Set</dfn> objects, both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, you're fully prepared to begin tackling more complex problems using JavaScript!",
         "<hr>",
         "Take a look at the object we've provided in the code editor. The <code>user</code> object contains three keys. The <code>data</code> key contains five keys, one of which contains an array of <code>friends</code>. From this, you can see how flexible objects are as data structures. We've started writing a function <code>addFriend</code>. Finish writing it so that it takes a <code>user</code> object and adds the name of the <code>friend</code> argument to the array stored in <code>user.data.friends</code> and returns that array."
       ],
@@ -1056,8 +1056,8 @@
           "testString": "assert('name' in user && 'age' in user && 'data' in user, '<code>user</code> 对象应该包含 <code>name</code>、<code>age</code> 和 <code>data</code> 三个键');"
         },
         {
-          "text": "<code>addFriend</code> function accepts a <code>user</code> object and a <code>friend</code> string as arguments and adds the friend to the array of <code>friends</code> in the <code>user</code> object",
-          "testString": "assert((function() { let L1 = user.data.friends.length; addFriend(user, 'Sean'); let L2 = user.data.friends.length; return (L2 === L1 + 1); })(), '<code>addFriend</code> function accepts a <code>user</code> object and a <code>friend</code> string as arguments and adds the friend to the array of <code>friends</code> in the <code>user</code> object');"
+          "text": "<code>addFriend</code> 函数应该接受一个 <code>user</code> 对象和一个 <code>friend</code> 字符串作为输入参数，并将 friend 插入到 <code>user</code> 对象的 <code>friends</code> 数组中",
+          "testString": "assert((function() { let L1 = user.data.friends.length; addFriend(user, 'Sean'); let L2 = user.data.friends.length; return (L2 === L1 + 1); })(), '<code>addFriend</code> 函数应该接受一个 <code>user</code> 对象和一个 <code>friend</code> 字符串作为输入参数，并将 friend 插入到 <code>user</code> 对象的 <code>friends</code> 数组中');"
         },
         {
           "text": "<code>addFriend(user, \"Pete\")</code> 应该返回 <code>[\"Sam\", \"Kira\", \"Tomo\", \"Pete\"]</code>",
