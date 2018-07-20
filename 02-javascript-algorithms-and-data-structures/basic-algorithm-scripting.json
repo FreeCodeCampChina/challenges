@@ -495,8 +495,8 @@
       "id": "a6e40f1041b06c996f7b2406",
       "title": "Finders Keepers",
       "description": [
-        "Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "请写一个函数来检查一个数组（第一个参数）中的元素，并返回数组中第一个通过校验测试（第二个参数，一个接受一个参数并返回一个布尔值的函数）的元素。如果没有元素通过测试，则返回 undefined",
+        "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。您可以与他人结对编程。请您独立解决挑战中的问题。"
       ],
       "solutions": [
         "function findElement(arr, func) {\n  let num;\n\n  arr.some(e => {\n    if (func(e)) {\n      num = e;\n      return true;\n    }\n  });\n\n  return num;\n}\n\nfindElement([1, 2, 3, 4], num => num % 2 === 0);\n"
@@ -538,9 +538,9 @@
       "id": "a77dbc43c33f39daa4429b4f",
       "title": "Boo who",
       "description": [
-        "Check if a value is classified as a boolean primitive. 返回 true 或者 false",
-        "Boolean primitives are true and false.",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "检查一个值是否是原始的布尔值（boolean）类型。返回 true 或者 false",
+        "布尔值原始类型为 true 或者 false",
+        "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。您可以与他人结对编程。请您独立解决挑战中的问题。"
       ],
       "solutions": [
         "function booWho(bool) {\n  return typeof bool === \"boolean\";\n}\n\nbooWho(null);"
@@ -665,7 +665,7 @@
       "id": "579e2a2c335b9d72dd32e05c",
       "title": "Slice and Splice",
       "description": [
-        "You are given two arrays and an index.",
+        "本挑战的输入参数为：两个数组和一个索引值。",
         "请利用数组的 <code>slice</code> 和 <code>splice</code> 方法，将第一个数组中的所有元素依次复制到第二个数组中。",
         "请从第二个数组中索引值为 <code>n</code> 的地方开始插入。",
         "返回插入元素后的数组。输入的两个数组在函数执行前后要保持不变。",
@@ -685,8 +685,8 @@
           "testString": "assert.deepEqual(frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2), [\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"], '<code>frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2)</code> 应该返回 <code>[\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"]</code>.');"
         },
         {
-          "text": "All elements from the first array should be added to the second array in their original order.",
-          "testString": "assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4], 'All elements from the first array should be added to the second array in their original order.');"
+          "text": "来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中",
+          "testString": "assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4], '来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中');"
         },
         {
           "text": "第一个数组在函数执行前后应该保持一样。",
@@ -732,9 +732,9 @@
       "id": "adf08ec01beb4f99fc7a68f2",
       "title": "Falsy Bouncer",
       "description": [
-        "Remove all falsy values from an array.",
-        "Falsy values in JavaScript are <code>false</code>, <code>null</code>, <code>0</code>, <code>\"\"</code>, <code>undefined</code>, and <code>NaN</code>.",
-        "Hint: Try converting each value to a Boolean.",
+        "从一个数组中移除所有假值（falsy values）。",
+        "JavaScript 中的假值有 <code>false</code>、<code>null</code>、<code>0</code>、<code>\"\"</code>、<code>undefined</code> 和 <code>NaN</code>",
+        "提示：请尝试将每一个值转换为一个布尔值（boolean）。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
@@ -786,9 +786,9 @@
       "id": "a24c1a4622e3c05097f71d67",
       "title": "Where do I Belong",
       "description": [
-        "Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.",
-        "For example, <code>getIndexToIns([1,2,3,4], 1.5)</code> 应该返回 <code>1</code> because it is greater than <code>1</code> (index 0), but less than <code>2</code> (index 1).",
-        "Likewise, <code>getIndexToIns([20,3,5], 19)</code> 应该返回 <code>2</code> because once the array has been sorted it will look like <code>[3,5,20]</code> and <code>19</code> is less than <code>20</code> (index 2) and greater than <code>5</code> (index 1).",
+        "返回数组（第一个参数）被排序后，将一个值（第二个参数）插入到该数组中而使数组保持有序的最小的索引。返回的值应该是一个数字。",
+        "例如，<code>getIndexToIns([1,2,3,4], 1.5)</code> 应该返回 <code>1</code> 因为 1.5 大于 <code>1</code> （索引为 0），但小于 <code>2</code>（索引为 1）。",
+        "同样地，<code>getIndexToIns([20,3,5], 19)</code> 应该返回 <code>2</code> 因为数组被排序后会变成 <code>[3,5,20]</code>，而 <code>19</code> 小于 <code>20</code>（索引为 2）且大于 <code>5</code>（索引为 1）。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
@@ -887,10 +887,10 @@
       "id": "af2170cad53daa0770fabdea",
       "title": "Mutations",
       "description": [
-        "Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.",
-        "For example, <code>[\"hello\", \"Hello\"]</code>, 应该返回 true because all of the letters in the second string are present in the first, ignoring case.",
-        "The arguments <code>[\"hello\", \"hey\"]</code> 应该返回 false because the string \"hello\" does not contain a \"y\".",
-        "Lastly, <code>[\"Alien\", \"line\"]</code>, 应该返回 true because all of the letters in \"line\" are present in \"Alien\".",
+        "输入参数是一个有两个字符串元素的数组。如果第一个字符串中包含了第二个字符串中的所有字母，则返回 true",
+        "例如，<code>[\"hello\", \"Hello\"]</code> 应该返回 true 因为第一个字符串中包含了第二个字符串中出现的所有字母（忽略大小写）。",
+        "而 <code>[\"hello\", \"hey\"]</code> 应该返回 false 因为第一个字符串 \"hello\" 没有包含字母 \"y\"",
+        "最后，<code>[\"Alien\", \"line\"]</code>, 应该返回 true，因为 \"line\" 中的所有字母都被包含在 \"Alien\" 中。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
@@ -960,7 +960,7 @@
       "id": "a9bd25c716030ec90084d8a1",
       "title": "Chunky Monkey",
       "description": [
-        "Write a function that splits an array (first argument) into groups the length of <code>size</code> (second argument) and returns them as a two-dimensional array.",
+        "请写一个函数，将一个数组（第一个参数）分割成一组长度为 <code>size</code>（第二个参数）的数组，然后在一个二维数组中返回这些结果。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
