@@ -8,21 +8,21 @@
       "id": "bd7123c8c441eddfaeb5bdef",
       "title": "Say Hello to HTML Elements",
       "description": [
-        "欢迎来到 FreeCodeCamp 的 HTML 编码挑战，这些挑战将会帮助你逐步掌握 web 开发。",
-        "HTML 是英文 Hyper Text Markup Language(超文本标记语言)的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。"
-        "你看到代码编辑器中的 <code>&#60;h1&#62;Hello&#60;/h1&#62;</code> 了吗? 那就是一个 HTML 标签，<code>h1</code> 是 <code>header1</code> 的简写，意思是主标题。",
+        "欢迎来到 freeCodeCamp 的 HTML 编码挑战，这些挑战将会帮助你逐步掌握 Web 开发。",
+        "HTML 是英文 Hyper Text Markup Language（超文本标记语言）的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。"
+        "你看到代码编辑器中的 <code>&#60;h1&#62;Hello&#60;/h1&#62;</code> 了吗? 那就是一个 HTML 标签。",
         "大部分 HTML 标签都有一个 <code>开始标记</code> 和一个 <code>结束标记</code>。",
         "开始标记像这样：<code>&#60;h1&#62;</code>",
         "结束标记像这样：<code>&#60;/h1&#62;</code>",
         "开始标记和结束标记的唯一区别就是结束标记多了一个 <code>/</code>。",
         "每个挑战都有测试，任何时候点击<strong>运行测试</strong>按钮就可以运行测试。如果代码通过测试，将会弹出一个窗口，你就可以提交你的代码并顺利进入下一个挑战。",
         "<hr>",
-        "任务：请更改主标题的内容为：Hello World。"
+        "请把 <code>h1</code> 标签的内容改为：<code>Hello World</code>。"
       ],
       "tests": [
         {
-          "text": "主标题的内容应该为：Hello World。",
-          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), '主标题的内容应该为：Hello World。');"
+          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), '<code>h1</code> 标签的内容应该为：<code>Hello World</code>。');"
         }
       ],
       "challengeType": 0,
@@ -44,27 +44,27 @@
       "title": "Headline with the h2 Element",
       "description": [
         "在接下来的几节课里，我们将会由浅入深地制作一个关于猫的图片应用。",
-        "这节课将会引入 <code>h2</code> 标签，<code>h2</code> 是 <code>header2</code> 的简写，意思是二级标题。",
+        "这节课将会引入 <code>h2</code> 标签。",
         "这些标签用来告诉浏览器，网站的结构长什么样子。<code>h1</code> 标签通常被用作主标题，<code>h2</code> 标签通常被用作副标题，还有 <code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code> 标签，它们分别用作不同级别的标题。",
         "<hr>",
-        "任务：在主标题下面创建一个副标题，标题内容为：CatPhotoApp。"
+        "在 <code>h1</code> 标签下面创建一个 <code>h2</code> 标签，标签内容为：<code>CatPhotoApp</code>。"
       ],
       "tests": [
         {
-          "text": "创建一个副标题。",
-          "testString": "assert(($(\"h2\").length > 0), '创建一个副标题。');"
+          "text": "创建一个 <code>h2</code> 标签。",
+          "testString": "assert(($(\"h2\").length > 0), '创建一个 <code>h2</code> 标签。');"
         },
         {
-          "text": "副标题应该有结束标记。",
-          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, '副标题应该有结束标记。');"
+          "text": "<code>h2</code> 标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, '<code>h2</code> 标签应该有结束标记。');"
         },
         {
-          "text": "副标题的内容应该为：CatPhotoApp。",
-          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), '副标题的内容应该为：CatPhotoApp。');"
+          "text": "<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。",
+          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), '<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。');"
         },
         {
-          "text": "主标题的内容应该为：Hello World。",
-          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($(\"h1\").text()), '主标题的内容应该为：Hello World。');"
+          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($(\"h1\").text()), '主标题的内容应该为：<code>Hello World</code>。');"
         }
       ],
       "challengeType": 0,
@@ -89,20 +89,20 @@
         "你可以像这样创建一个段落：",
         "<code>&#60;p&#62;I'm a p tag!&#60;/p&#62;</code>",
         "<hr>",
-        "任务：在副标题下面新增一个段落，段落内容是：<code>Hello Paragraph</code>。"
+        "在 <code>h2</code> 标签下面新增一个 <code>p</code> 标签，标签内容是：<code>Hello Paragraph</code>。"
       ],
       "tests": [
         {
-          "text": "创建一个段落。",
-          "testString": "assert(($(\"p\").length > 0), '创建一个段落。');"
+          "text": "创建一个 <code>p</code> 标签。",
+          "testString": "assert(($(\"p\").length > 0), '创建一个 <code>p</code> 标签。');"
         },
         {
-          "text": "段落的内容应该为：Hello Paragraph。",
-          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), '段落的内容应该为：Hello Paragraph。');"
+          "text": "<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), '<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。');"
         },
         {
-          "text": "段落应该有结束标记。",
-          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '段落应该有结束标记。);"
+          "text": "<code>p</code> 标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '<code>p</code> 标签应该有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -124,16 +124,16 @@
       "id": "bad87fee1348bd9aedf08833",
       "title": "Fill in the Blank with Placeholder Text",
       "description": [
-        "Web开发者通常用 <a href='http://www.ruanyifeng.com/blog/2009/04/lorem_ipsum.html'>lorem ipsum text</a> 来做占位符，占位符就是占着位置的一些文字，没有实际意义。",
+        "Web 开发者通常用 <a href='http://www.ruanyifeng.com/blog/2009/04/lorem_ipsum.html'>lorem ipsum text</a> 来做占位符，占位符就是占着位置的一些文字，没有实际意义。",
         "为什么叫 <code>lorem ipsum text</code> 呢?是因为 <code>lorem ipsum</code> 是古罗马西塞罗谚语的前两个单词。",
-        "从公元16世纪开始<code>lorem ipsum text</code>就被当做占位符了，这种传统延续到了互联网时代。于此同时，孙悟空也在五指山下压了500年，然后就进化成程序猿了，是不是很巧合，哈哈。",
+        "从公元16世纪开始 <code>lorem ipsum text</code> 就被当做占位符了，这种传统延续到了互联网时代。于此同时，孙悟空也在五指山下被压了500年，然后就进化成程序猿了，是不是很巧合。^_^",
         "<hr>",
-        "任务：把段落的内容更换为：<code>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</code>"
+        "把 <code>p</code> 标签的内容更换为：<code>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</code>"
       ],
       "tests": [
         {
-          "text": "段落必须包含 <code>Monkey code</code>。",
-          "testString": "assert.isTrue((/Monkey(\\s)+code/gi).test($(\"p\").text()), '段落必须包含 <code>Monkey code</code>。');"
+          "text": "<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。",
+          "testString": "assert.isTrue((/Monkey(\\s)+code/gi).test($(\"p\").text()), '<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。');"
         }
       ],
       "challengeType": 0,
@@ -158,24 +158,24 @@
       "id": "bad87fee1348bd9aedf08802",
       "title": "Uncomment HTML",
       "description": [
-        "注释是用来给代码添加一些说明，方便团队合作或日后自己查看，但又不影响代码本身。",
+        "注释的作用是给代码添加一些说明，方便团队合作或日后自己查看，但又不影响代码本身。",
         "注释也可以用来在不删除代码的前提下，让代码不起作用。",
         "在 HTML 中，注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
         "<hr>",
-        "任务：现在我们反其道而行之，干掉主标题、副标题、段落的注释。"
+        "现在我们反其道而行之，干掉 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的注释。"
       ],
       "tests": [
         {
-          "text": "确保网页中能看到主标题。",
-          "testString": "assert($(\"h1\").length > 0, '确保网页中能看到主标题。');"
+          "text": "确保网页中能看到 <code>h1</code> 标签。",
+          "testString": "assert($(\"h1\").length > 0, '确保网页中能看到 <code>h1</code> 标签。');"
         },
         {
-          "text": "确保网页中能看到副标题。",
-          "testString": "assert($(\"h2\").length > 0, '确保网页中能看到副标题。');"
+          "text": "确保网页中能看到 <code>h2</code> 标签。",
+          "testString": "assert($(\"h2\").length > 0, '确保网页中能看到 <code>h2</code> 标签。');"
         },
         {
-          "text": "确保网页中能看到段落。",
-          "testString": "assert($(\"p\").length > 0, '确保网页中能看到段落。');"
+          "text": "确保网页中能看到 <code>p</code> 标签。",
+          "testString": "assert($(\"p\").length > 0, '确保网页中能看到 <code>p</code> 标签。');"
         },
         {
           "text": "确保删除了注释的结束标记 <code>--&#62;</code>",
@@ -206,31 +206,31 @@
       "id": "bad87fee1348bd9aedf08804",
       "title": "Comment out HTML",
       "description": [
-        "记住：注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--></code>。",
-        "现在你需要在副标题前终止注释。",
+        "记住：注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
+        "现在你需要在 <code>h2</code> 标签前终止注释。",
         "<hr>",
-        "任务：主标题和段落都注释掉，副标题留着。"
+        "任务：<code>h1</code> 标签和 <code>p</code> 标签都注释掉，<code>h2</code> 标签保留。"
       ],
       "tests": [
         {
-          "text": "注释掉主标题，这样它就从网页上消失了。",
-          "testString": "assert(($(\"h1\").length === 0), '注释掉主标题，这样它就从网页上消失了。');"
+          "text": "注释掉 <code>h1</code> 标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"h1\").length === 0), '注释掉 <code>h1</code> 标签，这样它就从网页上消失了。');"
         },
         {
-          "text": "副标题保持原样，这样网页上还能看到它。",
-          "testString": "assert(($(\"h2\").length > 0), '副标题保持原样，这样网页上还能看到它。');"
+          "text": "<code>h2</code> 标签保持原样，这样网页上还能看到它。",
+          "testString": "assert(($(\"h2\").length > 0), '<code>h2</code> 标签保持原样，这样网页上还能看到它。');"
         },
         {
-          "text": "注释掉段落，这样它就从网页上消失了。",
-          "testString": "assert(($(\"p\").length === 0), '注释掉段落，这样它就从网页上消失了。);"
+          "text": "注释掉 <code>p</code> 标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"p\").length === 0), '注释 <code>p</code> 标签，这样它就从网页上消失了。);"
         },
         {
-          "text": "确保每一个注释都以<code>--&#62;</code>结尾。",
+          "text": "确保每一个注释都以 <code>--&#62;</code> 结尾。",
           "testString": "assert(code.match(/[^fc]-->/g).length > 1, '确保每一个注释都以<code>--&#62;</code>结尾。');"
         },
         {
-          "text": "不要更改主标题、副标题、段落的顺序。",
-          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要更改主标题、副标题、段落的顺序。');"
+          "text": "不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。",
+          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。');"
         }
       ],
       "challengeType": 0,
@@ -260,20 +260,20 @@
         "手机的屏幕空间是有限的。",
         "让我们删除不必要的标签，开始设计我们的 CatPhotoApp。",
         "<hr>",
-        "任务：删除主标题以简化视图。"
+        "任务：删除 <code>h1</code> 标签以简化视图。"
       ],
       "tests": [
         {
-          "text": "删除主标题。",
-          "testString": "assert(($(\"h1\").length == 0), '删除主标题。');"
+          "text": "删除 <code>h1</code> 标签。",
+          "testString": "assert(($(\"h1\").length == 0), '删除 <code>h1</code> 标签。');"
         },
         {
-          "text": "保留副标题。",
-          "testString": "assert(($(\"h2\").length > 0), '保留副标题。');"
+          "text": "保留 <code>h2</code> 标签。",
+          "testString": "assert(($(\"h2\").length > 0), '保留 <code>h2</code> 标签。');"
         },
         {
-          "text": "保留段落。",
-          "testString": "assert(($(\"p\").length > 0), '保留段落。');"
+          "text": "保留 <code>p</code> 标签。",
+          "testString": "assert(($(\"p\").length > 0), '保留 <code>p</code> 标签。');"
         }
       ],
       "challengeType": 0,
@@ -298,10 +298,10 @@
       "id": "bad87fee1348bd9aecf08801",
       "title": "Introduction to HTML5 Elements",
       "description": [
-        "HTML5 引入了很多更具描述性的 HTML 标记，例如：<code>header</code>、<code>footer</code>、<code>nav</code>、<code>video</code>、<code>article</code>、<code>section</code> 等等。",
-        "这些标记让 HTML 更易读，同时对搜索引擎优化和可访问性更友好。",
-        "<code>main</code> 标记让搜索引擎和其他开发者瞬间就能找到网页的主要内容。",
-        "<strong>Note</strong><br>在后面的应用可访问性课程中我们会接触到更多新的 HTML5 标记，以及明白它们的用处。",
+        "HTML5 引入了很多更具描述性的 HTML 标签，例如：<code>header</code>、<code>footer</code>、<code>nav</code>、<code>video</code>、<code>article</code>、<code>section</code> 等等。",
+        "这些标签让 HTML 更易读，同时有助于搜索引擎优化和无障碍访问。",
+        "<code>main</code> 标签让搜索引擎和开发者瞬间就能找到网页的主要内容。",
+        "<strong>注意</strong><br>在后面的应用无障碍课程中我们会接触到更多新的 HTML5 标签，以及明白它们的用处。",
         "<hr>",
         "在现有的段落下创建一个新的段落，段落内容为：养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。",
         "在第一个段落前添加 <code><main></code>，在第二个段落后添加 <code></main></code>。"
@@ -324,8 +324,8 @@
           "testString": "assert($('main').length === 1, '代码中应该包含 <code>main</code> 标签。');"
         },
         {
-          "text": "<code>main</code> 标签应有两个段落作为它的子标签。",
-          "testString": "assert($(\"main\").children(\"p\").length === 2, '<code>main</code> 标签应有两个段落作为它的子标签。');"
+          "text": "<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。",
+          "testString": "assert($(\"main\").children(\"p\").length === 2, '<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。');"
         },
         {
           "text": "开始标记 <code><main></code> 应位于第一个段落之前。",
@@ -356,11 +356,11 @@
       "id": "bad87fee1348bd9aedf08812",
       "title": "Add Images to Your Website",
       "description": [
-        "用 <code>img</code> 标签来为你的网站添加图片，其中 <code>src</code> 属性指向一个图片的具体地址。",
+        "用 <code>img</code> 标签来为你的网站添加图片，其中 <code>src</code> 属性指向一个图片的地址。",
         "举例如下：",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\"&#62</code>",
         "注意：<code>img</code> 标签是自关闭标签，不需要结束标记。",
-        "所有的 <code>img</code> 标签必须有 <code>alt</code> 属性，<code>alt</code> 属性的文本是当图片无法加载时显示的替代文本，对于通过屏幕阅读器来浏览网页的用户非常重要。",
+        "所有的 <code>img</code> 标签必须有 <code>alt</code> 属性，<code>alt</code> 属性的文本是当图片无法加载时显示的替代文本，这对于通过屏幕阅读器来浏览网页的用户非常重要。",
         "注意：如果图片是纯装饰性的，用一个空的 <code>alt</code> 是最佳实践。",
         "理想情况下，<code>alt</code>属性不应该包含特殊字符，除非需要。",
         "让我们给上面例子的 <code>img</code> 添加 <code>alt</code> 属性。",
@@ -368,7 +368,7 @@
         "<hr>",
         "让我们给网站添加图片：",
         "在 <code>h2</code> 标签前，插入一个 <code>img</code> 标签",
-        "现在设置 <code>src</code> 属性指向一个 url 地址：",
+        "现在设置 <code>src</code> 属性指向这个地址：",
         "<code>https://bit.ly/fcc-relaxing-cat</code>",
         "最后不要忘记给图片添加一个 <code>alt</code> 文本。",
       ],
@@ -412,24 +412,24 @@
       "title": "Link to External Pages with Anchor Elements",
       "description": [
         "你可以用锚点（Anchor，简写 a）来实现网页间的跳转。",
-        "锚点需要一个<code>href</code>属性指向目的地，它还需要有锚点文本，例如：",
+        "锚点需要一个 <code>href</code> 属性指向目的地，它还需要有锚点文本，例如：",
         "<code>&#60;a href=\"https://freecodecamp.org\">this links to freecodecamp.org&#60;/a&#62;</code>",
         "然后你的浏览器会显示一个可以点击的文本，点击该文本就会跳转到 <strong>https://www.freecodecamp.org</strong>。",
         "<hr>",
-        "创建一个 <code>a</code> 标签，<code>href</code> 属性指向 <code>http://freecatphotoapp.com</code> ，锚点文本为：cat photos。"
+        "创建一个 <code>a</code> 标签，<code>href</code> 属性为 <code>http://freecatphotoapp.com</code> ，锚点文本为：<code>cat photos</code>。"
       ],
       "tests": [
         {
-          "text": "<code>a</code> 标签的锚点文本应为：cat photos。",
-          "testString": "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code> 标签的锚点文本应为：cat photos。');"
+          "text": "<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。",
+          "testString": "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。');"
         },
         {
           "text": "<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。",
           "testString": "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), '<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。');"
         },
         {
-          "text": "确保<code>a</code> 标签有结束标记。",
-          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保<code>a</code> 标签有结束标记。');"
+          "text": "确保 <code>a</code> 标签有结束标记。",
+          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保 <code>a</code> 标签有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -460,14 +460,14 @@
       "title": "Link to Internal Sections of a Page with Anchor Elements",
       "description": [
         "锚点同样也可以用来在网页内不同区域的跳转。",
-        "通过给 <code>href</code> 属性赋值为一个哈希符号 <code>#</code> 加上你想跳转的标签对应的 <code>id</code> 属性值来创建一个内部链接。 <code>id</code> 是用来描述页面唯一标签的属性。",
+        "用一个井号 <code>#</code> 加上你想跳转到的区域对应的 <code>id</code> 属性值，通过把它作为锚点的 <code>href</code> 属性值来创建一个内部链接。 <code>id</code> 是用来描述网页元素的一个属性，它的值在整个页面中唯一。",
         "下面是用来创建内部锚点链接的例子：",
         "<blockquote>&lt;a href=\"#contacts-header\"&gt;Contacts&lt;/a&gt;<br>...<br>&lt;h2 id=\"contacts-header\"&gt;Contacts&lt;/h2&gt;</blockquote>",
-        "当用户点击了 <code>Contacts</code>链接，页面就会跳转到网页的 <b>Contacts</b> 区域。",
+        "当用户点击了 <code>Contacts</code> 链接，页面就会跳转到网页的 <b>Contacts</b> 区域。",
         "<hr>",
-        "通过修改 <code>href</code> 属性为 <code>#footer</code> 来更改外部链接为内部链接，同时修改文本 cat photos 为 Jump to Bottom。",
-        "移除 <code>target=\"_blank\"</code> 属性避免点击链接会跳转到新的标签页。",
-        "然后添加一个 <code>&lt;footer&gt;</code> 标签，它的 <code>id</code> 值为 footer。"
+        "通过修改 <code>href</code> 属性为 <code>#footer</code> 来更改外部链接为内部链接，同时修改文本 <code>cat photos</code> 为 <code>Jump to Bottom</code>。",
+        "移除 <code>target=\"_blank\"</code> 属性避免点击链接会打开新的标签页。",
+        "然后添加一个 <code>&lt;footer&gt;</code> 标签，它的 <code>id</code> 值为 <code>footer</code>。"
       ],
       "tests": [
         {
@@ -487,8 +487,8 @@
           "testString": "assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true, '<code>a</code> 标签不应该有 <code>target</code> 属性。');"
         },
         {
-          "text": "<code>a</code> 标签的文本应为 Jump to Bottom。",
-          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), '<code>a</code> 标签的文本应为 Jump to Bottom。');"
+          "text": "<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。",
+          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), '<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。');"
         },
         {
           "text": "<code>footer</code> 标签的 <code>id</code> 属性应为 \"footer\"。",
@@ -528,14 +528,14 @@
         "你可以在其他文本标签内嵌套链接。You can nest links within other text elements.",
         "<blockquote>&#60;p&#62;<br> Here's a &#60;a target=\"_blank\" href=\"http://freecodecamp.org\"&#62; link to freecodecamp.org&#60;/a&#62; for you to follow.<br>&#60;/p&#62;</blockquote>",
         "让我们来分解这个例子：",
-        "通常，文本是被包裹在 <code>p</code> 标签内:<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
-        "接下来是 <code>anchor</code> 标签 <code>&#60;a&#62;</code> (需要结束标记 <code>&#60;/a&#62;</code>):<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
-        "<code>target</code> 是锚点标签的一个属性，它指定了会以什么方式来打开链接。 属性值 <code>\"_blank\"</code> 指定了会新开一个标签页来打开链接",
+        "通常，文本是被包裹在 <code>p</code> 标签内：<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
+        "接下来是 <code>anchor</code> 标签 <code>&#60;a&#62;</code>（需要结束标记 <code>&#60;/a&#62;</code>）:<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
+        "<code>target</code> 是锚点标签的一个属性，它指定了会以什么方式来打开链接，属性值 <code>\"_blank\"</code> 的意思是链接会在新标签页打开。",
         "<code>href</code> 是锚点标签的另一个属性：它指定了链接的 URL 地址：<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
         "锚点标签内的文本：<strong>\"link to freecodecamp.org\"</strong>，会显示为一个可以点击的链接：<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
         "例子的最后输出将会是这样：<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
         "<hr>",
-        "现在用一个新的 <code>p</code> 标签来包裹现存的 <code>a</code> 标签（紧挨着 <code>main</code>标签)。新段落的文本为：View more cat photos，其中 \"cat photos\" 是一个链接，其他是纯文本。"
+        "现在用一个新的 <code>p</code> 标签来包裹现存的 <code>a</code> 标签（必须放在 <code>main</code> 标签之后才行)。新段落的文本为：View more cat photos，其中 \"cat photos\" 是一个链接，其他是纯文本。"
       ],
       "tests": [
         {
@@ -555,8 +555,8 @@
           "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().is(\"p\") || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().is(\"p\")), '锚点应嵌套在新段落内。');"
         },
         {
-          "text": "段落的文本应为：View more (记得 more 后面有一个空格)。",
-          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), '段落的文本应为：View more (记得 more 后面有一个空格)。');"
+          "text": "段落的文本应为：View more （记得 more 后面有一个空格）。",
+          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), '段落的文本应为：View more （记得 more 后面有一个空格）。');"
         },
         {
           "text": "锚点的文本不应该为：View more。",
