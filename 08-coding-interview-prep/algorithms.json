@@ -8,70 +8,70 @@
       "id": "a3f503de51cf954ede28891d",
       "title": "Find the Symmetric Difference",
       "description": [
-        "前要：对称差，",
-        "Create a function that takes two or more arrays and returns an array of the <dfn>symmetric difference</dfn> (<code>&xutri;</code> or <code>&oplus;</code>) of the provided arrays.",
-        "Given two sets (for example set <code>A = {1, 2, 3}</code> and set <code>B = {2, 3, 4}</code>), the mathematical term \"symmetric difference\" of two sets is the set of elements which are in either of the two sets, but not in both (<code>A &xutri; B = C = {1, 4}</code>). For every additional symmetric difference you take (say on a set <code>D = {2, 3}</code>), you should get the set with elements which are in either of the two the sets but not both (<code>C &xutri; D = {1, 4} &xutri; {2, 3} = {1, 2, 3, 4}</code>). The resulting array must contain only unique values (<em>no duplicates</em>).",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "知识提要：对称差 (Symmetric Difference)，数学上，两个 <a href='https://baike.baidu.com/item/%E9%9B%86%E5%90%88/2908117' target='_blank'>集合</a> 的对称差是只属于其中一个集合，而不属于另一个集合的元素组成的集合，例如：集合 A = { 1, 2, 3} 和 B = { 2, 3, 4} 的对称差为 A &xutri; B = C = {1,4},。 集合论中的这个运算相当于布尔逻辑中的异或运算。<a href='https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%B7%AE' target='_blank'>百科</a>。",
+        "创建一个函数sym，输入两个或两个以上的数组作为参数，然后返回值为 **对称差** 的数组",
+        "思路：设定两个数组 (例如：<code>A = {1, 2, 3}</code>，<code>B = {2, 3, 4}</code>，)作为参数传入，返回对称差数组（<code>A &xutri; B = C = {1, 4}</code>），且数组元素具有唯一性（没有重复项）。",
+        "如果您遇到了难题，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。请尽量编写属于您自己的代码。尝试一下 **结对编程** 会有意料不到的惊喜哦。",
       ],
       "solutions": [
         "function sym() {\n  var arrays = [].slice.call(arguments);\n  return arrays.reduce(function (symDiff, arr) {\n    return symDiff.concat(arr).filter(function (val, idx, theArr) {\n      return theArr.indexOf(val) === idx \n        && (symDiff.indexOf(val) === -1 || arr.indexOf(val) === -1);\n    });\n  });\n}\nsym([1, 2, 3], [5, 2, 1, 4]);\n"
       ],
       "tests": [
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> should return <code>[3, 4, 5]</code>.",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5], '<code>sym([1, 2, 3], [5, 2, 1, 4])</code> should return <code>[3, 4, 5]</code>.');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该是<code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5], '<code>sym([1, 2, 3], [5, 2, 1, 4])</code>的返回值应该是<code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> should contain only three elements.",
-          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3, '<code>sym([1, 2, 3], [5, 2, 1, 4])</code> should contain only three elements.');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3, '<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> should return <code>[3, 4, 5]</code>.",
-          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5], '<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> should return <code>[3, 4, 5]</code>.');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该是 <code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5], '<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该是 <code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> should contain only three elements.",
-          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3, '<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> should contain only three elements.');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3, '<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> should return <code>[3, 4, 5]</code>.",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5], '<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> should return <code>[3, 4, 5]</code>.');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该是 <code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5], '<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该是 <code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> should contain only three elements.",
-          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3, '<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> should contain only three elements.');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3, '<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> should return <code>[1, 4, 5]</code>",
-          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5], '<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> should return <code>[1, 4, 5]</code>');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5], '<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> should contain only three elements.",
-          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3, '<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> should contain only three elements.');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3, '<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> should return <code>[1, 4, 5]</code>.",
-          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5], '<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> should return <code>[1, 4, 5]</code>.');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5], '<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> should contain only three elements.",
-          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3, '<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> should contain only three elements.');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3, '<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> should return <code>[2, 3, 4, 6, 7]</code>.",
-          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]), [2, 3, 4, 6, 7], '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> should return <code>[2, 3, 4, 6, 7]</code>.');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该是 <code>[2, 3, 4, 6, 7]</code>。",
+          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]), [2, 3, 4, 6, 7], '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该是 <code>[2, 3, 4, 6, 7]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> should contain only five elements.",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5, '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> should contain only five elements.');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该只包含五个元素。",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5, '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该只包含五个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> should return <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>.",
-          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9], '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> should return <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>.');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该是 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。",
+          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9], '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该是 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> should contain only eight elements.",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8, '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> should contain only eight elements.');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该只包含八个元素。",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8, '<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该只包含八个元素。');"
         }
       ],
       "MDNlinks": [
