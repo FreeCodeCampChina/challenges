@@ -8,27 +8,27 @@
       "id": "587d7dac367417b2b2512b73",
       "title": "Create a Basic JavaScript Object",
       "description": [
-        "Think about things people see everyday, like cars, shops, and birds. These are all <code>objects</code>: tangible things people can observe and interact with.",
-        "What are some qualities of these <code>objects</code>? A car has wheels. Shops sell items. Birds have wings.",
-        "These qualities, or <code>properties</code>, define what makes up an <code>object</code>. Note that similar <code>objects</code> share the same <code>properties</code>, but may have different values for those <code>properties</code>. For example, all cars have wheels, but not all cars have the same number of wheels.",
-        "<code>Objects</code> in JavaScript are used to model real-world objects, giving them <code>properties</code> and behavior just like their real-world counterparts. Here's an example using these concepts to create a <code>duck</code> <code>object</code>:",
+        "想想我们在生活中每天都可见到的事物：比如汽车、商店以及小鸟等。这些都是 <code>对象</code>：所以对象就是这些人们可以观察和与之互动的实体事物。",
+        "那么这些 <code>对象</code> 都有哪些特征呢？比如汽车的特征是有轮子，商店是用来出售商品的，而小鸟的特征是有翅膀。",
+        "这些特征，或者说是 <code>属性</code> 定义了一个 <code>对象</code> 由什么构成的。需要注意的是：那些相似的 <code>对象</code> 可以拥有相同的 <code>属性</code>，但是这些 <code>属性</code> 可能会有不同的值。举个例子：所有的汽车都有轮子，但并不是所有汽车的轮子个数都是一样的。",
+        "Javascript 中的 <code>对象</code> 被用来模拟现实世界中的对象，并赋予他们 <code>属性</code> 和行为，就像它们在现实世界中的对应物一样。下面是使用这些概念来创建一个 <code>duck</code> <code>对象</code> 的示例：",
         "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2<br>};</blockquote>",
-        "This <code>duck</code> <code>object</code> has two property/value pairs: a <code>name</code> of \"Aflac\" and a <code>numLegs</code> of 2.",
+        "这个 <code>duck</code> <code>对象</code> 有两组键值对：一个是属性 <code>name</code> 的值是 \"Aflac\" 和 一个是属性 <code>numLegs</code> 的值是2。",
         "<hr>",
-        "Create a <code>dog</code> <code>object</code> with <code>name</code> and <code>numLegs</code> properties, and set them to a string and a number, respectively."
+        "创建一个 <code>dog</code> <code>对象</code>，并给这个对象添加两个属性：<code>name</code> 和 <code>numLegs</code>，同时分别给这两个属性设置一个字符串和数字。"
       ],
       "tests": [
         {
-          "text": "<code>dog</code> should be an <code>object</code>.",
-          "testString": "assert(typeof(dog) === 'object', '<code>dog</code> should be an <code>object</code>.');"
+          "text": "<code>dog</code> 应该就是一个 <code>object</code>。",
+          "testString": "assert(typeof(dog) === 'object', '<code>dog</code> 应该就是一个 <code>object</code>');"
         },
         {
-          "text": "<code>dog</code> should have a <code>name</code> property set to a <code>string</code>.",
-          "testString": "assert(typeof(dog.name) === 'string', '<code>dog</code> should have a <code>name</code> property set to a <code>string</code>.');"
+          "text": "<code>dog</code> 应该有一个 <code>name</code> 属性被设置了一个 <code>string</code>。",
+          "testString": "assert(typeof(dog.name) === 'string', '<code>dog</code> 应该有一个 <code>name</code> 属性被设置了一个 <code>string</code>。');"
         },
         {
-          "text": "<code>dog</code> should have a <code>numLegs</code> property set to a <code>number</code>.",
-          "testString": "assert(typeof(dog.numLegs) === 'number', '<code>dog</code> should have a <code>numLegs</code> property set to a <code>number</code>.');"
+          "text": "<code>dog</code> 应该有一个 <code>numLegs</code> 属性被设置了一个 <code>number</code>。",
+          "testString": "assert(typeof(dog.numLegs) === 'number', '<code>dog</code> 应该有一个 <code>numLegs</code> 属性被设置了一个 <code>number</code>。');"
         }
       ],
       "solutions": [
@@ -56,20 +56,20 @@
       "id": "587d7dac367417b2b2512b74",
       "title": "Use Dot Notation to Access the Properties of an Object",
       "description": [
-        "The last challenge created an <code>object</code> with various <code>properties</code>, now you'll see how to access the values of those <code>properties</code>. Here's an example:",
-        "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2<br>};<br>console.log(duck.name);<br>// This prints \"Aflac\" to the console</blockquote>",
-        "Dot notation is used on the <code>object</code> name, <code>duck</code>, followed by the name of the <code>property</code>, <code>name</code>, to access the value of \"Aflac\".",
+        "在上一个挑战中创建了一个拥有不同的 <code>属性</code> 的 <code>对象</code>，接下来你就了解到是如何访问这些 <code>属性</code> 的，请看下面的例子：",
+        "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2<br>};<br>console.log(duck.name);<br>// 这里将会输出 \"Aflac\" 到控制台 </blockquote>",
+        "点标记可以用在一个 <code>对象</code> 名称后面：如<code>duck</code>，点后面就是 <code>属性</code> 的名称用来接收一个 \"Aflac\" 值：如 <code>name</code>。",
         "<hr>",
-        "Print both <code>properties</code> of the <code>dog</code> object below to your console."
+        "请在你的控制台里面输出 <code>dog</code> 这个对象的两个 <code>属性</code>。"
       ],
       "tests": [
         {
-          "text": "Your should use <code>console.log</code> to print the value for the <code>name</code> property of the <code>dog</code> object.",
-          "testString": "assert(/console.log\\(.*dog\\.name.*\\)/g.test(code), 'Your should use <code>console.log</code> to print the value for the <code>name</code> property of the <code>dog</code> object.');"
+          "text": "你应该使用 <code>console.log</code> 来将 <code>dog</code> 对象的 <code>name</code> 属性值输出到控制台。",
+          "testString": "assert(/console.log\\(.*dog\\.name.*\\)/g.test(code), '你应该使用 <code>console.log</code> 来将 <code>dog</code> 对象的 <code>name</code> 属性值输出到控制台。');"
         },
         {
-          "text": "Your should use <code>console.log</code> to print the value for the <code>numLegs</code> property of the <code>dog</code> object.",
-          "testString": "assert(/console.log\\(.*dog\\.numLegs.*\\)/g.test(code), 'Your should use <code>console.log</code> to print the value for the <code>numLegs</code> property of the <code>dog</code> object.');"
+          "text": "你应该使用 <code>console.log</code> 来将 <code>dog</code> 对象的 <code>numLegs</code> 属性值输出到控制台。",
+          "testString": "assert(/console.log\\(.*dog\\.numLegs.*\\)/g.test(code), '你应该使用 <code>console.log</code> 来将 <code>dog</code> 对象的 <code>numLegs</code> 属性值输出到控制台。');"
         }
       ],
       "solutions": [
@@ -88,7 +88,7 @@
             "  name: \"Spot\",",
             "  numLegs: 4",
             "};",
-            "// Add your code below this line",
+            "// 在下一行添加你的代码",
             "",
             ""
           ],
@@ -101,22 +101,22 @@
       "id": "587d7dad367417b2b2512b75",
       "title": "Create a Method on an Object",
       "description": [
-        "<code>Objects</code> can have a special type of <code>property</code>, called a <code>method</code>.",
-        "<code>Methods</code> are <code>properties</code> that are functions. This adds different behavior to an <code>object</code>. Here is the <code>duck</code> example with a method:",
-        "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2,<br>&nbsp;&nbsp;sayName: function() {return \"The name of this duck is \" + duck.name + \".\";}<br>};<br>duck.sayName();<br>// Returns \"The name of this duck is Aflac.\"</blockquote>",
-        "The example adds the <code>sayName</code> <code>method</code>, which is a function that returns a sentence giving the name of the <code>duck</code>.",
-        "Notice that the <code>method</code> accessed the <code>name</code> property in the return statement using <code>duck.name</code>. The next challenge will cover another way to do this.",
+        "<code>对象</code> 可以有一个叫做 <code>方法</code> 的特殊 <code>属性</code>。",
+        "<code>方法</code> 其实就是一个函数 <code>属性</code>。它可以为一个 <code>对象</code> 添加不同的行为属性。以下就是一个带有方法属性的 <code>duck</code> 示例：",
+        "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2,<br>&nbsp;&nbsp;sayName: function() {return \"The name of this duck is \" + duck.name + \".\";}<br>};<br>duck.sayName();<br>// 返回了: \"The name of this duck is Aflac.\"</blockquote>",
+        "这个例子给 <code>duck</code> 对象添加了一个 <code>sayName</code> <code>method</code>，这个方法返回一个 <code>duck</code> 名字的语句",
+        "注意：这个 <code>method</code> 在返回语句的声明里面使用了 <code>duck.name</code> 方式来接收 code>name</code> 的属性值。在下一个挑战中我们将会使用另外一种方法来实现。",
         "<hr>",
-        "Using the <code>dog</code> <code>object</code>, give it a method called <code>sayLegs</code>. The method should return the sentence \"This dog has 4 legs.\""
+        "给 <code>dog</code> <code>对象</code> 设置一个名为 <code>sayLegs</code> 的方法，方法里面返回一个 \"This dog has 4 legs.\" 的语句。"
       ],
       "tests": [
         {
-          "text": "<code>dog.sayLegs()</code> should be a function.",
-          "testString": "assert(typeof(dog.sayLegs) === 'function', '<code>dog.sayLegs()</code> should be a function.');"
+          "text": "<code>dog.sayLegs()</code> 应该是一个方法。",
+          "testString": "assert(typeof(dog.sayLegs) === 'function', '<code>dog.sayLegs()</code>应该是一个方法。');"
         },
         {
-          "text": "<code>dog.sayLegs()</code> should return the given string - note that punctuation and spacing matter.",
-          "testString": "assert(dog.sayLegs() === 'This dog has 4 legs.', '<code>dog.sayLegs()</code> should return the given string - note that punctuation and spacing matter.');"
+          "text": "<code>dog.sayLegs()</code> 应该返回给定的字符串 - 需要注意标点和间距的问题。",
+          "testString": "assert(dog.sayLegs() === 'This dog has 4 legs.', '<code>dog.sayLegs()</code> 应该返回给定的字符串 - 需要注意标点和间距的问题。');"
         }
       ],
       "solutions": [
@@ -148,24 +148,24 @@
       "id": "587d7dad367417b2b2512b76",
       "title": "Make Code More Reusable with the this Keyword",
       "description": [
-        "The last challenge introduced a <code>method</code> to the <code>duck</code> object. It used <code>duck.name</code> dot notation to access the value for the <code>name</code> property within the return statement:",
+        "在上一个挑战中介绍了如何给 <code>duck</code> 对象设置一个 <code>方法</code> 属性。",
         "<code>sayName: function() {return \"The name of this duck is \" + duck.name + \".\";}</code>",
-        "While this is a valid way to access the object's property, there is a pitfall here. If the variable name changes, any code referencing the original name would need to be updated as well. In a short object definition, it isn't a problem, but if an object has many references to its properties there is a greater chance for error.",
-        "A way to avoid these issues is with the <code>this</code> keyword:",
+        "虽然这是访问对象属性的有效方法，但是这里有一个陷阱。如果变量名发生了改变，那么引用了原始名称的任何代码都需要更新。在一个简短的对象定义中这并不是问题，但是如果对象有很多对其属性的引用，那么发生错误的可能性就更大了。",
+        "我们可以使用 <code>this</code> 关键字这个方法来避免这一问题：",
         "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2,<br>&nbsp;&nbsp;sayName: function() {return \"The name of this duck is \" + this.name + \".\";}<br>};</blockquote>",
-        "<code>this</code> is a deep topic, and the above example is only one way to use it. In the current context, <code>this</code> refers to the object that the method is associated with: <code>duck</code>.",
-        "If the object's name is changed to <code>mallard</code>, it is not necessary to find all the references to <code>duck</code> in the code. It makes the code reusable and easier to read.",
+        "<code>this</code> 是一个很深入的话题，而上面那个例子也只是使用 <code>this</code> 的一种方法而已。在当面的上下文环境中，<code>this</code> 指向的就是与这个方法有关联的 <code>duck</code> 对象。",
+        "如果把对象的变量名改为 <code>mallard</code>，那使用 <code>this</code> 就没有必要在代码中找到所有指向 <code>duck</code> 的部分，这样可以使得代码更具有可读性和复用性。",
         "<hr>",
-        "Modify the <code>dog.sayLegs</code> method to remove any references to <code>dog</code>. Use the <code>duck</code> example for guidance."
+        "修改 <code>dog.sayLegs</code> 方法以将所有直接对 <code>dog</code> 的引用删除。可以使用 <code>duck</code> 示例进行指导。"
       ],
       "tests": [
         {
-          "text": "<code>dog.sayLegs()</code> should return the given string.",
-          "testString": "assert(dog.sayLegs() === 'This dog has 4 legs.', '<code>dog.sayLegs()</code> should return the given string.');"
+          "text": "<code>dog.sayLegs()</code> 应该返回一个指定的字符串。",
+          "testString": "assert(dog.sayLegs() === 'This dog has 4 legs.', '<code>dog.sayLegs()</code> 应该返回一个指定的字符串。');"
         },
         {
-          "text": "Your code should use the <code>this</code> keyword to access the <code>numLegs</code> property of <code>dog</code>.",
-          "testString": "assert(code.match(/this\\.numLegs/g), 'Your code should use the <code>this</code> keyword to access the <code>numLegs</code> property of <code>dog</code>.');"
+          "text": "你的代码应该使用 <code>this</code> 关键字来访问 <code>dog</code> 对象的 <code>numLegs</code> 属性值。",
+          "testString": "assert(code.match(/this\\.numLegs/g), '你的代码应该使用 <code>this</code> 关键字来访问 <code>dog</code> 对象的 <code>numLegs</code> 属性值。');"
         }
       ],
       "solutions": [
@@ -197,27 +197,27 @@
       "id": "587d7dad367417b2b2512b77",
       "title": "Define a Constructor Function",
       "description": [
-        "<code>Constructors</code> are functions that create new objects. They define properties and behaviors that will belong to the new object. Think of them as a blueprint for the creation of new objects.",
-        "Here is an example of a <code>constructor</code>:",
+        "<code>构造函数</code> 用以创建一个新对象，并给这个新对象定义属性和行为。因此这是创建新对象的一个最基本的方式。",
+        "以下就是一个 <code>构造函数</code> 的示例：",
         "<blockquote>function Bird() {<br>&nbsp;&nbsp;this.name = \"Albert\";<br>&nbsp;&nbsp;this.color = \"blue\";<br>&nbsp;&nbsp;this.numLegs = 2;<br>}</blockquote>",
-        "This <code>constructor</code> defines a <code>Bird</code> object with properties <code>name</code>, <code>color</code>, and <code>numLegs</code> set to Albert, blue, and 2, respectively.",
-        "<code>Constructors</code> follow a few conventions:",
-        "<ul><li><code>Constructors</code> are defined with a capitalized name to distinguish them from other functions that are not <code>constructors</code>.</li><li><code>Constructors</code> use the keyword <code>this</code> to set properties of the object they will create. Inside the <code>constructor</code>, <code>this</code> refers to the new object it will create.</li><li><code>Constructors</code> define properties and behaviors instead of returning a value as other functions might.</li></ul>",
+        "这个 <code>构造函数</code> 定义了一个 <code>Bird</code> 对象，其属性 <code>name</code>、 <code>color</code> 和 <code>numLegs</code> 的值分别被设置为 ‘Albert’、‘blue’ 和 2。",
+        "<code>构造函数</code> 遵循一些惯例规则：",
+        "<ul><li><code>构造函数</code> 必须要以大写字母开头来定义，用来区别 <code>构造函数</code> 和其他非构造函数。</li><li><code>构造函数</code> 使用 <code>this</code> 关键字来给它将创建的这个对象设置新的属性。在 <code>构造函数</code> 里面，<code>this</code> 指向的就是它新创建的这个对象。</li><li><code>构造函数</code> 定义了属性和行为就可创建对象，而不是像其他函数一样需要通过返回值。</li></ul>",
         "<hr>",
-        "Create a <code>constructor</code>, <code>Dog</code>, with properties <code>name</code>, <code>color</code>, and <code>numLegs</code> that are set to a string, a string, and a number, respectively."
+        "创建一个 <code>构造函数</code>：<code>Dog</code>。给其添加 <code>name</code>, <code>color</code> 和 <code>numLegs</code> 属性并分别给它们设置为：字符串，字符串和数字。"
       ],
       "tests": [
         {
-          "text": "<code>Dog</code> should have a <code>name</code> property set to a string.",
-          "testString": "assert(typeof (new Dog()).name === 'string', '<code>Dog</code> should have a <code>name</code> property set to a string.');"
+          "text": "<code>Dog</code> 应该有一个 <code>name</code> 属性被设置为一个字符串。",
+          "testString": "assert(typeof (new Dog()).name === 'string', '<code>Dog</code> 应该有一个 <code>name</code> 属性被设置为一个字符串。');"
         },
         {
-          "text": "<code>Dog</code> should have a <code>color</code> property set to a string.",
-          "testString": "assert(typeof (new Dog()).color === 'string', '<code>Dog</code> should have a <code>color</code> property set to a string.');"
+          "text": "<code>Dog</code> 应该有一个 <code>color</code> 属性被设置为一个字符串。",
+          "testString": "assert(typeof (new Dog()).color === 'string', '<code>Dog</code> 应该有一个 <code>color</code> 属性被设置为一个字符串。');"
         },
         {
-          "text": "<code>Dog</code> should have a <code>numLegs</code> property set to a number.",
-          "testString": "assert(typeof (new Dog()).numLegs === 'number', '<code>Dog</code> should have a <code>numLegs</code> property set to a number.');"
+          "text": "<code>Dog</code> 应该有一个 <code>numLegs</code> 属性被设置为一个数字。",
+          "testString": "assert(typeof (new Dog()).numLegs === 'number', '<code>Dog</code> 应该有一个 <code>numLegs</code> 属性被设置为一个数字。');"
         }
       ],
       "solutions": [
@@ -241,24 +241,24 @@
       "id": "587d7dad367417b2b2512b78",
       "title": "Use a Constructor to Create Objects",
       "description": [
-        "Here's the <code>Bird</code> constructor from the previous challenge:",
-        "<blockquote>function Bird() {<br>&nbsp;&nbsp;this.name = \"Albert\";<br>&nbsp;&nbsp;this.color  = \"blue\";<br>&nbsp;&nbsp;this.numLegs = 2;<br>&nbsp;&nbsp;// \"this\" inside the constructor always refers to the object being created<br>}<br><br>let blueBird = new Bird();</blockquote>",
-        "Notice that the <code>new</code> operator is used when calling a constructor. This tells JavaScript to create a new <code>instance</code> of <code>Bird</code> called <code>blueBird</code>. Without the <code>new</code> operator, <code>this</code> inside the constructor would not point to the newly created object, giving unexpected results.",
-        "Now <code>blueBird</code> has all the properties defined inside the <code>Bird</code> constructor:",
+        "以下是在前一个挑战中学习到并创建的一个 <code>Bird</code> 构造函数：",
+        "<blockquote>function Bird() {<br>&nbsp;&nbsp;this.name = \"Albert\";<br>&nbsp;&nbsp;this.color  = \"blue\";<br>&nbsp;&nbsp;this.numLegs = 2;<br>&nbsp;&nbsp;// 构造函数里面的 \"this\" 总是指向新创建的实例。<br>}<br><br>let blueBird = new Bird();</blockquote>",
+        "注意：通过构造函数创建对象的时候要使用 <code>new</code> 操作符。因为只有这样， Javascript 才知道要给 <code>Bird</code> 这个构造函数创建一个新的 <code>实例</code> 名字叫做 <code>blueBird</code>。如果不使用 <code>new</code> 操作符来新建对象，那么构造函数里面的 <code>this</code> 就无法指向新创建的这个对象实例，从而产生不可预见的错误。",
+        "现在 <code>blueBird</code> 这个实例就继承了 <code>Bird</code> 这个构造函数的所有属性，如下：",
         "<blockquote>blueBird.name; // => Albert<br>blueBird.color; // => blue<br>blueBird.numLegs; // => 2</blockquote>",
-        "Just like any other object, its properties can be accessed and modified:",
+        "由构造函数创建的实例也和其他对象一样，它的属性可以被访问和修改：",
         "<blockquote>blueBird.name = 'Elvira';<br>blueBird.name; // => Elvira</blockquote>",
         "<hr>",
-        "Use the <code>Dog</code> constructor from the last lesson to create a new instance of <code>Dog</code>, assigning it to a variable <code>hound</code>."
+        "使用上一个课时中的 <code>Dog</code> 构造函数创建一个 <code>Dog</code> 的新实例，分配给其一个变量名 <code>hound</code>。"
       ],
       "tests": [
         {
-          "text": "<code>hound</code> should be created using the <code>Dog</code> constructor.",
-          "testString": "assert(hound instanceof Dog, '<code>hound</code> should be created using the <code>Dog</code> constructor.');"
+          "text": "<code>hound</code> 应该是通过 <code>Dog</code> 构造函数来创建的。",
+          "testString": "assert(hound instanceof Dog, '<code>hound</code> 应该是通过 <code>Dog</code> 构造函数来创建的。');"
         },
         {
-          "text": "Your code should use the <code>new</code> operator to create an <code>instance</code> of <code>Dog</code>.",
-          "testString": "assert(code.match(/new/g), 'Your code should use the <code>new</code> operator to create an <code>instance</code> of <code>Dog</code>.');"
+          "text": "你的代码中应该使用 <code>new</code> 操作符来创建 <code>Dog</code> 构造函数的新 <code>实例</code>。",
+          "testString": "assert(code.match(/new/g), '你的代码中应该使用 <code>new</code> 操作符来创建 <code>Dog</code> 构造函数的新 <code>实例</code>。');"
         }
       ],
       "solutions": [
@@ -278,7 +278,7 @@
             "  this.color = \"brown\";",
             "  this.numLegs = 4;",
             "}",
-            "// Add your code below this line",
+            "// 在下一行添加你的代码",
             "",
             ""
           ],
@@ -291,36 +291,36 @@
       "id": "587d7dae367417b2b2512b79",
       "title": "Extend Constructors to Receive Arguments",
       "description": [
-        "The <code>Bird</code> and <code>Dog</code> constructors from last challenge worked well. However, notice that all <code>Birds</code> that are created with the <code>Bird</code> constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:",
+        "上一个挑战中 <code>Bird</code> 和 <code>Dog</code> 构造函数运行得不错。但是，注意到没有：所有通过 <code>Bird</code> 构造函数创建出来的实例 <code>Birds</code> 都自动的取名为 ‘Albert’、颜色为蓝色、都是两条腿。如果你想要新创建出来的小鸟们拥有不同的名字和颜色要怎么办呢？当然，手动的去修改每一个小鸟实例自己的属性也是可以实现的，只是会增加很多没必要的工作量：",
         "<blockquote>let swan = new Bird();<br>swan.name = \"Carlos\";<br>swan.color = \"white\";</blockquote>",
-        "Suppose you were writing a program to keep track of hundreds or even thousands of different birds in an aviary. It would take a lot of time to create all the birds, then change the properties to different values for every one.",
-        "To more easily create different <code>Bird</code> objects, you can design your Bird constructor to accept parameters:",
+        "假如你写了一个程序来追踪一个鸟舍里面的几百只甚至几千只不同的小鸟。这样将会花费很多很多的时间去创建所有的小鸟实例并给它们的属性一一修改为不同的值。",
+        "为了减轻创建不同的 <code>Bird</code> 对象，你可以给你的 <code>Bird</code> 设置为可以接收参数的构造函数：",
         "<blockquote>function Bird(name, color) {<br>&nbsp;&nbsp;this.name = name;<br>&nbsp;&nbsp;this.color = color;<br>&nbsp;&nbsp;this.numLegs = 2;<br>}</blockquote>",
-        "Then pass in the values as arguments to define each unique bird into the <code>Bird</code> constructor:",
+        "然后将值通过形参的方式传递给 <code>Bird</code> 构造函数来定义每一个唯一的小鸟实例：",
         "<code>let cardinal = new Bird(\"Bruce\", \"red\");</code>",
-        "This gives a new instance of <code>Bird</code> with name and color properties set to Bruce and red, respectively. The <code>numLegs</code> property is still set to 2.",
-        "The <code>cardinal</code> has these properties:",
+        "这给 <code>Bird</code> 的名字和颜色属性分别赋值为 ‘Bruce’ 和红色提供了另外一种方法。但 <code>numLegs</code> 属性被默认赋值为 2。",
+        "<code>cardinal</code> 有以下这些属性：",
         "<blockquote>cardinal.name // => Bruce<br>cardinal.color // => red<br>cardinal.numLegs // => 2</blockquote>",
-        "The constructor is more flexible. It's now possible to define the properties for each <code>Bird</code> at the time it is created, which is one way that JavaScript constructors are so useful. They group objects together based on shared characteristics and behavior and define a blueprint that automates their creation.",
+        "这样一来构造函数就变得很灵活了。现在可以直接定义每个 <code>Bird</code> 实例在创建时的属性，这是 JavaScript 构造函数非常有用的一种方式。它们根据共同或相似的属性和行为将对象归纳为一组，并能够自动的创建各自实例。",
         "<hr>",
-        "Create another <code>Dog</code> constructor. This time, set it up to take the parameters <code>name</code> and <code>color</code>, and have the property <code>numLegs</code> fixed at 4. Then create a new <code>Dog</code> saved in a variable <code>terrier</code>. Pass it two strings as arguments for the <code>name</code> and <code>color</code> properties."
+        "创建另一个 <code>Dog</code> 构造函数。这一次，给它设置两个参数： <code>name</code> 和 <code>color</code>，同时设置 <code>numLegs</code> 的值默认为 4。然后创建一个新 <code>Dog</code> 实例保存为变量名： <code>terrier</code>，再将两个字符串通过参数的形式传入 <code>name</code> 和 <code>color</code> 属性。"
       ],
       "tests": [
         {
-          "text": "<code>Dog</code> should receive an argument for <code>name</code>.",
-          "testString": "assert((new Dog('Clifford')).name === 'Clifford', '<code>Dog</code> should receive an argument for <code>name</code>.');"
+          "text": "<code>Dog</code> 应该接收一个 <code>name</code> 参数。",
+          "testString": "assert((new Dog('Clifford')).name === 'Clifford', '<code>Dog</code> 应该接收一个 <code>name</code> 参数。');"
         },
         {
-          "text": "<code>Dog</code> should receive an argument for <code>color</code>.",
-          "testString": "assert((new Dog('Clifford', 'yellow')).color === 'yellow', '<code>Dog</code> should receive an argument for <code>color</code>.');"
+          "text": "<code>Dog</code> 应该接收一个 <code>color</code> 参数。",
+          "testString": "assert((new Dog('Clifford', 'yellow')).color === 'yellow', '<code>Dog</code> 应该接收一个 <code>color</code> 参数。');"
         },
         {
-          "text": "<code>Dog</code> should have property <code>numLegs</code> set to 4.",
-          "testString": "assert((new Dog('Clifford')).numLegs === 4, '<code>Dog</code> should have property <code>numLegs</code> set to 4.');"
+          "text": "<code>Dog</code> 应该有一个 <code>numLegs</code> 属性被赋值为 4。",
+          "testString": "assert((new Dog('Clifford')).numLegs === 4, '<code>Dog</code> 应该有一个 <code>numLegs</code> 属性被赋值为 4。');"
         },
         {
-          "text": "<code>terrier</code> should be created using the <code>Dog</code> constructor.",
-          "testString": "assert(terrier instanceof Dog, '<code>terrier</code> should be created using the <code>Dog</code> constructor.');"
+          "text": "<code>terrier</code> 应该是通过 <code>Dog</code> 构造函数创建的。",
+          "testString": "assert(terrier instanceof Dog, '<code>terrier</code> 应该是通过 <code>Dog</code> 构造函数创建的。');"
         }
       ],
       "solutions": [
@@ -350,21 +350,21 @@
       "id": "587d7dae367417b2b2512b7a",
       "title": "Verify an Object's Constructor with instanceof",
       "description": [
-        "Anytime a constructor function creates a new object, that object is said to be an <code>instance</code> of its constructor. JavaScript gives a convenient way to verify this with the <code>instanceof</code> operator. <code>instanceof</code> allows you to compare an object to a constructor, returning <code>true</code> or <code>false</code> based on whether or not that object was created with the constructor. Here's an example:",
+        "不管何时通过构造函数创建新的新对象都是这个构造函数的一个 <code>实例</code>。 JavaScript 提供了一种很简便的方法来验证这个事实，那就是通过 <code>instanceof</code> 操作符。<code>instanceof</code> 允许你将对象与构造函数之间进行比较，根据对象是否由这个构造函数创建的返回相应的 <code>true</code> 或者 <code>false</code>。以下就是一个示例：",
         "<blockquote>let Bird = function(name, color) {<br>&nbsp;&nbsp;this.name = name;<br>&nbsp;&nbsp;this.color = color;<br>&nbsp;&nbsp;this.numLegs = 2;<br>}<br><br>let crow = new Bird(\"Alexis\", \"black\");<br><br>crow instanceof Bird; // => true</blockquote>",
-        "If an object is created without using a constructor, <code>instanceof</code> will verify that it is not an instance of that constructor:",
+        "如果一个对象不是使用构造函数创建的，那么 <code>instanceof</code> 将会证明这个对象不是构造函数的实例：",
         "<blockquote>let canary = {<br>&nbsp;&nbsp;name: \"Mildred\",<br>&nbsp;&nbsp;color: \"Yellow\",<br>&nbsp;&nbsp;numLegs: 2<br>};<br><br>canary instanceof Bird; // => false</blockquote>",
         "<hr>",
-        "Create a new instance of the <code>House</code> constructor, calling it <code>myHouse</code> and passing a number of bedrooms. Then, use <code>instanceof</code> to verify that it is an instance of <code>House</code>."
+        "给 <code>House</code> 构造函数创建一个新实例，取名为 <code>myHouse</code> 并且传递一个数字给 <code>bedrooms<code> 参数。然后使用 <code>instanceof</code> 操作符证明这个对象是否是 <code>House</code> 的实例。"
       ],
       "tests": [
         {
-          "text": "<code>myHouse</code> should have a <code>numBedrooms</code> attribute set to a number.",
-          "testString": "assert(typeof myHouse.numBedrooms === 'number', '<code>myHouse</code> should have a <code>numBedrooms</code> attribute set to a number.');"
+          "text": "<code>myHouse</code> 应该有一个 <code>numBedrooms</code> 属性被赋值为一个数字。",
+          "testString": "assert(typeof myHouse.numBedrooms === 'number', '<code>myHouse</code> 应该有一个 <code>numBedrooms</code> 属性被赋值为一个数字。');"
         },
         {
-          "text": "Be sure to verify that <code>myHouse</code> is an instance of <code>House</code> using the <code>instanceof</code> operator.",
-          "testString": "assert(/myHouse\\s*instanceof\\s*House/.test(code), 'Be sure to verify that <code>myHouse</code> is an instance of <code>House</code> using the <code>instanceof</code> operator.');"
+          "text": "一定要使用 <code>instanceof</code> 操作符证明 <code>myHouse</code> 这个对象是 <code>House</code> 构造函数的一个实例。",
+          "testString": "assert(/myHouse\\s*instanceof\\s*House/.test(code), '一定要使用 <code>instanceof</code> 操作符证明 <code>myHouse</code> 这个对象是 <code>House</code> 构造函数的一个实例。');"
         }
       ],
       "solutions": [
@@ -385,7 +385,7 @@
             "  this.numBedrooms = numBedrooms;",
             "}",
             "",
-            "// Add your code below this line",
+            "// 在下一行添加你的代码",
             "",
             "",
             ""
@@ -399,23 +399,23 @@
       "id": "587d7dae367417b2b2512b7b",
       "title": "Understand Own Properties",
       "description": [
-        "In the following example, the <code>Bird</code> constructor defines two properties: <code>name</code> and <code>numLegs</code>:",
+        "请看下面的举例，<code>Bird</code> 构造函数定义了两个属性：<code>name</code> 和 <code>numLegs</code>：",
         "<blockquote>function Bird(name) {<br>&nbsp;&nbsp;this.name  = name;<br>&nbsp;&nbsp;this.numLegs = 2;<br>}<br><br>let duck = new Bird(\"Donald\");<br>let canary = new Bird(\"Tweety\");</blockquote>",
-        "<code>name</code> and <code>numLegs</code> are called <code>own</code> properties, because they are defined directly on the instance object. That means that <code>duck</code> and <code>canary</code> each has its own separate copy of these properties.",
-        "In fact every instance of <code>Bird</code> will have its own copy of these properties.",
-        "The following code adds all of the <code>own</code> properties of <code>duck</code> to the array <code>ownProps</code>:",
+        "<code>name</code> 和 <code>numLegs</code> 被叫做 <code>自身</code> 属性，因为他们是直接在实例对象上定义的。这就意味着 <code>duck</code> 和 <code>canary</code> 这两个对象都有属于自己的这些属性的单独副本。",
+        "事实上，<code>Bird</code> 的这些实例都将拥有属于自己的这些属性的副本。",
+        "以下的代码将 <code>duck</code> 里面所有的 <code>自身</code> 属性都存到一个叫 <code>ownProps</code> 的数组里面：",
         "<blockquote>let ownProps = [];<br><br>for (let property in duck) {<br>&nbsp;&nbsp;if(duck.hasOwnProperty(property)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;ownProps.push(property);<br>&nbsp;&nbsp;}<br>}<br><br>console.log(ownProps); // prints [ \"name\", \"numLegs\" ]</blockquote>",
         "<hr>",
-        "Add the <code>own</code> properties of <code>canary</code> to the array <code>ownProps</code>."
+        "将 <code>canary</code> 对象里面的 <code>自身</code> 属性添加到 <code>canary</code> 数组里面。"
       ],
       "tests": [
         {
-          "text": "<code>ownProps</code> should include the values <code>\"numLegs\"</code> and <code>\"name\"</code>.",
-          "testString": "assert(ownProps.indexOf('name') !== -1 && ownProps.indexOf('numLegs') !== -1, '<code>ownProps</code> should include the values <code>\"numLegs\"</code> and <code>\"name\"</code>.');"
+          "text": "<code>ownProps</code> 应该包含了 <code>\"numLegs\"</code> 和 <code>\"name\"</code> 两个属性的值。",
+          "testString": "assert(ownProps.indexOf('name') !== -1 && ownProps.indexOf('numLegs') !== -1, '<code>ownProps</code> 应该包含了 <code>\"numLegs\"</code> 和 <code>\"name\"</code> 两个属性的值。');"
         },
         {
-          "text": "Solve this challenge without using the built in method <code>Object.keys()</code>.",
-          "testString": "assert(!/\\Object.keys/.test(code), 'Solve this challenge without using the built in method <code>Object.keys()</code>.');"
+          "text": "在不使用内置方法 <code>Object.keys()</code> 的情况下解决这个挑战。",
+          "testString": "assert(!/\\Object.keys/.test(code), '在不使用内置方法 <code>Object.keys()</code> 的情况下解决这个挑战。');"
         }
       ],
       "solutions": [
@@ -437,7 +437,7 @@
             "",
             "let canary = new Bird(\"Tweety\");",
             "let ownProps = [];",
-            "// Add your code below this line",
+            "// 在下一行添加你的代码",
             "",
             "",
             ""
@@ -451,29 +451,29 @@
       "id": "587d7dae367417b2b2512b7c",
       "title": "Use Prototype Properties to Reduce Duplicate Code",
       "description": [
-        "Since <code>numLegs</code> will probably have the same value for all instances of <code>Bird</code>, you essentially have a duplicated variable <code>numLegs</code> inside each <code>Bird</code> instance.",
-        "This may not be an issue when there are only two instances, but imagine if there are millions of instances. That would be a lot of duplicated variables.",
-        "A better way is to use <code>Bird’s</code> <code>prototype</code>. The <code>prototype</code> is an object that is shared among ALL instances of <code>Bird</code>. Here's how to add <code>numLegs</code> to the <code>Bird prototype</code>:",
+        "由于 <code>numLegs</code> 属性可能对 <code>Bird</code> 的所有实例都具有相同的值，所以在每一个 <code>Bird</code> 的实例中本质上都有一个重复的变量 <code>numLegs</code>。",
+        "当只有两个实例时可能并不是什么问题，但想象一下如果有数百万个实例，这将会产生许许多多重复的变量。",
+        "这里有一个更好的方法可以解决上述问题，那就是使用 <code>Bird’s</code> <code>原型</code>。<code>原型</code> 是一个可以在所有 <code>Bird</code> 实例之间共享的对象。以下是一个如何在 <code>Bird prototype</code> 中添加 <code>numLegs</code> 属性的：",
         "<blockquote>Bird.prototype.numLegs = 2;</blockquote>",
-        "Now all instances of <code>Bird</code> have the <code>numLegs</code> property.",
-        "<blockquote>console.log(duck.numLegs);  // prints 2<br>console.log(canary.numLegs);  // prints 2</blockquote>",
-        "Since all instances automatically have the properties on the <code>prototype</code>, think of a <code>prototype</code> as a \"recipe\" for creating objects.",
-        "Note that the <code>prototype</code> for <code>duck</code> and <code>canary</code> is part of the <code>Bird</code> constructor as <code>Bird.prototype</code>. Nearly every object in JavaScript has a <code>prototype</code> property which is part of the constructor function that created it.",
+        "现在所有的 <code>Bird</code> 实例都拥有了共同的 <code>numLegs</code> 属性。",
+        "<blockquote>console.log(duck.numLegs);  // 在控制台输出 2<br>console.log(canary.numLegs);  // 在控制台输出 2</blockquote>",
+        "由于所有的实例都可以在 <code>原型</code> 上自动的拥有属性，所以可以把 <code>原型</code> 看作是创建对象的 \"recipe\"。",
+        "请注意： <code>duck</code> 和 <code>canary</code> 的 <code>原型</code> 是<code>Bird</code> 构造函数原型 <code>Bird.prototype</code> 的一部分。JavaScript 中几乎所有的对象都有一个 <code>原型</code> 属性，它是创建它的构造函数的一部分。",
         "<hr>",
-        "Add a <code>numLegs</code> property to the <code>prototype</code> of <code>Dog</code>"
+        "给 <code>Dog</code> 的 <code>原型</code> 添加一个 <code>numLegs</code> 属性。"
       ],
       "tests": [
         {
-          "text": "<code>beagle</code> should have a <code>numLegs</code> property.",
-          "testString": "assert(beagle.numLegs !== undefined, '<code>beagle</code> should have a <code>numLegs</code> property.');"
+          "text": "<code>beagle</code> 应该有一个 <code>numLegs</code> 属性。",
+          "testString": "assert(beagle.numLegs !== undefined, '<code>beagle</code> 应该有一个 <code>numLegs</code> 属性。');"
         },
         {
-          "text": "<code>beagle.numLegs</code> should be a number.",
-          "testString": "assert(typeof(beagle.numLegs) === 'number' , '<code>beagle.numLegs</code> should be a number.');"
+          "text": "<code>beagle.numLegs</code> 应该是一个数字。",
+          "testString": "assert(typeof(beagle.numLegs) === 'number' , '<code>beagle.numLegs</code> 应该是一个数字。');"
         },
         {
-          "text": "<code>numLegs</code> should be a <code>prototype</code> property not an <code>own</code> property.",
-          "testString": "assert(beagle.hasOwnProperty('numLegs') === false, '<code>numLegs</code> should be a <code>prototype</code> property not an <code>own</code> property.');"
+          "text": "<code>numLegs</code> 应该是一个 <code>原型</code> 属性而不是一个 <code>自身</code> 属性。",
+          "testString": "assert(beagle.hasOwnProperty('numLegs') === false, '<code>numLegs</code> should be a <code>prototype</code> 应该是一个 <code>原型</code> 属性而不是一个 <code>自身</code> 属性。');"
         }
       ],
       "solutions": [
@@ -494,7 +494,7 @@
             "",
             "",
             "",
-            "// Add your code above this line",
+            "// 在下一行添加你的代码",
             "let beagle = new Dog(\"Snoopy\");"
           ],
           "head": [],
@@ -506,25 +506,25 @@
       "id": "587d7daf367417b2b2512b7d",
       "title": "Iterate Over All Properties",
       "description": [
-        "You have now seen two kinds of properties: <code>own</code> properties and <code>prototype</code> properties. <code>Own</code> properties are defined directly on the object instance itself. And <code>prototype</code> properties are defined on the <code>prototype</code>.",
-        "<blockquote>function Bird(name) {<br>&nbsp;&nbsp;this.name = name;  //own property<br>}<br><br>Bird.prototype.numLegs = 2; // prototype property<br><br>let duck = new Bird(\"Donald\");</blockquote>",
-        "Here is how you add <code>duck’s</code> <code>own</code> properties to the array <code>ownProps</code> and <code>prototype</code> properties to the array <code>prototypeProps</code>:",
-        "<blockquote>let ownProps = [];<br>let prototypeProps = [];<br><br>for (let property in duck) {<br>&nbsp;&nbsp;if(duck.hasOwnProperty(property)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;ownProps.push(property);<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;prototypeProps.push(property);<br>&nbsp;&nbsp;}<br>}<br><br>console.log(ownProps); // prints [\"name\"]<br>console.log(prototypeProps); // prints [\"numLegs\"]</blockquote>",
+        "现在你已经了解了两种属性: <code>自身</code> 属性和 <code>原型</code> 属性。 <code>自身</code> 属性是直接在对象实例它自己内部定义的。而 <code>原型</code> 属性是定义在 <code>prototype</code> 上的：",
+        "<blockquote>function Bird(name) {<br>&nbsp;&nbsp;this.name = name;  // 自身属性 <br>}<br><br>Bird.prototype.numLegs = 2; // 原型属性 <br><br>let duck = new Bird(\"Donald\");</blockquote>",
+        "这是一个告诉你如何将 <code>duck’s</code> <code>自身</code> 属性和 <code>原型</code> 属性分别添加到 <code>ownProps</code> 数组和 <code>prototypeProps</code> 数组里面：",
+        "<blockquote>let ownProps = [];<br>let prototypeProps = [];<br><br>for (let property in duck) {<br>&nbsp;&nbsp;if(duck.hasOwnProperty(property)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;ownProps.push(property);<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;prototypeProps.push(property);<br>&nbsp;&nbsp;}<br>}<br><br>console.log(ownProps); // 输出 [\"name\"]<br>console.log(prototypeProps); // 输出 [\"numLegs\"]</blockquote>",
         "<hr>",
-        "Add all of the <code>own</code> properties of <code>beagle</code> to the array <code>ownProps</code>. Add all of the <code>prototype</code> properties of <code>Dog</code> to the array <code>prototypeProps</code>."
+        "将 <code>beagle</code> 的所有属性都添加到 code>ownProps</code> 数组里面去。将 <code>Dog</code> 的所有 <code>原型</code> 属性添加到 <code>prototypeProps</code> 数组中。"
       ],
       "tests": [
         {
-          "text": "The <code>ownProps</code> array should include <code>\"name\"</code>.",
-          "testString": "assert(ownProps.indexOf('name') !== -1, 'The <code>ownProps</code> array should include <code>\"name\"</code>.');"
+          "text": "这个 <code>ownProps</code> 数组应该包含了 <code>\"name\"</code> 这个值。",
+          "testString": "assert(ownProps.indexOf('name') !== -1, '这个 <code>ownProps</code> 属性应该包含了 <code>\"name\"</code> 这个值。');"
         },
         {
-          "text": "The <code>prototypeProps</code> array should include <code>\"numLegs\"</code>.",
-          "testString": "assert(prototypeProps.indexOf('numLegs') !== -1, 'The <code>prototypeProps</code> array should include <code>\"numLegs\"</code>.');"
+          "text": "这个 <code>prototypeProps</code> 数组应该包含了 <code>\"numLegs\"</code> 这个值。",
+          "testString": "assert(prototypeProps.indexOf('numLegs') !== -1, '这个 <code>prototypeProps</code> 数组应该包含了 <code>\"numLegs\"</code> 这个值。');"
         },
         {
-          "text": "Solve this challenge without using the built in method <code>Object.keys()</code>.",
-          "testString": "assert(!/\\Object.keys/.test(code), 'Solve this challenge without using the built in method <code>Object.keys()</code>.');"
+          "text": "在不使用内置方法 <code>Object.keys()</code> 的情况下解决这个挑战。",
+          "testString": "assert(!/\\Object.keys/.test(code), '在不使用内置方法 <code>Object.keys()</code> 的情况下解决这个挑战。');"
         }
       ],
       "solutions": [
@@ -550,7 +550,7 @@
             "let ownProps = [];",
             "let prototypeProps = [];",
             "",
-            "// Add your code below this line ",
+            "// 在下一行添加你的代码 ",
             "",
             "",
             ""
@@ -564,27 +564,27 @@
       "id": "587d7daf367417b2b2512b7e",
       "title": "Understand the Constructor Property",
       "description": [
-        "There is a special <code>constructor</code> property located on the object instances <code>duck</code> and <code>beagle</code> that were created in the previous challenges:",
-        "<blockquote>let duck = new Bird();<br>let beagle = new Dog();<br><br>console.log(duck.constructor === Bird);  //prints true<br>console.log(beagle.constructor === Dog);  //prints true</blockquote>",
-        "Note that the <code>constructor</code> property is a reference to the constructor function that created the instance.",
-        "The advantage of the <code>constructor</code> property is that it's possible to check for this property to find out what kind of object it is. Here's an example of how this could be used:",
+        "在上一个挑战中创建的实例对象 <code>duck</code> 和 <code>beagle</code> 都有一个特殊的  <code>constructor</code> 属性：",
+        "<blockquote>let duck = new Bird();<br>let beagle = new Dog();<br><br>console.log(duck.constructor === Bird);  //输出 true<br>console.log(beagle.constructor === Dog);  //输出 true</blockquote>",
+        "需要注意到的是这个 <code>constructor</code> 属性是对创建这个实例的构造函数的一个引用。",
+        "<code>constructor</code> 属性的一个优势就是通过检查这个属性来找出它是一个什么样的对象。下面是一个例子，来看看是怎么使用的：",
         "<blockquote>function joinBirdFraternity(candidate) {<br>&nbsp;&nbsp;if (candidate.constructor === Bird) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>&nbsp;&nbsp;}<br>}</blockquote>",
-        "<strong>Note</strong><br>Since the <code>constructor</code> property can be overwritten (which will be covered in the next two challenges) it’s generally better to use the <code>instanceof</code> method to check the type of an object.",
+        "<strong>注意：</strong><br>由于 <code>constructor</code> 属性可以被重写（在下面两节挑战中将会遇到） 所以通常使用 <code>instanceof</code> 方法来检查对象的类型要更好。",
         "<hr>",
-        "Write a <code>joinDogFraternity</code> function that takes a <code>candidate</code> parameter and, using the <code>constructor</code> property, return <code>true</code> if the candidate is a <code>Dog</code>, otherwise return <code>false</code>."
+        "写一个 <code>joinDogFraternity</code> 函数，传入一个 <code>candidate</code> 参数并使用 <code>constructor</code> 属性来判断传入的 candidate 是不是 <code>Dog</code> 创建的对象实例，如果是返回 <code>true</code> 否则返回 <code>false</code>。"
       ],
       "tests": [
         {
-          "text": "<code>joinDogFraternity</code> should be defined as a function.",
-          "testString": "assert(typeof(joinDogFraternity) === 'function', '<code>joinDogFraternity</code> should be defined as a function.');"
+          "text": "<code>joinDogFraternity</code> 应该被定义为一个函数。",
+          "testString": "assert(typeof(joinDogFraternity) === 'function', '<code>joinDogFraternity</code> 应该被定义为一个函数。');"
         },
         {
-          "text": "<code>joinDogFraternity</code> should return true if<code>candidate</code> is an instance of <code>Dog</code>.",
-          "testString": "assert(joinDogFraternity(new Dog(\"\")) === true, '<code>joinDogFraternity</code> should return true if<code>candidate</code> is an instance of <code>Dog</code>.');"
+          "text": "如果 <code>candidate</code> 是 <code>Dog</code> 的一个对象实例，则 <code>joinDogFraternity</code> 函数应该返回 <code>true</code>。",
+          "testString": "assert(joinDogFraternity(new Dog(\"\")) === true, '如果 <code>candidate</code> 是 <code>Dog</code> 的一个对象实例，则 <code>joinDogFraternity</code> 函数应该返回 <code>true</code>。');"
         },
         {
-          "text": "<code>joinDogFraternity</code> should use the <code>constructor</code> property.",
-          "testString": "assert(/\\.constructor/.test(code) && !/instanceof/.test(code), '<code>joinDogFraternity</code> should use the <code>constructor</code> property.');"
+          "text": "<code>joinDogFraternity</code> 应该要使用 <code>constructor</code> 属性。",
+          "testString": "assert(/\\.constructor/.test(code) && !/instanceof/.test(code), '<code>joinDogFraternity</code> 应该要使用 <code>constructor</code> 属性。');"
         }
       ],
       "solutions": [
@@ -603,7 +603,7 @@
             "  this.name = name;",
             "}",
             "",
-            "// Add your code below this line",
+            "// 在下一行添加你的代码",
             "function joinDogFraternity(candidate) {",
             "  ",
             "}",
@@ -618,31 +618,31 @@
       "id": "587d7daf367417b2b2512b7f",
       "title": "Change the Prototype to a New Object",
       "description": [
-        "Up until now you have been adding properties to the <code>prototype</code> individually:",
+        "到目前为止，你已经可以单独给 <code>prototype</code> 添加属性了：",
         "<blockquote>Bird.prototype.numLegs = 2;</blockquote>",
-        "This becomes tedious after more than a few properties.",
+        "这将在添加许多属性的时候变得单调乏味的。",
         "<blockquote>Bird.prototype.eat = function() {<br>&nbsp;&nbsp;console.log(\"nom nom nom\");<br>}<br><br>Bird.prototype.describe = function() {<br>&nbsp;&nbsp;console.log(\"My name is \" + this.name);<br>}</blockquote>",
-        "A more efficient way is to set the <code>prototype</code> to a new object that already contains the properties. This way, the properties are added all at once:",
+        "一种更有效的方法就是给对象的 <code>prototype</code> 设置为一个已经包含了属性的新对象。这样一来，所有属性都可以一次性被添加进来：",
         "<blockquote>Bird.prototype = {<br>&nbsp;&nbsp;numLegs: 2, <br>&nbsp;&nbsp;eat: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"nom nom nom\");<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name);<br>&nbsp;&nbsp;}<br>};</blockquote>",
         "<hr>",
-        "Add the property <code>numLegs</code> and the two methods <code>eat()</code> and <code>describe()</code> to the <code>prototype</code> of <code>Dog</code> by setting the <code>prototype</code> to a new object."
+        "通过给 <code>prototype</code> 设置为新对象的方法，给 <code>Dog</code> 构造函数的 <code>原型</code> 上添加一个属性 <code>numLegs</code> 和两个方法 <code>eat()</code> 、<code>describe()</code>。"
       ],
       "tests": [
         {
-          "text": "<code>Dog.prototype</code> should be set to a new object.",
-          "testString": "assert((/Dog\\.prototype\\s*?=\\s*?{/).test(code), '<code>Dog.prototype</code> should be set to a new object.');"
+          "text": "<code>Dog.prototype</code> 应该被设置为一个新对象。",
+          "testString": "assert((/Dog\\.prototype\\s*?=\\s*?{/).test(code), '<code>Dog.prototype</code> 应该被设置为一个新对象。');"
         },
         {
-          "text": "<code>Dog.prototype</code> should have the property <code>numLegs</code>.",
-          "testString": "assert(Dog.prototype.numLegs !== undefined, '<code>Dog.prototype</code> should have the property <code>numLegs</code>.');"
+          "text": "<code>Dog.prototype</code> 应该拥有属性 <code>numLegs</code>。",
+          "testString": "assert(Dog.prototype.numLegs !== undefined, '<code>Dog.prototype</code> 应该拥有属性 <code>numLegs</code>。');"
         },
         {
-          "text": "<code>Dog.prototype</code> should have the method <code>eat()</code>.",
-          "testString": "assert(typeof Dog.prototype.eat === 'function', '<code>Dog.prototype</code> should have the method <code>eat()</code>.'); "
+          "text": "<code>Dog.prototype</code> 应该拥有方法 <code>eat()</code>。",
+          "testString": "assert(typeof Dog.prototype.eat === 'function', '<code>Dog.prototype</code> 应该拥有方法 <code>eat()</code>。'); "
         },
         {
-          "text": "<code>Dog.prototype</code> should have the method <code>describe()</code>.",
-          "testString": "assert(typeof Dog.prototype.describe === 'function', '<code>Dog.prototype</code> should have the method <code>describe()</code>.'); "
+          "text": "<code>Dog.prototype</code> 应该拥有方法 <code>describe()</code>。",
+          "testString": "assert(typeof Dog.prototype.describe === 'function', '<code>Dog.prototype</code> 应该拥有方法 <code>describe()</code>。'); "
         }
       ],
       "solutions": [
@@ -662,7 +662,7 @@
             "}",
             "",
             "Dog.prototype = {",
-            "  // Add your code below this line",
+            "  // 在下一行添加你的代码",
             "  ",
             "};"
           ],
