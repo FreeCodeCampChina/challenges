@@ -174,9 +174,10 @@
       "id": "a7bf700cd123b9a54eef01d5",
       "title": "No Repeats Please",
       "description": [
-        "Return the number of total permutations of the provided string that don't have repeated consecutive letters. Assume that all characters in the provided string are each unique.",
+        "把一个字符串中的字符重新排列生成新的字符串，返回新生成的字符串里没有连续重复字符的字符串个数。连续重复只以单个字符为准。",
+        "例如：",
         "For example, <code>aab</code> should return 2 because it has 6 total permutations (<code>aab</code>, <code>aab</code>, <code>aba</code>, <code>aba</code>, <code>baa</code>, <code>baa</code>), but only 2 of them (<code>aba</code> and <code>aba</code>) don't have the same letter (in this case <code>a</code>) repeating.",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。请尽量编写属于你自己的代码。尝试一下 **结对编程** 会有意料不到的惊喜哦。"
       ],
       "solutions": [
         "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: Global array which holds the list of permutations\n  //usedChars: Global utility array which holds a list of \"currently-in-use\" characters\n  var permArr = [], usedChars = [];\n  function permute(input) {\n    //convert input into a char array (one element for each character)\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      //get and remove character at index \"i\" from char array\n      ch = chars.splice(i, 1);\n      //add removed character to the end of used characters\n      usedChars.push(ch);\n      //when there are no more characters left in char array to add, add used chars to list of permutations\n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      //send characters (minus the removed one from above) from char array to be permuted\n      permute(chars.join(\"\"));\n      //add removed character back into char array in original position\n      chars.splice(i, 0, ch);\n      //remove the last character used off the end of used characters array\n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
