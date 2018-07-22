@@ -11,7 +11,7 @@
         "知识提要：对称差 (Symmetric Difference)，数学上，两个 <a href='https://baike.baidu.com/item/%E9%9B%86%E5%90%88/2908117' target='_blank'>集合</a> 的对称差是只属于其中一个集合，而不属于另一个集合的元素组成的集合，例如：集合 A = { 1, 2, 3} 和 B = { 2, 3, 4} 的对称差为 A &xutri; B = C = {1,4},。 集合论中的这个运算相当于布尔逻辑中的异或运算。<a href='https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%B7%AE' target='_blank'>百科</a>。",
         "创建一个函数sym，输入两个或两个以上的数组作为参数，然后返回值为 **对称差** 的数组",
         "思路：设定两个数组 (例如：<code>A = {1, 2, 3}</code>，<code>B = {2, 3, 4}</code>，)作为参数传入，返回对称差数组（<code>A &xutri; B = C = {1, 4}</code>），且数组元素具有唯一性（没有重复项）。",
-        "如果您遇到了难题，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。请尽量编写属于您自己的代码。尝试一下 **结对编程** 会有意料不到的惊喜哦。",
+        "如果你遇到了难题，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。请尽量编写属于你自己的代码。尝试一下 **结对编程** 会有意料不到的惊喜哦。",
       ],
       "solutions": [
         "function sym() {\n  var arrays = [].slice.call(arguments);\n  return arrays.reduce(function (symDiff, arr) {\n    return symDiff.concat(arr).filter(function (val, idx, theArr) {\n      return theArr.indexOf(val) === idx \n        && (symDiff.indexOf(val) === -1 || arr.indexOf(val) === -1);\n    });\n  });\n}\nsym([1, 2, 3], [5, 2, 1, 4]);\n"
