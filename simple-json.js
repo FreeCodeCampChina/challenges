@@ -39,10 +39,10 @@ var source = [
   '05-apis-and-microservices/apis-and-microservices-projects.json',
 
   
-  '06-information-security-and-quality-assurance/helmetjs.json',
-  '06-information-security-and-quality-assurance/testing-with-chai.json',
-  '06-information-security-and-quality-assurance/advanced-express-tools.json',
-  '06-information-security-and-quality-assurance/quality-assurance-and-information-security-projects.json',
+  '06-information-security-and-quality-assurance/information-security-with-helmetjs.json',
+  '06-information-security-and-quality-assurance/quality-assurance-and-testing-with-chai.json',
+  '06-information-security-and-quality-assurance/advanced-node-and-express.json',
+  '06-information-security-and-quality-assurance/information-security-and-quality-assurance-projects.json',
 
   '08-coding-interview-prep/algorithms.json',
   '08-coding-interview-prep/data-structures.json',
