@@ -8,16 +8,16 @@
       "id": "587d774c367417b2b2512a9c",
       "title": "Add a Text Alternative to Images for Visually Impaired Accessibility",
       "description": [
-        "It's likely you've seen an <code>alt</code> attribute on an <code>img</code> tag in other challenges. <code>Alt</code> text describes the content of the image and provides a text-alternative. This helps in case the image fails to load or can't be seen by a user. It's also used by search engines to understand what an image contains to include it in search results. Here's an example:",
+        "在其他挑战里你应该已经使用过 <code>img</code> 标签的<code>alt</code>属性了。<code>Alt</code>属性中的文本作为备选文字描述了图片的内容。这有助于用户在图片加载失败或者不可见的情况下理解图片内容。这点也有助于搜索引擎理解图片内容，并将其加入到搜索结果中。例如：",
         "<code>&lt;img src=&quot;importantLogo.jpeg&quot; alt=&quot;Company logo&quot;&gt;</code>",
-        "People with visual impairments rely on screen readers to convert web content to an audio interface. They won't get information if it's only presented visually. For images, screen readers can access the <code>alt</code> attribute and read its contents to deliver key information.",
-        "Good <code>alt</code> text is short but descriptive, and meant to briefly convey the meaning of the image. You should always include an <code>alt</code> attribute on your image. Per HTML5 specification, this is now considered mandatory.",
+        "那些无法通过视觉获取信息的用户，只能通过屏幕阅读器将网页内容转换为音频的方式获取信息。而屏幕阅读器是通过识别并朗读图片 <code>alt</code> 属性中的内容，来传递图片包含的内容",
+        "良好的 <code>alt</code> 文本可以简明扼要的描述图片信息。所以你的图片最好总是包含一个<code>alt</code>属性。HTML5文档正在考虑强制要求这点。",
         "<hr>",
-        "Camper Cat happens to be both a coding ninja and an actual ninja, and is building a website to share his knowledge. The profile picture he wants to use shows his skills, and should be appreciated by all site visitors. Add an <code>alt</code> attribute in the <code>img</code> tag, that explains Camper Cat is doing karate. (The image <code>src</code> doesn't link to an actual file, so you should see the <code>alt</code> text in the display.)"
+        "碰巧，无论是Camper新手还是Camper老鸟，正在建立一个可以分享他们的知识的网站。他们将要使用一张对所有网站访问者都能有效识别的个人资料图片来展示他的技巧。给 <code>img</code> 标签上添加一个 <code>alt</code> 属性，就是Camper Cat的绝招。（如果<code>img</code> 的 <code>src</code> 属性是无效的，我们就能在显示器上看到 <code>alt</code> 文本。）"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have an <code>alt</code> attribute, and it should not be empty.",
+          "text": "你的 <code>img</code> 应该有一个包含说明性文字 <code>alt</code> 属性。",
           "testString": "assert($('img').attr('alt'), 'Your <code>img</code> tag should have an <code>alt</code> attribute, and it should not be empty.');"
         }
       ],
