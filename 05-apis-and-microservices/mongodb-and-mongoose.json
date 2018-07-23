@@ -8,19 +8,23 @@
       "id": "587d7fb6367417b2b2512c06",
       "title": "Install and Set Up Mongoose",
       "description": [
-        "Add mongodb and mongoose to the project’s package.json. Then require mongoose. Store your mLab database URI in the private .env file as MONGO_URI. Connect to the database using mongoose.connect(<Your URI>)"
+        "Add mongodb and mongoose to the project’s package.json. Then require mongoose. Store your mLab database URI in the private .env file as MONGO_URI. Connect to the database using mongoose.connect(<Your URI>)",
+        "在 package.json 文件中添加 mongodb 和 mongoose 依赖. 然后 require('mongoose'). 将 mLab 数据库 URI 作为 MONGO_URI 变量存储在私有 .env 文件中. 使用 mongoose.connect(<Your URI>) 命令连接数据库"
       ],
       "tests": [
         {
           "text": "\"mongodb\" dependency should be in package.json",
+          "text": "在 package.json 文件中应该有 \"mongodb\" 依赖",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies, 'mongodb'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "\"mongoose\" dependency should be in package.json",
+          "text": "在 package.json 文件中应该有 \"mongoose\" 依赖",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies, 'mongoose'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "\"mongoose\" should be connected to a database",
+          "text": "\"mongoose\" 应该已经连接数据库",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/is-mongoose-ok').then(data => {assert.isTrue(data.isMongooseOk, 'mongoose is not connected')}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -33,9 +37,13 @@
       "title": "Create a Model",
       "description": [
         "First of all we need a Schema. Each schema maps to a MongoDB collection. It defines the shape of the documents within that collection.",
+        "首先，我们需要一个 Schema. 每一个 schema 对应一个 mongoDB collection 并且在那个 collection 里面定义了 documents 的模型",
         "Schemas are building block for Models. They can be nested to create complex models, but in this case we’ll keep things simple.",
+        "Schemas 是 Models 的构建块. 它们可以嵌套来创建复杂的模型，但是这里，我们会保持简单.",
         "A model allows you to create instances of your objects, called documents.",
+        "Model 可以被实例化，实例化后的对象称为 document",
         "Create a person having this prototype :",
+        "创建一个拥有以下 prototype 的 person 对象:",
         "<code>- Person Prototype -</code>",
         "<code>--------------------</code>",
         "<code>name : string [required]</code>",
@@ -44,9 +52,12 @@
         "Use the mongoose basic schema types. If you want you can also add",
         "more fields, use simple validators like required or unique,",
         "and set default values. See the <a href='http://mongoosejs.com/docs/guide.html'>mongoose docs</a>.",
+        "你可以使用 schema 的基础 types 去添加更多的字段。比如使用 required 或者 unique 这样的简单验证去设置默认值. 看 <a href='http://mongoosejs.com/docs/guide.html'>mongoose 文档</a>.",
         "[C]RUD Part I - CREATE",
         "Note: Glitch is a real server, and in real servers the interactions with the db happen in handler functions. These function are executed when some event happens (e.g. someone hits an endpoint on your API). We’ll follow the same approach in these exercises. The done() function is a callback that tells us that we can proceed after completing an asynchronous operation such as inserting, searching, updating or deleting. It’s following the Node convention and should be called as done(null, data) on success, or done(err) on error.",
+        "注意: Glitch 是一个真实的服务, 并且通过 handler 函数和 db 进行交互. 这些函数通过一些事件去触发(e.g. 有人从终端调用了你的 API). 我们在这些联系中遵循同样的方法. 我们在完成如 nserting, searching, updating 或者 deleting 这样的异步操作后接着回调 done() 函数. 它遵循 Node 的惯例，需要在 success 时回调 done(null, data)， 在 error 时回调 done(err)。",
         "Warning - When interacting with remote services, errors may occur !",
+        "Warning - 当与远程服务器交互时可能发生错误!",
         "<code>/* Example */</code>",
         "<code>var someFunc = function(done) {</code>",
         "<code>  //... do something (risky) ...</code>",
@@ -57,6 +68,7 @@
       "tests": [
         {
           "text": "Creating an instance from a mongoose schema should succeed",
+          "text": "成功创建一个 schema 实例",
           "testString": "getUserInput => $.post(getUserInput('url') + '/_api/mongoose-model', {name: 'Mike', age: 28, favoriteFoods: ['pizza', 'cheese']}).then(data => { assert.equal(data.name, 'Mike', '\"model.name\" is not what expected'); assert.equal(data.age, '28', '\"model.age\" is not what expected'); assert.isArray(data.favoriteFoods, '\"model.favoriteFoods\" is not an Array'); assert.include(data.favoriteFoods, 'pizza', '\"model.favoriteFoods\" does not include the expected items'); assert.include(data.favoriteFoods, 'cheese', '\"model.favoriteFoods\" does not include the expected items'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -69,6 +81,7 @@
       "title": "Create and Save a Record of a Model",
       "description": [
         "Create a document instance using the Person constructor you build before. Pass to the constructor an object having the fields name, age, and favoriteFoods. Their types must be conformant to the ones in the Person Schema. Then call the method document.save() on the returned document instance. Pass to it a callback using the Node convention. This is a common pattern, all the following CRUD methods take a callback function like this as the last argument.",
+        "使用 Person 的 constructor 函数可以创建一个 document 对象, 该对象包含 name, age 和 favoriteFoods 字段. 这些字段的类型必须符合 Person Schema 里面定义的类型. 然后调用 document.save(). 使用 Node 惯例传递 callback. 通常情况下，所有的 CRUD(增查改删) 方法都会像下面一样作为最后一个参数去执行一个 callback() ",
         "<code>/* Example */</code>",
         "<code>// ...</code>",
         "<code>person.save(function(err, data) {</code>",
@@ -78,6 +91,7 @@
       "tests": [
         {
           "text": "Creating and saving a db item should succeed",
+          "text": "成功创建一条 db 并保存",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/create-and-save-person').then(data => { assert.isString(data.name, '\"item.name\" should be a String'); assert.isNumber(data.age, '28', '\"item.age\" should be a Number'); assert.isArray(data.favoriteFoods, '\"item.favoriteFoods\" should be an Array'); assert.equal(data.__v, 0, 'The db item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
