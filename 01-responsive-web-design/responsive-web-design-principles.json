@@ -9,10 +9,10 @@
       "title": "Create a Media Query",
       "description": [
         "媒体查询是 CSS3 中针对不同可视窗口大小定义不同样式的新技术，可视窗口是用户在网页上的可见区域，根据访问网站的设备不同而不同。",
-        "媒体查询由媒体类型组成，如果媒体类型与展示文档的设备类型匹配，则应用对应的样式。你可以在你的媒体查询中用上你想用的选择器和样式。",
-        "下面是一个媒体查询的例子：当设备宽度小于或等于 100px 时返回内容",
+        "媒体查询由媒体类型组成，如果媒体类型与展示网页的设备类型匹配，则应用对应的样式。你可以在你的媒体查询中用上你想用的选择器和样式。",
+        "下面是一个媒体查询的例子，当设备宽度小于或等于 100px 时返回内容：",
         "<code>@media (max-width: 100px) { /* CSS Rules */ }</code>",
-        "以下媒体查询当设备高度大于或等于 350px 时返回内容:",
+        "以下定义的媒体查询，是当设备高度大于或等于 350px 时返回内容：",
         "<code>@media (min-height: 350px) { /* CSS Rules */ }</code>",
         "只有当媒体类型与当前设备匹配时，才应用媒体查询中的 CSS。",
         "<hr>",
@@ -24,8 +24,8 @@
           "testString": "assert($('p').css('font-size') == '10px', '当设备 <code>height</code> 小于或等于 800px 时，你的 <code>p</code> 元素 <code>font-size</code> 应为 10px。');"
         },
         {
-          "text": "给 <code>height</code> 小于或等于 800px 的设备声明一个 <code>@media</code> 查询",
-          "testString": "assert(code.match(/@media\\s?\\(max-height:\\s*?800px\\)/g), '给 <code>height</code> 小于或等于 800px 的设备声明一个 <code>@media</code> 查询');"
+          "text": "使用 <code>@media</code> 为 <code>height</code> 小于或等于 800px 的设备添加一个媒体查询。",
+          "testString": "assert(code.match(/@media\\s?\\(max-height:\\s*?800px\\)/g), '使用 <code>@media</code> 为 <code>height</code> 小于或等于 800px 的设备添加一个媒体查询。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -107,14 +107,14 @@
       "description": [
         "使图片出现 \"retina\" （优化在高分辨率设备下的展示）最简单的方式是定义它们的 <code>width</code> 和 <code>height</code> 值为源文件宽高的一半。",
         "这是一个图片宽高设置为源文件宽高一半的例子：",
-        "<blockquote>&lt;style&gt;<br>&nbsp;&nbsp;img { height: 250px; width: 250px; }<br>&lt;/style&gt;<br>&lt;img src=&quot;coolPic500x500&quot; alt=&quot;一个更高质的图片&quot;&gt;</blockquote>",
+        "<blockquote>&lt;style&gt;<br>&nbsp;&nbsp;img { height: 250px; width: 250px; }<br>&lt;/style&gt;<br>&lt;img src=&quot;coolPic500x500&quot; alt=&quot;一张高质量的图片&quot;&gt;</blockquote>",
         "<hr>",
         "设置 <code>img</code> 标签的 <code>width</code> 和 <code>height</code> 为它们原始宽高的一半。在这个例子中，原始 <code>height</code> 和原始 <code>width</code> 的值都为 200px。"
       ],
       "tests": [
         {
-          "text": "你的 <code>img</code> 标签应含有 100 像素的 <code>width</code>。",
-          "testString": "assert($('img').css('width') == '100px', '你的 <code>img</code> 标签应含有 100 像素的 <code>width</code>。');"
+          "text": "你的 <code>img</code> 标签的 <code>width</code> 值应为 100px。",
+          "testString": "assert($('img').css('width') == '100px', '你的 <code>img</code> 标签的 <code>width</code> 值应为 100px。');"
         },
         {
           "text": "你的 <code>img</code> 标签应含有 100 像素的 <code>height</code>。",
@@ -146,11 +146,11 @@
       "id": "587d78b1367417b2b2512b0c",
       "title": "Make Typography Responsive",
       "description": [
-        "除了用 <code>em</code> 或 <code>px</code> 去设置文本大小, 你还可以用视窗单位来控制排版。视窗单位，如百分比，是相对单位，但它们基于不同的元素。视口单元相对于设备的视口尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。",
-        "四个不同的视窗单位分别是：",
-        "<ul><li><code>vw: 10vw</code> 视窗宽度的 10%。</li><li><code>vh: 3vh</code> 视窗高度的 3%。</li><li><code>vmin: 70vmin</code> 视窗中较小纬度的 70%  (高度 vs. 宽度).</li><li><code>vmax: 100vmax</code> 视窗中较大纬度的 100%  (高度 vs. 宽度)。</li></ul>",
+        "除了用 <code>em</code> 或 <code>px</code> 去设置文本大小, 你还可以用视口单位来控制排版。视口单位，如百分比，是相对单位，但它们基于不同的元素。视口单元相对于设备的视口尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。",
+        "四个不同的视口单位分别是：",
+        "<ul><li><code>vw</code>：如 <code>10vw</code> 的意思是视口宽度的 10%。</li><li><code>vh：</code> 如 <code>3vh</code> 的意思是视口高度的 3%。</li><li><code>vmin：</code> 如 <code>70vmin</code> 的意思是高度/宽度较小值的 70%。</li><li><code>vmax：</code> 如 <code>100vmax</code> 的意思是高度/宽度较大值的 100%。</li></ul>",
         "<hr>",
-        "设置 <code>h2</code> 标签 <code>width</code> 为视窗宽度的 80%，并且段落 <code>width</code> 为小尺寸视窗的 75%。"
+        "设置 <code>h2</code> 标签 <code>width</code> 为视口宽度的 80%，并且段落 <code>width</code> 为视口高度和宽度中较小值的 70%。"
       ],
       "tests": [
         {
