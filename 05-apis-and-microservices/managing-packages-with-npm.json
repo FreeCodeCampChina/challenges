@@ -214,22 +214,22 @@
       "id": "587d7fb5367417b2b2512c03",
       "title": "Use the Caret-Character to Use the Latest Minor Version of a Dependency",
       "description": [
-        "Similar to how the tilde (~) we learned about in the last challenge allow npm to install the latest PATCH for a dependency, the caret (^) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.",
-        "At the moment, your current version of moment should be ~2.10.2 which allows npm to install to the latest 2.10.x-version. If we instead were to use the caret (^) as our version prefix, npm would instead be allowed to update to any 2.x.x-version.",
-        "Example",
-        "<code>\"some-package-name\": \"^1.3.8\" allows updates to any 1.x.x version.</code>",
-        "Instructions",
-        "Use the caret-character (^) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.",
-        "Note that the version numbers themselves not should be changed."
+        "和上一个挑战中我们学到的英文波浪号（~）来安装最新的修订版依赖一样，使用脱字符（^）允许 npm 来安装功能更新。它们的不同之处在于：脱字符（^）允许次版本和修订版更新。",
+        "此刻，你项目中的 moment 依赖包的版本应该是 ~2.10.2，这意味着 npm 可以安装 2.10.x 版的 moment，如果使用脱字符（^）来替换版本号的前缀，那么 npm 可以安装的版本则是 2.x.x。",
+        "例子",
+        "<code>\"some-package-name\": \"^1.3.8\" 定义这个包允许使用的版本为 1.x.x。</code>",
+        "说明",
+        "使用脱字符（^）为依赖项中的 moment 版本添加前缀，允许 npm 更新依赖包到任意向下兼容的新功能版。",
+        "请注意，原本的版本号不用更改。"
       ],
       "tests": [
         {
           "text": "\"dependencies\" should include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "\"moment\" version should match \"^2.x.x\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\^2\\./, 'Wrong version of \"moment\". It should be ^2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\^2\\./, '\"moment\" 的版本号有误，它应该是 ^2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -240,17 +240,18 @@
       "id": "587d7fb5367417b2b2512c04",
       "title": "Remove a Package from Your Dependencies",
       "description": [
-        "Now you’ve tested a few ways you can manage dependencies of your project by using the package.json's dependencies-section. You’ve included external packages by adding them to the file and even told npm what types of versions you want by using special characters as the tilde (~) or the caret (^).",
-        "But what if you want to remove an external package that you no longer need? You might already have guessed it - Just remove the corresponding \"key\": value-pair for that from your dependencies.",
-        "This same method applies to removing other fields in your package.json as well",
-        "Instructions",
-        "Remove the package moment from your dependencies.",
-        "Make sure you have the right amount of commas after removing it."
+        "在 package.json 中 dependencies 这一部分，目前尝试了一些管理依赖的方式。你已经添加了一些外部的依赖包到项目中，甚至通过一些特殊的字符比如波浪号（~）或者脱字符（^）来告诉 npm 你想要的版本类型。",
+        "但是，如果想要删除不需要的依赖包，该怎么办呢？你可能已经猜到了——只需要删除 dependencies 中的键值对就行了。",
+        "同样的方法也适用于删除 package.json 中的其它字段",
+        "说明",
+        "删除 dependencies 中的 moment 依赖包。",
+        "删除依赖包后，确保有正确数量的逗号。",
+        ""
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should not include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.notProperty(packJson.dependencies, 'moment', '\"dependencies\" still includes \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"dependencies\" 未包含 \"moment\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.notProperty(packJson.dependencies, 'moment', '\"dependencies\" 中任然有 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
