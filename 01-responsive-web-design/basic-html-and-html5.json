@@ -8,23 +8,21 @@
       "id": "bd7123c8c441eddfaeb5bdef",
       "title": "Say Hello to HTML Elements",
       "description": [
-        "Welcome to freeCodeCamp's HTML coding challenges. These will walk you through web development step-by-step.",
-        "First, you'll start by building a simple web page using HTML. You can edit <code>code</code> in your <code>code editor</code>, which is embedded into this web page.",
-        "Do you see the code in your code editor that says <code>&#60;h1&#62;Hello&#60;/h1&#62;</code>? That's an HTML <code>element</code>.",
-        "Most HTML elements have an <code>opening tag</code> and a <code>closing tag</code>.",
-        "Opening tags look like this:",
-        "<code>&#60;h1&#62;</code>",
-        "Closing tags look like this:",
-        "<code>&#60;/h1&#62;</code>",
-        "The only difference between opening and closing tags is the forward slash after the opening bracket of a closing tag.",
-        "Each challenge has tests you can run at any time by clicking the \"Run tests\" button. When you pass all tests, you'll be prompted to submit your solution and go to the next coding challenge.",
+        "欢迎来到 freeCodeCamp 的 HTML 编码挑战，这些挑战将会帮助你逐步掌握 Web 开发。",
+        "HTML 是英文 Hyper Text Markup Language（超文本标记语言）的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。"
+        "你看到代码编辑器中的 <code>&#60;h1&#62;Hello&#60;/h1&#62;</code> 了吗? 那就是一个 HTML 标签。",
+        "大部分 HTML 标签都有一个 <code>开始标记</code> 和一个 <code>结束标记</code>。",
+        "开始标记像这样：<code>&#60;h1&#62;</code>",
+        "结束标记像这样：<code>&#60;/h1&#62;</code>",
+        "开始标记和结束标记的唯一区别就是结束标记多了一个 <code>/</code>。",
+        "每个挑战都有测试，任何时候点击<strong>运行测试</strong>按钮就可以运行测试。如果代码通过测试，将会弹出一个窗口，你就可以提交你的代码并顺利进入下一个挑战。",
         "<hr>",
-        "To pass the test on this challenge, change your <code>h1</code> element's text to say \"Hello World\"."
+        "请把 <code>h1</code> 标签的内容改为：<code>Hello World</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>h1</code> element should have the text \"Hello World\".",
-          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), 'Your <code>h1</code> element should have the text \"Hello World\".');"
+          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), '<code>h1</code> 标签的内容应该为：<code>Hello World</code>。');"
         }
       ],
       "challengeType": 0,
@@ -45,28 +43,28 @@
       "id": "bad87fee1348bd9aedf0887a",
       "title": "Headline with the h2 Element",
       "description": [
-        "Over the next few lessons, we'll build an HTML5 cat photo web app piece-by-piece.",
-        "The <code>h2</code> element you will be adding in this step will add a level two heading to the web page.",
-        "This element tells the browser about the structure of your website. <code>h1</code> elements are often used for main headings, while <code>h2</code> elements are generally used for subheadings. There are also <code>h3</code>, <code>h4</code>, <code>h5</code> and <code>h6</code> elements to indicate different levels of subheadings.",
+        "在接下来的几节课里，我们将会由浅入深地制作一个关于猫的图片应用。",
+        "这节课将会引入 <code>h2</code> 标签。",
+        "这些标签用来告诉浏览器，网站的结构长什么样子。<code>h1</code> 标签通常被用作主标题，<code>h2</code> 标签通常被用作副标题，还有 <code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code> 标签，它们分别用作不同级别的标题。",
         "<hr>",
-        "Add an <code>h2</code> tag that says \"CatPhotoApp\" to create a second HTML <code>element</code> below your \"Hello World\" <code>h1</code> element."
+        "在 <code>h1</code> 标签下面创建一个 <code>h2</code> 标签，标签内容为：<code>CatPhotoApp</code>。"
       ],
       "tests": [
         {
-          "text": "Create an <code>h2</code> element.",
-          "testString": "assert(($(\"h2\").length > 0), 'Create an <code>h2</code> element.');"
+          "text": "创建一个 <code>h2</code> 标签。",
+          "testString": "assert(($(\"h2\").length > 0), '创建一个 <code>h2</code> 标签。');"
         },
         {
-          "text": "Make sure your <code>h2</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, 'Make sure your <code>h2</code> element has a closing tag.');"
+          "text": "<code>h2</code> 标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, '<code>h2</code> 标签应该有结束标记。');"
         },
         {
-          "text": "Your <code>h2</code> element should have the text \"CatPhotoApp\".",
-          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), 'Your <code>h2</code> element should have the text \"CatPhotoApp\".');"
+          "text": "<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。",
+          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), '<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。');"
         },
         {
-          "text": "Your <code>h1</code> element should have the text \"Hello World\".",
-          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($(\"h1\").text()), 'Your <code>h1</code> element should have the text \"Hello World\".');"
+          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($(\"h1\").text()), '主标题的内容应该为：<code>Hello World</code>。');"
         }
       ],
       "challengeType": 0,
@@ -87,24 +85,24 @@
       "id": "bad87fee1348bd9aedf08801",
       "title": "Inform with the Paragraph Element",
       "description": [
-        "<code>p</code> elements are the preferred element for paragraph text on websites. <code>p</code> is short for \"paragraph\".",
-        "You can create a paragraph element like this:",
+        "<code>p</code> 是 <code>paragraph</code> 的缩写，通常被用来创建一个段落，就和你写作文一样。",
+        "你可以像这样创建一个段落：",
         "<code>&#60;p&#62;I'm a p tag!&#60;/p&#62;</code>",
         "<hr>",
-        "Create a <code>p</code> element below your <code>h2</code> element, and give it the text \"Hello Paragraph\"."
+        "在 <code>h2</code> 标签下面新增一个 <code>p</code> 标签，标签内容是：<code>Hello Paragraph</code>。"
       ],
       "tests": [
         {
-          "text": "Create a <code>p</code> element.",
-          "testString": "assert(($(\"p\").length > 0), 'Create a <code>p</code> element.');"
+          "text": "创建一个 <code>p</code> 标签。",
+          "testString": "assert(($(\"p\").length > 0), '创建一个 <code>p</code> 标签。');"
         },
         {
-          "text": "Your <code>p</code> element should have the text \"Hello Paragraph\".",
-          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), 'Your <code>p</code> element should have the text \"Hello Paragraph\".');"
+          "text": "<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), '<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。');"
         },
         {
-          "text": "Make sure your <code>p</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, 'Make sure your <code>p</code> element has a closing tag.');"
+          "text": "<code>p</code> 标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '<code>p</code> 标签应该有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -126,16 +124,16 @@
       "id": "bad87fee1348bd9aedf08833",
       "title": "Fill in the Blank with Placeholder Text",
       "description": [
-        "Web developers traditionally use <code>lorem ipsum text</code> as placeholder text. The 'lorem ipsum' text is randomly scraped from a famous passage by Cicero of Ancient Rome.",
-        "Lorem ipsum text has been used as placeholder text by typesetters since the 16th century, and this tradition continues on the web.",
-        "Well, 5 centuries is long enough. Since we're building a CatPhotoApp, let's use something called <code>kitty ipsum text</code>.",
+        "Web 开发者通常用 <a href='http://www.ruanyifeng.com/blog/2009/04/lorem_ipsum.html'>lorem ipsum text</a> 来做占位符，占位符就是占着位置的一些文字，没有实际意义。",
+        "为什么叫 <code>lorem ipsum text</code> 呢?是因为 <code>lorem ipsum</code> 是古罗马西塞罗谚语的前两个单词。",
+        "从公元16世纪开始 <code>lorem ipsum text</code> 就被当做占位符了，这种传统延续到了互联网时代。于此同时，孙悟空也在五指山下被压了500年，然后就进化成程序猿了，是不是很巧合。^_^",
         "<hr>",
-        "Replace the text inside your <code>p</code> element with the first few words of this kitty ipsum text: <code>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</code>"
+        "把 <code>p</code> 标签的内容更换为：<code>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>p</code> element should contain the first few words of the provided <code>kitty ipsum text</code>.",
-          "testString": "assert.isTrue((/Kitty(\\s)+ipsum/gi).test($(\"p\").text()), 'Your <code>p</code> element should contain the first few words of the provided <code>kitty ipsum text</code>.');"
+          "text": "<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。",
+          "testString": "assert.isTrue((/Monkey(\\s)+code/gi).test($(\"p\").text()), '<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。');"
         }
       ],
       "challengeType": 0,
@@ -160,28 +158,28 @@
       "id": "bad87fee1348bd9aedf08802",
       "title": "Uncomment HTML",
       "description": [
-        "Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed the end user.",
-        "Commenting is also a convenient way to make code inactive without having to delete it entirely.",
-        "Comments in HTML starts with <code>&#60;!--</code>, and ends with a <code>--&#62;</code>",
+        "注释的作用是给代码添加一些说明，方便团队合作或日后自己查看，但又不影响代码本身。",
+        "注释也可以用来在不删除代码的前提下，让代码不起作用。",
+        "在 HTML 中，注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
         "<hr>",
-        "Uncomment your <code>h1</code>, <code>h2</code> and <code>p</code> elements."
+        "现在我们反其道而行之，干掉 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的注释。"
       ],
       "tests": [
         {
-          "text": "Make your <code>h1</code> element visible on your page by uncommenting it.",
-          "testString": "assert($(\"h1\").length > 0, 'Make your <code>h1</code> element visible on your page by uncommenting it.');"
+          "text": "确保网页中能看到 <code>h1</code> 标签。",
+          "testString": "assert($(\"h1\").length > 0, '确保网页中能看到 <code>h1</code> 标签。');"
         },
         {
-          "text": "Make your <code>h2</code> element visible on your page by uncommenting it.",
-          "testString": "assert($(\"h2\").length > 0, 'Make your <code>h2</code> element visible on your page by uncommenting it.');"
+          "text": "确保网页中能看到 <code>h2</code> 标签。",
+          "testString": "assert($(\"h2\").length > 0, '确保网页中能看到 <code>h2</code> 标签。');"
         },
         {
-          "text": "Make your <code>p</code> element visible on your page by uncommenting it.",
-          "testString": "assert($(\"p\").length > 0, 'Make your <code>p</code> element visible on your page by uncommenting it.');"
+          "text": "确保网页中能看到 <code>p</code> 标签。",
+          "testString": "assert($(\"p\").length > 0, '确保网页中能看到 <code>p</code> 标签。');"
         },
         {
-          "text": "Be sure to delete all trailing comment tags&#44; i.e. <code>--&#62;</code>.",
-          "testString": "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), 'Be sure to delete all trailing comment tags&#44; i.e. <code>--&#62;</code>.');"
+          "text": "确保删除了注释的结束标记 <code>--&#62;</code>",
+          "testString": "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), '确保删除了注释的结束标记 <code>--&#62;</code>');"
         }
       ],
       "challengeType": 0,
@@ -196,7 +194,7 @@
             "",
             "<h2>CatPhotoApp</h2>",
             "",
-            "<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
+            "<p>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</p>",
             "-->"
           ],
           "head": [],
@@ -208,31 +206,31 @@
       "id": "bad87fee1348bd9aedf08804",
       "title": "Comment out HTML",
       "description": [
-        "Remember that in order to start a comment, you need to use <code>&#60;!--</code> and to end a comment, you need to use <code>--&#62;</code>",
-        "Here you'll need to end the comment before your <code>h2</code> element begins.",
+        "记住：注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
+        "现在你需要在 <code>h2</code> 标签前终止注释。",
         "<hr>",
-        "Comment out your <code>h1</code> element and your <code>p</code> element, but not your <code>h2</code> element."
+        "任务：<code>h1</code> 标签和 <code>p</code> 标签都注释掉，<code>h2</code> 标签保留。"
       ],
       "tests": [
         {
-          "text": "Comment out your <code>h1</code> element so that it is not visible on your page.",
-          "testString": "assert(($(\"h1\").length === 0), 'Comment out your <code>h1</code> element so that it is not visible on your page.');"
+          "text": "注释掉 <code>h1</code> 标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"h1\").length === 0), '注释掉 <code>h1</code> 标签，这样它就从网页上消失了。');"
         },
         {
-          "text": "Leave your <code>h2</code> element uncommented so that it is visible on your page.",
-          "testString": "assert(($(\"h2\").length > 0), 'Leave your <code>h2</code> element uncommented so that it is visible on your page.');"
+          "text": "<code>h2</code> 标签保持原样，这样网页上还能看到它。",
+          "testString": "assert(($(\"h2\").length > 0), '<code>h2</code> 标签保持原样，这样网页上还能看到它。');"
         },
         {
-          "text": "Comment out your <code>p</code> element so that it is not visible on your page.",
-          "testString": "assert(($(\"p\").length === 0), 'Comment out your <code>p</code> element so that it is not visible on your page.');"
+          "text": "注释掉 <code>p</code> 标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"p\").length === 0), '注释 <code>p</code> 标签，这样它就从网页上消失了。);"
         },
         {
-          "text": "Be sure to close each of your comments with <code>--&#62;</code>.",
-          "testString": "assert(code.match(/[^fc]-->/g).length > 1, 'Be sure to close each of your comments with <code>--&#62;</code>.');"
+          "text": "确保每一个注释都以 <code>--&#62;</code> 结尾。",
+          "testString": "assert(code.match(/[^fc]-->/g).length > 1, '确保每一个注释都以<code>--&#62;</code>结尾。');"
         },
         {
-          "text": "Do not change the order of the <code>h1</code> <code>h2</code> or <code>p</code> in the code.",
-          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , 'Do not change the order of the <code>h1</code> <code>h2</code> or <code>p</code> in the code.');"
+          "text": "不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。",
+          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。');"
         }
       ],
       "challengeType": 0,
@@ -247,7 +245,7 @@
             "",
             "<h2>CatPhotoApp</h2>",
             "",
-            "<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
+            "<p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
             "-->"
           ],
           "head": [],
@@ -259,23 +257,23 @@
       "id": "bad87fed1348bd9aedf08833",
       "title": "Delete HTML Elements",
       "description": [
-        "Our phone doesn't have much vertical space.",
-        "Let's remove the unnecessary elements so we can start building our CatPhotoApp.",
+        "手机的屏幕空间是有限的。",
+        "让我们删除不必要的标签，开始设计我们的 CatPhotoApp。",
         "<hr>",
-        "Delete your <code>h1</code> element so we can simplify our view."
+        "任务：删除 <code>h1</code> 标签以简化视图。"
       ],
       "tests": [
         {
-          "text": "Delete your <code>h1</code> element.",
-          "testString": "assert(($(\"h1\").length == 0), 'Delete your <code>h1</code> element.');"
+          "text": "删除 <code>h1</code> 标签。",
+          "testString": "assert(($(\"h1\").length == 0), '删除 <code>h1</code> 标签。');"
         },
         {
-          "text": "Leave your <code>h2</code> element on the page.",
-          "testString": "assert(($(\"h2\").length > 0), 'Leave your <code>h2</code> element on the page.');"
+          "text": "保留 <code>h2</code> 标签。",
+          "testString": "assert(($(\"h2\").length > 0), '保留 <code>h2</code> 标签。');"
         },
         {
-          "text": "Leave your <code>p</code> element on the page.",
-          "testString": "assert(($(\"p\").length > 0), 'Leave your <code>p</code> element on the page.');"
+          "text": "保留 <code>p</code> 标签。",
+          "testString": "assert(($(\"p\").length > 0), '保留 <code>p</code> 标签。');"
         }
       ],
       "challengeType": 0,
@@ -289,7 +287,7 @@
             "",
             "<h2>CatPhotoApp</h2>",
             "",
-            "<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>"
+            "<p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>"
           ],
           "head": [],
           "tail": []
@@ -300,42 +298,42 @@
       "id": "bad87fee1348bd9aecf08801",
       "title": "Introduction to HTML5 Elements",
       "description": [
-        "HTML5 introduces more descriptive HTML tags. These include <code>header</code>, <code>footer</code>, <code>nav</code>, <code>video</code>, <code>article</code>, <code>section</code> and others.",
-        "These tags make your HTML easier to read, and also help with Search Engine Optimization (SEO) and accessibility.",
-        "The <code>main</code> HTML5 tag helps search engines and other developers find the main content of your page.",
-        "<strong>Note</strong><br>Many of the new HTML5 tags and their benefits are covered in the Applied Accessibility section.",
+        "HTML5 引入了很多更具描述性的 HTML 标签，例如：<code>header</code>、<code>footer</code>、<code>nav</code>、<code>video</code>、<code>article</code>、<code>section</code> 等等。",
+        "这些标签让 HTML 更易读，同时有助于搜索引擎优化和无障碍访问。",
+        "<code>main</code> 标签让搜索引擎和开发者瞬间就能找到网页的主要内容。",
+        "<strong>注意</strong><br>在后面的应用无障碍课程中我们会接触到更多新的 HTML5 标签，以及明白它们的用处。",
         "<hr>",
-        "Create a second <code>p</code> element after the existing <code>p</code> element with the following kitty ipsum text: <code>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</code>",
-        "Wrap the paragraphs with an opening and closing <code>main</code> tag."
+        "在现有的段落下创建一个新的段落，段落内容为：养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。",
+        "在第一个段落前添加 <code><main></code>，在第二个段落后添加 <code></main></code>。"
       ],
       "tests": [
         {
-          "text": "You need 2 <code>p</code> elements with Kitty Ipsum text.",
-          "testString": "assert($(\"p\").length > 1, 'You need 2 <code>p</code> elements with Kitty Ipsum text.');"
+          "text": "页面中应该有两个段落。",
+          "testString": "assert($(\"p\").length > 1, '页面中应该有两个段落。');"
         },
         {
-          "text": "Make sure each of your <code>p</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, 'Make sure each of your <code>p</code> elements has a closing tag.');"
+          "text": "确保每个段落都有结束标记。",
+          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '确保每个段落都有结束标记。');"
         },
         {
-          "text": "Your <code>p</code> element should contain the first few words of the provided additional <code>kitty ipsum text</code>.",
-          "testString": "assert.isTrue((/Purr\\s+jump\\s+eat/gi).test($(\"p\").text()), 'Your <code>p</code> element should contain the first few words of the provided additional <code>kitty ipsum text</code>.');"
+          "text": "新建的段落应该包含关键词：养猫。",
+          "testString": "assert.isTrue((/养猫/).test($(\"p\").text()), '新建的段落应该包含关键词：养猫。');"
         },
         {
-          "text": "Your code should have one <code>main</code> element.",
-          "testString": "assert($('main').length === 1, 'Your code should have one <code>main</code> element.');"
+          "text": "代码中应该包含 <code>main</code> 标签。",
+          "testString": "assert($('main').length === 1, '代码中应该包含 <code>main</code> 标签。');"
         },
         {
-          "text": "The <code>main</code> element should have two paragraph elements as children.",
-          "testString": "assert($(\"main\").children(\"p\").length === 2, 'The <code>main</code> element should have two paragraph elements as children.');"
+          "text": "<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。",
+          "testString": "assert($(\"main\").children(\"p\").length === 2, '<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。');"
         },
         {
-          "text": "The opening <code>main</code> tag should come before the first paragraph tag.",
-          "testString": "assert(code.match(/<main>\\s*?<p>/g), 'The opening <code>main</code> tag should come before the first paragraph tag.');"
+          "text": "开始标记 <code><main></code> 应位于第一个段落之前。",
+          "testString": "assert(code.match(/<main>\\s*?<p>/g), '开始标记 <code><main></code> 应位于第一个段落之前。');"
         },
         {
-          "text": "The closing <code>main</code> tag should come after the second closing paragraph tag.",
-          "testString": "assert(code.match(/<\\/p>\\s*?<\\/main>/g), 'The closing <code>main</code> tag should come after the second closing paragraph tag.');"
+          "text": "结束标记 <code></main></code> 应位于第二段落之后。",
+          "testString": "assert(code.match(/<\\/p>\\s*?<\\/main>/g), '结束标记 <code></main></code> 应位于第二个段落之后。');"
         }
       ],
       "challengeType": 0,
@@ -347,7 +345,7 @@
           "contents": [
             "<h2>CatPhotoApp</h2>",
             "",
-            "<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>"
+            "<p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>"
           ],
           "head": [],
           "tail": []
@@ -358,34 +356,34 @@
       "id": "bad87fee1348bd9aedf08812",
       "title": "Add Images to Your Website",
       "description": [
-        "You can add images to your website by using the <code>img</code> element, and point to a specific image's URL using the <code>src</code> attribute.",
-        "An example of this would be:",
+        "用 <code>img</code> 标签来为你的网站添加图片，其中 <code>src</code> 属性指向一个图片的地址。",
+        "举例如下：",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\"&#62</code>",
-        "Note that <code>img</code> elements are self-closing.",
-        "All <code>img</code> elements <strong>must</strong> have an <code>alt</code> attribute. The text inside an <code>alt</code> attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.",
-        "Note: If the image is purely decorative, using an empty <code>alt</code> attribute is a best practice.",
-        "Ideally the <code>alt</code> attribute should not contain special characters unless needed.",
-        "Let's add an <code>alt</code> attribute to our <code>img</code> example above:",
-        "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\" alt=\"Author standing on a beach with two thumbs up.\"&#62</code>",
+        "注意：<code>img</code> 标签是自关闭标签，不需要结束标记。",
+        "所有的 <code>img</code> 标签必须有 <code>alt</code> 属性，<code>alt</code> 属性的文本是当图片无法加载时显示的替代文本，这对于通过屏幕阅读器来浏览网页的用户非常重要。",
+        "注意：如果图片是纯装饰性的，用一个空的 <code>alt</code> 是最佳实践。",
+        "理想情况下，<code>alt</code>属性不应该包含特殊字符，除非需要。",
+        "让我们给上面例子的 <code>img</code> 添加 <code>alt</code> 属性。",
+        "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\" alt=\"作者站在沙滩上竖起两个大拇指\"&#62</code>",
         "<hr>",
-        "Let's try to add an image to our website:",
-        "Insert an <code>img</code> tag, before the <code>h2</code> element.",
-        "Now set the <code>src</code> attribute so that it points to this url:",
+        "让我们给网站添加图片：",
+        "在 <code>h2</code> 标签前，插入一个 <code>img</code> 标签",
+        "现在设置 <code>src</code> 属性指向这个地址：",
         "<code>https://bit.ly/fcc-relaxing-cat</code>",
-        "Finally don't forget to give your image an <code>alt</code> text."
+        "最后不要忘记给图片添加一个 <code>alt</code> 文本。",
       ],
       "tests": [
         {
-          "text": "Your page should have an image element.",
-          "testString": "assert($(\"img\").length > 0, 'Your page should have an image element.');"
+          "text": "网页应该有一张图片。",
+          "testString": "assert($(\"img\").length > 0, '网页应该有一张图片。');"
         },
         {
-          "text": "Your image should have a <code>src</code> attribute that points to the kitten image.",
-          "testString": "assert(new RegExp(\"\\/\\/bit.ly\\/fcc-relaxing-cat|\\/\\/s3.amazonaws.com\\/freecodecamp\\/relaxing-cat.jpg\", \"gi\").test($(\"img\").attr(\"src\")), 'Your image should have a <code>src</code> attribute that points to the kitten image.');"
+          "text": "这张图片应该是一只小猫。",
+          "testString": "assert(new RegExp(\"\\/\\/bit.ly\\/fcc-relaxing-cat|\\/\\/s3.amazonaws.com\\/freecodecamp\\/relaxing-cat.jpg\", \"gi\").test($(\"img\").attr(\"src\")), '这张图片应该是一只小猫。');"
         },
         {
-          "text": "Your image element <strong>must</strong> have an <code>alt</code> attribute.",
-          "testString": "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), 'Your image element <strong>must</strong> have an <code>alt</code> attribute.');"
+          "text": "图片必须有 <code>alt</code> 属性。",
+          "testString": "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), '图片必须有 <code>alt</code> 属性。');"
         }
       ],
       "challengeType": 0,
@@ -400,8 +398,8 @@
             "<main>",
             "  ",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -413,25 +411,25 @@
       "id": "bad87fee1348bd9aedf08816",
       "title": "Link to External Pages with Anchor Elements",
       "description": [
-        "You can use <code>anchor</code> elements to link to content outside of your web page.",
-        "<code>anchor</code> elements need a destination web address called an <code>href</code> attribute. They also need anchor text. Here's an example:",
+        "你可以用锚点（Anchor，简写 a）来实现网页间的跳转。",
+        "锚点需要一个 <code>href</code> 属性指向目的地，它还需要有锚点文本，例如：",
         "<code>&#60;a href=\"https://freecodecamp.org\">this links to freecodecamp.org&#60;/a&#62;</code>",
-        "Then your browser will display the text <strong>\"this links to freecodecamp.org\"</strong> as a link you can click. And that link will take you to the web address <strong>https://www.freecodecamp.org</strong>.",
+        "然后你的浏览器会显示一个可以点击的文本，点击该文本就会跳转到 <strong>https://www.freecodecamp.org</strong>。",
         "<hr>",
-        "Create an <code>a</code> element that links to <code>http://freecatphotoapp.com</code> and has \"cat photos\" as its <code>anchor text</code>."
+        "创建一个 <code>a</code> 标签，<code>href</code> 属性为 <code>http://freecatphotoapp.com</code> ，锚点文本为：<code>cat photos</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>a</code> element should have the <code>anchor text</code> of \"cat photos\".",
-          "testString": "assert((/cat photos/gi).test($(\"a\").text()), 'Your <code>a</code> element should have the <code>anchor text</code> of \"cat photos\".');"
+          "text": "<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。",
+          "testString": "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。');"
         },
         {
-          "text": "You need an <code>a</code> element that links to <code>http&#58;//freecatphotoapp<wbr>.com</code>",
-          "testString": "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), 'You need an <code>a</code> element that links to <code>http&#58;//freecatphotoapp<wbr>.com</code>');"
+          "text": "<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。",
+          "testString": "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), '<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。');"
         },
         {
-          "text": "Make sure your <code>a</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure your <code>a</code> element has a closing tag.');"
+          "text": "确保 <code>a</code> 标签有结束标记。",
+          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保 <code>a</code> 标签有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -448,8 +446,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -461,40 +459,40 @@
       "id": "bad88fee1348bd9aedf08816",
       "title": "Link to Internal Sections of a Page with Anchor Elements",
       "description": [
-        "Anchor elements can also be used to create internal links to jump to different sections within a webpage.",
-        "To create an internal link, you assign a link's <code>href</code> attribute to a hash symbol <code>#</code> plus the value of the <code>id</code> attribute for the element that you want to internally link to, usually further down the page. You then need to add the same <code>id</code> attribute to the element you are linking to. An <code>id</code> is an attribute that uniquely describes an element.",
-        "Below is an example of an internal anchor link and its target element:",
+        "锚点同样也可以用来在网页内不同区域的跳转。",
+        "用一个井号 <code>#</code> 加上你想跳转到的区域对应的 <code>id</code> 属性值，通过把它作为锚点的 <code>href</code> 属性值来创建一个内部链接。 <code>id</code> 是用来描述网页元素的一个属性，它的值在整个页面中唯一。",
+        "下面是用来创建内部锚点链接的例子：",
         "<blockquote>&lt;a href=\"#contacts-header\"&gt;Contacts&lt;/a&gt;<br>...<br>&lt;h2 id=\"contacts-header\"&gt;Contacts&lt;/h2&gt;</blockquote>",
-        "When users click the Contacts link, they'll be taken to the section of the webpage with the <b>Contacts</b> header element.",
+        "当用户点击了 <code>Contacts</code> 链接，页面就会跳转到网页的 <b>Contacts</b> 区域。",
         "<hr>",
-        "Change your external link to an internal link by changing the <code>href</code> attribute to \"#footer\" and the text from \"cat photos\" to \"Jump to Bottom\".",
-        "Remove the <code>target=\"_blank\"</code> attribute from the anchor tag since this causes the linked document to open in a new window tab.",
-        "Then add an <code>id</code> attribute with a value of \"footer\" to the <code>&lt;footer&gt;</code> element at the bottom of the page."
+        "通过修改 <code>href</code> 属性为 <code>#footer</code> 来更改外部链接为内部链接，同时修改文本 <code>cat photos</code> 为 <code>Jump to Bottom</code>。",
+        "移除 <code>target=\"_blank\"</code> 属性避免点击链接会打开新的标签页。",
+        "然后添加一个 <code>&lt;footer&gt;</code> 标签，它的 <code>id</code> 值为 <code>footer</code>。"
       ],
       "tests": [
         {
-          "text": "There should be only one anchor tag on your page.",
-          "testString": "assert($('a').length == 1, 'There should be only one anchor tag on your page.');"
+          "text": "页面中应该只有一个锚点。",
+          "testString": "assert($('a').length == 1, '页面中应该只有一个锚点。');"
         },
         {
-          "text": "There should be only one <code>footer</code> tag on your page.",
-          "testString": "assert($('footer').length == 1, 'There should be only one <code>footer</code> tag on your page.');"
+          "text": "页面中应该只有一个 <code>footer</code> 标签。",
+          "testString": "assert($('footer').length == 1, '页面中应该只有一个 <code>footer</code> 标签。');"
         },
         {
-          "text": "The <code>a</code> tag should have an <code>href</code> attribute set to \"#footer\".",
-          "testString": "assert($('a').eq(0).attr('href') == \"#footer\", 'The <code>a</code> tag should have an <code>href</code> attribute set to \"#footer\".');"
+          "text": "<code>a</code> 标签的 <code>href</code> 属性应为：\"#footer\"。",
+          "testString": "assert($('a').eq(0).attr('href') == \"#footer\", '<code>a</code> 标签的 <code>href</code> 属性应为：\"#footer\"。');"
         },
         {
-          "text": "The <code>a</code> tag should not have a <code>target</code> attribute",
-          "testString": "assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true, 'The <code>a</code> tag should not have a <code>target</code> attribute');"
+          "text": "<code>a</code> 标签不应该有 <code>target</code> 属性。",
+          "testString": "assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true, '<code>a</code> 标签不应该有 <code>target</code> 属性。');"
         },
         {
-          "text": "The <code>a</code> text should be \"Jump to Bottom\".",
-          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), 'The <code>a</code> text should be \"Jump to Bottom\".');"
+          "text": "<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。",
+          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), '<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。');"
         },
         {
-          "text": "The <code>footer</code> tag should have an <code>id</code> attribute set to \"footer\".",
-          "testString": "assert($('footer').eq(0).attr('id') == \"footer\", 'The <code>footer</code> tag should have an <code>id</code> attribute set to \"footer\".');"
+          "text": "<code>footer</code> 标签的 <code>id</code> 属性应为 \"footer\"。",
+          "testString": "assert($('footer').eq(0).attr('id') == \"footer\", '<code>footer</code> 标签的 <code>id</code> 属性应为 \"footer\"。');"
         }
       ],
       "challengeType": 0,
@@ -511,10 +509,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
-            "  <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch at owner, destroy all furniture, especially couch or lay on arms while you're using the keyboard. Missing until dinner time toy mouse squeak roll over. With tail in the air lounge in doorway. Man running from cops stops to pet cats, goes to jail.</p>",
-            "  <p>Intently stare at the same spot poop in the plant pot but kitten is playing with dead mouse. Get video posted to internet for chasing red dot leave fur on owners clothes meow to be let out and mesmerizing birds leave fur on owners clothes or favor packaging over toy so purr for no reason. Meow to be let out play time intently sniff hand run outside as soon as door open yet destroy couch.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "  ",
             "</main>",
             "  ",
@@ -529,50 +525,50 @@
       "id": "bad87fee1348bd9aede08817",
       "title": "Nest an Anchor Element within a Paragraph",
       "description": [
-        "You can nest links within other text elements.",
+        "你可以在其他文本标签内嵌套链接。You can nest links within other text elements.",
         "<blockquote>&#60;p&#62;<br> Here's a &#60;a target=\"_blank\" href=\"http://freecodecamp.org\"&#62; link to freecodecamp.org&#60;/a&#62; for you to follow.<br>&#60;/p&#62;</blockquote>",
-        "Let's break down the example:",
-        "Normal text is wrapped in the <code>p</code> element:<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
-        "Next is the <code>anchor</code> element <code>&#60;a&#62;</code> (which requires a closing tag <code>&#60;/a&#62;</code>):<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
-        "<code>target</code> is an anchor tag attribute that specifies where to open the link and the value <code>\"_blank\"</code> specifies to open the link in a new tab",
-        "<code>href</code> is an anchor tag attribute that contains the URL address of the link:<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
-        "The text, <strong>\"link to freecodecamp.org\"</strong>, within the anchor element called <code>anchor text</code>, will display a link to click:<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
-        "The final output of the example will look like this:<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
+        "让我们来分解这个例子：",
+        "通常，文本是被包裹在 <code>p</code> 标签内：<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
+        "接下来是 <code>anchor</code> 标签 <code>&#60;a&#62;</code>（需要结束标记 <code>&#60;/a&#62;</code>）:<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
+        "<code>target</code> 是锚点标签的一个属性，它指定了会以什么方式来打开链接，属性值 <code>\"_blank\"</code> 的意思是链接会在新标签页打开。",
+        "<code>href</code> 是锚点标签的另一个属性：它指定了链接的 URL 地址：<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
+        "锚点标签内的文本：<strong>\"link to freecodecamp.org\"</strong>，会显示为一个可以点击的链接：<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
+        "例子的最后输出将会是这样：<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
         "<hr>",
-        "Now nest your existing <code>a</code> element within a new <code>p</code> element (just after the existing <code>main</code> element). The new paragraph should have text that says \"View more cat photos\", where \"cat photos\" is a link, and the rest of the text is plain text."
+        "现在用一个新的 <code>p</code> 标签来包裹现存的 <code>a</code> 标签（必须放在 <code>main</code> 标签之后才行)。新段落的文本为：View more cat photos，其中 \"cat photos\" 是一个链接，其他是纯文本。"
       ],
       "tests": [
         {
-          "text": "You need an <code>a</code> element that links to \"http://freecatphotoapp.com\".",
-          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").length > 0 || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").length > 0), 'You need an <code>a</code> element that links to \"http://freecatphotoapp.com\".');"
+          "text": "你需要一个指向 \"http://freecatphotoapp.com\" 的锚点。",
+          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").length > 0 || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").length > 0), '你需要一个指向 \"http://freecatphotoapp.com\" 的锚点。');"
         },
         {
-          "text": "Your <code>a</code> element should have the anchor text of \"cat photos\"",
-          "testString": "assert($(\"a\").text().match(/cat\\sphotos/gi), 'Your <code>a</code> element should have the anchor text of \"cat photos\"');"
+          "text": "锚点文本为应为：cat photos。",
+          "testString": "assert($(\"a\").text().match(/cat\\sphotos/gi), '锚点文本为应为：cat photos。');"
         },
         {
-          "text": "Create a new <code>p</code> element around your <code>a</code> element. There should be at least 3 total <code>p</code> tags in your HTML code.",
-          "testString": "assert($(\"p\") && $(\"p\").length > 2, 'Create a new <code>p</code> element around your <code>a</code> element. There should be at least 3 total <code>p</code> tags in your HTML code.');"
+          "text": "在锚点的外部创建一个新段落，这样页面就有3个段落了。",
+          "testString": "assert($(\"p\") && $(\"p\").length > 2, '在锚点的外部创建一个段落，这样页面就有3个段落了。');"
         },
         {
-          "text": "Your <code>a</code> element should be nested within your new <code>p</code> element.",
-          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().is(\"p\") || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().is(\"p\")), 'Your <code>a</code> element should be nested within your new <code>p</code> element.');"
+          "text": "锚点应嵌套在新段落内。",
+          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().is(\"p\") || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().is(\"p\")), '锚点应嵌套在新段落内。');"
         },
         {
-          "text": "Your <code>p</code> element should have the text \"View more \" (with a space after it).",
-          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), 'Your <code>p</code> element should have the text \"View more \" (with a space after it).');"
+          "text": "段落的文本应为：View more （记得 more 后面有一个空格）。",
+          "testString": "assert(($(\"a[href=\\\"http://freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi) || $(\"a[href=\\\"http://www.freecatphotoapp.com\\\"]\").parent().text().match(/View\\smore\\s/gi)), '段落的文本应为：View more （记得 more 后面有一个空格）。');"
         },
         {
-          "text": "Your <code>a</code> element should <em>not</em> have the text \"View more\".",
-          "testString": "assert(!$(\"a\").text().match(/View\\smore/gi), 'Your <code>a</code> element should <em>not</em> have the text \"View more\".');"
+          "text": "锚点的文本不应该为：View more。",
+          "testString": "assert(!$(\"a\").text().match(/View\\smore/gi), '锚点的文本不应该为：View more。');"
         },
         {
-          "text": "Make sure each of your <code>p</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<p/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, 'Make sure each of your <code>p</code> elements has a closing tag.');"
+          "text": "确保每个段落有结束标记。",
+          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<p/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '确保每个段落有结束标记。');"
         },
         {
-          "text": "Make sure each of your <code>a</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure each of your <code>a</code> elements has a closing tag.');"
+          "text": "确保每个段落有结束标记。",
+          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保每个段落有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -589,8 +585,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -627,8 +623,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -675,8 +671,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -727,8 +723,8 @@
             "  ",
             "  <a href=\"#\"><img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\"></a>",
             "  ",
-            "  <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
-            "  <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "</main>"
           ],
           "head": [],
@@ -1469,7 +1465,7 @@
             "  <title>The best page ever</title>",
             "  ",
             "  <h1>The best page ever</h1>",
-            "  <p>Cat ipsum dolor sit amet, jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Go into a room to decide you didn't want to be in there anyway. I like big cats and i can not lie kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff. Meow i could pee on this if i had the energy for slap owner's face at 5am until human fills food dish yet scamper. Knock dish off table head butt cant eat out of my own dish scratch the furniture. Make meme, make cute face. Sleep in the bathroom sink chase laser but pee in the shoe. Paw at your fat belly licks your face and eat grass, throw it back up kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
             "  ",
             "</html>  "
           ],
