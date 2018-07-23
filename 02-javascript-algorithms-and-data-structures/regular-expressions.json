@@ -8,21 +8,21 @@
       "id": "587d7db3367417b2b2512b8e",
       "title": "Using the Test Method",
       "description": [
-        "Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.",
-        "If you want to find the word <code>\"the\"</code> in the string <code>\"The dog chased the cat\"</code>, you could use the following regular expression: <code>/the/</code>. Notice that quote marks are not required within the regular expression.",
-        "JavaScript has multiple ways to use regexes. One way to test a regex is using the <code>.test()</code> method. The <code>.test()</code> method takes the regex, applies it to a string (which is placed inside the parentheses), and returns <code>true</code> or <code>false</code> if your pattern finds something or not.",
+        "在编程语言中，正则表达式用于匹配指定的字符串。通过正则表达式创建模式（规则）可以帮你完成指定匹配。",
+        "如果你想要在字符串 <code>\"The dog chased the cat\"</code> 中匹配到 <code>\"the\"</code> 这个单词，你可以使用如下正则表达式：<code>/the/</code>。注意，正则表达式中不需要引号。",
+        "JavaScript中有多种使用正则表达式的方法。测试正则表达式的一种方法是使用 <code>.test()</code> 方法。<code>.test()</code> 方法会把你编写的正则表达式应用到一个字符串（即括号内的内容），如果你的模式成功匹配到字符，则返回 <code>true</code>，反之，返回 <code>false</code>。",
         "<blockquote>let testStr = \"freeCodeCamp\";<br>let testRegex = /Code/;<br>testRegex.test(testStr);<br>// Returns true</blockquote>",
         "<hr>",
-        "Apply the regex <code>myRegex</code> on the string <code>myString</code> using the <code>.test()</code> method."
+        "使用 <code>.test()</code> 方法把正则表达式 <code>myRegex</code> 应用到字符串 <code>myString</code> 上面。"
       ],
       "tests": [
         {
-          "text": "You should use <code>.test()</code> to test the regex.",
-          "testString": "assert(code.match(/myRegex.test\\(\\s*myString\\s*\\)/), 'You should use <code>.test()</code> to test the regex.');"
+          "text": "你应该使用 <code>.test()</code> 方法来测试正则表达式。",
+          "testString": "assert(code.match(/myRegex.test\\(\\s*myString\\s*\\)/), '你应该使用 <code>.test()</code> 方法来测试正则表达式。');"
         },
         {
-          "text": "Your result should return <code>true</code>.",
-          "testString": "assert(result === true, 'Your result should return <code>true</code>.');"
+          "text": "你的返回结果应该为 <code>true</code>.",
+          "testString": "assert(result === true, '你的返回结果应该为 <code>true</code>.');"
         }
       ],
       "solutions": [],
@@ -38,7 +38,7 @@
           "contents": [
             "let myString = \"Hello, World!\";",
             "let myRegex = /Hello/;",
-            "let result = myRegex; // Change this line"
+            "let result = myRegex; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -49,26 +49,26 @@
       "id": "587d7db3367417b2b2512b8f",
       "title": "Match Literal Strings",
       "description": [
-        "In the last challenge, you searched for the word <code>\"Hello\"</code> using the regular expression <code>/Hello/</code>. That regex searched for a literal match of the string <code>\"Hello\"</code>. Here's another example searching for a literal match of the string <code>\"Kevin\"</code>:",
+        "在上一个挑战中，你使用正则表达式 <code>/Hello/</code> 搜索到了字符串 <code>\"Hello\"</code>。那个字符串搜索字符串 <code>\"Hello\"</code> 的文字匹配。下面是另一个搜索字符串 <code>\"Kevin\"</code> 文字匹配的示例：",
         "<blockquote>let testStr = \"Hello, my name is Kevin.\";<br>let testRegex = /Kevin/;<br>testRegex.test(testStr);<br>// Returns true</blockquote>",
-        "Any other forms of <code>\"Kevin\"</code> will not match. For example, the regex <code>/Kevin/</code> will not match <code>\"kevin\"</code> or <code>\"KEVIN\"</code>.",
+        "任何其他形式的 <code>\"Kevin\"</code> 都不会被匹配。例如，正则表达式 <code>/Kevin/</code> 不会匹配 <code>\"kevin\"</code> 或者 <code>\"KEVIN\"</code> 。",
         "<blockquote>let wrongRegex = /kevin/;<br>wrongRegex.test(testStr);<br>// Returns false</blockquote>",
-        "A future challenge will show how to match those other forms as well.",
+        "未来的挑战将为你展示如何匹配其他形式的字符串",
         "<hr>",
-        "Complete the regex <code>waldoRegex</code> to find <code>\"Waldo\"</code> in the string <code>waldoIsHiding</code> with a literal match."
+        "完成正则表达式 <code>waldoRegex</code> ，在字符串 <code>waldoIsHiding</code> 中找到匹配文字 <code>\"Waldo\"</code> 。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>waldoRegex</code> should find <code>\"Waldo\"</code>",
-          "testString": "assert(waldoRegex.test(waldoIsHiding), 'Your regex <code>waldoRegex</code> should find <code>\"Waldo\"</code>');"
+          "text": "你的正则表达式 <code>waldoRegex</code> 应该找到 <code>\"Waldo\"</code>",
+          "testString": "assert(waldoRegex.test(waldoIsHiding), '你的正则表达式 <code>waldoRegex</code> 应该找到 <code>\"Waldo\"</code>');"
         },
         {
-          "text": "Your regex <code>waldoRegex</code> should not search for anything else.",
-          "testString": "assert(!waldoRegex.test('Somewhere is hiding in this text.'), 'Your regex <code>waldoRegex</code> should not search for anything else.');"
+          "text": "你的正则表达式 <code>waldoRegex</code> 不应该搜索其他的任何内容。",
+          "testString": "assert(!waldoRegex.test('Somewhere is hiding in this text.'), '你的正则表达式 <code>waldoRegex</code> 不应该搜索其他的任何内容。');"
         },
         {
-          "text": "You should perform a literal string match with your regex.",
-          "testString": "assert(!/\\/.*\\/i/.test(code), 'You should perform a literal string match with your regex.');"
+          "text": "你应该使用你的正则表达式执行文字字符串匹配。",
+          "testString": "assert(!/\\/.*\\/i/.test(code), '你应该使用你的正则表达式执行文字字符串匹配。');"
         }
       ],
       "solutions": [],
@@ -83,7 +83,7 @@
           "name": "index",
           "contents": [
             "let waldoIsHiding = \"Somewhere Waldo is hiding in this text.\";",
-            "let waldoRegex = /search/; // Change this line",
+            "let waldoRegex = /search/; // 修改这一行",
             "let result = waldoRegex.test(waldoIsHiding);"
           ],
           "head": [],
@@ -95,41 +95,41 @@
       "id": "587d7db4367417b2b2512b90",
       "title": "Match a Literal String with Different Possibilities",
       "description": [
-        "Using regexes like <code>/coding/</code>, you can look for the pattern <code>\"coding\"</code> in another string.",
-        "This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the <code>alternation</code> or <code>OR</code> operator: <code>|</code>.",
-        "This operator matches patterns either before or after it. For example, if you wanted to match <code>\"yes\"</code> or <code>\"no\"</code>, the regex you want is <code>/yes|no/</code>.",
-        "You can also search for more than just two patterns. You can do this by adding more patterns with more <code>OR</code> operators separating them, like <code>/yes|no|maybe/</code>.",
+        "使用正则表达式 <code>/coding/</code>，你可以在其他字符串中查找 <code>\"coding\"</code> 。",
+        "这对于搜索单个字符串非常有用，但仅限于一种模式。您可以使用 <code>alternation</code> 或者 <code>OR</code> 操作符：<code>|</code> 。",
+        "此操作符匹配在它之前或之后的模式。例如，如果您想匹配 <code>\"yes\"</code> 或 <code>\"no\"</code>，你需要的正则表达式是 <code>/yes|no/</code>。",
+        "你还可以搜索不止两个模式。你可以通过添加更多的模式来实现这一功能，这些模式将包含更多的 <code>OR</code> 操作符来分隔它们，比如 <code>/yes|no|maybe/</code> 。",
         "<hr>",
-        "Complete the regex <code>petRegex</code> to match the pets <code>\"dog\"</code>, <code>\"cat\"</code>, <code>\"bird\"</code>, or <code>\"fish\"</code>."
+        "完成正则表达式 <code>petRegex</code> 匹配 <code>\"dog\"</code> 、<code>\"cat\"</code> 、<code>\"bird\"</code> 或者 <code>\"fish\"</code> 。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"John has a pet dog.\"</code>",
-          "testString": "assert(petRegex.test('John has a pet dog.'), 'Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"John has a pet dog.\"</code>');"
+          "text": "对于字符串 <code>\"John has a pet dog.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。",
+          "testString": "assert(petRegex.test('John has a pet dog.'), '对于字符串 <code>\"John has a pet dog.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Emma has a pet rock.\"</code>",
-          "testString": "assert(!petRegex.test('Emma has a pet rock.'), 'Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Emma has a pet rock.\"</code>');"
+          "text": "对于字符串 <code>\"Emma has a pet rock.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。",
+          "testString": "assert(!petRegex.test('Emma has a pet rock.'), '对于字符串 <code>\"Emma has a pet rock.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Emma has a pet bird.\"</code>",
-          "testString": "assert(petRegex.test('Emma has a pet bird.'), 'Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Emma has a pet bird.\"</code>');"
+          "text": "对于字符串 <code>\"Emma has a pet bird.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。",
+          "testString": "assert(petRegex.test('Emma has a pet bird.'), '对于字符串 <code>\"Emma has a pet bird.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Liz has a pet cat.\"</code>",
-          "testString": "assert(petRegex.test('Liz has a pet cat.'), 'Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Liz has a pet cat.\"</code>');"
+          "text": "对于字符串 <code>\"Liz has a pet cat.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。",
+          "testString": "assert(petRegex.test('Liz has a pet cat.'), '对于字符串 <code>\"Liz has a pet cat.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Kara has a pet dolphin.\"</code>",
-          "testString": "assert(!petRegex.test('Kara has a pet dolphin.'), 'Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Kara has a pet dolphin.\"</code>');"
+          "text": "对于字符串 <code>\"Kara has a pet dolphin.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。",
+          "testString": "assert(!petRegex.test('Kara has a pet dolphin.'), '对于字符串 <code>\"Kara has a pet dolphin.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Alice has a pet fish.\"</code>",
-          "testString": "assert(petRegex.test('Alice has a pet fish.'), 'Your regex <code>petRegex</code> should return <code>true</code> for the string <code>\"Alice has a pet fish.\"</code>');"
+          "text": "对于字符串 <code>\"Alice has a pet fish.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。",
+          "testString": "assert(petRegex.test('Alice has a pet fish.'), '对于字符串 <code>\"Alice has a pet fish.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>true</code> 。');"
         },
         {
-          "text": "Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Jimmy has a pet computer.\"</code>",
-          "testString": "assert(!petRegex.test('Jimmy has a pet computer.'), 'Your regex <code>petRegex</code> should return <code>false</code> for the string <code>\"Jimmy has a pet computer.\"</code>');"
+          "text": "对于字符串 <code>\"Jimmy has a pet computer.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。",
+          "testString": "assert(!petRegex.test('Jimmy has a pet computer.'), '对于字符串 <code>\"Jimmy has a pet computer.\"</code>，你的正则表达式 <code>petRegex</code> 应该返回 <code>false</code> 。');"
         }
       ],
       "solutions": [],
@@ -144,7 +144,7 @@
           "name": "index",
           "contents": [
             "let petString = \"James has a pet cat.\";",
-            "let petRegex = /change/; // Change this line",
+            "let petRegex = /change/; // 修改这一行",
             "let result = petRegex.test(petString);"
           ],
           "head": [],
@@ -156,52 +156,52 @@
       "id": "587d7db4367417b2b2512b91",
       "title": "Ignore Case While Matching",
       "description": [
-        "Up until now, you've looked at regexes to do literal matches of strings. But sometimes, you might want to also match case differences.",
-        "Case (or sometimes letter case) is the difference between uppercase letters and lowercase letters. Examples of uppercase are <code>\"A\"</code>, <code>\"B\"</code>, and <code>\"C\"</code>. Examples of lowercase are <code>\"a\"</code>, <code>\"b\"</code>, and <code>\"c\"</code>.",
-        "You can match both cases using what is called a flag. There are other flags but here you'll focus on the flag that ignores case - the <code>i</code> flag. You can use it by appending it to the regex.  An example of using this flag is <code>/ignorecase/i</code>. This regex can match the strings <code>\"ignorecase\"</code>, <code>\"igNoreCase\"</code>, and <code>\"IgnoreCase\"</code>.",
+        "到目前为止，你已经查看了利用正则表达式来执行字符串的文字匹配。但是有时候，你可能也想匹配不同的情况。",
+        "大小写（或者字母大小写）是大写字母和小写字母的区别。大写字母的例子有 <code>\"A\"</code> 、<code>\"B\"</code> 和 <code>\"C\"</code>。小写字母的例子有 <code>\"a\"</code> 、<code>\"b\"</code> 和 <code>\"c\"</code> 。",
+        "你可以使用所谓的模式修正符来匹配这两种情况。有许多其他标志，不过这里主要关注忽略大小写的模式修正符 - <code>i</code> 模式修正符。你可以通过将它附加到正则表达式之后来使用它。这里给出使用该模式修正符的一个实例 <code>/ignorecase/i</code>。这个字符串可以匹配字符串 <code>\"ignorecase\"</code> 、<code>\"igNoreCase\"</code> 和 <code>\"IgnoreCase\"</code> 。",
         "<hr>",
-        "Write a regex <code>fccRegex</code> to match <code>\"freeCodeCamp\"</code>, no matter its case. Your regex should not match any abbreviations or variations with spaces."
+        "编写正则表达式 <code>fccRegex</code> 以匹配 <code>\"freeCodeCamp\"</code>，忽略大小写。你的正则表达式不应与任何缩写或带有空格的变体匹配。"
       ],
       "tests": [
         {
-          "text": "Your regex should match <code>freeCodeCamp</code>",
-          "testString": "assert(fccRegex.test('freeCodeCamp'), 'Your regex should match <code>freeCodeCamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>freeCodeCamp</code>",
+          "testString": "assert(fccRegex.test('freeCodeCamp'), '你的正则表达式应该匹配 <code>freeCodeCamp</code>');"
         },
         {
-          "text": "Your regex should match <code>FreeCodeCamp</code>",
-          "testString": "assert(fccRegex.test('FreeCodeCamp'), 'Your regex should match <code>FreeCodeCamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FreeCodeCamp</code>",
+          "testString": "assert(fccRegex.test('FreeCodeCamp'), '你的正则表达式应该匹配 <code>FreeCodeCamp</code>');"
         },
         {
-          "text": "Your regex should match <code>FreecodeCamp</code>",
-          "testString": "assert(fccRegex.test('FreecodeCamp'), 'Your regex should match <code>FreecodeCamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FreecodeCamp</code>",
+          "testString": "assert(fccRegex.test('FreecodeCamp'), '你的正则表达式应该匹配 <code>FreecodeCamp</code>');"
         },
         {
-          "text": "Your regex should match <code>FreeCodecamp</code>",
-          "testString": "assert(fccRegex.test('FreeCodecamp'), 'Your regex should match <code>FreeCodecamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FreeCodecamp</code>",
+          "testString": "assert(fccRegex.test('FreeCodecamp'), '你的正则表达式应该匹配 <code>FreeCodecamp</code>');"
         },
         {
-          "text": "Your regex should not match <code>Free Code Camp</code>",
-          "testString": "assert(!fccRegex.test('Free Code Camp'), 'Your regex should not match <code>Free Code Camp</code>');"
+          "text": "你的正则表达式不应该匹配 <code>Free Code Camp</code>",
+          "testString": "assert(!fccRegex.test('Free Code Camp'), '你的正则表达式不应该匹配 <code>Free Code Camp</code>');"
         },
         {
           "text": "Your regex should match <code>FreeCOdeCamp</code>",
           "testString": "assert(fccRegex.test('FreeCOdeCamp'), 'Your regex should match <code>FreeCOdeCamp</code>');"
         },
         {
-          "text": "Your regex should not match <code>FCC</code>",
-          "testString": "assert(!fccRegex.test('FCC'), 'Your regex should not match <code>FCC</code>');"
+          "text": "你的正则表达式不应该匹配 <code>FCC</code>",
+          "testString": "assert(!fccRegex.test('FCC'), '你的正则表达式不应该匹配 <code>FCC</code>');"
         },
         {
-          "text": "Your regex should match <code>FrEeCoDeCamp</code>",
-          "testString": "assert(fccRegex.test('FrEeCoDeCamp'), 'Your regex should match <code>FrEeCoDeCamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FrEeCoDeCamp</code>",
+          "testString": "assert(fccRegex.test('FrEeCoDeCamp'), '你的正则表达式应该匹配 <code>FrEeCoDeCamp</code>');"
         },
         {
-          "text": "Your regex should match <code>FrEeCodECamp</code>",
-          "testString": "assert(fccRegex.test('FrEeCodECamp'), 'Your regex should match <code>FrEeCodECamp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FrEeCodECamp</code>",
+          "testString": "assert(fccRegex.test('FrEeCodECamp'), '你的正则表达式应该匹配 <code>FrEeCodECamp</code>');"
         },
         {
-          "text": "Your regex should match <code>FReeCodeCAmp</code>",
-          "testString": "assert(fccRegex.test('FReeCodeCAmp'), 'Your regex should match <code>FReeCodeCAmp</code>');"
+          "text": "你的正则表达式应该匹配 <code>FReeCodeCAmp</code>",
+          "testString": "assert(fccRegex.test('FReeCodeCAmp'), '你的正则表达式应该匹配 <code>FReeCodeCAmp</code>');"
         }
       ],
       "solutions": [],
@@ -216,7 +216,7 @@
           "name": "index",
           "contents": [
             "let myString = \"freeCodeCamp\";",
-            "let fccRegex = /change/; // Change this line",
+            "let fccRegex = /change/; // 修改这一行",
             "let result = fccRegex.test(myString);"
           ],
           "head": [],
@@ -228,24 +228,24 @@
       "id": "587d7db4367417b2b2512b92",
       "title": "Extract Matches",
       "description": [
-        "So far, you have only been checking if a pattern exists or not within a string. You can also extract the actual matches you found with the <code>.match()</code> method.",
-        "To use the <code>.match()</code> method, apply the method on a string and pass in the regex inside the parentheses. Here's an example:",
+        "到目前为止，你只是检查了一个模式是否存在于字符串中。你还可以使用 <code>.match()</code> 方法来提取你找到的实际匹配项。",
+        "要使用 <code>.match()</code> 方法，请将该方法应用到字符串上，并在括号内传入正则表达式。这里是一个案例：",
         "<blockquote>\"Hello, World!\".match(/Hello/);<br>// Returns [\"Hello\"]<br>let ourStr = \"Regular expressions\";<br>let ourRegex = /expressions/;<br>ourStr.match(ourRegex);<br>// Returns [\"expressions\"]</blockquote>",
         "<hr>",
-        "Apply the <code>.match()</code> method to extract the word <code>coding</code>."
+        "利用 <code>.match()</code> 方法提取单词 <code>coding</code> 。"
       ],
       "tests": [
         {
-          "text": "The <code>result</code> should have the word <code>coding</code>",
-          "testString": "assert(result.join() === \"coding\", 'The <code>result</code> should have the word <code>coding</code>');"
+          "text": "<code>结果</code> 应该包含单词 <code>coding</code>",
+          "testString": "assert(result.join() === \"coding\", '<code>结果</code> 应该包含单词 <code>coding</code>');"
         },
         {
-          "text": "Your regex <code>codingRegex</code> should search for <code>coding</code>",
-          "testString": "assert(codingRegex.source === \"coding\", 'Your regex <code>codingRegex</code> should search for <code>coding</code>');"
+          "text": "你的正则表达式 <code>codingRegex</code> 应该搜索 <code>coding</code>",
+          "testString": "assert(codingRegex.source === \"coding\", '你的正则表达式 <code>codingRegex</code> 应该搜索 <code>coding</code>');"
         },
         {
-          "text": "You should use the <code>.match()</code> method.",
-          "testString": "assert(code.match(/\\.match\\(.*\\)/), 'You should use the <code>.match()</code> method.');"
+          "text": "你应该使用 <code>.match()</code> 方法。",
+          "testString": "assert(code.match(/\\.match\\(.*\\)/), '你应该使用 <code>.match()</code> 方法。');"
         }
       ],
       "solutions": [],
@@ -260,8 +260,8 @@
           "name": "index",
           "contents": [
             "let extractStr = \"Extract the word 'coding' from this string.\";",
-            "let codingRegex = /change/; // Change this line",
-            "let result = extractStr; // Change this line"
+            "let codingRegex = /change/; // 修改这一行",
+            "let result = extractStr; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -272,30 +272,30 @@
       "id": "587d7db4367417b2b2512b93",
       "title": "Find More Than the First Match",
       "description": [
-        "So far, you have only been able to extract or search a pattern once.",
+        "到目前为止，您只能提取或搜索一次模式。",
         "<blockquote>let testStr = \"Repeat, Repeat, Repeat\";<br>let ourRegex = /Repeat/;<br>testStr.match(ourRegex);<br>// Returns [\"Repeat\"]</blockquote>",
-        "To search or extract a pattern more than once, you can use the <code>g</code> flag.",
+        "若要多次搜索或提取模式，你可以使用 <code>g</code> 模式修正符。",
         "<blockquote>let repeatRegex = /Repeat/g;<br>testStr.match(repeatRegex);<br>// Returns [\"Repeat\", \"Repeat\", \"Repeat\"]</blockquote>",
         "<hr>",
-        "Using the regex <code>starRegex</code>, find and extract both <code>\"Twinkle\"</code> words from the string <code>twinkleStar</code>.",
-        "<strong>Note</strong><br>You can have multiple flags on your regex like <code>/search/gi</code>"
+        "使用正则表达式 <code>starRegex</code>，从字符串 <code>twinkleStar</code> 中找到并提取所有的 <code>\"Twinkle\"</code> 单词。",
+        "<strong>注意</strong><br>在正则表达式上可以有多个模式修正符，比如 <code>/search/gi</code>"
       ],
       "tests": [
         {
-          "text": "Your regex <code>starRegex</code> should use the global flag <code>g</code>",
-          "testString": "assert(starRegex.flags.match(/g/).length == 1, 'Your regex <code>starRegex</code> should use the global flag <code>g</code>');"
+          "text": "你的正则表达式 <code>starRegex</code> 应该使用全局模式修正符 <code>g</code>",
+          "testString": "assert(starRegex.flags.match(/g/).length == 1, '你的正则表达式 <code>starRegex</code> 应该使用全局模式修正符 <code>g</code>');"
         },
         {
-          "text": "Your regex <code>starRegex</code> should use the case insensitive flag <code>i</code>",
-          "testString": "assert(starRegex.flags.match(/i/).length == 1, 'Your regex <code>starRegex</code> should use the case insensitive flag <code>i</code>');"
+          "text": "你的正则表达式 <code>starRegex</code> 应该使用忽略大小写模式修正符 <code>i</code>",
+          "testString": "assert(starRegex.flags.match(/i/).length == 1, '你的正则表达式 <code>starRegex</code> 应该使用忽略大小写模式修正符 <code>i</code>');"
         },
         {
-          "text": "Your match should match both occurrences of the word <code>\"Twinkle\"</code>",
-          "testString": "assert(result.sort().join() == twinkleStar.match(/twinkle/gi).sort().join(), 'Your match should match both occurrences of the word <code>\"Twinkle\"</code>');"
+          "text": "你的匹配应该匹配单词 <code>\"Twinkle\"</code> 的两个匹配项",
+          "testString": "assert(result.sort().join() == twinkleStar.match(/twinkle/gi).sort().join(), '你的匹配应该匹配单词 <code>\"Twinkle\"</code> 的两个匹配项');"
         },
         {
-          "text": "Your match <code>result</code> should have two elements in it.",
-          "testString": "assert(result.length == 2, 'Your match <code>result</code> should have two elements in it.');"
+          "text": "你的匹配 <code>结果</code> 应该包含两个元素。",
+          "testString": "assert(result.length == 2, '你的匹配 <code>结果</code> 应该包含两个元素。');"
         }
       ],
       "solutions": [],
@@ -310,8 +310,8 @@
           "name": "index",
           "contents": [
             "let twinkleStar = \"Twinkle, twinkle, little star\";",
-            "let starRegex = /change/; // Change this line",
-            "let result = twinkleStar; // Change this line"
+            "let starRegex = /change/; // 修改这一行",
+            "let result = twinkleStar; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -322,52 +322,52 @@
       "id": "587d7db5367417b2b2512b94",
       "title": "Match Anything with Wildcard Period",
       "description": [
-        "Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: <code>.</code>",
-        "The wildcard character <code>.</code> will match any one character. The wildcard is also called <code>dot</code> and <code>period</code>. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match <code>\"hug\"</code>, <code>\"huh\"</code>, <code>\"hut\"</code>, and <code>\"hum\"</code>, you can use the regex <code>/hu./</code> to match all four words.",
+        "有时你不会（或不需要）知道模式中的确切字符。比如，考虑到要匹配到所有的单词，有一个拼写错误就会耗费很长时间。幸运的是，你可以使用通配符 <code>.</code> 来节约你的时间。",
+        "通配符 <code>.</code> 将匹配任何一个字符。通配符也被称为 <code>dot</code> 和 <code>period</code>。你可以像使用正则表达式中任何其他字符一样使用通配符。例如，如果你想匹配 <code>\"hug\"</code> 、<code>\"huh\"</code> 、<code>\"hut\"</code> 和 <code>\"hum\"</code>，你可以使用正则表达式 <code>/hu./</code> 匹配所有的四个单词。",
         "<blockquote>let humStr = \"I'll hum a song\";<br>let hugStr = \"Bear hug\";<br>let huRegex = /hu./;<br>humStr.match(huRegex); // Returns [\"hum\"]<br>hugStr.match(huRegex); // Returns [\"hug\"]</blockquote>",
         "<hr>",
-        "Complete the regex <code>unRegex</code> so that it matches the strings <code>\"run\"</code>, <code>\"sun\"</code>, <code>\"fun\"</code>, <code>\"pun\"</code>, <code>\"nun\"</code>, and <code>\"bun\"</code>. Your regex should use the wildcard character."
+        "完成正则表达式 <code>unRegex</code> 以匹配字符串 <code>\"run\"</code> 、<code>\"sun\"</code> 、<code>\"fun\"</code> 、<code>\"pun\"</code> 、<code>\"nun\"</code> 和 <code>\"bun\"</code>。你的正则表达式中应该使用通配符。"
       ],
       "tests": [
         {
-          "text": "You should use the <code>.test()</code> method.",
-          "testString": "assert(code.match(/\\.test\\(.*\\)/), 'You should use the <code>.test()</code> method.');"
+          "text": "你应该使用 <code>.test()</code> 方法。",
+          "testString": "assert(code.match(/\\.test\\(.*\\)/), '你应该使用 <code>.test()</code> 方法。');"
         },
         {
-          "text": "You should use the wildcard character in your regex <code>unRegex</code>",
-          "testString": "assert(/\\./.test(unRegex.source), 'You should use the wildcard character in your regex <code>unRegex</code>');"
+          "text": "你应该在你的正则表达式 <code>unRegex</code> 中使用通配符",
+          "testString": "assert(/\\./.test(unRegex.source), '你应该在你的正则表达式 <code>unRegex</code> 中使用通配符');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"run\"</code> in <code>\"Let us go on a run.\"</code>",
-          "testString": "assert(unRegex.test(\"Let us go on a run.\"), 'Your regex <code>unRegex</code> should match <code>\"run\"</code> in <code>\"Let us go on a run.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Let us go on a run.\"</code> 中匹配到 <code>\"run\"</code> 单词",
+          "testString": "assert(unRegex.test(\"Let us go on a run.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Let us go on a run.\"</code> 中匹配到 <code>\"run\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"sun\"</code> in <code>\"The sun is out today.\"</code>",
-          "testString": "assert(unRegex.test(\"The sun is out today.\"), 'Your regex <code>unRegex</code> should match <code>\"sun\"</code> in <code>\"The sun is out today.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"The sun is out today.\"</code> 中匹配到 <code>\"sun\"</code> 单词",
+          "testString": "assert(unRegex.test(\"The sun is out today.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"The sun is out today.\"</code> 中匹配到 <code>\"sun\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"fun\"</code> in <code>\"Coding is a lot of fun.\"</code>",
-          "testString": "assert(unRegex.test(\"Coding is a lot of fun.\"), 'Your regex <code>unRegex</code> should match <code>\"fun\"</code> in <code>\"Coding is a lot of fun.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Coding is a lot of fun.\"</code> 中匹配到 <code>\"fun\"</code> 单词",
+          "testString": "assert(unRegex.test(\"Coding is a lot of fun.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Coding is a lot of fun.\"</code> 中匹配到 <code>\"fun\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"pun\"</code> in <code>\"Seven days without a pun makes one weak.\"</code>",
-          "testString": "assert(unRegex.test(\"Seven days without a pun makes one weak.\"), 'Your regex <code>unRegex</code> should match <code>\"pun\"</code> in <code>\"Seven days without a pun makes one weak.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Seven days without a pun makes one weak.\"</code> 中匹配到 <code>\"pun\"</code> 单词",
+          "testString": "assert(unRegex.test(\"Seven days without a pun makes one weak.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"Seven days without a pun makes one weak.\"</code> 中匹配到 <code>\"pun\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"nun\"</code> in <code>\"One takes a vow to be a nun.\"</code>",
-          "testString": "assert(unRegex.test(\"One takes a vow to be a nun.\"), 'Your regex <code>unRegex</code> should match <code>\"nun\"</code> in <code>\"One takes a vow to be a nun.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"One takes a vow to be a nun.\"</code> 中匹配到 <code>\"nun\"</code> 单词",
+          "testString": "assert(unRegex.test(\"One takes a vow to be a nun.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"One takes a vow to be a nun.\"</code> 中匹配到 <code>\"nun\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should match <code>\"bun\"</code> in <code>\"She got fired from the hot dog stand for putting her hair in a bun.\"</code>",
-          "testString": "assert(unRegex.test(\"She got fired from the hot dog stand for putting her hair in a bun.\"), 'Your regex <code>unRegex</code> should match <code>\"bun\"</code> in <code>\"She got fired from the hot dog stand for putting her hair in a bun.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"She got fired from the hot dog stand for putting her hair in a bun.\"</code> 中匹配到 <code>\"bun\"</code> 单词",
+          "testString": "assert(unRegex.test(\"She got fired from the hot dog stand for putting her hair in a bun.\"), '你的正则表达式 <code>unRegex</code> 应该在字符串 <code>\"She got fired from the hot dog stand for putting her hair in a bun.\"</code> 中匹配到 <code>\"bun\"</code> 单词');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should not match <code>\"There is a bug in my code.\"</code>",
-          "testString": "assert(!unRegex.test(\"There is a bug in my code.\"), 'Your regex <code>unRegex</code> should not match <code>\"There is a bug in my code.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 不应该匹配 <code>\"There is a bug in my code.\"</code>",
+          "testString": "assert(!unRegex.test(\"There is a bug in my code.\"), '你的正则表达式 <code>unRegex</code> 不应该匹配 <code>\"There is a bug in my code.\"</code>');"
         },
         {
-          "text": "Your regex <code>unRegex</code> should not match <code>\"Catch me if you can.\"</code>",
-          "testString": "assert(!unRegex.test(\"Can me if you can.\"), 'Your regex <code>unRegex</code> should not match <code>\"Catch me if you can.\"</code>');"
+          "text": "你的正则表达式 <code>unRegex</code> 不应该匹配 <code>\"Catch me if you can.\"</code>",
+          "testString": "assert(!unRegex.test(\"Can me if you can.\"), '你的正则表达式 <code>unRegex</code> 不应该匹配 <code>\"Catch me if you can.\"</code>');"
         }
       ],
       "solutions": [],
@@ -382,7 +382,7 @@
           "name": "index",
           "contents": [
             "let exampleStr = \"Let's have fun with regular expressions!\";",
-            "let unRegex = /change/; // Change this line",
+            "let unRegex = /change/; // 修改这一行",
             "let result = unRegex.test(exampleStr);"
           ],
           "head": [],
@@ -394,34 +394,34 @@
       "id": "587d7db5367417b2b2512b95",
       "title": "Match Single Character with Multiple Possibilities",
       "description": [
-        "You learned how to match literal patterns (<code>/literal/</code>) and wildcard character (<code>/./</code>). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.",
-        "You can search for a literal pattern with some flexibility with <code>character classes</code>. Character classes allow you to define a group of characters you wish to match by placing them inside square (<code>[</code> and <code>]</code>) brackets.",
-        "For example, you want to match <code>\"bag\"</code>, <code>\"big\"</code>, and <code>\"bug\"</code> but not <code>\"bog\"</code>. You can create the regex <code>/b[aiu]g/</code> to do this. The <code>[aiu]</code> is the character class that will only match the characters <code>\"a\"</code>, <code>\"i\"</code>, or <code>\"u\"</code>.",
+        "你学习了如何匹配文字模式（<code>/literal/</code>）和通配符（<code>/./</code>）。这是正则表达式的两种极端情况，一种是精确匹配，而另一种则是查找所有匹配。在这两种极端情况之间有一个平衡选项。",
+        "你可以使用 <code>字符集</code> 搜索具有一定灵活性的文字模式。字符集允许你通过把它们放在方括号（<code>[</code> 和 <code>]</code>）之间的方式来定义一组你需要匹配的字符串。",
+        "例如，你想要匹配 <code>\"bag\"</code> 、<code>\"big\"</code> 和 <code>\"bug\"</code>，但是不想匹配 <code>\"bog\"</code>。你可以创建正则表达式 <code>/b[aiu]g/</code> 来执行此操作。<code>[aiu]</code> 是只匹配字符 <code>\"a\"</code> 、<code>\"i\"</code> 或者 <code>\"u\"</code> 的字符集。",
         "<blockquote>let bigStr = \"big\";<br>let bagStr = \"bag\";<br>let bugStr = \"bug\";<br>let bogStr = \"bog\";<br>let bgRegex = /b[aiu]g/;<br>bigStr.match(bgRegex); // Returns [\"big\"]<br>bagStr.match(bgRegex); // Returns [\"bag\"]<br>bugStr.match(bgRegex); // Returns [\"bug\"]<br>bogStr.match(bgRegex); // Returns null</blockquote>",
         "<hr>",
-        "Use a character class with vowels (<code>a</code>, <code>e</code>, <code>i</code>, <code>o</code>, <code>u</code>) in your regex <code>vowelRegex</code> to find all the vowels in the string <code>quoteSample</code>.",
-        "<strong>Note</strong><br>Be sure to match both upper- and lowercase vowels."
+        "使用元音字符集（<code>a</code> 、<code>e</code> 、<code>i</code> 、<code>o</code> 、<code>u</code>）在你的正则表达式 <code>vowelRegex</code> 中找到字符串 <code>quoteSample</code> 中的所有元音。",
+        "<strong>注意</strong><br>一定要同时匹配大小写元音。"
       ],
       "tests": [
         {
-          "text": "You should find all 25 vowels.",
-          "testString": "assert(result.length == 25, 'You should find all 25 vowels.');"
+          "text": "你应该找到所有25个元音。",
+          "testString": "assert(result.length == 25, '你应该找到所有25个元音。');"
         },
         {
-          "text": "Your regex <code>vowelRegex</code> should use a character class.",
-          "testString": "assert(/\\[.*\\]/.test(vowelRegex.source), 'Your regex <code>vowelRegex</code> should use a character class.');"
+          "text": "你的正则表达式 <code>vowelRegex</code> 应该使用字符集。",
+          "testString": "assert(/\\[.*\\]/.test(vowelRegex.source), '你的正则表达式 <code>vowelRegex</code> 应该使用字符集。');"
         },
         {
-          "text": "Your regex <code>vowelRegex</code> should use the global flag.",
-          "testString": "assert(vowelRegex.flags.match(/g/).length == 1, 'Your regex <code>vowelRegex</code> should use the global flag.');"
+          "text": "你的正则表达式 <code>vowelRegex</code> 应该使用全局模式修正符。",
+          "testString": "assert(vowelRegex.flags.match(/g/).length == 1, '你的正则表达式 <code>vowelRegex</code> 应该使用全局模式修正符。');"
         },
         {
-          "text": "Your regex <code>vowelRegex</code> should use the case insensitive flag.",
-          "testString": "assert(vowelRegex.flags.match(/i/).length == 1, 'Your regex <code>vowelRegex</code> should use the case insensitive flag.');"
+          "text": "你的正则表达式 <code>vowelRegex</code> 应该使用忽略大小写模式修正符。",
+          "testString": "assert(vowelRegex.flags.match(/i/).length == 1, '你的正则表达式 <code>vowelRegex</code> 应该使用忽略大小写模式修正符。');"
         },
         {
-          "text": "Your regex should not match any consonants.",
-          "testString": "assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()), 'Your regex should not match any consonants.');"
+          "text": "你的正则表达式不应该匹配任何辅音。",
+          "testString": "assert(!/[b-df-hj-np-tv-z]/gi.test(result.join()), '你的正则表达式不应该匹配任何辅音。');"
         }
       ],
       "solutions": [],
@@ -436,8 +436,8 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"Beware of bugs in the above code; I have only proved it correct, not tried it.\";",
-            "let vowelRegex = /change/; // Change this line",
-            "let result = vowelRegex; // Change this line"
+            "let vowelRegex = /change/; // 修改这一行",
+            "let result = vowelRegex; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -448,26 +448,26 @@
       "id": "587d7db5367417b2b2512b96",
       "title": "Match Letters of the Alphabet",
       "description": [
-        "You saw how you can use <code>character sets</code> to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, there is a built-in feature that makes this short and simple.",
-        "Inside a <code>character set</code>, you can define a range of characters to match using a <code>hyphen</code> character: <code>-</code>.",
-        "For example, to match lowercase letters <code>a</code> through <code>e</code> you would use <code>[a-e]</code>.",
+        "你了解了如何使用 <code>字符集</code> 来指定要匹配的一组字符串，但是当你需要匹配大量字符（例如，字母表中的每个字母）时。幸运的是，有一个内置的特性使这个功能变得简短。",
+        "在 <code>字符集</code> 中，你可以使用 <code>连字符</code>（<code>-</code>）来定义要匹配的字符范围。",
+        "例如，要匹配小写字母 <code>a</code> 到 <code>e</code>，你可以使用 <code>[a-e]</code>。",
         "<blockquote>let catStr = \"cat\";<br>let batStr = \"bat\";<br>let matStr = \"mat\";<br>let bgRegex = /[a-e]at/;<br>catStr.match(bgRegex); // Returns [\"cat\"]<br>batStr.match(bgRegex); // Returns [\"bat\"]<br>matStr.match(bgRegex); // Returns null</blockquote>",
         "<hr>",
-        "Match all the letters in the string <code>quoteSample</code>.",
-        "<strong>Note</strong><br>Be sure to match both upper- and lowercase <strong>letters<strong>."
+        "匹配字符串 <code>quoteSample</code> 中的所有字母。",
+        "<strong>注意</strong><br>一定要同时匹配大小写 <strong>字母<strong>."
       ],
       "tests": [
         {
-          "text": "Your regex <code>alphabetRegex</code> should match 35 items.",
-          "testString": "assert(result.length == 35, 'Your regex <code>alphabetRegex</code> should match 35 items.');"
+          "text": "你的正则表达式 <code>alphabetRegex</code> 应该匹配 35 项。",
+          "testString": "assert(result.length == 35, '你的正则表达式 <code>alphabetRegex</code> 应该匹配 35 项。');"
         },
         {
-          "text": "Your regex <code>alphabetRegex</code> should use the global flag.",
-          "testString": "assert(alphabetRegex.flags.match(/g/).length == 1, 'Your regex <code>alphabetRegex</code> should use the global flag.');"
+          "text": "你的正则表达式 <code>alphabetRegex</code> 应该使用全局模式修正符。",
+          "testString": "assert(alphabetRegex.flags.match(/g/).length == 1, '你的正则表达式 <code>alphabetRegex</code> 应该使用全局模式修正符。');"
         },
         {
-          "text": "Your regex <code>alphabetRegex</code> should use the case insensitive flag.",
-          "testString": "assert(alphabetRegex.flags.match(/i/).length == 1, 'Your regex <code>alphabetRegex</code> should use the case insensitive flag.');"
+          "text": "你的正则表达式 <code>alphabetRegex</code> 应该使用忽略大小写模式修正符。",
+          "testString": "assert(alphabetRegex.flags.match(/i/).length == 1, '你的正则表达式 <code>alphabetRegex</code> 应该使用忽略大小写模式修正符。');"
         }
       ],
       "solutions": [],
@@ -482,8 +482,8 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"The quick brown fox jumps over the lazy dog.\";",
-            "let alphabetRegex = /change/; // Change this line",
-            "let result = alphabetRegex; // Change this line"
+            "let alphabetRegex = /change/; // 修改这一行",
+            "let result = alphabetRegex; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -494,25 +494,25 @@
       "id": "587d7db5367417b2b2512b97",
       "title": "Match Numbers and Letters of the Alphabet",
       "description": [
-        "Using the hyphen (<code>-</code>) to match a range of characters is not limited to letters. It also works to match a range of numbers.",
-        "For example, <code>/[0-5]/</code> matches any number between <code>0</code> and <code>5</code>, including the <code>0</code> and <code>5</code>.",
-        "Also, it is possible to combine a range of letters and numbers in a single character set.",
+        "使用连字符（<code>-</code>）匹配字符范围并不仅限于字母。它还可以匹配一系列数字。",
+        "例如，<code>/[0-5]/</code> 匹配 <code>0</code> 和 <code>5</code> 之间的任意数字，包含 <code>0</code> 和 <code>5</code> 。",
+        "此外，还可以在单个字符集中组合一系列字母和数字。",
         "<blockquote>let jennyStr = \"Jenny8675309\";<br>let myRegex = /[a-z0-9]/ig;<br>// matches all letters and numbers in jennyStr<br>jennyStr.match(myRegex);</blockquote>",
         "<hr>",
-        "Create a single regex that matches a range of letters between <code>h</code> and <code>s</code>, and a range of numbers between <code>2</code> and <code>6</code>. Remember to include the appropriate flags in the regex."
+        "创建一个正则表达式，使其可以匹配 <code>h</code> 和 <code>s</code> 之间的一系列字母，以及 <code>2</code> and <code>6</code> 之间的一系列数字。请记住在正则表达式中包含恰当的模式修正符。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>myRegex</code> should match 17 items.",
-          "testString": "assert(result.length == 17, 'Your regex <code>myRegex</code> should match 17 items.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该匹配 17 项。",
+          "testString": "assert(result.length == 17, '你的正则表达式 <code>myRegex</code> 应该匹配 17 项。');"
         },
         {
-          "text": "Your regex <code>myRegex</code> should use the global flag.",
-          "testString": "assert(myRegex.flags.match(/g/).length == 1, 'Your regex <code>myRegex</code> should use the global flag.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该使用全局模式修正符。",
+          "testString": "assert(myRegex.flags.match(/g/).length == 1, '你的正则表达式 <code>myRegex</code> 应该使用全局模式修正符。');"
         },
         {
-          "text": "Your regex <code>myRegex</code> should use the case insensitive flag.",
-          "testString": "assert(myRegex.flags.match(/i/).length == 1, 'Your regex <code>myRegex</code> should use the case insensitive flag.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该使用忽略大小写模式修正符。",
+          "testString": "assert(myRegex.flags.match(/i/).length == 1, '你的正则表达式 <code>myRegex</code> 应该使用忽略大小写模式修正符。');"
         }
       ],
       "solutions": [],
@@ -527,8 +527,8 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"Blueberry 3.141592653s are delicious.\";",
-            "let myRegex = /change/; // Change this line",
-            "let result = myRegex; // Change this line"
+            "let myRegex = /change/; // 修改这一行",
+            "let result = myRegex; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -539,24 +539,24 @@
       "id": "587d7db6367417b2b2512b98",
       "title": "Match Single Characters Not Specified",
       "description": [
-        "So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of character sets are called <code>negated character sets</code>.",
-        "To create a <code>negated character set</code>, you place a <code>caret</code> character (<code>^</code>) after the opening bracket and before the characters you do not want to match.",
-        "For example, <code>/[^aeiou]/gi</code> matches all characters that are not a vowel. Note that characters like <code>.</code>, <code>!</code>, <code>[</code>, <code>@</code>, <code>/</code> and white space are matched - the negated vowel character set only excludes the vowel characters.",
+        "到目前为止，你已创建了一个你想要匹配的字符集合，但你也可以创建一个你不想匹配的字符集合。这些类型的字符集称为 <code>否定字符集</code>。",
+        "要创建 <code>否定字符集</code>，你需要在开始括号后面和不想匹配的字符前面放置 <code>插入字符</code>（即 <code>^</code>）。",
+        "例如，<code>/[^aeiou]/gi</code> 匹配所有非元音字符。注意，字符 <code>.</code> 、<code>!</code> 、<code>[</code> 、<code>@</code> 、<code>/</code> 和空白字符也会被匹配，该否定字符集仅排除元音字符。",
         "<hr>",
-        "Create a single regex that matches all characters that are not a number or a vowel. Remember to include the appropriate flags in the regex."
+        "创建一个匹配所有非数字或元音字符的正则表达式。请记住在正则表达式中包含恰当的模式修正符。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>myRegex</code> should match 9 items.",
-          "testString": "assert(result.length == 9, 'Your regex <code>myRegex</code> should match 9 items.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该匹配 9 项。",
+          "testString": "assert(result.length == 9, '你的正则表达式 <code>myRegex</code> 应该匹配 9 项。');"
         },
         {
-          "text": "Your regex <code>myRegex</code> should use the global flag.",
-          "testString": "assert(myRegex.flags.match(/g/).length == 1, 'Your regex <code>myRegex</code> should use the global flag.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该使用全局模式修正符。",
+          "testString": "assert(myRegex.flags.match(/g/).length == 1, '你的正则表达式 <code>myRegex</code> 应该使用全局模式修正符。');"
         },
         {
-          "text": "Your regex <code>myRegex</code> should use the case insensitive flag.",
-          "testString": "assert(myRegex.flags.match(/i/).length == 1, 'Your regex <code>myRegex</code> should use the case insensitive flag.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该使用忽略大小写模式修正符。",
+          "testString": "assert(myRegex.flags.match(/i/).length == 1, '你的正则表达式 <code>myRegex</code> 应该使用忽略大小写模式修正符。');"
         }
       ],
       "solutions": [],
@@ -571,8 +571,8 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"3 blind mice.\";",
-            "let myRegex = /change/; // Change this line",
-            "let result = myRegex; // Change this line"
+            "let myRegex = /change/; // 修改这一行",
+            "let result = myRegex; // 修改这一行"
           ],
           "head": [],
           "tail": []
@@ -583,25 +583,25 @@
       "id": "587d7db6367417b2b2512b99",
       "title": "Match Characters that Occur One or More Times",
       "description": [
-        "Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated.",
-        "You can use the <code>+</code> character to check if that is the case. Remember, the character or pattern has to be present consecutively. That is, the character has to repeat one after the other.",
-        "For example, <code>/a+/g</code> would find one match in <code>\"abc\"</code> and return <code>[\"a\"]</code>. Because of the <code>+</code>, it would also find a single match in <code>\"aabc\"</code> and return <code>[\"aa\"]</code>.",
-        "If it were instead checking the string <code>\"abab\"</code>, it would find two matches and return <code>[\"a\", \"a\"]</code> because the <code>a</code> characters are not in a row - there is a <code>b</code> between them. Finally, since there is no <code>\"a\"</code> in the string <code>\"bcd\"</code>, it wouldn't find a match.",
+        "有时，你需要匹配出现一次或者连续多次的的字符（或字符组）。这意味着它至少出现一次，并且可能重复出现。",
+        "你可以使用 <code>+</code> 符号来检查情况是否如此。记住，字符或模式必须必须连续出现。也就是说，字符必须一个接一个的重复出现。",
+        "例如， <code>/a+/g</code> 会在 <code>\"abc\"</code> 中找到一个匹配项，并且返回 <code>[\"a\"]</code>。因为 <code>+</code> 的存在，它也会在 <code>\"aabc\"</code> 中找到一个匹配项，然后返回 <code>[\"aa\"]</code>。",
+        "如果它是检查字符串 <code>\"abab\"</code>，它将找到两个匹配项并且返回 <code>[\"a\", \"a\"]</code> ，因为 <code>a</code> 字符不连续，在它们之间有一个 <code>b</code> 字符。最后，因为在字符串 <code>\"bcd\"</code> 中没有 <code>\"a\"</code> ，因此找不到匹配项。",
         "<hr>",
-        "You want to find matches when the letter <code>s</code> occurs one or more times in <code>\"Mississippi\"</code>. Write a regex that uses the <code>+</code> sign."
+        "你希望在字符串 <code>\"Mississippi\"</code> 中找到出现一次或多次的字母 <code>s</code> 的匹配项。编写一个使用 <code>+</code> 符号的正则表达式。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>myRegex</code> should use the <code>+</code> sign to match one or more <code>s</code> characters.",
-          "testString": "assert(/\\+/.test(myRegex.source), 'Your regex <code>myRegex</code> should use the <code>+</code> sign to match one or more <code>s</code> characters.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该使用 <code>+</code> 符号来匹配一个或多个 <code>s</code> 字符。",
+          "testString": "assert(/\\+/.test(myRegex.source), '你的正则表达式 <code>myRegex</code> 应该使用 <code>+</code> 符号来匹配一个或多个 <code>s</code> 字符。');"
         },
         {
-          "text": "Your regex <code>myRegex</code> should match 2 items.",
-          "testString": "assert(result.length == 2, 'Your regex <code>myRegex</code> should match 2 items.');"
+          "text": "你的正则表达式 <code>myRegex</code> 应该匹配两项。",
+          "testString": "assert(result.length == 2, '你的正则表达式 <code>myRegex</code> 应该匹配两项。');"
         },
         {
-          "text": "The <code>result</code> variable should be an array with two matches of <code>\"ss\"</code>",
-          "testString": "assert(result[0] == 'ss' && result[1] == 'ss', 'The <code>result</code> variable should be an array with two matches of <code>\"ss\"</code>');"
+          "text": "<code>结果</code> 变量应该是一个包含两个 <code>\"ss\"</code> 匹配项的数组",
+          "testString": "assert(result[0] == 'ss' && result[1] == 'ss', '<code>结果</code> 变量应该是一个包含两个 <code>\"ss\"</code> 匹配项的数组');"
         }
       ],
       "solutions": [],
@@ -616,7 +616,7 @@
           "name": "index",
           "contents": [
             "let difficultSpelling = \"Mississippi\";",
-            "let myRegex = /change/; // Change this line",
+            "let myRegex = /change/; // 修改这一行",
             "let result = difficultSpelling.match(myRegex);"
           ],
           "head": [],
@@ -628,32 +628,32 @@
       "id": "587d7db6367417b2b2512b9a",
       "title": "Match Characters that Occur Zero or More Times",
       "description": [
-        "The last challenge used the plus <code>+</code> sign to look for characters that occur one or more times. There's also an option that matches characters that occur zero or more times.",
-        "The character to do this is the <code>asterisk</code> or <code>star</code>: <code>*</code>.",
+        "上一次的挑战中使用了加号 <code>+</code> 来查找出现一次或多次的字符。还有一个选项可以匹配出现零次或多次的字符。",
+        "执行该操作的字符是 <code>asterisk</code> 或 <code>star</code>：<code>*</code> 。",
         "<blockquote>let soccerWord = \"gooooooooal!\";<br>let gPhrase = \"gut feeling\";<br>let oPhrase = \"over the moon\";<br>let goRegex = /go*/;<br>soccerWord.match(goRegex); // Returns [\"goooooooo\"]<br>gPhrase.match(goRegex); // Returns [\"g\"]<br>oPhrase.match(goRegex); // Returns null</blockquote>",
         "<hr>",
-        "Create a regex <code>chewieRegex</code> that uses the <code>*</code> character to match all the upper and lower<code>\"a\"</code> characters in <code>chewieQuote</code>. Your regex does not need flags, and it should not match any of the other quotes."
+        "创建一个正则表达式 <code>chewieRegex</code> ，使用 <code>*</code> 符号在 <code>chewieQuote</code> 中匹配大小写的 <code>\"a\"</code> 字符。你的正则表达式不需要模式修正符，也不应该匹配任何其他引号。"
       ],
       "tests": [
         {
-          "text": "Your regex <code>chewieRegex</code> should use the <code>*</code> character to match zero or more <code>a</code> characters.",
-          "testString": "assert(/\\*/.test(chewieRegex.source), 'Your regex <code>chewieRegex</code> should use the <code>*</code> character to match zero or more <code>a</code> characters.');"
+          "text": "你的正则表达式 <code>chewieRegex</code> 应该使用 <code>*</code> 符号匹配零个或多个 <code>a</code> 字符。",
+          "testString": "assert(/\\*/.test(chewieRegex.source), '你的正则表达式 <code>chewieRegex</code> 应该使用 <code>*</code> 符号匹配零个或多个 <code>a</code> 字符。');"
         },
         {
-          "text": "Your regex <code>chewieRegex</code> should match 16 characters.",
-          "testString": "assert(result[0].length === 16, 'Your regex <code>chewieRegex</code> should match 16 characters.');"
+          "text": "你的正则表达式 <code>chewieRegex</code> 应该匹配 16 个字符。",
+          "testString": "assert(result[0].length === 16, '你的正则表达式 <code>chewieRegex</code> 应该匹配 16 个字符。');"
         },
         {
-          "text": "Your regex should match <code>\"Aaaaaaaaaaaaaaaa\"</code>.",
-          "testString": "assert(result[0] === 'Aaaaaaaaaaaaaaaa', 'Your regex should match <code>\"Aaaaaaaaaaaaaaaa\"</code>.');"
+          "text": "你的正则表达式应该匹配 <code>\"Aaaaaaaaaaaaaaaa\"</code> 。",
+          "testString": "assert(result[0] === 'Aaaaaaaaaaaaaaaa', '你的正则表达式应该匹配 <code>\"Aaaaaaaaaaaaaaaa\"</code> 。');"
         },
         {
-          "text": "Your regex should not match any characters in <code>\"He made a fair move. Screaming about it can&#39t help you.\"</code>",
-          "testString": "assert(!\"He made a fair move. Screaming about it can\\'t help you.\".match(chewieRegex), 'Your regex should not match any characters in <code>\"He made a fair move. Screaming about it can&#39t help you.\"</code>');"
+          "text": "你的正则表达式在 <code>\"He made a fair move. Screaming about it can&#39t help you.\"</code> 中不应该匹配任何字符。",
+          "testString": "assert(!\"He made a fair move. Screaming about it can\\'t help you.\".match(chewieRegex), '你的正则表达式在 <code>\"He made a fair move. Screaming about it can&#39t help you.\"</code> 中不应该匹配任何字符。');"
         },
         {
-          "text": "Your regex should not match any characters in <code>\"Let him have it. It&#39s not wise to upset a Wookiee.\"</code>",
-          "testString": "assert(!\"Let him have it. It\\'s not wise to upset a Wookiee.\".match(chewieRegex), 'Your regex should not match any characters in <code>\"Let him have it. It&#39s not wise to upset a Wookiee.\"</code>');"
+          "text": "你的正则表达式在 <code>\"Let him have it. It&#39s not wise to upset a Wookiee.\"</code> 中不应该匹配任何字符。",
+          "testString": "assert(!\"Let him have it. It\\'s not wise to upset a Wookiee.\".match(chewieRegex), '你的正则表达式在 <code>\"Let him have it. It&#39s not wise to upset a Wookiee.\"</code> 中不应该匹配任何字符。');"
         }
       ],
       "solutions": [],
@@ -668,7 +668,7 @@
           "name": "index",
           "contents": [
             "let chewieQuote = \"Aaaaaaaaaaaaaaaarrrgh!\";",
-            "let chewieRegex = /change/; // Change this line",
+            "let chewieRegex = /change/; // 修改这一行",
             "let result = chewieQuote.match(chewieRegex);"
           ],
           "head": [],
@@ -680,17 +680,17 @@
       "id": "587d7db6367417b2b2512b9b",
       "title": "Find Characters with Lazy Matching",
       "description": [
-        "In regular expressions, a <code>greedy</code> match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a <code>lazy</code> match, which finds the smallest possible part of the string that satisfies the regex pattern.",
-        "You can apply the regex <code>/t[a-z]*i/</code> to the string <code>\"titanic\"</code>. This regex is basically a pattern that starts with <code>t</code>, ends with <code>i</code>, and has some letters in between.",
-        "Regular expressions are by default <code>greedy</code>, so the match would return <code>[\"titani\"]</code>. It finds the largest sub-string possible to fit the pattern.",
-        "However, you can use the <code>?</code> character to change it to <code>lazy</code> matching. <code>\"titanic\"</code> matched against the adjusted regex of <code>/t[a-z]*?i/</code> returns <code>[\"ti\"]</code>.",
+        "在正则表达式中，<code>贪婪</code> 匹配会查找符合正则表达式模式的字符串的最长可能部分，并将其作为匹配项返回。另一种方案称为 <code>懒惰</code> 匹配，他查找满足正则表达式的字符串的最小可能部分。",
+        "你可以将正则表达式 <code>/t[a-z]*i/</code> 应用于字符串 <code>\"titanic\"</code>。这个正则表达式基本上是一个以 <code>t</code> 开始，以 <code>i</code> 结束，并且中间有一些字母的模式。",
+        "正则表达式默认是 <code>贪婪</code> 匹配，因此匹配返回为 <code>[\"titani\"]</code>。它找到适合该模式的最大子字符串。",
+        "但是，你可以使用 <code>?</code> 字符来将其变成 <code>懒惰</code> 匹配。调整后的正则表达式 <code>/t[a-z]*?i/</code> 匹配字符串 <code>\"titanic\"</code> 返回 <code>[\"ti\"]</code> 。",
         "<hr>",
-        "Fix the regex <code>/&lt;.*&gt;/</code> to return the HTML tag <code>&lt;h1&gt;</code> and not the text <code>\"&lt;h1&gt;Winter is coming&lt;/h1&gt;\"</code>. Remember the wildcard <code>.</code> in a regular expression matches any character."
+        "修复正则表达式 <code>/&lt;.*&gt;/</code> 返回HTML标签 <code>&lt;h1&gt;</code> ，而不是文本 <code>\"&lt;h1&gt;Winter is coming&lt;/h1&gt;\"</code>。请记住在正则表达式中使用通配符 <code>.</code> 来匹配任意字符。"
       ],
       "tests": [
         {
-          "text": "The <code>result</code> variable should be an array with <code>&lt;h1&gt;</code> in it",
-          "testString": "assert(result[0] == '<h1>', 'The <code>result</code> variable should be an array with <code>&lt;h1&gt;</code> in it');"
+          "text": "<code>结果</code> 变量应该是一个包含 <code>&lt;h1&gt;</code> 的数组。",
+          "testString": "assert(result[0] == '<h1>', '<code>结果</code> 变量应该是一个包含 <code>&lt;h1&gt;</code> 的数组。');"
         }
       ],
       "solutions": [],
@@ -705,7 +705,7 @@
           "name": "index",
           "contents": [
             "let text = \"<h1>Winter is coming</h1>\";",
-            "let myRegex = /<.*>/; // Change this line",
+            "let myRegex = /<.*>/; // 修改这一行",
             "let result = text.match(myRegex);"
           ],
           "head": [],
@@ -717,43 +717,43 @@
       "id": "587d7db7367417b2b2512b9c",
       "title": "Find One or More Criminals in a Hunt",
       "description": [
-        "Time to pause and test your new regex writing skills. A group of criminals escaped from jail and ran away, but you don't know how many. However, you do know that they stay close together when they are around other people. You are responsible for finding all of the criminals at once.",
-        "Here's an example to review how to do this:",
-        "The regex <code>/z+/</code> matches the letter <code>z</code> when it appears one or more times in a row. It would find matches in all of the following strings:",
+        "是时候暂停和测试你的新正则表达式写作技巧了。 一群罪犯逃出监狱逃跑，但你不知道有多少人。但是，你知道他们和其他人在一起时会保持紧密联系。你有责任立刻找到所有的罪犯。",
+        "这里有一个示例来回顾如何做到这一点：",
+        "正则表达式 <code>/z+/</code> 当字母 <code>z</code> 它出现一次或连续多次时会匹配。它会在以下所有字符串中找到匹配：",
         "<blockquote>\"z\"<br>\"zzzzzz\"<br>\"ABCzzzz\"<br>\"zzzzABC\"<br>\"abczzzzzzzzzzzzzzzzzzzzzabc\"</blockquote>",
-        "But it does not find matches in the following strings since there are no letter <code>z</code> characters:",
+        "但是它不会在以下字符串中找到匹配，因为它们中没有字母 <code>z</code>：",
         "<blockquote>\"\"<br>\"ABC\"<br>\"abcabc\"</blockquote>",
         "<hr>",
-        "Write a <code>greedy</code> regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter <code>C</code>."
+        "编写一个 <code>贪婪</code> 正则表达式，在一组其他人中查找一个或多个罪犯。罪犯由大写字母<code>C</code>表示。"
       ],
       "tests": [
         {
-          "text": "Your regex should match <em>one</em> criminal (\"<code>C</code>\") in <code>\"C\"</code>",
-          "testString": "assert('C'.match(reCriminals) && 'C'.match(reCriminals)[0] == 'C', 'Your regex should match <em>one</em> criminal (\"<code>C</code>\") in <code>\"C\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"C\"</code> 中的 <em>一个</em> 罪犯（\"<code>C</code>\"）",
+          "testString": "assert('C'.match(reCriminals) && 'C'.match(reCriminals)[0] == 'C', '你的正则表达式应该匹配 <code>\"C\"</code> 中的 <em>一个</em> 罪犯（\"<code>C</code>\"）');"
         },
         {
-          "text": "Your regex should match <em>two</em> criminals (\"<code>CC</code>\") in <code>\"CC\"</code>",
-          "testString": "assert('CC'.match(reCriminals) && 'CC'.match(reCriminals)[0] == 'CC', 'Your regex should match <em>two</em> criminals (\"<code>CC</code>\") in <code>\"CC\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"CC\"</code> 中的 <em>两个</em> 罪犯（\"<code>CC</code>\"）",
+          "testString": "assert('CC'.match(reCriminals) && 'CC'.match(reCriminals)[0] == 'CC', '你的正则表达式应该匹配 <code>\"CC\"</code> 中的 <em>两个</em> 罪犯（\"<code>CC</code>\"）');"
         },
         {
-          "text": "Your regex should match <em>three</em> criminals (\"<code>CCC</code>\") in <code>\"P1P5P4CCCP2P6P3\"</code>",
-          "testString": "assert('P1P5P4CCCP2P6P3'.match(reCriminals) && 'P1P5P4CCCP2P6P3'.match(reCriminals)[0] == 'CCC', 'Your regex should match <em>three</em> criminals (\"<code>CCC</code>\") in <code>\"P1P5P4CCCP2P6P3\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"P1P5P4CCCP2P6P3\"</code> 中的 <em>三个</em> 罪犯（\"<code>CCC</code>\"）",
+          "testString": "assert('P1P5P4CCCP2P6P3'.match(reCriminals) && 'P1P5P4CCCP2P6P3'.match(reCriminals)[0] == 'CCC', '你的正则表达式应该匹配 <code>\"P1P5P4CCCP2P6P3\"</code> 中的 <em>三个</em> 罪犯（\"<code>CCC</code>\"）');"
         },
         {
-          "text": "Your regex should match <em>five</em> criminals (\"<code>CCCCC</code>\") in <code>\"P6P2P7P4P5CCCCCP3P1\"</code>",
-          "testString": "assert('P6P2P7P4P5CCCCCP3P1'.match(reCriminals) && 'P6P2P7P4P5CCCCCP3P1'.match(reCriminals)[0] == 'CCCCC', 'Your regex should match <em>five</em> criminals (\"<code>CCCCC</code>\") in <code>\"P6P2P7P4P5CCCCCP3P1\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"P6P2P7P4P5CCCCCP3P1\"</code> 中的 <em>五个</em> 罪犯（\"<code>CCCCC</code>\"）",
+          "testString": "assert('P6P2P7P4P5CCCCCP3P1'.match(reCriminals) && 'P6P2P7P4P5CCCCCP3P1'.match(reCriminals)[0] == 'CCCCC', '你的正则表达式应该匹配 <code>\"P6P2P7P4P5CCCCCP3P1\"</code> 中的 <em>五个</em> 罪犯（\"<code>CCCCC</code>\"）');"
         },
         {
-          "text": "Your regex should not match any criminals in <code>\"\"</code>",
-          "testString": "assert(!reCriminals.test(''), 'Your regex should not match any criminals in <code>\"\"</code>');"
+          "text": "你的正则表达式在 <code>\"\"</code> 中不应该匹配到任何罪犯",
+          "testString": "assert(!reCriminals.test(''), '你的正则表达式在 <code>\"\"</code> 中不应该匹配到任何罪犯');"
         },
         {
-          "text": "Your regex should not match any criminals in <code>\"P1P2P3\"</code>",
-          "testString": "assert(!reCriminals.test('P1P2P3'), 'Your regex should not match any criminals in <code>\"P1P2P3\"</code>');"
+          "text": "你的正则表达式在 <code>\"P1P2P3\"</code> 中不应该匹配到任何罪犯",
+          "testString": "assert(!reCriminals.test('P1P2P3'), '你的正则表达式在 <code>\"P1P2P3\"</code> 中不应该匹配到任何罪犯');"
         },
         {
-          "text": "Your regex should match <em>fifty</em> criminals (\"<code>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</code>\") in <code>\"P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3\"</code>.",
-          "testString": "assert('P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3'.match(reCriminals) && 'P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3'.match(reCriminals)[0] == \"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\", 'Your regex should match <em>fifty</em> criminals (\"<code>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</code>\") in <code>\"P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3\"</code>.');"
+          "text": "你的正则表达式应该匹配 <code>\"P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3\"</code> 中的 <em>五十个</em> 罪犯（\"<code>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</code>\"）。",
+          "testString": "assert('P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3'.match(reCriminals) && 'P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3'.match(reCriminals)[0] == \"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\", '你的正则表达式应该匹配 <code>\"P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3\"</code> 中的 <em>五十个</em> 罪犯（\"<code>CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</code>\"）。');"
         }
       ],
       "solutions": [],
@@ -770,7 +770,7 @@
             "// example crowd gathering",
             "let crowd = 'P1P2P3P4P5P6CCCP7P8P9';",
             "",
-            "let reCriminals = /./; // Change this line",
+            "let reCriminals = /./; // 修改这一行",
             "",
             "let matchedCriminals = crowd.match(reCriminals);",
             "console.log(matchedCriminals);"
@@ -784,28 +784,28 @@
       "id": "587d7db7367417b2b2512b9d",
       "title": "Match Beginning String Patterns",
       "description": [
-        "Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.",
-        "In an earlier challenge, you used the <code>caret</code> character (<code>^</code>) inside a <code>character set</code> to create a <code>negated character set</code> in the form <code>[^thingsThatWillNotBeMatched]</code>. Outside of a <code>character set</code>, the <code>caret</code> is used to search for patterns at the beginning of strings.",
+        "先前的挑战表明，正则表达式可以用于查找许多匹配项。它们还用于搜索字符串中特定位置的模式。",
+        "在之前的挑战中，你使用 <code>字符集</code> 中的 <code>插入</code> 符号（<code>^</code>）来创建一个 <code>否定字符集</code>，形如 <code>[^thingsThatWillNotBeMatched]</code>。在 <code>字符集</code> 之外，<code>插入</code> 符号用于字符串的开头搜索模式。",
         "<blockquote>let firstString = \"Ricky is first and can be found.\";<br>let firstRegex = /^Ricky/;<br>firstRegex.test(firstString);<br>// Returns true<br>let notFirst = \"You can't find Ricky now.\";<br>firstRegex.test(notFirst);<br>// Returns false</blockquote>",
         "<hr>",
-        "Use the <code>caret</code> character in a regex to find <code>\"Cal\"</code> only in the beginning of the string <code>rickyAndCal</code>."
+        "使用正则表达式中的 <code>插入</code> 符号仅在字符串 <code>rickyAndCal</code> 的开头找到 <code>\"Cal\"</code>。"
       ],
       "tests": [
         {
-          "text": "Your regex should search for <code>\"Cal\"</code> with a capital letter.",
-          "testString": "assert(calRegex.source == \"^Cal\", 'Your regex should search for <code>\"Cal\"</code> with a capital letter.');"
+          "text": "你的正则表达式应该搜索有一个大写字母的 <code>\"Cal\"</code> 。",
+          "testString": "assert(calRegex.source == \"^Cal\", '你的正则表达式应该搜索有一个大写字母的 <code>\"Cal\"</code> 。');"
         },
         {
-          "text": "Your regex should not use any flags.",
-          "testString": "assert(calRegex.flags == \"\", 'Your regex should not use any flags.');"
+          "text": "你的正则表达式不应该使用任何模式修正符。",
+          "testString": "assert(calRegex.flags == \"\", '你的正则表达式不应该使用任何模式修正符。');"
         },
         {
-          "text": "Your regex should match <code>\"Cal\"</code> at the beginning of the string.",
-          "testString": "assert(calRegex.test(\"Cal and Ricky both like racing.\"), 'Your regex should match <code>\"Cal\"</code> at the beginning of the string.');"
+          "text": "你的正则表达式应该匹配字符串开头的 <code>\"Cal\"</code> 。",
+          "testString": "assert(calRegex.test(\"Cal and Ricky both like racing.\"), '你的正则表达式应该匹配字符串开头的 <code>\"Cal\"</code> 。');"
         },
         {
-          "text": "Your regex should not match <code>\"Cal\"</code> in the middle of a string.",
-          "testString": "assert(!calRegex.test(\"Ricky and Cal both like racing.\"), 'Your regex should not match <code>\"Cal\"</code> in the middle of a string.');"
+          "text": "你的正则表达式不应该匹配字符串中间的 <code>\"Cal\"</code> 。",
+          "testString": "assert(!calRegex.test(\"Ricky and Cal both like racing.\"), '你的正则表达式不应该匹配字符串中间的 <code>\"Cal\"</code> 。');"
         }
       ],
       "solutions": [],
@@ -820,7 +820,7 @@
           "name": "index",
           "contents": [
             "let rickyAndCal = \"Cal and Ricky both like racing.\";",
-            "let calRegex = /change/; // Change this line",
+            "let calRegex = /change/; // 修改这一行",
             "let result = calRegex.test(rickyAndCal);"
           ],
           "head": [],
@@ -832,24 +832,24 @@
       "id": "587d7db7367417b2b2512b9e",
       "title": "Match Ending String Patterns",
       "description": [
-        "In the last challenge, you learned to use the <code>caret</code> character to search for patterns at the beginning of strings. There is also a way to search for patterns at the end of strings.",
-        "You can search the end of strings using the <code>dollar sign</code> character <code>$</code> at the end of the regex.",
+        "在上一个挑战中，你学习了使用 <code>^</code> 符号来搜索字符串开头的模式。还有一种方法可以搜索字符串末尾的模式。",
+        "你可以使用正则表达式末尾的 <code>美元</code> 符号 <code>$</code> 来搜索字符串的结尾。",
         "<blockquote>let theEnding = \"This is a never ending story\";<br>let storyRegex = /story$/;<br>storyRegex.test(theEnding);<br>// Returns true<br>let noEnding = \"Sometimes a story will have to end\";<br>storyRegex.test(noEnding);<br>// Returns false<br></blockquote>",
         "<hr>",
-        "Use the anchor character (<code>$</code>) to match the string <code>\"caboose\"</code> at the end of the string <code>caboose</code>."
+        "使用锚字符（<code>$</code>）在字符串 <code>caboose</code> 的末尾匹配 <code>\"caboose\"</code> 。"
       ],
       "tests": [
         {
-          "text": "You should search for <code>\"caboose\"</code> with the dollar sign <code>$</code> anchor in your regex.",
-          "testString": "assert(lastRegex.source == \"caboose$\", 'You should search for <code>\"caboose\"</code> with the dollar sign <code>$</code> anchor in your regex.');"
+          "text": "你应该在正则表达式使用美元符号 <code>$</code> 来搜索 <code>\"caboose\"</code> 。",
+          "testString": "assert(lastRegex.source == \"caboose$\", '你应该在正则表达式使用美元符号 <code>$</code> 来搜索 <code>\"caboose\"</code> 。');"
         },
         {
-          "text": "Your regex should not use any flags.",
-          "testString": "assert(lastRegex.flags == \"\", 'Your regex should not use any flags.');"
+          "text": "你的正则表达式不应该使用任何模式修正符。",
+          "testString": "assert(lastRegex.flags == \"\", '你的正则表达式不应该使用任何模式修正符。');"
         },
         {
-          "text": "You should match <code>\"caboose\"</code> at the end of the string <code>\"The last car on a train is the caboose\"</code>",
-          "testString": "assert(lastRegex.test(\"The last car on a train is the caboose\"), 'You should match <code>\"caboose\"</code> at the end of the string <code>\"The last car on a train is the caboose\"</code>');"
+          "text": "你应该在字符串 <code>\"The last car on a train is the caboose\"</code> 的末尾匹配 <code>\"caboose\"</code> 。",
+          "testString": "assert(lastRegex.test(\"The last car on a train is the caboose\"), '你应该在字符串 <code>\"The last car on a train is the caboose\"</code> 的末尾匹配 <code>\"caboose\"</code> 。');"
         }
       ],
       "solutions": [],
@@ -864,7 +864,7 @@
           "name": "index",
           "contents": [
             "let caboose = \"The last car on a train is the caboose\";",
-            "let lastRegex = /change/; // Change this line",
+            "let lastRegex = /change/; // 修改这一行",
             "let result = lastRegex.test(caboose);"
           ],
           "head": [],
@@ -876,33 +876,33 @@
       "id": "587d7db7367417b2b2512b9f",
       "title": "Match All Letters and Numbers",
       "description": [
-        "Using character classes, you were able to search for all letters of the alphabet with <code>[a-z]</code>. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.",
-        "The closest character class in JavaScript to match the alphabet is <code>\\w</code>. This shortcut is equal to <code>[A-Za-z0-9_]</code>. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (<code>_</code>).",
+        "使用字符类，你可以使用 <code>[a-z]</code> 搜索字母表中的所有字母。这种字符类是很常见的，它有一个快捷键，尽管它也包含一些额外的字符。",
+        "JavaScript 中与字母表匹配的最接近的字符类是 <code>\\w</code> 。这个快捷键等同于 <code>[A-Za-z0-9_]</code> 。这个字符类匹配大小写字母和数字。注意，它也包括下划线字符（<code>_</code>）。",
         "<blockquote>let longHand = /[A-Za-z0-9_]+/;<br>let shortHand = /\\w+/;<br>let numbers = \"42\";<br>let varNames = \"important_var\";<br>longHand.test(numbers); // Returns true<br>shortHand.test(numbers); // Returns true<br>longHand.test(varNames); // Returns true<br>shortHand.test(varNames); // Returns true</blockquote>",
-        "These shortcut character classes are also known as <code>shorthand character classes</code>.",
+        "这些快捷字符类也被称为 <code>速记字符类</code> 。",
         "<hr>",
-        "Use the shorthand character class <code>\\w</code> to count the number of alphanumeric characters in various quotes and strings."
+        "使用速记字符类 <code>\\w</code> 来计算不同引号和字符串中字母数字字符的数量。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(alphabetRegexV2.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(alphabetRegexV2.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find 31 alphanumeric characters in <code>\"The five boxing wizards jump quickly.\"</code>",
-          "testString": "assert(\"The five boxing wizards jump quickly.\".match(alphabetRegexV2).length === 31, 'Your regex should find 31 alphanumeric characters in <code>\"The five boxing wizards jump quickly.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"The five boxing wizards jump quickly.\"</code> 中找到 31 个字母数字字符。",
+          "testString": "assert(\"The five boxing wizards jump quickly.\".match(alphabetRegexV2).length === 31, '你的正则表达式应该在 <code>\"The five boxing wizards jump quickly.\"</code> 中找到31个字母数字字符。');"
         },
         {
-          "text": "Your regex should find 32 alphanumeric characters in <code>\"Pack my box with five dozen liquor jugs.\"</code>",
-          "testString": "assert(\"Pack my box with five dozen liquor jugs.\".match(alphabetRegexV2).length === 32, 'Your regex should find 32 alphanumeric characters in <code>\"Pack my box with five dozen liquor jugs.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Pack my box with five dozen liquor jugs.\"</code> 中找到 32 个字母数字字符。",
+          "testString": "assert(\"Pack my box with five dozen liquor jugs.\".match(alphabetRegexV2).length === 32, '你的正则表达式应该在 <code>\"Pack my box with five dozen liquor jugs.\"</code> 中找到 32 个字母数字字符。');"
         },
         {
-          "text": "Your regex should find 30 alphanumeric characters in <code>\"How vexingly quick daft zebras jump!\"</code>",
-          "testString": "assert(\"How vexingly quick daft zebras jump!\".match(alphabetRegexV2).length === 30, 'Your regex should find 30 alphanumeric characters in <code>\"How vexingly quick daft zebras jump!\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"How vexingly quick daft zebras jump!\"</code> 中找到 30 个字母数字字符。",
+          "testString": "assert(\"How vexingly quick daft zebras jump!\".match(alphabetRegexV2).length === 30, '你的正则表达式应该在 <code>\"How vexingly quick daft zebras jump!\"</code> 中找到 30 个字母数字字符。');"
         },
         {
-          "text": "Your regex should find 36 alphanumeric characters in <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code>",
-          "testString": "assert(\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\".match(alphabetRegexV2).length === 36, 'Your regex should find 36 alphanumeric characters in <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code> 中找到 36 个字母数字字符。",
+          "testString": "assert(\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\".match(alphabetRegexV2).length === 36, '你的正则表达式应该在 <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code> 中找到 36 个字母数字字符。');"
         }
       ],
       "solutions": [],
@@ -917,7 +917,7 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"The five boxing wizards jump quickly.\";",
-            "let alphabetRegexV2 = /change/; // Change this line",
+            "let alphabetRegexV2 = /change/; // 修改这一行",
             "let result = quoteSample.match(alphabetRegexV2).length;"
           ],
           "head": [],
@@ -929,32 +929,32 @@
       "id": "587d7db8367417b2b2512ba0",
       "title": "Match Everything But Letters and Numbers",
       "description": [
-        "You've learned that you can use a shortcut to match alphanumerics <code>[A-Za-z0-9_]</code> using <code>\\w</code>. A natural pattern you might want to search for is the opposite of alphanumerics.",
-        "You can search for the opposite of the <code>\\w</code> with <code>\\W</code>. Note, the opposite pattern uses a capital letter. This shortcut is the same as <code>[^A-Za-z0-9_]</code>.",
+        "你已经了解到可以使用快捷键来匹配字母数字，<code>[A-Za-z0-9_]</code> 使用 <code>\\w</code>。你可能想要搜索的自然模式与字母数字相反。",
+        "你可以使用 <code>\\W</code> 搜索和 <code>\\w</code> 相反的模式。注意，相反模式使用大写字母。此快捷键与 <code>[^A-Za-z0-9_]</code> 是一样的。",
         "<blockquote>let shortHand = /\\W/;<br>let numbers = \"42%\";<br>let sentence = \"Coding!\";<br>numbers.match(shortHand); // Returns [\"%\"]<br>sentence.match(shortHand); // Returns [\"!\"]<br></blockquote>",
         "<hr>",
-        "Use the shorthand character class <code>\\W</code> to count the number of non-alphanumeric characters in various quotes and strings."
+        "使用速记字符类 <code>\\W</code> 来计算不同引号和字符串中非字母数字字符的数量。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(nonAlphabetRegex.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(nonAlphabetRegex.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find 6 non-alphanumeric characters in <code>\"The five boxing wizards jump quickly.\"</code>.",
-          "testString": "assert(\"The five boxing wizards jump quickly.\".match(nonAlphabetRegex).length == 6, 'Your regex should find 6 non-alphanumeric characters in <code>\"The five boxing wizards jump quickly.\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"The five boxing wizards jump quickly.\"</code> 中找到 6 个非字母数字字符。",
+          "testString": "assert(\"The five boxing wizards jump quickly.\".match(nonAlphabetRegex).length == 6, '你的正则表达式应该在 <code>\"The five boxing wizards jump quickly.\"</code> 中找到 6 个非字母数字字符。');"
         },
         {
-          "text": "Your regex should find 8 non-alphanumeric characters in <code>\"Pack my box with five dozen liquor jugs.\"</code>",
-          "testString": "assert(\"Pack my box with five dozen liquor jugs.\".match(nonAlphabetRegex).length == 8, 'Your regex should find 8 non-alphanumeric characters in <code>\"Pack my box with five dozen liquor jugs.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Pack my box with five dozen liquor jugs.\"</code> 中找到 8 个非字母数字字符。",
+          "testString": "assert(\"Pack my box with five dozen liquor jugs.\".match(nonAlphabetRegex).length == 8, '你的正则表达式应该在 <code>\"Pack my box with five dozen liquor jugs.\"</code> 中找到 8 个非字母数字字符。');"
         },
         {
-          "text": "Your regex should find 6 non-alphanumeric characters in <code>\"How vexingly quick daft zebras jump!\"</code>",
-          "testString": "assert(\"How vexingly quick daft zebras jump!\".match(nonAlphabetRegex).length == 6, 'Your regex should find 6 non-alphanumeric characters in <code>\"How vexingly quick daft zebras jump!\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"How vexingly quick daft zebras jump!\"</code> 中找到 6 个非字母数字字符。",
+          "testString": "assert(\"How vexingly quick daft zebras jump!\".match(nonAlphabetRegex).length == 6, '你的正则表达式应该在 <code>\"How vexingly quick daft zebras jump!\"</code> 中找到 6 个非字母数字字符。');"
         },
         {
-          "text": "Your regex should find 12 non-alphanumeric characters in <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code>",
-          "testString": "assert(\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\".match(nonAlphabetRegex).length == 12, 'Your regex should find 12 non-alphanumeric characters in <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code> 中找到 12 个非字母数字字符。",
+          "testString": "assert(\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\".match(nonAlphabetRegex).length == 12, '你的正则表达式应该在 <code>\"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.\"</code> 中找到 12 个非字母数字字符。');"
         }
       ],
       "solutions": [],
@@ -969,7 +969,7 @@
           "name": "index",
           "contents": [
             "let quoteSample = \"The five boxing wizards jump quickly.\";",
-            "let nonAlphabetRegex = /change/; // Change this line",
+            "let nonAlphabetRegex = /change/; // 修改这一行",
             "let result = quoteSample.match(nonAlphabetRegex).length;"
           ],
           "head": [],
@@ -981,43 +981,43 @@
       "id": "5d712346c441eddfaeb5bdef",
       "title": "Match All Numbers",
       "description": [
-        "You've learned shortcuts for common string patterns like alphanumerics. Another common pattern is looking for just digits or numbers.",
-        "The shortcut to look for digit characters is <code>\\d</code>, with a lowercase <code>d</code>. This is equal to the character class <code>[0-9]</code>, which looks for a single character of any number between zero and nine.",
+        "你已经了解了常见字符串模式的快捷键，如字母数字。另一个常见的模式是只寻找数字。",
+        "查找数字字符的快捷键是 <code>\\d</code>，是小写的 <code>d</code>。这等同于字符类 <code>[0-9]</code>，它查找 0 到 9 之间任意数字的单个字符。",
         "<hr>",
-        "Use the shorthand character class <code>\\d</code> to count how many digits are in movie titles. Written out numbers (\"six\" instead of 6) do not count."
+        "使用速记字符类 <code>\\d</code> 来计算电影标题中有多少个数字。书面数字（\"six\" 而不是 6）不计算在内。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the shortcut character to match digit characters",
-          "testString": "assert(/\\\\d/.test(numRegex.source), 'Your regex should use the shortcut character to match digit characters');"
+          "text": "你的正则表达式应该使用快捷字符来匹配数字字符。",
+          "testString": "assert(/\\\\d/.test(numRegex.source), '你的正则表达式应该使用快捷字符来匹配数字字符。');"
         },
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(numRegex.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(numRegex.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find 1 digit in <code>\"9\"</code>.",
-          "testString": "assert(\"9\".match(numRegex).length == 1, 'Your regex should find 1 digit in <code>\"9\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"9\"</code> 中找到 1 个数字。",
+          "testString": "assert(\"9\".match(numRegex).length == 1, '你的正则表达式应该在 <code>\"9\"</code> 中找到 1 个数字。');"
         },
         {
-          "text": "Your regex should find 2 digits in <code>\"Catch 22\"</code>.",
-          "testString": "assert(\"Catch 22\".match(numRegex).length == 2, 'Your regex should find 2 digits in <code>\"Catch 22\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"Catch 22\"</code> 中找到 2 个数字。",
+          "testString": "assert(\"Catch 22\".match(numRegex).length == 2, '你的正则表达式应该在 <code>\"Catch 22\"</code> 中找到 2 个数字。');"
         },
         {
-          "text": "Your regex should find 3 digits in <code>\"101 Dalmatians\"</code>.",
-          "testString": "assert(\"101 Dalmatians\".match(numRegex).length == 3, 'Your regex should find 3 digits in <code>\"101 Dalmatians\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"101 Dalmatians\"</code> 中找到 3 个数字。",
+          "testString": "assert(\"101 Dalmatians\".match(numRegex).length == 3, '你的正则表达式应该在 <code>\"101 Dalmatians\"</code> 中找到 3 个数字。');"
         },
         {
-          "text": "Your regex should find no digits in <code>\"One, Two, Three\"</code>.",
-          "testString": "assert(\"One, Two, Three\".match(numRegex) == null, 'Your regex should find no digits in <code>\"One, Two, Three\"</code>.');"
+          "text": "你的正则表达式在 <code>\"One, Two, Three\"</code> 中应该找不到数字。",
+          "testString": "assert(\"One, Two, Three\".match(numRegex) == null, '你的正则表达式在 <code>\"One, Two, Three\"</code> 中应该找不到数字。');"
         },
         {
-          "text": "Your regex should find 2 digits in <code>\"21 Jump Street\"</code>.",
-          "testString": "assert(\"21 Jump Street\".match(numRegex).length == 2, 'Your regex should find 2 digits in <code>\"21 Jump Street\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"21 Jump Street\"</code> 中找到 2 个数字。",
+          "testString": "assert(\"21 Jump Street\".match(numRegex).length == 2, '你的正则表达式应该在 <code>\"21 Jump Street\"</code> 中找到 2 个数字。');"
         },
         {
-          "text": "Your regex should find 4 digits in <code>\"2001: A Space Odyssey\"</code>.",
-          "testString": "assert(\"2001: A Space Odyssey\".match(numRegex).length == 4, 'Your regex should find 4 digits in <code>\"2001: A Space Odyssey\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"2001: A Space Odyssey\"</code> 中找到 4 个数字。",
+          "testString": "assert(\"2001: A Space Odyssey\".match(numRegex).length == 4, '你的正则表达式应该在 <code>\"2001: A Space Odyssey\"</code> 中找到 4 个数字。');"
         }
       ],
       "solutions": [],
@@ -1032,7 +1032,7 @@
           "name": "index",
           "contents": [
             "let numString = \"Your sandwich will be $5.00\";",
-            "let numRegex = /change/; // Change this line",
+            "let numRegex = /change/; // 修改这一行",
             "let result = numString.match(numRegex).length;"
           ],
           "head": [],
@@ -1044,43 +1044,43 @@
       "id": "587d7db8367417b2b2512ba1",
       "title": "Match All Non-Numbers",
       "description": [
-        "The last challenge showed how to search for digits using the shortcut <code>\\d</code> with a lowercase <code>d</code>. You can also search for non-digits using a similar shortcut that uses an uppercase <code>D</code> instead.",
-        "The shortcut to look for non-digit characters is <code>\\D</code>. This is equal to the character class <code>[^0-9]</code>, which looks for a single character that is not a number between zero and nine.",
+        "上一项挑战中展示了如何使用带有小写 <code>d</code> 的快捷键 <code>\\d</code> 来搜索非数字。你也可以使用类似的快捷键来搜索非数字，该快捷键使用大写的 <code>D</code> 。",
+        "查找非数字字符的快捷键是 <code>\\D</code> 。这等同于字符串 <code>[^0-9]</code> ，它查找不是 0 - 9 之间数字的单个字符。",
         "<hr>",
-        "Use the shorthand character class for non-digits <code>\\D</code> to count how many non-digits are in movie titles."
+        "使用非数字速记字符类 <code>\\D</code> 来计算电影标题中有多少非数字。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the shortcut character to match non-digit characters",
-          "testString": "assert(/\\\\D/.test(noNumRegex.source), 'Your regex should use the shortcut character to match non-digit characters');"
+          "text": "你的正则表达式应该使用快捷字符来匹配非数字字符。",
+          "testString": "assert(/\\\\D/.test(noNumRegex.source), '你的正则表达式应该使用快捷字符来匹配非数字字符。');"
         },
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(noNumRegex.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(noNumRegex.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find no non-digits in <code>\"9\"</code>.",
-          "testString": "assert(\"9\".match(noNumRegex) == null, 'Your regex should find no non-digits in <code>\"9\"</code>.');"
+          "text": "你的正则表达式在 <code>\"9\"</code> 中应该找不到非数字。",
+          "testString": "assert(\"9\".match(noNumRegex) == null, '你的正则表达式在 <code>\"9\"</code> 中应该找不到非数字。');"
         },
         {
-          "text": "Your regex should find 6 non-digits in <code>\"Catch 22\"</code>.",
-          "testString": "assert(\"Catch 22\".match(noNumRegex).length == 6, 'Your regex should find 6 non-digits in <code>\"Catch 22\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"Catch 22\"</code> 中找到 6 个非数字。",
+          "testString": "assert(\"Catch 22\".match(noNumRegex).length == 6, '你的正则表达式应该在 <code>\"Catch 22\"</code> 中找到 6 个非数字。');"
         },
         {
-          "text": "Your regex should find 11 non-digits in <code>\"101 Dalmatians\"</code>.",
-          "testString": "assert(\"101 Dalmatians\".match(noNumRegex).length == 11, 'Your regex should find 11 non-digits in <code>\"101 Dalmatians\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"101 Dalmatians\"</code> 中找到 11 个非数字。",
+          "testString": "assert(\"101 Dalmatians\".match(noNumRegex).length == 11, '你的正则表达式应该在 <code>\"101 Dalmatians\"</code> 中找到 11 个非数字。');"
         },
         {
-          "text": "Your regex should find 15 non-digits in <code>\"One, Two, Three\"</code>.",
-          "testString": "assert(\"One, Two, Three\".match(noNumRegex).length == 15, 'Your regex should find 15 non-digits in <code>\"One, Two, Three\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"One, Two, Three\"</code> 中找到 15 个非数字。",
+          "testString": "assert(\"One, Two, Three\".match(noNumRegex).length == 15, '你的正则表达式应该在 <code>\"One, Two, Three\"</code> 中找到 15 个非数字。');"
         },
         {
-          "text": "Your regex should find 12 non-digits in <code>\"21 Jump Street\"</code>.",
-          "testString": "assert(\"21 Jump Street\".match(noNumRegex).length == 12, 'Your regex should find 12 non-digits in <code>\"21 Jump Street\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"21 Jump Street\"</code> 中找到 12 个非数字。",
+          "testString": "assert(\"21 Jump Street\".match(noNumRegex).length == 12, '你的正则表达式应该在 <code>\"21 Jump Street\"</code> 中找到 12 个非数字。');"
         },
         {
-          "text": "Your regex should find 17 non-digits in <code>\"2001: A Space Odyssey\"</code>.",
-          "testString": "assert(\"2001: A Space Odyssey\".match(noNumRegex).length == 17, 'Your regex should find 17 non-digits in <code>\"2001: A Space Odyssey\"</code>.');"
+          "text": "你的正则表达式应该在 <code>\"2001: A Space Odyssey\"</code> 中找到 17 个非数字。",
+          "testString": "assert(\"2001: A Space Odyssey\".match(noNumRegex).length == 17, '你的正则表达式应该在 <code>\"2001: A Space Odyssey\"</code> 中找到 17 个非数字。');"
         }
       ],
       "solutions": [],
@@ -1095,7 +1095,7 @@
           "name": "index",
           "contents": [
             "let numString = \"Your sandwich will be $5.00\";",
-            "let noNumRegex = /change/; // Change this line",
+            "let noNumRegex = /change/; // 修改这一行",
             "let result = numString.match(noNumRegex).length;"
           ],
           "head": [],
@@ -1107,38 +1107,38 @@
       "id": "587d7db8367417b2b2512ba2",
       "title": "Restrict Possible Usernames",
       "description": [
-        "Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.",
-        "You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.",
-        "1) The only numbers in the username have to be at the end. There can be zero or more of them at the end.",
-        "2) Username letters can be lowercase and uppercase.",
-        "3) Usernames have to be at least two characters long. A two-letter username can only use alphabet letter characters.",
+        "用户名在互联网上随处可见。它们是用户在自己喜欢的网站上的唯一身份。",
+        "你需要检查数据库中的所有用户名。以下是用户在创建用户名时必须遵守的一些简单规则。",
+        "1) 用户名中唯一的数字必须在最后。 最后可以有零个或多个。",
+        "2) 用户名字母可以是小写字母和大写字母。",
+        "3) 用户名长度必须至少为两个字符。两位用户名只能使用字母字符。",
         "<hr>",
-        "Change the regex <code>userCheck</code> to fit the constraints listed above."
+        "修改正则表达式 <code>userCheck</code> 以适合上面列出的约束。"
       ],
       "tests": [
         {
-          "text": "Your regex should match <code>JACK</code>",
-          "testString": "assert(userCheck.test(\"JACK\"), 'Your regex should match <code>JACK</code>');"
+          "text": "你的正则表达式应该匹配 <code>JACK</code>",
+          "testString": "assert(userCheck.test(\"JACK\"), '你的正则表达式应该匹配 <code>JACK</code>');"
         },
         {
-          "text": "Your regex should not match <code>J</code>",
-          "testString": "assert(!userCheck.test(\"J\"), 'Your regex should not match <code>J</code>');"
+          "text": "你的正则表达式不应该匹配 <code>J</code>",
+          "testString": "assert(!userCheck.test(\"J\"), '你的正则表达式不应该匹配 <code>J</code>');"
         },
         {
-          "text": "Your regex should match <code>Oceans11</code>",
-          "testString": "assert(userCheck.test(\"Oceans11\"), 'Your regex should match <code>Oceans11</code>');"
+          "text": "你的正则表达式应该匹配 <code>Oceans11</code>",
+          "testString": "assert(userCheck.test(\"Oceans11\"), '你的正则表达式应该匹配 <code>Oceans11</code>');"
         },
         {
-          "text": "Your regex should match <code>RegexGuru</code>",
-          "testString": "assert(userCheck.test(\"RegexGuru\"), 'Your regex should match <code>RegexGuru</code>');"
+          "text": "你的正则表达式应该匹配 <code>RegexGuru</code>",
+          "testString": "assert(userCheck.test(\"RegexGuru\"), '你的正则表达式应该匹配 <code>RegexGuru</code>');"
         },
         {
-          "text": "Your regex should not match <code>007</code>",
-          "testString": "assert(!userCheck.test(\"007\"), 'Your regex should not match <code>007</code>');"
+          "text": "你的正则表达式不应该匹配 <code>007</code>",
+          "testString": "assert(!userCheck.test(\"007\"), '你的正则表达式不应该匹配 <code>007</code>');"
         },
         {
-          "text": "Your regex should not match <code>9</code>",
-          "testString": "assert(!userCheck.test(\"9\"), 'Your regex should not match <code>9</code>');"
+          "text": "你的正则表达式不应该匹配 <code>9</code>",
+          "testString": "assert(!userCheck.test(\"9\"), '你的正则表达式不应该匹配 <code>9</code>');"
         }
       ],
       "solutions": [],
@@ -1153,7 +1153,7 @@
           "name": "index",
           "contents": [
             "let username = \"JackOfAllTrades\";",
-            "let userCheck = /change/; // Change this line",
+            "let userCheck = /change/; // 修改这一行",
             "let result = userCheck.test(username);"
           ],
           "head": [],
@@ -1165,28 +1165,28 @@
       "id": "587d7db8367417b2b2512ba3",
       "title": "Match Whitespace",
       "description": [
-        "The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.",
-        "You can search for whitespace using <code>\\s</code>, which is a lowercase <code>s</code>. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class <code>[ \\r\\t\\f\\n\\v]</code>.",
+        "迄今为止的挑战包括匹配的字母和数字。你还可以匹配字母之间的空格。",
+        "你可以使用 <code>\\s</code> 搜索空格，其中 <code>s</code> 是小写。此模式不仅匹配空格，还匹配回车符、制表符、换页符和换行符，你可以将其视为与字符类 <code>[ \\r\\t\\f\\n\\v]</code> 类似。",
         "<blockquote>let whiteSpace = \"Whitespace. Whitespace everywhere!\"<br>let spaceRegex = /\\s/g;<br>whiteSpace.match(spaceRegex);<br>// Returns [\" \", \" \"]<br></blockquote>",
         "<hr>",
-        "Change the regex <code>countWhiteSpace</code> to look for multiple whitespace characters in a string."
+        "修改正则表达式 <code>countWhiteSpace</code> 查找字符串中的多个空白字符。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(countWhiteSpace.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(countWhiteSpace.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find eight spaces in <code>\"Men are from Mars and women are from Venus.\"</code>",
-          "testString": "assert(\"Men are from Mars and women are from Venus.\".match(countWhiteSpace).length == 8, 'Your regex should find eight spaces in <code>\"Men are from Mars and women are from Venus.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Men are from Mars and women are from Venus.\"</code> 中找到 8 个空白字符。",
+          "testString": "assert(\"Men are from Mars and women are from Venus.\".match(countWhiteSpace).length == 8, '你的正则表达式应该在 <code>\"Men are from Mars and women are from Venus.\"</code> 中找到 8 个空白字符。');"
         },
         {
-          "text": "Your regex should find three spaces in <code>\"Space: the final frontier.\"</code>",
-          "testString": "assert(\"Space: the final frontier.\".match(countWhiteSpace).length == 3, 'Your regex should find three spaces in <code>\"Space: the final frontier.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Space: the final frontier.\"</code> 中找到 3 个空白字符。",
+          "testString": "assert(\"Space: the final frontier.\".match(countWhiteSpace).length == 3, '你的正则表达式应该在 <code>\"Space: the final frontier.\"</code> 中找到 3 个空白字符。');"
         },
         {
-          "text": "Your regex should find no spaces in <code>\"MindYourPersonalSpace\"</code>",
-          "testString": "assert(\"MindYourPersonalSpace\".match(countWhiteSpace) == null, 'Your regex should find no spaces in <code>\"MindYourPersonalSpace\"</code>');"
+          "text": "你的正则表达式在 <code>\"MindYourPersonalSpace\"</code> 中应该找不到空白字符。",
+          "testString": "assert(\"MindYourPersonalSpace\".match(countWhiteSpace) == null, '你的正则表达式在 <code>\"MindYourPersonalSpace\"</code> 中应该找不到空白字符。');"
         }
       ],
       "solutions": [],
@@ -1201,7 +1201,7 @@
           "name": "index",
           "contents": [
             "let sample = \"Whitespace is important in separating words\";",
-            "let countWhiteSpace = /change/; // Change this line",
+            "let countWhiteSpace = /change/; // 修改这一行",
             "let result = sample.match(countWhiteSpace);"
           ],
           "head": [],
@@ -1213,28 +1213,28 @@
       "id": "587d7db9367417b2b2512ba4",
       "title": "Match Non-Whitespace Characters",
       "description": [
-        "You learned about searching for whitespace using <code>\\s</code>, with a lowercase <code>s</code>. You can also search for everything except whitespace.",
-        "Search for non-whitespace using <code>\\S</code>, which is an uppercase <code>s</code>. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class <code>[^ \\r\\t\\f\\n\\v]</code>.",
+        "你已经学会了如何使用带有小写 <code>s</code> 的快捷键 <code>\\s</code> 来搜索空白字符。你也可以搜索除了空格之外的所有内容。",
+        "使用 <code>\\S</code> 搜索非空白字符，其中 <code>s</code> 是大写。此模式将不匹配空格、回车符、制表符、换页符和换行符。你可以认为这类似于字符类 <code>[^ \\r\\t\\f\\n\\v]</code> 。",
         "<blockquote>let whiteSpace = \"Whitespace. Whitespace everywhere!\"<br>let nonSpaceRegex = /\\S/g;<br>whiteSpace.match(nonSpaceRegex).length; // Returns 32</blockquote>",
         "<hr>",
-        "Change the regex <code>countNonWhiteSpace</code> to look for multiple non-whitespace characters in a string."
+        "修改正则表达式 <code>countNonWhiteSpace</code> 以查找字符串中的多个非空字符。"
       ],
       "tests": [
         {
-          "text": "Your regex should use the global flag.",
-          "testString": "assert(countNonWhiteSpace.global, 'Your regex should use the global flag.');"
+          "text": "你的正则表达式应该使用全局状态修正符。",
+          "testString": "assert(countNonWhiteSpace.global, '你的正则表达式应该使用全局状态修正符。');"
         },
         {
-          "text": "Your regex should find 35 non-spaces in <code>\"Men are from Mars and women are from Venus.\"</code>",
-          "testString": "assert(\"Men are from Mars and women are from Venus.\".match(countNonWhiteSpace).length == 35, 'Your regex should find 35 non-spaces in <code>\"Men are from Mars and women are from Venus.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Men are from Mars and women are from Venus.\"</code> 中找到 35 个非空白字符。",
+          "testString": "assert(\"Men are from Mars and women are from Venus.\".match(countNonWhiteSpace).length == 35, '你的正则表达式应该在 <code>\"Men are from Mars and women are from Venus.\"</code> 中找到 35 个非空白字符。');"
         },
         {
-          "text": "Your regex should find 23 non-spaces in <code>\"Space: the final frontier.\"</code>",
-          "testString": "assert(\"Space: the final frontier.\".match(countNonWhiteSpace).length == 23, 'Your regex should find 23 non-spaces in <code>\"Space: the final frontier.\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"Space: the final frontier.\"</code> 中找到 23 个非空白字符。",
+          "testString": "assert(\"Space: the final frontier.\".match(countNonWhiteSpace).length == 23, '你的正则表达式应该在 <code>\"Space: the final frontier.\"</code> 中找到 23 个非空白字符。');"
         },
         {
-          "text": "Your regex should find 21 non-spaces in <code>\"MindYourPersonalSpace\"</code>",
-          "testString": "assert(\"MindYourPersonalSpace\".match(countNonWhiteSpace).length == 21, 'Your regex should find 21 non-spaces in <code>\"MindYourPersonalSpace\"</code>');"
+          "text": "你的正则表达式应该在 <code>\"MindYourPersonalSpace\"</code> 中找到 21 个非空白字符。",
+          "testString": "assert(\"MindYourPersonalSpace\".match(countNonWhiteSpace).length == 21, '你的正则表达式应该在 <code>\"MindYourPersonalSpace\"</code> 中找到 21 个非空白字符。');"
         }
       ],
       "solutions": [],
@@ -1249,7 +1249,7 @@
           "name": "index",
           "contents": [
             "let sample = \"Whitespace is important in separating words\";",
-            "let countNonWhiteSpace = /change/; // Change this line",
+            "let countNonWhiteSpace = /change/; // 修改这一行",
             "let result = sample.match(countNonWhiteSpace);"
           ],
           "head": [],
@@ -1261,41 +1261,41 @@
       "id": "587d7db9367417b2b2512ba5",
       "title": "Specify Upper and Lower Number of Matches",
       "description": [
-        "Recall that you use the plus sign <code>+</code> to look for one or more characters and the asterisk <code>*</code> to look for zero or more characters. These are convenient but sometimes you want to match a certain range of patterns.",
-        "You can specify the lower and upper number of patterns with <code>quantity specifiers</code>. Quantity specifiers are used with curly brackets (<code>{</code> and <code>}</code>). You put two numbers between the curly brackets - for the lower and upper number of patterns.",
-        "For example, to match only the letter <code>a</code> appearing between <code>3</code> and <code>5</code> times in the string <code>\"ah\"</code>, your regex would be <code>/a{3,5}h/</code>.",
+        "回想一下，你使用加号 <code>+</code> 查找一个或多个字符，使用星号 <code>*</code> 查找零个或多个字符。这些都很方便，但有时你需要匹配一定范围的模式。",
+        "你可以使用 <code>数量说明符</code> 指定模式的上下限。数量说明符与花括号（<code>{</code> 和 <code>}</code>）一起使用。你在花括号之间放两个数字，作为模式的上下限数字。",
+        "例如，要在字符串 <code>\"ah\"</code> 中匹配仅出现 <code>3</code> 到 <code>5</code> 次的字母 <code>a</code> ，你的正则表达式应为 <code>/a{3,5}h/</code> 。",
         "<blockquote>let A4 = \"aaaah\";<br>let A2 = \"aah\";<br>let multipleA = /a{3,5}h/;<br>multipleA.test(A4); // Returns true<br>multipleA.test(A2); // Returns false</blockquote>",
         "<hr>",
-        "Change the regex <code>ohRegex</code> to match only <code>3</code> to <code>6</code> letter <code>h</code>'s in the word <code>\"Oh no\"</code>."
+        "修改正则表达式 <code>ohRegex</code> 以匹配在 <code>\"Oh no\"</code> 中仅出现 <code>3</code> 到 <code>6</code> 次的字母 <code>h</code> 。"
       ],
       "tests": [
         {
-          "text": "Your regex should use curly brackets.",
-          "testString": "assert(ohRegex.source.match(/{.*?}/).length > 0, 'Your regex should use curly brackets.');"
+          "text": "你的正则表达式应该使用花括号。",
+          "testString": "assert(ohRegex.source.match(/{.*?}/).length > 0, '你的正则表达式应该使用花括号。');"
         },
         {
-          "text": "Your regex should not match <code>\"Ohh no\"</code>",
-          "testString": "assert(!ohRegex.test(\"Ohh no\"), 'Your regex should not match <code>\"Ohh no\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Ohh no\"</code>",
+          "testString": "assert(!ohRegex.test(\"Ohh no\"), '你的正则表达式不应该匹配 <code>\"Ohh no\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Ohhh no\"</code>",
-          "testString": "assert(ohRegex.test(\"Ohhh no\"), 'Your regex should match <code>\"Ohhh no\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Ohhh no\"</code>",
+          "testString": "assert(ohRegex.test(\"Ohhh no\"), '你的正则表达式应该匹配 <code>\"Ohhh no\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Ohhhh no\"</code>",
-          "testString": "assert(ohRegex.test(\"Ohhhh no\"), 'Your regex should match <code>\"Ohhhh no\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Ohhhh no\"</code>",
+          "testString": "assert(ohRegex.test(\"Ohhhh no\"), '你的正则表达式应该匹配 <code>\"Ohhhh no\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Ohhhhh no\"</code>",
-          "testString": "assert(ohRegex.test(\"Ohhhhh no\"), 'Your regex should match <code>\"Ohhhhh no\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Ohhhhh no\"</code>",
+          "testString": "assert(ohRegex.test(\"Ohhhhh no\"), '你的正则表达式应该匹配 <code>\"Ohhhhh no\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Ohhhhhh no\"</code>",
-          "testString": "assert(ohRegex.test(\"Ohhhhhh no\"), 'Your regex should match <code>\"Ohhhhhh no\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Ohhhhhh no\"</code>",
+          "testString": "assert(ohRegex.test(\"Ohhhhhh no\"), '你的正则表达式应该匹配 <code>\"Ohhhhhh no\"</code>');"
         },
         {
-          "text": "Your regex should not match <code>\"Ohhhhhhh no\"</code>",
-          "testString": "assert(!ohRegex.test(\"Ohhhhhhh no\"), 'Your regex should not match <code>\"Ohhhhhhh no\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Ohhhhhhh no\"</code>",
+          "testString": "assert(!ohRegex.test(\"Ohhhhhhh no\"), '你的正则表达式不应该匹配 <code>\"Ohhhhhhh no\"</code>');"
         }
       ],
       "solutions": [],
@@ -1310,7 +1310,7 @@
           "name": "index",
           "contents": [
             "let ohStr = \"Ohhh no\";",
-            "let ohRegex = /change/; // Change this line",
+            "let ohRegex = /change/; // 修改这一行",
             "let result = ohRegex.test(ohStr);"
           ],
           "head": [],
@@ -1322,41 +1322,41 @@
       "id": "587d7db9367417b2b2512ba6",
       "title": "Specify Only the Lower Number of Matches",
       "description": [
-        "You can specify the lower and upper number of patterns with <code>quantity specifiers</code> using curly brackets. Sometimes you only want to specify the lower number of patterns with no upper limit.",
-        "To only specify the lower number of patterns, keep the first number followed by a comma.",
-        "For example, to match only the string <code>\"hah\"</code> with the letter <code>a</code> appearing at least <code>3</code> times, your regex would be <code>/ha{3,}h/</code>.",
+        "你可以使用带有花括号的 <code>数量说明符</code> 来指定模式的上下限。有时候你只想指定模式的下限而没有上限。",
+        "要只指定模式的下限，在第一个数字后面跟一个逗号即可。",
+        "例如，要匹配字母 <code>a</code> 出现至少 <code>3</code> 次的唯一字符串 <code>\"hah\"</code> ，你的正则表达式应该是 <code>/ha{3,}h/</code> 。",
         "<blockquote>let A4 = \"haaaah\";<br>let A2 = \"haah\";<br>let A100 = \"h\" + \"a\".repeat(100) + \"h\";<br>let multipleA = /ha{3,}h/;<br>multipleA.test(A4); // Returns true<br>multipleA.test(A2); // Returns false<br>multipleA.test(A100); // Returns true</blockquote>",
         "<hr>",
-        "Change the regex <code>haRegex</code> to match the word <code>\"Hazzah\"</code> only when it has four or more letter <code>z</code>'s."
+        "修改正则表达式 <code>haRegex</code> ，匹配包含四个或更多字母 <code>z</code> 的单词 <code>\"Hazzah\"</code> 。"
       ],
       "tests": [
         {
-          "text": "Your regex should use curly brackets.",
-          "testString": "assert(haRegex.source.match(/{.*?}/).length > 0, 'Your regex should use curly brackets.');"
+          "text": "你的正则表达式应该使用花括号。",
+          "testString": "assert(haRegex.source.match(/{.*?}/).length > 0, '你的正则表达式应该使用花括号。');"
         },
         {
-          "text": "Your regex should not match <code>\"Hazzah\"</code>",
-          "testString": "assert(!haRegex.test(\"Hazzah\"), 'Your regex should not match <code>\"Hazzah\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Hazzah\"</code>",
+          "testString": "assert(!haRegex.test(\"Hazzah\"), '你的正则表达式不应该匹配 <code>\"Hazzah\"</code>');"
         },
         {
-          "text": "Your regex should not match <code>\"Hazzzah\"</code>",
-          "testString": "assert(!haRegex.test(\"Hazzzah\"), 'Your regex should not match <code>\"Hazzzah\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Hazzzah\"</code>",
+          "testString": "assert(!haRegex.test(\"Hazzzah\"), '你的正则表达式不应该匹配 <code>\"Hazzzah\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Hazzzzah\"</code>",
-          "testString": "assert(haRegex.test(\"Hazzzzah\"), 'Your regex should match <code>\"Hazzzzah\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Hazzzzah\"</code>",
+          "testString": "assert(haRegex.test(\"Hazzzzah\"), '你的正则表达式应该匹配 <code>\"Hazzzzah\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Hazzzzzah\"</code>",
-          "testString": "assert(haRegex.test(\"Hazzzzzah\"), 'Your regex should match <code>\"Hazzzzzah\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Hazzzzzah\"</code>",
+          "testString": "assert(haRegex.test(\"Hazzzzzah\"), '你的正则表达式应该匹配 <code>\"Hazzzzzah\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Hazzzzzzah\"</code>",
-          "testString": "assert(haRegex.test(\"Hazzzzzzah\"), 'Your regex should match <code>\"Hazzzzzzah\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Hazzzzzzah\"</code>",
+          "testString": "assert(haRegex.test(\"Hazzzzzzah\"), '你的正则表达式应该匹配 <code>\"Hazzzzzzah\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Hazzah\"</code> with 30 <code>z</code>\\'s in it.",
-          "testString": "assert(haRegex.test(\"Ha\" + \"z\".repeat(30) + \"ah\"), 'Your regex should match <code>\"Hazzah\"</code> with 30 <code>z</code>\\'s in it.');"
+          "text": "你的正则表达式不应该匹配拥有 30 个字母 <code>z</code> 的 <code>\"Hazzah\"</code>",
+          "testString": "assert(haRegex.test(\"Ha\" + \"z\".repeat(30) + \"ah\"), '你的正则表达式不应该匹配拥有 30 个字母 <code>z</code> 的 <code>\"Hazzah\"</code>');"
         }
       ],
       "solutions": [],
@@ -1371,7 +1371,7 @@
           "name": "index",
           "contents": [
             "let haStr = \"Hazzzzah\";",
-            "let haRegex = /change/; // Change this line",
+            "let haRegex = /change/; // 修改这一行",
             "let result = haRegex.test(haStr);"
           ],
           "head": [],
@@ -1383,37 +1383,37 @@
       "id": "587d7db9367417b2b2512ba7",
       "title": "Specify Exact Number of Matches",
       "description": [
-        "You can specify the lower and upper number of patterns with <code>quantity specifiers</code> using curly brackets. Sometimes you only want a specific number of matches.",
-        "To specify a certain number of patterns, just have that one number between the curly brackets.",
-        "For example, to match only the word <code>\"hah\"</code> with the letter <code>a</code> <code>3</code> times, your regex would be <code>/ha{3}h/</code>.",
+        "你可以使用带有花括号的 <code>数量说明符</code> 来指定模式的上下限。有事你只需要特定数量的匹配。",
+        "要指定一定数量的模式，只需在大括号之间放置一个数字。",
+        "例如，要只匹配字母 <code>a</code> 出现 <code>3</code> 次的单词 <code>\"hah\"</code> ，你的正则表达式应为 <code>/ha{3}h/</code> 。",
         "<blockquote>let A4 = \"haaaah\";<br>let A3 = \"haaah\";<br>let A100 = \"h\" + \"a\".repeat(100) + \"h\";<br>let multipleHA = /a{3}h/;<br>multipleHA.test(A4); // Returns false<br>multipleHA.test(A3); // Returns true<br>multipleHA.test(A100); // Returns false</blockquote>",
         "<hr>",
-        "Change the regex <code>timRegex</code> to match the word <code>\"Timber\"</code> only when it has four letter <code>m</code>'s."
+        "修改正则表达式 <code>timRegex</code> ，以匹配仅有四个字母单词 <code>m</code> 的单词 <code>\"Timber\"</code> 。"
       ],
       "tests": [
         {
-          "text": "Your regex should use curly brackets.",
-          "testString": "assert(timRegex.source.match(/{.*?}/).length > 0, 'Your regex should use curly brackets.');"
+          "text": "你的正则表达式应该使用花括号。",
+          "testString": "assert(timRegex.source.match(/{.*?}/).length > 0, '你的正则表达式应该使用花括号。');"
         },
         {
-          "text": "Your regex should not match <code>\"Timber\"</code>",
-          "testString": "assert(!timRegex.test(\"Timber\"), 'Your regex should not match <code>\"Timber\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Timber\"</code>",
+          "testString": "assert(!timRegex.test(\"Timber\"), '你的正则表达式不应该匹配 <code>\"Timber\"</code>');"
         },
         {
-          "text": "Your regex should not match <code>\"Timmber\"</code>",
-          "testString": "assert(!timRegex.test(\"Timmber\"), 'Your regex should not match <code>\"Timmber\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Timmber\"</code>",
+          "testString": "assert(!timRegex.test(\"Timmber\"), '你的正则表达式不应该匹配 <code>\"Timmber\"</code>');"
         },
         {
-          "text": "Your regex should not match <code>\"Timmmber\"</code>",
-          "testString": "assert(!timRegex.test(\"Timmmber\"), 'Your regex should not match <code>\"Timmmber\"</code>');"
+          "text": "你的正则表达式不应该匹配 <code>\"Timmmber\"</code>",
+          "testString": "assert(!timRegex.test(\"Timmmber\"), '你的正则表达式不应该匹配 <code>\"Timmmber\"</code>');"
         },
         {
-          "text": "Your regex should match <code>\"Timmmmber\"</code>",
-          "testString": "assert(timRegex.test(\"Timmmmber\"), 'Your regex should match <code>\"Timmmmber\"</code>');"
+          "text": "你的正则表达式应该匹配 <code>\"Timmmmber\"</code>",
+          "testString": "assert(timRegex.test(\"Timmmmber\"), '你的正则表达式应该匹配 <code>\"Timmmmber\"</code>');"
         },
         {
-          "text": "Your regex should not match <code>\"Timber\"</code> with 30 <code>m</code>\\'s in it.",
-          "testString": "assert(!timRegex.test(\"Ti\" + \"m\".repeat(30) + \"ber\"), 'Your regex should not match <code>\"Timber\"</code> with 30 <code>m</code>\\'s in it.');"
+          "text": "你的正则表达式不应该匹配包含 30 个字母 <code>m</code> 的 <code>\"Timber\"</code>",
+          "testString": "assert(!timRegex.test(\"Ti\" + \"m\".repeat(30) + \"ber\"), '你的正则表达式不应该匹配包含 30 个字母 <code>m</code> 的 <code>\"Timber\"</code>');"
         }
       ],
       "solutions": [],
@@ -1428,7 +1428,7 @@
           "name": "index",
           "contents": [
             "let timStr = \"Timmmmber\";",
-            "let timRegex = /change/; // Change this line",
+            "let timRegex = /change/; // 修改这一行",
             "let result = timRegex.test(timStr);"
           ],
           "head": [],
@@ -1440,12 +1440,12 @@
       "id": "587d7dba367417b2b2512ba8",
       "title": "Check for All or None",
       "description": [
-        "Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.",
-        "You can specify the possible existence of an element with a question mark, <code>?</code>. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.",
-        "For example, there are slight differences in American and British English and you can use the question mark to match both spellings.",
+        "有时，您想要搜索的模式可能有可能存在或不存在的部分。然而，尽管如此，检查它们还是很重要的。",
+        "你可以使用问号 <code>?</code> 指定可能存在的元素。这将检查前面的零个或一个元素。您可以将此符号视为前面的元素是可选的。",
+        "例如，美式英语和英式英语略有不同，您可以使用问号来匹配两种拼写。",
         "<blockquote>let american = \"color\";<br>let british = \"colour\";<br>let rainbowRegex= /colou?r/;<br>rainbowRegex.test(american); // Returns true<br>rainbowRegex.test(british); // Returns true</blockquote>",
         "<hr>",
-        "Change the regex <code>favRegex</code> to match both the American English (favorite) and the British English (favourite) version of the word."
+        "修改正则表达式 <code>favRegex</code> 以匹配美式英语 (favorite) 和英式英语 (favourite) 的单词版本。"
       ],
       "tests": [
         {
@@ -1477,7 +1477,7 @@
           "name": "index",
           "contents": [
             "let favWord = \"favorite\";",
-            "let favRegex = /change/; // Change this line",
+            "let favRegex = /change/; // 修改这一行",
             "let result = favRegex.test(favWord);"
           ],
           "head": [],
@@ -1542,7 +1542,7 @@
           "name": "index",
           "contents": [
             "let sampleWord = \"astronaut\";",
-            "let pwRegex = /change/; // Change this line",
+            "let pwRegex = /change/; // 修改这一行",
             "let result = pwRegex.test(sampleWord);"
           ],
           "head": [],
@@ -1617,7 +1617,7 @@
           "name": "index",
           "contents": [
             "let repeatNum = \"42 42 42\";",
-            "let reRegex = /change/; // Change this line",
+            "let reRegex = /change/; // 修改这一行",
             "let result = reRegex.test(repeatNum);"
           ],
           "head": [],
@@ -1663,8 +1663,8 @@
           "name": "index",
           "contents": [
             "let huhText = \"This sandwich is good.\";",
-            "let fixRegex = /change/; // Change this line",
-            "let replaceText = \"\"; // Change this line",
+            "let fixRegex = /change/; // 修改这一行",
+            "let replaceText = \"\"; // 修改这一行",
             "let result = huhText.replace(fixRegex, replaceText);"
           ],
           "head": [],
@@ -1683,16 +1683,16 @@
       ],
       "tests": [
         {
-          "text": "<code>result</code> should equal to <code>\"Hello, World!\"</code>",
-          "testString": "assert(result == \"Hello, World!\", '<code>result</code> should equal to <code>\"Hello, World!\"</code>');"
+          "text": "<code>结果</code> should equal to <code>\"Hello, World!\"</code>",
+          "testString": "assert(result == \"Hello, World!\", '<code>结果</code> should equal to <code>\"Hello, World!\"</code>');"
         },
         {
           "text": "You should not use the <code>.trim()</code> method.",
           "testString": "assert(!code.match(/\\.trim\\(.*?\\)/), 'You should not use the <code>.trim()</code> method.');"
         },
         {
-          "text": "The <code>result</code> variable should not be set equal to a string.",
-          "testString": "assert(!code.match(/result\\s*=\\s*\".*?\"/), 'The <code>result</code> variable should not be set equal to a string.');"
+          "text": "The <code>结果</code> variable should not be set equal to a string.",
+          "testString": "assert(!code.match(/result\\s*=\\s*\".*?\"/), 'The <code>结果</code> variable should not be set equal to a string.');"
         }
       ],
       "solutions": [],
@@ -1709,8 +1709,8 @@
           "name": "index",
           "contents": [
             "let hello = \"   Hello, World!  \";",
-            "let wsRegex = /change/; // Change this line",
-            "let result = hello; // Change this line"
+            "let wsRegex = /change/; // 修改这一行",
+            "let result = hello; // 修改这一行"
           ],
           "head": [],
           "tail": []
