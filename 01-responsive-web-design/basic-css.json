@@ -8,23 +8,23 @@
       "id": "bad87fee1348bd9aedf08803",
       "title": "Change the Color of Text",
       "description": [
-        "Now let's change the color of some of our text.",
-        "We can do this by changing the <code>style</code> of your <code>h2</code> element.",
-        "The property that is responsible for the color of an element's text is the <code>color</code> style property.",
-        "Here's how you would set your <code>h2</code> element's text color to blue:",
+        "现在来让我们修改一下文本的颜色。",
+        "我们可以改变你的<code>h2</code>元素里面的<code>style</code>。",
+        "负责文本元素的颜色属性是<code>color</code>属性",
+        "这里是你改变<code>h2</code>文本元素为蓝色的方法:",
         "<code>&#60;h2 style=\"color: blue;\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "Note that it is a good practice to end inline <code>style</code> declarations with a <code>;</code> .",
+        "请注意<code>style</code>行内样式最好以<code>;</code>来结束。",
         "<hr>",
-        "Change your <code>h2</code> element's style so that its text color is red."
+        "尝试改变<code>h2</code>文本元素的颜色为红色。"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> element should be red.",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", 'Your <code>h2</code> element should be red.');"
+          "text": "你的<code>h2</code>标签应该为红色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>标签应该为红色。');"
         },
         {
-          "text": "Your <code>style</code> declaration should end with a <code>;</code> .",
-          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),' Your <code>style</code> declaration should end with a <code>;</code> .');"
+          "text": "你的<code>style</code>行内声明应该以<code>;</code>。",
+          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'你的<code>style</code>行内声明应该以<code>;</code>。');"
         }
       ],
       "challengeType": 0,
@@ -73,35 +73,35 @@
     },
     {
       "id": "bad87fee1348bd9aedf08805",
-      "title": "Use CSS Selectors to Style Elements",
+      "title": "通过CSS选择器设置样式",
       "description": [
-        "With CSS, there are hundreds of CSS <code>properties</code> that you can use to change the way an element looks on your page.",
-        "When you entered <code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code>, you were styling that individual <code>h2</code> element with <code>inline CSS</code>, which stands for <code>Cascading Style Sheets</code>.",
-        "That's one way to specify the style of an element, but there's a better way to apply <code>CSS</code>.",
-        "At the top of your code, create a <code>style</code> block like this:",
+        "在CSS中, 有上百种<code>properties</code>属性可以让你改变页面样式。",
+        "当你输入<code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code>, 通过使用<code>行内样式</code>设置单独的<code>h2</code>元素样式，属于<code>层叠样式表</code>。",
+        "这是改变元素样式的一个特别方法, 但是存在着更好的方法来改变<code>层叠样式表(CSS)</code>.",
+        "在代码的顶部，创建一个<code>style</code>区块，如下方所示：",
         "<blockquote>&#60;style&#62;<br>&#60;/style&#62;</blockquote>",
-        "Inside that style block, you can create a <code>CSS selector</code> for all <code>h2</code> elements. For example, if you wanted all <code>h2</code> elements to be red, you would add a style rule that looks like this:",
+        "在style区块内, 你可以为所有<code>h2</code>元素创建一个<code>CSS选择器</code>。例如，如果你想所有<code>h2</code>元素变成红色, 可以添加下方的样式规则:",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;h2 {color: red;}<br>&#60;/style&#62;</blockquote>",
-        "Note that it's important to have both opening and closing curly braces (<code>{</code> and <code>}</code>) around each element's style rule(s). You also need to make sure that your element's style definition is between the opening and closing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.",
+        "注意，在每个元素的样式规则周围打开和关闭花括号（<code>{</code>和<code>}</code>）非常重要。你需要确定你定义的样式规则位于花括号之间。最后，请确定每个已定义的元素样式规则的末尾添加分号。",
         "<hr>",
-        "Delete your <code>h2</code> element's style attribute, and instead create a CSS <code>style</code> block. Add the necessary CSS to turn all <code>h2</code> elements blue."
+        "删除<code>h2</code>的样式，而不是再创建<code>style</code>区块. 添加CSS样式规则使<code>h2</code>元素变为蓝色。"
       ],
       "tests": [
         {
-          "text": "Remove the style attribute from your <code>h2</code> element.",
-          "testString": "assert(!$(\"h2\").attr(\"style\"), 'Remove the style attribute from your <code>h2</code> element.');"
+          "text": "移除<code>h2</code>标签的style行内样式。",
+          "testString": "assert(!$(\"h2\").attr(\"style\"), '移除<code>h2</code>标签的style行内样式。');"
         },
         {
-          "text": "Create a <code>style</code> element.",
-          "testString": "assert($(\"style\") && $(\"style\").length > 1, 'Create a <code>style</code> element.');"
+          "text": "创建一个<code>style</code>区块。",
+          "testString": "assert($(\"style\") && $(\"style\").length > 1, '创建一个<code>style</code>区块。');"
         },
         {
-          "text": "Your <code>h2</code> element should be blue.",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(0, 0, 255)\", 'Your <code>h2</code> element should be blue.');"
+          "text": "你的<code>h2</code>元素应该为蓝色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(0, 0, 255)\", '你的<code>h2</code>元素应该为蓝色。');"
         },
         {
-          "text": "Ensure that your stylesheet <code>h2</code> declaration is valid with a semicolon and closing brace.",
-          "testString": "assert(code.match(/h2\\s*\\{\\s*color\\s*:.*;\\s*\\}/g), 'Ensure that your stylesheet <code>h2</code> declaration is valid with a semicolon and closing brace.');"
+          "text": "确保你的样式表里面的<code>h2</code>声明要以花括号包括，和分号结束。",
+          "testString": "assert(code.match(/h2\\s*\\{\\s*color\\s*:.*;\\s*\\}/g), '确保你的样式表里面的<code>h2</code>声明要以花括号包括，和分号结束。');"
         },
         {
           "text": "Make sure all your <code>style</code> elements are valid and have a closing tag.",
@@ -154,35 +154,35 @@
     },
     {
       "id": "bad87fee1348bd9aecf08806",
-      "title": "Use a CSS Class to Style an Element",
+      "title": "使用CSS类去改变元素样式",
       "description": [
-        "Classes are reusable styles that can be added to HTML elements.",
-        "Here's an example CSS class declaration:",
+        "CSS类是可重用的，可以添加到相应的HTML元素使用。",
+        "这里是一个CSS类声明示例：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.blue-text {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
-        "You can see that we've created a CSS class called <code>blue-text</code> within the <code>&#60;style&#62;</code> tag.",
-        "You can apply a class to an HTML element like this:",
+        "你可以看到，我们在<code>&#60;style&#62;</code>声明里，创建了一个名为<code>blue-text</code>的CSS类。",
+        "你可以添加CSS类到一个HTML元素里，如下所示:",
         "<code>&#60;h2 class=\"blue-text\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "Note that in your CSS <code>style</code> element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.",
+        "注意你的<code>style</code>声明，CSS类名以句号开头。在你的HTML元素里的Class属性, CSS类名则不需要包含句号",
         "<hr>",
-        "Inside your <code>style</code> element, change the <code>h2</code> selector to <code>.red-text</code> and update the color's value from <code>blue</code> to <code>red</code>.",
-        "Give your <code>h2</code> element the <code>class</code> attribute with a value of <code>'red-text'</code>."
+        "在你的<code>style</code>声明里，改变<code>h2</code>选择器名为<code>.red-text</code>的CSS类，同时将颜色从<code>blue</code>变为<code>red</code>。",
+        "在你的<code>h2</code>html元素里，添加一个<code>class</code>属性<code>，值为<code>'red-text'</code>."
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> element should be red.",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", 'Your <code>h2</code> element should be red.');"
+          "text": "你的<code>h2</code>应该为红色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>应该为红色。');"
         },
         {
-          "text": "Your <code>h2</code> element should have the class <code>red-text</code>.",
-          "testString": "assert($(\"h2\").hasClass(\"red-text\"), 'Your <code>h2</code> element should have the class <code>red-text</code>.');"
+          "text": "你的<code>h2</code>元素应该包含一个名为<code>red-text</code>的Class属性值。",
+          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的<code>h2</code>元素应该包含一个名为<code>red-text</code>的Class属性值。');"
         },
         {
-          "text": "Your stylesheet should declare a <code>red-text</code> class and have its color set to red.",
-          "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), 'Your stylesheet should declare a <code>red-text</code> class and have its color set to red.');"
+          "text": "你的样式表应该包含一个<code>red-text</code>CSS类声明，并且它的样式应为红色。",
+          "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), '你的样式表应该包含一个<code>red-text</code>CSS类声明，并且它的样式应为红色。');"
         },
         {
-          "text": "Do not use inline style declarations like <code>style=\"color&#58; red\"</code> in your <code>h2</code> element.",
-          "testString": "assert($(\"h2\").attr(\"style\") === undefined, 'Do not use inline style declarations like <code>style=\"color&#58; red\"</code> in your <code>h2</code> element.');"
+          "text": "不要使用这样的<code>style=\"color&#58; red\"</code>行内样式声明在你的<code>h2</code>标签里。",
+          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要使用这样的<code>style=\"color&#58; red\"</code>行内样式声明在你的<code>h2</code>标签里。');"
         }
       ],
       "challengeType": 0,
