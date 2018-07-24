@@ -7,6 +7,7 @@ At a basic level, most web content provides a user with information. The visual 
 This section covers some of the basic tools developers use to create their own visual designs.
 
 # Upcoming Lessons # 
+
 Create Visual Balance Using the text-align Property
 
 Adjust the Width of an Element Using the width Property
