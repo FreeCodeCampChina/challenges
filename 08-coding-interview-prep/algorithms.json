@@ -18,60 +18,60 @@
       ],
       "tests": [
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该是 < code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4])</code > 的返回值应该是 < code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 应该返回 < code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4])</code > 应该返回 < code>[3, 4, 5]</code>。');"
         },
         {
           "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。",
           "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该是 <code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该是 <code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 应该返回 <code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 应该返回 <code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 返回的数组应该只包含三个元素",
+          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 返回的数组应该只包含三个元素');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该是 <code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该是 <code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 应该返回 <code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 应该返回 <code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 的返回值应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5],'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 应该返回 <code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5],'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 应该返回 <code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3,'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 的返回值应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3,'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5],'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该是 <code>[1, 4, 5]</code>。');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 应该返回 <code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5],'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 应该返回 <code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3,'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 的返回值应该只包含三个元素。');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3,'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该是 <code>[2, 3, 4, 6, 7]</code>。",
-          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]), [2, 3, 4, 6, 7],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该是 <code>[2, 3, 4, 6, 7]</code>。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 应该返回 <code>[2, 3, 4, 6, 7]</code>。",
+          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]), [2, 3, 4, 6, 7],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 应该返回 <code>[2, 3, 4, 6, 7]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该只包含五个元素。",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 的返回值应该只包含五个元素。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 返回的数组应该只包含五个元素；",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 返回的数组应该只包含五个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该是 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。",
-          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该是 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 应该返回 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。",
+          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 应该返回 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该只包含八个元素。",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 的返回值应该只包含八个元素。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 返回的数组应该只包含八个元素。",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 返回的数组应该只包含八个元素。');"
         }
       ],
       "MDNlinks": [
@@ -109,28 +109,28 @@
       ],
       "tests": [
         {
-          "text": "函数 <code>updateInventory</code> 的返回值应该是一个数组。",
-          "testString": "assert.isArray(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]),'函数 <code>updateInventory</code> 的返回值应该是一个数组。');"
+          "text": "函数 <code>updateInventory</code> 应该返回一个数组。",
+          "testString": "assert.isArray(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]),'函数 <code>updateInventory</code> 应该返回一个数组。');"
         },
         {
           "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 返回的数组长度应该为 6 。",
-          "testString": "assert.equal(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]).length, 6,'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 返回的数组长度应该为 6 。');"
+          "testString": "assert.equal(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]).length, 6,'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回一个长度为 6 的数组。 。');"
         },
         {
-          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>.')；"
+          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>.')；"
         },
         {
-          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 的返回值应该是 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], []), [[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 的返回值应该是 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>.')；"
+          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 应该返回 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], []), [[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 应该返回 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>.')；"
         },
         {
-          "text": "<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]],'<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>.')；"
+          "text": "<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]],'<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>.')；"
         },
         {
-          "text": "<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]]), [[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]],'<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 的返回值应该是 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>.')；"
+          "text": "<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 应该返回 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]]), [[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]],'<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 应该返回 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>.')；"
         }
       ],
       "MDNlinks": [
