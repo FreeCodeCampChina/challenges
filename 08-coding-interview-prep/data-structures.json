@@ -44,7 +44,6 @@
         "var buffer = new ArrayBuffer(64);\nvar i32View = new Int32Array(buffer);"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -94,7 +93,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -163,7 +161,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -237,7 +234,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -306,7 +302,6 @@
         "function PriorityQueue () { \n this.collection = []; \n this.printCollection = function(){ \n console.log(this.collection); \n }; \n this.size = function() { \n return this.collection.length; \n }; \n this.isEmpty = function() { \n return this.size() > 0 ? false : true; \n }; \n this.enqueue = function (newitem) {\n  if (this.isEmpty()) {\n    return this.collection.push(newitem);\n  }\n\n  this.collection = this.collection.reverse();\n  var found_index = this.collection.findIndex(function (item) {\n    return newitem[1] >= item[1];\n  });\n  if (found_index === -1) {\n    this.collection.push(newitem);\n  } else {\n    this.collection.splice(found_index, 0, newitem);\n  }\n  this.collection = this.collection.reverse();\n}; \n this.dequeue = function() { \n if (!this.isEmpty()) { \n return this.collection.shift()[0]; \n } else { \n return 'The queue is empty.' \n } \n }; \n }"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -373,7 +368,6 @@
         "class CircularQueue { \n constructor(size) { \n this.queue = []; \n this.read = 0; \n this.write = 0; \n this.max = size - 1; \n while (size > 0) { \n this.queue.push(null); \n size--; \n } \n } \n print() { \n return this.queue; \n } \n enqueue(item) { \n if (this.queue[this.write] === null) { \n this.queue[this.write] = item; \n if (this.write === this.max) { \n this.write = 0; \n } else { \n this.write++; \n } \n return item; \n } \n return null; \n } \n dequeue() { \n if (this.queue[this.read] !== null) { \n var item = this.queue[this.read]; \n this.queue[this.read] = null; \n if (this.read === this.max) { \n this.read = 0; \n } else { \n this.read++; \n } \n return item; \n } else { \n return null; \n } \n } \n }"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -452,7 +446,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -504,7 +497,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -560,7 +552,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};this.size = function() {return collection.length;};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -626,7 +617,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};this.size = function() {return collection.length;};this.union = function(set) {var u = new Set();var c = this.values();var s = set.values();c.forEach(function(element){u.add(element);});s.forEach(function(element){u.add(element);});return u;};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -697,7 +687,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};this.size = function() {return collection.length;};this.union = function(set) {var u = new Set();var c = this.values();var s = set.values();c.forEach(function(element){u.add(element);});s.forEach(function(element){u.add(element);});return u;};this.intersection = function(set) {var i = new Set();var c = this.values();c.forEach(function(element){if(s.has(element)) i.add(element);});};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -780,7 +769,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};this.size = function() {return collection.length;};this.union = function(set) {var u = new Set();var c = this.values();var s = set.values();c.forEach(function(element){u.add(element);});s.forEach(function(element){u.add(element);});return u;};this.intersection = function(set) {var i = new Set();var c = this.values();c.forEach(function(element){if(s.has(element)) i.add(element);});};this.difference = function(set) {var d = new Set();var c = this.values();c.forEach(function(e){if(!set.has(e)) d.add(e);});};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -890,7 +878,6 @@
         "function Set() {var collection = []; this.has = function(e){return(collection.indexOf(e) !== -1);};this.values = function() {return collection;};this.add = function(element) {if (!this.has(element)) {collection.push(element);return true;} else {return false;}};this.remove = function(element) {if(this.has(element)) {var i = collection.indexOf(element);collection.splice(i, 1);return true;}return false;};this.size = function() {return collection.length;};this.union = function(set) {var u = new Set();var c = this.values();var s = set.values();c.forEach(function(element){u.add(element);});s.forEach(function(element){u.add(element);});return u;};this.intersection = function(set) {var i = new Set();var c = this.values();c.forEach(function(element){if(s.has(element)) i.add(element);});};this.difference = function(set) {var d = new Set();var c = this.values();c.forEach(function(e){if(!set.has(e)) d.add(e);});};this.subset = function(set) {var isSubset = true;var c = this.values();c.forEach(function(e){if(!set.has(e)) isSubset = false;});return isSubset;};}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1002,7 +989,6 @@
         "function checkSet(){var set = new Set([1,2,3,'Taco','Cat','Awesome']);\nreturn set;}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1048,7 +1034,6 @@
         "function checkSet(){\nvar set = new Set([1,2,3,4,5]);\nset.delete(2);\nset.delete(5);\nreturn set;}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1093,7 +1078,6 @@
         "function checkSet(arrToBeSet, checkValue){\nvar set = new Set(arrToBeSet);\nvar result = [\nset.has(checkValue),\nset.size\n];\nreturn result;\n}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1138,7 +1122,6 @@
         "function checkSet(set){\nreturn [...set];}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1204,7 +1187,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1249,7 +1231,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1310,7 +1291,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1367,7 +1347,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1427,7 +1406,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1500,7 +1478,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1589,7 +1566,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1696,7 +1672,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1794,7 +1769,6 @@
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1893,7 +1867,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1983,7 +1956,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2095,7 +2067,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2179,7 +2150,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2262,7 +2232,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2363,7 +2332,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2475,7 +2443,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2571,7 +2538,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2663,7 +2629,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2803,7 +2768,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -2993,7 +2957,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3175,7 +3138,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3283,7 +3245,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3353,7 +3314,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3405,7 +3365,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3455,7 +3414,6 @@
       "releasedOn": "Feb 17, 2017",
       "solutions": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3521,7 +3479,6 @@
         "var undirectedAdjList = {\n\"James\": [\"Jeff\"],\"Jill\": [\"Jenny\"],\"Jenny\": [\"Jill\", \"Jeff\"],\n\"Jeff\": [\"James\", \"Jenny\"]\n};"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3580,7 +3537,6 @@
         "var adjMatUndirected = [[0, 0, 1, 1, 0],[0, 0, 0, 0, 0],[1, 0, 0, 0, 1],[1, 0, 0, 0, 1],[0, 0, 1, 1, 0]];"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3642,7 +3598,6 @@
         "var incMatUndirected = [[1, 0, 0, 0],[1, 1, 0, 1],[0, 1, 1, 0],[0, 0, 0, 1],[0, 0, 1, 0]];"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3698,7 +3653,6 @@
         "function bfs(graph, root) {\n// Distance object returned\nvar nodesLen = {};\n// Set all distances to infinity\nfor (var i = 0; i < graph.length; i++) {\nnodesLen[i] = Infinity;\n}\nnodesLen[root] = 0; // ...except root node\nvar queue = [root]; // Keep track of nodes to visit\nvar current; // Current node traversing\n// Keep on going until no more nodes to traverse\nwhile (queue.length !== 0) {\ncurrent = queue.shift();\n// Get adjacent nodes from current node\nvar curConnected = graph[current]; // Get layer of edges from current\nvar neighborIdx = []; // List of nodes with edges\nvar idx = curConnected.indexOf(1); // Get first edge connection\nwhile (idx !== -1) {\nneighborIdx.push(idx); // Add to list of neighbors\nidx = curConnected.indexOf(1, idx + 1); // Keep on searching\n}\n// Loop through neighbors and get lengths\nfor (var j = 0; j < neighborIdx.length; j++) {\n// Increment distance for nodes traversed\nif (nodesLen[neighborIdx[j]] === Infinity) {\nnodesLen[neighborIdx[j]] = nodesLen[current] + 1;\nqueue.push(neighborIdx[j]); // Add new neighbors to queue\n}\n}\n}\nreturn nodesLen;}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -3801,7 +3755,6 @@
         "function dfs(graph, root) { var stack = []; var tempV; var visited = []; var tempVNeighbors = []; stack.push(root); while (stack.length > 0) { tempV = stack.pop(); if (visited.indexOf(tempV) == -1) { visited.push(tempV); tempVNeighbors = graph[tempV]; for (var i = 0; i < tempVNeighbors.length; i++) { if (tempVNeighbors[i] == 1) { stack.push(i); }}}} return visited;}"
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",

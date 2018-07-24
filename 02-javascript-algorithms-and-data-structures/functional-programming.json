@@ -31,7 +31,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -109,7 +108,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -187,7 +185,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -264,7 +261,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -320,7 +316,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -381,7 +376,6 @@
         "The slice method returns a new array without modifying the original."
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -459,7 +453,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -620,7 +613,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -678,7 +670,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -834,7 +825,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -897,7 +887,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -950,7 +939,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1001,7 +989,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1059,7 +1046,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1117,7 +1103,6 @@
         "You can use Number() to convert a string into a number."
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1283,7 +1268,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1332,7 +1316,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1387,7 +1370,6 @@
         "The regex pre-defined character class for non-alphanumerics is \\W."
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1448,7 +1430,6 @@
         "First try to split the given string before applying the join method."
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1514,7 +1495,6 @@
         "You can use the .toLowerCase() method to make the title all lower case."
       ],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1569,7 +1549,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1620,7 +1599,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
@@ -1677,7 +1655,6 @@
       "solutions": [],
       "hints": [],
       "challengeType": 1,
-      "translations": {},
       "files": {
         "indexjs": {
           "key": "indexjs",
