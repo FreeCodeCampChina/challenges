@@ -10,10 +10,10 @@
       "description": [
         "如果给定的一个字符串是回文，那么返回 true，否则返回 false。",
         "<dfn>回文</dfn> 指在忽略标点符号、大小写和空格的前提下，将一个词语或句子按相反的顺序重新排列后，所得到的结果和原来的一样。",
-        "<strong>注意</strong><br>检查回文时，你需要先除去 <strong>所有非字母数字的字符</strong> （标点、空格和符号）并且将所有字符转换成字母大写或字母小写。",
-        "我们将会传递不同格式的字符串，例如：<code>\"racecar\"</code>，<code>\"RaceCar\"</code>，<code>\"race CAR\"</code> 等等。",
-        "我们也会传递一些包含特殊符号的字符串，例如 <code>\"2A3*3a2\"</code>，<code>\"2A3  3a2\"</code> 和 <code>\"2_A3*3#A2\"</code>。",
-        "当你遇到困难时，请记得浏览 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a>。然后，编写属于你自己的代码。"
+        "<strong>注意：</strong><br>检查回文时，你需要先除去 <strong>所有非字母数字的字符</strong> （标点、空格和符号）并且将所有字符转换成字母大写或字母小写。",
+        "我们将会传入不同格式的字符串，例如：<code>\"racecar\"</code>、<code>\"RaceCar\"</code>、<code>\"race CAR\"</code> 等等。",
+        "我们也会传入一些包含特殊符号的字符串，例如 <code>\"2A3*3a2\"</code>，<code>\"2A3  3a2\"</code> 和 <code>\"2_A3*3#A2\"</code>。",
+        "如果你遇到了问题，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。"
       ],
       "tests": [
         {
@@ -102,117 +102,117 @@
       "id": "a7f4d8f2483413a6ce226cac",
       "title": "Roman Numeral Converter",
       "description": [
-        "把给定的数字转变为罗马数字。",
-        "所有为<a href=\"http://www.mathsisfun.com/roman-numerals.html\" target=\"_blank\">罗马数字</a>的答案都必须是字母大写。",
-        "当你遇到困难时，请记得浏览 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。你可以尝试结伴编程，但请编写属于你自己的代码。"
+        "把传入的数字转变为罗马数字。",
+        "转换后的<a href=\"http://www.mathsisfun.com/roman-numerals.html\" target=\"_blank\">罗马数字</a>字母必须都是大写。",
+        "如果你遇到了问题，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。"
       ],
       "solutions": [
         "function convertToRoman(num) {\n  var ref = [['M', 1000], ['CM', 900], ['D', 500], ['CD', 400], ['C', 100], ['XC', 90], ['L', 50], ['XL', 40], ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]];\n  var res = [];\n  ref.forEach(function(p) {\n    while (num >= p[1]) {\n      res.push(p[0]);\n      num -= p[1];\n    }\n  });\n  return res.join('');\n}"
       ],
       "tests": [
         {
-          "text": "<code>convertToRoman(2)</code> 应该返回 \"II\".",
-          "testString": "assert.deepEqual(convertToRoman(2), \"II\", '<code>convertToRoman(2)</code> 应该返回 \"II\".');"
+          "text": "<code>convertToRoman(2)</code> 应该返回 \"II\"。",
+          "testString": "assert.deepEqual(convertToRoman(2), \"II\", '<code>convertToRoman(2)</code> 应该返回 \"II\"。');"
         },
         {
-          "text": "<code>convertToRoman(3)</code> 应该返回 \"III\".",
-          "testString": "assert.deepEqual(convertToRoman(3), \"III\", '<code>convertToRoman(3)</code> 应该返回 \"III\".');"
+          "text": "<code>convertToRoman(3)</code> 应该返回 \"III\"。",
+          "testString": "assert.deepEqual(convertToRoman(3), \"III\", '<code>convertToRoman(3)</code> 应该返回 \"III\"。');"
         },
         {
-          "text": "<code>convertToRoman(4)</code> 应该返回 \"IV\".",
-          "testString": "assert.deepEqual(convertToRoman(4), \"IV\", '<code>convertToRoman(4)</code> 应该返回 \"IV\".');"
+          "text": "<code>convertToRoman(4)</code> 应该返回 \"IV\"。",
+          "testString": "assert.deepEqual(convertToRoman(4), \"IV\", '<code>convertToRoman(4)</code> 应该返回 \"IV\"。');"
         },
         {
-          "text": "<code>convertToRoman(5)</code> 应该返回 \"V\".",
-          "testString": "assert.deepEqual(convertToRoman(5), \"V\", '<code>convertToRoman(5)</code> 应该返回 \"V\".');"
+          "text": "<code>convertToRoman(5)</code> 应该返回 \"V\"。",
+          "testString": "assert.deepEqual(convertToRoman(5), \"V\", '<code>convertToRoman(5)</code> 应该返回 \"V\"。');"
         },
         {
-          "text": "<code>convertToRoman(9)</code> 应该返回 \"IX\".",
-          "testString": "assert.deepEqual(convertToRoman(9), \"IX\", '<code>convertToRoman(9)</code> 应该返回 \"IX\".');"
+          "text": "<code>convertToRoman(9)</code> 应该返回 \"IX\"。",
+          "testString": "assert.deepEqual(convertToRoman(9), \"IX\", '<code>convertToRoman(9)</code> 应该返回 \"IX\"。');"
         },
         {
-          "text": "<code>convertToRoman(12)</code> 应该返回 \"XII\".",
-          "testString": "assert.deepEqual(convertToRoman(12), \"XII\", '<code>convertToRoman(12)</code> 应该返回 \"XII\".');"
+          "text": "<code>convertToRoman(12)</code> 应该返回 \"XII\"。",
+          "testString": "assert.deepEqual(convertToRoman(12), \"XII\", '<code>convertToRoman(12)</code> 应该返回 \"XII\"。');"
         },
         {
-          "text": "<code>convertToRoman(16)</code> 应该返回 \"XVI\".",
-          "testString": "assert.deepEqual(convertToRoman(16), \"XVI\", '<code>convertToRoman(16)</code> 应该返回 \"XVI\".');"
+          "text": "<code>convertToRoman(16)</code> 应该返回 \"XVI\"。",
+          "testString": "assert.deepEqual(convertToRoman(16), \"XVI\", '<code>convertToRoman(16)</code> 应该返回 \"XVI\"。');"
         },
         {
-          "text": "<code>convertToRoman(29)</code> 应该返回 \"XXIX\".",
-          "testString": "assert.deepEqual(convertToRoman(29), \"XXIX\", '<code>convertToRoman(29)</code> 应该返回 \"XXIX\".');"
+          "text": "<code>convertToRoman(29)</code> 应该返回 \"XXIX\"。",
+          "testString": "assert.deepEqual(convertToRoman(29), \"XXIX\", '<code>convertToRoman(29)</code> 应该返回 \"XXIX\"。');"
         },
         {
-          "text": "<code>convertToRoman(44)</code> 应该返回 \"XLIV\".",
-          "testString": "assert.deepEqual(convertToRoman(44), \"XLIV\", '<code>convertToRoman(44)</code> 应该返回 \"XLIV\".');"
+          "text": "<code>convertToRoman(44)</code> 应该返回 \"XLIV\"。",
+          "testString": "assert.deepEqual(convertToRoman(44), \"XLIV\", '<code>convertToRoman(44)</code> 应该返回 \"XLIV\"。');"
         },
         {
-          "text": "<code>convertToRoman(45)</code> 应该返回 \"XLV\"",
-          "testString": "assert.deepEqual(convertToRoman(45), \"XLV\", '<code>convertToRoman(45)</code> 应该返回 \"XLV\"');"
+          "text": "<code>convertToRoman(45)</code> 应该返回 \"XLV\"。",
+          "testString": "assert.deepEqual(convertToRoman(45), \"XLV\", '<code>convertToRoman(45)</code> 应该返回 \"XLV\"。');"
         },
         {
-          "text": "<code>convertToRoman(68)</code> 应该返回 \"LXVIII\"",
-          "testString": "assert.deepEqual(convertToRoman(68), \"LXVIII\", '<code>convertToRoman(68)</code> 应该返回 \"LXVIII\"');"
+          "text": "<code>convertToRoman(68)</code> 应该返回 \"LXVIII\"。",
+          "testString": "assert.deepEqual(convertToRoman(68), \"LXVIII\", '<code>convertToRoman(68)</code> 应该返回 \"LXVIII\"。');"
         },
         {
-          "text": "<code>convertToRoman(83)</code> 应该返回 \"LXXXIII\"",
-          "testString": "assert.deepEqual(convertToRoman(83), \"LXXXIII\", '<code>convertToRoman(83)</code> 应该返回 \"LXXXIII\"');"
+          "text": "<code>convertToRoman(83)</code> 应该返回 \"LXXXIII\"。",
+          "testString": "assert.deepEqual(convertToRoman(83), \"LXXXIII\", '<code>convertToRoman(83)</code> 应该返回 \"LXXXIII\"。');"
         },
         {
-          "text": "<code>convertToRoman(97)</code> 应该返回 \"XCVII\"",
-          "testString": "assert.deepEqual(convertToRoman(97), \"XCVII\", '<code>convertToRoman(97)</code> 应该返回 \"XCVII\"');"
+          "text": "<code>convertToRoman(97)</code> 应该返回 \"XCVII\"。",
+          "testString": "assert.deepEqual(convertToRoman(97), \"XCVII\", '<code>convertToRoman(97)</code> 应该返回 \"XCVII\"。');"
         },
         {
-          "text": "<code>convertToRoman(99)</code> 应该返回 \"XCIX\"",
-          "testString": "assert.deepEqual(convertToRoman(99), \"XCIX\", '<code>convertToRoman(99)</code> 应该返回 \"XCIX\"');"
+          "text": "<code>convertToRoman(99)</code> 应该返回 \"XCIX\"。",
+          "testString": "assert.deepEqual(convertToRoman(99), \"XCIX\", '<code>convertToRoman(99)</code> 应该返回 \"XCIX\"。');"
         },
         {
-          "text": "<code>convertToRoman(400)</code> 应该返回 \"CD\"",
-          "testString": "assert.deepEqual(convertToRoman(400), \"CD\", '<code>convertToRoman(400)</code> 应该返回 \"CD\"');"
+          "text": "<code>convertToRoman(400)</code> 应该返回 \"CD\"。",
+          "testString": "assert.deepEqual(convertToRoman(400), \"CD\", '<code>convertToRoman(400)</code> 应该返回 \"CD\"。');"
         },
         {
-          "text": "<code>convertToRoman(500)</code> 应该返回 \"D\"",
-          "testString": "assert.deepEqual(convertToRoman(500), \"D\", '<code>convertToRoman(500)</code> 应该返回 \"D\"');"
+          "text": "<code>convertToRoman(500)</code> 应该返回 \"D\"。",
+          "testString": "assert.deepEqual(convertToRoman(500), \"D\", '<code>convertToRoman(500)</code> 应该返回 \"D\"。');"
         },
         {
-          "text": "<code>convertToRoman(501)</code> 应该返回 \"DI\"",
-          "testString": "assert.deepEqual(convertToRoman(501), \"DI\", '<code>convertToRoman(501)</code> 应该返回 \"DI\"');"
+          "text": "<code>convertToRoman(501)</code> 应该返回 \"DI\"。",
+          "testString": "assert.deepEqual(convertToRoman(501), \"DI\", '<code>convertToRoman(501)</code> 应该返回 \"DI\"。');"
         },
         {
-          "text": "<code>convertToRoman(649)</code> 应该返回 \"DCXLIX\"",
-          "testString": "assert.deepEqual(convertToRoman(649), \"DCXLIX\", '<code>convertToRoman(649)</code> 应该返回 \"DCXLIX\"');"
+          "text": "<code>convertToRoman(649)</code> 应该返回 \"DCXLIX\"。",
+          "testString": "assert.deepEqual(convertToRoman(649), \"DCXLIX\", '<code>convertToRoman(649)</code> 应该返回 \"DCXLIX\"。');"
         },
         {
-          "text": "<code>convertToRoman(798)</code> 应该返回 \"DCCXCVIII\"",
-          "testString": "assert.deepEqual(convertToRoman(798), \"DCCXCVIII\", '<code>convertToRoman(798)</code> 应该返回 \"DCCXCVIII\"');"
+          "text": "<code>convertToRoman(798)</code> 应该返回 \"DCCXCVIII\"。",
+          "testString": "assert.deepEqual(convertToRoman(798), \"DCCXCVIII\", '<code>convertToRoman(798)</code> 应该返回 \"DCCXCVIII\"。');"
         },
         {
-          "text": "<code>convertToRoman(891)</code> 应该返回 \"DCCCXCI\"",
-          "testString": "assert.deepEqual(convertToRoman(891), \"DCCCXCI\", '<code>convertToRoman(891)</code> 应该返回 \"DCCCXCI\"');"
+          "text": "<code>convertToRoman(891)</code> 应该返回 \"DCCCXCI\"。",
+          "testString": "assert.deepEqual(convertToRoman(891), \"DCCCXCI\", '<code>convertToRoman(891)</code> 应该返回 \"DCCCXCI\"。');"
         },
         {
-          "text": "<code>convertToRoman(1000)</code> 应该返回 \"M\"",
-          "testString": "assert.deepEqual(convertToRoman(1000), \"M\", '<code>convertToRoman(1000)</code> 应该返回 \"M\"');"
+          "text": "<code>convertToRoman(1000)</code> 应该返回 \"M\"。",
+          "testString": "assert.deepEqual(convertToRoman(1000), \"M\", '<code>convertToRoman(1000)</code> 应该返回 \"M\"。');"
         },
         {
-          "text": "<code>convertToRoman(1004)</code> 应该返回 \"MIV\"",
-          "testString": "assert.deepEqual(convertToRoman(1004), \"MIV\", '<code>convertToRoman(1004)</code> 应该返回 \"MIV\"');"
+          "text": "<code>convertToRoman(1004)</code> 应该返回 \"MIV\"。",
+          "testString": "assert.deepEqual(convertToRoman(1004), \"MIV\", '<code>convertToRoman(1004)</code> 应该返回 \"MIV\"。');"
         },
         {
-          "text": "<code>convertToRoman(1006)</code> 应该返回 \"MVI\"",
-          "testString": "assert.deepEqual(convertToRoman(1006), \"MVI\", '<code>convertToRoman(1006)</code> 应该返回 \"MVI\"');"
+          "text": "<code>convertToRoman(1006)</code> 应该返回 \"MVI\"。",
+          "testString": "assert.deepEqual(convertToRoman(1006), \"MVI\", '<code>convertToRoman(1006)</code> 应该返回 \"MVI\"。');"
         },
         {
-          "text": "<code>convertToRoman(1023)</code> 应该返回 \"MXXIII\"",
-          "testString": "assert.deepEqual(convertToRoman(1023), \"MXXIII\", '<code>convertToRoman(1023)</code> 应该返回 \"MXXIII\"');"
+          "text": "<code>convertToRoman(1023)</code> 应该返回 \"MXXIII\"。",
+          "testString": "assert.deepEqual(convertToRoman(1023), \"MXXIII\", '<code>convertToRoman(1023)</code> 应该返回 \"MXXIII\"。');"
         },
         {
-          "text": "<code>convertToRoman(2014)</code> 应该返回 \"MMXIV\"",
-          "testString": "assert.deepEqual(convertToRoman(2014), \"MMXIV\", '<code>convertToRoman(2014)</code> 应该返回 \"MMXIV\"');"
+          "text": "<code>convertToRoman(2014)</code> 应该返回 \"MMXIV\"。",
+          "testString": "assert.deepEqual(convertToRoman(2014), \"MMXIV\", '<code>convertToRoman(2014)</code> 应该返回 \"MMXIV\"。');"
         },
         {
-          "text": "<code>convertToRoman(3999)</code> 应该返回 \"MMMCMXCIX\"",
-          "testString": "assert.deepEqual(convertToRoman(3999), \"MMMCMXCIX\", '<code>convertToRoman(3999)</code> 应该返回 \"MMMCMXCIX\"');"
+          "text": "<code>convertToRoman(3999)</code> 应该返回 \"MMMCMXCIX\"。",
+          "testString": "assert.deepEqual(convertToRoman(3999), \"MMMCMXCIX\", '<code>convertToRoman(3999)</code> 应该返回 \"MMMCMXCIX\"。');"
         }
       ],
       "MDNlinks": [
@@ -244,31 +244,31 @@
       "id": "56533eb9ac21ba0edf2244e2",
       "title": "Caesars Cipher",
       "description": [
-        "其中一个最广为人知而且简单的 <dfn>加密技术</dfn> 是 <code>凯撒密码</code>，也被称为 <code>变换加密</code>。在 <code>变换加密</code> 中，明文中的字母通过按照一个固定数目进行偏移后被替换成新的字母。",
-        "<a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> 是一个被广泛使用的加密技术，明文中的所有字母都被移动 13 位。因此，'A' &harr; 'N', 'B' &harr;  'O' 等等。",
-        "请编写一个函数，用于解密一个被 <a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> 加密的字符串，然后返回解密后的结果。",
-        "所有解密后的字母都必须为字母大写。请不要解密非字母的字符（例如，空格、标点符号），但是你需要转递他们到结果中。",
-        "当你遇到困难时，请记得浏览 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。你可以尝试结伴编程，但请编写属于你自己的代码。"
+        "世界上最简单、最著名的<dfn>密码</dfn>是<code>凯撒密码</code>，也叫<code>移位密码</code>。在<code>移位密码</code>中，明文中的字母通过按照一个固定数目进行偏移后被替换成新的字母。",
+        "<a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> 是一个被广泛使用的编码技术，明文中的所有字母都被移动 13 位。因此，'A' &harr; 'N', 'B' &harr;  'O' 等等。",
+        "请编写一个函数，用于解码一个被 <a href=\"https://en.wikipedia.org/wiki/ROT13\" target='_blank'>ROT13</a> 编码的字符串，然后返回解码后的结果。",
+        "所有解码后的字母都必须为字母大写。请不要解码非字母的字符（例如，空格、标点符号），但是你需要转递他们到结果中。",
+        "如果你遇到了问题，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。"
       ],
       "solutions": [
         "var lookup = {\n  'A': 'N','B': 'O','C': 'P','D': 'Q',\n  'E': 'R','F': 'S','G': 'T','H': 'U',\n  'I': 'V','J': 'W','K': 'X','L': 'Y',\n  'M': 'Z','N': 'A','O': 'B','P': 'C',\n  'Q': 'D','R': 'E','S': 'F','T': 'G',\n  'U': 'H','V': 'I','W': 'J','X': 'K',\n  'Y': 'L','Z': 'M' \n};\n\nfunction rot13(encodedStr) {\n  var codeArr = encodedStr.split(\"\");  // String to Array\n  var decodedArr = []; // Your Result goes here\n  // Only change code below this line\n  \n  decodedArr = codeArr.map(function(letter) {\n    if(lookup.hasOwnProperty(letter)) {\n      letter = lookup[letter];\n    }\n    return letter;\n  });\n\n  // Only change code above this line\n  return decodedArr.join(\"\"); // Array to String\n}"
       ],
       "tests": [
         {
-          "text": "<code>rot13(\"SERR PBQR PNZC\")</code> 应解密为 <code>FREE CODE CAMP</code>。",
-          "testString": "assert(rot13(\"SERR PBQR PNZC\") === \"FREE CODE CAMP\", '<code>rot13(\"SERR PBQR PNZC\")</code> 应解密为 <code>FREE CODE CAMP</code>。');"
+          "text": "<code>rot13(\"SERR PBQR PNZC\")</code> 应解码为 <code>FREE CODE CAMP</code>。",
+          "testString": "assert(rot13(\"SERR PBQR PNZC\") === \"FREE CODE CAMP\", '<code>rot13(\"SERR PBQR PNZC\")</code> 应解码为 <code>FREE CODE CAMP</code>。');"
         },
         {
-          "text": "<code>rot13(\"SERR CVMMN!\")</code> 应解密为 <code>FREE PIZZA!</code>。",
-          "testString": "assert(rot13(\"SERR CVMMN!\") === \"FREE PIZZA!\", '<code>rot13(\"SERR CVMMN!\")</code> 应解密为 <code>FREE PIZZA!</code>。');"
+          "text": "<code>rot13(\"SERR CVMMN!\")</code> 应解码为 <code>FREE PIZZA!</code>。",
+          "testString": "assert(rot13(\"SERR CVMMN!\") === \"FREE PIZZA!\", '<code>rot13(\"SERR CVMMN!\")</code> 应解码为 <code>FREE PIZZA!</code>。');"
         },
         {
-          "text": "<code>rot13(\"SERR YBIR?\")</code> 应解密为 <code>FREE LOVE?</code>。",
-          "testString": "assert(rot13(\"SERR YBIR?\") === \"FREE LOVE?\", '<code>rot13(\"SERR YBIR?\")</code> 应解密为 <code>FREE LOVE?</code>。');"
+          "text": "<code>rot13(\"SERR YBIR?\")</code> 应解码为 <code>FREE LOVE?</code>。",
+          "testString": "assert(rot13(\"SERR YBIR?\") === \"FREE LOVE?\", '<code>rot13(\"SERR YBIR?\")</code> 应解码为 <code>FREE LOVE?</code>。');"
         },
         {
-          "text": "<code>rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\")</code> 应解密为 <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</code>。",
-          "testString": "assert(rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\") === \"THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.\", '<code>rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\")</code> 应解密为 <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</code>。');"
+          "text": "<code>rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\")</code> 应解码为 <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</code>。",
+          "testString": "assert(rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\") === \"THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.\", '<code>rot13(\"GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.\")</code> 应解码为 <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.</code>。');"
         }
       ],
       "MDNlinks": [
