@@ -43,21 +43,21 @@
       "id": "587d774c367417b2b2512a9d",
       "title": "Know When Alt Text Should be Left Blank",
       "description": [
-        "In the last challenge, you learned that including an <code>alt</code> attribute on img tags is mandatory. However, sometimes images are grouped with a caption already describing them, or are used for decoration only. In these cases <code>alt</code> text may seem redundant or unnecessary.",
-        "In situations when an image is already explained with text content, or does not add meaning to a page, the <code>img</code> still needs an <code>alt</code> attribute, but it can be set to an empty string. Here's an example:",
+        "在上一个挑战中，我们了解到在 <code>img</code> 标签里必须要包含一个 <code>alt</code> 属性。但是有时候，图片已经有了文字说明，或者仅仅为了美化页面。在这些情况下，<code>alt</code> 属性似乎有些多余。",
+        "但是即使图片已经有文字说明或者对页面来说没有意义，我们仍然需要为 <code>img</code> 标签添加 <code>alt</code> 属性，这种情况下，可以把它设为空，例如：",
         "<code>&lt;img src=&quot;visualDecoration.jpeg&quot; alt=&quot;&quot;&gt;</code>",
-        "Background images usually fall under the 'decorative' label as well. However, they are typically applied with CSS rules, and therefore not part of the markup screen readers process.",
-        "<strong>Note</strong><br>For images with a caption, you may still want to include <code>alt</code> text, since it helps search engines catalog the content of the image.",
+        "对于背景图片，它们通常起装饰作用，而且含有CSS类，所以，背景图片不会被屏幕阅读器处理。",
+        "<strong>Note</strong><br>对于有说明文字的图片，我们依然需要添加 <code>alt</code> 属性，因为这样有助于搜索引擎记录图片内容。",
         "<hr>",
-        "Camper Cat has coded a skeleton page for the blog part of his website. He's planning to add a visual break between his two articles with a decorative image of a samurai sword. Add an <code>alt</code> attribute to the <code>img</code> tag and set it to an empty string. (Note that the image <code>src</code> doesn't link to an actual file - don't worry that there are no swords showing in the display.)"
+        "Camper Cat已经为他的网站中的博客页面编码好了框架。他打算使用武士刀图片作为两篇文章之间的分割线。为 <code>img</code> 标签添加一个空的 <code>alt</code> 属性。（<code>img</code>标签的 <code>src</code> 不需要连接到真实的图片 - 显示器不会显示任何刀剑。）"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have an <code>alt</code> attribute.",
+          "text": "你的 <code>img</code> 标签需要包含一个 <code>alt</code> 属性",
           "testString": "assert(!($('img').attr('alt') == undefined), 'Your <code>img</code> tag should have an <code>alt</code> attribute.');"
         },
         {
-          "text": "The <code>alt</code> attribute should be set to an empty string.",
+          "text": "<code>alt</code> 属性的值应该为空字符串。",
           "testString": "assert($('img').attr('alt') == '', 'The <code>alt</code> attribute should be set to an empty string.');"
         }
       ],
