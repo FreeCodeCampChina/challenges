@@ -6,7 +6,7 @@
   "challenges": [
     {
       "id": "bad87fee1348bd9aedf08803",
-      "title": "改变文本的颜色",
+      "title": "Change the Color of Text",
       "description": [
         "现在来让我们修改一下文本的颜色。",
         "我们通过修改<code>h2</code>标签里面的<code>样式</code>。",
@@ -73,7 +73,7 @@
     },
     {
       "id": "bad87fee1348bd9aedf08805",
-      "title": "通过CSS选择器设置样式",
+      "title": "Use CSS Selectors to Style Elements",
       "description": [
         "在CSS中, 有上百种<code>属性</code>可以让你改变页面样式。",
         "当你输入<code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code>, 设置<code>行内样式</code>来改变单独的<code>h2</code>标签的样式，这是改变<code>层叠样式表(CSS)</code>的方法之一。",
@@ -150,7 +150,7 @@
     },
     {
       "id": "bad87fee1348bd9aecf08806",
-      "title": "通过CSS类去改变标签样式",
+      "title": "Use a CSS Class to Style an Element",
       "description": [
         "CSS的类具有可重用性，可应用于各种HTML标签。",
         "一个CSS类声明示例，如下所示：",
@@ -235,28 +235,28 @@
       "id": "bad87fee1348bd9aefe08806",
       "title": "Style Multiple Elements with a CSS Class",
       "description": [
-        "Classes allow you to use the same CSS styles on multiple HTML elements. You can see this by applying your <code>red-text</code> class to the first <code>p</code> element."
+        "通过CSS类,多个HTML标签上可以使用相同的cSS样式规则。你可以将<code>red-text</code>CSS类应用在第一个<code>p</code>标签上。"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> element should be red.",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", 'Your <code>h2</code> element should be red.');"
+          "text": "你的<code>h2</code>标签应该是红色的。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>标签应该是红色的。');"
         },
         {
-          "text": "Your <code>h2</code> element should have the class <code>red-text</code>.",
-          "testString": "assert($(\"h2\").hasClass(\"red-text\"), 'Your <code>h2</code> element should have the class <code>red-text</code>.');"
+          "text": "你的<code>h2</code>标签应该含有名为<code>red-text</code>的CSS类。",
+          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的<code>h2</code>标签应该含有名为<code>red-text</code>的CSS类。');"
         },
         {
-          "text": "Your first <code>p</code> element should be red.",
-          "testString": "assert($(\"p:eq(0)\").css(\"color\") === \"rgb(255, 0, 0)\", 'Your first <code>p</code> element should be red.');"
+          "text": "你的第一个<code>p</code>标签应该为红色。",
+          "testString": "assert($(\"p:eq(0)\").css(\"color\") === \"rgb(255, 0, 0)\", '你的第一个<code>p</code>标签应该为红色。');"
         },
         {
-          "text": "Your second and third <code>p</code> elements should not be red.",
-          "testString": "assert(!($(\"p:eq(1)\").css(\"color\") === \"rgb(255, 0, 0)\") && !($(\"p:eq(2)\").css(\"color\") === \"rgb(255, 0, 0)\"), 'Your second and third <code>p</code> elements should not be red.');"
+          "text": "你的第二和第三个<code>p</code>标签不应该为红色。",
+          "testString": "assert(!($(\"p:eq(1)\").css(\"color\") === \"rgb(255, 0, 0)\") && !($(\"p:eq(2)\").css(\"color\") === \"rgb(255, 0, 0)\"), '你的第二和第三个<code>p</code>标签不应该为红色。');"
         },
         {
-          "text": "Your first <code>p</code> element should have the class <code>red-text</code>.",
-          "testString": "assert($(\"p:eq(0)\").hasClass(\"red-text\"), 'Your first <code>p</code> element should have the class <code>red-text</code>.');"
+          "text": "你的第一个<code>p</code>标签应该包含名为<code>red-text</code>的CSS类。",
+          "testString": "assert($(\"p:eq(0)\").hasClass(\"red-text\"), '你的第一个<code>p</code>标签应该包含名为<code>red-text</code>的CSS类。');"
         }
       ],
       "challengeType": 0,
@@ -313,15 +313,15 @@
       "id": "bad87fee1348bd9aedf08806",
       "title": "Change the Font Size of an Element",
       "description": [
-        "Font size is controlled by the <code>font-size</code> CSS property, like this:",
+        "字体大小由<code>font-size</code>CSS属性控制，如下所示：",
         "<blockquote>h1 {<br>&nbsp;&nbsp;font-size: 30px;<br>}</blockquote>",
         "<hr>",
-        "Inside the same <code>&#60;style&#62;</code> tag that contains your <code>red-text</code> class, create an entry for <code>p</code> elements and set the <code>font-size</code> to 16 pixels (<code>16px</code>)."
+        "在包含<code>red-text</code>CSS类的<code>&#60;style&#62;</code>声明区域的里，创建一个<code>p</code>标签样式规则，并设置<code>font-size</code>为16像素(<code>16px</code>)。"
       ],
       "tests": [
         {
-          "text": "Between the <code>style</code> tags, give the <code>p</code> elements <code>font-size</code> of <code>16px</code>. Browser and Text zoom should be at 100%.",
-          "testString": "assert(code.match(/p\\s*{\\s*font-size\\s*:\\s*16\\s*px\\s*;\\s*}/i), 'Between the <code>style</code> tags, give the <code>p</code> elements <code>font-size</code> of <code>16px</code>. Browser and Text zoom should be at 100%.');"
+          "text": "在<code>style</code>样式声明区域里，设置<code>p</code>元素的<code>font-size</code>为<code>16px</code>。浏览器和文本缩放应设置为100％。",
+          "testString": "assert(code.match(/p\\s*{\\s*font-size\\s*:\\s*16\\s*px\\s*;\\s*}/i), '在<code>style</code>样式声明区域里，设置<code>p</code>元素的<code>font-size</code>为<code>16px</code>。浏览器和文本缩放应设置为100％。');"
         }
       ],
       "challengeType": 0,
@@ -378,16 +378,16 @@
       "id": "bad87fee1348bd9aede08807",
       "title": "Set the Font Family of an Element",
       "description": [
-        "You can set which font an element should use, by using the <code>font-family</code> property.",
-        "For example, if you wanted to set your <code>h2</code> element's font to <code>sans-serif</code>, you would use the following CSS:",
+        "你可以设置标签里面的字体，通过<code>font-family</code>属性。",
+        "例如，如果你想设置<code>h2</code>标签的字体为<code>sans-serif</code>，你可以用以下的CSS规则：",
         "<blockquote>h2 {<br>&nbsp;&nbsp;font-family: sans-serif;<br>}</blockquote>",
         "<hr>",
-        "Make all of your <code>p</code> elements use the <code>monospace</code> font."
+        "确保你所有的<code>p</code>标签使用<code>monospace</code>字体。"
       ],
       "tests": [
         {
-          "text": "Your <code>p</code> elements should use the font <code>monospace</code>.",
-          "testString": "assert($(\"p\").not(\".red-text\").css(\"font-family\").match(/monospace/i), 'Your <code>p</code> elements should use the font <code>monospace</code>.');"
+          "text": "你的<code>p</code>标签应该使用<code>monospace</code>字体。",
+          "testString": "assert($(\"p\").not(\".red-text\").css(\"font-family\").match(/monospace/i), '你的<code>p</code>标签应该使用<code>monospace</code>字体。');"
         }
       ],
       "challengeType": 0,
