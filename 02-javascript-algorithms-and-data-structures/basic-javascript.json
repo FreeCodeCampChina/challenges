@@ -8,27 +8,27 @@
       "id": "bd7123c9c441eddfaeb4bdef",
       "title": "Comment Your JavaScript Code",
       "description": [
-        "Comments are lines of code that JavaScript will intentionally ignore. Comments are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.",
-        "There are two ways to write comments in JavaScript:",
-        "Using <code>//</code> will tell JavaScript to ignore the remainder of the text on the current line:",
-        "<blockquote>// This is an in-line comment.</blockquote>",
-        "You can make a multi-line comment beginning with <code>/*</code> and ending with <code>*/</code>:",
-        "<blockquote>/* This is a<br>multi-line comment */</blockquote>",
-        "<strong>Best Practice</strong><br>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code&mdash;both for others <em>and</em> for your future self.",
+        "注释（comment）是 JavaScript 中会被有意忽略的行。注释是给自己和以后需要了解代码作用的其他人留下笔记的一个好的方式。",
+        "在 JavaScript 有两种方式写注释：",
+        "用 <code>//</code> 告诉 JavaScript 忽略当前行在该符号之后的文本：",
+        "<blockquote>// 这是一个行内注释。</blockquote>",
+        "您可以以 <code>/*</code> 开始并以 <code>*/</code> 结束来写多行注释：",
+        "<blockquote>/* 这是一个<br>多行注释 */</blockquote>",
+        "<strong>最佳实践</strong><br>在您编码时，您应该定期添加一些注释来阐明您的某些代码的作用。好的注释能够让别人和未来的您自己了解您的代码。",
         "<hr>",
-        "Try creating one of each type of comment."
+        "请尝试写一下两种注释。"
       ],
       "solutions": [
         "// Fake Comment\n/* Another Comment */"
       ],
       "tests": [
         {
-          "text": "Create a <code>//</code> style comment that contains at least five letters.",
-          "testString": "assert(code.match(/(\\/\\/)...../g), 'Create a <code>//</code> style comment that contains at least five letters.');"
+          "text": "请写一个 <code>//</code> 方式的注释，并包含至少 5 个字符。",
+          "testString": "assert(code.match(/(\\/\\/)...../g), '请写一个 <code>//</code> 方式的注释，并包含至少 5 个字符。');"
         },
         {
-          "text": "Create a <code>/* */</code> style comment that contains at least five letters.",
-          "testString": "assert(code.match(/(\\/\\*)([^\\/]{5,})(?=\\*\\/)/gm), 'Create a <code>/* */</code> style comment that contains at least five letters.');"
+          "text": "请写一个 <code>/* */</code> 方式的注释，并包含至少 5 个字符。",
+          "testString": "assert(code.match(/(\\/\\*)([^\\/]{5,})(?=\\*\\/)/gm), '请写一个 <code>/* */</code> 方式的注释，并包含至少 5 个字符。');"
         }
       ],
       "challengeType": 1,
@@ -47,7 +47,7 @@
       "id": "bd7123c9c443eddfaeb5bdef",
       "title": "Declare JavaScript Variables",
       "description": [
-        "In computer science, <dfn>data</dfn> is anything that is meaningful to the computer. JavaScript provides seven different <dfn>data types</dfn> which are <code>undefined</code>, <code>null</code>, <code>boolean</code>, <code>string</code>, <code>symbol</code>, <code>number</code>, and <code>object</code>.",
+        "在计算机科学中，<dfn>数据（data）</dfn> 是对计算机有意义的所有东西。JavaScript 提供了 7 中不同的 <dfn>数据类型（data type）</dfn>，分别是 <code>undefined</code>（未定义）、<code>null</code>（空值）、<code>boolean</code>（布尔值）、<code>string</code>（字符串）、<code>symbol</code>（符号）、<code>number</code>（数字）和 <code>object</code>（对象）。",
         "For example, computers distinguish between numbers, such as the number <code>12</code>, and <code>strings</code>, such as <code>\"12\"</code>, <code>\"dog\"</code>, or <code>\"123 cats\"</code>, which are collections of characters. Computers can perform mathematical operations on a number, but not on a string.",
         "<dfn>Variables</dfn> allow computers to store and manipulate data in a dynamic fashion. They do this by using a \"label\" to point to the data rather than using the data itself. Any of the seven data types may be stored in a variable.",
         "<code>Variables</code> are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. Computer <code>variables</code> differ from mathematical variables in that they can store different values at different times.",
@@ -330,8 +330,8 @@
       ],
       "tests": [
         {
-          "text": "<code>sum</code> should equal <code>20</code>",
-          "testString": "assert(sum === 20, '<code>sum</code> should equal <code>20</code>');"
+          "text": "<code>sum</code> 应该等于 <code>20</code>",
+          "testString": "assert(sum === 20, '<code>sum</code> 应该等于 <code>20</code>');"
         },
         {
           "text": "Use the <code>+</code> operator",
@@ -506,8 +506,8 @@
       ],
       "tests": [
         {
-          "text": "<code>myVar</code> should equal <code>88</code>",
-          "testString": "assert(myVar === 88, '<code>myVar</code> should equal <code>88</code>');"
+          "text": "<code>myVar</code> 应该等于 <code>88</code>",
+          "testString": "assert(myVar === 88, '<code>myVar</code> 应该等于 <code>88</code>');"
         },
         {
           "text": "<code>myVar = myVar + 1;</code> should be changed",
@@ -560,8 +560,8 @@
       ],
       "tests": [
         {
-          "text": "<code>myVar</code> should equal <code>10</code>",
-          "testString": "assert(myVar === 10, '<code>myVar</code> should equal <code>10</code>');"
+          "text": "<code>myVar</code> 应该等于 <code>10</code>",
+          "testString": "assert(myVar === 10, '<code>myVar</code> 应该等于 <code>10</code>');"
         },
         {
           "text": "<code>myVar = myVar - 1;</code> should be changed",
@@ -610,12 +610,12 @@
       ],
       "tests": [
         {
-          "text": "<code>myDecimal</code> should be a number.",
-          "testString": "assert(typeof myDecimal === \"number\", '<code>myDecimal</code> should be a number.');"
+          "text": "<code>myDecimal</code> 应该是一个数字。",
+          "testString": "assert(typeof myDecimal === \"number\", '<code>myDecimal</code> 应该是一个数字。');"
         },
         {
-          "text": "<code>myDecimal</code> should have a decimal point",
-          "testString": "assert(myDecimal % 1 != 0, '<code>myDecimal</code> should have a decimal point'); "
+          "text": "<code>myDecimal</code> 应该含有一个小数点。",
+          "testString": "assert(myDecimal % 1 != 0, '<code>myDecimal</code> 应该含有一个小数点。'); "
         }
       ],
       "challengeType": 1,
@@ -652,8 +652,8 @@
       ],
       "tests": [
         {
-          "text": "The variable <code>product</code> should equal <code>5.0</code>.",
-          "testString": "assert(product === 5.0, 'The variable <code>product</code> should equal <code>5.0</code>.');"
+          "text": "变量 <code>product</code> 应该等于 <code>5.0</code>.",
+          "testString": "assert(product === 5.0, '变量 <code>product</code> 应该等于 <code>5.0</code>.');"
         },
         {
           "text": "You should use the <code>*</code> operator",
@@ -689,8 +689,8 @@
       "solutions": [],
       "tests": [
         {
-          "text": "The variable <code>quotient</code> should equal <code>2.2</code>",
-          "testString": "assert(quotient === 2.2, 'The variable <code>quotient</code> should equal <code>2.2</code>');"
+          "text": "变量 <code>quotient</code> 应该等于 <code>2.2</code>",
+          "testString": "assert(quotient === 2.2, '变量 <code>quotient</code> 应该等于 <code>2.2</code>');"
         },
         {
           "text": "You should use the <code>/</code> operator to divide 4.4 by 2",
@@ -738,8 +738,8 @@
       ],
       "tests": [
         {
-          "text": "The variable <code>remainder</code> should be initialized",
-          "testString": "assert(/var\\s+?remainder/.test(code), 'The variable <code>remainder</code> should be initialized');"
+          "text": "变量 <code>remainder</code> should be initialized",
+          "testString": "assert(/var\\s+?remainder/.test(code), '变量 <code>remainder</code> should be initialized');"
         },
         {
           "text": "The value of <code>remainder</code> should be <code>2</code>",
@@ -787,16 +787,16 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>15</code>",
-          "testString": "assert(a === 15, '<code>a</code> should equal <code>15</code>');"
+          "text": "<code>a</code> 应该等于 <code>15</code>",
+          "testString": "assert(a === 15, '<code>a</code> 应该等于 <code>15</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>26</code>",
-          "testString": "assert(b === 26, '<code>b</code> should equal <code>26</code>');"
+          "text": "<code>b</code> 应该等于 <code>26</code>",
+          "testString": "assert(b === 26, '<code>b</code> 应该等于 <code>26</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>19</code>",
-          "testString": "assert(c === 19, '<code>c</code> should equal <code>19</code>');"
+          "text": "<code>c</code> 应该等于 <code>19</code>",
+          "testString": "assert(c === 19, '<code>c</code> 应该等于 <code>19</code>');"
         },
         {
           "text": "You should use the <code>+=</code> operator for each variable",
@@ -849,16 +849,16 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>5</code>",
-          "testString": "assert(a === 5, '<code>a</code> should equal <code>5</code>');"
+          "text": "<code>a</code> 应该等于 <code>5</code>",
+          "testString": "assert(a === 5, '<code>a</code> 应该等于 <code>5</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>-6</code>",
-          "testString": "assert(b === -6, '<code>b</code> should equal <code>-6</code>');"
+          "text": "<code>b</code> 应该等于 <code>-6</code>",
+          "testString": "assert(b === -6, '<code>b</code> 应该等于 <code>-6</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>2</code>",
-          "testString": "assert(c === 2, '<code>c</code> should equal <code>2</code>');"
+          "text": "<code>c</code> 应该等于 <code>2</code>",
+          "testString": "assert(c === 2, '<code>c</code> 应该等于 <code>2</code>');"
         },
         {
           "text": "You should use the <code>-=</code> operator for each variable",
@@ -912,16 +912,16 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>25</code>",
-          "testString": "assert(a === 25, '<code>a</code> should equal <code>25</code>');"
+          "text": "<code>a</code> 应该等于 <code>25</code>",
+          "testString": "assert(a === 25, '<code>a</code> 应该等于 <code>25</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>36</code>",
-          "testString": "assert(b === 36, '<code>b</code> should equal <code>36</code>');"
+          "text": "<code>b</code> 应该等于 <code>36</code>",
+          "testString": "assert(b === 36, '<code>b</code> 应该等于 <code>36</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>46</code>",
-          "testString": "assert(c === 46, '<code>c</code> should equal <code>46</code>');"
+          "text": "<code>c</code> 应该等于 <code>46</code>",
+          "testString": "assert(c === 46, '<code>c</code> 应该等于 <code>46</code>');"
         },
         {
           "text": "You should use the <code>*=</code> operator for each variable",
@@ -975,16 +975,16 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>4</code>",
-          "testString": "assert(a === 4, '<code>a</code> should equal <code>4</code>');"
+          "text": "<code>a</code> 应该等于 <code>4</code>",
+          "testString": "assert(a === 4, '<code>a</code> 应该等于 <code>4</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>27</code>",
-          "testString": "assert(b === 27, '<code>b</code> should equal <code>27</code>');"
+          "text": "<code>b</code> 应该等于 <code>27</code>",
+          "testString": "assert(b === 27, '<code>b</code> 应该等于 <code>27</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>3</code>",
-          "testString": "assert(c === 3, '<code>c</code> should equal <code>3</code>');"
+          "text": "<code>c</code> 应该等于 <code>3</code>",
+          "testString": "assert(c === 3, '<code>c</code> 应该等于 <code>3</code>');"
         },
         {
           "text": "You should use the <code>/=</code> operator for each variable",
@@ -1035,12 +1035,12 @@
       ],
       "tests": [
         {
-          "text": "<code>myFirstName</code> should be a string with at least one character in it.",
-          "testString": "assert((function(){if(typeof myFirstName !== \"undefined\" && typeof myFirstName === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), '<code>myFirstName</code> should be a string with at least one character in it.');"
+          "text": "<code>myFirstName</code> 应该是一个含有至少一个字符的字符串。",
+          "testString": "assert((function(){if(typeof myFirstName !== \"undefined\" && typeof myFirstName === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), '<code>myFirstName</code> 应该是一个含有至少一个字符的字符串。');"
         },
         {
-          "text": "<code>myLastName</code> should be a string with at least one character in it.",
-          "testString": "assert((function(){if(typeof myLastName !== \"undefined\" && typeof myLastName === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), '<code>myLastName</code> should be a string with at least one character in it.');"
+          "text": "<code>myLastName</code> 应该是一个含有至少一个字符的字符串。",
+          "testString": "assert((function(){if(typeof myLastName !== \"undefined\" && typeof myLastName === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), '<code>myLastName</code> 应该是一个含有至少一个字符的字符串。');"
         }
       ],
       "challengeType": 1,
@@ -1784,8 +1784,8 @@
       ],
       "tests": [
         {
-          "text": "<code>wordBlanks(\"\",\"\",\"\",\"\")</code> should return a string.",
-          "testString": "assert(typeof wordBlanks(\"\",\"\",\"\",\"\") === 'string', '<code>wordBlanks(\"\",\"\",\"\",\"\")</code> should return a string.');"
+          "text": "<code>wordBlanks(\"\",\"\",\"\",\"\")</code> 应该返回一个字符串。",
+          "testString": "assert(typeof wordBlanks(\"\",\"\",\"\",\"\") === 'string', '<code>wordBlanks(\"\",\"\",\"\",\"\")</code> 应该返回一个字符串。');"
         },
         {
           "text": "<code>wordBlanks(\"dog\", \"big\", \"ran\", \"quickly\")</code> should contain all of the passed in words separated by non-word characters (and any additional words in your madlib).",
@@ -1926,8 +1926,8 @@
       ],
       "tests": [
         {
-          "text": "The variable <code>myData</code> should equal the first value of <code>myArray</code>.",
-          "testString": "assert((function(){if(typeof myArray !== 'undefined' && typeof myData !== 'undefined' && myArray[0] === myData){return true;}else{return false;}})(), 'The variable <code>myData</code> should equal the first value of <code>myArray</code>.');"
+          "text": "变量 <code>myData</code> 应该等于 the first value of <code>myArray</code>.",
+          "testString": "assert((function(){if(typeof myArray !== 'undefined' && typeof myData !== 'undefined' && myArray[0] === myData){return true;}else{return false;}})(), '变量 <code>myData</code> 应该等于 the first value of <code>myArray</code>.');"
         },
         {
           "text": "The data in variable <code>myArray</code> should be accessed using bracket notation.",
@@ -2265,8 +2265,8 @@
       ],
       "tests": [
         {
-          "text": "<code>myList</code> should be an array",
-          "testString": "assert(isArray, '<code>myList</code> should be an array');"
+          "text": "<code>myList</code> 应该是一个数组。",
+          "testString": "assert(isArray, '<code>myList</code> 应该是一个数组。');"
         },
         {
           "text": "The first elements in each of your sub-arrays must all be strings",
@@ -2342,8 +2342,8 @@
       ],
       "tests": [
         {
-          "text": "<code>reusableFunction</code> should be a function",
-          "testString": "assert(typeof reusableFunction === 'function', '<code>reusableFunction</code> should be a function');"
+          "text": "<code>reusableFunction</code> 应该是一个函数。",
+          "testString": "assert(typeof reusableFunction === 'function', '<code>reusableFunction</code> 应该是一个函数。');"
         },
         {
           "text": "<code>reusableFunction</code> should output \"Hi World\" to the dev console",
@@ -2424,8 +2424,8 @@
       ],
       "tests": [
         {
-          "text": "<code>functionWithArgs</code> should be a function",
-          "testString": "assert(typeof functionWithArgs === 'function', '<code>functionWithArgs</code> should be a function');"
+          "text": "<code>functionWithArgs</code> 应该是一个函数。",
+          "testString": "assert(typeof functionWithArgs === 'function', '<code>functionWithArgs</code> 应该是一个函数。');"
         },
         {
           "text": "<code>functionWithArgs(1,2)</code> should output <code>3</code>",
@@ -2677,8 +2677,8 @@
           "testString": "assert(outerWear === \"T-Shirt\", 'Do not change the value of the global <code>outerWear</code>');"
         },
         {
-          "text": "<code>myOutfit</code> should return <code>\"sweater\"</code>",
-          "testString": "assert(myOutfit() === \"sweater\", '<code>myOutfit</code> should return <code>\"sweater\"</code>');"
+          "text": "<code>myOutfit</code> 应该返回 <code>\"sweater\"</code>",
+          "testString": "assert(myOutfit() === \"sweater\", '<code>myOutfit</code> 应该返回 <code>\"sweater\"</code>');"
         },
         {
           "text": "Do not change the return statement",
@@ -2728,20 +2728,20 @@
       ],
       "tests": [
         {
-          "text": "<code>timesFive</code> should be a function",
-          "testString": "assert(typeof timesFive === 'function', '<code>timesFive</code> should be a function');"
+          "text": "<code>timesFive</code> 应该是一个函数。",
+          "testString": "assert(typeof timesFive === 'function', '<code>timesFive</code> 应该是一个函数。');"
         },
         {
-          "text": "<code>timesFive(5)</code> should return <code>25</code>",
-          "testString": "assert(timesFive(5) === 25, '<code>timesFive(5)</code> should return <code>25</code>');"
+          "text": "<code>timesFive(5)</code> 应该返回 <code>25</code>",
+          "testString": "assert(timesFive(5) === 25, '<code>timesFive(5)</code> 应该返回 <code>25</code>');"
         },
         {
-          "text": "<code>timesFive(2)</code> should return <code>10</code>",
-          "testString": "assert(timesFive(2) === 10, '<code>timesFive(2)</code> should return <code>10</code>');"
+          "text": "<code>timesFive(2)</code> 应该返回 <code>10</code>",
+          "testString": "assert(timesFive(2) === 10, '<code>timesFive(2)</code> 应该返回 <code>10</code>');"
         },
         {
-          "text": "<code>timesFive(0)</code> should return <code>0</code>",
-          "testString": "assert(timesFive(0) === 0, '<code>timesFive(0)</code> should return <code>0</code>');"
+          "text": "<code>timesFive(0)</code> 应该返回 <code>0</code>",
+          "testString": "assert(timesFive(0) === 0, '<code>timesFive(0)</code> 应该返回 <code>0</code>');"
         }
       ],
       "challengeType": 1,
@@ -2784,8 +2784,8 @@
       ],
       "tests": [
         {
-          "text": "<code>addFive</code> should be a function",
-          "testString": "assert(typeof addFive === 'function', '<code>addFive</code> should be a function');"
+          "text": "<code>addFive</code> 应该是一个函数。",
+          "testString": "assert(typeof addFive === 'function', '<code>addFive</code> 应该是一个函数。');"
         },
         {
           "text": "<code>sum</code> should be equal to 8",
@@ -2905,24 +2905,24 @@
       ],
       "tests": [
         {
-          "text": "<code>nextInLine([], 5)</code> should return a number.",
-          "testString": "assert.isNumber(nextInLine([],5), '<code>nextInLine([], 5)</code> should return a number.');"
+          "text": "<code>nextInLine([], 5)</code> 应该返回一个数字。",
+          "testString": "assert.isNumber(nextInLine([],5), '<code>nextInLine([], 5)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>nextInLine([], 1)</code> should return <code>1</code>",
-          "testString": "assert(nextInLine([],1) === 1, '<code>nextInLine([], 1)</code> should return <code>1</code>');"
+          "text": "<code>nextInLine([], 1)</code> 应该返回 <code>1</code>",
+          "testString": "assert(nextInLine([],1) === 1, '<code>nextInLine([], 1)</code> 应该返回 <code>1</code>');"
         },
         {
-          "text": "<code>nextInLine([2], 1)</code> should return <code>2</code>",
-          "testString": "assert(nextInLine([2],1) === 2, '<code>nextInLine([2], 1)</code> should return <code>2</code>');"
+          "text": "<code>nextInLine([2], 1)</code> 应该返回 <code>2</code>",
+          "testString": "assert(nextInLine([2],1) === 2, '<code>nextInLine([2], 1)</code> 应该返回 <code>2</code>');"
         },
         {
-          "text": "<code>nextInLine([5,6,7,8,9], 1)</code> should return <code>5</code>",
-          "testString": "assert(nextInLine([5,6,7,8,9],1) === 5, '<code>nextInLine([5,6,7,8,9], 1)</code> should return <code>5</code>');"
+          "text": "<code>nextInLine([5,6,7,8,9], 1)</code> 应该返回 <code>5</code>",
+          "testString": "assert(nextInLine([5,6,7,8,9],1) === 5, '<code>nextInLine([5,6,7,8,9], 1)</code> 应该返回 <code>5</code>');"
         },
         {
-          "text": "After <code>nextInLine(testArr, 10)</code>, <code>testArr[4]</code> should be <code>10</code>",
-          "testString": "nextInLine(testArr, 10); assert(testArr[4] === 10, 'After <code>nextInLine(testArr, 10)</code>, <code>testArr[4]</code> should be <code>10</code>');"
+          "text": "执行 <code>nextInLine(testArr, 10)</code> 之后，<code>testArr[4]</code> 应该变成 <code>10</code>",
+          "testString": "nextInLine(testArr, 10); assert(testArr[4] === 10, '执行 <code>nextInLine(testArr, 10)</code> 之后，<code>testArr[4]</code> 应该变成 <code>10</code>');"
         }
       ],
       "challengeType": 1,
@@ -2980,22 +2980,22 @@
       "id": "bd7123c9c441eddfaeb5bdef",
       "title": "Understanding Boolean Values",
       "description": [
-        "Another data type is the <dfn>Boolean</dfn>. <code>Booleans</code> may only be one of two values: <code>true</code> or <code>false</code>. They are basically little on-off switches, where <code>true</code> is \"on\" and <code>false</code> is \"off.\"  These two states are mutually exclusive.",
-        "<strong>Note</strong><br><code>Boolean</code> values are never written with quotes. The <code>strings</code> <code>\"true\"</code> and <code>\"false\"</code> are not <code>Boolean</code> and have no special meaning in JavaScript.",
+        "另一个数据类型是布尔值 <dfn>Boolean</dfn>。一个 <code>Boolean</code> 变量的值只能取 <code>true</code> 或者 <code>false</code> 这两个值中的一个。布尔值相当于一个小开关， <code>true</code> 表示“开”， <code>false</code> 表示“关”。这两个状态是互斥的。",
+        "<strong>注意</strong><br>一个 <code>Boolean</code> 值是不写在引号中的。字符串 <code>\"true\"</code> and <code>\"false\"</code> 并不是 <code>Boolean</code> ，在 JavaScript 中没有特殊的意义。",
         "<hr>",
-        "Modify the <code>welcomeToBooleans</code> function so that it returns <code>true</code> instead of <code>false</code> when the run button is clicked."
+        "请修改 <code>welcomeToBooleans</code> 函数，使其返回 <code>true</code> 而不是 <code>false</code>"
       ],
       "solutions": [
         "function welcomeToBooleans() {\n  return true; // Change this line\n}"
       ],
       "tests": [
         {
-          "text": "The <code>welcomeToBooleans()</code> function should return a boolean &#40;true/false&#41; value.",
-          "testString": "assert(typeof welcomeToBooleans() === 'boolean', 'The <code>welcomeToBooleans()</code> function should return a boolean &#40;true/false&#41; value.');"
+          "text": "<code>welcomeToBooleans()</code> 函数应该返回一个布尔值（ &#40;true/false&#41; ）。",
+          "testString": "assert(typeof welcomeToBooleans() === 'boolean', 'The <code>welcomeToBooleans()</code> 函数应该返回一个布尔值（ &#40;true/false&#41; ）。');"
         },
         {
-          "text": "<code>welcomeToBooleans()</code> should return true.",
-          "testString": "assert(welcomeToBooleans() === true, '<code>welcomeToBooleans()</code> should return true.');"
+          "text": "<code>welcomeToBooleans()</code> 应该返回 true",
+          "testString": "assert(welcomeToBooleans() === true, '<code>welcomeToBooleans()</code> 应该返回 true');"
         }
       ],
       "challengeType": 1,
@@ -3040,24 +3040,24 @@
       ],
       "tests": [
         {
-          "text": "<code>trueOrFalse</code> should be a function",
-          "testString": "assert(typeof trueOrFalse === \"function\", '<code>trueOrFalse</code> should be a function');"
+          "text": "<code>trueOrFalse</code> 应该是一个函数。",
+          "testString": "assert(typeof trueOrFalse === \"function\", '<code>trueOrFalse</code> 应该是一个函数。');"
         },
         {
-          "text": "<code>trueOrFalse(true)</code> should return a string",
-          "testString": "assert(typeof trueOrFalse(true) === \"string\", '<code>trueOrFalse(true)</code> should return a string');"
+          "text": "<code>trueOrFalse(true)</code> 应该返回一个字符串",
+          "testString": "assert(typeof trueOrFalse(true) === \"string\", '<code>trueOrFalse(true)</code> 应该返回一个字符串');"
         },
         {
-          "text": "<code>trueOrFalse(false)</code> should return a string",
-          "testString": "assert(typeof trueOrFalse(false) === \"string\", '<code>trueOrFalse(false)</code> should return a string');"
+          "text": "<code>trueOrFalse(false)</code> 应该返回一个字符串",
+          "testString": "assert(typeof trueOrFalse(false) === \"string\", '<code>trueOrFalse(false)</code> 应该返回一个字符串');"
         },
         {
-          "text": "<code>trueOrFalse(true)</code> should return \"Yes, that was true\"",
-          "testString": "assert(trueOrFalse(true) === \"Yes, that was true\", '<code>trueOrFalse(true)</code> should return \"Yes, that was true\"');"
+          "text": "<code>trueOrFalse(true)</code> 应该返回 \"Yes, that was true\"",
+          "testString": "assert(trueOrFalse(true) === \"Yes, that was true\", '<code>trueOrFalse(true)</code> 应该返回 \"Yes, that was true\"');"
         },
         {
-          "text": "<code>trueOrFalse(false)</code> should return \"No, that was false\"",
-          "testString": "assert(trueOrFalse(false) === \"No, that was false\", '<code>trueOrFalse(false)</code> should return \"No, that was false\"');"
+          "text": "<code>trueOrFalse(false)</code> 应该返回 \"No, that was false\"",
+          "testString": "assert(trueOrFalse(false) === \"No, that was false\", '<code>trueOrFalse(false)</code> 应该返回 \"No, that was false\"');"
         }
       ],
       "challengeType": 1,
@@ -3113,16 +3113,16 @@
       ],
       "tests": [
         {
-          "text": "<code>testEqual(10)</code> should return \"Not Equal\"",
-          "testString": "assert(testEqual(10) === \"Not Equal\", '<code>testEqual(10)</code> should return \"Not Equal\"');"
+          "text": "<code>testEqual(10)</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testEqual(10) === \"Not Equal\", '<code>testEqual(10)</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testEqual(12)</code> should return \"Equal\"",
-          "testString": "assert(testEqual(12) === \"Equal\", '<code>testEqual(12)</code> should return \"Equal\"');"
+          "text": "<code>testEqual(12)</code> 应该返回 \"Equal\"",
+          "testString": "assert(testEqual(12) === \"Equal\", '<code>testEqual(12)</code> 应该返回 \"Equal\"');"
         },
         {
-          "text": "<code>testEqual(\"12\")</code> should return \"Equal\"",
-          "testString": "assert(testEqual(\"12\") === \"Equal\", '<code>testEqual(\"12\")</code> should return \"Equal\"');"
+          "text": "<code>testEqual(\"12\")</code> 应该返回 \"Equal\"",
+          "testString": "assert(testEqual(\"12\") === \"Equal\", '<code>testEqual(\"12\")</code> 应该返回 \"Equal\"');"
         },
         {
           "text": "You should use the <code>==</code> operator",
@@ -3170,16 +3170,16 @@
       ],
       "tests": [
         {
-          "text": "<code>testStrict(10)</code> should return \"Not Equal\"",
-          "testString": "assert(testStrict(10) === \"Not Equal\", '<code>testStrict(10)</code> should return \"Not Equal\"');"
+          "text": "<code>testStrict(10)</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testStrict(10) === \"Not Equal\", '<code>testStrict(10)</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testStrict(7)</code> should return \"Equal\"",
-          "testString": "assert(testStrict(7) === \"Equal\", '<code>testStrict(7)</code> should return \"Equal\"');"
+          "text": "<code>testStrict(7)</code> 应该返回 \"Equal\"",
+          "testString": "assert(testStrict(7) === \"Equal\", '<code>testStrict(7)</code> 应该返回 \"Equal\"');"
         },
         {
-          "text": "<code>testStrict(\"7\")</code> should return \"Not Equal\"",
-          "testString": "assert(testStrict(\"7\") === \"Not Equal\", '<code>testStrict(\"7\")</code> should return \"Not Equal\"');"
+          "text": "<code>testStrict(\"7\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testStrict(\"7\") === \"Not Equal\", '<code>testStrict(\"7\")</code> 应该返回 \"Not Equal\"');"
         },
         {
           "text": "You should use the <code>===</code> operator",
@@ -3228,12 +3228,12 @@
       ],
       "tests": [
         {
-          "text": "<code>compareEquality(10, \"10\")</code> should return \"Not Equal\"",
-          "testString": "assert(compareEquality(10, \"10\") === \"Not Equal\", '<code>compareEquality(10, \"10\")</code> should return \"Not Equal\"');"
+          "text": "<code>compareEquality(10, \"10\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(compareEquality(10, \"10\") === \"Not Equal\", '<code>compareEquality(10, \"10\")</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>compareEquality(\"20\", 20)</code> should return \"Not Equal\"",
-          "testString": "assert(compareEquality(\"20\", 20) === \"Not Equal\", '<code>compareEquality(\"20\", 20)</code> should return \"Not Equal\"');"
+          "text": "<code>compareEquality(\"20\", 20)</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(compareEquality(\"20\", 20) === \"Not Equal\", '<code>compareEquality(\"20\", 20)</code> 应该返回 \"Not Equal\"');"
         },
         {
           "text": "You should use the <code>===</code> operator",
@@ -3279,24 +3279,24 @@
       ],
       "tests": [
         {
-          "text": "<code>testNotEqual(99)</code> should return \"Equal\"",
-          "testString": "assert(testNotEqual(99) === \"Equal\", '<code>testNotEqual(99)</code> should return \"Equal\"');"
+          "text": "<code>testNotEqual(99)</code> 应该返回 \"Equal\"",
+          "testString": "assert(testNotEqual(99) === \"Equal\", '<code>testNotEqual(99)</code> 应该返回 \"Equal\"');"
         },
         {
-          "text": "<code>testNotEqual(\"99\")</code> should return \"Equal\"",
-          "testString": "assert(testNotEqual(\"99\") === \"Equal\", '<code>testNotEqual(\"99\")</code> should return \"Equal\"');"
+          "text": "<code>testNotEqual(\"99\")</code> 应该返回 \"Equal\"",
+          "testString": "assert(testNotEqual(\"99\") === \"Equal\", '<code>testNotEqual(\"99\")</code> 应该返回 \"Equal\"');"
         },
         {
-          "text": "<code>testNotEqual(12)</code> should return \"Not Equal\"",
-          "testString": "assert(testNotEqual(12) === \"Not Equal\", '<code>testNotEqual(12)</code> should return \"Not Equal\"');"
+          "text": "<code>testNotEqual(12)</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testNotEqual(12) === \"Not Equal\", '<code>testNotEqual(12)</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testNotEqual(\"12\")</code> should return \"Not Equal\"",
-          "testString": "assert(testNotEqual(\"12\") === \"Not Equal\", '<code>testNotEqual(\"12\")</code> should return \"Not Equal\"');"
+          "text": "<code>testNotEqual(\"12\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testNotEqual(\"12\") === \"Not Equal\", '<code>testNotEqual(\"12\")</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testNotEqual(\"bob\")</code> should return \"Not Equal\"",
-          "testString": "assert(testNotEqual(\"bob\") === \"Not Equal\", '<code>testNotEqual(\"bob\")</code> should return \"Not Equal\"');"
+          "text": "<code>testNotEqual(\"bob\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testNotEqual(\"bob\") === \"Not Equal\", '<code>testNotEqual(\"bob\")</code> 应该返回 \"Not Equal\"');"
         },
         {
           "text": "You should use the <code>!=</code> operator",
@@ -3345,20 +3345,20 @@
       ],
       "tests": [
         {
-          "text": "<code>testStrictNotEqual(17)</code> should return \"Equal\"",
-          "testString": "assert(testStrictNotEqual(17) === \"Equal\", '<code>testStrictNotEqual(17)</code> should return \"Equal\"');"
+          "text": "<code>testStrictNotEqual(17)</code> 应该返回 \"Equal\"",
+          "testString": "assert(testStrictNotEqual(17) === \"Equal\", '<code>testStrictNotEqual(17)</code> 应该返回 \"Equal\"');"
         },
         {
-          "text": "<code>testStrictNotEqual(\"17\")</code> should return \"Not Equal\"",
-          "testString": "assert(testStrictNotEqual(\"17\") === \"Not Equal\", '<code>testStrictNotEqual(\"17\")</code> should return \"Not Equal\"');"
+          "text": "<code>testStrictNotEqual(\"17\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testStrictNotEqual(\"17\") === \"Not Equal\", '<code>testStrictNotEqual(\"17\")</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testStrictNotEqual(12)</code> should return \"Not Equal\"",
-          "testString": "assert(testStrictNotEqual(12) === \"Not Equal\", '<code>testStrictNotEqual(12)</code> should return \"Not Equal\"');"
+          "text": "<code>testStrictNotEqual(12)</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testStrictNotEqual(12) === \"Not Equal\", '<code>testStrictNotEqual(12)</code> 应该返回 \"Not Equal\"');"
         },
         {
-          "text": "<code>testStrictNotEqual(\"bob\")</code> should return \"Not Equal\"",
-          "testString": "assert(testStrictNotEqual(\"bob\") === \"Not Equal\", '<code>testStrictNotEqual(\"bob\")</code> should return \"Not Equal\"');"
+          "text": "<code>testStrictNotEqual(\"bob\")</code> 应该返回 \"Not Equal\"",
+          "testString": "assert(testStrictNotEqual(\"bob\") === \"Not Equal\", '<code>testStrictNotEqual(\"bob\")</code> 应该返回 \"Not Equal\"');"
         },
         {
           "text": "You should use the <code>!==</code> operator",
@@ -3410,32 +3410,32 @@
       ],
       "tests": [
         {
-          "text": "<code>testGreaterThan(0)</code> should return \"10 or Under\"",
-          "testString": "assert(testGreaterThan(0) === \"10 or Under\", '<code>testGreaterThan(0)</code> should return \"10 or Under\"');"
+          "text": "<code>testGreaterThan(0)</code> 应该返回 \"10 or Under\"",
+          "testString": "assert(testGreaterThan(0) === \"10 or Under\", '<code>testGreaterThan(0)</code> 应该返回 \"10 or Under\"');"
         },
         {
-          "text": "<code>testGreaterThan(10)</code> should return \"10 or Under\"",
-          "testString": "assert(testGreaterThan(10) === \"10 or Under\", '<code>testGreaterThan(10)</code> should return \"10 or Under\"');"
+          "text": "<code>testGreaterThan(10)</code> 应该返回 \"10 or Under\"",
+          "testString": "assert(testGreaterThan(10) === \"10 or Under\", '<code>testGreaterThan(10)</code> 应该返回 \"10 or Under\"');"
         },
         {
-          "text": "<code>testGreaterThan(11)</code> should return \"Over 10\"",
-          "testString": "assert(testGreaterThan(11) === \"Over 10\", '<code>testGreaterThan(11)</code> should return \"Over 10\"');"
+          "text": "<code>testGreaterThan(11)</code> 应该返回 \"Over 10\"",
+          "testString": "assert(testGreaterThan(11) === \"Over 10\", '<code>testGreaterThan(11)</code> 应该返回 \"Over 10\"');"
         },
         {
-          "text": "<code>testGreaterThan(99)</code> should return \"Over 10\"",
-          "testString": "assert(testGreaterThan(99) === \"Over 10\", '<code>testGreaterThan(99)</code> should return \"Over 10\"');"
+          "text": "<code>testGreaterThan(99)</code> 应该返回 \"Over 10\"",
+          "testString": "assert(testGreaterThan(99) === \"Over 10\", '<code>testGreaterThan(99)</code> 应该返回 \"Over 10\"');"
         },
         {
-          "text": "<code>testGreaterThan(100)</code> should return \"Over 10\"",
-          "testString": "assert(testGreaterThan(100) === \"Over 10\", '<code>testGreaterThan(100)</code> should return \"Over 10\"');"
+          "text": "<code>testGreaterThan(100)</code> 应该返回 \"Over 10\"",
+          "testString": "assert(testGreaterThan(100) === \"Over 10\", '<code>testGreaterThan(100)</code> 应该返回 \"Over 10\"');"
         },
         {
-          "text": "<code>testGreaterThan(101)</code> should return \"Over 100\"",
-          "testString": "assert(testGreaterThan(101) === \"Over 100\", '<code>testGreaterThan(101)</code> should return \"Over 100\"');"
+          "text": "<code>testGreaterThan(101)</code> 应该返回 \"Over 100\"",
+          "testString": "assert(testGreaterThan(101) === \"Over 100\", '<code>testGreaterThan(101)</code> 应该返回 \"Over 100\"');"
         },
         {
-          "text": "<code>testGreaterThan(150)</code> should return \"Over 100\"",
-          "testString": "assert(testGreaterThan(150) === \"Over 100\", '<code>testGreaterThan(150)</code> should return \"Over 100\"');"
+          "text": "<code>testGreaterThan(150)</code> 应该返回 \"Over 100\"",
+          "testString": "assert(testGreaterThan(150) === \"Over 100\", '<code>testGreaterThan(150)</code> 应该返回 \"Over 100\"');"
         },
         {
           "text": "You should use the <code>&gt;</code> operator at least twice",
@@ -3486,32 +3486,32 @@
       ],
       "tests": [
         {
-          "text": "<code>testGreaterOrEqual(0)</code> should return \"Less than 10\"",
-          "testString": "assert(testGreaterOrEqual(0) === \"Less than 10\", '<code>testGreaterOrEqual(0)</code> should return \"Less than 10\"');"
+          "text": "<code>testGreaterOrEqual(0)</code> 应该返回 \"Less than 10\"",
+          "testString": "assert(testGreaterOrEqual(0) === \"Less than 10\", '<code>testGreaterOrEqual(0)</code> 应该返回 \"Less than 10\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(9)</code> should return \"Less than 10\"",
-          "testString": "assert(testGreaterOrEqual(9) === \"Less than 10\", '<code>testGreaterOrEqual(9)</code> should return \"Less than 10\"');"
+          "text": "<code>testGreaterOrEqual(9)</code> 应该返回 \"Less than 10\"",
+          "testString": "assert(testGreaterOrEqual(9) === \"Less than 10\", '<code>testGreaterOrEqual(9)</code> 应该返回 \"Less than 10\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(10)</code> should return \"10 or Over\"",
-          "testString": "assert(testGreaterOrEqual(10) === \"10 or Over\", '<code>testGreaterOrEqual(10)</code> should return \"10 or Over\"');"
+          "text": "<code>testGreaterOrEqual(10)</code> 应该返回 \"10 or Over\"",
+          "testString": "assert(testGreaterOrEqual(10) === \"10 or Over\", '<code>testGreaterOrEqual(10)</code> 应该返回 \"10 or Over\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(11)</code> should return \"10 or Over\"",
-          "testString": "assert(testGreaterOrEqual(11) === \"10 or Over\", '<code>testGreaterOrEqual(11)</code> should return \"10 or Over\"');"
+          "text": "<code>testGreaterOrEqual(11)</code> 应该返回 \"10 or Over\"",
+          "testString": "assert(testGreaterOrEqual(11) === \"10 or Over\", '<code>testGreaterOrEqual(11)</code> 应该返回 \"10 or Over\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(19)</code> should return \"10 or Over\"",
-          "testString": "assert(testGreaterOrEqual(19) === \"10 or Over\", '<code>testGreaterOrEqual(19)</code> should return \"10 or Over\"');"
+          "text": "<code>testGreaterOrEqual(19)</code> 应该返回 \"10 or Over\"",
+          "testString": "assert(testGreaterOrEqual(19) === \"10 or Over\", '<code>testGreaterOrEqual(19)</code> 应该返回 \"10 or Over\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(100)</code> should return \"20 or Over\"",
-          "testString": "assert(testGreaterOrEqual(100) === \"20 or Over\", '<code>testGreaterOrEqual(100)</code> should return \"20 or Over\"');"
+          "text": "<code>testGreaterOrEqual(100)</code> 应该返回 \"20 or Over\"",
+          "testString": "assert(testGreaterOrEqual(100) === \"20 or Over\", '<code>testGreaterOrEqual(100)</code> 应该返回 \"20 or Over\"');"
         },
         {
-          "text": "<code>testGreaterOrEqual(21)</code> should return \"20 or Over\"",
-          "testString": "assert(testGreaterOrEqual(21) === \"20 or Over\", '<code>testGreaterOrEqual(21)</code> should return \"20 or Over\"');"
+          "text": "<code>testGreaterOrEqual(21)</code> 应该返回 \"20 or Over\"",
+          "testString": "assert(testGreaterOrEqual(21) === \"20 or Over\", '<code>testGreaterOrEqual(21)</code> 应该返回 \"20 or Over\"');"
         },
         {
           "text": "You should use the <code>&gt;=</code> operator at least twice",
@@ -3561,28 +3561,28 @@
       ],
       "tests": [
         {
-          "text": "<code>testLessThan(0)</code> should return \"Under 25\"",
-          "testString": "assert(testLessThan(0) === \"Under 25\", '<code>testLessThan(0)</code> should return \"Under 25\"');"
+          "text": "<code>testLessThan(0)</code> 应该返回 \"Under 25\"",
+          "testString": "assert(testLessThan(0) === \"Under 25\", '<code>testLessThan(0)</code> 应该返回 \"Under 25\"');"
         },
         {
-          "text": "<code>testLessThan(24)</code> should return \"Under 25\"",
-          "testString": "assert(testLessThan(24) === \"Under 25\", '<code>testLessThan(24)</code> should return \"Under 25\"');"
+          "text": "<code>testLessThan(24)</code> 应该返回 \"Under 25\"",
+          "testString": "assert(testLessThan(24) === \"Under 25\", '<code>testLessThan(24)</code> 应该返回 \"Under 25\"');"
         },
         {
-          "text": "<code>testLessThan(25)</code> should return \"Under 55\"",
-          "testString": "assert(testLessThan(25) === \"Under 55\", '<code>testLessThan(25)</code> should return \"Under 55\"');"
+          "text": "<code>testLessThan(25)</code> 应该返回 \"Under 55\"",
+          "testString": "assert(testLessThan(25) === \"Under 55\", '<code>testLessThan(25)</code> 应该返回 \"Under 55\"');"
         },
         {
-          "text": "<code>testLessThan(54)</code> should return \"Under 55\"",
-          "testString": "assert(testLessThan(54) === \"Under 55\", '<code>testLessThan(54)</code> should return \"Under 55\"');"
+          "text": "<code>testLessThan(54)</code> 应该返回 \"Under 55\"",
+          "testString": "assert(testLessThan(54) === \"Under 55\", '<code>testLessThan(54)</code> 应该返回 \"Under 55\"');"
         },
         {
-          "text": "<code>testLessThan(55)</code> should return \"55 or Over\"",
-          "testString": "assert(testLessThan(55) === \"55 or Over\", '<code>testLessThan(55)</code> should return \"55 or Over\"');"
+          "text": "<code>testLessThan(55)</code> 应该返回 \"55 or Over\"",
+          "testString": "assert(testLessThan(55) === \"55 or Over\", '<code>testLessThan(55)</code> 应该返回 \"55 or Over\"');"
         },
         {
-          "text": "<code>testLessThan(99)</code> should return \"55 or Over\"",
-          "testString": "assert(testLessThan(99) === \"55 or Over\", '<code>testLessThan(99)</code> should return \"55 or Over\"');"
+          "text": "<code>testLessThan(99)</code> 应该返回 \"55 or Over\"",
+          "testString": "assert(testLessThan(99) === \"55 or Over\", '<code>testLessThan(99)</code> 应该返回 \"55 or Over\"');"
         },
         {
           "text": "You should use the <code>&lt;</code> operator at least twice",
@@ -3632,32 +3632,32 @@
       ],
       "tests": [
         {
-          "text": "<code>testLessOrEqual(0)</code> should return \"Smaller Than or Equal to 12\"",
-          "testString": "assert(testLessOrEqual(0) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(0)</code> should return \"Smaller Than or Equal to 12\"');"
+          "text": "<code>testLessOrEqual(0)</code> 应该返回 \"Smaller Than or Equal to 12\"",
+          "testString": "assert(testLessOrEqual(0) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(0)</code> 应该返回 \"Smaller Than or Equal to 12\"');"
         },
         {
-          "text": "<code>testLessOrEqual(11)</code> should return \"Smaller Than or Equal to 12\"",
-          "testString": "assert(testLessOrEqual(11) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(11)</code> should return \"Smaller Than or Equal to 12\"');"
+          "text": "<code>testLessOrEqual(11)</code> 应该返回 \"Smaller Than or Equal to 12\"",
+          "testString": "assert(testLessOrEqual(11) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(11)</code> 应该返回 \"Smaller Than or Equal to 12\"');"
         },
         {
-          "text": "<code>testLessOrEqual(12)</code> should return \"Smaller Than or Equal to 12\"",
-          "testString": "assert(testLessOrEqual(12) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(12)</code> should return \"Smaller Than or Equal to 12\"');"
+          "text": "<code>testLessOrEqual(12)</code> 应该返回 \"Smaller Than or Equal to 12\"",
+          "testString": "assert(testLessOrEqual(12) === \"Smaller Than or Equal to 12\", '<code>testLessOrEqual(12)</code> 应该返回 \"Smaller Than or Equal to 12\"');"
         },
         {
-          "text": "<code>testLessOrEqual(23)</code> should return \"Smaller Than or Equal to 24\"",
-          "testString": "assert(testLessOrEqual(23) === \"Smaller Than or Equal to 24\", '<code>testLessOrEqual(23)</code> should return \"Smaller Than or Equal to 24\"');"
+          "text": "<code>testLessOrEqual(23)</code> 应该返回 \"Smaller Than or Equal to 24\"",
+          "testString": "assert(testLessOrEqual(23) === \"Smaller Than or Equal to 24\", '<code>testLessOrEqual(23)</code> 应该返回 \"Smaller Than or Equal to 24\"');"
         },
         {
-          "text": "<code>testLessOrEqual(24)</code> should return \"Smaller Than or Equal to 24\"",
-          "testString": "assert(testLessOrEqual(24) === \"Smaller Than or Equal to 24\", '<code>testLessOrEqual(24)</code> should return \"Smaller Than or Equal to 24\"');"
+          "text": "<code>testLessOrEqual(24)</code> 应该返回 \"Smaller Than or Equal to 24\"",
+          "testString": "assert(testLessOrEqual(24) === \"Smaller Than or Equal to 24\", '<code>testLessOrEqual(24)</code> 应该返回 \"Smaller Than or Equal to 24\"');"
         },
         {
-          "text": "<code>testLessOrEqual(25)</code> should return \"More Than 24\"",
-          "testString": "assert(testLessOrEqual(25) === \"More Than 24\", '<code>testLessOrEqual(25)</code> should return \"More Than 24\"');"
+          "text": "<code>testLessOrEqual(25)</code> 应该返回 \"More Than 24\"",
+          "testString": "assert(testLessOrEqual(25) === \"More Than 24\", '<code>testLessOrEqual(25)</code> 应该返回 \"More Than 24\"');"
         },
         {
-          "text": "<code>testLessOrEqual(55)</code> should return \"More Than 24\"",
-          "testString": "assert(testLessOrEqual(55) === \"More Than 24\", '<code>testLessOrEqual(55)</code> should return \"More Than 24\"');"
+          "text": "<code>testLessOrEqual(55)</code> 应该返回 \"More Than 24\"",
+          "testString": "assert(testLessOrEqual(55) === \"More Than 24\", '<code>testLessOrEqual(55)</code> 应该返回 \"More Than 24\"');"
         },
         {
           "text": "You should use the <code>&lt;=</code> operator at least twice",
@@ -3718,36 +3718,36 @@
           "testString": "assert(code.match(/if/g).length === 1, 'You should only have one <code>if</code> statement');"
         },
         {
-          "text": "<code>testLogicalAnd(0)</code> should return \"No\"",
-          "testString": "assert(testLogicalAnd(0) === \"No\", '<code>testLogicalAnd(0)</code> should return \"No\"');"
+          "text": "<code>testLogicalAnd(0)</code> 应该返回 \"No\"",
+          "testString": "assert(testLogicalAnd(0) === \"No\", '<code>testLogicalAnd(0)</code> 应该返回 \"No\"');"
         },
         {
-          "text": "<code>testLogicalAnd(24)</code> should return \"No\"",
-          "testString": "assert(testLogicalAnd(24) === \"No\", '<code>testLogicalAnd(24)</code> should return \"No\"');"
+          "text": "<code>testLogicalAnd(24)</code> 应该返回 \"No\"",
+          "testString": "assert(testLogicalAnd(24) === \"No\", '<code>testLogicalAnd(24)</code> 应该返回 \"No\"');"
         },
         {
-          "text": "<code>testLogicalAnd(25)</code> should return \"Yes\"",
-          "testString": "assert(testLogicalAnd(25) === \"Yes\", '<code>testLogicalAnd(25)</code> should return \"Yes\"');"
+          "text": "<code>testLogicalAnd(25)</code> 应该返回 \"Yes\"",
+          "testString": "assert(testLogicalAnd(25) === \"Yes\", '<code>testLogicalAnd(25)</code> 应该返回 \"Yes\"');"
         },
         {
-          "text": "<code>testLogicalAnd(30)</code> should return \"Yes\"",
-          "testString": "assert(testLogicalAnd(30) === \"Yes\", '<code>testLogicalAnd(30)</code> should return \"Yes\"');"
+          "text": "<code>testLogicalAnd(30)</code> 应该返回 \"Yes\"",
+          "testString": "assert(testLogicalAnd(30) === \"Yes\", '<code>testLogicalAnd(30)</code> 应该返回 \"Yes\"');"
         },
         {
-          "text": "<code>testLogicalAnd(50)</code> should return \"Yes\"",
-          "testString": "assert(testLogicalAnd(50) === \"Yes\", '<code>testLogicalAnd(50)</code> should return \"Yes\"');"
+          "text": "<code>testLogicalAnd(50)</code> 应该返回 \"Yes\"",
+          "testString": "assert(testLogicalAnd(50) === \"Yes\", '<code>testLogicalAnd(50)</code> 应该返回 \"Yes\"');"
         },
         {
-          "text": "<code>testLogicalAnd(51)</code> should return \"No\"",
-          "testString": "assert(testLogicalAnd(51) === \"No\", '<code>testLogicalAnd(51)</code> should return \"No\"');"
+          "text": "<code>testLogicalAnd(51)</code> 应该返回 \"No\"",
+          "testString": "assert(testLogicalAnd(51) === \"No\", '<code>testLogicalAnd(51)</code> 应该返回 \"No\"');"
         },
         {
-          "text": "<code>testLogicalAnd(75)</code> should return \"No\"",
-          "testString": "assert(testLogicalAnd(75) === \"No\", '<code>testLogicalAnd(75)</code> should return \"No\"');"
+          "text": "<code>testLogicalAnd(75)</code> 应该返回 \"No\"",
+          "testString": "assert(testLogicalAnd(75) === \"No\", '<code>testLogicalAnd(75)</code> 应该返回 \"No\"');"
         },
         {
-          "text": "<code>testLogicalAnd(80)</code> should return \"No\"",
-          "testString": "assert(testLogicalAnd(80) === \"No\", '<code>testLogicalAnd(80)</code> should return \"No\"');"
+          "text": "<code>testLogicalAnd(80)</code> 应该返回 \"No\"",
+          "testString": "assert(testLogicalAnd(80) === \"No\", '<code>testLogicalAnd(80)</code> 应该返回 \"No\"');"
         }
       ],
       "challengeType": 1,
@@ -3805,36 +3805,36 @@
           "testString": "assert(code.match(/if/g).length === 1, 'You should only have one <code>if</code> statement');"
         },
         {
-          "text": "<code>testLogicalOr(0)</code> should return \"Outside\"",
-          "testString": "assert(testLogicalOr(0) === \"Outside\", '<code>testLogicalOr(0)</code> should return \"Outside\"');"
+          "text": "<code>testLogicalOr(0)</code> 应该返回 \"Outside\"",
+          "testString": "assert(testLogicalOr(0) === \"Outside\", '<code>testLogicalOr(0)</code> 应该返回 \"Outside\"');"
         },
         {
-          "text": "<code>testLogicalOr(9)</code> should return \"Outside\"",
-          "testString": "assert(testLogicalOr(9) === \"Outside\", '<code>testLogicalOr(9)</code> should return \"Outside\"');"
+          "text": "<code>testLogicalOr(9)</code> 应该返回 \"Outside\"",
+          "testString": "assert(testLogicalOr(9) === \"Outside\", '<code>testLogicalOr(9)</code> 应该返回 \"Outside\"');"
         },
         {
-          "text": "<code>testLogicalOr(10)</code> should return \"Inside\"",
-          "testString": "assert(testLogicalOr(10) === \"Inside\", '<code>testLogicalOr(10)</code> should return \"Inside\"');"
+          "text": "<code>testLogicalOr(10)</code> 应该返回 \"Inside\"",
+          "testString": "assert(testLogicalOr(10) === \"Inside\", '<code>testLogicalOr(10)</code> 应该返回 \"Inside\"');"
         },
         {
-          "text": "<code>testLogicalOr(15)</code> should return \"Inside\"",
-          "testString": "assert(testLogicalOr(15) === \"Inside\", '<code>testLogicalOr(15)</code> should return \"Inside\"');"
+          "text": "<code>testLogicalOr(15)</code> 应该返回 \"Inside\"",
+          "testString": "assert(testLogicalOr(15) === \"Inside\", '<code>testLogicalOr(15)</code> 应该返回 \"Inside\"');"
         },
         {
-          "text": "<code>testLogicalOr(19)</code> should return \"Inside\"",
-          "testString": "assert(testLogicalOr(19) === \"Inside\", '<code>testLogicalOr(19)</code> should return \"Inside\"');"
+          "text": "<code>testLogicalOr(19)</code> 应该返回 \"Inside\"",
+          "testString": "assert(testLogicalOr(19) === \"Inside\", '<code>testLogicalOr(19)</code> 应该返回 \"Inside\"');"
         },
         {
-          "text": "<code>testLogicalOr(20)</code> should return \"Inside\"",
-          "testString": "assert(testLogicalOr(20) === \"Inside\", '<code>testLogicalOr(20)</code> should return \"Inside\"');"
+          "text": "<code>testLogicalOr(20)</code> 应该返回 \"Inside\"",
+          "testString": "assert(testLogicalOr(20) === \"Inside\", '<code>testLogicalOr(20)</code> 应该返回 \"Inside\"');"
         },
         {
-          "text": "<code>testLogicalOr(21)</code> should return \"Outside\"",
-          "testString": "assert(testLogicalOr(21) === \"Outside\", '<code>testLogicalOr(21)</code> should return \"Outside\"');"
+          "text": "<code>testLogicalOr(21)</code> 应该返回 \"Outside\"",
+          "testString": "assert(testLogicalOr(21) === \"Outside\", '<code>testLogicalOr(21)</code> 应该返回 \"Outside\"');"
         },
         {
-          "text": "<code>testLogicalOr(25)</code> should return \"Outside\"",
-          "testString": "assert(testLogicalOr(25) === \"Outside\", '<code>testLogicalOr(25)</code> should return \"Outside\"');"
+          "text": "<code>testLogicalOr(25)</code> 应该返回 \"Outside\"",
+          "testString": "assert(testLogicalOr(25) === \"Outside\", '<code>testLogicalOr(25)</code> 应该返回 \"Outside\"');"
         }
       ],
       "challengeType": 1,
@@ -3890,20 +3890,20 @@
           "testString": "assert(/else/g.test(code), 'You should use an <code>else</code> statement');"
         },
         {
-          "text": "<code>testElse(4)</code> should return \"5 or Smaller\"",
-          "testString": "assert(testElse(4) === \"5 or Smaller\", '<code>testElse(4)</code> should return \"5 or Smaller\"');"
+          "text": "<code>testElse(4)</code> 应该返回 \"5 or Smaller\"",
+          "testString": "assert(testElse(4) === \"5 or Smaller\", '<code>testElse(4)</code> 应该返回 \"5 or Smaller\"');"
         },
         {
-          "text": "<code>testElse(5)</code> should return \"5 or Smaller\"",
-          "testString": "assert(testElse(5) === \"5 or Smaller\", '<code>testElse(5)</code> should return \"5 or Smaller\"');"
+          "text": "<code>testElse(5)</code> 应该返回 \"5 or Smaller\"",
+          "testString": "assert(testElse(5) === \"5 or Smaller\", '<code>testElse(5)</code> 应该返回 \"5 or Smaller\"');"
         },
         {
-          "text": "<code>testElse(6)</code> should return \"Bigger than 5\"",
-          "testString": "assert(testElse(6) === \"Bigger than 5\", '<code>testElse(6)</code> should return \"Bigger than 5\"');"
+          "text": "<code>testElse(6)</code> 应该返回 \"Bigger than 5\"",
+          "testString": "assert(testElse(6) === \"Bigger than 5\", '<code>testElse(6)</code> 应该返回 \"Bigger than 5\"');"
         },
         {
-          "text": "<code>testElse(10)</code> should return \"Bigger than 5\"",
-          "testString": "assert(testElse(10) === \"Bigger than 5\", '<code>testElse(10)</code> should return \"Bigger than 5\"');"
+          "text": "<code>testElse(10)</code> 应该返回 \"Bigger than 5\"",
+          "testString": "assert(testElse(10) === \"Bigger than 5\", '<code>testElse(10)</code> 应该返回 \"Bigger than 5\"');"
         },
         {
           "text": "Do not change the code above or below the lines.",
@@ -3965,24 +3965,24 @@
           "testString": "assert(code.match(/if/g).length > 1, 'You should have at least two <code>if</code> statements');"
         },
         {
-          "text": "<code>testElseIf(0)</code> should return \"Smaller than 5\"",
-          "testString": "assert(testElseIf(0) === \"Smaller than 5\", '<code>testElseIf(0)</code> should return \"Smaller than 5\"');"
+          "text": "<code>testElseIf(0)</code> 应该返回 \"Smaller than 5\"",
+          "testString": "assert(testElseIf(0) === \"Smaller than 5\", '<code>testElseIf(0)</code> 应该返回 \"Smaller than 5\"');"
         },
         {
-          "text": "<code>testElseIf(5)</code> should return \"Between 5 and 10\"",
-          "testString": "assert(testElseIf(5) === \"Between 5 and 10\", '<code>testElseIf(5)</code> should return \"Between 5 and 10\"');"
+          "text": "<code>testElseIf(5)</code> 应该返回 \"Between 5 and 10\"",
+          "testString": "assert(testElseIf(5) === \"Between 5 and 10\", '<code>testElseIf(5)</code> 应该返回 \"Between 5 and 10\"');"
         },
         {
-          "text": "<code>testElseIf(7)</code> should return \"Between 5 and 10\"",
-          "testString": "assert(testElseIf(7) === \"Between 5 and 10\", '<code>testElseIf(7)</code> should return \"Between 5 and 10\"');"
+          "text": "<code>testElseIf(7)</code> 应该返回 \"Between 5 and 10\"",
+          "testString": "assert(testElseIf(7) === \"Between 5 and 10\", '<code>testElseIf(7)</code> 应该返回 \"Between 5 and 10\"');"
         },
         {
-          "text": "<code>testElseIf(10)</code> should return \"Between 5 and 10\"",
-          "testString": "assert(testElseIf(10) === \"Between 5 and 10\", '<code>testElseIf(10)</code> should return \"Between 5 and 10\"');"
+          "text": "<code>testElseIf(10)</code> 应该返回 \"Between 5 and 10\"",
+          "testString": "assert(testElseIf(10) === \"Between 5 and 10\", '<code>testElseIf(10)</code> 应该返回 \"Between 5 and 10\"');"
         },
         {
-          "text": "<code>testElseIf(12)</code> should return \"Greater than 10\"",
-          "testString": "assert(testElseIf(12) === \"Greater than 10\", '<code>testElseIf(12)</code> should return \"Greater than 10\"');"
+          "text": "<code>testElseIf(12)</code> 应该返回 \"Greater than 10\"",
+          "testString": "assert(testElseIf(12) === \"Greater than 10\", '<code>testElseIf(12)</code> 应该返回 \"Greater than 10\"');"
         }
       ],
       "challengeType": 1,
@@ -4034,16 +4034,16 @@
       ],
       "tests": [
         {
-          "text": "<code>orderMyLogic(4)</code> should return \"Less than 5\"",
-          "testString": "assert(orderMyLogic(4) === \"Less than 5\", '<code>orderMyLogic(4)</code> should return \"Less than 5\"');"
+          "text": "<code>orderMyLogic(4)</code> 应该返回 \"Less than 5\"",
+          "testString": "assert(orderMyLogic(4) === \"Less than 5\", '<code>orderMyLogic(4)</code> 应该返回 \"Less than 5\"');"
         },
         {
-          "text": "<code>orderMyLogic(6)</code> should return \"Less than 10\"",
-          "testString": "assert(orderMyLogic(6) === \"Less than 10\", '<code>orderMyLogic(6)</code> should return \"Less than 10\"');"
+          "text": "<code>orderMyLogic(6)</code> 应该返回 \"Less than 10\"",
+          "testString": "assert(orderMyLogic(6) === \"Less than 10\", '<code>orderMyLogic(6)</code> 应该返回 \"Less than 10\"');"
         },
         {
-          "text": "<code>orderMyLogic(11)</code> should return \"Greater than or equal to 10\"",
-          "testString": "assert(orderMyLogic(11) === \"Greater than or equal to 10\", '<code>orderMyLogic(11)</code> should return \"Greater than or equal to 10\"');"
+          "text": "<code>orderMyLogic(11)</code> 应该返回 \"Greater than or equal to 10\"",
+          "testString": "assert(orderMyLogic(11) === \"Greater than or equal to 10\", '<code>orderMyLogic(11)</code> 应该返回 \"Greater than or equal to 10\"');"
         }
       ],
       "challengeType": 1,
@@ -4099,44 +4099,44 @@
           "testString": "assert(code.match(/return/g).length >= 1, 'You should have at least one <code>return</code> statement');"
         },
         {
-          "text": "<code>testSize(0)</code> should return \"Tiny\"",
-          "testString": "assert(testSize(0) === \"Tiny\", '<code>testSize(0)</code> should return \"Tiny\"');"
+          "text": "<code>testSize(0)</code> 应该返回 \"Tiny\"",
+          "testString": "assert(testSize(0) === \"Tiny\", '<code>testSize(0)</code> 应该返回 \"Tiny\"');"
         },
         {
-          "text": "<code>testSize(4)</code> should return \"Tiny\"",
-          "testString": "assert(testSize(4) === \"Tiny\", '<code>testSize(4)</code> should return \"Tiny\"');"
+          "text": "<code>testSize(4)</code> 应该返回 \"Tiny\"",
+          "testString": "assert(testSize(4) === \"Tiny\", '<code>testSize(4)</code> 应该返回 \"Tiny\"');"
         },
         {
-          "text": "<code>testSize(5)</code> should return \"Small\"",
-          "testString": "assert(testSize(5) === \"Small\", '<code>testSize(5)</code> should return \"Small\"');"
+          "text": "<code>testSize(5)</code> 应该返回 \"Small\"",
+          "testString": "assert(testSize(5) === \"Small\", '<code>testSize(5)</code> 应该返回 \"Small\"');"
         },
         {
-          "text": "<code>testSize(8)</code> should return \"Small\"",
-          "testString": "assert(testSize(8) === \"Small\", '<code>testSize(8)</code> should return \"Small\"');"
+          "text": "<code>testSize(8)</code> 应该返回 \"Small\"",
+          "testString": "assert(testSize(8) === \"Small\", '<code>testSize(8)</code> 应该返回 \"Small\"');"
         },
         {
-          "text": "<code>testSize(10)</code> should return \"Medium\"",
-          "testString": "assert(testSize(10) === \"Medium\", '<code>testSize(10)</code> should return \"Medium\"');"
+          "text": "<code>testSize(10)</code> 应该返回 \"Medium\"",
+          "testString": "assert(testSize(10) === \"Medium\", '<code>testSize(10)</code> 应该返回 \"Medium\"');"
         },
         {
-          "text": "<code>testSize(14)</code> should return \"Medium\"",
-          "testString": "assert(testSize(14) === \"Medium\", '<code>testSize(14)</code> should return \"Medium\"');"
+          "text": "<code>testSize(14)</code> 应该返回 \"Medium\"",
+          "testString": "assert(testSize(14) === \"Medium\", '<code>testSize(14)</code> 应该返回 \"Medium\"');"
         },
         {
-          "text": "<code>testSize(15)</code> should return \"Large\"",
-          "testString": "assert(testSize(15) === \"Large\", '<code>testSize(15)</code> should return \"Large\"');"
+          "text": "<code>testSize(15)</code> 应该返回 \"Large\"",
+          "testString": "assert(testSize(15) === \"Large\", '<code>testSize(15)</code> 应该返回 \"Large\"');"
         },
         {
-          "text": "<code>testSize(17)</code> should return \"Large\"",
-          "testString": "assert(testSize(17) === \"Large\", '<code>testSize(17)</code> should return \"Large\"');"
+          "text": "<code>testSize(17)</code> 应该返回 \"Large\"",
+          "testString": "assert(testSize(17) === \"Large\", '<code>testSize(17)</code> 应该返回 \"Large\"');"
         },
         {
-          "text": "<code>testSize(20)</code> should return \"Huge\"",
-          "testString": "assert(testSize(20) === \"Huge\", '<code>testSize(20)</code> should return \"Huge\"');"
+          "text": "<code>testSize(20)</code> 应该返回 \"Huge\"",
+          "testString": "assert(testSize(20) === \"Huge\", '<code>testSize(20)</code> 应该返回 \"Huge\"');"
         },
         {
-          "text": "<code>testSize(25)</code> should return \"Huge\"",
-          "testString": "assert(testSize(25) === \"Huge\", '<code>testSize(25)</code> should return \"Huge\"');"
+          "text": "<code>testSize(25)</code> 应该返回 \"Huge\"",
+          "testString": "assert(testSize(25) === \"Huge\", '<code>testSize(25)</code> 应该返回 \"Huge\"');"
         }
       ],
       "challengeType": 1,
@@ -4177,48 +4177,48 @@
       ],
       "tests": [
         {
-          "text": "<code>golfScore(4, 1)</code> should return \"Hole-in-one!\"",
-          "testString": "assert(golfScore(4, 1) === \"Hole-in-one!\", '<code>golfScore(4, 1)</code> should return \"Hole-in-one!\"');"
+          "text": "<code>golfScore(4, 1)</code> 应该返回 \"Hole-in-one!\"",
+          "testString": "assert(golfScore(4, 1) === \"Hole-in-one!\", '<code>golfScore(4, 1)</code> 应该返回 \"Hole-in-one!\"');"
         },
         {
-          "text": "<code>golfScore(4, 2)</code> should return \"Eagle\"",
-          "testString": "assert(golfScore(4, 2) === \"Eagle\", '<code>golfScore(4, 2)</code> should return \"Eagle\"');"
+          "text": "<code>golfScore(4, 2)</code> 应该返回 \"Eagle\"",
+          "testString": "assert(golfScore(4, 2) === \"Eagle\", '<code>golfScore(4, 2)</code> 应该返回 \"Eagle\"');"
         },
         {
-          "text": "<code>golfScore(5, 2)</code> should return \"Eagle\"",
-          "testString": "assert(golfScore(5, 2) === \"Eagle\", '<code>golfScore(5, 2)</code> should return \"Eagle\"');"
+          "text": "<code>golfScore(5, 2)</code> 应该返回 \"Eagle\"",
+          "testString": "assert(golfScore(5, 2) === \"Eagle\", '<code>golfScore(5, 2)</code> 应该返回 \"Eagle\"');"
         },
         {
-          "text": "<code>golfScore(4, 3)</code> should return \"Birdie\"",
-          "testString": "assert(golfScore(4, 3) === \"Birdie\", '<code>golfScore(4, 3)</code> should return \"Birdie\"');"
+          "text": "<code>golfScore(4, 3)</code> 应该返回 \"Birdie\"",
+          "testString": "assert(golfScore(4, 3) === \"Birdie\", '<code>golfScore(4, 3)</code> 应该返回 \"Birdie\"');"
         },
         {
-          "text": "<code>golfScore(4, 4)</code> should return \"Par\"",
-          "testString": "assert(golfScore(4, 4) === \"Par\", '<code>golfScore(4, 4)</code> should return \"Par\"');"
+          "text": "<code>golfScore(4, 4)</code> 应该返回 \"Par\"",
+          "testString": "assert(golfScore(4, 4) === \"Par\", '<code>golfScore(4, 4)</code> 应该返回 \"Par\"');"
         },
         {
-          "text": "<code>golfScore(1, 1)</code> should return \"Hole-in-one!\"",
-          "testString": "assert(golfScore(1, 1) === \"Hole-in-one!\", '<code>golfScore(1, 1)</code> should return \"Hole-in-one!\"');"
+          "text": "<code>golfScore(1, 1)</code> 应该返回 \"Hole-in-one!\"",
+          "testString": "assert(golfScore(1, 1) === \"Hole-in-one!\", '<code>golfScore(1, 1)</code> 应该返回 \"Hole-in-one!\"');"
         },
         {
-          "text": "<code>golfScore(5, 5)</code> should return \"Par\"",
-          "testString": "assert(golfScore(5, 5) === \"Par\", '<code>golfScore(5, 5)</code> should return \"Par\"');"
+          "text": "<code>golfScore(5, 5)</code> 应该返回 \"Par\"",
+          "testString": "assert(golfScore(5, 5) === \"Par\", '<code>golfScore(5, 5)</code> 应该返回 \"Par\"');"
         },
         {
-          "text": "<code>golfScore(4, 5)</code> should return \"Bogey\"",
-          "testString": "assert(golfScore(4, 5) === \"Bogey\", '<code>golfScore(4, 5)</code> should return \"Bogey\"');"
+          "text": "<code>golfScore(4, 5)</code> 应该返回 \"Bogey\"",
+          "testString": "assert(golfScore(4, 5) === \"Bogey\", '<code>golfScore(4, 5)</code> 应该返回 \"Bogey\"');"
         },
         {
-          "text": "<code>golfScore(4, 6)</code> should return \"Double Bogey\"",
-          "testString": "assert(golfScore(4, 6) === \"Double Bogey\", '<code>golfScore(4, 6)</code> should return \"Double Bogey\"');"
+          "text": "<code>golfScore(4, 6)</code> 应该返回 \"Double Bogey\"",
+          "testString": "assert(golfScore(4, 6) === \"Double Bogey\", '<code>golfScore(4, 6)</code> 应该返回 \"Double Bogey\"');"
         },
         {
-          "text": "<code>golfScore(4, 7)</code> should return \"Go Home!\"",
-          "testString": "assert(golfScore(4, 7) === \"Go Home!\", '<code>golfScore(4, 7)</code> should return \"Go Home!\"');"
+          "text": "<code>golfScore(4, 7)</code> 应该返回 \"Go Home!\"",
+          "testString": "assert(golfScore(4, 7) === \"Go Home!\", '<code>golfScore(4, 7)</code> 应该返回 \"Go Home!\"');"
         },
         {
-          "text": "<code>golfScore(5, 9)</code> should return \"Go Home!\"",
-          "testString": "assert(golfScore(5, 9) === \"Go Home!\", '<code>golfScore(5, 9)</code> should return \"Go Home!\"');"
+          "text": "<code>golfScore(5, 9)</code> 应该返回 \"Go Home!\"",
+          "testString": "assert(golfScore(5, 9) === \"Go Home!\", '<code>golfScore(5, 9)</code> 应该返回 \"Go Home!\"');"
         }
       ],
       "challengeType": 1,
@@ -4407,40 +4407,40 @@
       ],
       "tests": [
         {
-          "text": "<code>sequentialSizes(1)</code> should return \"Low\"",
-          "testString": "assert(sequentialSizes(1) === \"Low\", '<code>sequentialSizes(1)</code> should return \"Low\"');"
+          "text": "<code>sequentialSizes(1)</code> 应该返回 \"Low\"",
+          "testString": "assert(sequentialSizes(1) === \"Low\", '<code>sequentialSizes(1)</code> 应该返回 \"Low\"');"
         },
         {
-          "text": "<code>sequentialSizes(2)</code> should return \"Low\"",
-          "testString": "assert(sequentialSizes(2) === \"Low\", '<code>sequentialSizes(2)</code> should return \"Low\"');"
+          "text": "<code>sequentialSizes(2)</code> 应该返回 \"Low\"",
+          "testString": "assert(sequentialSizes(2) === \"Low\", '<code>sequentialSizes(2)</code> 应该返回 \"Low\"');"
         },
         {
-          "text": "<code>sequentialSizes(3)</code> should return \"Low\"",
-          "testString": "assert(sequentialSizes(3) === \"Low\", '<code>sequentialSizes(3)</code> should return \"Low\"');"
+          "text": "<code>sequentialSizes(3)</code> 应该返回 \"Low\"",
+          "testString": "assert(sequentialSizes(3) === \"Low\", '<code>sequentialSizes(3)</code> 应该返回 \"Low\"');"
         },
         {
-          "text": "<code>sequentialSizes(4)</code> should return \"Mid\"",
-          "testString": "assert(sequentialSizes(4) === \"Mid\", '<code>sequentialSizes(4)</code> should return \"Mid\"');"
+          "text": "<code>sequentialSizes(4)</code> 应该返回 \"Mid\"",
+          "testString": "assert(sequentialSizes(4) === \"Mid\", '<code>sequentialSizes(4)</code> 应该返回 \"Mid\"');"
         },
         {
-          "text": "<code>sequentialSizes(5)</code> should return \"Mid\"",
-          "testString": "assert(sequentialSizes(5) === \"Mid\", '<code>sequentialSizes(5)</code> should return \"Mid\"');"
+          "text": "<code>sequentialSizes(5)</code> 应该返回 \"Mid\"",
+          "testString": "assert(sequentialSizes(5) === \"Mid\", '<code>sequentialSizes(5)</code> 应该返回 \"Mid\"');"
         },
         {
-          "text": "<code>sequentialSizes(6)</code> should return \"Mid\"",
-          "testString": "assert(sequentialSizes(6) === \"Mid\", '<code>sequentialSizes(6)</code> should return \"Mid\"');"
+          "text": "<code>sequentialSizes(6)</code> 应该返回 \"Mid\"",
+          "testString": "assert(sequentialSizes(6) === \"Mid\", '<code>sequentialSizes(6)</code> 应该返回 \"Mid\"');"
         },
         {
-          "text": "<code>sequentialSizes(7)</code> should return \"High\"",
-          "testString": "assert(sequentialSizes(7) === \"High\", '<code>sequentialSizes(7)</code> should return \"High\"');"
+          "text": "<code>sequentialSizes(7)</code> 应该返回 \"High\"",
+          "testString": "assert(sequentialSizes(7) === \"High\", '<code>sequentialSizes(7)</code> 应该返回 \"High\"');"
         },
         {
-          "text": "<code>sequentialSizes(8)</code> should return \"High\"",
-          "testString": "assert(sequentialSizes(8) === \"High\", '<code>sequentialSizes(8)</code> should return \"High\"');"
+          "text": "<code>sequentialSizes(8)</code> 应该返回 \"High\"",
+          "testString": "assert(sequentialSizes(8) === \"High\", '<code>sequentialSizes(8)</code> 应该返回 \"High\"');"
         },
         {
-          "text": "<code>sequentialSizes(9)</code> should return \"High\"",
-          "testString": "assert(sequentialSizes(9) === \"High\", '<code>sequentialSizes(9)</code> should return \"High\"');"
+          "text": "<code>sequentialSizes(9)</code> 应该返回 \"High\"",
+          "testString": "assert(sequentialSizes(9) === \"High\", '<code>sequentialSizes(9)</code> 应该返回 \"High\"');"
         },
         {
           "text": "You should not use any <code>if</code> or <code>else</code> statements",
@@ -4588,12 +4588,12 @@
       ],
       "tests": [
         {
-          "text": "<code>isLess(10,15)</code> should return <code>true</code>",
-          "testString": "assert(isLess(10,15) === true, '<code>isLess(10,15)</code> should return <code>true</code>');"
+          "text": "<code>isLess(10,15)</code> 应该返回 <code>true</code>",
+          "testString": "assert(isLess(10,15) === true, '<code>isLess(10,15)</code> 应该返回 <code>true</code>');"
         },
         {
-          "text": "<code>isLess(15,10)</code> should return <code>false</code>",
-          "testString": "assert(isLess(15, 10) === false, '<code>isLess(15,10)</code> should return <code>false</code>');"
+          "text": "<code>isLess(15,10)</code> 应该返回 <code>false</code>",
+          "testString": "assert(isLess(15, 10) === false, '<code>isLess(15,10)</code> 应该返回 <code>false</code>');"
         },
         {
           "text": "You should not use any <code>if</code> or <code>else</code> statements",
@@ -4642,28 +4642,28 @@
       ],
       "tests": [
         {
-          "text": "<code>abTest(2,2)</code> should return a number",
-          "testString": "assert(typeof abTest(2,2) === 'number' , '<code>abTest(2,2)</code> should return a number');"
+          "text": "<code>abTest(2,2)</code> 应该返回一个数字",
+          "testString": "assert(typeof abTest(2,2) === 'number' , '<code>abTest(2,2)</code> 应该返回一个数字');"
         },
         {
-          "text": "<code>abTest(2,2)</code> should return <code>8</code>",
-          "testString": "assert(abTest(2,2) === 8 , '<code>abTest(2,2)</code> should return <code>8</code>');"
+          "text": "<code>abTest(2,2)</code> 应该返回 <code>8</code>",
+          "testString": "assert(abTest(2,2) === 8 , '<code>abTest(2,2)</code> 应该返回 <code>8</code>');"
         },
         {
-          "text": "<code>abTest(-2,2)</code> should return <code>undefined</code>",
-          "testString": "assert(abTest(-2,2) === undefined , '<code>abTest(-2,2)</code> should return <code>undefined</code>');"
+          "text": "<code>abTest(-2,2)</code> 应该返回 <code>undefined</code>",
+          "testString": "assert(abTest(-2,2) === undefined , '<code>abTest(-2,2)</code> 应该返回 <code>undefined</code>');"
         },
         {
-          "text": "<code>abTest(2,-2)</code> should return <code>undefined</code>",
-          "testString": "assert(abTest(2,-2) === undefined , '<code>abTest(2,-2)</code> should return <code>undefined</code>');"
+          "text": "<code>abTest(2,-2)</code> 应该返回 <code>undefined</code>",
+          "testString": "assert(abTest(2,-2) === undefined , '<code>abTest(2,-2)</code> 应该返回 <code>undefined</code>');"
         },
         {
-          "text": "<code>abTest(2,8)</code> should return <code>18</code>",
-          "testString": "assert(abTest(2,8) === 18 , '<code>abTest(2,8)</code> should return <code>18</code>');"
+          "text": "<code>abTest(2,8)</code> 应该返回 <code>18</code>",
+          "testString": "assert(abTest(2,8) === 18 , '<code>abTest(2,8)</code> 应该返回 <code>18</code>');"
         },
         {
-          "text": "<code>abTest(3,3)</code> should return <code>12</code>",
-          "testString": "assert(abTest(3,3) === 12 , '<code>abTest(3,3)</code> should return <code>12</code>');"
+          "text": "<code>abTest(3,3)</code> 应该返回 <code>12</code>",
+          "testString": "assert(abTest(3,3) === 12 , '<code>abTest(3,3)</code> 应该返回 <code>12</code>');"
         }
       ],
       "challengeType": 1,
@@ -4709,32 +4709,32 @@
       ],
       "tests": [
         {
-          "text": "Cards Sequence 2, 3, 4, 5, 6 should return <code>5 Bet</code>",
-          "testString": "assert((function(){ count = 0; cc(2);cc(3);cc(4);cc(5);var out = cc(6); if(out === \"5 Bet\") {return true;} return false; })(), 'Cards Sequence 2, 3, 4, 5, 6 should return <code>5 Bet</code>');"
+          "text": "Cards Sequence 2, 3, 4, 5, 6 应该返回 <code>5 Bet</code>",
+          "testString": "assert((function(){ count = 0; cc(2);cc(3);cc(4);cc(5);var out = cc(6); if(out === \"5 Bet\") {return true;} return false; })(), 'Cards Sequence 2, 3, 4, 5, 6 应该返回 <code>5 Bet</code>');"
         },
         {
-          "text": "Cards Sequence 7, 8, 9 should return <code>0 Hold</code>",
-          "testString": "assert((function(){ count = 0; cc(7);cc(8);var out = cc(9); if(out === \"0 Hold\") {return true;} return false; })(), 'Cards Sequence 7, 8, 9 should return <code>0 Hold</code>');"
+          "text": "Cards Sequence 7, 8, 9 应该返回 <code>0 Hold</code>",
+          "testString": "assert((function(){ count = 0; cc(7);cc(8);var out = cc(9); if(out === \"0 Hold\") {return true;} return false; })(), 'Cards Sequence 7, 8, 9 应该返回 <code>0 Hold</code>');"
         },
         {
-          "text": "Cards Sequence 10, J, Q, K, A should return <code>-5 Hold</code>",
-          "testString": "assert((function(){ count = 0; cc(10);cc('J');cc('Q');cc('K');var out = cc('A'); if(out === \"-5 Hold\") {return true;} return false; })(), 'Cards Sequence 10, J, Q, K, A should return <code>-5 Hold</code>');"
+          "text": "Cards Sequence 10, J, Q, K, A 应该返回 <code>-5 Hold</code>",
+          "testString": "assert((function(){ count = 0; cc(10);cc('J');cc('Q');cc('K');var out = cc('A'); if(out === \"-5 Hold\") {return true;} return false; })(), 'Cards Sequence 10, J, Q, K, A 应该返回 <code>-5 Hold</code>');"
         },
         {
-          "text": "Cards Sequence 3, 7, Q, 8, A should return <code>-1 Hold</code>",
-          "testString": "assert((function(){ count = 0; cc(3);cc(7);cc('Q');cc(8);var out = cc('A'); if(out === \"-1 Hold\") {return true;} return false; })(), 'Cards Sequence 3, 7, Q, 8, A should return <code>-1 Hold</code>');"
+          "text": "Cards Sequence 3, 7, Q, 8, A 应该返回 <code>-1 Hold</code>",
+          "testString": "assert((function(){ count = 0; cc(3);cc(7);cc('Q');cc(8);var out = cc('A'); if(out === \"-1 Hold\") {return true;} return false; })(), 'Cards Sequence 3, 7, Q, 8, A 应该返回 <code>-1 Hold</code>');"
         },
         {
-          "text": "Cards Sequence 2, J, 9, 2, 7 should return <code>1 Bet</code>",
-          "testString": "assert((function(){ count = 0; cc(2);cc('J');cc(9);cc(2);var out = cc(7); if(out === \"1 Bet\") {return true;} return false; })(), 'Cards Sequence 2, J, 9, 2, 7 should return <code>1 Bet</code>');"
+          "text": "Cards Sequence 2, J, 9, 2, 7 应该返回 <code>1 Bet</code>",
+          "testString": "assert((function(){ count = 0; cc(2);cc('J');cc(9);cc(2);var out = cc(7); if(out === \"1 Bet\") {return true;} return false; })(), 'Cards Sequence 2, J, 9, 2, 7 应该返回 <code>1 Bet</code>');"
         },
         {
-          "text": "Cards Sequence 2, 2, 10 should return <code>1 Bet</code>",
-          "testString": "assert((function(){ count = 0; cc(2);cc(2);var out = cc(10); if(out === \"1 Bet\") {return true;} return false; })(), 'Cards Sequence 2, 2, 10 should return <code>1 Bet</code>');"
+          "text": "Cards Sequence 2, 2, 10 应该返回 <code>1 Bet</code>",
+          "testString": "assert((function(){ count = 0; cc(2);cc(2);var out = cc(10); if(out === \"1 Bet\") {return true;} return false; })(), 'Cards Sequence 2, 2, 10 应该返回 <code>1 Bet</code>');"
         },
         {
-          "text": "Cards Sequence 3, 2, A, 10, K should return <code>-1 Hold</code>",
-          "testString": "assert((function(){ count = 0; cc(3);cc(2);cc('A');cc(10);var out = cc('K'); if(out === \"-1 Hold\") {return true;} return false; })(), 'Cards Sequence 3, 2, A, 10, K should return <code>-1 Hold</code>');"
+          "text": "Cards Sequence 3, 2, A, 10, K 应该返回 <code>-1 Hold</code>",
+          "testString": "assert((function(){ count = 0; cc(3);cc(2);cc('A');cc(10);var out = cc('K'); if(out === \"-1 Hold\") {return true;} return false; })(), 'Cards Sequence 3, 2, A, 10, K 应该返回 <code>-1 Hold</code>');"
         }
       ],
       "challengeType": 1,
@@ -4852,16 +4852,16 @@
       ],
       "tests": [
         {
-          "text": "<code>hatValue</code> should be a string",
-          "testString": "assert(typeof hatValue === 'string' , '<code>hatValue</code> should be a string');"
+          "text": "<code>hatValue</code> 应该是一个字符串。",
+          "testString": "assert(typeof hatValue === 'string' , '<code>hatValue</code> 应该是一个字符串。');"
         },
         {
           "text": "The value of <code>hatValue</code> should be <code>\"ballcap\"</code>",
           "testString": "assert(hatValue === 'ballcap' , 'The value of <code>hatValue</code> should be <code>\"ballcap\"</code>');"
         },
         {
-          "text": "<code>shirtValue</code> should be a string",
-          "testString": "assert(typeof shirtValue === 'string' , '<code>shirtValue</code> should be a string');"
+          "text": "<code>shirtValue</code> 应该是一个字符串。",
+          "testString": "assert(typeof shirtValue === 'string' , '<code>shirtValue</code> 应该是一个字符串。');"
         },
         {
           "text": "The value of <code>shirtValue</code> should be <code>\"jersey\"</code>",
@@ -4916,16 +4916,16 @@
       ],
       "tests": [
         {
-          "text": "<code>entreeValue</code> should be a string",
-          "testString": "assert(typeof entreeValue === 'string' , '<code>entreeValue</code> should be a string');"
+          "text": "<code>entreeValue</code> 应该是一个字符串。",
+          "testString": "assert(typeof entreeValue === 'string' , '<code>entreeValue</code> 应该是一个字符串。');"
         },
         {
           "text": "The value of <code>entreeValue</code> should be <code>\"hamburger\"</code>",
           "testString": "assert(entreeValue === 'hamburger' , 'The value of <code>entreeValue</code> should be <code>\"hamburger\"</code>');"
         },
         {
-          "text": "<code>drinkValue</code> should be a string",
-          "testString": "assert(typeof drinkValue === 'string' , '<code>drinkValue</code> should be a string');"
+          "text": "<code>drinkValue</code> 应该是一个字符串。",
+          "testString": "assert(typeof drinkValue === 'string' , '<code>drinkValue</code> 应该是一个字符串。');"
         },
         {
           "text": "The value of <code>drinkValue</code> should be <code>\"water\"</code>",
@@ -4986,8 +4986,8 @@
           "testString": "assert(typeof playerNumber === 'number', '<code>playerNumber</code> should be a number');"
         },
         {
-          "text": "The variable <code>player</code> should be a string",
-          "testString": "assert(typeof player === 'string', 'The variable <code>player</code> should be a string');"
+          "text": "变量 <code>player</code> 应该是一个字符串。",
+          "testString": "assert(typeof player === 'string', '变量 <code>player</code> 应该是一个字符串。');"
         },
         {
           "text": "The value of <code>player</code> should be \"Montana\"",
@@ -5233,32 +5233,32 @@
       ],
       "tests": [
         {
-          "text": "<code>phoneticLookup(\"alpha\")</code> should equal <code>\"Adams\"</code>",
-          "testString": "assert(phoneticLookup(\"alpha\") === 'Adams', '<code>phoneticLookup(\"alpha\")</code> should equal <code>\"Adams\"</code>');"
+          "text": "<code>phoneticLookup(\"alpha\")</code> 应该等于 <code>\"Adams\"</code>",
+          "testString": "assert(phoneticLookup(\"alpha\") === 'Adams', '<code>phoneticLookup(\"alpha\")</code> 应该等于 <code>\"Adams\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"bravo\")</code> should equal <code>\"Boston\"</code>",
-          "testString": "assert(phoneticLookup(\"bravo\") === 'Boston', '<code>phoneticLookup(\"bravo\")</code> should equal <code>\"Boston\"</code>');"
+          "text": "<code>phoneticLookup(\"bravo\")</code> 应该等于 <code>\"Boston\"</code>",
+          "testString": "assert(phoneticLookup(\"bravo\") === 'Boston', '<code>phoneticLookup(\"bravo\")</code> 应该等于 <code>\"Boston\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"charlie\")</code> should equal <code>\"Chicago\"</code>",
-          "testString": "assert(phoneticLookup(\"charlie\") === 'Chicago', '<code>phoneticLookup(\"charlie\")</code> should equal <code>\"Chicago\"</code>');"
+          "text": "<code>phoneticLookup(\"charlie\")</code> 应该等于 <code>\"Chicago\"</code>",
+          "testString": "assert(phoneticLookup(\"charlie\") === 'Chicago', '<code>phoneticLookup(\"charlie\")</code> 应该等于 <code>\"Chicago\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"delta\")</code> should equal <code>\"Denver\"</code>",
-          "testString": "assert(phoneticLookup(\"delta\") === 'Denver', '<code>phoneticLookup(\"delta\")</code> should equal <code>\"Denver\"</code>');"
+          "text": "<code>phoneticLookup(\"delta\")</code> 应该等于 <code>\"Denver\"</code>",
+          "testString": "assert(phoneticLookup(\"delta\") === 'Denver', '<code>phoneticLookup(\"delta\")</code> 应该等于 <code>\"Denver\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"echo\")</code> should equal <code>\"Easy\"</code>",
-          "testString": "assert(phoneticLookup(\"echo\") === 'Easy', '<code>phoneticLookup(\"echo\")</code> should equal <code>\"Easy\"</code>');"
+          "text": "<code>phoneticLookup(\"echo\")</code> 应该等于 <code>\"Easy\"</code>",
+          "testString": "assert(phoneticLookup(\"echo\") === 'Easy', '<code>phoneticLookup(\"echo\")</code> 应该等于 <code>\"Easy\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"foxtrot\")</code> should equal <code>\"Frank\"</code>",
-          "testString": "assert(phoneticLookup(\"foxtrot\") === 'Frank', '<code>phoneticLookup(\"foxtrot\")</code> should equal <code>\"Frank\"</code>');"
+          "text": "<code>phoneticLookup(\"foxtrot\")</code> 应该等于 <code>\"Frank\"</code>",
+          "testString": "assert(phoneticLookup(\"foxtrot\") === 'Frank', '<code>phoneticLookup(\"foxtrot\")</code> 应该等于 <code>\"Frank\"</code>');"
         },
         {
-          "text": "<code>phoneticLookup(\"\")</code> should equal <code>undefined</code>",
-          "testString": "assert(typeof phoneticLookup(\"\") === 'undefined', '<code>phoneticLookup(\"\")</code> should equal <code>undefined</code>');"
+          "text": "<code>phoneticLookup(\"\")</code> 应该等于 <code>undefined</code>",
+          "testString": "assert(typeof phoneticLookup(\"\") === 'undefined', '<code>phoneticLookup(\"\")</code> 应该等于 <code>undefined</code>');"
         },
         {
           "text": "You should not modify the <code>return</code> statement",
@@ -5329,16 +5329,16 @@
       ],
       "tests": [
         {
-          "text": "<code>checkObj(\"gift\")</code> should return  <code>\"pony\"</code>.",
-          "testString": "assert(checkObj(\"gift\") === \"pony\", '<code>checkObj(\"gift\")</code> should return  <code>\"pony\"</code>.');"
+          "text": "<code>checkObj(\"gift\")</code> 应该返回  <code>\"pony\"</code>.",
+          "testString": "assert(checkObj(\"gift\") === \"pony\", '<code>checkObj(\"gift\")</code> 应该返回  <code>\"pony\"</code>.');"
         },
         {
-          "text": "<code>checkObj(\"pet\")</code> should return  <code>\"kitten\"</code>.",
-          "testString": "assert(checkObj(\"pet\") === \"kitten\", '<code>checkObj(\"pet\")</code> should return  <code>\"kitten\"</code>.');"
+          "text": "<code>checkObj(\"pet\")</code> 应该返回  <code>\"kitten\"</code>.",
+          "testString": "assert(checkObj(\"pet\") === \"kitten\", '<code>checkObj(\"pet\")</code> 应该返回  <code>\"kitten\"</code>.');"
         },
         {
-          "text": "<code>checkObj(\"house\")</code> should return  <code>\"Not Found\"</code>.",
-          "testString": "assert(checkObj(\"house\") === \"Not Found\", '<code>checkObj(\"house\")</code> should return  <code>\"Not Found\"</code>.');"
+          "text": "<code>checkObj(\"house\")</code> 应该返回  <code>\"Not Found\"</code>.",
+          "testString": "assert(checkObj(\"house\") === \"Not Found\", '<code>checkObj(\"house\")</code> 应该返回  <code>\"Not Found\"</code>.');"
         }
       ],
       "challengeType": 1,
@@ -5390,16 +5390,16 @@
       ],
       "tests": [
         {
-          "text": "<code>myMusic</code> should be an array",
-          "testString": "assert(Array.isArray(myMusic), '<code>myMusic</code> should be an array');"
+          "text": "<code>myMusic</code> 应该是一个数组。",
+          "testString": "assert(Array.isArray(myMusic), '<code>myMusic</code> 应该是一个数组。');"
         },
         {
           "text": "<code>myMusic</code> should have at least two elements",
           "testString": "assert(myMusic.length > 1, '<code>myMusic</code> should have at least two elements');"
         },
         {
-          "text": "<code>myMusic[1]</code> should be an object",
-          "testString": "assert(typeof myMusic[1] === 'object', '<code>myMusic[1]</code> should be an object');"
+          "text": "<code>myMusic[1]</code> 应该是一个对象。",
+          "testString": "assert(typeof myMusic[1] === 'object', '<code>myMusic[1]</code> 应该是一个对象。');"
         },
         {
           "text": "<code>myMusic[1]</code> should have at least 4 properties",
@@ -5422,8 +5422,8 @@
           "testString": "assert(myMusic[1].hasOwnProperty('formats') && Array.isArray(myMusic[1].formats), '<code>myMusic[1]</code> should contain a <code>formats</code> property which is an array');"
         },
         {
-          "text": "<code>formats</code> should be an array of strings with at least two elements",
-          "testString": "assert(myMusic[1].formats.every(function(item) { return (typeof item === \"string\")}) && myMusic[1].formats.length > 1, '<code>formats</code> should be an array of strings with at least two elements');"
+          "text": "<code>formats</code> 应该是一个包含至少两个元素的字符串的数组。",
+          "testString": "assert(myMusic[1].formats.every(function(item) { return (typeof item === \"string\")}) && myMusic[1].formats.length > 1, '<code>formats</code> 应该是一个包含至少两个元素的字符串的数组。');"
         }
       ],
       "challengeType": 1,
@@ -5472,8 +5472,8 @@
       ],
       "tests": [
         {
-          "text": "<code>gloveBoxContents</code> should equal \"maps\"",
-          "testString": "assert(gloveBoxContents === \"maps\", '<code>gloveBoxContents</code> should equal \"maps\"');"
+          "text": "<code>gloveBoxContents</code> 应该等于 \"maps\"",
+          "testString": "assert(gloveBoxContents === \"maps\", '<code>gloveBoxContents</code> 应该等于 \"maps\"');"
         },
         {
           "text": "Use dot and bracket notation to access <code>myStorage</code>",
@@ -5532,8 +5532,8 @@
       ],
       "tests": [
         {
-          "text": "<code>secondTree</code> should equal \"pine\"",
-          "testString": "assert(secondTree === \"pine\", '<code>secondTree</code> should equal \"pine\"');"
+          "text": "<code>secondTree</code> 应该等于 \"pine\"",
+          "testString": "assert(secondTree === \"pine\", '<code>secondTree</code> 应该等于 \"pine\"');"
         },
         {
           "text": "Use dot and bracket notation to access <code>myPlants</code>",
@@ -5709,8 +5709,8 @@
           "testString": "assert(code.match(/while/g), 'You should be using a <code>while</code> loop for this.');"
         },
         {
-          "text": "<code>myArray</code> should equal <code>[0,1,2,3,4]</code>.",
-          "testString": "assert.deepEqual(myArray, [0,1,2,3,4], '<code>myArray</code> should equal <code>[0,1,2,3,4]</code>.');"
+          "text": "<code>myArray</code> 应该等于 <code>[0,1,2,3,4]</code>.",
+          "testString": "assert.deepEqual(myArray, [0,1,2,3,4], '<code>myArray</code> 应该等于 <code>[0,1,2,3,4]</code>.');"
         }
       ],
       "challengeType": 1,
@@ -5760,8 +5760,8 @@
           "testString": "assert(code.match(/for\\s*\\(/g).length > 1, 'You should be using a <code>for</code> loop for this.');"
         },
         {
-          "text": "<code>myArray</code> should equal <code>[1,2,3,4,5]</code>.",
-          "testString": "assert.deepEqual(myArray, [1,2,3,4,5], '<code>myArray</code> should equal <code>[1,2,3,4,5]</code>.');"
+          "text": "<code>myArray</code> 应该等于 <code>[1,2,3,4,5]</code>.",
+          "testString": "assert.deepEqual(myArray, [1,2,3,4,5], '<code>myArray</code> 应该等于 <code>[1,2,3,4,5]</code>.');"
         }
       ],
       "challengeType": 1,
@@ -5813,8 +5813,8 @@
           "testString": "assert(code.match(/for\\s*\\(/g).length > 1, 'You should be using a <code>for</code> loop for this.');"
         },
         {
-          "text": "<code>myArray</code> should equal <code>[1,3,5,7,9]</code>.",
-          "testString": "assert.deepEqual(myArray, [1,3,5,7,9], '<code>myArray</code> should equal <code>[1,3,5,7,9]</code>.');"
+          "text": "<code>myArray</code> 应该等于 <code>[1,3,5,7,9]</code>.",
+          "testString": "assert.deepEqual(myArray, [1,3,5,7,9], '<code>myArray</code> 应该等于 <code>[1,3,5,7,9]</code>.');"
         }
       ],
       "challengeType": 1,
@@ -5871,8 +5871,8 @@
           "testString": "assert(code.match(/myArray.push/), 'You should be using the array method <code>push</code>.');"
         },
         {
-          "text": "<code>myArray</code> should equal <code>[9,7,5,3,1]</code>.",
-          "testString": "assert.deepEqual(myArray, [9,7,5,3,1], '<code>myArray</code> should equal <code>[9,7,5,3,1]</code>.');"
+          "text": "<code>myArray</code> 应该等于 <code>[9,7,5,3,1]</code>.",
+          "testString": "assert.deepEqual(myArray, [9,7,5,3,1], '<code>myArray</code> 应该等于 <code>[9,7,5,3,1]</code>.');"
         }
       ],
       "challengeType": 1,
@@ -5923,8 +5923,8 @@
           "testString": "assert(code.match(/var.*?total\\s*=\\s*0.*?;/), '<code>total</code> should be declared and initialized to 0');"
         },
         {
-          "text": "<code>total</code> should equal 20",
-          "testString": "assert(total === 20, '<code>total</code> should equal 20');"
+          "text": "<code>total</code> 应该等于 20",
+          "testString": "assert(total === 20, '<code>total</code> 应该等于 20');"
         },
         {
           "text": "You should use a <code>for</code> loop to iterate through <code>myArr</code>",
@@ -5980,16 +5980,16 @@
       ],
       "tests": [
         {
-          "text": "<code>multiplyAll([[1],[2],[3]])</code> should return <code>6</code>",
-          "testString": "assert(multiplyAll([[1],[2],[3]]) === 6, '<code>multiplyAll([[1],[2],[3]])</code> should return <code>6</code>');"
+          "text": "<code>multiplyAll([[1],[2],[3]])</code> 应该返回 <code>6</code>",
+          "testString": "assert(multiplyAll([[1],[2],[3]]) === 6, '<code>multiplyAll([[1],[2],[3]])</code> 应该返回 <code>6</code>');"
         },
         {
-          "text": "<code>multiplyAll([[1,2],[3,4],[5,6,7]])</code> should return <code>5040</code>",
-          "testString": "assert(multiplyAll([[1,2],[3,4],[5,6,7]]) === 5040, '<code>multiplyAll([[1,2],[3,4],[5,6,7]])</code> should return <code>5040</code>');"
+          "text": "<code>multiplyAll([[1,2],[3,4],[5,6,7]])</code> 应该返回 <code>5040</code>",
+          "testString": "assert(multiplyAll([[1,2],[3,4],[5,6,7]]) === 5040, '<code>multiplyAll([[1,2],[3,4],[5,6,7]])</code> 应该返回 <code>5040</code>');"
         },
         {
-          "text": "<code>multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])</code> should return <code>54</code>",
-          "testString": "assert(multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]]) === 54, '<code>multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])</code> should return <code>54</code>');"
+          "text": "<code>multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])</code> 应该返回 <code>54</code>",
+          "testString": "assert(multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]]) === 54, '<code>multiplyAll([[5,1],[0.2, 4, 0.5],[3, 9]])</code> 应该返回 <code>54</code>');"
         }
       ],
       "challengeType": 1,
@@ -6044,12 +6044,12 @@
           "testString": "assert(code.match(/do/g), 'You should be using a <code>do...while</code> loop for this.');"
         },
         {
-          "text": "<code>myArray</code> should equal <code>[10]</code>.",
-          "testString": "assert.deepEqual(myArray, [10], '<code>myArray</code> should equal <code>[10]</code>.');"
+          "text": "<code>myArray</code> 应该等于 <code>[10]</code>.",
+          "testString": "assert.deepEqual(myArray, [10], '<code>myArray</code> 应该等于 <code>[10]</code>.');"
         },
         {
-          "text": "<code>i</code> should equal <code>11</code>",
-          "testString": "assert.deepEqual(i, 11, '<code>i</code> should equal <code>11</code>');"
+          "text": "<code>i</code> 应该等于 <code>11</code>",
+          "testString": "assert.deepEqual(i, 11, '<code>i</code> 应该等于 <code>11</code>');"
         }
       ],
       "challengeType": 1,
@@ -6095,28 +6095,28 @@
       ],
       "tests": [
         {
-          "text": "<code>\"Kristian\", \"lastName\"</code> should return <code>\"Vos\"</code>",
-          "testString": "assert(lookUpProfile('Kristian','lastName') === \"Vos\", '<code>\"Kristian\", \"lastName\"</code> should return <code>\"Vos\"</code>');"
+          "text": "<code>\"Kristian\", \"lastName\"</code> 应该返回 <code>\"Vos\"</code>",
+          "testString": "assert(lookUpProfile('Kristian','lastName') === \"Vos\", '<code>\"Kristian\", \"lastName\"</code> 应该返回 <code>\"Vos\"</code>');"
         },
         {
-          "text": "<code>\"Sherlock\", \"likes\"</code> should return <code>[\"Intriguing Cases\", \"Violin\"]</code>",
-          "testString": "assert.deepEqual(lookUpProfile(\"Sherlock\", \"likes\"), [\"Intriguing Cases\", \"Violin\"], '<code>\"Sherlock\", \"likes\"</code> should return <code>[\"Intriguing Cases\", \"Violin\"]</code>');"
+          "text": "<code>\"Sherlock\", \"likes\"</code> 应该返回 <code>[\"Intriguing Cases\", \"Violin\"]</code>",
+          "testString": "assert.deepEqual(lookUpProfile(\"Sherlock\", \"likes\"), [\"Intriguing Cases\", \"Violin\"], '<code>\"Sherlock\", \"likes\"</code> 应该返回 <code>[\"Intriguing Cases\", \"Violin\"]</code>');"
         },
         {
-          "text": "<code>\"Harry\",\"likes\"</code> should return an array",
-          "testString": "assert(typeof lookUpProfile(\"Harry\", \"likes\") === \"object\", '<code>\"Harry\",\"likes\"</code> should return an array');"
+          "text": "<code>\"Harry\",\"likes\"</code> 应该返回 an array",
+          "testString": "assert(typeof lookUpProfile(\"Harry\", \"likes\") === \"object\", '<code>\"Harry\",\"likes\"</code> 应该返回 an array');"
         },
         {
-          "text": "<code>\"Bob\", \"number\"</code> should return \"No such contact\"",
-          "testString": "assert(lookUpProfile(\"Bob\", \"number\") === \"No such contact\", '<code>\"Bob\", \"number\"</code> should return \"No such contact\"');"
+          "text": "<code>\"Bob\", \"number\"</code> 应该返回 \"No such contact\"",
+          "testString": "assert(lookUpProfile(\"Bob\", \"number\") === \"No such contact\", '<code>\"Bob\", \"number\"</code> 应该返回 \"No such contact\"');"
         },
         {
-          "text": "<code>\"Bob\", \"potato\"</code> should return \"No such contact\"",
-          "testString": "assert(lookUpProfile(\"Bob\", \"potato\") === \"No such contact\", '<code>\"Bob\", \"potato\"</code> should return \"No such contact\"');"
+          "text": "<code>\"Bob\", \"potato\"</code> 应该返回 \"No such contact\"",
+          "testString": "assert(lookUpProfile(\"Bob\", \"potato\") === \"No such contact\", '<code>\"Bob\", \"potato\"</code> 应该返回 \"No such contact\"');"
         },
         {
-          "text": "<code>\"Akira\", \"address\"</code> should return \"No such property\"",
-          "testString": "assert(lookUpProfile(\"Akira\", \"address\") === \"No such property\", '<code>\"Akira\", \"address\"</code> should return \"No such property\"');"
+          "text": "<code>\"Akira\", \"address\"</code> 应该返回 \"No such property\"",
+          "testString": "assert(lookUpProfile(\"Akira\", \"address\") === \"No such property\", '<code>\"Akira\", \"address\"</code> 应该返回 \"No such property\"');"
         }
       ],
       "challengeType": 1,
@@ -6184,8 +6184,8 @@
       ],
       "tests": [
         {
-          "text": "<code>randomFraction</code> should return a random number.",
-          "testString": "assert(typeof randomFraction() === \"number\", '<code>randomFraction</code> should return a random number.');"
+          "text": "<code>randomFraction</code> 应该返回 a random number.",
+          "testString": "assert(typeof randomFraction() === \"number\", '<code>randomFraction</code> 应该返回 a random number.');"
         },
         {
           "text": "The number returned by <code>randomFraction</code> should be a decimal.",
@@ -6371,20 +6371,20 @@
           "testString": "assert(/parseInt/g.test(code), '<code>convertToInteger</code> should use the <code>parseInt()</code> function');"
         },
         {
-          "text": "<code>convertToInteger(\"56\")</code> should return a number",
-          "testString": "assert(typeof(convertToInteger(\"56\")) === \"number\", '<code>convertToInteger(\"56\")</code> should return a number');"
+          "text": "<code>convertToInteger(\"56\")</code> 应该返回一个数字",
+          "testString": "assert(typeof(convertToInteger(\"56\")) === \"number\", '<code>convertToInteger(\"56\")</code> 应该返回一个数字');"
         },
         {
-          "text": "<code>convertToInteger(\"56\")</code> should return 56",
-          "testString": "assert(convertToInteger(\"56\") === 56, '<code>convertToInteger(\"56\")</code> should return 56');"
+          "text": "<code>convertToInteger(\"56\")</code> 应该返回 56",
+          "testString": "assert(convertToInteger(\"56\") === 56, '<code>convertToInteger(\"56\")</code> 应该返回 56');"
         },
         {
-          "text": "<code>convertToInteger(\"77\")</code> should return 77",
-          "testString": "assert(convertToInteger(\"77\") === 77, '<code>convertToInteger(\"77\")</code> should return 77');"
+          "text": "<code>convertToInteger(\"77\")</code> 应该返回 77",
+          "testString": "assert(convertToInteger(\"77\") === 77, '<code>convertToInteger(\"77\")</code> 应该返回 77');"
         },
         {
-          "text": "<code>convertToInteger(\"JamesBond\")</code> should return NaN",
-          "testString": "assert.isNaN(convertToInteger(\"JamesBond\"), '<code>convertToInteger(\"JamesBond\")</code> should return NaN');"
+          "text": "<code>convertToInteger(\"JamesBond\")</code> 应该返回 NaN",
+          "testString": "assert.isNaN(convertToInteger(\"JamesBond\"), '<code>convertToInteger(\"JamesBond\")</code> 应该返回 NaN');"
         }
       ],
       "challengeType": 1,
@@ -6426,20 +6426,20 @@
           "testString": "assert(/parseInt/g.test(code), '<code>convertToInteger</code> should use the <code>parseInt()</code> function');"
         },
         {
-          "text": "<code>convertToInteger(\"10011\")</code> should return a number",
-          "testString": "assert(typeof(convertToInteger(\"10011\")) === \"number\", '<code>convertToInteger(\"10011\")</code> should return a number');"
+          "text": "<code>convertToInteger(\"10011\")</code> 应该返回一个数字",
+          "testString": "assert(typeof(convertToInteger(\"10011\")) === \"number\", '<code>convertToInteger(\"10011\")</code> 应该返回一个数字');"
         },
         {
-          "text": "<code>convertToInteger(\"10011\")</code> should return 19",
-          "testString": "assert(convertToInteger(\"10011\") === 19, '<code>convertToInteger(\"10011\")</code> should return 19');"
+          "text": "<code>convertToInteger(\"10011\")</code> 应该返回 19",
+          "testString": "assert(convertToInteger(\"10011\") === 19, '<code>convertToInteger(\"10011\")</code> 应该返回 19');"
         },
         {
-          "text": "<code>convertToInteger(\"111001\")</code> should return 57",
-          "testString": "assert(convertToInteger(\"111001\") === 57, '<code>convertToInteger(\"111001\")</code> should return 57');"
+          "text": "<code>convertToInteger(\"111001\")</code> 应该返回 57",
+          "testString": "assert(convertToInteger(\"111001\") === 57, '<code>convertToInteger(\"111001\")</code> 应该返回 57');"
         },
         {
-          "text": "<code>convertToInteger(\"JamesBond\")</code> should return NaN",
-          "testString": "assert.isNaN(convertToInteger(\"JamesBond\"), '<code>convertToInteger(\"JamesBond\")</code> should return NaN');"
+          "text": "<code>convertToInteger(\"JamesBond\")</code> 应该返回 NaN",
+          "testString": "assert.isNaN(convertToInteger(\"JamesBond\"), '<code>convertToInteger(\"JamesBond\")</code> 应该返回 NaN');"
         }
       ],
       "challengeType": 1,
@@ -6473,7 +6473,7 @@
         "This can be re-written using the <code>conditional operator</code>:",
         "<blockquote>function findGreater(a, b) {<br>&nbsp;&nbsp;return a > b ? \"a is greater\" : \"b is greater\";<br>}</blockquote>",
         "<hr>",
-        "Use the <code>conditional operator</code> in the <code>checkEqual</code> function to check if two numbers are equal or not. The function should return either true or false."
+        "Use the <code>conditional operator</code> in the <code>checkEqual</code> function to check if two numbers are equal or not. The function 应该返回 either true or false."
       ],
       "solutions": [],
       "tests": [
@@ -6482,16 +6482,16 @@
           "testString": "assert(/.+?\\s*?\\?\\s*?.+?\\s*?:\\s*?.+?/gi.test(code), '<code>checkEqual</code> should use the <code>conditional operator</code>');"
         },
         {
-          "text": "<code>checkEqual(1, 2)</code> should return false",
-          "testString": "assert(checkEqual(1, 2) === false, '<code>checkEqual(1, 2)</code> should return false');"
+          "text": "<code>checkEqual(1, 2)</code> 应该返回 false",
+          "testString": "assert(checkEqual(1, 2) === false, '<code>checkEqual(1, 2)</code> 应该返回 false');"
         },
         {
-          "text": "<code>checkEqual(1, 1)</code> should return true",
-          "testString": "assert(checkEqual(1, 1) === true, '<code>checkEqual(1, 1)</code> should return true');"
+          "text": "<code>checkEqual(1, 1)</code> 应该返回 true",
+          "testString": "assert(checkEqual(1, 1) === true, '<code>checkEqual(1, 1)</code> 应该返回 true');"
         },
         {
-          "text": "<code>checkEqual(1, -1)</code> should return false",
-          "testString": "assert(checkEqual(1, -1) === false, '<code>checkEqual(1, -1)</code> should return false');"
+          "text": "<code>checkEqual(1, -1)</code> 应该返回 false",
+          "testString": "assert(checkEqual(1, -1) === false, '<code>checkEqual(1, -1)</code> 应该返回 false');"
         }
       ],
       "challengeType": 1,
@@ -6532,16 +6532,16 @@
           "testString": "assert(/.+?\\s*?\\?\\s*?.+?\\s*?:\\s*?.+?\\s*?\\?\\s*?.+?\\s*?:\\s*?.+?/gi.test(code), '<code>checkSign</code> should use multiple <code>conditional operators</code>');"
         },
         {
-          "text": "<code>checkSign(10)</code> should return \"positive\". Note that capitalization matters",
-          "testString": "assert(checkSign(10) === 'positive', '<code>checkSign(10)</code> should return \"positive\". Note that capitalization matters');"
+          "text": "<code>checkSign(10)</code> 应该返回 \"positive\". Note that capitalization matters",
+          "testString": "assert(checkSign(10) === 'positive', '<code>checkSign(10)</code> 应该返回 \"positive\". Note that capitalization matters');"
         },
         {
-          "text": "<code>checkSign(-12)</code> should return \"negative\". Note that capitalization matters",
-          "testString": "assert(checkSign(-12) === 'negative', '<code>checkSign(-12)</code> should return \"negative\". Note that capitalization matters');"
+          "text": "<code>checkSign(-12)</code> 应该返回 \"negative\". Note that capitalization matters",
+          "testString": "assert(checkSign(-12) === 'negative', '<code>checkSign(-12)</code> 应该返回 \"negative\". Note that capitalization matters');"
         },
         {
-          "text": "<code>checkSign(0)</code> should return \"zero\". Note that capitalization matters",
-          "testString": "assert(checkSign(0) === 'zero', '<code>checkSign(0)</code> should return \"zero\". Note that capitalization matters');"
+          "text": "<code>checkSign(0)</code> 应该返回 \"zero\". Note that capitalization matters",
+          "testString": "assert(checkSign(0) === 'zero', '<code>checkSign(0)</code> 应该返回 \"zero\". Note that capitalization matters');"
         }
       ],
       "challengeType": 1,
