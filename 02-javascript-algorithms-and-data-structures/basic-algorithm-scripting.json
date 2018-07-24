@@ -8,7 +8,7 @@
       "id": "56533eb9ac21ba0edf2244b3",
       "title": "Convert Celsius to Fahrenheit",
       "description": [
-        "将摄氏度转换为华氏度的算法为：摄氏度 × <code>9/5 + 32</code>.",
+        "将摄氏度转换为华氏度的算法为：摄氏度 × <code>9/5 + 32</code>",
         "输入参数 <code>celsius</code> 代表一个摄氏温度值。请您根据上述转换公式，将已定义好的 <code>fahrenheit</code> 变量赋值为对应的华氏温度的值。",
         "您不需要顾虑 function 和 return 语句，它们会在之后的挑战中予以介绍。现在，您只需要使用您已学过的运算符。"
       ],
@@ -73,20 +73,20 @@
       ],
       "tests": [
         {
-          "text": "<code>reverseString(\"hello\")</code> 应该返回一个字符串",
-          "testString": "assert(typeof reverseString(\"hello\") === \"string\", '<code>reverseString(\"hello\")</code> 应该返回一个字符串');"
+          "text": "<code>reverseString(\"hello\")</code> 应该返回一个字符串。",
+          "testString": "assert(typeof reverseString(\"hello\") === \"string\", '<code>reverseString(\"hello\")</code> 应该返回一个字符串。');"
         },
         {
           "text": "<code>reverseString(\"hello\")</code> 应该返回 <code>\"olleh\"</code>",
-          "testString": "assert(reverseString(\"hello\") === \"olleh\", '<code>reverseString(\"hello\")</code> 应该返回 <code>\"olleh\"</code>');"
+          "testString": "assert(reverseString(\"hello\") === \"olleh\", '<code>reverseString(\"hello\")</code> 应该返回 <code>\"olleh\"</code>。');"
         },
         {
           "text": "<code>reverseString(\"Howdy\")</code> 应该返回 <code>\"ydwoH\"</code>",
-          "testString": "assert(reverseString(\"Howdy\") === \"ydwoH\", '<code>reverseString(\"Howdy\")</code> 应该返回 <code>\"ydwoH\"</code>.');"
+          "testString": "assert(reverseString(\"Howdy\") === \"ydwoH\", '<code>reverseString(\"Howdy\")</code> 应该返回 <code>\"ydwoH\"</code>。');"
         },
         {
-          "text": "<code>reverseString(\"Greetings from Earth\")</code> 应该返回 <code>\"htraE morf sgniteerG\"</code>.",
-          "testString": "assert(reverseString(\"Greetings from Earth\") === \"htraE morf sgniteerG\", '<code>reverseString(\"Greetings from Earth\")</code> 应该返回 <code>\"htraE morf sgniteerG\"</code>.');"
+          "text": "<code>reverseString(\"Greetings from Earth\")</code> 应该返回 <code>\"htraE morf sgniteerG\"</code>。",
+          "testString": "assert(reverseString(\"Greetings from Earth\") === \"htraE morf sgniteerG\", '<code>reverseString(\"Greetings from Earth\")</code> 应该返回 <code>\"htraE morf sgniteerG\"</code>。');"
         }
       ],
       "isRequired": true,
@@ -123,31 +123,31 @@
       "description": [
         "返回一个给定整数的阶乘。",
         "若 n 是一个整数，n 的阶乘就是所有小于等于 n 的正整数的乘积。",
-        "n 的阶乘通常用符号 <code>n!</code> 来表示",
+        "n 的阶乘通常用符号 <code>n!</code> 来表示。",
         "例如： <code>5! = 1 * 2 * 3 * 4 * 5 = 120</code>",
         "只有非负整数会被作为函数的输入参数。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
         {
-          "text": "<code>factorialize(5)</code> 应该返回一个数字",
-          "testString": "assert(typeof factorialize(5) === 'number', '<code>factorialize(5)</code> 应该返回一个数字');"
+          "text": "<code>factorialize(5)</code> 应该返回一个数字。",
+          "testString": "assert(typeof factorialize(5) === 'number', '<code>factorialize(5)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>factorialize(5)</code> 应该返回 120 。",
-          "testString": "assert(factorialize(5) === 120, '<code>factorialize(5)</code> 应该返回 120');"
+          "text": "<code>factorialize(5)</code> 应该返回 120。",
+          "testString": "assert(factorialize(5) === 120, '<code>factorialize(5)</code> 应该返回 120。');"
         },
         {
-          "text": "<code>factorialize(10)</code> 应该返回 3628800 。",
-          "testString": "assert(factorialize(10) === 3628800, '<code>factorialize(10)</code> 应该返回 3628800');"
+          "text": "<code>factorialize(10)</code> 应该返回 3628800。",
+          "testString": "assert(factorialize(10) === 3628800, '<code>factorialize(10)</code> 应该返回 3628800。');"
         },
         {
-          "text": "<code>factorialize(20)</code> 应该返回 2432902008176640000",
-          "testString": "assert(factorialize(20) === 2432902008176640000, '<code>factorialize(20)</code> 应该返回 2432902008176640000');"
+          "text": "<code>factorialize(20)</code> 应该返回 2432902008176640000。",
+          "testString": "assert(factorialize(20) === 2432902008176640000, '<code>factorialize(20)</code> 应该返回 2432902008176640000。');"
         },
         {
-          "text": "<code>factorialize(0)</code> 应该返回 1",
-          "testString": "assert(factorialize(0) === 1, '<code>factorialize(0)</code> 应该返回 1');"
+          "text": "<code>factorialize(0)</code> 应该返回 1。",
+          "testString": "assert(factorialize(0) === 1, '<code>factorialize(0)</code> 应该返回 1。');"
         }
       ],
       "isRequired": true,
@@ -180,7 +180,7 @@
       "title": "Find the Longest Word in a String",
       "description": [
         "返回给出的句子中最长的单词的长度。",
-        "您的返回应该是一个数字",
+        "您的返回应该是一个数字。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
@@ -189,24 +189,24 @@
           "testString": "assert(typeof findLongestWordLength(\"The quick brown fox jumped over the lazy dog\") === \"number\", '<code>findLongestWordLength(\"The quick brown fox jumped over the lazy dog\")</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>findLongestWordLength(\"The quick brown fox jumped over the lazy dog\")</code> 应该返回 6.",
-          "testString": "assert(findLongestWordLength(\"The quick brown fox jumped over the lazy dog\") === 6, '<code>findLongestWordLength(\"The quick brown fox jumped over the lazy dog\")</code> 应该返回 6.');"
+          "text": "<code>findLongestWordLength(\"The quick brown fox jumped over the lazy dog\")</code> 应该返回 6。",
+          "testString": "assert(findLongestWordLength(\"The quick brown fox jumped over the lazy dog\") === 6, '<code>findLongestWordLength(\"The quick brown fox jumped over the lazy dog\")</code> 应该返回 6。');"
         },
         {
-          "text": "<code>findLongestWordLength(\"May the force be with you\")</code> 应该返回 5.",
-          "testString": "assert(findLongestWordLength(\"May the force be with you\") === 5, '<code>findLongestWordLength(\"May the force be with you\")</code> 应该返回 5.');"
+          "text": "<code>findLongestWordLength(\"May the force be with you\")</code> 应该返回 5。",
+          "testString": "assert(findLongestWordLength(\"May the force be with you\") === 5, '<code>findLongestWordLength(\"May the force be with you\")</code> 应该返回 5。');"
         },
         {
-          "text": "<code>findLongestWordLength(\"Google do a barrel roll\")</code> 应该返回 6.",
-          "testString": "assert(findLongestWordLength(\"Google do a barrel roll\") === 6, '<code>findLongestWordLength(\"Google do a barrel roll\")</code> 应该返回 6.');"
+          "text": "<code>findLongestWordLength(\"Google do a barrel roll\")</code> 应该返回 6。",
+          "testString": "assert(findLongestWordLength(\"Google do a barrel roll\") === 6, '<code>findLongestWordLength(\"Google do a barrel roll\")</code> 应该返回 6。');"
         },
         {
-          "text": "<code>findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\")</code> 应该返回 8.",
-          "testString": "assert(findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\") === 8, '<code>findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\")</code> 应该返回 8.');"
+          "text": "<code>findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\")</code> 应该返回 8。",
+          "testString": "assert(findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\") === 8, '<code>findLongestWordLength(\"What is the average airspeed velocity of an unladen swallow\")</code> 应该返回 8。');"
         },
         {
-          "text": "<code>findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\")</code> 应该返回 19.",
-          "testString": "assert(findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\") === 19, '<code>findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\")</code> 应该返回 19.');"
+          "text": "<code>findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\")</code> 应该返回 19。",
+          "testString": "assert(findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\") === 19, '<code>findLongestWordLength(\"What if we try a super-long word such as otorhinolaryngology\")</code> 应该返回 19。');"
         }
       ],
       "isRequired": true,
@@ -249,16 +249,16 @@
           "testString": "assert(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]).constructor === Array, '<code>largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]])</code> 应该返回一个数组。');"
         },
         {
-          "text": "<code>largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]])</code> 应该返回 <code>[27, 5, 39, 1001]</code>.",
-          "testString": "assert.deepEqual(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]), [27, 5, 39, 1001], '<code>largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]])</code> 应该返回 <code>[27, 5, 39, 1001]</code>.');"
+          "text": "<code>largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]])</code> 应该返回 <code>[27, 5, 39, 1001]</code>。",
+          "testString": "assert.deepEqual(largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]), [27, 5, 39, 1001], '<code>largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]])</code> 应该返回 <code>[27, 5, 39, 1001]</code>。');"
         },
         {
-          "text": "<code>largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]])</code> 应该返回 <code>[9, 35, 97, 1000000]</code>.",
-          "testString": "assert.deepEqual(largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]), [9, 35, 97, 1000000], '<code>largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]])</code> 应该返回 <code>[9, 35, 97, 1000000]</code>.');"
+          "text": "<code>largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]])</code> 应该返回 <code>[9, 35, 97, 1000000]</code>。",
+          "testString": "assert.deepEqual(largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]), [9, 35, 97, 1000000], '<code>largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]])</code> 应该返回 <code>[9, 35, 97, 1000000]</code>。');"
         },
         {
-          "text": "<code>largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])</code> 应该返回 <code>[25, 48, 21, -3]</code>.",
-          "testString": "assert.deepEqual(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]), [25, 48, 21, -3], '<code>largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])</code> 应该返回 <code>[25, 48, 21, -3]</code>.');"
+          "text": "<code>largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])</code> 应该返回 <code>[25, 48, 21, -3]</code>。",
+          "testString": "assert.deepEqual(largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]]), [25, 48, 21, -3], '<code>largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])</code> 应该返回 <code>[25, 48, 21, -3]</code>。');"
         }
       ],
       "isRequired": true,
@@ -297,44 +297,44 @@
       ],
       "tests": [
         {
-          "text": "<code>confirmEnding(\"Bastian\", \"n\")</code> 应该返回 true.",
-          "testString": "assert(confirmEnding(\"Bastian\", \"n\") === true, '<code>confirmEnding(\"Bastian\", \"n\")</code> 应该返回 true.');"
+          "text": "<code>confirmEnding(\"Bastian\", \"n\")</code> 应该返回 true。",
+          "testString": "assert(confirmEnding(\"Bastian\", \"n\") === true, '<code>confirmEnding(\"Bastian\", \"n\")</code> 应该返回 true。');"
         },
         {
-          "text": "<code>confirmEnding(\"Congratulation\", \"on\")</code> 应该返回 true.",
-          "testString": "assert(confirmEnding(\"Congratulation\", \"on\") === true, '<code>confirmEnding(\"Congratulation\", \"on\")</code> 应该返回 true.');"
+          "text": "<code>confirmEnding(\"Congratulation\", \"on\")</code> 应该返回 true。",
+          "testString": "assert(confirmEnding(\"Congratulation\", \"on\") === true, '<code>confirmEnding(\"Congratulation\", \"on\")</code> 应该返回 true。');"
         },
         {
-          "text": "<code>confirmEnding(\"Connor\", \"n\")</code> 应该返回 false.",
-          "testString": "assert(confirmEnding(\"Connor\", \"n\") === false, '<code>confirmEnding(\"Connor\", \"n\")</code> 应该返回 false.');"
+          "text": "<code>confirmEnding(\"Connor\", \"n\")</code> 应该返回 false。",
+          "testString": "assert(confirmEnding(\"Connor\", \"n\") === false, '<code>confirmEnding(\"Connor\", \"n\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\"&#44; \"specification\"&#41;</code> 应该返回 false.",
-          "testString": "assert(confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\", \"specification\") === false, '<code>confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\"&#44; \"specification\"&#41;</code> 应该返回 false.');"
+          "text": "<code>confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\"&#44; \"specification\"&#41;</code> 应该返回 false。",
+          "testString": "assert(confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\", \"specification\") === false, '<code>confirmEnding(\"Walking on water and developing software from a specification are easy if both are frozen\"&#44; \"specification\"&#41;</code> 应该返回 false。');"
         },
         {
-          "text": "<code>confirmEnding(\"He has to give me a new name\", \"name\")</code> 应该返回 true.",
-          "testString": "assert(confirmEnding(\"He has to give me a new name\", \"name\") === true, '<code>confirmEnding(\"He has to give me a new name\", \"name\")</code> 应该返回 true.');"
+          "text": "<code>confirmEnding(\"He has to give me a new name\", \"name\")</code> 应该返回 true。",
+          "testString": "assert(confirmEnding(\"He has to give me a new name\", \"name\") === true, '<code>confirmEnding(\"He has to give me a new name\", \"name\")</code> 应该返回 true。');"
         },
         {
-          "text": "<code>confirmEnding(\"Open sesame\", \"same\")</code> 应该返回 true.",
-          "testString": "assert(confirmEnding(\"Open sesame\", \"same\") === true, '<code>confirmEnding(\"Open sesame\", \"same\")</code> 应该返回 true.');"
+          "text": "<code>confirmEnding(\"Open sesame\", \"same\")</code> 应该返回 true。",
+          "testString": "assert(confirmEnding(\"Open sesame\", \"same\") === true, '<code>confirmEnding(\"Open sesame\", \"same\")</code> 应该返回 true。');"
         },
         {
-          "text": "<code>confirmEnding(\"Open sesame\", \"pen\")</code> 应该返回 false.",
-          "testString": "assert(confirmEnding(\"Open sesame\", \"pen\") === false, '<code>confirmEnding(\"Open sesame\", \"pen\")</code> 应该返回 false.');"
+          "text": "<code>confirmEnding(\"Open sesame\", \"pen\")</code> 应该返回 false。",
+          "testString": "assert(confirmEnding(\"Open sesame\", \"pen\") === false, '<code>confirmEnding(\"Open sesame\", \"pen\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>confirmEnding(\"Open sesame\", \"game\")</code> 应该返回 false.",
-          "testString": "assert(confirmEnding(\"Open sesame\", \"game\") === false, '<code>confirmEnding(\"Open sesame\", \"game\")</code> 应该返回 false.');"
+          "text": "<code>confirmEnding(\"Open sesame\", \"game\")</code> 应该返回 false。",
+          "testString": "assert(confirmEnding(\"Open sesame\", \"game\") === false, '<code>confirmEnding(\"Open sesame\", \"game\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\")</code> 应该返回 false.",
-          "testString": "assert(confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\") === false, '<code>confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\")</code> 应该返回 false.');"
+          "text": "<code>confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\")</code> 应该返回 false。",
+          "testString": "assert(confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\") === false, '<code>confirmEnding(\"If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing\", \"mountain\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>confirmEnding(\"Abstraction\", \"action\")</code> 应该返回 true.",
-          "testString": "assert(confirmEnding(\"Abstraction\", \"action\") === true, '<code>confirmEnding(\"Abstraction\", \"action\")</code> 应该返回 true.');"
+          "text": "<code>confirmEnding(\"Abstraction\", \"action\")</code> 应该返回 true。",
+          "testString": "assert(confirmEnding(\"Abstraction\", \"action\") === true, '<code>confirmEnding(\"Abstraction\", \"action\")</code> 应该返回 true。');"
         },
         {
           "text": "请不要用内置的 <code>.endsWith()</code> 方法来解决本挑战。",
@@ -378,32 +378,32 @@
       ],
       "tests": [
         {
-          "text": "<code>repeatStringNumTimes(\"*\", 3)</code> 应该返回 <code>\"***\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"*\", 3) === \"***\", '<code>repeatStringNumTimes(\"*\", 3)</code> 应该返回 <code>\"***\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"*\", 3)</code> 应该返回 <code>\"***\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"*\", 3) === \"***\", '<code>repeatStringNumTimes(\"*\", 3)</code> 应该返回 <code>\"***\"</code>。');"
         },
         {
-          "text": "<code>repeatStringNumTimes(\"abc\", 3)</code> 应该返回 <code>\"abcabcabc\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"abc\", 3) === \"abcabcabc\", '<code>repeatStringNumTimes(\"abc\", 3)</code> 应该返回 <code>\"abcabcabc\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"abc\", 3)</code> 应该返回 <code>\"abcabcabc\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"abc\", 3) === \"abcabcabc\", '<code>repeatStringNumTimes(\"abc\", 3)</code> 应该返回 <code>\"abcabcabc\"</code>。');"
         },
         {
-          "text": "<code>repeatStringNumTimes(\"abc\", 4)</code> 应该返回 <code>\"abcabcabcabc\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"abc\", 4) === \"abcabcabcabc\", '<code>repeatStringNumTimes(\"abc\", 4)</code> 应该返回 <code>\"abcabcabcabc\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"abc\", 4)</code> 应该返回 <code>\"abcabcabcabc\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"abc\", 4) === \"abcabcabcabc\", '<code>repeatStringNumTimes(\"abc\", 4)</code> 应该返回 <code>\"abcabcabcabc\"</code>。');"
         },
         {
-          "text": "<code>repeatStringNumTimes(\"abc\", 1)</code> 应该返回 <code>\"abc\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"abc\", 1) === \"abc\", '<code>repeatStringNumTimes(\"abc\", 1)</code> 应该返回 <code>\"abc\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"abc\", 1)</code> 应该返回 <code>\"abc\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"abc\", 1) === \"abc\", '<code>repeatStringNumTimes(\"abc\", 1)</code> 应该返回 <code>\"abc\"</code>。');"
         },
         {
-          "text": "<code>repeatStringNumTimes(\"*\", 8)</code> 应该返回 <code>\"********\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"*\", 8) === \"********\", '<code>repeatStringNumTimes(\"*\", 8)</code> 应该返回 <code>\"********\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"*\", 8)</code> 应该返回 <code>\"********\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"*\", 8) === \"********\", '<code>repeatStringNumTimes(\"*\", 8)</code> 应该返回 <code>\"********\"</code>。');"
         },
         {
-          "text": "<code>repeatStringNumTimes(\"abc\", -2)</code> 应该返回 <code>\"\"</code>.",
-          "testString": "assert(repeatStringNumTimes(\"abc\", -2) === \"\", '<code>repeatStringNumTimes(\"abc\", -2)</code> 应该返回 <code>\"\"</code>.');"
+          "text": "<code>repeatStringNumTimes(\"abc\", -2)</code> 应该返回 <code>\"\"</code>。",
+          "testString": "assert(repeatStringNumTimes(\"abc\", -2) === \"\", '<code>repeatStringNumTimes(\"abc\", -2)</code> 应该返回 <code>\"\"</code>。');"
         },
         {
-          "text": "请不要使用内置的 <code>repeat()</code> 方法",
-          "testString": "assert(!/\\.repeat/g.test(code), '请不要使用内置的 <code>repeat()</code> 方法');"
+          "text": "请不要使用内置的 <code>repeat()</code> 方法。",
+          "testString": "assert(!/\\.repeat/g.test(code), '请不要使用内置的 <code>repeat()</code> 方法。');"
         }
       ],
       "isRequired": true,
@@ -441,28 +441,28 @@
       ],
       "tests": [
         {
-          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", 8)</code> 应该返回 \"A-tisket...\".",
-          "testString": "assert(truncateString(\"A-tisket a-tasket A green and yellow basket\", 8) === \"A-tisket...\", '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", 8)</code> 应该返回 \"A-tisket...\".');"
+          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", 8)</code> 应该返回 \"A-tisket...\"。",
+          "testString": "assert(truncateString(\"A-tisket a-tasket A green and yellow basket\", 8) === \"A-tisket...\", '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", 8)</code> 应该返回 \"A-tisket...\"。');"
         },
         {
-          "text": "<code>truncateString(\"Peter Piper picked a peck of pickled peppers\", 11)</code> 应该返回 \"Peter Piper...\".",
-          "testString": "assert(truncateString(\"Peter Piper picked a peck of pickled peppers\", 11) === \"Peter Piper...\", '<code>truncateString(\"Peter Piper picked a peck of pickled peppers\", 11)</code> 应该返回 \"Peter Piper...\".');"
+          "text": "<code>truncateString(\"Peter Piper picked a peck of pickled peppers\", 11)</code> 应该返回 \"Peter Piper...\"。",
+          "testString": "assert(truncateString(\"Peter Piper picked a peck of pickled peppers\", 11) === \"Peter Piper...\", '<code>truncateString(\"Peter Piper picked a peck of pickled peppers\", 11)</code> 应该返回 \"Peter Piper...\"。');"
         },
         {
-          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\".",
-          "testString": "assert(truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length) === \"A-tisket a-tasket A green and yellow basket\", '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\".');"
+          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\"。",
+          "testString": "assert(truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length) === \"A-tisket a-tasket A green and yellow basket\", '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\"。');"
         },
         {
-          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length + 2)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\".",
-          "testString": "assert(truncateString('A-tisket a-tasket A green and yellow basket', 'A-tisket a-tasket A green and yellow basket'.length + 2) === 'A-tisket a-tasket A green and yellow basket', '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length + 2)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\".');"
+          "text": "<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length + 2)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\"。",
+          "testString": "assert(truncateString('A-tisket a-tasket A green and yellow basket', 'A-tisket a-tasket A green and yellow basket'.length + 2) === 'A-tisket a-tasket A green and yellow basket', '<code>truncateString(\"A-tisket a-tasket A green and yellow basket\", \"A-tisket a-tasket A green and yellow basket\".length + 2)</code> 应该返回 \"A-tisket a-tasket A green and yellow basket\"。');"
         },
         {
-          "text": "<code>truncateString(\"A-\", 1)</code> 应该返回 \"A...\".",
-          "testString": "assert(truncateString(\"A-\", 1) === \"A...\", '<code>truncateString(\"A-\", 1)</code> 应该返回 \"A...\".');"
+          "text": "<code>truncateString(\"A-\", 1)</code> 应该返回 \"A...\"。",
+          "testString": "assert(truncateString(\"A-\", 1) === \"A...\", '<code>truncateString(\"A-\", 1)</code> 应该返回 \"A...\"。');"
         },
         {
-          "text": "<code>truncateString(\"Absolutely Longer\", 2)</code> 应该返回 \"Ab...\".",
-          "testString": "assert(truncateString(\"Absolutely Longer\", 2) === \"Ab...\", '<code>truncateString(\"Absolutely Longer\", 2)</code> 应该返回 \"Ab...\".');"
+          "text": "<code>truncateString(\"Absolutely Longer\", 2)</code> 应该返回 \"Ab...\"。",
+          "testString": "assert(truncateString(\"Absolutely Longer\", 2) === \"Ab...\", '<code>truncateString(\"Absolutely Longer\", 2)</code> 应该返回 \"Ab...\"。');"
         }
       ],
       "isRequired": true,
@@ -495,7 +495,7 @@
       "id": "a6e40f1041b06c996f7b2406",
       "title": "Finders Keepers",
       "description": [
-        "请写一个函数来检查一个数组（第一个参数）中的元素，并返回数组中第一个通过校验测试（第二个参数，一个接受一个参数并返回一个布尔值的函数）的元素。如果没有元素通过测试，则返回 undefined",
+        "请写一个函数来检查一个数组（第一个参数）中的元素，并返回数组中第一个通过校验测试（第二个参数，一个接受一个参数并返回一个布尔值的函数）的元素。如果没有元素通过测试，则返回 undefined。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。您可以与他人结对编程。请您独立解决挑战中的问题。"
       ],
       "solutions": [
@@ -503,12 +503,12 @@
       ],
       "tests": [
         {
-          "text": "<code>findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })</code> 应该返回 8.",
-          "testString": "assert.strictEqual(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }), 8, '<code>findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })</code> 应该返回 8.');"
+          "text": "<code>findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })</code> 应该返回 8。",
+          "testString": "assert.strictEqual(findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }), 8, '<code>findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })</code> 应该返回 8。');"
         },
         {
-          "text": "<code>findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })</code> 应该返回 undefined.",
-          "testString": "assert.strictEqual(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }), undefined, '<code>findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })</code> 应该返回 undefined.');"
+          "text": "<code>findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })</code> 应该返回 undefined。",
+          "testString": "assert.strictEqual(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }), undefined, '<code>findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })</code> 应该返回 undefined。');"
         }
       ],
       "MDNlinks": [
@@ -538,8 +538,8 @@
       "id": "a77dbc43c33f39daa4429b4f",
       "title": "Boo who",
       "description": [
-        "检查一个值是否是原始的布尔值（boolean）类型。返回 true 或者 false",
-        "布尔值原始类型为 true 或者 false",
+        "检查一个值是否是原始的布尔值（boolean）类型。返回 true 或者 false。",
+        "布尔值原始类型为 true 或者 false。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。您可以与他人结对编程。请您独立解决挑战中的问题。"
       ],
       "solutions": [
@@ -547,44 +547,44 @@
       ],
       "tests": [
         {
-          "text": "<code>booWho(true)</code> 应该返回 true.",
-          "testString": "assert.strictEqual(booWho(true), true, '<code>booWho(true)</code> 应该返回 true.');"
+          "text": "<code>booWho(true)</code> 应该返回 true。",
+          "testString": "assert.strictEqual(booWho(true), true, '<code>booWho(true)</code> 应该返回 true。');"
         },
         {
-          "text": "<code>booWho(false)</code> 应该返回 true.",
-          "testString": "assert.strictEqual(booWho(false), true, '<code>booWho(false)</code> 应该返回 true.');"
+          "text": "<code>booWho(false)</code> 应该返回 true。",
+          "testString": "assert.strictEqual(booWho(false), true, '<code>booWho(false)</code> 应该返回 true。');"
         },
         {
-          "text": "<code>booWho([1, 2, 3])</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho([1, 2, 3]), false, '<code>booWho([1, 2, 3])</code> 应该返回 false.');"
+          "text": "<code>booWho([1, 2, 3])</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho([1, 2, 3]), false, '<code>booWho([1, 2, 3])</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho([].slice)</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho([].slice), false, '<code>booWho([].slice)</code> 应该返回 false.');"
+          "text": "<code>booWho([].slice)</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho([].slice), false, '<code>booWho([].slice)</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho({ \"a\": 1 })</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho({ \"a\": 1 }), false, '<code>booWho({ \"a\": 1 })</code> 应该返回 false.');"
+          "text": "<code>booWho({ \"a\": 1 })</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho({ \"a\": 1 }), false, '<code>booWho({ \"a\": 1 })</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho(1)</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho(1), false, '<code>booWho(1)</code> 应该返回 false.');"
+          "text": "<code>booWho(1)</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho(1), false, '<code>booWho(1)</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho(NaN)</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho(NaN), false, '<code>booWho(NaN)</code> 应该返回 false.');"
+          "text": "<code>booWho(NaN)</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho(NaN), false, '<code>booWho(NaN)</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho(\"a\")</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho(\"a\"), false, '<code>booWho(\"a\")</code> 应该返回 false.');"
+          "text": "<code>booWho(\"a\")</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho(\"a\"), false, '<code>booWho(\"a\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho(\"true\")</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho(\"true\"), false, '<code>booWho(\"true\")</code> 应该返回 false.');"
+          "text": "<code>booWho(\"true\")</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho(\"true\"), false, '<code>booWho(\"true\")</code> 应该返回 false。');"
         },
         {
-          "text": "<code>booWho(\"false\")</code> 应该返回 false.",
-          "testString": "assert.strictEqual(booWho(\"false\"), false, '<code>booWho(\"false\")</code> 应该返回 false.');"
+          "text": "<code>booWho(\"false\")</code> 应该返回 false。",
+          "testString": "assert.strictEqual(booWho(\"false\"), false, '<code>booWho(\"false\")</code> 应该返回 false。');"
         }
       ],
       "MDNlinks": [
@@ -624,12 +624,12 @@
           "testString": "assert(typeof titleCase(\"I'm a little tea pot\") === \"string\", '<code>titleCase(\"I&#39;m a little tea pot\")</code> 应该返回一个字符串。');"
         },
         {
-          "text": "<code>titleCase(\"I&#39;m a little tea pot\")</code> 应该返回 <code>I&#39;m A Little Tea Pot</code>.",
-          "testString": "assert(titleCase(\"I'm a little tea pot\") === \"I'm A Little Tea Pot\", '<code>titleCase(\"I&#39;m a little tea pot\")</code> 应该返回 <code>I&#39;m A Little Tea Pot</code>.');"
+          "text": "<code>titleCase(\"I&#39;m a little tea pot\")</code> 应该返回 <code>I&#39;m A Little Tea Pot</code>。",
+          "testString": "assert(titleCase(\"I'm a little tea pot\") === \"I'm A Little Tea Pot\", '<code>titleCase(\"I&#39;m a little tea pot\")</code> 应该返回 <code>I&#39;m A Little Tea Pot</code>。');"
         },
         {
-          "text": "<code>titleCase(\"sHoRt AnD sToUt\")</code> 应该返回 <code>Short And Stout</code>.",
-          "testString": "assert(titleCase(\"sHoRt AnD sToUt\") === \"Short And Stout\", '<code>titleCase(\"sHoRt AnD sToUt\")</code> 应该返回 <code>Short And Stout</code>.');"
+          "text": "<code>titleCase(\"sHoRt AnD sToUt\")</code> 应该返回 <code>Short And Stout</code>。",
+          "testString": "assert(titleCase(\"sHoRt AnD sToUt\") === \"Short And Stout\", '<code>titleCase(\"sHoRt AnD sToUt\")</code> 应该返回 <code>Short And Stout</code>。');"
         },
         {
           "text": "<code>titleCase(\"HERE IS MY HANDLE HERE IS MY SPOUT\")</code> 应该返回 <code>Here Is My Handle Here Is My Spout</code>.",
@@ -673,20 +673,20 @@
       ],
       "tests": [
         {
-          "text": "<code>frankenSplice([1, 2, 3], [4, 5], 1)</code> 应该返回 <code>[4, 1, 2, 3, 5]</code>.",
-          "testString": "assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5], '<code>frankenSplice([1, 2, 3], [4, 5], 1)</code> 应该返回 <code>[4, 1, 2, 3, 5]</code>.');"
+          。"text": "<code>frankenSplice([1, 2, 3], [4, 5], 1)</code> 应该返回 <code>[4, 1, 2, 3, 5]</code>。",
+          "testString": "assert.deepEqual(frankenSplice([1, 2, 3], [4, 5], 1), [4, 1, 2, 3, 5], '<code>frankenSplice([1, 2, 3], [4, 5], 1)</code> 应该返回 <code>[4, 1, 2, 3, 5]</code>。');"
         },
         {
-          "text": "<code>frankenSplice([1, 2], [\"a\", \"b\"], 1)</code> 应该返回 <code>[\"a\", 1, 2, \"b\"]</code>.",
-          "testString": "assert.deepEqual(frankenSplice(testArr1, testArr2, 1), [\"a\", 1, 2, \"b\"], '<code>frankenSplice([1, 2], [\"a\", \"b\"], 1)</code> 应该返回 <code>[\"a\", 1, 2, \"b\"]</code>.');"
+          "text": "<code>frankenSplice([1, 2], [\"a\", \"b\"], 1)</code> 应该返回 <code>[\"a\", 1, 2, \"b\"]</code>。",
+          "testString": "assert.deepEqual(frankenSplice(testArr1, testArr2, 1), [\"a\", 1, 2, \"b\"], '<code>frankenSplice([1, 2], [\"a\", \"b\"], 1)</code> 应该返回 <code>[\"a\", 1, 2, \"b\"]</code>。');"
         },
         {
-          "text": "<code>frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2)</code> 应该返回 <code>[\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"]</code>.",
-          "testString": "assert.deepEqual(frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2), [\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"], '<code>frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2)</code> 应该返回 <code>[\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"]</code>.');"
+          "text": "<code>frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2)</code> 应该返回 <code>[\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"]</code>。",
+          "testString": "assert.deepEqual(frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2), [\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"], '<code>frankenSplice([\"claw\", \"tentacle\"], [\"head\", \"shoulders\", \"knees\", \"toes\"], 2)</code> 应该返回 <code>[\"head\", \"shoulders\", \"claw\", \"tentacle\", \"knees\", \"toes\"]</code>。');"
         },
         {
-          "text": "来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中",
-          "testString": "assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4], '来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中');"
+          "text": "来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中。",
+          "testString": "assert.deepEqual(frankenSplice([1, 2, 3, 4], [], 0), [1, 2, 3, 4], '来自第一个数组的所有元素应该按原来的顺序被插入到第二个数组中。');"
         },
         {
           "text": "第一个数组在函数执行前后应该保持一样。",
@@ -733,26 +733,26 @@
       "title": "Falsy Bouncer",
       "description": [
         "从一个数组中移除所有假值（falsy values）。",
-        "JavaScript 中的假值有 <code>false</code>、<code>null</code>、<code>0</code>、<code>\"\"</code>、<code>undefined</code> 和 <code>NaN</code>",
+        "JavaScript 中的假值有 <code>false</code>、<code>null</code>、<code>0</code>、<code>\"\"</code>、<code>undefined</code> 和 <code>NaN</code>。",
         "提示：请尝试将每一个值转换为一个布尔值（boolean）。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
         {
-          "text": "<code>bouncer([7, \"ate\", \"\", false, 9])</code> 应该返回 <code>[7, \"ate\", 9]</code>.",
-          "testString": "assert.deepEqual(bouncer([7, \"ate\", \"\", false, 9]), [7, \"ate\", 9], '<code>bouncer([7, \"ate\", \"\", false, 9])</code> 应该返回 <code>[7, \"ate\", 9]</code>.');"
+          "text": "<code>bouncer([7, \"ate\", \"\", false, 9])</code> 应该返回 <code>[7, \"ate\", 9]</code>。",
+          "testString": "assert.deepEqual(bouncer([7, \"ate\", \"\", false, 9]), [7, \"ate\", 9], '<code>bouncer([7, \"ate\", \"\", false, 9])</code> 应该返回 <code>[7, \"ate\", 9]</code>。');"
         },
         {
-          "text": "<code>bouncer([\"a\", \"b\", \"c\"])</code> 应该返回 <code>[\"a\", \"b\", \"c\"]</code>.",
-          "testString": "assert.deepEqual(bouncer([\"a\", \"b\", \"c\"]), [\"a\", \"b\", \"c\"], '<code>bouncer([\"a\", \"b\", \"c\"])</code> 应该返回 <code>[\"a\", \"b\", \"c\"]</code>.');"
+          "text": "<code>bouncer([\"a\", \"b\", \"c\"])</code> 应该返回 <code>[\"a\", \"b\", \"c\"]</code>。",
+          "testString": "assert.deepEqual(bouncer([\"a\", \"b\", \"c\"]), [\"a\", \"b\", \"c\"], '<code>bouncer([\"a\", \"b\", \"c\"])</code> 应该返回 <code>[\"a\", \"b\", \"c\"]</code>。');"
         },
         {
-          "text": "<code>bouncer([false, null, 0, NaN, undefined, \"\"])</code> 应该返回 <code>[]</code>.",
-          "testString": "assert.deepEqual(bouncer([false, null, 0, NaN, undefined, \"\"]), [], '<code>bouncer([false, null, 0, NaN, undefined, \"\"])</code> 应该返回 <code>[]</code>.');"
+          "text": "<code>bouncer([false, null, 0, NaN, undefined, \"\"])</code> 应该返回 <code>[]</code>。",
+          "testString": "assert.deepEqual(bouncer([false, null, 0, NaN, undefined, \"\"]), [], '<code>bouncer([false, null, 0, NaN, undefined, \"\"])</code> 应该返回 <code>[]</code>。');"
         },
         {
-          "text": "<code>bouncer([1, null, NaN, 2, undefined])</code> 应该返回 <code>[1, 2]</code>.",
-          "testString": "assert.deepEqual(bouncer([1, null, NaN, 2, undefined]), [1, 2], '<code>bouncer([1, null, NaN, 2, undefined])</code> 应该返回 <code>[1, 2]</code>.');"
+          "text": "<code>bouncer([1, null, NaN, 2, undefined])</code> 应该返回 <code>[1, 2]</code>。",
+          "testString": "assert.deepEqual(bouncer([1, null, NaN, 2, undefined]), [1, 2], '<code>bouncer([1, null, NaN, 2, undefined])</code> 应该返回 <code>[1, 2]</code>。');"
         }
       ],
       "isRequired": true,
@@ -793,64 +793,64 @@
       ],
       "tests": [
         {
-          "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回 <code>3</code>.",
-          "testString": "assert(getIndexToIns([10, 20, 30, 40, 50], 35) === 3, '<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回 <code>3</code>.');"
+          "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回 <code>3</code>。",
+          "testString": "assert(getIndexToIns([10, 20, 30, 40, 50], 35) === 3, '<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回 <code>3</code>。');"
         },
         {
           "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([10, 20, 30, 40, 50], 35)) === \"number\", '<code>getIndexToIns([10, 20, 30, 40, 50], 35)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回 <code>2</code>.",
-          "testString": "assert(getIndexToIns([10, 20, 30, 40, 50], 30) === 2, '<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回 <code>2</code>.');"
+          "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回 <code>2</code>。",
+          "testString": "assert(getIndexToIns([10, 20, 30, 40, 50], 30) === 2, '<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回 <code>2</code>。');"
         },
         {
           "text": "<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([10, 20, 30, 40, 50], 30)) === \"number\", '<code>getIndexToIns([10, 20, 30, 40, 50], 30)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([40, 60], 50)</code> 应该返回 <code>1</code>.",
-          "testString": "assert(getIndexToIns([40, 60], 50) === 1, '<code>getIndexToIns([40, 60], 50)</code> 应该返回 <code>1</code>.');"
+          "text": "<code>getIndexToIns([40, 60], 50)</code> 应该返回 <code>1</code>。",
+          "testString": "assert(getIndexToIns([40, 60], 50) === 1, '<code>getIndexToIns([40, 60], 50)</code> 应该返回 <code>1</code>。');"
         },
         {
           "text": "<code>getIndexToIns([40, 60], 50)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([40, 60], 50)) === \"number\", '<code>getIndexToIns([40, 60], 50)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回 <code>0</code>.",
-          "testString": "assert(getIndexToIns([3, 10, 5], 3) === 0, '<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回 <code>0</code>.');"
+          "text": "<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回 <code>0</code>。",
+          "testString": "assert(getIndexToIns([3, 10, 5], 3) === 0, '<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回 <code>0</code>。');"
         },
         {
           "text": "<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([3, 10, 5], 3)) === \"number\", '<code>getIndexToIns([3, 10, 5], 3)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回 <code>2</code>.",
-          "testString": "assert(getIndexToIns([5, 3, 20, 3], 5) === 2, '<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回 <code>2</code>.');"
+          "text": "<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回 <code>2</code>。",
+          "testString": "assert(getIndexToIns([5, 3, 20, 3], 5) === 2, '<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回 <code>2</code>。');"
         },
         {
           "text": "<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([5, 3, 20, 3], 5)) === \"number\", '<code>getIndexToIns([5, 3, 20, 3], 5)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回 <code>2</code>.",
-          "testString": "assert(getIndexToIns([2, 20, 10], 19) === 2, '<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回 <code>2</code>.');"
+          "text": "<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回 <code>2</code>。",
+          "testString": "assert(getIndexToIns([2, 20, 10], 19) === 2, '<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回 <code>2</code>。');"
         },
         {
           "text": "<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([2, 20, 10], 19)) === \"number\", '<code>getIndexToIns([2, 20, 10], 19)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回 <code>3</code>.",
-          "testString": "assert(getIndexToIns([2, 5, 10], 15) === 3, '<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回 <code>3</code>.');"
+          "text": "<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回 <code>3</code>。",
+          "testString": "assert(getIndexToIns([2, 5, 10], 15) === 3, '<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回 <code>3</code>。');"
         },
         {
           "text": "<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回一个数字。",
           "testString": "assert(typeof(getIndexToIns([2, 5, 10], 15)) === \"number\", '<code>getIndexToIns([2, 5, 10], 15)</code> 应该返回一个数字。');"
         },
         {
-          "text": "<code>getIndexToIns([], 1)</code> 应该返回 <code>0</code>.",
-          "testString": "assert(getIndexToIns([], 1) === 0, '<code>getIndexToIns([], 1)</code> 应该返回 <code>0</code>.');"
+          "text": "<code>getIndexToIns([], 1)</code> 应该返回 <code>0</code>。",
+          "testString": "assert(getIndexToIns([], 1) === 0, '<code>getIndexToIns([], 1)</code> 应该返回 <code>0</code>。');"
         },
         {
           "text": "<code>getIndexToIns([], 1)</code> 应该返回一个数字。",
@@ -887,48 +887,48 @@
       "id": "af2170cad53daa0770fabdea",
       "title": "Mutations",
       "description": [
-        "输入参数是一个有两个字符串元素的数组。如果第一个字符串中包含了第二个字符串中的所有字母，则返回 true",
+        "输入参数是一个有两个字符串元素的数组。如果第一个字符串中包含了第二个字符串中的所有字母，则返回 true。",
         "例如，<code>[\"hello\", \"Hello\"]</code> 应该返回 true 因为第一个字符串中包含了第二个字符串中出现的所有字母（忽略大小写）。",
-        "而 <code>[\"hello\", \"hey\"]</code> 应该返回 false 因为第一个字符串 \"hello\" 没有包含字母 \"y\"",
+        "而 <code>[\"hello\", \"hey\"]</code> 应该返回 false 因为第一个字符串 \"hello\" 没有包含字母 \"y\"。",
         "最后，<code>[\"Alien\", \"line\"]</code>, 应该返回 true，因为 \"line\" 中的所有字母都被包含在 \"Alien\" 中。",
         "如果您有任何疑问，可以访问 <a href=\"http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514\" target=\"_blank\">Read-Search-Ask</a> 。请您独立解决挑战中的问题。"
       ],
       "tests": [
         {
-          "text": "<code>mutation([\"hello\", \"hey\"])</code> 应该返回 false.",
-          "testString": "assert(mutation([\"hello\", \"hey\"]) === false, '<code>mutation([\"hello\", \"hey\"])</code> 应该返回 false.');"
+          "text": "<code>mutation([\"hello\", \"hey\"])</code> 应该返回 false。",
+          "testString": "assert(mutation([\"hello\", \"hey\"]) === false, '<code>mutation([\"hello\", \"hey\"])</code> 应该返回 false。');"
         },
         {
-          "text": "<code>mutation([\"hello\", \"Hello\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"hello\", \"Hello\"]) === true, '<code>mutation([\"hello\", \"Hello\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"hello\", \"Hello\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"hello\", \"Hello\"]) === true, '<code>mutation([\"hello\", \"Hello\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"]) === true, '<code>mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"]) === true, '<code>mutation([\"zyxwvutsrqponmlkjihgfedcba\", \"qrstu\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"Mary\", \"Army\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"Mary\", \"Army\"]) === true, '<code>mutation([\"Mary\", \"Army\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"Mary\", \"Army\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"Mary\", \"Army\"]) === true, '<code>mutation([\"Mary\", \"Army\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"Mary\", \"Aarmy\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"Mary\", \"Aarmy\"]) === true, '<code>mutation([\"Mary\", \"Aarmy\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"Mary\", \"Aarmy\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"Mary\", \"Aarmy\"]) === true, '<code>mutation([\"Mary\", \"Aarmy\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"Alien\", \"line\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"Alien\", \"line\"]) === true, '<code>mutation([\"Alien\", \"line\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"Alien\", \"line\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"Alien\", \"line\"]) === true, '<code>mutation([\"Alien\", \"line\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"floor\", \"for\"])</code> 应该返回 true.",
-          "testString": "assert(mutation([\"floor\", \"for\"]) === true, '<code>mutation([\"floor\", \"for\"])</code> 应该返回 true.');"
+          "text": "<code>mutation([\"floor\", \"for\"])</code> 应该返回 true。",
+          "testString": "assert(mutation([\"floor\", \"for\"]) === true, '<code>mutation([\"floor\", \"for\"])</code> 应该返回 true。');"
         },
         {
-          "text": "<code>mutation([\"hello\", \"neo\"])</code> 应该返回 false.",
-          "testString": "assert(mutation([\"hello\", \"neo\"]) === false, '<code>mutation([\"hello\", \"neo\"])</code> 应该返回 false.');"
+          "text": "<code>mutation([\"hello\", \"neo\"])</code> 应该返回 false。",
+          "testString": "assert(mutation([\"hello\", \"neo\"]) === false, '<code>mutation([\"hello\", \"neo\"])</code> 应该返回 false。');"
         },
         {
-          "text": "<code>mutation([\"voodoo\", \"no\"])</code> 应该返回 false.",
-          "testString": "assert(mutation([\"voodoo\", \"no\"]) === false, '<code>mutation([\"voodoo\", \"no\"])</code> 应该返回 false.');"
+          "text": "<code>mutation([\"voodoo\", \"no\"])</code> 应该返回 false。",
+          "testString": "assert(mutation([\"voodoo\", \"no\"]) === false, '<code>mutation([\"voodoo\", \"no\"])</code> 应该返回 false。');"
         }
       ],
       "isRequired": true,
@@ -965,32 +965,32 @@
       ],
       "tests": [
         {
-          "text": "<code>chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2)</code> 应该返回 <code>[[\"a\", \"b\"], [\"c\", \"d\"]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2), [[\"a\", \"b\"], [\"c\", \"d\"]], '<code>chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2)</code> 应该返回 <code>[[\"a\", \"b\"], [\"c\", \"d\"]]</code>.');"
+          "text": "<code>chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2)</code> 应该返回 <code>[[\"a\", \"b\"], [\"c\", \"d\"]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2), [[\"a\", \"b\"], [\"c\", \"d\"]], '<code>chunkArrayInGroups([\"a\", \"b\", \"c\", \"d\"], 2)</code> 应该返回 <code>[[\"a\", \"b\"], [\"c\", \"d\"]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3), [[0, 1, 2], [3, 4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3), [[0, 1, 2], [3, 4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2), [[0, 1], [2, 3], [4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2), [[0, 1], [2, 3], [4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4), [[0, 1, 2, 3], [4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4), [[0, 1, 2, 3], [4, 5]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5], [6]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3), [[0, 1, 2], [3, 4, 5], [6]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5], [6]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5], [6]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3), [[0, 1, 2], [3, 4, 5], [6]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3)</code> 应该返回 <code>[[0, 1, 2], [3, 4, 5], [6]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5, 6, 7], [8]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [[0, 1, 2, 3], [4, 5, 6, 7], [8]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5, 6, 7], [8]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5, 6, 7], [8]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4), [[0, 1, 2, 3], [4, 5, 6, 7], [8]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4)</code> 应该返回 <code>[[0, 1, 2, 3], [4, 5, 6, 7], [8]]</code>。');"
         },
         {
-          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5], [6, 7], [8]]</code>.",
-          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [[0, 1], [2, 3], [4, 5], [6, 7], [8]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5], [6, 7], [8]]</code>.');"
+          "text": "<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5], [6, 7], [8]]</code>。",
+          "testString": "assert.deepEqual(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2), [[0, 1], [2, 3], [4, 5], [6, 7], [8]], '<code>chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2)</code> 应该返回 <code>[[0, 1], [2, 3], [4, 5], [6, 7], [8]]</code>。');"
         }
       ],
       "isRequired": true,
