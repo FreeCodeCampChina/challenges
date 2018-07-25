@@ -8,15 +8,15 @@
       "id": "5a858944d96184f06fd60d61",
       "title": "Create Your First CSS Grid",
       "description": [
-        "对于任何 HTML 元素，如果我们把它的 <code>display</code> 的属性值设置为 <code>grid</code>，那么它就成为了一个网格容器。然后，你就可以使用 CSS 网格的其他属性。",
-        "<strong>注意</strong><br>在 CSS 网格中，父元素叫做 <dfn>container</dfn>，而它的子元素叫 <dfn>items</dfn>。",
+        "Turn any HTML element into a grid container by setting its <code>display</code> property to <code>grid</code>. This gives you the ability to use all the other properties associated with CSS Grid.",
+        "<strong>Note</strong><br>In CSS Grid, the parent element is referred to as the <dfn>container</dfn> and its children are called <dfn>items</dfn>.",
         "<hr>",
-        "在 class 为 <code>container</code> 的 div 中，把其中的 display 属性值设置为 <code>grid</code>。"
+        "Change the display of the div with the <code>container</code> class to <code>grid</code>."
       ],
       "tests": [
         {
-          "text": "在 class 为 <code>container</code> 的 div 中，把其中的 display 属性值设置为 <code>grid</code>。",
-          "testString": "assert(code.match(/.container\\s*?{[\\s\\S]*display\\s*?:\\s*?grid\\s*?;[\\s\\S]*}/gi), '在 class 为 <code>container</code> 的 div 中，把其中的 display 属性值设置为 <code>grid</code>。');"
+          "text": "<code>container</code> class should have a <code>display</code> property with a value of <code>grid</code>.",
+          "testString": "assert(code.match(/.container\\s*?{[\\s\\S]*display\\s*?:\\s*?grid\\s*?;[\\s\\S]*}/gi), '<code>container</code> class should have a <code>display</code> property with a value of <code>grid</code>.');"
         }
       ],
       "solutions": [],
@@ -64,17 +64,17 @@
       "id": "5a9036d038fddaf9a66b5d32",
       "title": "Add Columns with grid-template-columns",
       "description": [
-        "简单地创建一个网格元素并不能取得很大的进展。你还需要明确网格的结构。在一个容器中使用 <code>grid-template-columns</code> 属性可以添加一些列，实列如下：",
+        "Simply creating a grid element doesn't get you very far. You need to define the structure of the grid as well. To add some columns to the grid, use the <code>grid-template-columns</code> property on a grid container as demonstrated below:",
         "<blockquote>.container {<br>&nbsp;&nbsp;display: grid;<br>&nbsp;&nbsp;grid-template-columns: 50px 50px;<br>}</blockquote>",
-        "上面的代码可以在网格容器中添加两列，宽度均为 50px。",
-        "在 <code>grid-template-columns</code> 属性中，参数的个数代表列的个数，参数的值代表列的宽度。",
+        "This will give your grid two columns that are 50px wide each.",
+        "The number of parameters given to the <code>grid-template-columns</code> property indicates the number of columns in the grid, and the value of each parameter indicates the width of each column.",
         "<hr>",
-        "在容器中设置三个列，每列宽度为 <code>100px</code>。"
+        "Give the grid container three columns that are <code>100px</code> wide each."
       ],
       "tests": [
         {
-          "text": "在容器中应该有三个列，而且每列宽度为 <code>100px</code>。",
-          "testString": "assert(code.match(/.container\\s*?{[\\s\\S]*grid-template-columns\\s*?:\\s*?100px\\s*?100px\\s*?100px\\s*?;[\\s\\S]*}/gi), '在容器中应该有三个列，而且每列宽度为 <code>100px</code>。');"
+          "text": "<code>container</code> class should have a <code>grid-template-columns</code> property with three units of <code>100px</code>.",
+          "testString": "assert(code.match(/.container\\s*?{[\\s\\S]*grid-template-columns\\s*?:\\s*?100px\\s*?100px\\s*?100px\\s*?;[\\s\\S]*}/gi), '<code>container</code> class should have a <code>grid-template-columns</code> property with three units of <code>100px</code>.');"
         }
       ],
       "solutions": [],
