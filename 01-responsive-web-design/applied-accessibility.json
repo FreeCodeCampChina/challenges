@@ -93,23 +93,23 @@
       "id": "587d774d367417b2b2512a9e",
       "title": "Use Headings to Show Hierarchical Relationships of Content",
       "description": [
-        "Headings (<code>h1</code> through <code>h6</code> elements) are workhorse tags that help provide structure and labeling to your content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.",
-        "<em>Semantic meaning</em> means that the tag you use around content indicates the type of information it contains.",
-        "If you were writing a paper with an introduction, a body, and a conclusion, it wouldn't make much sense to put the conclusion as a subsection of the body in your outline. It should be its own section. Similarly, the heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content.",
-        "Headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections of the previous one.",
-        "As an example, a page with an <code>h2</code> element followed by several subsections labeled with <code>h4</code> tags would confuse a screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you can use CSS to edit the relative sizing.",
-        "One final point, each page should always have one (and only one) <code>h1</code> element, which is the main subject of your content. This and the other headings are used in part by search engines to understand the topic of the page.",
+        "标题标签（包含从<code>h1</code> 到 <code>h6</code> 的六个不同级别的标签）有很高的使用率，它们有助于为你的内容安排结构和标志。屏幕阅读器可以设置为只朗读页面的标题，以使用户获得页面的主题。这意味着一个重要的事实：要使你的标志具有语义化并相互关联，而不要仅仅为了利用它们之间不同的字体大小。",
+        "<em>语义化</em>是说为你的内容所用的标签，能表示出它所含内容的信息类型。",
+        "如果你正在写一篇含有引言、正文、结论的论文，在你的概述中，把结论作为正文的一小节是没有意义的。结论应该作为一个单独部分。类似的，页面中的标题标签应该是有序的，并且能指明内容的层次关系。",
+        "同级别（或者更高级别）的标题应该作为一个新的章节，而低级别的标题作为上一级标题的小节部分。",
+        "例如：一个 <code>h2</code> 标签后紧跟若干用 <code>h4</code> 标签标记的小节的页面，会使屏幕阅读器用户感到疑惑。使用6个标题标签来控制字体的大小是很吸引人的，因为在浏览器中，它们看起来更好，但是你也可以使用CSS来控制字体的相对大小。",
+        "最后一点，每个页面只能有一个 <code>h1</code> 标签，用来说明页面主要内容。这个标签和其他的标题标签一起用于辅助搜索引擎理解页面的主题。",
         "<hr>",
-        "Camper Cat wants a page on his site dedicated to becoming a ninja. Help him fix the headings so his markup gives semantic meaning to the content, and shows the proper parent-child relationships of his sections. Change all the <code>h5</code> tags to the proper heading level to indicate they are subsections of the <code>h2</code> ones."
+        "Camper Cat希望他的网站有个页面，指明如何成为忍者。帮助他修改标题标签，使它们对标题具有语义，并且父子关系正确。将所有的 <code>h5</code> 标题标签修改为恰当的级别，以表示它们是 <code>h2</code> 标题标签的子级。"
       ],
       "tests": [
         {
-          "text": "Your code should have six <code>h3</code> tags.",
-          "testString": "assert($('h3').length === 6, 'Your code should have six <code>h3</code> tags.');"
+          "text": "你的代码需要包含6个 <code>h3</code> 标签。",
+          "testString": "assert($('h3').length === 6, '你的代码需要包含6个 <code>h3</code> 标签。"
         },
         {
-          "text": "Your code should not have any <code>h5</code> tags.",
-          "testString": "assert($('h5').length === 0, 'Your code should not have any <code>h5</code> tags.');"
+          "text": "你的代码不能包含 <code>h5</code> 标签。",
+          "testString": "assert($('h5').length === 0, '你的代码需要包含6个 <code>h3</code> 标签。"
         }
       ],
       "solutions": [],
