@@ -1,49 +1,49 @@
-# Introduction to the CSS Grid Challenges #
+# CSS 网格简介 #
 
-CSS Grid helps you easily build complex web designs. It works by turning an HTML element into a grid container with rows and columns for you to place children elements where you want within the grid.
+CSS 网格帮助你轻松实现复杂的 Web 设计。它通过将 HTML 元素转换为具有行和列的网格容器，以便将子元素放置在所需要的位置。
 
-# Upcoming Lessons #
+# 课程 #
 
-Create Your First CSS Grid
+创建你的第一个 CSS 网格
 
-Add Columns with grid-template-columns
+用 grid-template-columns 添加列
 
-Add Rows with grid-template-rows
+用 grid-template-rows 添加行
 
-Use CSS Grid units to Change the Size of Columns and Rows
+用 CSS 网格单位修改行或列的大小
 
-Create a Column Gap Using grid-column-gap
+用 grid-column-gap 创建列间隙
 
-Create a Row Gap using grid-row-gap
+用 grid-row-gap 创建行间隙
 
-Add Gaps Faster with grid-gap
+用 grid-gap 快速添加间隙
 
-Use grid-column to Control Spacing
+用 grid-column 控制列空间
 
-Use grid-row to Control Spacing
+用 grid-row 控制行空间
 
-Align an Item Horizontally using justify-self
+用 justify-self 使一个网格项沿行轴对齐
 
-Align an Item Vertically using align-self
+用 align-self 使一个网格项沿行轴对齐
 
-Align All Items Horizontally using justify-items
+用 justify-items 使所有网格项沿行轴对齐
 
-Align All Items Vertically using align-items
+用 align-items 使所有网格项沿列轴对齐
 
-Divide the Grid Into an Area Template
+将网格划入区域模板
 
-Place Items in Grid Areas Using the grid-area Property
+用 grid-area 属性将网格项放到网格区域
 
-Use grid-area Without Creating an Areas Template
+在没有创建区域模板的情况下使用 grid-area
 
-Reduce Repetition Using the repeat Function
+用 repeat 方法减少重复
 
-Limit Item Size Using the minmax Function
+用minmax函数限制网格项大小
 
-Create Flexible Layouts Using auto-fill
+用auto-fill灵活布局
 
-Create Flexible Layouts Using auto-fit
+用auto-fit灵活布局
 
-Use Media Queries to Create Responsive Layouts
+用媒体查询创建响应式布局
 
-Create Grids within Grids
+创建嵌套的网格
