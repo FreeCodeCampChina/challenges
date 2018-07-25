@@ -27,7 +27,7 @@
       "title": "Hide Potentially Dangerous Information Using helmet.hidePoweredBy()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "如果黑客发现你的网站是用 Express 搭建的，那么他们就可以利用 Express 或 Node 现存的漏洞来攻击你的网站。<code>X-Powered-By: Express</code> 默认情况下会被添加到所有响应的头部。不过 helmet.hidePoweredBy() 中间件可以帮你移除 X-Powered-By 头. 你甚至可以把头设置成其它的值。 如 <code>app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }))</code>"
+        "如果黑客发现你的网站是用 Express 搭建的，那么他们就可以利用 Express 或 Node 现存的漏洞来攻击你的网站。<code>X-Powered-By: Express</code> 默认情况下会被添加到所有响应的头部。不过 helmet.hidePoweredBy() 中间件可以帮你移除 X-Powered-By 头。你甚至可以把头设置成其它的值。 如 <code>app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }))</code>"
       ],
       "tests": [
         {
@@ -45,8 +45,8 @@
       "title": "Mitigate the Risk of Clickjacking with helmet.frameguard()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "你的页面有可能会在未经你允许的情况下被放在 <frame> 或者 <iframe> 标签里面。其中一个风险就会导致 clickjacking 攻击。Clickjacking 这个小技巧可以在用户与网站 A 进行交互的时候，欺骗用户让用户以为他是在与网站 B 进行交互。通过 iframing 就可以恶意地执行你的页面。这种情况下，黑客可以在你的页面上再加一层隐藏的层。隐藏的按钮可以用来执行恶意的脚本。helmet 这个中间件可以设置 X-Frame-Options 这个头部。这样就能限制谁可以通过 iframe 引入你的页面了。 有三个模式可供配置: DENY, SAMEORIGIN, 和 ALLOW-FROM.",
-        "我们不需要我们的应用被 iframe 引用。只需要 helmet.frameguard() 这个函数，然后传入配置对象  {action: 'deny'} 就可以了。"
+        "黑客可能会不经过你的允许，把你的页面嵌套在 <frame> 或者 <iframe> 标签里，用以实现“点击劫持”。点击劫持是一种视觉上的欺骗手段，让用户误以为自己在与所看到的网页交互。通过 iframe，黑客可以在你的页面上添加一个透明的“层”，然后把自己的恶意代码放在一个用户看不到的按钮中。这样一来，你网站的执行环境就被黑客设置成了他想要的效果。helmet 中间件可以设置 X-Frame-Options 这个头部。这样就能限制谁可以通过 iframe 引入你的页面了。 有三个模式可供配置: DENY, SAMEORIGIN, 和 ALLOW-FROM.",
+        "我们的应用不需要被 iframe 引用。你可以调用 <code>helmet.frameguard()</code> 这个方法，然后传入配置对象  <code>{action: 'deny'}</code> 就可以了。"
       ],
       "tests": [
         {
@@ -54,7 +54,7 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'frameguard', 'helmet.frameguard() middleware is not mounted correctly'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "helmet.frameguard() 'action' 应该被设置成 'DENY'",
+          "text": "<code>helmet.frameguard()</code> 中的 <code>action</code> 属性的值应该为 'DENY'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.property(data.headers, 'x-frame-options'); assert.equal(data.headers['x-frame-options'], 'DENY');}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
