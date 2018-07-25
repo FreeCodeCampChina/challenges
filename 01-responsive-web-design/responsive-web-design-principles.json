@@ -8,8 +8,8 @@
       "id": "587d78b0367417b2b2512b08",
       "title": "Create a Media Query",
       "description": [
-        "媒体查询是 CSS3 中针对不同可视窗口大小定义不同样式的新技术，可视窗口是用户在网页上的可见区域，根据访问网站的设备不同而不同。",
-        "媒体查询由媒体类型组成，如果媒体类型与展示网页的设备类型匹配，则应用对应的样式。你可以在你的媒体查询中用上你想用的选择器和样式。",
+        "媒体查询是 CSS3 中引入的一项新技术，它可以根据不同的可视窗口大小显示不同的布局。可视窗口是用户在网页上的可见区域，根据访问网站的设备不同而不同。",
+        "媒体查询由媒体类型组成，如果媒体类型与展示网页的设备类型匹配，则应用对应的样式。你可以在媒体查询中用上你想用的选择器和样式。",
         "下面是一个媒体查询的例子，当设备宽度小于或等于 100px 时返回内容：",
         "<code>@media (max-width: 100px) { /* CSS Rules */ }</code>",
         "以下定义的媒体查询，是当设备高度大于或等于 350px 时返回内容：",
@@ -20,8 +20,8 @@
       ],
       "tests": [
         {
-          "text": "当设备 <code>height</code> 小于或等于 800px 时，你的 <code>p</code> 元素 <code>font-size</code> 应为 10px。",
-          "testString": "assert($('p').css('font-size') == '10px', '当设备 <code>height</code> 小于或等于 800px 时，你的 <code>p</code> 元素 <code>font-size</code> 应为 10px。');"
+          "text": "当设备 <code>height</code> 小于或等于 800px 时，<code>p</code> 元素 <code>font-size</code> 应为 10px。",
+          "testString": "assert($('p').css('font-size') == '10px', '当设备 <code>height</code> 小于或等于 800px 时，<code>p</code> 元素 <code>font-size</code> 应为 10px。');"
         },
         {
           "text": "使用 <code>@media</code> 为 <code>height</code> 小于或等于 800px 的设备添加一个媒体查询。",
@@ -62,22 +62,22 @@
         "<code>img { width: 720px; }</code>",
         "你还可以这样用：",
         "<blockquote>img {<br>&nbsp;&nbsp;max-width: 100%;<br>&nbsp;&nbsp;display: block;<br>&nbsp;&nbsp;height: auto;<br>}</blockquote>",
-        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为行内块级元素。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比",
+        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为行内块级元素。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比。",
         "<hr>",
         "给 <code>img</code> 标签增加样式规则使它自适应容器尺寸。应声明为块级元素，应适应它容器的宽度，应保持原本的宽高比。"
       ],
       "tests": [
         {
-          "text": "你的 <code>img</code> 标签应设置 <code>max-width</code> 为 100%。",
-          "testString": "assert(code.match(/max-width:\\s*?100%;/g), '你的 <code>img</code> 标签应设置 <code>max-width</code> 为 100%。');"
+          "text": "<code>img</code> 标签应设置 <code>max-width</code> 为 100%。",
+          "testString": "assert(code.match(/max-width:\\s*?100%;/g), '<code>img</code> 标签应设置 <code>max-width</code> 为 100%。');"
         },
         {
-          "text": "你的 <code>img</code> 标签应设置 <code>display</code> 为 block。",
-          "testString": "assert($('img').css('display') == 'block', '你的 <code>img</code> 标签应设置 <code>display</code> 为 block。');"
+          "text": "<code>img</code> 标签应设置 <code>display</code> 为 block。",
+          "testString": "assert($('img').css('display') == 'block', '<code>img</code> 标签应设置 <code>display</code> 为 block。');"
         },
         {
-          "text": "你的 <code>img</code> 标签应设置 <code>height</code> 为 auto。",
-          "testString": "assert(code.match(/height:\\s*?auto;/g), '你的 <code>img</code> 标签应设置 <code>height</code> 为 auto。');"
+          "text": "<code>img</code> 标签应设置 <code>height</code> 为 auto。",
+          "testString": "assert(code.match(/height:\\s*?auto;/g), '<code>img</code> 标签应设置 <code>height</code> 为 auto。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -113,12 +113,12 @@
       ],
       "tests": [
         {
-          "text": "你的 <code>img</code> 标签的 <code>width</code> 值应为 100px。",
-          "testString": "assert($('img').css('width') == '100px', '你的 <code>img</code> 标签的 <code>width</code> 值应为 100px。');"
+          "text": "<code>img</code> 标签的 <code>width</code> 值应为 100px。",
+          "testString": "assert($('img').css('width') == '100px', '<code>img</code> 标签的 <code>width</code> 值应为 100px。');"
         },
         {
-          "text": "你的 <code>img</code> 标签应含有 100 像素的 <code>height</code>。",
-          "testString": "assert($('img').css('height') == '100px', '你的 <code>img</code> 标签应含有 100 像素的 <code>height</code>。');"
+          "text": "<code>img</code> 标签应含有 100 像素的 <code>height</code>。",
+          "testString": "assert($('img').css('height') == '100px', '<code>img</code> 标签应含有 100 像素的 <code>height</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -154,12 +154,12 @@
       ],
       "tests": [
         {
-          "text": "你的 <code>h2</code> 标签 <code>width</code> 应为 80vw。",
-          "testString": "assert(code.match(/h2\\s*?{\\s*?width:\\s*?80vw;\\s*?}/g), '你的 <code>h2</code> 标签的 <code>width</code> 应为 80vw。');"
+          "text": "<code>h2</code> 标签 <code>width</code> 应为 80vw。",
+          "testString": "assert(code.match(/h2\\s*?{\\s*?width:\\s*?80vw;\\s*?}/g), '<code>h2</code> 标签的 <code>width</code> 应为 80vw。');"
         },
         {
-          "text": "你的 <code>p</code> 标签 <code>width</code> 应为 75vmin。",
-          "testString": "assert(code.match(/p\\s*?{\\s*?width:\\s*?75vmin;\\s*?}/g), '你的 <code>p</code> 标签的 <code>width</code> 应为 75vmin。');"
+          "text": "<code>p</code> 标签 <code>width</code> 应为 75vmin。",
+          "testString": "assert(code.match(/p\\s*?{\\s*?width:\\s*?75vmin;\\s*?}/g), '<code>p</code> 标签的 <code>width</code> 应为 75vmin。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
