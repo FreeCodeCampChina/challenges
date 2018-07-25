@@ -58,11 +58,11 @@
       "id": "587d78b1367417b2b2512b09",
       "title": "Make an Image Responsive",
       "description": [
-        "用 CSS 来做图片自适应其实很简单。除了在元素上使用绝对宽度外：",
+        "用 CSS 来让图片自适应其实很简单。不要使用绝对单位：",
         "<code>img { width: 720px; }</code>",
-        "你还可以这样用：",
+        "你应该使用：",
         "<blockquote>img {<br>&nbsp;&nbsp;max-width: 100%;<br>&nbsp;&nbsp;display: block;<br>&nbsp;&nbsp;height: auto;<br>}</blockquote>",
-        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为行内块级元素。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比。",
+        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为块级元素。。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比。",
         "<hr>",
         "给 <code>img</code> 标签增加样式规则使它自适应容器尺寸。应声明为块级元素，应适应它容器的宽度，应保持原本的宽高比。"
       ],
@@ -106,7 +106,7 @@
       "title": "Use a Retina Image for Higher Resolution Displays",
       "description": [
         "为优化图片在高分辨率设备下的显示效果，最简单的方式是定义它们的 <code>width</code> 和 <code>height</code> 值为源文件宽高的一半。",
-        "这是一个图片宽高设置为源文件宽高一半的例子：",
+        "这是一个图片宽高设置为源文件一半的例子：",
         "<blockquote>&lt;style&gt;<br>&nbsp;&nbsp;img { height: 250px; width: 250px; }<br>&lt;/style&gt;<br>&lt;img src=&quot;coolPic500x500&quot; alt=&quot;一张高质量的图片&quot;&gt;</blockquote>",
         "<hr>",
         "设置 <code>img</code> 标签的 <code>width</code> 和 <code>height</code> 为它们原始宽高的一半。在这个例子中，原始 <code>height</code> 和原始 <code>width</code> 的值都为 200px。"
@@ -146,11 +146,11 @@
       "id": "587d78b1367417b2b2512b0c",
       "title": "Make Typography Responsive",
       "description": [
-        "除了用 <code>em</code> 或 <code>px</code> 去设置文本大小, 你还可以用视口单位来控制排版。视口单位，如百分比，是相对单位，但它们基于不同的元素。视口单元相对于设备的视口尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。",
-        "四个不同的视口单位分别是：",
-        "<ul><li><code>vw</code>：如 <code>10vw</code> 的意思是视口宽度的 10%。</li><li><code>vh：</code> 如 <code>3vh</code> 的意思是视口高度的 3%。</li><li><code>vmin：</code> 如 <code>70vmin</code> 的意思是高度/宽度较小值的 70%。</li><li><code>vmax：</code> 如 <code>100vmax</code> 的意思是高度/宽度较大值的 100%。</li></ul>",
+        "除了用 <code>em</code> 或 <code>px</code> 去设置文本大小, 你还可以用视窗单位来做响应式排版。视窗单位还有百分比，它们都是相对单位，但却基于不同的参照物。视窗单位相对于设备的视窗尺寸 (宽度或高度) ，百分比是相对于父级元素的大小。",
+        "四个不同的视窗单位分别是：",
+        "<ul><li><code>vw</code>：如 <code>10vw</code> 的意思是视窗宽度的 10%。</li><li><code>vh：</code> 如 <code>3vh</code> 的意思是视窗高度的 3%。</li><li><code>vmin：</code> 如 <code>70vmin</code> 的意思是视窗中较小尺寸的 70% (高度 VS 宽度)。</li><li><code>vmax：</code> 如 <code>100vmax</code> 的意思是视窗中较大尺寸的 100% (高度 VS 宽度)。</li></ul>",
         "<hr>",
-        "设置 <code>h2</code> 标签 <code>width</code> 为视口宽度的 80%，并且段落 <code>width</code> 为视口高度和宽度中较小值的 70%。"
+        "设置 <code>h2</code> 标签 <code>width</code> 为视窗宽度的 80%，并且段落 <code>width</code> 为视窗高度和宽度中较小值的 70%。"
       ],
       "tests": [
         {
