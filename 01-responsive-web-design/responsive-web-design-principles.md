@@ -1,13 +1,13 @@
 # Introduction to the Responsive Web Design Principles #
 
-Today, there are many types of devices that can access the web. They range from large desktop computers to small mobile phones. These devices have different screen sizes, resolutions, and processing power. Responsive Web Design is an approach to designing web content that responds to the constraints of different devices. The page structure and CSS rules should be flexible to accommodate these differences. In general, design the page's CSS to your target audience. If you expect most of your traffic to be from mobile users, take a 'mobile-first' approach. Then add conditional rules for larger screen sizes. If your visitors are desktop users, then design for larger screens with conditional rules for smaller sizes. CSS gives you the tools to write different style rules, then apply them depending on the device displaying the page. This section will cover the basic ways to use CSS for Responsive Web Design.
+如今，从大屏的台式电脑到小屏的手机，我们有各式各样的设备可以上网。这些设备有着不同的屏幕尺寸、分辨率和处理能力。响应式网页设计是一种对内容应用不同约束条件的设计方法，能使页面结构和 CSS 规则能够灵活应用于不同设备之间的差异。一般来说，页面的 CSS 是设计给目标用户看的。如果你希望大部分流量来自移动端用户，采取“移动端优先”的设计方法，然后再为大屏幕添加展示规则。如果你的访客来自桌面用户，则为小尺寸屏幕设置额外规则。CSS 提供了书写不同样式规则的工具，然后根据显示网页的设备应用它们。本节将介绍使用 CSS 来响应 Web 设计的基本方法。
 
 # Upcoming Lessons # 
 
-Create a Media Query
+创建一个媒体查询
 
-Make an Image Responsive
+图片自适应
 
-Use a Retina Image for Higher Resolution Displays
+在高分辨率设备下显示高清图片
 
-Make Typography Responsive
+设置字体自适应
