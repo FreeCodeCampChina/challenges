@@ -11,46 +11,46 @@
 * 首先，fork 一下 [challenges](https://github.com/FreeCodeCampChina/challenges.git) repo。
 
 * 把**你的 fork** 克隆到本地。
-```bash
-git clone https://github.com/your_name/challenges.git  # 注意，`your_name` 是你的 github ID。
-```
+  ```bash
+  git clone https://github.com/your_name/challenges.git  # 注意，`your_name` 是你的 github ID。
+  ```
 * 切换到 challenges 文件夹。
-```bash
-cd challenges
-```
+  ```bash
+  cd challenges
+  ```
 * 根据你在翻译的项目名称或者你正在做的事情，新建分支。
-```bash
-# 建议每次都从 translate 分支建立新的分支
-# 请参考后面的“常见问题”
-git checkout -b your_branch_name  #  `your_branch_name` 是你的分支名
-```
+  ```bash
+  # 建议每次都从 translate 分支建立新的分支
+  # 请参考后面的“常见问题”
+  git checkout -b your_branch_name  #  `your_branch_name` 是你的分支名
+  ```
 * 在本地进行代码或文件修改。
 
 * 添加要追踪的文件到暂存区。
-```bash
-git add .        # 注：这个命令不是永远都会添加你的所有改动，请参考“常见问题”。
-git add my.json  # 或者你也可以添加某一个文件
-```
+  ```bash
+  git add .        # 注：这个命令不是永远都会添加你的所有改动，请参考“常见问题”。
+  git add my.json  # 或者你也可以添加某一个文件
+  ```
 * 提交 commit 到本地仓库。
-```bash
-git commit -m "My commit message"  # 注意，请根据实际情况填写 commit message。
-git commit # 或者你也可以打开你喜欢的编辑器（需要配置），在里面编写 commit message。
-```
+  ```bash
+  git commit -m "My commit message"  # 注意，请根据实际情况填写 commit message。
+  git commit # 或者你也可以打开你喜欢的编辑器（需要配置），在里面编写 commit message。
+  ```
 * 把本地仓库推送到远程仓库。
-```bash
-git push origin your_branch_name
-```
+  ```bash
+  git push origin your_branch_name
+  ```
 * 打开 github 页面，创建 PR。
 
 ## 同步远程更新至本地
 * 关联上游 repo 至本地项目。
-```bash
-git remote add upstream https://github.com/FreeCodeCampChina/challenges.git
-```
+  ```bash
+  git remote add upstream https://github.com/FreeCodeCampChina/challenges.git
+  ```
 * 获取上游更新，并应用到本地。
-```bash
-git pull --rebase upstream translate
-```
+  ```bash
+  git pull --rebase upstream translate
+  ```
 
 ## 注意
 * `pull` 或 `rebase` 之后，如果有 conflicts，可以先使用 `git status` 查看存在 conflicts 的文件。
@@ -58,9 +58,9 @@ git pull --rebase upstream translate
   修改成需要的版本后，使用 `git add .` 然后 `git rebase --continue`。
    
 * 解决冲突之后，需要更新至远程，否则只有你的本地有更新。
-```bash
-git push origin your_branch_name
-```
+  ```bash
+  git push origin your_branch_name
+  ```
 * 如果出现错误提示，请先使用 `git status` 命令检查本地是否有未解决完成的 conflicts。
 
 * 任何时候出现错误，不必惊慌。
