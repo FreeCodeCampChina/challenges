@@ -148,21 +148,21 @@
       "id": "587d774e367417b2b2512a9f",
       "title": "Jump Straight to the Content Using the main Element",
       "description": [
-        "HTML5 introduced a number of new elements that give developers more options while also incorporating accessibility features. These tags include <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>, among others.",
-        "By default, a browser renders these elements similarly to the humble <code>div</code>. However, using them where appropriate gives additional meaning in your markup. The tag name alone can indicate the type of information it contains, which adds semantic meaning to that content. Assistive technologies can access this information to provide better page summary or navigation options to their users.",
-        "The <code>main</code> element is used to wrap (you guessed it) the main content, and there should be only one per page. It's meant to surround the information that's related to the central topic of your page. It's not meant to include items that repeat across pages, like navigation links or banners.",
-        "The <code>main</code> tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the main content. If you've ever seen a \"Jump to Main Content\" link at the top of a page, using a main tag automatically gives assistive devices that functionality.",
+        "HTML5引入了很多新标签，它们为开发人员提供了更多选择与辅助特性。这些新标签包括 <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>等。",
+        "默认情况下，浏览器呈现这些新标签的方式与 <code>div</code> 类似。但是，在适当的地方使用它们，可以为你的标志提供额外的信息。仅标签的名字就能指示其所包含内容的信息类型，这也使内容具有语义化含义。辅助技术可以访问这些信息，以便为其用户提供更好的页面概要或导航选项。",
+        "<code> main </code> 标签用于修饰（你猜对了）主题，且每个页面应该只有一个。它旨在包含与页面中心主题相关的信息。这并不意味着包含那些跨页面重复出现的项目，如导航连接、横幅。",
+        "<code>main</code> 标签也具有锚点功能，使辅助技术可以快速定位到主题。如果你曾在页面顶部见到过“跳转到主题”连接的话，使用 <code>main</code> 标签就能使辅助设备自动具备这个功能。",
         "<hr>",
-        "Camper Cat has some big ideas for his ninja weapons page. Help him set up his markup by adding opening and closing <code>main</code> tags between the <code>header</code> and <code>footer</code> (covered in other challenges). Keep the <code>main</code> tags empty for now."
+        "Camper Cat对他的忍者武器页面有一些重要想法。通过在 <code>header</code> 标签和 <code>footer</code> 标签（在其他挑战中会涉及）之间添加起始和闭合 <code>main</code> 标签来帮助他建立标志。现在保持 <code>main</code> 为空。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>main</code> tag.",
-          "testString": "assert($('main').length == 1, 'Your code should have one <code>main</code> tag.');"
+          "text": "你的代码应该有一个 <code>main</code> 标记。",
+          "testString": "assert($('main').length == 1, '你的代码应该有一个 <code>main</code> 标记。');"
         },
         {
-          "text": "The <code>main</code> tags should be between the closing <code>header</code> tag and the opening <code>footer</code> tag.",
-          "testString": "assert(code.match(/<\\/header>\\s*?<main>\\s*?<\\/main>/gi), 'The <code>main</code> tags should be between the closing <code>header</code> tag and the opening <code>footer</code> tag.');"
+          "text": "<code>main</code>标签应该在闭合的 <code>header</code> 标签与起始的 <code>footer</code> 标签之间。",
+          "testString": "assert(code.match(/<\\/header>\\s*?<main>\\s*?<\\/main>/gi), '<code>main</code>标签应该在闭合的 <code>header</code> 标签与起始的 <code>footer</code> 标签之间。');"
         }
       ],
       "solutions": [],
