@@ -1,4 +1,4 @@
-# Introduction to the Managing Packages with npm Challenges #
+# 挑战简介——使用 npm 管理包 #
 
 Node 包管理器（npm）是一种命令行工具，开发人员使用它来分享和管理 Node.js 编写的 JavaScript 模块（包）。
 
@@ -12,7 +12,7 @@ npm 会保存依赖包放入叫 nodemodules 的文件夹内。这些依赖包可
 
 为了能隔离不同项目之间的依赖，大多数开发者更喜欢在本地项目内安装依赖包。你需要在 Glitch 里启动这个项目并编写相应的代码来应对这些挑战。完成每个挑战后，你可以将 Glitch 地址公开（到你的应用主页）并复制它们，放到挑战题中进行测试！你可以选择另外的平台编写项目代码，但是必须设置为可公开访问，以便我们进行测试。可以使用这个链接在 Glitch 上开始项目，或者克隆这个 GitHub 仓库链接来开始项目！如果你使用 Glitch，请记住将项目链接保存到安全的地方！
 
-# Upcoming Lessons #
+# 课程目录 #
 
 如何在 Node.js 项目或者 npm 包中使用 package.json
 
