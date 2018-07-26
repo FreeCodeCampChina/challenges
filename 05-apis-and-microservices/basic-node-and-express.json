@@ -8,13 +8,13 @@
       "id": "587d7fb0367417b2b2512bed",
       "title": "Meet the Node console",
       "description": [
-        "During the development process, it is important to be able to check what’s going on in your code. Node is just a JavaScript environment. Like client side JavaScript, you can use the console to display useful debug information. On your local machine, you would see the console output in a terminal. On Glitch you can open the logs in the lower part of the screen. You can toggle the log panel with the button ‘Logs’ (top-left, under the app name).",
-        "To get started, just print the classic \"Hello World\" in the console. We recommend to keep the log panel open while working at these challenges. Reading the logs you can be aware of the nature of the errors that may occur."
+        "在开发中，能够检查代码发生变化这非常重要。Node 只是一个 JavaScript 环境。与客户端 JavaScript 一样，你可以使用控制台输出有用的调试信息。在本地计算机上，你可以在终端中输出调试信息。在 Glitch 上，你可以打开屏幕下方的日志。使用 \"Logs\" 按钮切换日志面板（在左上角，应用名称的下面）。",
+        "准备开始，我们只需要在控制台打印出经典的 \"Hello World\" 即可。我们建议在做这些挑战题时，保持日志面板处于打开状态。通过这些错误日志，你可能会发现这些错误的本质原因。"
       ],
       "tests": [
         {
-          "text": "<code>\"Hello World\"</code> should be in the console",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/hello-console').then(data => { assert.isTrue(data.passed, '\"Hello World\" is not in the server console'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "应该在控制台中打印出 <code>\"Hello World\"</code>",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/hello-console').then(data => { assert.isTrue(data.passed, '\"Hello World\" 不在服务器控制台中'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -25,17 +25,17 @@
       "id": "587d7fb0367417b2b2512bee",
       "title": "Start a Working Express Server",
       "description": [
-        "In the first two lines of the file myApp.js you can see how it’s easy to create an Express app object. This object has several methods, and we will learn many of them in these challenges. One fundamental method is <code>app.listen(port)</code>. It tells your server to listen on a given port, putting it in running state. You can see it at the bottom of the file. It is inside comments because for testing reasons we need the app to be running in background. All the code that you may want to add goes between these two fundamental parts. Glitch stores the port number in the environment variable <code>process.env.PORT</code>. Its value is <code>3000</code>.",
-        "Let’s serve our first string! In Express, routes takes the following structure: <code>app.METHOD(PATH, HANDLER)</code>. METHOD is an http method in lowercase. PATH is a relative path on the server (it can be a string, or even a regular expression). HANDLER is a function that Express calls when the route is matched.",
-        "Handlers take the form <code>function(req, res) {...}</code>, where req is the request object, and res is the response object. For example, the handler",
+        "在 myApp.js 文件的前两行中，你可以看到创建一个 Express 应用对象是很简单的。这个 Express 对象有几个方法，在这些挑战中，我们将会学习它们更多的方法。一个基础的方法是 <code>app.listen(port)</code>。它告诉服务器监听指定的端口，并且让这个服务处于运行状态。你可以在文件的底部看到它们。它在注释里面，因为出于测试原因，我们需要知道这个应用正在后台运行。你想要添加的所有代码，都放在这两部分之间。Glitch 将端口号存储在环境变量 <code>process.env.PORT</code>中。它的值是 <code>3000</code>。",
+        "我们来让服务器输出第一个字符串！在 Express 中，路由采用这种结构：<code>app.METHOD(PATH, HANDLER)</code>。<code>METHOD</code> 是小写的 http 方法。<code>PATH</code> 是服务器上的相对路径（它是一个字符串，甚至是正则表达式）<code>HANDLER</code> 是 Express 匹配路由时调用的处理函数。",
+        "处理函数采用这种形式：<code>function(req, res) {...}</code>，在这个处理函数的参数中 <code>req</code>and 是请求对象。<code>res</code> 是响应对象。举个例子，处理函数：",
         "<blockquote>function(req, res) {<br> res.send('Response String');<br>}</blockquote>",
-        "will serve the string 'Response String'.",
-        "Use the <code>app.get()</code> method to serve the string Hello Express, to GET requests matching the / root path. Be sure that your code works by looking at the logs, then see the results in your browser, clicking the button ‘Show Live’ in the Glitch UI."
+        "将会响应一个字符串 'Response String'。",
+        "当 GET 请求根路由（ \"/\" ）时，使用 <code>app.get()</code> 方法端响应一个 \"Hello Express\" 字符串。在 Glitch 中点击 \"Show Live\" 按钮，通过查看日志确保你的代码正常运行，然后在浏览器中查看结果。"
       ],
       "tests": [
         {
-          "text": "Your app should serve the string 'Hello Express'",
-          "testString": "getUserInput => $.get(getUserInput('url')).then(data => { assert.equal(data, 'Hello Express', 'Your app does not serve the text \"Hello Express\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "应用应该响应 'Hello Express' 字符串",
+          "testString": "getUserInput => $.get(getUserInput('url')).then(data => { assert.equal(data, 'Hello Express', '应用未响应字符串 \"Hello Express\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
