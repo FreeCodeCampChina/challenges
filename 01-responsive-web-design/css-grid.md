@@ -18,9 +18,9 @@ CSS 网格帮助你轻松实现复杂的 Web 设计。它通过将 HTML 元素�
 
 用 grid-gap 快速添加间隙
 
-用 grid-column 控制列空间
+用 grid-column 控制列间距
 
-用 grid-row 控制行空间
+用 grid-row 控制行间距
 
 用 justify-self 使一个网格项沿行轴对齐
 
