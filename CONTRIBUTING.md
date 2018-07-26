@@ -26,7 +26,7 @@ git checkout -b your_branch_name
 5. 在本地进行代码或文件修改
 6. 修改完成后，先添加要提交的文件：
 ```bash
-git add .        # 添加全部有改动的文件
+git add .        # 注：这个命令不是永远都会添加你的所有改动，请参考“常见问题”
 
 # 或者你也可以添加某一个文件
 git add my.json  # 添加 my.json 文件
@@ -66,6 +66,61 @@ git push origin your_branch_name
 5. 如果你已经用当前的 branch 开了 PR，那么更新这个 branch 至远程的同时，你的 PR 也会自动更新
 
 ## 常见问题
+<details><summary><b>为什么 `git add .` 命令有时会添加不上我的改动？</b></summary>
+
+注意，`git add .` 中的 `.` 表示“当前路径”。因此，如果你通过 `cd` 命令切换到子目录，并在里面执行 `git add .`，那么外面的改动则不会添加。然而，如果你在父级目录执行 `git add .`，子级目录里的文件改动是会添加的
+
+真正的“添加所有文件”的命令是 `git add --all`，可以简写为 `git add -A`
+
+对于这个翻译项目，我们很少会需要 `cd` 进子目录。因此，一般情况下使用 `git add .` 就足够了
+
+</details>
+
+<details><summary><b>如何解决冲突？</b></summary>
+
+对于任何多人协作项目，有 merge conflicts 是十分正常的。如果你在命令行中看到了 `CONFLICTS` 这样的输出，那就表示有冲突
+
+这时，你需要先使用 `git status` 命令来查看冲突发生的文件
+
+一般来说，有冲突的文件会显示成这样：
+
+```text
+some code ....（这里的代码是没有冲突的）
+<<<<<<< HEAD
+code version 1
+code version 1
+=======
+code version 2
+code version 2
+>>>>>>> your_branch_name
+yet some other code ....（这里的代码也是没有冲突的）
+```
+
+注意，里面的 `HEAD` 和 `your_branch_name` 位置可能互换，也可能会是其他内容，比如一个 commit hash
+
+其中，`<<<<<<<` 与 `=======` 之间为代码的一个版本，`=======` 与 `>>>>>>>` 之间为代码的另一个版本。你需要来决定使用哪个版本的代码
+
+修改的时候，把 `<<<<<<<`、`=======` 和 `>>>>>>>` 这三行都删掉。以及，删掉你不需要的那个版本，保留你需要的版本
+
+处理完所有的冲突文件后，（由于我们执行的是 `git pull --rebase`），那么我们需要 `git add .`，然后 `git rebase --continue`
+
+</details>
+
+<details><summary><b>如果某个文件我没有改动，在处理冲突的时候如何可以使用 upstream 上 translate 分支的版本？</b></summary>
+
+有时，可能会存在你没修改某个文件的内容，然而它却出现在了 conflicts 里（特别是如果你之前使用过 `pull`，而不是 `pull --rebase`）。这时，我们不需要手动处理 conflcts：
+
+```bash
+git fetch upstream
+git checkout upstream/translate -- the/path/to/that_file
+```
+
+这样，你本地的这个文件就变成和远程一样了
+
+处理之后，记得 `git add .`
+
+</details>
+
 <details><summary><b>如何查看我当前处于哪个分支？</b></summary>
 
 `git branch` 可以列出本地所有的分支名，前面打星号（*）的就是你当前所在的分支
@@ -94,7 +149,7 @@ git push origin your_branch_name
 
 如果你不确定你的做法是否正确，或者不了解这个命令，请在使用之前查清资料，或者在群里提问
 
-**切换分支前，未防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”**
+**切换分支前，为防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”**
 
 </details>
 
