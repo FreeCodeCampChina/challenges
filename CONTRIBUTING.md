@@ -8,68 +8,68 @@
 - conflicts：（合并）冲突
 
 ## 开始之前
-1. 首先，fork 一下 [challenges](https://github.com/FreeCodeCampChina/challenges.git) repo。
+* 首先，fork 一下 [challenges](https://github.com/FreeCodeCampChina/challenges.git) repo。
 
-2. 把**你的 fork** 克隆到本地。注意，`your_name` 是你的 github ID：
+* 把**你的 fork** 克隆到本地。
 ```bash
-git clone https://github.com/your_name/challenges.git
+git clone https://github.com/your_name/challenges.git  # 注意，`your_name` 是你的 github ID。
 ```
-3. 切换到 challenges 文件夹：
+* 切换到 challenges 文件夹：
 ```bash
 cd challenges
 ```
-4. 根据你在翻译的项目名称或者你正在做的事情，新建分支。
+* 根据你在翻译的项目名称或者你正在做的事情，新建分支。
 ```bash
 # 建议每次都从 translate 分支建立新的分支
 # 请参考后面的“常见问题”
 git checkout -b your_branch_name  #  `your_branch_name` 是你的分支名
 ```
-5. 在本地进行代码或文件修改。
+* 在本地进行代码或文件修改。
 
-6. 修改完成后，先添加要提交的文件：
+* 添加要追踪的文件到暂存区。
 ```bash
 git add .        # 注：这个命令不是永远都会添加你的所有改动，请参考“常见问题”。
 git add my.json  # 或者你也可以添加某一个文件
 ```
-7. 创建 commit。注意，请根据实际情况填写 commit message：
+* 提交 commit 到本地仓库。
 ```bash
-git commit -m "My commit message"
+git commit -m "My commit message"  # 注意，请根据实际情况填写 commit message：
 git commit # 或者你也可以打开你喜欢的编辑器（需要配置），在里面编写 commit message。
 ```
-8. 把本地更新推送到远程（即你的 fork）：
+* 把本地仓库推送到远程仓库。
 ```bash
 git push origin your_branch_name
 ```
-9. 打开 github 页面，创建 PR。
+* 打开 github 页面，创建 PR。
 
 ## 同步远程更新至本地
-1. 关联上游 repo 至本地项目：
+* 关联上游 repo 至本地项目。
 ```bash
 git remote add upstream https://github.com/FreeCodeCampChina/challenges.git
 ```
-2. 获取上游更新，并应用到本地：
+* 获取上游更新，并应用到本地。
 ```bash
 git pull --rebase upstream translate
 ```
 
 ## 注意
-1. `pull` 或 `rebase` 之后，如果有 conflicts，可以先使用 `git status` 查看存在 conflicts 的文件。
+* `pull` 或 `rebase` 之后，如果有 conflicts，可以先使用 `git status` 查看存在 conflicts 的文件。
 
-   修改成需要的版本后，使用 `git add .` 然后 `git rebase --continue`。
+  修改成需要的版本后，使用 `git add .` 然后 `git rebase --continue`。
    
-2. 解决冲突之后，需要更新至远程，否则只有你的本地有更新：
+* 解决冲突之后，需要更新至远程，否则只有你的本地有更新：
 ```bash
 git push origin your_branch_name
 ```
-3. 如果出现错误提示，请先使用 `git status` 命令检查本地是否有未解决完成的 conflicts。
+* 如果出现错误提示，请先使用 `git status` 命令检查本地是否有未解决完成的 conflicts。
 
-3. 任何时候出现错误，不必惊慌。
+* 任何时候出现错误，不必惊慌。
 
-   先使用 `git status` 命令检查当前所在的分支、当前目录是否纯净（clean），以及本地是否有未解决完成的 conflicts。
+  先使用 `git status` 命令检查当前所在的分支、当前目录是否纯净（clean），以及本地是否有未解决完成的 conflicts。
 
-4. 如果上一步没问题，你可以用 `git push -f origin your_branch_name` 来更新远程。
+* 如果上一步没问题，你可以用 `git push -f origin your_branch_name` 来更新远程。
 
-5. 如果你已经用当前的 branch 开了 PR，那么更新这个 branch 至远程的同时，你的 PR 也会自动更新。
+* 如果你已经用当前的 branch 开了 PR，那么更新这个 branch 至远程的同时，你的 PR 也会自动更新。
 
 ## 常见问题
 <details><summary><b>为什么 `git add .` 命令有时会添加不上我的改动？</b></summary>
@@ -165,9 +165,9 @@ git checkout upstream/translate -- the/path/to/that_file
 
 你有两个选择，`commit` 或者 `stash`：
 
-1. `commit` 很简单，在当前分支上 `git add .` 然后 `git commit -m "xx"`，这时候你就可以使用 `checkout` 命令切换到其他分支了。
+* `commit` 很简单，在当前分支上 `git add .` 然后 `git commit -m "xx"`，这时候你就可以使用 `checkout` 命令切换到其他分支了。
 
-2. 在当前分支上 `git stash`，然后切换到其他分支。完成那边的更新后，切换回来，然后 `git stash pop`，你之前的代码改动就都回来了。
+* 在当前分支上 `git stash`，然后切换到其他分支。完成那边的更新后，切换回来，然后 `git stash pop`，你之前的代码改动就都回来了。
 
 需要注意的是，使用 `git stash pop` 会有丢代码的潜在风险，推荐使用 `git stash apply stash@{x}`，其中 `x` 为一个数字。
 
@@ -191,9 +191,9 @@ git checkout -b my_branch_name upstream/translate
 
 可以。建议使用本地的 translate 分支保持与 upstream 中的 translate 分支保持更新。这样做的好处是：
 
-1. 每次新建分支的时候，切换到本地的 translate 分支，然后 `git checkout -b my_new_branch` 就好了。
+* 每次新建分支的时候，切换到本地的 translate 分支，然后 `git checkout -b my_new_branch` 就好了。
 
-2. 如果 upstream 的 translate branch 有更新，你只需要在切换到 translate 分支之后，`git pull --rebase upstream translate` 即可完成对本地 translate 分支的更新。再创建新的分支，就是基于 upstream 里最新的代码了，这样可以减少 conflicts 出现的可能。
+* 如果 upstream 的 translate branch 有更新，你只需要在切换到 translate 分支之后，`git pull --rebase upstream translate` 即可完成对本地 translate 分支的更新。再创建新的分支，就是基于 upstream 里最新的代码了，这样可以减少 conflicts 出现的可能。
 
 </details>
 
@@ -231,13 +231,13 @@ git config --global alias.gx 'pull --rebase upstream translate'
 </details>
 
 ## 一些原则
-1. 建议使用 [git workflow](https://guides.github.com/introduction/flow/) 来进行分支的管理。
+* 建议使用 [git workflow](https://guides.github.com/introduction/flow/) 来进行分支的管理。
 
-   这样我们可以提交 PR 之后继续在新的 branch 上进行后续的翻译。若需要更新当前的 PR，我们随时可以切换回来。
+  这样我们可以提交 PR 之后继续在新的 branch 上进行后续的翻译，若需要更新当前的 PR，我们随时可以切换回来。
    
-2. 不建议同时开两个相同类型（比如翻译）的 PR，请等待之前的 merge 之后再开新的 PR。
+* 不建议同时开两个相同类型（比如翻译）的 PR，请等待之前的 merge 之后再开新的 PR。
 
-3. 如果你的 PR 已经被 review 过，请不要再添加新的翻译内容，根据 comment 修改好当前的 PR 即可。
+* 如果你的 PR 已经被 review 过，请不要再添加新的翻译内容，根据 comment 修改好当前的 PR 即可。
 
-   后续的翻译你可以等当前翻译 merge 后再开始做，或者在另一个本地的 branch 进行后续的翻译。
+  后续的翻译你可以等当前翻译 merge 后再开始做，或者在另一个本地的 branch 进行后续的翻译。
 
