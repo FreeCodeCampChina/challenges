@@ -14,7 +14,7 @@
 ```bash
 git clone https://github.com/your_name/challenges.git  # 注意，`your_name` 是你的 github ID。
 ```
-* 切换到 challenges 文件夹：
+* 切换到 challenges 文件夹。
 ```bash
 cd challenges
 ```
@@ -33,7 +33,7 @@ git add my.json  # 或者你也可以添加某一个文件
 ```
 * 提交 commit 到本地仓库。
 ```bash
-git commit -m "My commit message"  # 注意，请根据实际情况填写 commit message：
+git commit -m "My commit message"  # 注意，请根据实际情况填写 commit message。
 git commit # 或者你也可以打开你喜欢的编辑器（需要配置），在里面编写 commit message。
 ```
 * 把本地仓库推送到远程仓库。
@@ -57,7 +57,7 @@ git pull --rebase upstream translate
 
   修改成需要的版本后，使用 `git add .` 然后 `git rebase --continue`。
    
-* 解决冲突之后，需要更新至远程，否则只有你的本地有更新：
+* 解决冲突之后，需要更新至远程，否则只有你的本地有更新。
 ```bash
 git push origin your_branch_name
 ```
@@ -124,14 +124,14 @@ yet some other code ....（这里的代码也是没有冲突的）
 
 有时，可能会存在你没修改某个文件的内容，然而它却出现在了 conflicts 里（特别是如果你之前使用过 `pull`，而不是 `pull --rebase`）。
 
-这时，我们不需要手动处理 conflcts：
+这时，我们输入：。
 
 ```bash
 git fetch upstream
 git checkout upstream/translate -- the/path/to/that_file
 ```
 
-这样，你本地的这个文件就变成和远程一样了。
+这时，你本地的这个文件就变成和远程一样了。
 
 处理之后，记得 `git add .`。
 
@@ -173,7 +173,7 @@ git checkout upstream/translate -- the/path/to/that_file
 
 如果你不确定你的做法是否正确，或者不了解这个命令，请在使用之前查清资料，或者在群里提问。
 
-**切换分支前，为防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”**
+**切换分支前，为防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”。**
 
 </details>
 
