@@ -15,7 +15,7 @@
       "hints": [
         "使用 <code>Math.max()</code> 来获取两数中较大的数。",
         "使用 <code>Math.min()</code> 来获取两数中较小的数。",
-        "注意，既然需要对两数之间的所有数求和，那么就先要考虑好如何获取这些数。"
+        "注意，既然需要对两数之间的所有数求和，那就先要考虑好如何获取这些数。"
       ],
       "solutions": [
         "function sumAll(arr) {\n  var sum = 0;\n  arr.sort(function(a,b) {return a-b;});\n  for (var i = arr[0]; i <= arr[1]; i++) {\n    sum += i; \n  }\n  return sum;\n}"
