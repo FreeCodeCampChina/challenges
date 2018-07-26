@@ -74,159 +74,159 @@
 ## 常见问题
 <details><summary><b>为什么 `git add .` 命令有时会添加不上我的改动？</b></summary>
 
-注意，`git add .` 中的 `.` 表示“当前路径”。
+  注意，`git add .` 中的 `.` 表示“当前路径”。
 
-因此，如果你通过 `cd` 命令切换到子目录，并在里面执行 `git add .`，那么外面的改动则不会添加。
+  因此，如果你通过 `cd` 命令切换到子目录，并在里面执行 `git add .`，那么外面的改动则不会添加。
 
-然而，如果你在父级目录执行 `git add .`，子级目录里的文件改动是会添加的。
+  然而，如果你在父级目录执行 `git add .`，子级目录里的文件改动是会添加的。
 
-真正的“添加所有文件”的命令是 `git add --all`，可以简写为 `git add -A`。
+  真正的“添加所有文件”的命令是 `git add --all`，可以简写为 `git add -A`。
 
-对于这个翻译项目，我们很少会需要 `cd` 进子目录。因此，一般情况下使用 `git add .` 就足够了。
+  对于这个翻译项目，我们很少会需要 `cd` 进子目录。因此，一般情况下使用 `git add .` 就足够了。
 
 </details>
 
 <details><summary><b>如何解决冲突？</b></summary>
 
-对于任何多人协作项目，有 merge conflicts 是十分正常的。
+  对于任何多人协作项目，有 merge conflicts 是十分正常的。
 
-如果你在命令行中看到了 `CONFLICTS` 这样的输出，那就表示有冲突。
+  如果你在命令行中看到了 `CONFLICTS` 这样的输出，那就表示有冲突。
 
-这时，你需要先使用 `git status` 命令来查看冲突发生的文件。
+  这时，你需要先使用 `git status` 命令来查看冲突发生的文件。
 
-一般来说，有冲突的文件会显示成这样：
+  一般来说，有冲突的文件会显示成这样：
 
-```text
-some code ....（这里的代码是没有冲突的）
-<<<<<<< HEAD
-code version 1
-code version 1
-=======
-code version 2
-code version 2
->>>>>>> your_branch_name
-yet some other code ....（这里的代码也是没有冲突的）
-```
+  ```text
+  some code ....（这里的代码是没有冲突的）
+  <<<<<<< HEAD
+  code version 1
+  code version 1
+  =======
+  code version 2
+  code version 2
+  >>>>>>> your_branch_name
+  yet some other code ....（这里的代码也是没有冲突的）
+  ```
 
-注意，里面的 `HEAD` 和 `your_branch_name` 位置可能互换，也可能会是其他内容，比如一个 commit hash。
+  注意，里面的 `HEAD` 和 `your_branch_name` 位置可能互换，也可能会是其他内容，比如一个 commit hash。
 
-其中，`<<<<<<<` 与 `=======` 之间为代码的一个版本，`=======` 与 `>>>>>>>` 之间为代码的另一个版本。
+  其中，`<<<<<<<` 与 `=======` 之间为代码的一个版本，`=======` 与 `>>>>>>>` 之间为代码的另一个版本。
 
-你需要来决定使用哪个版本的代码，修改的时候，把 `<<<<<<<`、`=======` 和 `>>>>>>>` 这三行都删掉。
+  你需要来决定使用哪个版本的代码，修改的时候，把 `<<<<<<<`、`=======` 和 `>>>>>>>` 这三行都删掉。
 
-以及，删掉你不需要的那个版本，保留你需要的版本。
+  以及，删掉你不需要的那个版本，保留你需要的版本。
 
-处理完所有的冲突文件后，（由于我们执行的是 `git pull --rebase`），那么我们需要 `git add .`，然后 `git rebase --continue`
+  处理完所有的冲突文件后，（由于我们执行的是 `git pull --rebase`），那么我们需要 `git add .`，然后 `git rebase --continue`。
 
 </details>
 
 <details><summary><b>如果某个文件我没有改动，在处理冲突的时候如何可以使用 upstream 上 translate 分支的版本？</b></summary>
 
-有时，可能会存在你没修改某个文件的内容，然而它却出现在了 conflicts 里（特别是如果你之前使用过 `pull`，而不是 `pull --rebase`）。
+  有时，可能会存在你没修改某个文件的内容，然而它却出现在了 conflicts 里（特别是如果你之前使用过 `pull`，而不是 `pull --rebase`）。
 
-这时，我们输入：。
+  这时，我们输入：。
 
-```bash
-git fetch upstream
-git checkout upstream/translate -- the/path/to/that_file
-```
+  ```bash
+  git fetch upstream
+  git checkout upstream/translate -- the/path/to/that_file
+  ```
 
-这时，你本地的这个文件就变成和远程一样了。
+  这时，你本地的这个文件就变成和远程一样了。
 
-处理之后，记得 `git add .`。
+  处理之后，记得 `git add .`。
 
 </details>
 
 <details><summary><b>如何查看我当前处于哪个分支？</b></summary>
 
-`git branch` 可以列出本地所有的分支名，前面打星号（*）的就是你当前所在的分支。
+  `git branch` 可以列出本地所有的分支名，前面打星号（*）的就是你当前所在的分支。
 
 </details>
 
 <details><summary><b>如何切换分支？</b></summary>
 
-`git checkout some_branch_name` 就可以切换到对应的分支。
+  `git checkout some_branch_name` 就可以切换到对应的分支。
 
-以及，`git checkout -` 可以切换到上一个切换过的分支。
+  以及，`git checkout -` 可以切换到上一个切换过的分支。
 
-在两个分支之间来回切换的时候，这个命令会很有用。
+  在两个分支之间来回切换的时候，这个命令会很有用。
 
 </details>
 
 <details><summary><b>新建分支的时候，与我当前所在的分支有关联么？</b></summary>
 
-有，新建分支的时候，当前所在分支的所有 `commit` 也会添加到新的分支里面。
+  有，新建分支的时候，当前所在分支的所有 `commit` 也会添加到新的分支里面。
 
-以及，如果你本地有未 `commit` 的改动（哪怕已经 `add` 过），同样会在新建分支的时候带过去。
+  以及，如果你本地有未 `commit` 的改动（哪怕已经 `add` 过），同样会在新建分支的时候带过去。
 
 </details>
 
 <details><summary><b>既然切换 branch 时代码会跟着走，我正在别的分支上翻译，突然让我去更新之前开了 PR 的另一个分支，我该怎么办？</b></summary>
 
-你有两个选择，`commit` 或者 `stash`：
+  你有两个选择，`commit` 或者 `stash`：
 
-* `commit` 很简单，在当前分支上 `git add .` 然后 `git commit -m "xx"`，这时候你就可以使用 `checkout` 命令切换到其他分支了。
+  * `commit` 很简单，在当前分支上 `git add .` 然后 `git commit -m "xx"`，这时候你就可以使用 `checkout` 命令切换到其他分支了。
 
-* 在当前分支上 `git stash`，然后切换到其他分支。完成那边的更新后，切换回来，然后 `git stash pop`，你之前的代码改动就都回来了。
+  * 在当前分支上 `git stash`，然后切换到其他分支。完成那边的更新后，切换回来，然后 `git stash pop`，你之前的代码改动就都回来了。
 
-需要注意的是，使用 `git stash pop` 会有丢代码的潜在风险，推荐使用 `git stash apply stash@{x}`，其中 `x` 为一个数字。
+  需要注意的是，使用 `git stash pop` 会有丢代码的潜在风险，推荐使用 `git stash apply stash@{x}`，其中 `x` 为一个数字。
 
-如果你不确定你的做法是否正确，或者不了解这个命令，请在使用之前查清资料，或者在群里提问。
+  如果你不确定你的做法是否正确，或者不了解这个命令，请在使用之前查清资料，或者在群里提问。
 
-**切换分支前，为防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”。**
+  **切换分支前，为防止把本地弄乱，前先使用 `git status` 来检查本地是否 “clean”。**
 
 </details>
 
 <details><summary><b>我可不可以根据远程的分支（比如 upstream 的 translate 分支）来创建本地分支？</b></summary>
 
-可以：
-```bash
-git fetch upstream
-git checkout -b my_branch_name upstream/translate
-```
+  可以：
+  ```bash
+  git fetch upstream
+  git checkout -b my_branch_name upstream/translate
+  ```
 
 </details>
 
 <details><summary><b>每次都从远程创建分支太麻烦，我可不可以直接从本地创建分支？</b></summary>
 
-可以。建议使用本地的 translate 分支保持与 upstream 中的 translate 分支保持更新。这样做的好处是：
+  可以。建议使用本地的 translate 分支保持与 upstream 中的 translate 分支保持更新。这样做的好处是：
 
-* 每次新建分支的时候，切换到本地的 translate 分支，然后 `git checkout -b my_new_branch` 就好了。
+  * 每次新建分支的时候，切换到本地的 translate 分支，然后 `git checkout -b my_new_branch` 就好了。
 
-* 如果 upstream 的 translate branch 有更新，你只需要在切换到 translate 分支之后，`git pull --rebase upstream translate` 即可完成对本地 translate 分支的更新。再创建新的分支，就是基于 upstream 里最新的代码了，这样可以减少 conflicts 出现的可能。
+  * 如果 upstream 的 translate branch 有更新，你只需要在切换到 translate 分支之后，`git pull --rebase upstream translate` 即可完成对本地 translate 分支的更新。再创建新的分支，就是基于 upstream 里最新的代码了，这样可以减少 conflicts 出现的可能。
 
 </details>
 
 <details><summary><b>我在一个分支上 commit 了我的代码，这时候 upstream 更新了，我该怎么做？</b></summary>
 
-```bash
-git pull --rebase upstream translate
-```
+  ```bash
+  git pull --rebase upstream translate
+  ```
 
 </details>
 
 <details><summary><b>我的本地 translate 分支已经有我的 commit 了，那我该如何用这个分支作为与 upstream translate 同步的分支呢？</b></summary>
 
-**如果你目前在 translate 提交的内容不再需要了（比如，已经 merge），那你可以先切换到 translate，然后：**
+  **如果你目前在 translate 提交的内容不再需要了（比如，已经 merge），那你可以先切换到 translate，然后：**
 
-```bash
-git fetch upstream
-git reset --hard upstream/translate
-```
+  ```bash
+  git fetch upstream
+  git reset --hard upstream/translate
+  ```
 
-虽然 `git reset` 命令不危险，但在执行这个操作之前，建议你先在群里问一下。
+  虽然 `git reset` 命令不危险，但在执行这个操作之前，建议你先在群里问一下。
 
 </details>
 
 <details><summary><b>命令好长，我不想记。</b></summary>
 
-`alias` 了解一下。在命令行里执行：
+  `alias` 了解一下。在命令行里执行：
 
-```bash
-git config --global alias.gx 'pull --rebase upstream translate'
-```
+  ```bash
+  git config --global alias.gx 'pull --rebase upstream translate'
+  ```
 
-下次，执行 `git gx`（记忆：git 更新），就会执行你定义好的命令了。
+  下次，执行 `git gx`（记忆：git 更新），就会执行你定义好的命令了。
 
 </details>
 
