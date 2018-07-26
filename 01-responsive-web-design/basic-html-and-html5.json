@@ -9,7 +9,7 @@
       "title": "Say Hello to HTML Elements",
       "description": [
         "欢迎来到 freeCodeCamp 的 HTML 编码挑战，这些挑战将会帮助你逐步掌握 Web 开发。",
-        "HTML 是英文 Hyper Text Markup Language（超文本标记语言）的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。"
+        "HTML 是英文 Hyper Text Markup Language（超文本标记语言）的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。",
         "你看到代码编辑器中的 <code>&#60;h1&#62;Hello&#60;/h1&#62;</code> 了吗? 那就是一个 HTML 标签。",
         "大部分 HTML 标签都有一个 <code>开始标记</code> 和一个 <code>结束标记</code>。",
         "开始标记像这样：<code>&#60;h1&#62;</code>",
@@ -370,7 +370,7 @@
         "在 <code>h2</code> 标签前，插入一个 <code>img</code> 标签",
         "现在设置 <code>src</code> 属性指向这个地址：",
         "<code>https://bit.ly/fcc-relaxing-cat</code>",
-        "最后不要忘记给图片添加一个 <code>alt</code> 文本。",
+        "最后不要忘记给图片添加一个 <code>alt</code> 文本。"
       ],
       "tests": [
         {
