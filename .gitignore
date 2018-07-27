@@ -17,6 +17,7 @@ Session.vim
 
 # VSCode
 .vscode/*
+.vscode*.json
 
 # Jetbrains
 .idea/
