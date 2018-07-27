@@ -75,29 +75,3 @@ Almost done! We have created our new database and created an user to access it, 
 * That's it! This is the URI you will add to your application to connect to your database. Keep this URI safe somewhere, so you can use it later!
 
 * Feel free to create separate databases for different applications, if they don't have an use for the same data. You just need to create the sandbox, user and obtain the new URI.
-
-# Upcoming Lessons #
-
-Install and Set Up Mongoose
-
-Create a Model
-
-Create and Save a Record of a Model
-
-Create Many Records with model.create()
-
-Use model.find() to Search Your Database
-
-Use model.findOne() to Return a Single Matching Document from Your Database
-
-Use model.findById() to Search Your Database By _id
-
-Perform Classic Updates by Running Find, Edit, then Save
-
-Perform New Updates on a Document Using model.findOneAndUpdate()
-
-Delete One Document Using model.findByIdAndRemove
-
-Delete Many Documents with model.remove()
-
-Chain Search Query Helpers to Narrow Search Results
