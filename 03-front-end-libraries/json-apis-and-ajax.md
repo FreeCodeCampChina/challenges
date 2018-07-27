@@ -9,23 +9,3 @@ User experience benefits from asynchronous processes in several ways. Pages load
 The data transferred between the browser and server is often in a format called JavaScript Object Notation (JSON). JSON resembles JavaScript object literal syntax, except that it's transferred as a string. Once received, it can be converted into an object and used in a script.
 
 This section covers how to transfer and use data using AJAX technologies with a freeCodeCamp API.
-
-# Upcoming Lessons #
-
-Handle Click Events with JavaScript using the onclick property
-
-Change Text with click Events
-
-Get JSON with the JavaScript XMLHttpRequest Method
-
-Access the JSON Data from an API
-
-Convert JSON Data to HTML
-
-Render Images from Data Sources
-
-Pre-filter JSON to Get the Data You Need
-
-Get Geolocation Data to Find A User's GPS Coordinates
-
-Post Data with the JavaScript XMLHttpRequest Method
