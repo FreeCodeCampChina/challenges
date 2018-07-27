@@ -62,7 +62,7 @@
         "<code>img { width: 720px; }</code>",
         "你应该使用：",
         "<blockquote>img {<br>&nbsp;&nbsp;max-width: 100%;<br>&nbsp;&nbsp;display: block;<br>&nbsp;&nbsp;height: auto;<br>}</blockquote>",
-        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为块级元素。。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比。",
+        "<code>max-width</code> 属性能让图片以 100% 的最大宽度适应其父容器的宽度，但图片不会拉伸得比原始宽度还宽。将 <code>display</code> 属性设置为 <code>block</code> 可以让 image 标签从内联元素（默认值）更改为块级元素。设置 <code>height</code> 属性为 auto 保持图片的原始宽高比。",
         "<hr>",
         "给 <code>img</code> 标签增加样式规则使它自适应容器尺寸。应声明为块级元素，应适应它容器的宽度，应保持原本的宽高比。"
       ],
@@ -117,8 +117,8 @@
           "testString": "assert($('img').css('width') == '100px', '<code>img</code> 标签的 <code>width</code> 值应为 100px。');"
         },
         {
-          "text": "<code>img</code> 标签应含有 100 像素的 <code>height</code>。",
-          "testString": "assert($('img').css('height') == '100px', '<code>img</code> 标签应含有 100 像素的 <code>height</code>。');"
+          "text": "<code>img</code> 标签应含有 100px 的 <code>height</code>。",
+          "testString": "assert($('img').css('height') == '100px', '<code>img</code> 标签应含有 100px 的 <code>height</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
