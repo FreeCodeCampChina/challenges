@@ -8,22 +8,21 @@
       "id": "587d78ab367417b2b2512af0",
       "title": "Use display: flex to Position Two Boxes",
       "description": [
-        "这节会使用另一个挑战方法为你介绍 CSS 弹性盒子。挑战会先解释理论，然后动手做一个弹性盒子布局的简单的推文组件。" ,
-        "给一个元素赋予 CSS 属性 <code>display: flex;</code>，你就可以使用其他 flex 属性构建响应式页面了。",
+        "这节会使用一种不同的挑战方式来学习一下如何更灵活地使用 CSS 布局元素。首先，我们会先用一个挑战解释原理，然后使用“弹性盒子”（flexbox）调整一个推文组件的样式来完成挑战。" ,
+        "只要在一个元素的 CSS 中添加<code>display: flex;</code>，就可以使用其他 flex 属性来构建响应式页面了。",
         "<hr>",
-        "为 <code>#box-container</code> 添加 <code>display</code> 属性，设置为 flex。"
+        "为<code>#box-container</code>添加<code>display</code>属性，设置其值为 flex。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 应有 <code>display</code> 属性，其值应为 flex。",
-          "testString": "assert($('#box-container').css('display') == 'flex', '<code>#box-container</code> 应有 <code>display</code> 属性，其值应为 flex。');"
+          "text": "<code>#box-container</code>应有<code>display</code>属性，其值应为 flex。",
+          "testString": "assert($('#box-container').css('display') == 'flex', '<code>#box-container</code>应有<code>display</code>属性，其值应为 flex。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -64,46 +63,45 @@
       "id": "587d78ab367417b2b2512af1",
       "title": "Add Flex Superpowers to the Tweet Embed",
       "description": [
-        "我们以右边的内嵌推文为基础开始实践。一些元素换一个布局方式或许更好看。上一个挑战演示了 <code>display: flex</code>，现在你需要把它添加到内嵌推文的多个组件来调整它们的位置。",
+        "我们以右边的内嵌推文为基础开始实践。一些元素换一个布局方式或许更好看。上一个挑战演示了<code>display: flex</code>，现在你需要把它添加到推文内嵌的多个组件中，调整它们的位置。",
         "<hr>",
-        "为下列项目添加 CSS 属性 <code>display: flex</code> —— 注意，选择器已在 CSS 中准备好：",
-        "<code>header</code>、header 的 <code>.profile-name</code>、header 的 <code>.follow-btn</code>、header 的 <code>h3</code> 和 <code>h4</code>、<code>footer</code> 以及 footer 的 <code>.stats</code>。"
+        "为下列项目添加 CSS 属性<code>display: flex</code>—— 注意，选择器已在 CSS 中给出：",
+        "<code>header</code>、header 的<code>.profile-name</code>、header 的<code>.follow-btn</code>、header 的<code>h3</code>和<code>h4</code>、<code>footer</code>以及 footer 的<code>.stats</code>。"
       ],
       "tests": [
         {
-          "text": "<code>header</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('header').css('display') == 'flex', '<code>header</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>header</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('header').css('display') == 'flex', '<code>header</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>footer</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('footer').css('display') == 'flex', '<code>footer</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>footer</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('footer').css('display') == 'flex', '<code>footer</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>h3</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('h3').css('display') == 'flex', '<code>h3</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>h3</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('h3').css('display') == 'flex', '<code>h3</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>h4</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('h4').css('display') == 'flex', '<code>h4</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>h4</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('h4').css('display') == 'flex', '<code>h4</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>.profile-name</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('.profile-name').css('display') == 'flex', '<code>.profile-name</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>.profile-name</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.profile-name').css('display') == 'flex', '<code>.profile-name</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>.follow-btn</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('.follow-btn').css('display') == 'flex', '<code>.follow-btn</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>.follow-btn</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.follow-btn').css('display') == 'flex', '<code>.follow-btn</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "<code>.stats</code> 的 <code>display</code> 属性应为 flex。",
-          "testString": "assert($('.stats').css('display') == 'flex', '<code>.stats</code> 的 <code>display</code> 属性应为 flex。');"
+          "text": "<code>.stats</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.stats').css('display') == 'flex', '<code>.stats</code>的<code>display</code>属性应为 flex。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -209,23 +207,22 @@
       "id": "587d78ab367417b2b2512af2",
       "title": "Use the flex-direction Property to Make a Row",
       "description": [
-        "添加了 <code>display: flex</code> 的元素会成为 flex 容器。只要把 <code>flex-direction</code> 属性添加到父元素，并设置其为 row 或 column，便可以轻易横或竖排列它的子元素。设为 row 可以让子元素水平排列，column 可以让子元素垂直排列。",
-        "<code>flex-direction</code> 的其他选项还有 row-reverse 和 column-reverse。",
-        "<strong>注意</strong><br><code>flex-direction</code> 的默认值为 row。",
+        "添加了<code>display: flex</code>的元素会成为 flex 容器。只要把<code>flex-direction</code>属性添加到父元素，并设置其为 row 或 column 即可轻易横或竖排列它的子元素。设为 row 可以让子元素水平排列，column 可以让子元素垂直排列。",
+        "<code>flex-direction</code>的其他可选值还有 row-reverse 和 column-reverse。",
+        "<strong>注意</strong><br><code>flex-direction</code>的默认值为 row。",
         "<hr>",
-        "为 <code>#box-container</code> 添加 CSS 属性 <code>flex-direction</code>，其值设为 row-reverse。"
+        "为<code>#box-container</code>添加 CSS 属性<code>flex-direction</code>，其值设为 row-reverse。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 应有 <code>flex-direction</code> 属性，其值应为 row-reverse。",
-          "testString": "assert($('#box-container').css('flex-direction') == 'row-reverse', '<code>#box-container</code> 应有 <code>flex-direction</code> 属性，其值应为 row-reverse。');"
+          "text": "<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 row-reverse。",
+          "testString": "assert($('#box-container').css('flex-direction') == 'row-reverse', '<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 row-reverse。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -265,25 +262,24 @@
       "id": "587d78ab367417b2b2512af3",
       "title": "Apply the flex-direction Property to Create Rows in the Tweet Embed",
       "description": [
-        "内嵌推文样例中的 <code>header</code> 和 <code>footer</code> 有自己的子元素，使用 <code>flex-direction</code> 属性可以把这些子元素排列成一行。这个属性告诉 CSS 需要将这个元素的子元素水平排列。",
+        "内嵌推文样例中的<code>header</code>和<code>footer</code>有自己的子元素，使用<code>flex-direction</code>属性可以把这些子元素排列成一行。这个属性告诉 CSS 需要将这个元素的子元素水平排列。",
         "<hr>",
-        "为 <code>header</code> 和 <code>footer</code> 添加 CSS 属性 <code>flex-direction</code> 并把值设为 row。"
+        "为<code>header</code>和<code>footer</code>添加 CSS 属性<code>flex-direction</code>并把值设为 row。"
       ],
       "tests": [
         {
-          "text": "<code>header</code> 应有 <code>flex-direction</code> 属性，其值应为 row。",
-          "testString": "assert(code.match(/header\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>header</code> 应有 <code>flex-direction</code> 属性，其值应为 row。');"
+          "text": "<code>header</code>应有<code>flex-direction</code>属性，其值应为 row。",
+          "testString": "assert(code.match(/header\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>header</code>应有<code>flex-direction</code>属性，其值应为 row。');"
         },
         {
-          "text": "<code>footer</code> 应有 <code>flex-direction</code> 属性，其值应为 row。",
-          "testString": "assert(code.match(/footer\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>footer</code> 应有 <code>flex-direction</code> 属性，其值应为 row。');"
+          "text": "<code>footer</code>应有<code>flex-direction</code>属性，其值应为 row。",
+          "testString": "assert(code.match(/footer\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>footer</code>应有<code>flex-direction</code>属性，其值应为 row。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -391,21 +387,20 @@
       "id": "587d78ac367417b2b2512af4",
       "title": "Use the flex-direction Property to Make a Column",
       "description": [
-        "之前两项挑战把 <code>flex-direction</code> 设为 row。这个属性还能创建一个列，让子元素垂直层叠在 flex 容器中。",
+        "之前两项挑战把<code>flex-direction</code>设为 row。这个属性还能创建一个列，让子元素垂直排列在 flex 容器中。",
         "<hr>",
-        "添加 CSS 属性 <code>flex-direction</code> 到 <code>#box-container</code> 元素，赋值为 column。"
+        "给<code>#box-container</code>元素添加 CSS 属性<code>flex-direction</code>，赋值为 column。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 应有 <code>flex-direction</code> 属性，其值应为 column。",
-          "testString": "assert($('#box-container').css('flex-direction') == 'column', '<code>#box-container</code> 应有 <code>flex-direction</code> 属性，其值应为 column。');"
+          "text": "<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 column。",
+          "testString": "assert($('#box-container').css('flex-direction') == 'column', '<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 column。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -445,21 +440,20 @@
       "id": "587d78ac367417b2b2512af5",
       "title": "Apply the flex-direction Property to Create a Column in the Tweet Embed",
       "description": [
-        "上面，内嵌推文的 <code>header</code> 和 <code>footer</code> 把 <code>flex-direction</code> 属性设为 row。相似地， <code>.profile-name</code> 里的元素或许竖着排列会好看一点。",
+        "上面，内嵌推文的<code>header</code>和<code>footer</code>把<code>flex-direction</code>属性设为 row。相似地，<code>.profile-name</code>里的元素或许竖着排列会好看一点。",
         "<hr>",
-        "在 header 的 <code>.profile-name</code> 元素添加 CSS 属性 <code>flex-direction</code>，将其值设为 column。"
+        "在 header 的<code>.profile-name</code>元素添加 CSS 属性<code>flex-direction</code>，将其值设为 column。"
       ],
       "tests": [
         {
-          "text": "<code>.profile-name</code> 应有 <code>flex-direction</code> 属性，其值应为 column。",
-          "testString": "assert($('.profile-name').css('flex-direction') == 'column', '<code>.profile-name</code> 应有 <code>flex-direction</code> 属性，其值应为 column。');"
+          "text": "<code>.profile-name</code>应有<code>flex-direction</code>属性，其值应为 column。",
+          "testString": "assert($('.profile-name').css('flex-direction') == 'column', '<code>.profile-name</code>应有<code>flex-direction</code>属性，其值应为 column。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -564,26 +558,25 @@
       "id": "587d78ac367417b2b2512af6",
       "title": "Align Elements Using the justify-content Property",
       "description": [
-        "flex 容器里的 flex 项目有时不能充满整个容器，所以我们需要告诉 CSS 如何以特定方案排列和调整 flex 项目。幸运的是，我们有 <code>justify-content</code> 属性处理这个问题。但在介绍 <code>justify-content</code> 的选项之前，我们要先理解一些重要术语。",
+        "flex 容器里的 flex 子元素有时不能充满整个容器，所以我们需要告诉 CSS 如何以特定方案排列和调整 flex 子元素。幸运的是，我们有<code>justify-content</code>属性处理这个问题。但在介绍<code>justify-content</code>的可选值之前，我们要先理解一些重要术语。",
         "<a href=\"https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg\" target=\"_blank\">这张图片的元素横着排列，很好地描述了下面的概念。</a>",
-        "回忆一下，把 flex 容器设为一个行，它的子元素会从左到右逐个排列，把 flex 容器设为一个列，它的子元素会从上到下垂直叠在一起。子元素排列的方向被称为 <strong>main axis（主轴）</strong>。对于行，主轴水平贯穿每一个项目；对于列，主轴垂直贯穿每一个项目。",
-        "这是几个 flex 项目在主轴排列方式的选项：其中一个很常用的选项是 <code>justify-content: center;</code>，可以让 flex 项目排列在 flex 容器中间。其他选项还包括：",
-        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠左放，对于列是把项目都靠顶部放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠右放，对于列是把项目都靠底部放。</li><li><code>space-between</code>：项目间保留一定空位地在主轴排列。第一个和最后一个项目会被挤到容器边沿。例如，在行中第一个项目会紧贴着容器左侧，最后一个项目会紧贴着容器右侧，然后其他项目均匀排布。</li><li><code>space-around</code>：与 <code>space-between</code> 相似，但头尾两个项目不会紧贴容器边缘，空间会均匀分布在所有项目两边</li></ul>",
+        "回忆一下，把 flex 容器设为一个行，它的子元素会从左到右逐个排列，把 flex 容器设为一个列，它的子元素会从上到下逐个排列。子元素排列的方向被称为 <strong>main axis（主轴）</strong>。对于行，主轴水平贯穿每一个项目；对于列，主轴垂直贯穿每一个项目。",
+        "关于 flex 子元素在主轴排列方式，可以选择以下值：其中一个很常用的是<code>justify-content: center;</code>，可以让 flex 子元素排列在 flex 容器中间。其他可选值还有：",
+        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠左放，对于列是把项目都靠顶部放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠右放，对于列是把项目都靠底部放。</li><li><code>space-between</code>：项目间保留一定间距地在主轴排列。第一个和最后一个项目会被挤到容器边沿。例如，在行中第一个项目会紧贴着容器左侧，最后一个项目会紧贴着容器右侧，然后其他项目均匀排布。</li><li><code>space-around</code>：与<code>space-between</code>相似，但头尾两个项目不会紧贴容器边缘，空间会均匀分布在所有项目两边</li></ul>",
         "<hr>",
-        "这个例子可以帮助你理解这个属性，在 <code>#box-container</code> 元素添加 CSS 属性 <code>justify-content</code>，其值为 center。",
-        "<strong>Bonus</strong><br>在编辑器里试试 <code>justify-content</code> 的其他选项，看看它们之间的区别。但要通过挑战必须把值设为 center 哦。"
+        "这个例子可以帮助你理解这个属性，在<code>#box-container</code>元素添加 CSS 属性<code>justify-content</code>，其值为 center。",
+        "<strong>提示：</strong><br>在编辑器里试试<code>justify-content</code>的其他可用值，看看它们之间的区别。但要通过挑战，你必须把值设为 center."
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 应有 <code>justify-content</code> 属性，其值应为 center。",
-          "testString": "assert($('#box-container').css('justify-content') == 'center', '<code>#box-container</code> 应有 <code>justify-content</code> 属性，其值应为 center。');"
+          "text": "<code>#box-container</code>应有<code>justify-content</code>属性，其值应为 center。",
+          "testString": "assert($('#box-container').css('justify-content') == 'center', '<code>#box-container</code>应有<code>justify-content</code>属性，其值应为 center。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -624,21 +617,20 @@
       "id": "587d78ac367417b2b2512af7",
       "title": "Use the justify-content Property in the Tweet Embed",
       "description": [
-        "上一项挑战展示了 <code>justify-content</code> 属性的作用。对于内嵌推文，可以应用在 <code>.profile-name</code>，以对齐它的子元素。",
+        "上一项挑战展示了<code>justify-content</code>属性的作用。如果我们想对齐推文内的子元素，可以把<code>justify-content</code>应用在<code>.profile-name</code>上。",
         "<hr>",
-        "在 header 的 <code>.profile-name</code> 元素添加 CSS 属性 <code>justify-content</code> ，把它的值设为上面挑战提到的任意选项。"
+        "在 header 的<code>.profile-name</code>元素添加 CSS 属性<code>justify-content</code>，把它的值设为上面挑战提到的任意可用值。"
       ],
       "tests": [
         {
-          "text": "<code>.profile-name</code> 元素的 <code>justify-content</code> 属性可选以下值:center、flex-start、flex-end、space-between、space-around。",
-          "testString": "assert(code.match(/header\\s.profile-name\\s*{\\s*?.*?\\s*?.*?\\s*?\\s*?.*?\\s*?justify-content\\s*:\\s*(center|flex-start|flex-end|space-between|space-around)\\s*;/g), '<code>.profile-name</code> 元素的 <code>justify-content</code> 属性可选以下值:center、flex-start、flex-end、space-between、space-around。');"
+          "text": "<code>.profile-name</code>元素的<code>justify-content</code>属性可选以下值：center、flex-start、flex-end、space-between、space-around。",
+          "testString": "assert(code.match(/header\\s.profile-name\\s*{\\s*?.*?\\s*?.*?\\s*?\\s*?.*?\\s*?justify-content\\s*:\\s*(center|flex-start|flex-end|space-between|space-around)\\s*;/g), '<code>.profile-name</code>元素的<code>justify-content</code>属性可选以下值：center、flex-start、flex-end、space-between、space-around。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -744,26 +736,25 @@
       "id": "587d78ad367417b2b2512af8",
       "title": "Align Elements Using the align-items Property",
       "description": [
-        "<code>align-items</code> 属性与 <code>justify-content</code> 类似。回忆一下，<code>justify-content</code> 属性使 flex 项目沿主轴排列。行的主轴是水平线，列的主轴是垂直线。",
-        "Flex 容器中，与主轴垂直的，被称为 <strong>cross axis（交叉轴）</strong>。行的交叉轴是垂直的，列的交叉轴是水平的。",
-        "CSS 提供了 <code>align-items</code> 属性，可以用于在交叉轴调整 flex 项目。对于行，它规定了项目在容器中应该靠上还是靠下，而对于列，就是靠左或靠右。",
-        "<code>align-items</code> 的可选值包括：",
-        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠顶部放，对于列是把项目都靠左放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠底部放，对于列是把项目都靠右放。</li><li><code>center</code>：把项目的位置调整到中间。对于行，垂直居中（项目上下方空间相等）。对于列，水平居中（项目左右方空间相等）。</li><li><code>stretch</code>：拉伸项目，填满 flex 容器。例如，排成行的项目从容器顶部拉伸到底部。</li><li><code>baseline</code>：基线对其地排列。基线是字体相关的概念，可以认为字体坐落在基线上。</li></ul>",
+        "<code>align-items</code>属性与<code>justify-content</code>类似。回忆一下，<code>justify-content</code>属性使 flex 子元素沿主轴排列。行的主轴是水平线，列的主轴是垂直线。",
+        "Flex 容器中，与主轴垂直的叫做 <strong>cross axis（交叉轴）</strong>。行的交叉轴是垂直的，列的交叉轴是水平的。",
+        "CSS 提供了<code>align-items</code>属性，可以用于在交叉轴调整 flex 子元素。对于行，它规定了项目在容器中应该靠上还是靠下，而对于列，就是靠左或靠右。",
+        "<code>align-items</code>的可选值包括：",
+        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠顶部放，对于列是把项目都靠左放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠底部放，对于列是把项目都靠右放。</li><li><code>center</code>：把项目的位置调整到中间。对于行，垂直居中（项目上下方空间相等）。对于列，水平居中（项目左右方空间相等）。</li><li><code>stretch</code>：拉伸项目，填满 flex 容器。例如，排成行的项目从容器顶部拉伸到底部。</li><li><code>baseline</code>：基线对齐地排列。基线是字体相关的概念，可以认为字体坐落在基线上。</li></ul>",
         "<hr>",
-        "这个例子可以帮助你理解这个属性，在 <code>#box-container</code> 添加 CSS 属性 <code>align-items</code> 并将值设为 center。",
-        "<strong>Bonus</strong><br>在编辑器里试试 <code>align-items</code> 的其他选项，看看它们之间的区别。但要通过挑战必须把值设为 center 哦。"
+        "这个例子可以帮助你理解这个属性，在<code>#box-container</code>添加 CSS 属性<code>align-items</code>并将值设为 center。",
+        "<strong>提示：</strong><br>在编辑器里试试<code>align-items</code>的其他可用值，看看它们之间的区别。但要通过挑战，你必须把值设为 center。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 元素应有 <code>align-items</code> 属性，其值应为 center。",
-          "testString": "assert($('#box-container').css('align-items') == 'center', '<code>#box-container</code> 元素应有 <code>align-items</code> 属性，其值应为 center。');"
+          "text": "<code>#box-container</code>元素应有<code>align-items</code>属性，其值应为 center。",
+          "testString": "assert($('#box-container').css('align-items') == 'center', '<code>#box-container</code>元素应有<code>align-items</code>属性，其值应为 center。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -804,21 +795,20 @@
       "id": "587d78ad367417b2b2512af9",
       "title": "Use the align-items Property in the Tweet Embed",
       "description": [
-        "上一个挑战介绍了 <code>align-items</code> 并给出了例子。这个属性可以应用在不少元素上，调整它们的子元素的位置。",
+        "上一个挑战介绍了<code>align-items</code>并给出了例子。这个属性可以应用在不少元素上，调整它们的子元素的位置。",
         "<hr>",
-        "在 header 的 <code>.follow-btn</code> 添加 CSS 属性 <code>align-items</code>，把值设为 center。"
+        "在 header 的<code>.follow-btn</code>添加 CSS 属性<code>align-items</code>，把值设为 center。"
       ],
       "tests": [
         {
-          "text": "<code>.follow-btn</code> 应有 <code>align-items</code> 属性，其值应为 center.",
-          "testString": "assert($('.follow-btn').css('align-items') == 'center', '<code>.follow-btn</code> 应有 <code>align-items</code> 属性，其值应为 center.');"
+          "text": "<code>.follow-btn</code>应有<code>align-items</code>属性，其值应为 center.",
+          "testString": "assert($('.follow-btn').css('align-items') == 'center', '<code>.follow-btn</code>应有<code>align-items</code>属性，其值应为 center.');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -926,24 +916,23 @@
       "id": "587d78ad367417b2b2512afa",
       "title": "Use the flex-wrap Property to Wrap a Row or Column",
       "description": [
-        "CSS flexbox 有一个把 flex 项目拆分为多行（或列）的特性。默认情况下，flex 容器会调整项目大小，把它们都塞到一起。如果是行的话，所有项目都会在一条直线上。",
-        "不过，使用 <code>flex-wrap</code> 属性可以使项目换行。这意味着多出来的项目会被移到新的行或列。换行发生的断点由项目和容器的大小决定。",
-        "CSS 还有关于换行方向的选项：",
-        "<ul><li><code>nowrap</code>：默认选项，不换行。</li><li><code>wrap</code>：行从上到下排，列从左到又排。</li><li><code>wrap-reverse</code>：行从下到上排，列从右到左排。</li></ul>",
+        "CSS flexbox 有一个把 flex 子元素拆分为多行（或多列）的特性。默认情况下，flex 容器会调整项目大小，把它们都塞到一起。如果是行的话，所有项目都会在一条直线上。",
+        "不过，使用<code>flex-wrap</code>属性可以使项目换行。这意味着多出来的项目会被移到新的行或列。换行发生的断点由项目和容器的大小决定。",
+        "换行方向的可选值有这些：",
+        "<ul><li><code>nowrap</code>：默认值，不换行。</li><li><code>wrap</code>：行从上到下排，列从左到又排。</li><li><code>wrap-reverse</code>：行从下到上排，列从右到左排。</li></ul>",
         "<hr>",
-        "现在的布局一行里面元素太多了，在 <code>#box-container</code> 元素添加 CSS 属性 <code>flex-wrap</code>，把值设为 wrap。"
+        "现在的布局一行里面元素太多了，在<code>#box-container</code>元素添加 CSS 属性<code>flex-wrap</code>，把值设为 wrap。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> 元素应有 <code>flex-wrap</code> 属性，其值应为 wrap。",
-          "testString": "assert($('#box-container').css('flex-wrap') == 'wrap', '<code>#box-container</code> 元素应有 <code>flex-wrap</code> 属性，其值为 wrap。');"
+          "text": "<code>#box-container</code>元素应有<code>flex-wrap</code>属性，其值应为 wrap。",
+          "testString": "assert($('#box-container').css('flex-wrap') == 'wrap', '<code>#box-container</code>元素应有<code>flex-wrap</code>属性，其值为 wrap。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1008,27 +997,26 @@
       "id": "587d78ad367417b2b2512afb",
       "title": "Use the flex-shrink Property to Shrink Items",
       "description": [
-        "目前为止，挑战里的提到的属性都应用于 flex 容器（flex 项目的父元素）。除此之外，flex 项目也有很多实用属性。",
-        "首先介绍的是 <code>flex-shrink</code> 属性。使用之后，如果 flex 容器太小，该项目会自动缩小。当容器的宽度小于里面所有项目的宽度，项目就会自动压缩。",
-        "<code>flex-shrink</code> 属性接受 number 类型的值。数值越大，与其他项目相比会被压缩得更厉害。例如，如果一个项目的 <code>flex-shrink</code> 为 1 ，另一个项目 <code>flex-shrink</code> 为 3，那么 3 的那个与另一个相比会受到 3 倍压缩。",
+        "目前为止，挑战里的提到的属性都应用于 flex 容器（flex 子元素的父元素）。除此之外，flex 子元素也有很多实用属性。",
+        "首先介绍的是<code>flex-shrink</code>属性。使用之后，如果 flex 容器太小，该项目会自动缩小。当容器的宽度小于里面所有项目的宽度，项目就会自动压缩。",
+        "<code>flex-shrink</code>属性接受 number 类型的值。数值越大，与其他项目相比会被压缩得更厉害。例如，如果一个项目的<code>flex-shrink</code>为 1 ，另一个项目<code>flex-shrink</code>为 3，那么 3 的那个与另一个相比会受到 3 倍压缩。",
         "<hr>",
-        "为 <code>#box-1</code> 和 <code>#box-2</code> 添加 CSS 属性 <code>flex-shrink</code>，<code>#box-1</code> 的值设为 1， and <code>#box-2</code> 的值设为 2。"
+        "为<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>flex-shrink</code>，<code>#box-1</code>的值设为 1，<code>#box-2</code>的值设为 2。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>flex-shrink</code> 属性，其值应为 1.",
-          "testString": "assert($('#box-1').css('flex-shrink') == '1', '<code>#box-1</code> 元素应有 <code>flex-shrink</code> 属性，其值应为 1.');"
+          "text": "<code>#box-1</code>元素应有<code>flex-shrink</code>属性，其值应为 1.",
+          "testString": "assert($('#box-1').css('flex-shrink') == '1', '<code>#box-1</code>元素应有<code>flex-shrink</code>属性，其值应为 1.');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>flex-shrink</code> 属性，其值应为 2.",
-          "testString": "assert($('#box-2').css('flex-shrink') == '2', '<code>#box-2</code> 元素应有 <code>flex-shrink</code> 属性，其值应为 2.');"
+          "text": "<code>#box-2</code>元素应有<code>flex-shrink</code>属性，其值应为 2.",
+          "testString": "assert($('#box-2').css('flex-shrink') == '2', '<code>#box-2</code>元素应有<code>flex-shrink</code>属性，其值应为 2.');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1069,26 +1057,25 @@
       "id": "587d78ae367417b2b2512afc",
       "title": "Use the flex-grow Property to Expand Items",
       "description": [
-        "与 <code>flex-shrink</code> 相对的是 <code>flex-grow</code>。回忆 <code>flex-shrink</code> 在容器太小时作控制，<code>flex-grow</code> 属性是在容器太大时作控制.",
-        "例子与上一个挑战相似，如果一个项目 <code>flex-grow</code> 属性的值为 1，另一个 <code>flex-grow</code> 为 3，那么 3 的会比 1 的扩大三倍。",
+        "与<code>flex-shrink</code>相对的是<code>flex-grow</code>。你应该还记得，<code>flex-shrink</code>会在容器太小时对元素作出调整。相应地，<code>flex-grow</code>会在容器太大时对元素作出调整。",
+        "例子与上一个挑战相似，如果一个项目<code>flex-grow</code>属性的值为 1，另一个<code>flex-grow</code>为 3，那么 3 的会比 1 的扩大三倍。",
         "<hr>",
-        "为 <code>#box-1</code> 和 <code>#box-2</code> 添加 CSS 属性 <code>flex-grow</code>，<code>#box-1</code> 的值设为 1， and <code>#box-2</code> 的值设为 2。"
+        "为<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>flex-grow</code>，<code>#box-1</code>的值设为 1，<code>#box-2</code>的值设为 2。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>flex-grow</code> 属性，其值应为 1。",
-          "testString": "assert($('#box-1').css('flex-grow') == '1', '<code>#box-1</code> 元素应有 <code>flex-grow</code> 属性，其值应为 1。');"
+          "text": "<code>#box-1</code>元素应有<code>flex-grow</code>属性，其值应为 1。",
+          "testString": "assert($('#box-1').css('flex-grow') == '1', '<code>#box-1</code>元素应有<code>flex-grow</code>属性，其值应为 1。');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>flex-grow</code> 属性，其值应为 2。",
-          "testString": "assert($('#box-2').css('flex-grow') == '2', '<code>#box-2</code> 元素应有 <code>flex-grow</code> 属性，其值应为 2。');"
+          "text": "<code>#box-2</code>元素应有<code>flex-grow</code>属性，其值应为 2。",
+          "testString": "assert($('#box-2').css('flex-grow') == '2', '<code>#box-2</code>元素应有<code>flex-grow</code>属性，其值应为 2。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1128,34 +1115,33 @@
       "id": "587d78ae367417b2b2512afd",
       "title": "Use the flex-basis Property to Set the Initial Size of an Item",
       "description": [
-        "<code>flex-basis</code> 属性指定了项目在 CSS 进行 <code>flex-shrink</code> 或 <code>flex-grow</code> 调整前的初始大小。",
-        "<code>flex-basis</code> 属性的单位与其他 size 属性一致（<code>px</code>、<code>em</code>、<code>%</code> 等）。如果值为 <code>auto</code>，项目的大小依赖于自身内容。",
+        "<code>flex-basis</code>属性指定了项目在 CSS 进行<code>flex-shrink</code>或<code>flex-grow</code>调整前的初始大小。",
+        "<code>flex-basis</code>属性的单位与其他 size 属性一致（<code>px</code>、<code>em</code>、<code>%</code>等）。如果值为<code>auto</code>，项目的大小依赖于自身内容。",
         "<hr>",
-        "使用 <code>flex-basis</code> 为盒子设置原始值。在 <code>#box-1</code> 和 <code>#box-2</code> 添加 CSS  属性 <code>flex-basis</code>。设置 <code>#box-1</code> 为 <code>10em</code>，<code>#box-2</code> 为 <code>20em</code>。"
+        "使用<code>flex-basis</code>为盒子设置原始值。在<code>#box-1</code>和<code>#box-2</code>添加 CSS  属性<code>flex-basis</code>。设置<code>#box-1</code>为<code>10em</code>，<code>#box-2</code>为<code>20em</code>。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>flex-basis</code> 属性。",
-          "testString": "assert($('#box-1').css('flex-basis') != 'auto', '<code>#box-1</code> 元素应有 <code>flex-basis</code> 属性。');"
+          "text": "<code>#box-1</code>元素应有<code>flex-basis</code>属性。",
+          "testString": "assert($('#box-1').css('flex-basis') != 'auto', '<code>#box-1</code>元素应有<code>flex-basis</code>属性。');"
         },
         {
-          "text": "<code>#box-1</code> 的 <code>flex-basis</code> 应为 <code>10em</code>。",
-          "testString": "assert(code.match(/#box-1\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?10em;/g), '<code>#box-1</code> 的 <code>flex-basis</code> 应为 <code>10em</code>。');"
+          "text": "<code>#box-1</code>的<code>flex-basis</code>应为<code>10em</code>。",
+          "testString": "assert(code.match(/#box-1\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?10em;/g), '<code>#box-1</code>的<code>flex-basis</code>应为<code>10em</code>。');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>flex-basis</code> 属性。",
-          "testString": "assert($('#box-2').css('flex-basis') != 'auto', '<code>#box-2</code> 元素应有 <code>flex-basis</code> 属性。');"
+          "text": "<code>#box-2</code>元素应有<code>flex-basis</code>属性。",
+          "testString": "assert($('#box-2').css('flex-basis') != 'auto', '<code>#box-2</code>元素应有<code>flex-basis</code>属性。');"
         },
         {
-          "text": "<code>#box-2</code> 的 <code>flex-basis</code> 应为 <code>20em</code>。",
-          "testString": "assert(code.match(/#box-2\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?20em;/g), '<code>#box-2</code> 的 <code>flex-basis</code> 应为 <code>20em</code>。');"
+          "text": "<code>#box-2</code>的<code>flex-basis</code>应为<code>20em</code>。",
+          "testString": "assert(code.match(/#box-2\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?20em;/g), '<code>#box-2</code>的<code>flex-basis</code>应为<code>20em</code>。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1195,32 +1181,31 @@
       "id": "587d78ae367417b2b2512afe",
       "title": "Use the flex Shorthand Property",
       "description": [
-        "上面几个 flex 属性有一个缩写法。<code>flex-grow</code>、<code>flex-shrink</code> 和 <code>flex-basis</code> 属性可以在 <code>flex</code> 中一同设置。",
-        "例如，<code>flex: 1 0 10px;</code> 会把项目属性设为 <code>flex-grow: 1;</code>、<code>flex-shrink: 0;</code> 以及 <code>flex-basis: 10px;</code>。",
-        "属性的默认设置是 <code>flex: 0 1 auto;</code>。",
+        "上面几个 flex 属性有一个简写方式。<code>flex-grow</code>、<code>flex-shrink</code>和<code>flex-basis</code>属性可以在<code>flex</code>中一同设置。",
+        "例如，<code>flex: 1 0 10px;</code>会把项目属性设为<code>flex-grow: 1;</code>、<code>flex-shrink: 0;</code>以及<code>flex-basis: 10px;</code>。",
+        "属性的默认设置是<code>flex: 0 1 auto;</code>。",
         "<hr>",
-        "在 <code>#box-1</code> and <code>#box-2</code> 添加 <code>flex</code> 属性。把 <code>#box-1</code> 设置成 <code>flex-grow</code> 为 2，<code>flex-shrink</code> 为 2, <code>flex-basis</code> 为 150px。把 <code>#box-2</code> 设置成 <code>flex-grow</code> 为 1，<code>flex-shrink</code> 为 1，<code>flex-basis</code> 为 150px。",
-        "上面设置的属性,在容器大于 300px 时，会让 <code>#box-1</code> 填充倍率为 <code>#box-2</code> 的两倍；在容器小于 300px 时，缩小倍率为 <code>#box-2</code> 的两倍。300px 是两个盒子的 <code>flex-basis</code> 的值之和。"
+        "在<code>#box-1</code>和<code>#box-2</code>添加<code>flex</code>属性。把<code>#box-1</code>设置成<code>flex-grow</code>为 2，<code>flex-shrink</code>为 2，<code>flex-basis</code>为 150px。把<code>#box-2</code>设置成<code>flex-grow</code>为 1，<code>flex-shrink</code>为 1，<code>flex-basis</code>为 150px。",
+        "上面设置的属性，在容器大于 300px 时，会让<code>#box-1</code>填充倍率为<code>#box-2</code>的两倍；在容器小于 300px 时，缩小倍率为<code>#box-2</code>的两倍。300px 是两个盒子的<code>flex-basis</code>的值之和。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>flex</code> 属性，其值应为 2 2 150px。",
-          "testString": "assert($('#box-1').css('flex-grow') == '2' && $('#box-1').css('flex-shrink') == '2' && $('#box-1').css('flex-basis') == '150px', '<code>#box-1</code> 元素应有 <code>flex</code> 属性，其值应为 2 2 150px。');"
+          "text": "<code>#box-1</code>元素应有<code>flex</code>属性，其值应为 2 2 150px。",
+          "testString": "assert($('#box-1').css('flex-grow') == '2' && $('#box-1').css('flex-shrink') == '2' && $('#box-1').css('flex-basis') == '150px', '<code>#box-1</code>元素应有<code>flex</code>属性，其值应为 2 2 150px。');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>flex</code> 属性，其值应为 1 1 150px。",
-          "testString": "assert($('#box-2').css('flex-grow') == '1' && $('#box-2').css('flex-shrink') == '1' && $('#box-2').css('flex-basis') == '150px', '<code>#box-2</code> 元素应有 <code>flex</code> 属性，其值应为 1 1 150px。');"
+          "text": "<code>#box-2</code>元素应有<code>flex</code>属性，其值应为 1 1 150px。",
+          "testString": "assert($('#box-2').css('flex-grow') == '1' && $('#box-2').css('flex-shrink') == '1' && $('#box-2').css('flex-basis') == '150px', '<code>#box-2</code>元素应有<code>flex</code>属性，其值应为 1 1 150px。');"
         },
         {
-          "text": "应对 <code>#box-1</code> 和 <code>#box-2</code> 使用 <code>flex</code> 属性。",
-          "testString": "assert(code.match(/flex:\\s*?\\d\\s+?\\d\\s+?150px;/g).length == 2, '应对 <code>#box-1</code> 和 <code>#box-2</code> 使用 <code>flex</code> 属性。');"
+          "text": "应对<code>#box-1</code>和<code>#box-2</code>使用<code>flex</code>属性。",
+          "testString": "assert(code.match(/flex:\\s*?\\d\\s+?\\d\\s+?150px;/g).length == 2, '应对<code>#box-1</code>和<code>#box-2</code>使用<code>flex</code>属性。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1259,25 +1244,24 @@
       "id": "587d78ae367417b2b2512aff",
       "title": "Use the order Property to Rearrange Items",
       "description": [
-        "<code>order</code> 属性告诉 CSS flex 容器里项目的顺序。 默认情况下，项目排列顺序与源 HTML 文件中顺序相同。这个属性接受数字作为参数，负数可用。",
+        "<code>order</code>属性告诉 CSS flex 容器里项目的顺序。默认情况下，项目排列顺序与源 HTML 文件中顺序相同。这个属性接受数字作为参数，可以使用负数。",
         "<hr>",
-        "在 <code>#box-1</code> 和 <code>#box-2</code> 添加 CSS 属性 <code>order</code>。<code>#box-1</code> 设为 2，<code>#box-2</code> 设为 1。"
+        "在<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>order</code>。<code>#box-1</code>设为 2，<code>#box-2</code>设为 1。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>order</code> 属性，其值应为 2。",
-          "testString": "assert($('#box-1').css('order') == '2', '<code>#box-1</code> 元素应有 <code>order</code> 属性，其值应为 2。');"
+          "text": "<code>#box-1</code>元素应有<code>order</code>属性，其值应为 2。",
+          "testString": "assert($('#box-1').css('order') == '2', '<code>#box-1</code>元素应有<code>order</code>属性，其值应为 2。');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>order</code> 属性，其值应为 1。",
-          "testString": "assert($('#box-2').css('order') == '1', '<code>#box-2</code> 元素应有 <code>order</code> 属性，其值应为 1。');"
+          "text": "<code>#box-2</code>元素应有<code>order</code>属性，其值应为 1。",
+          "testString": "assert($('#box-2').css('order') == '1', '<code>#box-2</code>元素应有<code>order</code>属性，其值应为 1。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
@@ -1318,26 +1302,25 @@
       "id": "587d78af367417b2b2512b00",
       "title": "Use the align-self Property",
       "description": [
-        "flex 项目的最后一个属性是 <code>align-self</code>。这个属性允许你调整每个项目自己的对齐方式，而不是一次性设置全部项目。因为 <code>float</code>、<code>clear</code> 和 <code>vertical-align</code> 等调整使用的属性都不能应用在 flex 项目，所以这个属性显得十分有用。",
-        "<code>align-self</code> 的可能值与 <code>align-items</code> 一样，并且它会覆盖 <code>align-items</code> 的值。",
+        "flex 子元素的最后一个属性是<code>align-self</code>。这个属性允许你调整每个项目自己的对齐方式，而不是一次性设置全部项目。因为<code>float</code>、<code>clear</code>和<code>vertical-align</code>等调整使用的属性都不能应用在 flex 子元素，所以这个属性显得十分有用。",
+        "<code>align-self</code>的允许值与<code>align-items</code>一样，并且它会覆盖<code>align-items</code>的值。",
         "<hr>",
-        "在 <code>#box-1</code> 和 <code>#box-2</code> 添加 CSS 属性 <code>align-self</code>。<code>#box-1</code> 设为 center，<code>#box-2</code> 设为 flex-end。"
+        "在<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>align-self</code>。<code>#box-1</code>设为 center，<code>#box-2</code>设为 flex-end。"
       ],
       "tests": [
         {
-          "text": "<code>#box-1</code> 元素应有 <code>align-self</code> 属性，其值应为 center。",
-          "testString": "assert($('#box-1').css('align-self') == 'center', '<code>#box-1</code> 元素应有 <code>align-self</code> 属性，其值应为 center。');"
+          "text": "<code>#box-1</code>元素应有<code>align-self</code>属性，其值应为 center。",
+          "testString": "assert($('#box-1').css('align-self') == 'center', '<code>#box-1</code>元素应有<code>align-self</code>属性，其值应为 center。');"
         },
         {
-          "text": "<code>#box-2</code> 元素应有 <code>align-self</code> 属性，其值应为 flex-end。",
-          "testString": "assert($('#box-2').css('align-self') == 'flex-end', '<code>#box-2</code> 元素应有 <code>align-self</code> 属性，其值应为 flex-end。');"
+          "text": "<code>#box-2</code>元素应有<code>align-self</code>属性，其值应为 flex-end。",
+          "testString": "assert($('#box-2').css('align-self') == 'flex-end', '<code>#box-2</code>元素应有<code>align-self</code>属性，其值应为 flex-end。');"
         }
       ],
       "solutions": [],
       "hints": [],
       "releasedOn": "Feb 17, 2017",
       "challengeType": 0,
-      "translations": {},
       "files": {
         "indexhtml": {
           "key": "indexhtml",
