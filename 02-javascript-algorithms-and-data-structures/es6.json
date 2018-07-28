@@ -179,7 +179,6 @@
       "id": "587d7b87367417b2b2512b42",
       "title": "Mutate an Array Declared with const",
       "description": [
-        "The <code>const</code> declaration has many use cases in modern JavaScript.",
         "在现代的 JavaScript 里，<code>const</code> 声明有很多用法",
         "一些开发者倾向默认使用 <code>const</code> 来声明所有变量，除非在他们知道需要更改某个变量的值的时候，才会使用 <code>let</code>",
         "然而，重点是要理解对象（包括数组和函数）在使用 <code>const</code> 声明的时候依然是可变的。使用 <code>const</code>来声明只会保证它的标识不会被重新赋值。",
@@ -350,7 +349,6 @@
       "description": [
         "和一般的函数一样，你也可以给箭头函数传递参数。",
         "<blockquote>// doubles input value and returns it<br>const doubler = (item) => item * 2;</blockquote>",
-        "You can pass more than one argument into arrow functions as well.",
         "你可以同样可以给箭头函数传递多个参数。",
         "<hr>",
         "使用箭头函数的语法重写 <code>myConcat</code> 函数，使其可以将 <code>arr2</code> 的内容粘贴在 <code>arr1</code>里。"
@@ -405,7 +403,6 @@
         "箭头函数在类似 <code>map</code>, <code>filter</code>, <code>reduce</code> 等需要其他函数作为参数来处理数据的高阶函数里会很好用。" ,
         "阅读以下代码：",
         "<blockquote>FBPosts.filter(function(post) {<br>&nbsp;&nbsp;return post.thumbnail !== null && post.shares > 100 && post.likes > 500;<br>})</blockquote>",
-        "We have written this with <code>filter()</code> to at least make it somewhat readable. Now compare it to the following code which uses arrow function syntax instead:",
         "我们写下了 <code>filter</code> 函数，并尽量保证可读性。现在让我们用箭头函数来写同样的代码看看：",
         "<blockquote>FBPosts.filter((post) => post.thumbnail !== null && post.shares > 100 && post.likes > 500)</blockquote>",
         "这段代码完成了同样的任务，却变得更加剪短易懂了。",
