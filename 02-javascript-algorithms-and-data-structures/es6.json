@@ -9,17 +9,17 @@
       "title": "Explore Differences Between the var and let Keywords",
       "description": [
         "使用 <code>var</code> 关键字来声明变量，会出现重复声明导致变量被覆盖却不会报错的问题：",
-        "<blockquote>var camper = 'James';<br>var camper = 'David';<br>console.log(camper);<br>// logs 'David'</blockquote>",
+        "<blockquote>var camper = 'James';<br>var camper = 'David';<br>console.log(camper);<br>// 打印出 'David'</blockquote>",
         "在上面的代码中， <code>camper</code> 的初始值为 <code>'James'</code>，然后又被覆盖成了 <code>'David'</code>。",
         "在小型的应用中，你可能不会遇到这样的问题，但是当你的代码规模变得更加庞大的时候，就可能会在不经意间覆盖了之前定义的变量。",
         "这样的行为不会报错导致了 debug 非常困难。<br>",
         "在 ES6 中引入了新的关键字 <code>let</code> 来解决 <code>var</code> 关键字带来的潜在问题。",
         "如果你在上面的代码中，使用了 <code>let</code> 关键字来代替 <code>var</code>关键字，结果会是一个报错。",
-        "<blockquote>let camper = 'James';<br>let camper = 'David'; // throws an error</blockquote>",
+        "<blockquote>let camper = 'James';<br>let camper = 'David'; // 报错</blockquote>",
         "你可以在浏览器的控制台里看见这个错误。",
         "与 <code>var</code> 不同的是， 当使用 <code>let</code> 的时候，同一名字的变量只能被声明一次。",
         "请注意 <code>\"use strict\"</code>。这代表着开启了严格模式， 用于检测常见的代码错误以及\"不安全\"的行为，例如：",
-        "<blockquote>\"use strict\";<br>x = 3.14; // throws an error because x is not declared</blockquote>",
+        "<blockquote>\"use strict\";<br>x = 3.14; // x 没有声明导致了报错</blockquote>",
         "<hr>",
         "请更新这段代码，并且在其中只使用 <code>let</code> 关键字"
       ],
@@ -68,13 +68,13 @@
         "当你使用 <code>var</code> 关键字来声明一个变量的时候，这个变量会被声明成全局变量，或是函数内的局部变量。",
         "<code>let</code> 关键字的作用类似，但会有一些额外的特性。如果你在代码块、语句或表达式中使用关键字 <code>let</code> 声明变量，这个变量的作用域就被限制在当前的代码块，语句或表达式之中。",
         "举个例子：",
-        "<blockquote>var numArray = [];<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;numArray.push(i);<br>}<br>console.log(numArray);<br>// returns [0, 1, 2]<br>console.log(i);<br>// returns 3</blockquote>",
+        "<blockquote>var numArray = [];<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;numArray.push(i);<br>}<br>console.log(numArray);<br>// 返回 [0, 1, 2]<br>console.log(i);<br>// 返回 3</blockquote>",
         "当使用 <code>var</code> 关键字的时候， <code>i</code> 会被声明成全局变量。 当 <code>i++</code> 执行的时候， 它会改变全局变量的值。 这段代码可以看做下面这样:",
         "<blockquote>var numArray = [];<br>var i;<br>for (i = 0; i < 3; i++) {<br>&nbsp;&nbsp;numArray.push(i);<br>}<br>console.log(numArray);<br>// returns [0, 1, 2]<br>console.log(i);<br>// returns 3</blockquote>",
         "如果你在 <code>for</code> 循环中创建了使用 <code>i</code> 变量的函数，那么在后续调用函数的时候，上面提到的这种行为就会导致问题。这是因为函数存储的值会因为全局变量 <code>i</code>的变化而不断的改变。",
-        "<blockquote>var printNumTwo;<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if(i === 2){<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// returns 3</blockquote>",
+        "<blockquote>var printNumTwo;<br>for (var i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if(i === 2){<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// 返回 3</blockquote>",
         "可以看到， <code>printNumTwo()</code> 打印了 3 而不是 2。 这是因为 <code>i</code> 发生了改变，并且函数 <code>printNumTwo()</code> 返回的是全局变量 <code>i</code>的值，而不是 <code>for</code> 循环中创建函数时 <code>i</code> 的值。<code>let</code> 关键字就不会有这种现象：",
-        "<blockquote>'use strict';<br>let printNumTwo;<br>for (let i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if (i === 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// returns 2<br>console.log(i);<br>// returns \"i is not defined\"</blockquote>",
+        "<blockquote>'use strict';<br>let printNumTwo;<br>for (let i = 0; i < 3; i++) {<br>&nbsp;&nbsp;if (i === 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;printNumTwo = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return i;<br>&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;}<br>}<br>console.log(printNumTwo());<br>// 返回 2<br>console.log(i);<br>// 返回 \"没有定义 i 变量\"</blockquote>",
         "<code>i</code> 在全局作用域中没有声明，所以它没有被定义，它的声明只会发生在 <code>for</code> 循环内。在循环执行的时候，<code>let</code> 关键字创建了三个不同的 <code>i</code> 变量，他们的值分别为 0、1 和 2，所以 <code>printNumTwo()</code> 返回了正确的值。",
         "<hr>",
         "修改这段代码，使得在 <code>if</code> 语句中声明的 <code>i</code> 变量与在函数的第一行声明的 <code>i</code> 变量是彼此独立的。 请注意不要在你的代码的任何地方使用 <code>var</code> 关键字。",
@@ -124,7 +124,7 @@
       "description": [
         "<code>let</code> 并不是唯一的新的声明变量的方式。在 ES6里面，你还可以使用 <code>const</code> 关键字来声明变量。",
         "<code>const</code> 拥有 <code>let</code> 的所有优点，所不同的是，通过<code>code</code> 声明的变量是只读的。这意味着通过 <code>const</code> 声明的变量只能被赋值一次，而不能被再次赋值。",
-        "<blockquote>\"use strict\"<br>const FAV_PET = \"Cats\";<br>FAV_PET = \"Dogs\"; // returns error</blockquote>",
+        "<blockquote>\"use strict\"<br>const FAV_PET = \"Cats\";<br>FAV_PET = \"Dogs\"; // 报错 </blockquote>",
         "可以看见，尝试给通过 <code>const</code> 声明的变量再次赋值会报错。你应该使用 <code>const</code> 关键字来对所有不打算再次赋值的变量进行声明。这有助于你避免给一个常量进行额外的再次赋值。一个最佳实践是对所有常量的命名采用全大写字母，并在单词之间使用下划线进行分隔。",
         "<hr>",
         "改变以下代码，使得所有的变量都使用 <code>let</code> 或 <code>const</code> 关键词来声明。当变量将会改变的时候使用 <code>let</code>关键字，当变量要保持常量的时候使用 <code>const</code> 关键字。同时，对使用 <code>const</code> 声明的变量进行最佳实践的重命名，变量名中的字母应该都是大写的。"
@@ -158,14 +158,14 @@
             "function printManyTimes(str) {",
             "  \"use strict\";",
             "",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "",
             "  var sentence = str + \" is cool!\";",
             "  for(var i = 0; i < str.length; i+=2) {",
             "    console.log(sentence);",
             "  }",
             "",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "",
             "}",
             "printManyTimes(\"freeCodeCamp\");"
@@ -183,8 +183,7 @@
         "在现代的 JavaScript 里，<code>const</code> 声明有很多用法",
         "一些开发者倾向默认使用 <code>const</code> 来声明所有变量，除非在他们知道需要更改某个变量的值的时候，才会使用 <code>let</code>",
         "然而，重点是要理解对象（包括数组和函数）在使用 <code>const</code> 声明的时候依然是可变的。使用 <code>const</code>来声明只会保证它的标识不会被重新赋值。",
-        "<blockquote>\"use strict\";<br>const s = [5, 6, 7];<br>s = [1, 2, 3]; // throws error, trying to assign a const<br>s[2] = 45; // works just as it would with an array declared with var or let<br>console.log(s); // returns [5, 6, 45]</blockquote>",
-        "Like all arrays, the array elements in <code>s</code> are mutable, but because <code>const</code> was used, you cannot use the variable identifier <code>s</code> to point to a different array using the assignment operator.",
+        "<blockquote>\"use strict\";<br>const s = [5, 6, 7];<br>s = [1, 2, 3]; // 试图给 const 变量赋值，报错<br>s[2] = 45; // 与用 var 或 let 声明的数组一样，这个操作也会成功<br>console.log(s); // 返回 [5, 6, 45]</blockquote>",
         "可以看见，你可以改变 <code>[5, 6, 7]</code> 自身，所以 <code>s</code> 变量指向了改变后的数组 <code>[5, 6, 45]</code>。和所有数组一样，数组 <code>s</code>中的数组元素是可以被改变的，但是因为使用了 <code>const</code> 关键字，你不能使用赋值操作符将变量标识 <code>s</code> 指向另外一个数组",
         "<hr>",
         "这里有一个使用 <code>const s = [5, 7, 2]</code> 声明的数组。使用对各元素赋值的方法将数组改成 <code>[2, 5, 7]</code>。"
@@ -218,11 +217,11 @@
             "const s = [5, 7, 2];",
             "function editInPlace() {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "",
             "  // s = [2, 5, 7]; <- this is invalid",
             "",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "}",
             "editInPlace();"
           ],
@@ -237,7 +236,7 @@
       "description": [
         "通过之前的挑战可以看出, <code>const</code> 声明并不会真的保护你的数据不被改变. 为了确保数据不被改变， Javascript 提供了一个函数 <code>Object.freeze</code> 来防止数据改变。",
         "当一个对象被冻结的时候，你不能再对它的属性再进行增、删、改的操作。任何试图改变对象的操作都会被阻止，却不会报错。",
-        "<blockquote>let obj = {<br>&nbsp;&nbsp;name:\"FreeCodeCamp\",<br>&nbsp;&nbsp;review:\"Awesome\"<br>};<br>Object.freeze(obj);<br>obj.review = \"bad\"; //will be ignored. Mutation not allowed<br>obj.newProp = \"Test\"; // will be ignored. Mutation not allowed<br>console.log(obj); <br>// { name: \"FreeCodeCamp\", review:\"Awesome\"}</blockquote>",
+        "<blockquote>let obj = {<br>&nbsp;&nbsp;name:\"FreeCodeCamp\",<br>&nbsp;&nbsp;review:\"Awesome\"<br>};<br>Object.freeze(obj);<br>obj.review = \"bad\"; //obj 对象被冻结了，这个操作会被忽略<br>obj.newProp = \"Test\"; // will be ignored. Mutation not allowed<br>console.log(obj); <br>// { name: \"FreeCodeCamp\", review:\"Awesome\"}</blockquote>",
         "<hr>",
         "在这个挑战中，你将使用 <code>Object.freeze</code> 来防止数学常量被改变。你需要冻结 <code>MATH_CONSTANTS</code> 对象，使得没有人可以改变 <code>PI</code> 的值，抑或增加或删除属性。"
       ],
@@ -272,10 +271,10 @@
             "  const MATH_CONSTANTS = {",
             "    PI: 3.14",
             "  };",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "",
             "",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "  try {",
             "    MATH_CONSTANTS.PI = 99;",
             "  } catch( ex ) {",
@@ -294,37 +293,37 @@
       "id": "587d7b87367417b2b2512b43",
       "title": "Use Arrow Functions to Write Concise Anonymous Functions",
       "description": [
-        "In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.",
-        "To achieve this, we often use the following syntax:",
+        "在JavaScript里，我们会经常遇到不需要给函数命名的情况，尤其是在需要将以个函数作为参数传给另外一个函数的时候，在这些时候，我们会创建行内函数。因为这些函数不会再其他地方复用，所以我们不要给它们命名。",
+        "这种情况下，我们通常会使用以下语法：",
         "<blockquote>const myFunc = function() {<br>&nbsp;&nbsp;const myVar = \"value\";<br>&nbsp;&nbsp;return myVar;<br>}</blockquote>",
-        "ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use <strong>arrow function syntax</strong>:",
+        "ES6 提供了其他写匿名函数的方式的语法糖。你可以使用箭头函数：",
         "<blockquote>const myFunc = () => {<br>&nbsp;&nbsp;const myVar = \"value\";<br>&nbsp;&nbsp;return myVar;<br>}</blockquote>",
-        "When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword <code>return</code> as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:",
+        "当不需要函数体，只返回一个值的时候，箭头函数允许你省略 <code>return</code> 关键字和外面的大括号。这样就可以将一个简单的函数简化成一个单行语句。",
         "<blockquote>const myFunc= () => \"value\"</blockquote>",
-        "This code will still return <code>value</code> by default.",
+        "这段代码仍然会返回 <code>value</code>",
         "<hr>",
-        "Rewrite the function assigned to the variable <code>magic</code> which returns a new <code>Date()</code> to use arrow function syntax. Also make sure nothing is defined using the keyword <code>var</code>."
+        "使用箭头函数的语法重写 <code>magic</code> 函数，使其返回一个新的 <code>Date()</code>。同时不要用 <code>var</code> 关键字来定义任何变量。"
       ],
       "tests": [
         {
-          "text": "User did replace <code>var</code> keyword.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), 'User did replace <code>var</code> keyword.');"
+          "text": "替换掉 <code>var</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), '替换掉 <code>var</code> 关键字。');"
         },
         {
-          "text": "<code>magic</code> should be a constant variable (by using <code>const</code>).",
-          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+magic/g), '<code>magic</code> should be a constant variable (by using <code>const</code>).');"
+          "text": "<code>magic</code> 应该为一个常量 (使用 <code>const</code>)。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+magic/g), '<code>magic</code> 应该为一个常量 (使用 <code>const</code>)。');"
         },
         {
-          "text": "<code>magic</code> is a <code>function</code>.",
-          "testString": "assert(typeof magic === 'function', '<code>magic</code> is a <code>function</code>.');"
+          "text": "<code>magic</code> 是一个 <code>function</code>。",
+          "testString": "assert(typeof magic === 'function', '<code>magic</code> 是一个 <code>function</code>。');"
         },
         {
-          "text": "<code>magic()</code> returns correct date.",
-          "testString": "assert(magic().getDate() == new Date().getDate(), '<code>magic()</code> returns correct date.');"
+          "text": "<code>magic()</code> 返回正确的日期。",
+          "testString": "assert(magic().getDate() == new Date().getDate(), '<code>magic()</code> 返回正确的日期。');"
         },
         {
-          "text": "<code>function</code> keyword was not used.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '<code>function</code> keyword was not used.');"
+          "text": "不要使用 <code>function</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '不要使用 <code>function</code> 关键字。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -349,32 +348,33 @@
       "id": "587d7b88367417b2b2512b44",
       "title": "Write Arrow Functions with Parameters",
       "description": [
-        "Just like a normal function, you can pass arguments into arrow functions.",
+        "和一般的函数一样，你也可以给箭头函数传递参数。",
         "<blockquote>// doubles input value and returns it<br>const doubler = (item) => item * 2;</blockquote>",
         "You can pass more than one argument into arrow functions as well.",
+        "你可以同样可以给箭头函数传递多个参数。",
         "<hr>",
-        "Rewrite the <code>myConcat</code> function which appends contents of <code>arr2</code> to <code>arr1</code> so that the function uses arrow function syntax."
+        "使用箭头函数的语法重写 <code>myConcat</code> 函数，使其可以将 <code>arr2</code> 的内容粘贴在 <code>arr1</code>里。"
       ],
       "tests": [
         {
-          "text": "User did replace <code>var</code> keyword.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), 'User did replace <code>var</code> keyword.');"
+          "text": "替换掉所有的 <code>var</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), '替换掉所有的 <code>var</code> 关键字。');"
         },
         {
-          "text": "<code>myConcat</code> should be a constant variable (by using <code>const</code>).",
-          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+myConcat/g), '<code>myConcat</code> should be a constant variable (by using <code>const</code>).');"
+          "text": "<code>myConcat</code> 应该是一个常量 (使用 <code>const</code>)。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+myConcat/g), '<code>myConcat</code> 应该是一个常量 (使用 <code>const</code>)。');"
         },
         {
-          "text": "<code>myConcat</code> should be a function",
-          "testString": "assert(typeof myConcat === 'function', '<code>myConcat</code> should be a function');"
+          "text": "<code>myConcat</code> 应该是一个函数。",
+          "testString": "assert(typeof myConcat === 'function', '<code>myConcat</code> 应该是一个函数。');"
         },
         {
-          "text": "<code>myConcat()</code> returns the correct <code>array</code>",
-          "testString": "assert(() => { const a = myConcat([1], [2]); return a[0] == 1 && a[1] == 2; }, '<code>myConcat()</code> returns the correct <code>array</code>');"
+          "text": "<code>myConcat()</code> 返回正确的 <code>array</code>。",
+          "testString": "assert(() => { const a = myConcat([1], [2]); return a[0] == 1 && a[1] == 2; }, '<code>myConcat()</code> 返回正确的 <code>array</code>。');"
         },
         {
-          "text": "<code>function</code> keyword was not used.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '<code>function</code> keyword was not used.');"
+          "text": "不要使用 <code>function</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '不要使用 <code>function</code> 关键字。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -389,7 +389,7 @@
             "  \"use strict\";",
             "  return arr1.concat(arr2);",
             "};",
-            "// test your code",
+            "// 测试你的代码",
             "console.log(myConcat([1, 2], [3, 4, 5]));"
           ],
           "head": [],
@@ -452,9 +452,9 @@
             "const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34];",
             "const squareList = (arr) => {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  const squaredIntegers = arr;",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "  return squaredIntegers;",
             "};",
             "// test your code",
@@ -660,9 +660,9 @@
             "function getLength(str) {",
             "  \"use strict\";",
             "",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  const length = 0; // change this",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "",
             "  return len; // you must assign length to len in line",
             "",
@@ -711,9 +711,9 @@
             "",
             "function getMaxOfTmrw(forecast) {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  const maxOfTomorrow = undefined; // change this line",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "  return maxOfTomorrow;",
             "}",
             "",
@@ -763,9 +763,9 @@
             "let a = 8, b = 6;",
             "(() => {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  ",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "})();",
             "console.log(a); // should be 6",
             "console.log(b); // should be 8"
@@ -812,9 +812,9 @@
             "const source = [1,2,3,4,5,6,7,8,9,10];",
             "function removeFirstTwo(list) {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  arr = list; // change this",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "  return arr;",
             "}",
             "const arr = removeFirstTwo(source);",
@@ -873,12 +873,12 @@
             "const half = (function() {",
             "  \"use strict\"; // do not change this line",
             "",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  return function half(stats) {",
             "    // use function argument destructuring",
             "    return (stats.max + stats.min) / 2.0;",
             "  };",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "",
             "})();",
             "console.log(stats); // should be object",
@@ -933,9 +933,9 @@
             "function makeList(arr) {",
             "  \"use strict\";",
             "",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  const resultDisplayArray = null;",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "",
             "  return resultDisplayArray;",
             "}",
@@ -986,13 +986,13 @@
           "contents": [
             "const createPerson = (name, age, gender) => {",
             "  \"use strict\";",
-            "  // change code below this line",
+            "  // 在这行以下修改代码",
             "  return {",
             "    name: name,",
             "    age: age,",
             "    gender: gender",
             "  };",
-            "  // change code above this line",
+            "  // 在这行以上修改代码",
             "};",
             "console.log(createPerson(\"Zodiac Hasbro\", 56, \"male\")); // returns a proper object"
           ],
@@ -1030,7 +1030,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// change code below this line",
+            "// 在这行以下修改代码",
             "const bicycle = {",
             "  gear: 2,",
             "  setGear: function(newGear) {",
@@ -1038,7 +1038,7 @@
             "    this.gear = newGear;",
             "  }",
             "};",
-            "// change code above this line",
+            "// 在这行以上修改代码",
             "bicycle.setGear(3);",
             "console.log(bicycle.gear);"
           ],
