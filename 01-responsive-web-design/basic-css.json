@@ -9,21 +9,21 @@
       "title": "Change the Color of Text",
       "description": [
         "现在来让我们修改一下文本的颜色。",
-        "我们通过修改 <code>h2</code> 元素里面的 <code>style</code>。",
-        "<code>color</code> 属性可以控制文本元素颜色。",
-        "以下是改变 <code>h2</code> 元素为蓝色的方法：",
+        "我们通过修改<code>h2</code>元素里面的 <code>style</code>。",
+        "<code>color</code>属性可以控制文本元素颜色。",
+        "以下是改变<code>h2</code>元素为蓝色的方法：",
         "<code>&#60;h2 style=\"color: blue;\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "请注意行内 <code>style</code> 最好以 <code>;</code> 来结束。",
+        "请注意行内<code>style</code>最好以<code>;</code>来结束。",
         "<hr>",
-        "请把 <code>h2</code> 元素的文本颜色设置为红色。"
+        "请把<code>h2</code>元素的文本颜色设置为红色。"
       ],
       "tests": [
         {
-          "text": "你的 <code>h2</code> 元素应该为红色。",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的 <code>h2</code> 元素应该为红色。');"
+          "text": "你的<code>h2</code>元素应该为红色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>元素应该为红色。');"
         },
         {
-          "text": "<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。",
+          "text": "<code>h2</code>元素的<code>style</code> 属性的值应该以<code>;</code>结束。",
           "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。');"
         
       ],
@@ -75,33 +75,33 @@
       "id": "bad87fee1348bd9aedf08805",
       "title": "Use CSS Selectors to Style Elements",
       "description": [
-        "在CSS中，有上百种 <code>属性</code> 可以让你改变页面样式。",
-        "通过输入 <code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code> 的 <code>行内样式</code>，修改单一的 <code>h2</code> 元素的颜色的方式，配置 <code>层叠样式表（CSS）</code> 的方式之一。",
-        "这是改变元素样式的一个特别方法，不过存在着更好的方法来设置 <code>层叠样式表（CSS）</code>。",
+        "在CSS中，有上百种<code>属性</code>可以让你改变页面样式。",
+        "通过输入 <code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code> 的<code>行内样式</code>，修改单一的<code>h2</code>元素的颜色的方式，配置 <code>层叠样式表（CSS）</code> 的方式之一。",
+        "这是改变元素样式的一个特别方法，不过存在着更好的方法来设置<code>层叠样式表（CSS</code>。",
         "在代码的顶部，创建一个 <code>style</code> 声明区域，如下方所示：",
         "<blockquote>&#60;style&#62;<br>&#60;/style&#62;</blockquote>",
-        "在style样式声明区域内，可以创建一个 <code>CSS 选择器</code> 的规则来应用于所有的 <code>h2</code> 元素。例如，如果你想所有 <code>h2</code> 元素变成红色，可以添加下方的样式规则：",
+        "在style样式声明区域内，可以创建一个<code>CSS 选择器</code>的规则来应用于所有的<code>h2</code>元素。例如，如果你想所有<code>h2</code>元素变成红色，可以添加下方的样式规则：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;h2 {color: red;}<br>&#60;/style&#62;</blockquote>",
         "注意，在每个元素的样式声明区域里，左右花括号（<code>{</code> 和 <code>}</code>）一定要写全。你需要确定你定义的样式规则位于花括号之间。以及，记得在每个元素样式规则的末尾添加分号。",
         "<hr>",
-        "删除 <code>h2</code> 元素的行内样式，创建 <code>style</code> 样式声明区域。添加CSS样式规则使 <code>h2</code> 元素变为蓝色。"
+        "删除<code>h2</code>元素的行内样式，创建<code>style</code>样式声明区域。添加CSS样式规则使<code>h2</code>元素变为蓝色。"
       ],
       "tests": [
         {
-          "text": "移除 <code>h2</code> 元素的行内样式。",
-          "testString": "assert(!$(\"h2\").attr(\"style\"), '移除 <code>h2</code> 元素的行内样式。');"
+          "text": "移除<code>h2</code>元素的行内样式。",
+          "testString": "assert(!$(\"h2\").attr(\"style\"), '移除<code>h2</code>元素的行内样式。');"
         },
         {
-          "text": "创建一个 <code>style</code> 样式声明区域。",
-          "testString": "assert($(\"style\") && $(\"style\").length > 1, '创建一个 <code>style</code> 样式声明区域。');"
+          "text": "创建一个<code>style</code>样式声明区域。",
+          "testString": "assert($(\"style\") && $(\"style\").length > 1, '创建一个<code>style</code>样式声明区域。');"
         },
         {
-          "text": "<code>h2</code> 元素颜色应为蓝色。",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(0, 0, 255)\", '<code>h2</code> 元素颜色应为蓝色。');"
+          "text": "<code>h2</code>元素颜色应为蓝色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(0, 0, 255)\", '<code>h2</code>元素颜色应为蓝色。');"
         },
         {
-          "text": "确保你的样式声明里的 <code>h2</code> 规则需以花括号所包括，和分号结束。",
-          "testString": "assert(code.match(/h2\\s*\\{\\s*color\\s*:.*;\\s*\\}/g), '确保你的样式声明里的 <code>h2</code> 规则需以花括号所包括，和分号结束。');"
+          "text": "确保你的样式声明里的<code>h2</code>规则需以花括号所包括，和分号结束。",
+          "testString": "assert(code.match(/h2\\s*\\{\\s*color\\s*:.*;\\s*\\}/g), '确保你的样式声明里的<code>h2</code>规则需以花括号所包括，和分号结束。');"
         }
       ],
       "challengeType": 0,
@@ -152,33 +152,33 @@
       "id": "bad87fee1348bd9aecf08806",
       "title": "Use a CSS Class to Style an Element",
       "description": [
-        "CSS 的 <code>class</code> 具有可重用性，可应用于各种 HTML 元素。",
-        "一个 CSS <code>class</code> 声明示例，如下所示：",
+        "CSS 的<code>class</code>具有可重用性，可应用于各种 HTML 元素。",
+        "一个 CSS<code>class</code>声明示例，如下所示：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.blue-text {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: blue;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
-        "可以看到，我们在 <code>&#60;style&#62;</code> 样式声明区域里，创建了一个名为 <code>blue-text</code> 的 <code>class</code> 选择器。",
-        "你可以将 CSS <code>class</code> 选择器应用到一个HTML元素里，如下所示：",
+        "可以看到，我们在<code>&#60;style&#62;</code>样式声明区域里，创建了一个名为<code>blue-text</code>的<code>class</code>选择器。",
+        "你可以将 CSS<code>class</code>选择器应用到一个HTML元素里，如下所示：",
         "<code>&#60;h2 class=\"blue-text\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "注意你的 <code>style</code> 样式区域声明里，<code>class</code> 需以句号开头。而在你的HTML元素里的 <code>class</code> 属性的类名，不需要包含句号",
+        "注意你的<code>style</code>样式区域声明里，<code>class</code>需以句号开头。而在你的HTML元素里的<code>class</code>属性的类名，不需要包含句号",
         "<hr>",
-        "在 <code>style</code> 样式声明里，<code>h2</code> 元素选择器改为 <code>.red-text</code> 的 CSS <code>class</code> 选择器，同时将颜色 <code>blue</code> 变为 <code>red</code>。",
-        "在你的 <code>h2</code> html 元素里，添加一个 <code>class</code> 属性，且值为 <code>'red-text'</code>。"
+        "在<code>style</code>样式声明里，<code>h2</code>元素选择器改为<code>.red-text</code>的 CSS <code>class</code> 择器，同时将颜色<code>blue</code>变为<code>red</code>。",
+        "在你的<code>h2</code>元素里，添加一个<code>class</code>属性，且值为<code>'red-text'</code>。"
       ],
       "tests": [
         {
-          "text": "你的 <code>h2</code> 元素应该为红色。",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的 <code>h2</code> 元素应该为红色。');"
+          "text": "你的<code>h2</code>元素应该为红色。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>元素应该为红色。');"
         },
         {
-          "text": "你的 <code>h2</code> 元素应含有 <code>red-text</code> class 选择器。",
-          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的 <code>h2</code> 元素应含有 <code>red-text</code> class 选择器。');"
+          "text": "你的<code>h2</code>元素应含有<code>red-text</code> class 选择器。",
+          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的<code>h2</code>元素应含有<code>red-text</code> class 选择器。');"
         },
         {
-          "text": "你的 <code>style</code> 样式声明区域里应该包含一个 <code>red-text</code> class 选择器，并且它的颜色应为红色。",
-          "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), '你的 <code>style</code> 样式声明区域里应该包含一个 <code>red-text</code> CSS 类（class）规则，并且它的颜色应为红色。');"
+          "text": "你的<code>style</code>样式声明区域里应该包含一个<code>red-text</code> class 选择器，并且它的颜色应为红色。",
+          "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), '你的<code>style</code>样式声明区域里应该包含一个<code>red-text</code> class 选择器，并且它的颜色应为红色。');"
         },
         {
-          "text": "不要在 <code>h2</code> 元素里使用 <code>style=\"color&#58; red\"</code> 的行内样式 。",
-          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在 <code>h2</code> 元素里使用 <code>style=\"color&#58; red\"</code> 的行内样式 。');"
+          "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。",
+          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。');"
         }
       ],
       "challengeType": 0,
@@ -235,28 +235,28 @@
       "id": "bad87fee1348bd9aefe08806",
       "title": "Style Multiple Elements with a CSS Class",
       "description": [
-        "通过 CSS class 选择器，多个 HTML 元素可以使用相同的 CSS 样式规则。你可以将 <code>red-text</code> class 选择器应用在第一个 <code>p</code> 元素上。"
+        "通过 CSS class 选择器，多个 HTML 元素可以使用相同的 CSS 样式规则。你可以将<code>red-text</code> class 选择器应用在第一个<code>p</code>元素上。"
       ],
       "tests": [
         {
-          "text": "你的 <code>h2</code> 元素应该是红色的。",
-          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的 <code>h2</code> 元素应该是红色的。');"
+          "text": "你的<code>h2</code>元素应该是红色的。",
+          "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>元素应该是红色的。');"
         },
         {
-          "text": "你的 <code>h2</code> 元素应该含有名为 <code>red-text</code> 的 class 选择器。",
-          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的 <code>h2</code> 元素应该含有名为 <code>red-text</code> 的 class 选择器。');"
+          "text": "你的<code>h2</code>元素应该含有名为<code>red-text</code> 的 class 选择器。",
+          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的<code>h2</code>元素应该含有名为<code>red-text</code> 的 class 选择器。');"
         },
         {
-          "text": "你的第一个 <code>p</code> 元素应该为红色。",
-          "testString": "assert($(\"p:eq(0)\").css(\"color\") === \"rgb(255, 0, 0)\", '你的第一个 <code>p</code> 元素应该为红色。');"
+          "text": "你的第一个<code>p</code>元素应该为红色。",
+          "testString": "assert($(\"p:eq(0)\").css(\"color\") === \"rgb(255, 0, 0)\", '你的第一个<code>p</code>元素应该为红色。');"
         },
         {
-          "text": "你的第二和第三个 <code>p</code> 元素不应该为红色。",
-          "testString": "assert(!($(\"p:eq(1)\").css(\"color\") === \"rgb(255, 0, 0)\") && !($(\"p:eq(2)\").css(\"color\") === \"rgb(255, 0, 0)\"), '你的第二和第三个 <code>p</code> 元素不应该为红色。');"
+          "text": "你的第二和第三个<code>p</code>元素不应该为红色。",
+          "testString": "assert(!($(\"p:eq(1)\").css(\"color\") === \"rgb(255, 0, 0)\") && !($(\"p:eq(2)\").css(\"color\") === \"rgb(255, 0, 0)\"), '你的第二和第三个<code>p</code>元素不应该为红色。');"
         },
         {
-          "text": "你的第一个 <code>p</code> 元素应该包含名为 <code>red-text</code> 的 class 选择器。",
-          "testString": "assert($(\"p:eq(0)\").hasClass(\"red-text\"), '你的第一个 <code>p</code> 元素应该包含名为 <code>red-text</code> 的 class 选择器。');"
+          "text": "你的第一个<code>p</code>元素应该包含名为<code>red-text</code>的 class 选择器。",
+          "testString": "assert($(\"p:eq(0)\").hasClass(\"red-text\"), '你的第一个<code>p</code> 元素应该包含名为<code>red-text</code>的 class 选择器。');"
         }
       ],
       "challengeType": 0,
@@ -313,15 +313,15 @@
       "id": "bad87fee1348bd9aedf08806",
       "title": "Change the Font Size of an Element",
       "description": [
-        "字体大小由 <code>font-size</code> 的 CSS 属性控制，如下所示：",
+        "字体大小由<code>font-size</code>的 CSS 属性控制，如下所示：",
         "<blockquote>h1 {<br>&nbsp;&nbsp;font-size: 30px;<br>}</blockquote>",
         "<hr>",
-        "在包含 <code>red-text</code> CSS 类（class）的 <code>&#60;style&#62;</code> 声明区域的里，创建一个 <code>p</code> 元素样式规则，并设置 <code>font-size</code> 为 16 像素(<code>16px</code>)。"
+        "在包含<code>red-text</code> class 的<code>&#60;style&#62;</code>声明区域的里，创建一个<code>p</code>元素样式规则，并设置<code>font-size</code>为 16 像素(<code>16px</code>)。"
       ],
       "tests": [
         {
-          "text": "在 <code>style</code> 样式声明区域里，<code>p</code> 元素的 <code>font-size</code> 的值应为 <code>16px</code>。浏览器和文本缩放应设置为 100％。",
-          "testString": "assert(code.match(/p\\s*{\\s*font-size\\s*:\\s*16\\s*px\\s*;\\s*}/i), '在 <code>style</code> 样式声明区域里，<code>p</code> 元素的 <code>font-size</code> 的值应为 <code>16px</code>。浏览器和文本缩放应设置为 100％。');"
+          "text": "在<code>style</code>样式声明区域里，<code>p</code>元素的<code>font-size</code>的值应为<code>16px</code>，浏览器和文本缩放应设置为 100％。",
+          "testString": "assert(code.match(/p\\s*{\\s*font-size\\s*:\\s*16\\s*px\\s*;\\s*}/i), '在<code>style</code>样式声明区域里，<code>p</code>元素的<code>font-size</code>的值应为<code>16px</code>，浏览器和文本缩放应设置为 100％。');"
         }
       ],
       "challengeType": 0,
@@ -378,16 +378,16 @@
       "id": "bad87fee1348bd9aede08807",
       "title": "Set the Font Family of an Element",
       "description": [
-        "通过 <code>font-family</code> 属性，可以设置元素里面的字体样式。",
-        "例如，如果你想设置 <code>h2</code> 元素的字体为 <code>sans-serif</code>，你可以用以下的CSS规则：",
+        "通过<code>font-family</code>属性，可以设置元素里面的字体样式。",
+        "例如，如果你想设置<code>h2</code>元素的字体为<code>sans-serif</code>，你可以用以下的 CSS 规则：",
         "<blockquote>h2 {<br>&nbsp;&nbsp;font-family: sans-serif;<br>}</blockquote>",
         "<hr>",
-        "确保你所有的 <code>p</code> 元素使用 <code>monospace</code> 字体。"
+        "确保你所有的<code>p</code>元素使用<code>monospace</code>字体。"
       ],
       "tests": [
         {
-          "text": "你的 <code>p</code> 元素应该使用 <code>monospace</code> 字体。",
-          "testString": "assert($(\"p\").not(\".red-text\").css(\"font-family\").match(/monospace/i), '你的 <code>p</code> 元素应该使用 <code>monospace</code> 字体。');"
+          "text": "你的<code>p</code>元素应该使用<code>monospace</code>字体。",
+          "testString": "assert($(\"p\").not(\".red-text\").css(\"font-family\").match(/monospace/i), '你的<code>p</code>元素应该使用<code>monospace</code>字体。');"
         }
       ],
       "challengeType": 0,
