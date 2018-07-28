@@ -72,7 +72,7 @@
 * 如果你已经用当前的 branch 开了 PR，那么更新这个 branch 至远程的同时，你的 PR 也会自动更新。
 
 ## 常见问题
-<details><summary><b>为什么 `git add .` 命令有时会添加不上我的改动？</b></summary>
+<details><summary><b>为什么 "git add ." 命令有时会添加不上我的改动？</b></summary>
 
   注意，`git add .` 中的 `.` 表示“当前路径”。
 
