@@ -9,8 +9,8 @@
       "title": "Create a Basic JavaScript Object",
       "description": [
         "想想我们在生活中每天都可见到的事物：比如汽车、商店以及小鸟等。它们都是<code>物体</code>：即人们可以观察和与之互动的实体事物。",
-        "那么这些<code>对象</code>都有哪些特征呢？比如汽车的特征是有轮子，商店是用来出售商品的，而小鸟的特征是有翅膀。",
-        "这些特征，或者说是<code>属性</code>定义了一个<code>对象</code>由什么构成的。需要注意的是：那些相似的<code>对象</code>可以拥有相同的<code>属性</code>，但是这些<code>属性</code>可能会有不同的值。举个例子：所有的汽车都有轮子，但并不是所有汽车的轮子个数都是一样的。",
+        "那么这些<code>物体</code>都有哪些特征呢？比如汽车的特征是有轮子，商店是用来出售商品的，而小鸟的特征是有翅膀。",
+        "这些特征，或者说是<code>属性</code>定义了一个<code>物体</code>由什么构成的。需要注意的是：那些相似的<code>物体</code>可以拥有相同的<code>属性</code>，但是这些<code>属性</code>可能会有不同的值。举个例子：所有的汽车都有轮子，但并不是所有汽车的轮子个数都是一样的。",
         "JavaScript 中的<code>对象</code>可以用来描述现实世界中的物体，并赋予他们<code>属性</code>和行为，就像它们在现实世界中的对应物一样。下面是使用这些概念来创建一个<code>duck 对象</code>的示例：",
         "<blockquote>let duck = {<br>&nbsp;&nbsp;name: \"Aflac\",<br>&nbsp;&nbsp;numLegs: 2<br>};</blockquote>",
         "这个<code>duck 对象</code> 有两组键值对：一个是<code>name</code>属性，它的值是 \"Aflac\"；另一个是<code>numLegs</code>属性，它的值是 2。",
