@@ -8,12 +8,12 @@
       "id": "587d7fb0367417b2b2512bed",
       "title": "Meet the Node console",
       "description": [
-        "在开发中，能够检查代码发生变化这非常重要。Node 只是一个 JavaScript 环境。与客户端 JavaScript 一样，你可以使用控制台输出有用的调试信息。在本地计算机上，你可以在终端中输出调试信息。在 Glitch 上，你可以打开屏幕下方的日志。使用 \"Logs\" 按钮切换日志面板（在左上角，应用名称的下面）。",
+        "在开发过程中，能够随时看到代码的运行结果是非常重要的。Node 只是一个 JavaScript 环境。与客户端 JavaScript 一样，你可以使用控制台输出有用的调试信息。在本地计算机上，你可以在终端中输出调试信息。在 Glitch 上，你可以打开屏幕下方的日志。使用 \"Logs\" 按钮切换日志面板（在左上角，应用名称的下面）。",
         "准备开始，我们只需要在控制台打印出经典的 \"Hello World\" 即可。我们建议在做这些挑战题时，保持日志面板处于打开状态。通过这些错误日志，你可能会发现这些错误的本质原因。"
       ],
       "tests": [
         {
-          "text": "应该在控制台中打印出 <code>\"Hello World\"</code>",
+          "text": "控制台应该输出：<code>\"Hello World\"</code>",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/hello-console').then(data => { assert.isTrue(data.passed, '\"Hello World\" 不在服务器控制台中'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -26,7 +26,7 @@
       "title": "Start a Working Express Server",
       "description": [
         "在 myApp.js 文件的前两行中，你可以看到创建一个 Express 应用对象是很简单的。这个 Express 对象有几个方法，在这些挑战中，我们将会学习它们更多的方法。一个基础的方法是 <code>app.listen(port)</code>。它告诉服务器监听指定的端口，并且让这个服务处于运行状态。你可以在文件的底部看到它们。它在注释里面，因为出于测试原因，我们需要知道这个应用正在后台运行。你想要添加的所有代码，都放在这两部分之间。Glitch 将端口号存储在环境变量 <code>process.env.PORT</code>中。它的值是 <code>3000</code>。",
-        "我们来让服务器输出第一个字符串！在 Express 中，路由采用这种结构：<code>app.METHOD(PATH, HANDLER)</code>。<code>METHOD</code> 是小写的 http 方法。<code>PATH</code> 是服务器上的相对路径（它是一个字符串，甚至是正则表达式）<code>HANDLER</code> 是 Express 匹配路由时调用的处理函数。",
+        "让我们在服务端输出第一个字符串！在 Express 中，路由采用这种结构：<code>app.METHOD(PATH, HANDLER)</code>。<code>METHOD</code> 是小写的 http 方法。<code>PATH</code> 是服务器上的相对路径（它是一个字符串，甚至是正则表达式）<code>HANDLER</code> 是 Express 匹配路由时调用的处理函数。",
         "处理函数采用这种形式：<code>function(req, res) {...}</code>，在这个处理函数的参数中 <code>req</code>and 是请求对象。<code>res</code> 是响应对象。举个例子，处理函数：",
         "<blockquote>function(req, res) {<br> res.send('Response String');<br>}</blockquote>",
         "将会响应一个字符串 'Response String'。",
@@ -34,7 +34,7 @@
       ],
       "tests": [
         {
-          "text": "应用应该响应 'Hello Express' 字符串",
+          "text": "app 应该输出 'Hello Express' 字符串",
           "testString": "getUserInput => $.get(getUserInput('url')).then(data => { assert.equal(data, 'Hello Express', '应用未响应字符串 \"Hello Express\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -46,16 +46,16 @@
       "id": "587d7fb0367417b2b2512bef",
       "title": "Serve an HTML File",
       "description": [
-        "We can respond with a file using the method <code>res.sendFile(path)</code>.",
-        "You can put it inside the <code>app.get('/', ...)</code> route handler. Behind the scenes this method will set the appropriate headers to instruct your browser on how to handle the file you want to send, according to its type. Then it will read and send the file. This method needs an absolute file path. We recommend you to use the Node global variable <code>__dirname</code> to calculate the path.",
-        "e.g. <code>absolutePath = __dirname + relativePath/file.ext</code>.",
-        "The file to send is <code>/views/index.html</code>. Try to ‘Show Live’ your app, you should see a big HTML heading (and a form that we will use later…), with no style applied.",
-        "Note: You can edit the solution of the previous challenge, or create a new one. If you create a new solution, keep in mind that Express evaluates the routes from top to bottom. It executes the handler for the first match. You have to comment out the preceding solution, or the server will keep responding with a string."
+        "我们可以使用 <code>res.sendFile(path)</code> 方法来响应一个文件。",
+        "你可以把响应一个文件的方法放到路由处理程序中：<code>app.get('/', ...)</code>。在后台，这个方法会根据你想发送的文件的类型，设置适当的 headers 头信息来告诉浏览器如何处理它。然后它会读取并发送文件。此方法需要文件的绝对路径。我们建议你使用 Node.js 的全局变量 <code>__dirname</code> 来计算出这个文件的绝对路径。",
+        "例子：<code>absolutePath = __dirname + relativePath/file.ext</code>.",
+        "要发送的文件是 <code>/views/index.html</code>。在 app 中点击 \"Show Live\" 按钮，你会看到一个大的 HTML 标题（以及我们稍后将使用的表单…），目前它们还没有任何样式。",
+        "注意: 你可以编辑上一个挑战的解题代码，或者创建一个新的挑战。如果你重写了之前的代码，请注意 Express 会从上到下重新解析对应的路由方法。它执行第一个匹配的路由处理方法。你必须注释掉前面的代码，否则服务器还是响应之前的字符串。"
       ],
       "tests": [
         {
-          "text": "Your app should serve the file views/index.html",
-          "testString": "getUserInput => $.get(getUserInput('url')).then(data => { assert.match(data, /<h1>.*<\\/h1>/, 'Your app does not serve the expected HTML'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "app 应该响应 views/index.html 文件",
+          "testString": "getUserInput => $.get(getUserInput('url')).then(data => { assert.match(data, /<h1>.*<\\/h1>/, 'app 没有输出预期的 HTML'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -66,14 +66,14 @@
       "id": "587d7fb0367417b2b2512bf0",
       "title": "Serve Static Assets",
       "description": [
-        "An HTML server usually has one or more directories that are accessible by the user. You can place there the static assets needed by your application (stylesheets, scripts, images). In Express you can put in place this functionality using the middleware <code>express.static(path)</code>, where the parameter is the absolute path of the folder containing the assets. If you don’t know what a middleware is, don’t worry. We’ll discuss about it later in details. Basically middlewares are functions that intercept route handlers, adding some kind of information. A middleware needs to be mounted using the method <code>app.use(path, middlewareFunction)</code>. The first path argument is optional. If you don’t pass it, the middleware will be executed for all the requests.",
-        "Mount the <code>express.static()</code> middleware for all the requests with <code>app.use()</code>. The absolute path to the assets folder is <code>__dirname + /public</code>.",
-        "Now your app should be able to serve a CSS stylesheet. From outside the public folder will appear mounted to the root directory. Your front-page should look a little better now!"
+        "HTML 服务器通常有一个或多个用户可以访问的目录。你可以将应用程序所需的静态资源 (样式表、脚本、图片) 放在那里。在 Express 中你可以使用中间件 <code>express.static(path)</code> 来设置此功能，它的参数就是静态资源文件的绝对路径。如果你不知道什么是中间件，也不用担心。我们稍后将详细讨论此事。一个最基本的中间件可以看做是一个函数，它拦截路由处理方法，并在里面添加了一点别的信息。使用 <code>app.use(path, middlewareFunction)</code> 方法来加载一个中间件。它的第一个参数是可选的，如果没设置第一个参数，那么应用的所有请求都会经过这个中间件处理。",
+        "使用 <code>app.use()</code> 来加载 <code>express.static()</code> 中间件，让所有的请求都能访问我们的静态资源目录。静态资源的绝对路径是 <code>__dirname + /public</code>。",
+        "现在 app 就能正常返回一个样式文件了，访问 app 根路径时，静态资源目录的文件就会被加载进来，现在你的首页看起来应该好些了！"
       ],
       "tests": [
         {
-          "text": "Your app should serve asset files from the <code>/public</code> directory",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/style.css').then(data => { assert.match(data, /body\\s*\\{[^\\}]*\\}/, 'Your app does not serve static assets'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "应用的静态资源文件应该来自 <code>/public</code> 目录",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/style.css').then(data => { assert.match(data, /body\\s*\\{[^\\}]*\\}/, 'app 无法输出静态资源文件'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
