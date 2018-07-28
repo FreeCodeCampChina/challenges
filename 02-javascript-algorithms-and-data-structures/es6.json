@@ -401,44 +401,45 @@
       "id": "587d7b88367417b2b2512b45",
       "title": "Write Higher Order Arrow Functions",
       "description": [
-        "It's time we see how powerful arrow functions are when processing data.",
-        "Arrow functions work really well with higher order functions, such as <code>map()</code>, <code>filter()</code>, and <code>reduce()</code>, that take other functions as arguments for processing collections of data.",
-        "Read the following code:",
+        "我们已经见识到了箭头函数在处理数据时候的强大之处。",
+        "箭头函数在类似 <code>map</code>, <code>filter</code>, <code>reduce</code> 等需要其他函数作为参数来处理数据的高阶函数里会很好用。" ,
+        "阅读以下代码：",
         "<blockquote>FBPosts.filter(function(post) {<br>&nbsp;&nbsp;return post.thumbnail !== null && post.shares > 100 && post.likes > 500;<br>})</blockquote>",
         "We have written this with <code>filter()</code> to at least make it somewhat readable. Now compare it to the following code which uses arrow function syntax instead:",
+        "我们写下了 <code>filter</code> 函数，并尽量保证可读性。现在让我们用箭头函数来写同样的代码看看：",
         "<blockquote>FBPosts.filter((post) => post.thumbnail !== null && post.shares > 100 && post.likes > 500)</blockquote>",
-        "This code is more succinct and accomplishes the same task with fewer lines of code.",
+        "这段代码完成了同样的任务，却变得更加剪短易懂了。",
         "<hr>",
-        "Use arrow function syntax to compute the square of only the positive integers (fractions are not integers) in the array <code>realNumberArray</code> and store the new array in the variable <code>squaredIntegers</code>."
+        "使用箭头函数的语法来计算 <code>squaredIntegers</code> 数组里正整数的平方（分数不是整数）"
       ],
       "tests": [
         {
-          "text": "User did replace <code>var</code> keyword.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), 'User did replace <code>var</code> keyword.');"
+          "text": "替换掉所有的 <code>var</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/var/g), '替换掉所有的 <code>var</code> 关键字。');"
         },
         {
-          "text": "<code>squaredIntegers</code> should be a constant variable (by using <code>const</code>).",
-          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+squaredIntegers/g), '<code>squaredIntegers</code> should be a constant variable (by using <code>const</code>).');"
+          "text": "<code>squaredIntegers</code> 应该是一个常量 (使用 <code>const</code>)。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/const\\s+squaredIntegers/g), '<code>squaredIntegers</code> 应该是一个常量 (使用 <code>const</code>)。');"
         },
         {
-          "text": "<code>squaredIntegers</code> should be an <code>array</code>",
-          "testString": "assert(Array.isArray(squaredIntegers), '<code>squaredIntegers</code> should be an <code>array</code>');"
+          "text": "<code>squaredIntegers</code> 应该是一个 <code>array</code>。",
+          "testString": "assert(Array.isArray(squaredIntegers), '<code>squaredIntegers</code> 应该是一个 <code>array</code>');"
         },
         {
-          "text": "<code>squaredIntegers</code> should be <code>[16, 1764, 36]</code>",
-          "testString": "assert(squaredIntegers[0] === 16 && squaredIntegers[1] === 1764 && squaredIntegers[2] === 36, '<code>squaredIntegers</code> should be <code>[16, 1764, 36]</code>');"
+          "text": "<code>squaredIntegers</code>  应该是 <code>[16, 1764, 36]</code>",
+          "testString": "assert(squaredIntegers[0] === 16 && squaredIntegers[1] === 1764 && squaredIntegers[2] === 36, '<code>squaredIntegers</code>  应该是 <code>[16, 1764, 36]</code>');"
         },
         {
-          "text": "<code>function</code> keyword was not used.",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '<code>function</code> keyword was not used.');"
+          "text": "不要使用 <code>function</code> 关键字。",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/function/g), '不要使用 <code>function</code> 关键字。');"
         },
         {
-          "text": "loop should not be used",
-          "testString": "getUserInput => assert(!getUserInput('index').match(/(for)|(while)/g), 'loop should not be used');"
+          "text": "不要使用循环",
+          "testString": "getUserInput => assert(!getUserInput('index').match(/(for)|(while)/g), '不要使用循环');"
         },
         {
-          "text": "<code>map</code>, <code>filter</code>, or <code>reduce</code> should be used",
-          "testString": "getUserInput => assert(getUserInput('index').match(/map|filter|reduce/g), '<code>map</code>, <code>filter</code>, or <code>reduce</code> should be used');"
+          "text": "请使用 <code>map</code>, <code>filter</code>, 或者 <code>reduce</code>。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/map|filter|reduce/g), '请使用 <code>map</code>, <code>filter</code>, 或者 <code>reduce</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -457,7 +458,7 @@
             "  // 在这行以上修改代码",
             "  return squaredIntegers;",
             "};",
-            "// test your code",
+            "// 测试你的代码",
             "const squaredIntegers = squareList(realNumberArray);",
             "console.log(squaredIntegers);"
           ],
