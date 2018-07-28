@@ -18,60 +18,60 @@
       ],
       "tests": [
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 应该返回 < code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4])</code > 应该返回 < code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code>应该返回< code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4])</code >应该返回< code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4])</code> 的返回值应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4])</code>的返回值应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4])</code>的返回值应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 应该返回 <code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 应该返回 <code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code>应该返回<code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3, 3], [5, 2, 1, 4]), [3, 4, 5],'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code>应该返回<code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 返回的数组应该只包含三个元素",
-          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code> 返回的数组应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code>返回的数组应该只包含三个元素",
+          "testString": "assert.equal(sym([1, 2, 3, 3], [5, 2, 1, 4]).length, 3,'<code>sym([1, 2, 3, 3], [5, 2, 1, 4])</code>返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 应该返回 <code>[3, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 应该返回 <code>[3, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code>应该返回<code>[3, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 3], [5, 2, 1, 4, 5]), [3, 4, 5],'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code>应该返回<code>[3, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 返回的数组应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code> 返回的数组应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code>返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 3], [5, 2, 1, 4, 5]).length, 3,'<code>sym([1, 2, 3], [5, 2, 1, 4, 5])</code>返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 应该返回 <code>[1, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5],'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 应该返回 <code>[1, 4, 5]</code>。');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code>应该返回<code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]), [1, 4, 5],'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code>应该返回<code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 返回的数组应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3,'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code> 返回的数组应该只包含三个元素。');"
+          "text": "<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code>返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 2, 5], [2, 3, 5], [3, 4, 5]).length, 3,'<code>sym([1, 2, 5], [2, 3, 5], [3, 4, 5])</code>返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 应该返回 <code>[1, 4, 5]</code>。",
-          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5],'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 应该返回 <code>[1, 4, 5]</code>。');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code>应该返回<code>[1, 4, 5]</code>。",
+          "testString": "assert.sameMembers(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]), [1, 4, 5],'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code>应该返回<code>[1, 4, 5]</code>。');"
         },
         {
-          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 返回的数组应该只包含三个元素。",
-          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3,'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code> 返回的数组应该只包含三个元素。');"
+          "text": "<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code>返回的数组应该只包含三个元素。",
+          "testString": "assert.equal(sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]).length, 3,'<code>sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5])</code>返回的数组应该只包含三个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 应该返回 <code>[2, 3, 4, 6, 7]</code>。",
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code>应该返回<code>[2, 3, 4, 6, 7]</code>。",
           "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]), [2, 3, 4, 6, 7],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 应该返回 <code>[2, 3, 4, 6, 7]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 返回的数组应该只包含五个元素。",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code> 返回的数组应该只包含五个元素。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code>返回的数组应该只包含五个元素。",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length, 5,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])</code>返回的数组应该只包含五个元素。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 应该返回 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。",
-          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 应该返回 <code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code>应该返回<code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。",
+          "testString": "assert.sameMembers(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]), [1, 2, 4, 5, 6, 7, 8, 9],'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code>应该返回<code>[1, 2, 4, 5, 6, 7, 8, 9]</code>。');"
         },
         {
-          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 返回的数组应该只包含八个元素。",
-          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code> 返回的数组应该只包含八个元素。');"
+          "text": "<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code>返回的数组应该只包含八个元素。",
+          "testString": "assert.equal(sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]).length, 8,'<code>sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1])</code>返回的数组应该只包含八个元素。');"
         }
       ],
       "MDNlinks": [
@@ -109,27 +109,27 @@
       ],
       "tests": [
         {
-          "text": "函数 <code>updateInventory</code> 应该返回一个数组。",
-          "testString": "assert.isArray(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]),'函数 <code>updateInventory</code> 应该返回一个数组。');"
+          "text": "函数<code>updateInventory</code>应该返回一个数组。",
+          "testString": "assert.isArray(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]),'函数<code>updateInventory</code>应该返回一个数组。');"
         },
         {
-          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 返回的数组长度应该为 6。",
-          "testString": "assert.equal(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]).length, 6,'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回一个长度为 6 的数组。');"
+          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>返回的数组长度应该为 6。",
+          "testString": "assert.equal(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]).length, 6,'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>应该返回一个长度为 6 的数组。');"
         },
         {
-          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。')；"
+          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>应该返回<code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>应该返回<code>[[88, \"Bowling Ball\"], [2, \"Dirty Sock\"], [3, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [5, \"Microphone\"], [7, \"Toothpaste\"]]</code>。')；"
         },
         {
-          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 应该返回 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], []), [[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code> 应该返回 <code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。')；"
+          "text": "<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code>应该返回<code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], []), [[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]],'<code>updateInventory([[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]], [])</code>应该返回<code>[[21, \"Bowling Ball\"], [2, \"Dirty Sock\"], [1, \"Hair Pin\"], [5, \"Microphone\"]]</code>。')；"
         },
         {
-          "text": "<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。",
-          "testString": "assert.deepEqual(updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]],'<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code> 应该返回 <code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。')；"
+          "text": "<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>应该返回<code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。",
+          "testString": "assert.deepEqual(updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]]), [[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]],'<code>updateInventory([], [[2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [67, \"Bowling Ball\"], [7, \"Toothpaste\"]])</code>应该返回<code>[[67, \"Bowling Ball\"], [2, \"Hair Pin\"], [3, \"Half-Eaten Apple\"], [7, \"Toothpaste\"]]</code>。')；"
         },
         {
-          "text": "<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 应该返回 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>。",
+          "text": "<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code>应该返回<code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>。",
           "testString": "assert.deepEqual(updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]]), [[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]],'<code>updateInventory([[0, \"Bowling Ball\"], [0, \"Dirty Sock\"], [0, \"Hair Pin\"], [0, \"Microphone\"]], [[1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [1, \"Bowling Ball\"], [1, \"Toothpaste\"]])</code> 应该返回 <code>[[1, \"Bowling Ball\"], [0, \"Dirty Sock\"], [1, \"Hair Pin\"], [1, \"Half-Eaten Apple\"], [0, \"Microphone\"], [1, \"Toothpaste\"]]</code>。')；"
         }
       ],
@@ -175,52 +175,52 @@
       "title": "No Repeats Please",
       "description": [
         "把一个字符串中的字符重新排列生成新的字符串，返回新生成的字符串里没有连续重复字符的字符串个数。连续重复只以单个字符为准。",
-        "例如：<code>aab</code> 应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（ 字符 a 是本例中的重复字符 ）：<code>aba</code>，<code>aba</code>",
+        "例如：<code>aab</code>应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（ 字符 a 是本例中的重复字符 ）：<code>aba</code>，<code>aba</code>",
         "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人” 结对编程 “，但不要因此放弃思考。"
       ],
       "solutions": [
-        "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: 全局数组：包含排列的列表 \ n  //usedChars: 包含 Global utility array which holds a list of \"currently-in-use\"characters\n  var permArr = [], usedChars = [];\n  function permute(input) {\n    //convert input into a char array (one element for each character)\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      //get and remove character at index \"i\"from char array\n      ch = chars.splice(i, 1);\n      //add removed character to the end of used characters\n      usedChars.push(ch);\n      //when there are no more characters left in char array to add, add used chars to list of permutations\n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      //send characters (minus the removed one from above) from char array to be permuted\n      permute(chars.join(\"\"));\n      //add removed character back into char array in original position\n      chars.splice(i, 0, ch);\n      //remove the last character used off the end of used characters array\n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
+        "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: 全局数组：包含排列的列表 \ n  //usedChars: 全局实用数组，其中一个列表包含 \"currently-in-use\"字符  var permArr = [], usedChars = [];\n  function permute(input) {\n    // 将输入参数转换成一个字符串数组 （每个字符都有一个元素）\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      // 从字符数组中获取并删除索引为\"i\"的字符 \n      ch = chars.splice(i, 1);\n      // 将删除的字符增加的使用字符的末尾 \n      usedChars.push(ch);\n      // 当char数组中没有其他字符添加时，添加使用的chars列表来排列排列 \n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      // 从char数组发送字符（减去上面删除的字符）进行置换 \n      permute(chars.join(\"\"));\n      // 将删除的数组添加回char数组中的原位置 \n      chars.splice(i, 0, ch);\n      //删除使用过的字符数组末尾使用的最后一个字符 \n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
       ],
       "tests": [
         {
-          "text": "<code>permAlone(\"aab\")</code> 应该返回一个数字。",
-          "testString": "assert.isNumber(permAlone('aab'),'<code>permAlone(\"aab\")</code> 应该返回一个数字。');"
+          "text": "<code>permAlone(\"aab\")</code>应该返回一个数字。",
+          "testString": "assert.isNumber(permAlone('aab'),'<code>permAlone(\"aab\")</code>应该返回一个数字。');"
         },
         {
-          "text": "<code>permAlone(\"aab\")</code> 应该返回 2。",
-          "testString": "assert.strictEqual(permAlone('aab'), 2,'<code>permAlone(\"aab\")</code> 应该返回 2。');"
+          "text": "<code>permAlone(\"aab\")</code>应该返回 2。",
+          "testString": "assert.strictEqual(permAlone('aab'), 2,'<code>permAlone(\"aab\")</code>应该返回 2。');"
         },
         {
-          "text": "<code>permAlone(\"aaa\")</code> 应该返回 0。",
-          "testString": "assert.strictEqual(permAlone('aaa'), 0,'<code>permAlone(\"aaa\")</code> 应该返回 0。');"
+          "text": "<code>permAlone(\"aaa\")</code>应该返回 0。",
+          "testString": "assert.strictEqual(permAlone('aaa'), 0,'<code>permAlone(\"aaa\")</code>应该返回 0。');"
         },
         {
-          "text": "<code>permAlone(\"aabb\")</code> 应该返回 8。",
-          "testString": "assert.strictEqual(permAlone('aabb'), 8,'<code>permAlone(\"aabb\")</code> 应该返回 8。');"
+          "text": "<code>permAlone(\"aabb\")</code>应该返回 8。",
+          "testString": "assert.strictEqual(permAlone('aabb'), 8,'<code>permAlone(\"aabb\")</code>应该返回 8。');"
         },
         {
-          "text": "<code>permAlone(\"abcdefa\")</code> 应该返回 3600。",
+          "text": "<code>permAlone(\"abcdefa\")</code>应该返回 3600。",
           "testString": "assert.strictEqual(permAlone('abcdefa'), 3600,'<code>permAlone(\"abcdefa\")</code> 应该返回 3600。');"
         },
         {
-          "text": "<code>permAlone(\"abfdefa\")</code> 应该返回 2640。",
-          "testString": "assert.strictEqual(permAlone('abfdefa'), 2640,'<code>permAlone(\"abfdefa\")</code> 应该返回 2640。');"
+          "text": "<code>permAlone(\"abfdefa\")</code>应该返回 2640。",
+          "testString": "assert.strictEqual(permAlone('abfdefa'), 2640,'<code>permAlone(\"abfdefa\")</code>应该返回 2640。');"
         },
         {
-          "text": "<code>permAlone(\"zzzzzzzz\")</code> 应该返回 0。",
-          "testString": "assert.strictEqual(permAlone('zzzzzzzz'), 0,'<code>permAlone(\"zzzzzzzz\")</code> 应该返回 0。');"
+          "text": "<code>permAlone(\"zzzzzzzz\")</code>应该返回 0。",
+          "testString": "assert.strictEqual(permAlone('zzzzzzzz'), 0,'<code>permAlone(\"zzzzzzzz\")</code>应该返回 0。');"
         },
         {
-          "text": "<code>permAlone(\"a\")</code> 应该返回 1。",
-          "testString": "assert.strictEqual(permAlone('a'), 1,'<code>permAlone(\"a\")</code> 应该返回 1。');"
+          "text": "<code>permAlone(\"a\")</code>应该返回 1。",
+          "testString": "assert.strictEqual(permAlone('a'), 1,'<code>permAlone(\"a\")</code>应该返回 1。');"
         },
         {
-          "text": "<code>permAlone(\"aaab\")</code> 应该返回 0。",
-          "testString": "assert.strictEqual(permAlone('aaab'), 0,'<code>permAlone(\"aaab\")</code> 应该返回 0。');"
+          "text": "<code>permAlone(\"aaab\")</code>应该返回 0。",
+          "testString": "assert.strictEqual(permAlone('aaab'), 0,'<code>permAlone(\"aaab\")</code>应该返回 0。');"
         },
         {
-          "text": "<code>permAlone(\"aaabb\")</code> 应该返回 12。",
-          "testString": "assert.strictEqual(permAlone('aaabb'), 12,'<code>permAlone(\"aaabb\")</code> 应该返回 12。');"
+          "text": "<code>permAlone(\"aaabb\")</code>应该返回 12。",
+          "testString": "assert.strictEqual(permAlone('aaabb'), 12,'<code>permAlone(\"aaabb\")</code>应该返回 12。');"
         }
       ],
       "MDNlinks": [
