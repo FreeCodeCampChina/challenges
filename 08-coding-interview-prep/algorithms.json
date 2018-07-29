@@ -249,7 +249,9 @@
       "id": "a3f503de51cfab748ff001aa",
       "title": "Pairwise",
       "description": [
-        "给定一个数组<code>arr</code>,",
+        "给定一个数组<code>arr</code>，查找其总和等于第二个参数“<code> arg </code>”的元素对，并返回其索引的总和。",
+        "你可以使用多个具有相同数字元素但不同索引的对。每对应该使用尽可能低的可用索引。一旦一个元素被使用，它就不能被重用来与另一个元素配对。例如，<code>pairwise([1, 1, 2], 3)</code>使用索引为 0 的元素 1 而不是索引为 1 的元素 1 创建一对<code>[ 2，1 ]</code>，因为 0 + 2 < 1 + 2。",
+        "例如：<code>pairwise([7, 9, 11, 13, 15], 20)</code>返回<code>6</code>。",
         "Given an array <code>arr</code>, find element pairs whose sum equal the second argument <code>arg</code> and return the sum of their indices.",
         "You may use multiple pairs that have the same numeric elements but different indices. Each pair should use the lowest possible available indices. Once an element has been used it cannot be reused to pair with another element. For instance, <code>pairwise([1, 1, 2], 3)</code> creates a pair <code>[2, 1]</code> using the 1 at indice 0 rather than the 1 at indice 1, because 0+2 < 1+2.",
         "For example <code>pairwise([7, 9, 11, 13, 15], 20)</code> returns <code>6</code>. The pairs that sum to 20 are <code>[7, 13]</code> and <code>[9, 11]</code>. We can then write out the array with their indices and values.",
