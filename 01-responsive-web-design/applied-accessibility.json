@@ -150,7 +150,7 @@
       "description": [
         "HTML5引入了很多新标签，它们为开发人员提供了更多选择与辅助特性。这些新标签包括 <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>等。",
         "默认情况下，浏览器呈现这些新标签的方式与 <code>div</code> 类似。但是，在适当的地方使用它们，可以为你的标志提供额外的信息。仅标签的名字就能指示其所包含内容的信息类型，这也使内容具有语义化含义。辅助技术可以访问这些信息，以便为其用户提供更好的页面概要或导航选项。",
-        "<code> main </code> 标签用于修饰（你猜对了）主题，且每个页面应该只有一个。它旨在包含与页面中心主题相关的信息。这并不意味着包含那些跨页面重复出现的项目，如导航连接、横幅。",
+        "<code> main </code> 标签用于修饰（你猜对了）主题，且每个页面应该只有一个。它旨在包含与页面中心主题相关的信息。这并不意味着包含那些跨页面重复出现的项目，如导航连接、网页横幅。",
         "<code>main</code> 标签也具有锚点功能，使辅助技术可以快速定位到主题。如果你曾在页面顶部见到过“跳转到主题”连接的话，使用 <code>main</code> 标签就能使辅助设备自动具备这个功能。",
         "<hr>",
         "Camper Cat对他的忍者武器页面有一些重要想法。通过在 <code>header</code> 标签和 <code>footer</code> 标签（在其他挑战中会涉及）之间添加起始和闭合 <code>main</code> 标签来帮助他建立标志。现在保持 <code>main</code> 为空。"
@@ -192,22 +192,22 @@
       "id": "587d774e367417b2b2512aa0",
       "title": "Wrap Content in the article Element",
       "description": [
-        "<code>article</code> is another one of the new HTML5 elements that adds semantic meaning to your markup. <code>Article</code> is a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles.",
-        "Determining whether content can stand alone is usually a judgement call, but there are a couple simple tests you can use. Ask yourself if you removed all surrounding context, would that content still make sense? Similarly for text, would the content hold up if it were in an RSS feed?",
-        "Remember that folks using assistive technologies rely on organized, semantically meaningful markup to better understand your work.",
-        "<strong>Note about <code>section</code> and <code>div</code></strong><br>The <code>section</code> element is also new with HTML5, and has a slightly different semantic meaning than <code>article</code>. An <code>article</code> is for standalone content, and a <code>section</code> is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the <code>article</code>, then each chapter is a <code>section</code>. When there's no relationship between groups of content, then use a <code>div</code>.",
-        "<blockquote>&lt;div&gt; - groups content<br>&lt;section&gt; - groups related content<br>&lt;article&gt; - groups independent, self-contained content<br></blockquote>",
+        "<code>article</code>是另一个可以使你的标志语义化的新HTML5标签。<code>Article</code>是一个分段标签，用于修饰独立的、自包含的内容。这个标签适用于博客入口，论坛帖子或者新闻文章。",
+        "这里有些技巧可以用来判断内容是否独立。问自己如果删除了上下文，该内容是否仍然有意义？相似地，对于文本，如果它在RSS提要中，它的意义是否保留。",
+        "请牢记，使用辅助技术的用户依赖于组织良好的、语义化的标志，来更好的理解你的页面。",
+        "<strong>注意<code>section</code>与<code>div</code></strong><br><code>section</code>也是一个新的HTML5标签，与<code>article</code>标签的语义含义略有不同。<code>article</code>用于独立的内容，而<code>section</code>用于对与主题相关的内容进行分组。它们可以根据需要批次之间互相包含着使用。如果一本书是一个<code>article</code>的话，那么每个章节就是<code>section</code>。如果内容组之间没有联系，请使用<code>div</code>。",
+        "<blockquote>&lt;div&gt; - 内容组<br>&lt;section&gt; - 有联系的内容组<br>&lt;article&gt; - 独立的、自包含的内容<br></blockquote>",
         "<hr>",
-        "Camper Cat used <code>article</code> tags to wrap the posts on his blog page, but he forgot to use them around the top one. Change the <code>div</code> tag to use an <code>article</code> tag instead."
+        "Camper Cat使用<code>article</code>标签来修饰他的博客页面里的帖子，但是他忘记在顶部的帖子上使用它。使用<code>article</code>标签来代替<code>div</code>标签。"
       ],
       "tests": [
         {
-          "text": "Your code should have three <code>article</code> tags.",
-          "testString": "assert($('article').length == 3, 'Your code should have three <code>article</code> tags.');"
+          "text": "你的代码中应该有三个 <code>article</code> 标签。",
+          "testString": "assert($('article').length == 3, '你的代码中应该有三个 <code>article</code> 标签。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能含有 <code>div</code> 标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能含有 <code>div</code> 标签。');"
         }
       ],
       "solutions": [],
@@ -251,28 +251,28 @@
       "id": "587d7787367417b2b2512aa1",
       "title": "Make Screen Reader Navigation Easier with the header Landmark",
       "description": [
-        "The next HTML5 element that adds semantic meaning and improves accessibility is the <code>header</code> tag. It's used to wrap introductory information or navigation links for its parent tag, and works well around content that's repeated at the top on multiple pages.",
-        "<code>header</code> shares the embedded landmark feature you saw with <code>main</code>, allowing assistive technologies to quickly navigate to that content.",
-        "<strong>Note</strong><br><code>header</code> is meant for use in the <code>body</code> tag of your HTML document. This is different than the <code>head</code> element, which contains the page's title, meta information, etc.",
+        "下一个可以增加语义化与可访问性的HTML5标签是<code>header</code>。它用于为它的父级标签包装简介信息或者导航链接，也适用于在多个页面顶端重复出现的内容。",
+        "<code>header</code> shares the embedded landmark feature you saw with <code>main</code>, 可以使辅助技术快速导航到它的内容。",
+        "<strong>注意</strong><br><code>header</code>用于HTML文档的<code>body</code>标签中。这点不同于包含页面标题、元信息的<code>head</code>标签。",
         "<hr>",
-        "Camper Cat is writing some great articles about ninja training, and wants to add a page for them to his site. Change the top <code>div</code> that currently contains the <code>h1</code> to a <code>header</code> tag instead."
+        "Camper Cat正在写一些关于忍者训练的精彩文章，他想在他的站点中为这些文章建立一个页面。使用<code>header</code>替代位于页面顶端的包含<code>h1</code>的<code>div</code>标签。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>header</code> tag.",
-          "testString": "assert($('header').length == 1, 'Your code should have one <code>header</code> tag.');"
+          "text": "你的代码因该包含一个<code>header</code>标签。",
+          "testString": "assert($('header').length == 1, '你的代码因该包含一个<code>header</code>标签。');"
         },
         {
-          "text": "Your <code>header</code> tags should wrap around the <code>h1</code>.",
-          "testString": "assert($('header').children('h1').length == 1, 'Your <code>header</code> tags should wrap around the <code>h1</code>.');"
+          "text": "你的<code>header</code>标签应该包含<code>h1</code>。",
+          "testString": "assert($('header').children('h1').length == 1, '你的<code>header</code>标签应该包含<code>h1</code>。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能包含任何<code>div</code>标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能包含任何<code>div</code>标签。');"
         },
         {
-          "text": "Make sure your <code>header</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/header>/g) && code.match(/<\\/header>/g).length === code.match(/<header>/g).length, 'Make sure your <code>header</code> element has a closing tag.');"
+          "text": "确保你的<code>header</code>标签是闭合的。",
+          "testString": "assert(code.match(/<\\/header>/g) && code.match(/<\\/header>/g).length === code.match(/<header>/g).length, '确保你的<code>header</code>标签是闭合的。');"
         }
       ],
       "solutions": [],
