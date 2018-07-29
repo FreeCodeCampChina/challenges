@@ -8,20 +8,20 @@
       "id": "587d7fb6367417b2b2512c06",
       "title": "Install and Set Up Mongoose",
       "description": [
-        "在 package.json 文件中添加 MongoDB 和 Mongoose 依赖，将 mLab 数据库的 URI 作为 MONGO_URI 变量存储在私有 .env 文件中。然后 <code>require('mongoose')</code>，使用 <code>mongoose.connect(<Your URI>)</code> 命令来连接数据库。"
+        "在 package.json 文件中添加 MongoDB 和 Mongoose 依赖，将 mLab 数据库的 URI 作为 MONGO_URI 变量存储在私有 .env 文件中。然后<code>require('mongoose')</code>，使用<code>mongoose.connect(<Your URI>)</code>命令来连接数据库。"
       ],
       "tests": [
         {
-          "text": "在 package.json 文件中应该有 \"mongodb\"依赖。",
-          "testString": "getUserInput => $.get(getUserInput('url') +'/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies,'mongodb'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "在 package.json 文件中应该有 \"mongodb\" 依赖。",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies, 'mongodb'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "在 package.json 文件中应该有 \"mongoose\"依赖。",
-          "testString": "getUserInput => $.get(getUserInput('url') +'/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies,'mongoose'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "在 package.json 文件中应该有 \"mongoose\" 依赖。",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/file/package.json').then(data => { var packJson = JSON.parse(data);     assert.property(packJson.dependencies, 'mongoose'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"mongoose\"应该已经连接数据库。",
-          "testString": "getUserInput => $.get(getUserInput('url') +'/_api/is-mongoose-ok').then(data => {assert.isTrue(data.isMongooseOk,'mongoose is not connected')}, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"mongoose\" 应该已经连接数据库。",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/is-mongoose-ok').then(data => {assert.isTrue(data.isMongooseOk, 'mongoose is not connected')}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -41,13 +41,13 @@
         "<code>name : string [required]</code>",
         "<code>age :  number</code>",
         "<code>favoriteFoods : array of strings (*) </code>",
-        "你可以使用基础的 SchemaTypes 去添加更多的字段，比如使用 required 或者 unique 这样的简单验证去设置默认值。 参考 <a href='http://mongoosejs.com/docs/guide.html'>Mongoose 文档 </a>。",
+        "你可以使用基础的 SchemaTypes 去添加更多的字段，比如使用 required 或者 unique 这样的简单验证去设置默认值。参考 <a href='http://mongoosejs.com/docs/guide.html'>Mongoose 文档</a>。",
         "[C]RUD Part I - CREATE",
-        "注意： Glitch 是一个真实的服务，并且通过 handler 函数和 db 进行交互。 这些函数通过一些事件去触发 (例如：有人从终端调用了你的 API)，我们在这些练习中遵循同样的方法。 比如，我们在完成 nserting、 searching、 updating 或者 deleting 这样的异步操作后接着回调 <code>done()</code> 函数。 它遵循 Node 的惯例，需要在 success 时回调 <code>done(null, data)</code>， 在 error 时回调 <code>done(err)</code>。",
+        "注意： Glitch 是一个真实的服务，并且通过 handler 函数和 db 进行交互。 这些函数通过一些事件去触发（例如：有人从终端调用了你的 API），我们在这些练习中遵循同样的方法。 比如，我们在完成 nserting、searching、updating 或者 deleting 这样的异步操作后接着回调<code>done()</code>函数。它遵循 Node 的惯例，需要在 success 时回调<code>done(null, data)</code>，在 error 时回调<code>done(err)</code>。",
         "Warning - 当与远程服务器交互时可能发生错误！",
-        "<code>/* Example */</code>",
+        "<code>/* 示例 */</code>",
         "<code>var someFunc = function(done) {</code>",
-        "<code>  //... do something (risky) ...</code>",
+        "<code>  // 执行一些可能产生错误的代码</code>",
         "<code>  if(error) return done(error);</code>",
         "<code>  done(null, result);</code>",
         "<code>};</code>"
@@ -55,7 +55,7 @@
       "tests": [
         {
           "text": "成功创建一个 Schema 实例。",
-          "testString": "getUserInput => $.post(getUserInput('url') +'/_api/mongoose-model', {name:'Mike', age: 28, favoriteFoods: ['pizza','cheese']}).then(data => { assert.equal(data.name,'Mike','\"model.name\" is not what expected'); assert.equal(data.age,'28','\"model.age\" is not what expected'); assert.isArray(data.favoriteFoods,'\"model.favoriteFoods\" is not an Array'); assert.include(data.favoriteFoods,'pizza','\"model.favoriteFoods\" does not include the expected items'); assert.include(data.favoriteFoods,'cheese','\"model.favoriteFoods\" does not include the expected items'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.post(getUserInput('url') + '/_api/mongoose-model', {name: 'Mike', age: 28, favoriteFoods: ['pizza', 'cheese']}).then(data => { assert.equal(data.name, 'Mike', '\"model.name\" is not what expected'); assert.equal(data.age, '28', '\"model.age\" is not what expected'); assert.isArray(data.favoriteFoods, '\"model.favoriteFoods\" is not an Array'); assert.include(data.favoriteFoods, 'pizza', '\"model.favoriteFoods\" does not include the expected items'); assert.include(data.favoriteFoods, 'cheese', '\"model.favoriteFoods\" does not include the expected items'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -66,17 +66,17 @@
       "id": "587d7fb6367417b2b2512c09",
       "title": "Create and Save a Record of a Model",
       "description": [
-        "使用 Person 的 constructor(构造器) 函数可以创建一个 document 对象，该对象包含 <code>name</code>、 <code>age</code> 和 <code>favoriteFoods</code> 字段。 这些字段的类型必须符合 Person Schema 里面定义的类型。 然后调用 <code>document.save()</code>。 使用 Node 惯例传递 callback。通常情况下，所有的 CRUD(增查改删) 方法都会像下面一样作为最后一个参数去执行一个 <code>callback()</code>。",
-        "<code>/* Example */</code>",
+        "使用 Person 的 constructor（构造器）函数可以创建一个 document 对象，该对象包含<code>name</code>、<code>age</code>和<code>favoriteFoods</code>字段。这些字段的类型必须符合 Person Schema 里面定义的类型。然后调用<code>document.save()</code>。使用 Node 惯例传递 callback。通常情况下，所有的 CRUD（增查改删）方法都会像下面一样作为最后一个参数去执行一个<code>callback()</code>。",
+        "<code>/* 示例 */</code>",
         "<code>// ...</code>",
         "<code>person.save(function(err, data) {</code>",
-        "<code>//   ...do your stuff here...</code>",
+        "<code>// 你的代码</code>",
         "<code>});</code>"
       ],
       "tests": [
         {
           "text": "成功创建一条 db 并保存。",
-          "testString": "getUserInput => $.get(getUserInput('url') +'/_api/create-and-save-person').then(data => { assert.isString(data.name,'\"item.name\" should be a String'); assert.isNumber(data.age,'28','\"item.age\" should be a Number'); assert.isArray(data.favoriteFoods,'\"item.favoriteFoods\" should be an Array'); assert.equal(data.__v, 0,'The db item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/create-and-save-person').then(data => { assert.isString(data.name, '\"item.name\" should be a String'); assert.isNumber(data.age, '28', '\"item.age\" should be a Number'); assert.isArray(data.favoriteFoods, '\"item.favoriteFoods\" should be an Array'); assert.equal(data.__v, 0, 'The db item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -87,13 +87,12 @@
       "id": "587d7fb7367417b2b2512c0a",
       "title": "Create Many Records with model.create()",
       "description": [
-        "有时你需要创建很多的 model 实例。 例如：在使用初始数据为数据库初始化时， <code>Model.create()</code> 接受一组像 <code>[{name:'John', ...}, {...}, ...]</code> 的数组作为第一个参数，并将其保存到数据库。使用 <code>arrayOfPeople</code> 作为 <code>Model.create()</code> 的参数创建很多个 people 实例。"
+        "有时你需要创建很多的 model 实例。例如：在使用初始数据为数据库初始化时，<code>Model.create()</code>接受一组像<code>[{name:'John', ...}, {...}, ...]</code>的数组作为第一个参数，并将其保存到数据库。使用<code>arrayOfPeople</code>作为<code>Model.create()</code>的参数创建很多个 people 实例。"
       ],
       "tests": [
         {
-          "text": "Creating many db items at once should succeed",
-          "text": "一次性创建多个 item(项目)。",
-          "testString": "getUserInput => $.ajax({url: getUserInput('url') +'/_api/create-many-people', type:'POST', contentType:'application/json', data: JSON.stringify([{name:'John', age: 24, favoriteFoods: ['pizza','salad']}, {name:'Mary', age: 21, favoriteFoods: ['onions','chicken']}])}).then(data => { assert.isArray(data,'the response should be an array'); assert.equal(data.length, 2,'the response does not contain the expected number of items'); assert.equal(data[0].name,'John','The first item is not correct'); assert.equal(data[0].__v, 0,'The first item should be not previously edited'); assert.equal(data[1].name,'Mary','The second item is not correct'); assert.equal(data[1].__v, 0,'The second item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "应当可以一次性创建多个 item（项目）。",
+          "testString": "getUserInput => $.ajax({url: getUserInput('url') + '/_api/create-many-people', type: 'POST', contentType:'application/json', data: JSON.stringify([{name: 'John', age: 24, favoriteFoods: ['pizza', 'salad']}, {name: 'Mary', age: 21, favoriteFoods: ['onions', 'chicken']}])}).then(data => { assert.isArray(data, 'the response should be an array'); assert.equal(data.length, 2, 'the response does not contain the expected number of items'); assert.equal(data[0].name, 'John', 'The first item is not correct'); assert.equal(data[0].__v, 0, 'The first item should be not previously edited'); assert.equal(data[1].name, 'Mary', 'The second item is not correct'); assert.equal(data[1].__v, 0, 'The second item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -104,13 +103,13 @@
       "id": "587d7fb7367417b2b2512c0b",
       "title": "Use model.find() to Search Your Database",
       "description": [
-        "使用 <code>Model.find() -> [Person]</code> 来查询给定名称的所有的人。",
-        "最简单的用法: <code>Model.find()</code> 接受一个查询的 document (一个 JSON 对象 ) 作为第一参数, 然后是回调。 它将返回匹配到的项目组成的数组。 这个支持极其广泛的搜索选项。 使用人名作为搜索的关键词， 来校验它。"
+        "使用<code>Model.find() -> [Person]</code>来查询给定名称的所有的人。",
+        "最简单的用法：<code>Model.find()</code>接受一个查询的 document（一个 JSON 对象）作为第一参数，然后是回调。它将返回匹配到的项目组成的数组。这个支持极其广泛的搜索选项。使用人名作为搜索的关键词，来校验它。"
       ],
       "tests": [
         {
-          "text": "成功找到所有符合条件的 item(项目)。",
-          "testString": "getUserInput => $.post(getUserInput('url') +'/_api/find-all-by-name', {name:'r@nd0mN4m3', age: 24, favoriteFoods: ['pizza']}).then(data => { assert.isArray(data,'the response should be an Array');  assert.equal(data[0].name,'r@nd0mN4m3','item.name is not what expected'); assert.equal(data[0].__v, 0,'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "成功找到所有符合条件的 item（项目）。",
+          "testString": "getUserInput => $.post(getUserInput('url') + '/_api/find-all-by-name', {name: 'r@nd0mN4m3', age: 24, favoriteFoods: ['pizza']}).then(data => { assert.isArray(data, 'the response should be an Array');  assert.equal(data[0].name, 'r@nd0mN4m3', 'item.name is not what expected'); assert.equal(data[0].__v, 0, 'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -121,12 +120,12 @@
       "id": "587d7fb7367417b2b2512c0c",
       "title": "Use model.findOne() to Return a Single Matching Document from Your Database",
       "description": [
-        "<code>Model.findOne()</code> 表现像 <code>Model.find()</code>， 但是它仅仅返回一个 document (而不是一个数组)，即使数据库里有很多条 item(项目)。 当你按声明成 <code>unique</code> 的属性进行搜索时，<code>Model.findOne()</code> 尤其有用。 把食物作为 <code>Model.findOne() -> Person</code> 的参数，来找到一个在她的爱好中有某一食物的人。"
+        "<code>Model.findOne()</code>表现像<code>Model.find()</code>，但是它仅仅返回一个 document（而不是一个数组），即使数据库里有很多条 item（项目）。当你按声明成<code>unique</code>的属性进行搜索时，<code>Model.findOne()</code>尤其有用。把食物作为<code>Model.findOne() -> Person</code>的参数，来找到一个在她的爱好中有某一食物的人。"
       ],
       "tests": [
         {
-          "text": "成功找到一个 item(项目)。",
-          "testString": "getUserInput => $.post(getUserInput('url') +'/_api/find-one-by-food', {name:'Gary', age: 46, favoriteFoods: ['chicken salad']}).then(data => { assert.equal(data.name,'Gary','item.name is not what expected'); assert.deepEqual(data.favoriteFoods, ['chicken salad'],'item.favoriteFoods is not what expected'); assert.equal(data.__v, 0,'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "成功找到一个 item（项目）。",
+          "testString": "getUserInput => $.post(getUserInput('url') + '/_api/find-one-by-food', {name: 'Gary', age: 46, favoriteFoods: ['chicken salad']}).then(data => { assert.equal(data.name, 'Gary', 'item.name is not what expected'); assert.deepEqual(data.favoriteFoods, ['chicken salad'], 'item.favoriteFoods is not what expected'); assert.equal(data.__v, 0, 'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -137,12 +136,12 @@
       "id": "587d7fb7367417b2b2512c0d",
       "title": "Use model.findById() to Search Your Database By _id",
       "description": [
-        "当我们保存一个 document， MongoDB 自动添加 _id 字段， 并给该字段设置 unique(唯一) 属性。通过 _id 搜索是一个非常频繁的操作，所以 Mongose 为它提供了一个专门的方法。使用人物 Id 作为参数，执行 <code>Model.findById() -> Person</code>， 找到这个_id 对应的唯一的一个人。"
+        "当我们保存一个 document， MongoDB 自动添加 _id 字段，并给该字段设置 unique（唯一）属性。通过 _id 搜索是一个非常频繁的操作，所以 Mongose 为它提供了一个专门的方法。使用人物 Id 作为参数，执行<code>Model.findById() -> Person</code>，找到这个 _id 对应的唯一的一个人。"
       ],
       "tests": [
         {
-          "text": "通过 Id 成功找到对应的 item(项目)。",
-          "testString": "getUserInput => $.get(getUserInput('url') +'/_api/find-by-id').then(data => { assert.equal(data.name,'test','item.name is not what expected'); assert.equal(data.age, 0,'item.age is not what expected'); assert.deepEqual(data.favoriteFoods, ['none'],'item.favoriteFoods is not what expected'); assert.equal(data.__v, 0,'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "通过 Id 成功找到对应的 item（项目）。",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/find-by-id').then(data => { assert.equal(data.name, 'test', 'item.name is not what expected'); assert.equal(data.age, 0, 'item.age is not what expected'); assert.deepEqual(data.favoriteFoods, ['none'], 'item.favoriteFoods is not what expected'); assert.equal(data.__v, 0, 'The item should be not previously edited'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
