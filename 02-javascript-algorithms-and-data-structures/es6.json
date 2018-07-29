@@ -468,24 +468,24 @@
       "id": "587d7b88367417b2b2512b46",
       "title": "Set Default Parameters for Your Functions",
       "description": [
-        "In order to help us create more flexible functions, ES6 introduces <dfn>default parameters</dfn> for functions.",
-        "Check out this code:",
+        "ES6 里允许给函数传入<dfn>默认参数</dfn>，来构建更加灵活的函数。",
+        "查看以下代码：",
         "<blockquote>function greeting(name = \"Anonymous\") {<br>&nbsp;&nbsp;return \"Hello \" + name;<br>}<br>console.log(greeting(\"John\")); // Hello John<br>console.log(greeting()); // Hello Anonymous</blockquote>",
-        "The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter <code>name</code> will receive its default value <code>\"Anonymous\"</code> when you do not provide a value for the parameter. You can add default values for as many parameters as you want.",
+        "默认参数会在参数没有被指定（值为 undefined ）的时候起作用。在上面的例子中，参数 <code>name</code> 会在没有得到新的值的时候，默认使用值 \"Anonymous\"。你还可以给多个参数赋予默认值。",
         "<hr>",
-        "Modify the function <code>increment</code> by adding default parameters so that it will add 1 to <code>number</code> if <code>value</code> is not specified."
+        "给函数 <code>increment</code> 加上默认参数，使得在 <code>value</code> 没有被赋值的时候，默认给 <code>number</code> 加1。"
       ],
       "tests": [
         {
-          "text": "The result of <code>increment(5, 2)</code> should be <code>7</code>.",
-          "testString": "assert(increment(5, 2) === 7, 'The result of <code>increment(5, 2)</code> should be <code>7</code>.');"
+          "text": "<code>increment(5, 2)</code> 的结果应该为 <code>7</code>。",
+          "testString": "assert(increment(5, 2) === 7, '<code>increment(5, 2)</code> 的结果应该为 <code>7</code>。');"
         },
         {
-          "text": "The result of <code>increment(5)</code> should be <code>6</code>.",
-          "testString": "assert(increment(5) === 6, 'The result of <code>increment(5)</code> should be <code>6</code>.');"
+          "text": "<code>increment(5)</code> 的结果应该为 <code>6</code>。",
+          "testString": "assert(increment(5) === 6, '<code>increment(5)</code> 的结果应该为 <code>6</code>。');"
         },
         {
-          "text": "default parameter <code>1</code> was used for <code>value</code>.",
+          "text": "参数 <code>value</code> 的默认值应该为 <code>1</code>。",
           "testString": "getUserInput => assert(getUserInput('index').match(/value\\s*=\\s*1/g), 'default parameter <code>1</code> was used for <code>value</code>.');"
         }
       ],
@@ -503,8 +503,8 @@
             "    return number + value;",
             "  };",
             "})();",
-            "console.log(increment(5, 2)); // returns 7",
-            "console.log(increment(5)); // returns NaN"
+            "console.log(increment(5, 2)); // 返回 7",
+            "console.log(increment(5)); // 返回 NaN"
           ],
           "head": [],
           "tail": []
@@ -515,33 +515,33 @@
       "id": "587d7b88367417b2b2512b47",
       "title": "Use the Rest Operator with Function Parameters",
       "description": [
-        "In order to help us create more flexible functions, ES6 introduces the <dfn>rest operator</dfn> for function parameters. With the rest operator, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.",
-        "Check out this code:",
-        "<blockquote>function howMany(...args) {<br>&nbsp;&nbsp;return \"You have passed \" + args.length + \" arguments.\";<br>}<br>console.log(howMany(0, 1, 2)); // You have passed 3 arguments<br>console.log(howMany(\"string\", null, [1, 2, 3], { })); // You have passed 4 arguments.</blockquote>",
-        "The rest operator eliminates the need to check the <code>args</code> array and allows us to apply <code>map()</code>, <code>filter()</code> and <code>reduce()</code> on the parameters array.",
+        "ES6 推出了用于函数参数的<dfn>rest 操作符</dfn> 帮助我们创建更加灵活的函数。 在 <code>rest</code> 操作符的帮助下,你可以创建有一个变量来接受多个参数的函数。 这些参数被储存在一个可以在函数内部读取的数组中。",
+        "请看以下代码：",
+        "<blockquote>function howMany(...args) {<br>&nbsp;&nbsp;return \"You have passed \" + args.length + \" arguments.\";<br>}<br>console.log(howMany(0, 1, 2)); // 你需要输入3个参数。<br>console.log(howMany(\"string\", null, [1, 2, 3], { })); //你需要输入4个参数。</blockquote>",
+        "<code>rest</code> 操作符可以避免查看 <code>args</code> 数组的需求，并且允许我们在参数数组上使用 <code>map()</code>, <code>fiter()</code>，和 <code>reduce()</code>",
         "<hr>",
-        "Modify the function <code>sum</code> so that it uses the rest operator and it works in the same way with any number of parameters."
+        "修改 <code>sum</code> 函数，来让它使用 <code>rest</code>操作符，并且它可以在有任何数量的参数时以相同的形式工作"
       ],
       "tests": [
         {
-          "text": "The result of <code>sum(0,1,2)</code> should be 3",
-          "testString": "assert(sum(0,1,2) === 3, 'The result of <code>sum(0,1,2)</code> should be 3');"
+          "text": "<code>sum(0,1,2)</code> 的返回结果应该为3。",
+          "testString": "assert(sum(0,1,2) === 3, '<code>sum(0,1,2)</code> 的返回结果应该为3。');"
         },
         {
-          "text": "The result of <code>sum(1,2,3,4)</code> should be 10",
-          "testString": "assert(sum(1,2,3,4) === 10, 'The result of <code>sum(1,2,3,4)</code> should be 10');"
+          "text": "<code>sum(1,2,3,4)</code> 的返回结果应该为10。",
+          "testString": "assert(sum(1,2,3,4) === 10, '<code>sum(1,2,3,4)</code> 的返回结果应该为10。');"
         },
         {
-          "text": "The result of <code>sum(5)</code> should be 5",
-          "testString": "assert(sum(5) === 5, 'The result of <code>sum(5)</code> should be 5');"
+          "text": "<code>sum(5)</code> 的返回结果应该为5。",
+          "testString": "assert(sum(5) === 5, '<code>sum(5)</code> 的返回结果应该为5。');"
         },
         {
-          "text": "The result of <code>sum()</code> should be 0",
-          "testString": "assert(sum() === 0, 'The result of <code>sum()</code> should be 0');"
+          "text": "<code>sum()</code>的返回结果应该为 0。",
+          "testString": "assert(sum() === 0, '<code>sum()</code>的返回结果应该为 0。');"
         },
         {
-          "text": "The <code>sum</code> function uses the <code>...</code> spread operator on the <code>args</code> parameter.",
-          "testString": "getUserInput => assert(getUserInput('index').match(/function\\s+sum\\s*\\(\\s*...args\\s*\\)\\s*{/g), 'The <code>sum</code> function uses the <code>...</code> spread operator on the <code>args</code> parameter.');"
+          "text": "对 <code>sum</code> 函数的 <code>args</code> 参数使用了 <code>...</code> 展开操作符。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/function\\s+sum\\s*\\(\\s*...args\\s*\\)\\s*{/g), '对 <code>sum</code> 函数的 <code>args</code> 参数使用了 <code>...</code> 展开操作符。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -570,30 +570,30 @@
       "id": "587d7b89367417b2b2512b48",
       "title": "Use the Spread Operator to Evaluate Arrays In-Place",
       "description": [
-        "ES6 introduces the <dfn>spread operator</dfn>, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.",
-        "The ES5 code below uses <code>apply()</code> to compute the maximum value in an array:",
-        "<blockquote>var arr = [6, 89, 3, 45];<br>var maximus = Math.max.apply(null, arr); // returns 89</blockquote>",
-        "We had to use <code>Math.max.apply(null, arr)</code> because <code>Math.max(arr)</code> returns <code>NaN</code>. <code>Math.max()</code> expects comma-separated arguments, but not an array.",
+        "ES6 允许我们使用 <dfn>展开操作符</dfn> 来展开数组，以及需要多个参数或元素的表达式。",
+        "下面的 ES5 代码使用了 <code>apply()</code> 来计算数组的最大值：",
+        "<blockquote>var arr = [6, 89, 3, 45];<br>var maximus = Math.max.apply(null, arr); // 返回 89</blockquote>",
+        "我们必须使用 <code>Math.max.apply(null,arr)</code>，是因为直接调用 <code>Math.max(arr)</code> 会返回 <code>NaN</code>。<code>Math.max()</code> 函数需要传入的是一系列由逗号分隔的参数，而不是一个数组。",
         "The spread operator makes this syntax much better to read and maintain.",
-        "<blockquote>const arr = [6, 89, 3, 45];<br>const maximus = Math.max(...arr); // returns 89</blockquote>",
-        "<code>...arr</code> returns an unpacked array. In other words, it <em>spreads</em> the array.",
-        "However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:",
-        "<blockquote>const spreaded = ...arr; // will throw a syntax error</blockquote>",
+        "<blockquote>const arr = [6, 89, 3, 45];<br>const maximus = Math.max(...arr); // 返回 89</blockquote>",
+        "<code>...arr</code> 返回了一个“打开”的数组。 或者说它 <em>展开</em> 了数组。",
+        "然而，展开操作符只能够在函数的参数中，或者数组之中使用。下面的代码将会报错：",
+        "<blockquote>const spreaded = ...arr; // 将会发生语法错误</blockquote>",
         "<hr>",
-        "Copy all contents of <code>arr1</code> into another array <code>arr2</code> using the spread operator."
+        "使用展开操作符将 <code>arr1</code> 中的内容都赋值到 <code>arr2</code> 中去。"
       ],
       "tests": [
         {
-          "text": "<code>arr2</code> is correct copy of <code>arr1</code>.",
-          "testString": "assert(arr2.every((v, i) => v === arr1[i]), '<code>arr2</code> is correct copy of <code>arr1</code>.');"
+          "text": "<code>arr2</code> 的值是由 <code>arr1</code> 拷贝而来的。",
+          "testString": "assert(arr2.every((v, i) => v === arr1[i]), '<code>arr2</code> 的值是由 <code>arr1</code> 拷贝而来的。');"
         },
         {
-          "text": "<code>...</code> spread operator was used to duplicate <code>arr1</code>.",
-          "testString": "getUserInput => assert(getUserInput('index').match(/\\[\\s*...arr1\\s*\\]/g),'<code>...</code> spread operator was used to duplicate <code>arr1</code>.');"
+          "text": "用<code>...</code> 展开操作符来赋值 <code>arr1</code>。",
+          "testString": "getUserInput => assert(getUserInput('index').match(/\\[\\s*...arr1\\s*\\]/g),'用<code>...</code> 展开操作符来赋值 <code>arr1</code>。');"
         },
         {
-          "text": "<code>arr2</code> remains unchanged when <code>arr1</code> is changed.",
-          "testString": "assert((arr1, arr2) => {arr1.push('JUN'); return arr2.length < arr1.length},'<code>arr2</code> remains unchanged when <code>arr1</code> is changed.');"
+          "text": "当 <code>arr1</code> 改变的时候，<code>arr2</code> 不会改变。",
+          "testString": "assert((arr1, arr2) => {arr1.push('JUN'); return arr2.length < arr1.length},'当 <code>arr1</code> 改变的时候，<code>arr2</code> 不会改变。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -608,7 +608,7 @@
             "let arr2;",
             "(function() {",
             "  \"use strict\";",
-            "  arr2 = []; // change this line",
+            "  arr2 = []; // 改变这一行",
             "})();",
             "console.log(arr2);"
           ],
