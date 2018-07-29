@@ -43,7 +43,17 @@
 
     </details>
 
-4. 应保留代码中的英文标点。
+4. 破折号应使用两个 em dash，即 `——`，且两边不需要添加空格。
+
+    <details><summary>示例</summary>
+
+    :smiley: `有一种更好的方法——使用<code>repeat</code>。`  
+    :slightly_frowning_face: `有一种更好的方法 —— 使用<code>repeat</code>。`  
+    :slightly_frowning_face: `有一种更好的方法————使用<code>repeat</code>。`  
+
+    </details>
+
+5. 应保留代码中的英文标点。
 
     <details><summary>示例</summary>
 
@@ -52,7 +62,7 @@
 
     </details>
 
-5. 块级引用（blockquote）、代码块（pre）、题目 `contents` 字段里的注释部分，若不翻译则保留原符号；若需要翻译则改用全角符号。
+6. 块级引用（blockquote）、代码块（pre）、题目 `contents` 字段里的注释部分，若不翻译则保留原符号；若需要翻译则改用全角符号。
 
 ### 结尾标点
 1. 题目的描述性文字，需要在结尾添加标点。
