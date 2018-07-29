@@ -53,7 +53,25 @@
 
     </details>
 
-5. 应保留代码中的英文标点。
+5. 省略号应使用 `……`，或在结尾添加 `等`。
+
+    <details><summary>示例</summary>
+
+    :smiley: `前端开发的相关技术很多，比如 HTML、CSS、JavaScript……`  
+    :smiley: `前端开发的相关技术很多，比如 HTML、CSS、JavaScript 等`  
+
+    </details>
+
+6. 相同的标点不应连续使用。
+
+    <details><summary>示例</summary>
+
+    :smiley: `今天真开心！`  
+    :slightly_frowning_face: `今天真开心！！！`  
+
+    </details>
+
+7. 应保留代码中的英文标点。
 
     <details><summary>示例</summary>
 
@@ -62,7 +80,7 @@
 
     </details>
 
-6. 块级引用（blockquote）、代码块（pre）、题目 `contents` 字段里的注释部分，若不翻译则保留原符号；若需要翻译则改用全角符号。
+8. 块级引用（blockquote）、代码块（pre）、题目 `contents` 字段里的注释部分，若不翻译则保留原符号；若需要翻译则改用全角符号。
 
 ### 结尾标点
 1. 题目的描述性文字，需要在结尾添加标点。
