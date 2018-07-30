@@ -304,7 +304,7 @@
     
     然后你继续翻译，并 `commit` 了代码，现在你的 `my-translate` 分支就是 `A -> B -> X -> M -> Y`，其中 `Y` 是你的最新 commit。
     
-    这时候你执行了 `git pull --rebase`，那么问题来了。基于 `rebase` 命令的比较原理（或者说算法），它会首先寻找一个你的 `my-translate` 分支与 `upstream/translate` 分支共同的”祖先 commit“（ancestor commit）。”共同的祖先 commit“（common ancestor commit）是指这两个分支**开始出现分歧（diverted）之前的那个 commit**。在这个例子中，它就会找到 commit `B`，因为在 `B` 之后，`my-transalte` 分支是 commit `X`，而 `upstream/translate` 是 commit `C`。
+    这时候你执行了 `git pull --rebase`，那么问题来了。基于 `rebase` 命令的比较原理（或者说算法），它会首先寻找一个你的 `my-translate` 分支与 `upstream/translate` 分支共同的”祖先 commit“（ancestor commit）。”共同的祖先 commit“（common ancestor commit）是指这两个分支**开始出现分歧（diverted）之前的那个 commit**。在这个例子中，它就会找到 commit `B`，因为在 `B` 之后，`my-translate` 分支是 commit `X`，而 `upstream/translate` 是 commit `C`。
     
     `rebase` 的执行逻辑可以简化为 `git reset --hard` + `git cherry-pick`（好奇的朋友可以去了解下这两个命令），那么 `cherry-pick X` 的时候不会出问题（基于 `B`，添加你的翻译，显然不会有报错），但 `cherry-pick C` 的时候就很可能会出现 conflicts：
     
