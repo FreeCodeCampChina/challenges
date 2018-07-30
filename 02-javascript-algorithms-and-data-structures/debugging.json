@@ -10,16 +10,16 @@
       "description": [
         "Chrome 和 Firefox 都有出色的 JavaScript 控制台，也称为 DevTools，用于调试你的 JavaScript 代码。",
         "你可以在 Chrome 的菜单中找到“开发者工具”或 FireFox 的菜单中的“ Web 控制台”。如果你使用其他浏览器或手机，我们强烈建议你切换到桌面版 Firefox 或 Chrome。",
-        "<code>console.log()</code> 方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台，将它放在代码中的关键点可以显示变量的中间值。在查看输出之前，最好先了解输出应该是什么。在整个代码中使用检查点来查看计算状态将有助于缩小问题所在。",
+        "<code>console.log()</code>方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台，将它放在代码中的关键点可以显示变量的中间值。在查看输出之前，最好先了解输出应该是什么。在整个代码中使用检查点来查看计算状态将有助于缩小问题所在。",
         "下面是输出 'Hello world！' 到控制台的示例：",
         "<code>console.log('Hello world!');</code>",
         "<hr>",
-        "请使用 <code>console.log()</code> 方法在代码中注明的地方输出变量 <code>a</code> 的值。"
+        "请使用<code>console.log()</code>方法在代码中注明的地方输出变量<code>a</code>的值。"
       ],
       "tests": [
         {
-          "text": "你的代码应使用 <code>console.log()</code> 来检查变量 <code>a</code> 的值。",
-          "testString": "assert(code.match(/console\\.log\\(a\\)/g), '你的代码应使用 <code>console.log()</code> 来检查变量 <code>a</code> 的值。');"
+          "text": "你的代码应使用<code>console.log()</code>来检查变量<code>a</code>的值。",
+          "testString": "assert(code.match(/console\\.log\\(a\\)/g), '你的代码应使用<code>console.log()</code>来检查变量<code>a</code>的值。');"
         }
       ],
       "solutions": [],
@@ -52,26 +52,26 @@
       "description": [
         "你可能已经注意到一些 freeCodeCamp JavaScript 的挑战有他们自己的控制台。这些控制台的行为与你在上一次挑战中使用的浏览器控制台略有不同。",
         "以下挑战旨在强调 freeCodeCamp 控制台与浏览器控制台之间的一些差异。",
-        "对于浏览器控制台。当你在浏览器中加载并运行 JavaScript 文件时， <code>console.log()</code> 语句会在控制台中按照你调用的次数准确地打印出你要求的内容。然而，在 freeCodeCamp 的代码编辑器中使用 <code>console.log()</code> 会略有不同，一开始可能会让你感到困惑。",
-        "在 freeCodeCamp 代码编辑器中，传给 <code>console.log()</code> 的值会在每组测试执行的时候输出。另外，如果你在代码中还手动调用过挑战题目的函数，调用几次就会增加几次传入值的输出。",
+        "对于浏览器控制台。当你在浏览器中加载并运行 JavaScript 文件时，<code>console.log()</code>语句会在控制台中按照你调用的次数准确地打印出你要求的内容。然而，在 freeCodeCamp 的代码编辑器中使用<code>console.log()</code>会略有不同，一开始可能会让你感到困惑。",
+        "在 freeCodeCamp 代码编辑器中，传给<code>console.log()</code>的值会在每组测试执行的时候输出。另外，如果你在代码中还手动调用过挑战题目的函数，调用几次就会增加几次传入值的输出。",
         "这就产生了一些有趣的行为，并可能在一开始就让你感到困惑，因为你觉得只会输出一次的值可能会输出多次，具体次数取决于挑战题目本身测试的数量以及这些测试调用挑战函数的方式。",
-        "如果你不打算执行挑战的测试，而只想查看自己调用 <code>console.log()</code> 的输出，可以使用 <code>console.clear()</code>。",
+        "如果你不打算执行挑战的测试，而只想查看自己调用<code>console.log()</code>的输出，可以使用<code>console.clear()</code>。",
         "<hr>",
-        "使用 <code>console.log()</code> 在代码中指定的位置打印变量。",
+        "使用<code>console.log()</code>在代码中指定的位置打印变量。",
         ""
       ],
       "tests": [
         {
-          "text": "使用 <code>console.log()</code> 输出变量 <code>outputTwice</code> 的值。在浏览器控制台中，应该输出两次变量的值。",
-          "testString": "assert(code.match(/console\\.log\\(outputTwo\\)/g), '使用 <code>console.log()</code> 输出变量 <code>outputTwice</code> 的值。在浏览器控制台中，应该输出两次变量的值。');"
+          "text": "使用<code>console.log()</code>输出变量<code>outputTwice</code>的值。在浏览器控制台中，应该输出两次变量的值。",
+          "testString": "assert(code.match(/console\\.log\\(outputTwo\\)/g), '使用<code>console.log()</code>输出变量<code>outputTwice</code>的值。在浏览器控制台中，应该输出两次变量的值。');"
         },
         {
-          "text": "使用 <code>console.log()</code> 输出变量 <code>outputOne</code> 的值。",
-          "testString": "assert(code.match(/console\\.log\\(outputOne\\)/g), '使用 <code>console.log()</code> 输出变量 <code>outputOne</code> 的值。');"
+          "text": "使用<code>console.log()</code>输出变量<code>outputOne</code>的值。",
+          "testString": "assert(code.match(/console\\.log\\(outputOne\\)/g), '使用<code>console.log()</code>输出变量<code>outputOne</code>的值。');"
         },
         {
-          "text": "使用 <code>console.clear()</code> 修改输出，以便 <code>outputOne</code> 变量只输出一次。",
-          "testString": "assert(code.match(/^(\\s*console.clear\\(\\);?\\s*)$/gm), '使用 <code>console.clear()</code> 修改输出，以便 <code>outputOne</code> 变量只输出一次。');"
+          "text": "使用<code>console.clear()</code>修改输出，以便<code>outputOne</code>变量只输出一次。",
+          "testString": "assert(code.match(/^(\\s*console.clear\\(\\);?\\s*)$/gm), '使用<code>console.clear()</code>修改输出，以便<code>outputOne</code>变量只输出一次。');"
         }
       ],
       "solutions": [],
@@ -106,25 +106,25 @@
       "id": "587d7b84367417b2b2512b34",
       "title": "Use typeof to Check the Type of a Variable",
       "description": [
-        "你可以使用 <code>typeof</code> 检查变量的数据结构或类型。在处理多种数据类型时，<code>typeof</code> 会对调试很有帮助。如果你想计算两数之和，但实际传入了一个字符串参数，则结果可能是错误的。类型错误可能隐藏在计算或函数调用中。当你以 JavaScript 对象（JSON）的形式访问和使用外部数据时尤其要小心。",
-        "下面是使用 <code>typeof</code> 的一些示例：",
+        "你可以使用<code>typeof</code>检查变量的数据结构或类型。在处理多种数据类型时，<code>typeof</code>会对调试很有帮助。如果你想计算两数之和，但实际传入了一个字符串参数，则结果可能是错误的。类型错误可能隐藏在计算或函数调用中。当你以 JavaScript 对象（JSON）的形式访问和使用外部数据时尤其要小心。",
+        "下面是使用<code>typeof</code>的一些示例：",
         "<blockquote>console.log(typeof \"\"); // 输出 \"string\"<br>console.log(typeof 0); // 输出 \"number\"<br>console.log(typeof []); // 输出 \"object\"<br>console.log(typeof {}); // 输出 \"object\"</blockquote>",
-        "JavaScript 有六种原始（不可变）数据类型：<code>Boolean</code>, <code>Null</code>, <code>Undefined</code>, <code>Number</code>, <code>String</code>, 和 <code>Symbol</code>（ES6 新增）和一种可变的数据类型：<code>Object</code> 。注意，在 JavaScript 中，数组在本质上是一种对象",
+        "JavaScript 有六种原始（不可变）数据类型：<code>Boolean</code>,<code>Null</code>,<code>Undefined</code>,<code>Number</code>,<code>String</code>, 和<code>Symbol</code>（ES6 新增）和一种可变的数据类型：<code>Object</code>。注意，在 JavaScript 中，数组在本质上是一种对象",
         "<hr>",
-        "添加两个 <code>console.log()</code> 语句来检查代码中的两个变量 <code>seven</code> 和 <code>three</code> 的 code>typeof</code> 值。"
+        "添加两个<code>console.log()</code>语句来检查代码中的两个变量<code>seven</code>和<code>three</code>的 code>typeof</code>值。"
       ],
       "tests": [
         {
-          "text": "你的代码应在两个 <code>console.log()</code> 语句中使用 <code>typeof</code> 来检查变量的类型。",
-          "testString": "assert(code.match(/console\\.log\\(typeof[\\( ].*\\)?\\)/g).length == 2, '你的代码应在两个 <code>console.log()</code> 语句中使用 <code>typeof</code> 来检查变量的类型。');"
+          "text": "你的代码应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。",
+          "testString": "assert(code.match(/console\\.log\\(typeof[\\( ].*\\)?\\)/g).length == 2, '你的代码应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。');"
         },
         {
-          "text": "你的代码应使用 <code>typeof</code> 来检查变量 <code>seven</code> 的类型。",
-          "testString": "assert(code.match(/typeof[\\( ]seven\\)?/g), '你的代码应使用 <code>typeof</code> 来检查变量 <code>seven</code> 的类型。');"
+          "text": "你的代码应使用<code>typeof</code>来检查变量<code>seven</code>的类型。",
+          "testString": "assert(code.match(/typeof[\\( ]seven\\)?/g), '你的代码应使用<code>typeof</code>来检查变量<code>seven</code>的类型。');"
         },
         {
-          "text": "你的代码应使用 <code>typeof</code> 来检查变量 <code>three</code> 的类型。",
-          "testString": "assert(code.match(/typeof[\\( ]three\\)?/g), '你的代码应使用 <code>typeof</code> 来检查变量 <code>three</code> 的类型。');"
+          "text": "你的代码应使用<code>typeof</code>来检查变量<code>three</code>的类型。",
+          "testString": "assert(code.match(/typeof[\\( ]three\\)?/g), '你的代码应使用<code>typeof</code>来检查变量<code>three</code>的类型。');"
         }
       ],
       "solutions": [],
@@ -152,10 +152,10 @@
       "id": "587d7b84367417b2b2512b35",
       "title": "Catch Misspelled Variable and Function Names",
       "description": [
-        "<code>console.log()</code> 和 <code>typeof</code> 方法是检查中间值和程序输出类型的两种主要方法。 现在是时候了解一下 bug 出现的常见的情形。一个语法级别的问题是打字太快带来的低级拼写错误。",
+        "<code>console.log()</code>和<code>typeof</code>方法是检查中间值和程序输出类型的两种主要方法。 现在是时候了解一下 bug 出现的常见的情形。一个语法级别的问题是打字太快带来的低级拼写错误。",
         "变量或函数名的错写、漏写或大小写弄混都会让浏览器尝试查找并不存在的东西，并报出“引用错误”。JavaScript 变量和函数名称区分大小写。",
         "<hr>",
-        "修复代码中的两个拼写错误，以便 <code>netWorkingCapital</code> 计算有效。"
+        "修复代码中的两个拼写错误，以便<code>netWorkingCapital</code>计算有效。"
       ],
       "tests": [
         {
@@ -167,16 +167,16 @@
           "testString": "assert(!code.match(/recievables/g), '代码中不应存在拼写错误的变量。');"
         },
         {
-          "text": "应在代码中声明并正确使用 <code>receivables</code> 变量。",
-          "testString": "assert(code.match(/receivables/g).length == 2, '应在代码中声明并正确使用 <code>receivables</code> 变量。');"
+          "text": "应在代码中声明并正确使用<code>receivables</code>变量。",
+          "testString": "assert(code.match(/receivables/g).length == 2, '应在代码中声明并正确使用<code>receivables</code>变量。');"
         },
         {
           "text": "代码中不应存在拼写错误的变量。",
           "testString": "assert(!code.match(/payable;/g), '代码中不应存在拼写错误的变量。');"
         },
         {
-          "text": "应在代码中声明并正确使用 <code>payables</code> 变量。",
-          "testString": "assert(code.match(/payables/g).length == 2, '应在代码中声明并正确使用 <code>payables</code> 变量。');"
+          "text": "应在代码中声明并正确使用<code>payables</code>变量。",
+          "testString": "assert(code.match(/payables/g).length == 2, '应在代码中声明并正确使用<code>payables</code>变量。');"
         }
       ],
       "solutions": [],
@@ -214,8 +214,8 @@
           "testString": "assert(code.match(/myArray\\s*?=\\s*?\\[\\s*?1\\s*?,\\s*?2\\s*?,\\s*?3\\s*?\\];/g), '你的代码应该修复数组缺少的部分。');"
         },
         {
-          "text": "你的代码应该修复 <code>.reduce()</code> 方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。",
-          "testString": "assert(arraySum === 6, '你的代码应该修复 <code>.reduce()</code> 方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。');"
+          "text": "你的代码应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。",
+          "testString": "assert(arraySum === 6, '你的代码应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。');"
         }
       ],
       "solutions": [],
@@ -248,12 +248,12 @@
         "当然，只使用一种引号是可以的。你可以使用反斜杠 (\\) 转义字符来转义字符串中的引号：",
         "<blockquote>// 一种引号的正确使用方式:<br>const allSameQuotes = 'I\\'ve had a perfectly wonderful evening, but this wasn\\'t it.';</blockquote>",
         "<hr>",
-        "修复字符串，对 <code>href</code> 属性的值使用不同的引号，或者转义现有的引号。注意，整个字符串外面的双引号要保留。"
+        "修复字符串，对<code>href</code>属性的值使用不同的引号，或者转义现有的引号。注意，整个字符串外面的双引号要保留。"
       ],
       "tests": [
         {
-          "text": "你的代码应通过更改或转义来修复 <code>href</code> 的值 \"#Home\" 周围的引号。",
-          "testString": "assert(code.match(/<a href=\\s*?('|\\\\\")#Home\\1\\s*?>/g), '你的代码应通过更改或转义来修复 <code>href</code> 的值 \"#Home\" 周围的引号。');"
+          "text": "你的代码应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。",
+          "testString": "assert(code.match(/<a href=\\s*?('|\\\\\")#Home\\1\\s*?>/g), '你的代码应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。');"
         },
         {
           "text": "你的代码应该在整个字符串外围保留双引号。",
@@ -282,13 +282,13 @@
       "id": "587d7b85367417b2b2512b38",
       "title": "Catch Use of Assignment Operator Instead of Equality Operator",
       "description": [
-        "分支程序，即在满足某些条件时执行不同操作的程序，依赖于 JavaScript中的 <code>if</code>，<code>else if</code> 和 <code>else</code> 语句。条件有时采取测试一个结果是否等于一个值的形式。",
-        "这种逻辑可以表述为“如果 x 等于 y ，则......”，听起来像是可以使用 <code>=</code>（即赋值运算符）。然而，这会导致程序中流程出问题。",
-        "如前面的挑战所述，JavaScript 中的赋值运算符 (<code>=</code>) 是用来为变量名赋值的。并且 <code>==</code> 和 <code>===</code> 运算符检查相等性（三等号 <code>===</code> 是用来测试是否严格相等的，严格相等的意思是值和类型都必须相同）。",
-        "下面的代码将 <code>x</code> 赋值为 2，表达式 <code>x = y</code> 会在执行后得到 <code>true</code> 。JavaScript 会把大部分的值都视为 <code>true</code>，除了所谓的 \"falsy\" 值，即： <code>false</code>，<code>0</code>，<code>\"\"</code>（空字符串），<code>NaN</code>，<code>undefined</code> 和 <code>null</code> 。",
+        "分支程序，即在满足某些条件时执行不同操作的程序，依赖于 JavaScript中的<code>if</code>，<code>else if</code>和<code>else</code>语句。条件有时采取测试一个结果是否等于一个值的形式。",
+        "这种逻辑可以表述为“如果 x 等于 y ，则......”，听起来像是可以使用<code>=</code>（即赋值运算符）。然而，这会导致程序中流程出问题。",
+        "如前面的挑战所述，JavaScript 中的赋值运算符 (<code>=</code>) 是用来为变量名赋值的。并且<code>==</code>和<code>===</code>运算符检查相等性（三等号<code>===</code>是用来测试是否严格相等的，严格相等的意思是值和类型都必须相同）。",
+        "下面的代码将<code>x</code>赋值为 2，表达式<code>x = y</code>会在执行后得到<code>true</code>。JavaScript 会把大部分的值都视为<code>true</code>，除了所谓的 \"falsy\" 值，即：<code>false</code>，<code>0</code>，<code>\"\"</code>（空字符串），<code>NaN</code>，<code>undefined</code>和<code>null</code>。",
         "<blockquote>let x = 1;<br>let y = 2;<br>if (x = y) {<br>&nbsp;&nbsp;// 除了 \"falsy\" 值以外 y 为任意值时这个代码块都将执行<br>} else {<br>&nbsp;&nbsp;// 按本例用意这个代码块应该执行（但其实不会）。<br>}</blockquote>",
         "<hr>",
-        "修复条件语句，以便程序运行正确的分支，并给 <code>result</code> 赋上正确的值。"
+        "修复条件语句，以便程序运行正确的分支，并给<code>result</code>赋上正确的值。"
       ],
       "tests": [
         {
@@ -296,8 +296,8 @@
           "testString": "assert(result == \"Not equal!\", '你的代码应该修复条件语句，使其判断是否相等,而不是赋值。');"
         },
         {
-          "text": "条件语句可以使用 <code>==</code> 或 <code>===</code>来测试是否相等。",
-          "testString": "assert(code.match(/x\\s*?===?\\s*?y/g), '条件语句可以使用 <code>==</code> 或 <code>===</code>来测试是否相等。');"
+          "text": "条件语句可以使用<code>==</code>或<code>===</code>来测试是否相等。",
+          "testString": "assert(code.match(/x\\s*?===?\\s*?y/g), '条件语句可以使用<code>==</code>或<code>===</code>来测试是否相等。');"
         }
       ],
       "solutions": [],
@@ -335,16 +335,16 @@
         "下面示例中的两个变量是不同的:",
         "<blockquote>function myFunction() {<br>&nbsp;&nbsp;return \"You rock!\";<br>}<br>let varOne = myFunction; // 将函数赋值给变量<br>let varTwo = myFunction(); // 将函数返回值 \"You rock!\"赋给变量</blockquote>",
         "<hr>",
-        "修复代码，把调用函数 <code>getNin​​e</code> 的返回值赋给变量 <code>result</code>。"
+        "修复代码，把调用函数<code>getNin​​e</code>的返回值赋给变量<code>result</code>。"
       ],
       "tests": [
         {
-          "text": "你的代码应该修复变量 <code>result</code> 使其为函数 <code>getNine</code> 的返回值。",
-          "testString": "assert(result == 9, '你的代码应该修复变量 <code>result</code> 使其为函数 <code>getNine</code> 的返回值。');"
+          "text": "你的代码应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。",
+          "testString": "assert(result == 9, '你的代码应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。');"
         },
         {
-          "text": "你的代码应该调用 <code>getNine</code> 函数。",
-          "testString": "assert(code.match(/getNine\\(\\)/g).length == 2, '你的代码应该调用 <code>getNine</code> 函数。');"
+          "text": "你的代码应该调用<code>getNine</code>函数。",
+          "testString": "assert(code.match(/getNine\\(\\)/g).length == 2, '你的代码应该调用<code>getNine</code>函数。');"
         }
       ],
       "solutions": [],
@@ -377,16 +377,16 @@
       "description": [
         "继续讨论调用函数，需要注意的下一个 bug 是函数的参数传递顺序错误。 如果参数分别是不同的类型，例如接受数组和整数两个参数的函数，参数顺序传错就可能会引发运行时错误。对于接受相同类型参数的函数，传错参数也会导致逻辑错误或运行结果错误。确保以正确的顺序提供所有必需的参数以避免这些问题。",
         "<hr>",
-        "函数 <code>raiseToPower</code> 返回基数 (base) 的指数 (exponent) 次幂。不幸的是，它没有被正确调用 ———— 修改代码，使 <code>power</code> 的值为 8。"
+        "函数<code>raiseToPower</code>返回基数 (base) 的指数 (exponent) 次幂。不幸的是，它没有被正确调用 ———— 修改代码，使<code>power</code>的值为 8。"
       ],
       "tests": [
         {
-          "text": "你的代码应修复变量 <code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。",
-          "testString": "assert(power == 8, '你的代码应修复变量 <code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。');"
+          "text": "你的代码应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。",
+          "testString": "assert(power == 8, '你的代码应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。');"
         },
         {
-          "text": "你的代码调用 <code>raiseToPower</code> 函数时，传递参数的顺序应正确。",
-          "testString": "assert(code.match(/raiseToPower\\(\\s*?base\\s*?,\\s*?exp\\s*?\\);/g), '你的代码调用 <code>raiseToPower</code> 函数时，传递参数的顺序应正确。');"
+          "text": "你的代码调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。",
+          "testString": "assert(code.match(/raiseToPower\\(\\s*?base\\s*?,\\s*?exp\\s*?\\);/g), '你的代码调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。');"
         }
       ],
       "solutions": [],
@@ -417,7 +417,7 @@
       "id": "587d7b86367417b2b2512b3b",
       "title": "Catch Off By One Errors When Using Indexing",
       "description": [
-        "当你试图访问字符串或数组的特定索引（分割或访问一个片段）或循环索引时，有时会出现 <code>Off by one errors</code> 错误（有时称为 OBOE）。 JavaScript 索引从 <code>0</code>开始，而不是<code>1</code>，这意味着最后一个索引总会比字符串或数组的长度少 1。 如果你尝试访问等于长度的索引，程序可能会抛出“索引超出范围”引用错误或打印出 <code>undefined</code>。",
+        "当你试图访问字符串或数组的特定索引（分割或访问一个片段）或循环索引时，有时会出现<code>Off by one errors</code>错误（有时称为 OBOE）。 JavaScript 索引从<code>0</code>开始，而不是<code>1</code>，这意味着最后一个索引总会比字符串或数组的长度少 1。 如果你尝试访问等于长度的索引，程序可能会抛出“索引超出范围”引用错误或打印出<code>undefined</code>。",
         "当你使用将索引范围作为参数的字符串或数组方法时，阅读相关的文档并了解参数中的索引的包含性（即是否考虑进返回值中）很重要。以下是一些错误的示例：",
         "<blockquote>let alphabet = \"abcdefghijklmnopqrstuvwxyz\";<br>let len = alphabet.length;<br>for (let i = 0; i <= len; i++) {<br>&nbsp;&nbsp;// 在最后多了一次循环<br>&nbsp;&nbsp;console.log(alphabet[i]);<br>}<br>for (let j = 1; j < len; j++) {<br>&nbsp;&nbsp;// 循环少了一次，漏掉了索引 0 处的字符<br>&nbsp;&nbsp;console.log(alphabet[j]);<br>}<br>for (let k = 0; k < len; k++) {<br>&nbsp;&nbsp;// 不多不少，这才是正确的<br>&nbsp;&nbsp;console.log(alphabet[k]);<br>}</blockquote>",
         "<hr>",
@@ -473,22 +473,22 @@
       "title": "Use Caution When Reinitializing Variables Inside a Loop",
       "description": [
         "有时需要在循环中保存信息，增加计数器或重置变量。一个潜在的问题是变量什么时候该重新初始化，什么时候不该重新初始化，反之亦然。如果你不小心重置了用于终止条件的变量，导致无限循环，这将特别危险。",
-        "使用 <code>console.log()</code> 在每个循环中打印变量值可以发现与重置相关的错误行为，或者重置变量失败。",
+        "使用<code>console.log()</code>在每个循环中打印变量值可以发现与重置相关的错误行为，或者重置变量失败。",
         "<hr>",
-        "以下函数应该创建一个具有 <code>m</code> 行和 <code>n</code> 列“零”的二维数组。不幸的是，它没有产生预期的输出，因为<code>row</code>变量没有在外部循环中重新初始化（设置回空数组）。修改代码，使其正确地返回包含 3 行 2 列“零”的二维数组，即 <code>[[0,0]，[0,0]，[0,0]]</code> 。"
+        "以下函数应该创建一个具有<code>m</code>行和<code>n</code>列“零”的二维数组。不幸的是，它没有产生预期的输出，因为<code>row</code>变量没有在外部循环中重新初始化（设置回空数组）。修改代码，使其正确地返回包含 3 行 2 列“零”的二维数组，即<code>[[0,0]，[0,0]，[0,0]]</code>。"
       ],
       "tests": [
         {
-          "text": "你的代码应将变量 <code>matrix</code> 设置为 3 行 2 列“零”的二维数组。",
-          "testString": "assert(JSON.stringify(matrix) == \"[[0,0],[0,0],[0,0]]\", '你的代码应将变量 <code>matrix</code> 设置为 3 行 2 列“零”的二维数组。');"
+          "text": "你的代码应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。",
+          "testString": "assert(JSON.stringify(matrix) == \"[[0,0],[0,0],[0,0]]\", '你的代码应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。');"
         },
         {
-          "text": "变量 <code>matrix</code> 应有 3 行。",
-          "testString": "assert(matrix.length == 3, '变量 <code>matrix</code> 应有 3 行。');"
+          "text": "变量<code>matrix</code>应有 3 行。",
+          "testString": "assert(matrix.length == 3, '变量<code>matrix</code>应有 3 行。');"
         },
         {
-          "text": "变量 <code>matrix</code> 每行应有 2 列。",
-          "testString": "assert(matrix[0].length == 2 && matrix[1].length === 2 && matrix[2].length === 2, '变量 <code>matrix</code> 每行应有 2 列。');"
+          "text": "变量<code>matrix</code>每行应有 2 列。",
+          "testString": "assert(matrix[0].length == 2 && matrix[1].length === 2 && matrix[2].length === 2, '变量<code>matrix</code>每行应有 2 列。');"
         }
       ],
       "solutions": [],
@@ -531,16 +531,16 @@
       "title": "Prevent Infinite Loops with a Valid Terminal Condition",
       "description": [
         "最后一个话题是可怕的无限循环。当你需要程序运行代码块一定次数或满足条件时，循环是很好的工具，但是它们需要终止条件来结束循环。无限循环可能会使浏览器冻结或崩溃，并导致程序执行混乱，没有人想要这样的结果。",
-        "在本节的介绍中有一个无限循环的例子——它没有终止条件来摆脱 <code>loopy()</code> 内的 <code>while</code> 循环。不要调用这个函数！",
+        "在本节的介绍中有一个无限循环的例子——它没有终止条件来摆脱<code>loopy()</code>内的<code>while</code>循环。不要调用这个函数！",
         "<blockquote>function loopy() {<br>&nbsp;&nbsp;while(true) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Hello, world!\");<br>&nbsp;&nbsp;}<br>}</blockquote>",
         "程序员的工作是确保最终达到终止条件，该条件告诉程序何时跳出循环。有一种错误是从终端条件向错误方向递增或递减计数器变量。另一种是在循环代码中意外重置计数器或索引变量，而不是递增或递减它。",
         "<hr>",
-        "<code>myFunc()</code> 函数包含一个无限循环，因为终止条件 <code>i != 4</code> 永远不会为 <code>false</code> (并中断循环) - <code>i</code> 将每次递增2，然后跳过4，因为 <code>i</code> 是从奇数开始递增。在终端条件中输入比较运算符，使循环仅在 <code>i</code> 小于或等于4的情况下运行。"
+        "<code>myFunc()</code>函数包含一个无限循环，因为终止条件<code>i != 4</code>永远不会为<code>false</code>(并中断循环) -<code>i</code>将每次递增2，然后跳过4，因为<code>i</code>是从奇数开始递增。在终端条件中输入比较运算符，使循环仅在<code>i</code>小于或等于4的情况下运行。"
       ],
       "tests": [
         {
-          "text": "你的代码应该在 <code>for</code> 循环的终止条件（中间部分）中更改比较运算符。",
-          "testString": "assert(code.match(/i\\s*?<=\\s*?4;/g).length == 1, '你的代码应该在 <code>for</code> 循环的终止条件（中间部分）中更改比较运算符。');"
+          "text": "你的代码应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。",
+          "testString": "assert(code.match(/i\\s*?<=\\s*?4;/g).length == 1, '你的代码应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。');"
         },
         {
           "text": "你的代码应该在循环的终止条件中修复比较运算符。",
