@@ -320,27 +320,27 @@
       "id": "587d7788367417b2b2512aa2",
       "title": "Make Screen Reader Navigation Easier with the nav Landmark",
       "description": [
-        "The <code>nav</code> element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.",
-        "If there are repeated site links at the bottom of the page, it isn't necessary to markup those with a <code>nav</code> tag as well. Using a <code>footer</code> (covered in the next challenge) is sufficient.",
+        "<code>nav</code>是另一个具有标识特性的HTML5标签，便于屏幕阅读器快速识别导航内容。它用于包含页面中的主导航链接。",
+        "对于页面底部辅助性质的链接，无需使用<code>nav</code>，用<code>footer</code>（在下个挑战中介绍）就可以了",
         "<hr>",
-        "Camper Cat included navigation links at the top of his training page, but wrapped them in a <code>div</code>. Change the <code>div</code> to a <code>nav</code> tag to improve the accessibility on his page."
+        "Camper Cat在他的忍者训练页面中使用了很多导航链接，但是将它们包含在<code>div</code>中。将<code>div</code>改为<code>nav</code>标签，以提升页面的可访问性。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>nav</code> tag.",
-          "testString": "assert($('nav').length == 1, 'Your code should have one <code>nav</code> tag.');"
+          "text": "你的代码应该有一个<code>nav</code>标签。",
+          "testString": "assert($('nav').length == 1, '你的代码应该有一个<code>nav</code>标签。');"
         },
         {
-          "text": "Your <code>nav</code> tags should wrap around the <code>ul</code> and its list items.",
-          "testString": "assert($('nav').children('ul').length == 1, 'Your <code>nav</code> tags should wrap around the <code>ul</code> and its list items.');"
+          "text": "你的<code>nav</code>标签应该包含<code>ul</code>标签及其列表项。",
+          "testString": "assert($('nav').children('ul').length == 1, '你的<code>nav</code>标签应该包含<code>ul</code>标签及其列表项。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能含有<code>div</code>标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能含有<code>div</code>标签。');"
         },
         {
-          "text": "Make sure your <code>nav</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/nav>/g) && code.match(/<\\/nav>/g).length === code.match(/<nav>/g).length, 'Make sure your <code>nav</code> element has a closing tag.');"
+          "text": "确保你的<code>nav</code>标签使闭合的。",
+          "testString": "assert(code.match(/<\\/nav>/g) && code.match(/<\\/nav>/g).length === code.match(/<nav>/g).length, '确保你的<code>nav</code>标签使闭合的。');"
         }
       ],
       "solutions": [],
