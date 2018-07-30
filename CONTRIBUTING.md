@@ -59,6 +59,8 @@
 * `pull` 或 `rebase` 之后，如果有 conflicts，可以先使用 `git status` 查看存在 conflicts 的文件。
 
   修改成需要的版本后，使用 `git add .` 然后 `git rebase --continue`。
+  
+  **请注意，在这个过程中：不要 commit！不要 commit！不要 commit！**
    
 * 解决冲突之后，需要更新至远程，否则只有你的本地有更新。
   ```bash
@@ -233,6 +235,40 @@
 
 </details>
 
+<details><summary><b>我已经开了 PR，但代码历史记录很乱，而且文件改动包含了不是我改的东西，如何修复？（多见于曾经在这个分支上用过 `pull` 命令，现在使用 `pull --rebase` 的情况，见下文分析）</b></summary>
+
+  如果对 git 不是很熟悉（特别是 `git brease -i` 以及 `rebase` 命令的原理），重建一个新的分支，然后把当前这个分支里属于你的 file change 给 apply 过去，再用新的分支开 PR 是最省事的做法。
+  
+  假设你目前处于 `translate-old` 分支上，你改动了文件 `02-javascript-algorithms/abc.json` 以及 `02-javascript-algorithms/abc.md`，且你已经用当前的 `translate-old` 分支开了 PR：
+  
+  ```bash
+  # 获取 upstream 的 HEAD 指针
+  # （有兴趣可以去了解下 HEAD 指针是什么，这对理解 git 的原理很有帮助。但不了解也不影响后续操作）
+  git fetch upstream
+
+  # 基于 upstream 的 translate branch 新建一个 branch
+  # （这一步是保证你将要提交 PR 所用的分支是基于最新的 upstream/translate 分支的代码）
+  git checkout -b translate-new upstream/translate
+
+  # 由于你这个 PR 是基于你的 translate-old 分支开的，
+  # 所以现在要把这个分支上属于你的文件改动应用到新的 branch 上
+  git checkout translate-old -- 02-javascript-algorithms/abc.json
+  git checkout translate-old -- 02-javascript-algorithms/abc.md
+
+  # 这个应该只输出你改过的两个文件（在这个例子中是两个）才对
+  git status
+
+  # add、commit、push
+  git add .
+  git commit -m "Finish translation of xxx"
+  git push origin transalte-new
+
+  # 然后用这个新的 translate-new 分支去开 PR 就好了
+  ```
+
+</details>
+
+
 ## 一些原则
 * 建议使用 [git workflow](https://guides.github.com/introduction/flow/) 来进行分支的管理。
 
@@ -243,4 +279,53 @@
 * 如果你的 PR 已经被 review 过，请不要再添加新的翻译内容，根据 comment 修改好当前的 PR 即可。
 
   后续的翻译你可以等当前翻译 merge 后再开始做，或者在另一个本地的 branch 进行后续的翻译。
+  
+* 你的 PR 中不应包含你未改动过的文件，请在提交的时候仔细检查。如果包含了，请参考上面的解决方案。大部分情况下，坚持使用 `git pull --rebase`，不混用 `git pull` 可以在很大程度上避免这个问题的产生。
 
+  <details><summary><b>注：包含与否一般不会影响代码库，或导致功能缺失。但这会给 review、后续的版本控制和管理造成很大的麻烦：</b></summary>
+
+    1. Review 的时候，需要仔细比对那些本不是你改的文件，确保你没有（在 resolve conflicts 或 commit 的时候）更改任何内容。
+    2. 如果你在 PR 中引入了已经 merge 的 commits，那么就会在对应的 PR 中添加对你的 PR 的 reference。事实上，由于你本无意改动那些文件，这就只会对维护者和后续的开发者造成误导。
+    3. 维护者本可以直接通过文件的最新 commit 找到对应的 PR，但由于其他人也包含了这个文件，则需要一步一步排查，看究竟是哪一步出了问题。
+
+  </details>
+  
+  <details><summary><b>如果你想知道产生这个问题的原因，请参考以下的图形化解释：</b></summary>
+
+    ## 关于 PR 中，引入他人更改文件的情况分析：
+    
+    假设现在的 `upstream/translate` 是 `A -> B` 这两个 commits，其中 `B` 较新。你基于这个创建了你的 `my-translate` 分支，那么你也会得到 `A -> B`。
+    
+    之后，你开始进行翻译，并 `commit` 了代码。现在你的 `my-translate` 是 `A -> B -> X`，其中 `X` 为你的 commit。
+    
+    然后你发现远程更新了，现在远程是 `A -> B -> C -> D`。这次你使用了 `git pull` 命令。那么在 `my-translate` 分支，你就得到：`A -> B -> X -> M`。其中，`M` 就是传说中的 merge commit，它包含了上游的 `C` 和 `D`。
+    
+    （但从常理判断，这时候如果你得到 `A -> B -> C -> D -> X` 这样的历史线就更好了。这正是 `git pull --rebase` 会帮你完成的事情，以及这也是我们推荐使用这个命令的原因。）
+    
+    然后你继续翻译，并 `commit` 了代码，现在你的 `my-translate` 分支就是 `A -> B -> X -> M -> Y`，其中 `Y` 是你的最新 commit。
+    
+    这时候你执行了 `git pull --rebase`，那么问题来了。基于 `rebase` 命令的比较原理（或者说算法），它会首先寻找一个你的 `my-translate` 分支与 `upstream/translate` 分支共同的”祖先 commit“（ancestor commit）。”共同的祖先 commit“（common ancestor commit）是指这两个分支**开始出现分歧（diverted）之前的那个 commit**。在这个例子中，它就会找到 commit `B`，因为在 `B` 之后，`my-transalte` 分支是 commit `X`，而 `upstream/translate` 是 commit `C`。
+    
+    `rebase` 的执行逻辑可以简化为 `git reset --hard` + `git cherry-pick`（好奇的朋友可以去了解下这两个命令），那么 `cherry-pick X` 的时候不会出问题（基于 `B`，添加你的翻译，显然不会有报错），但 `cherry-pick C` 的时候就很可能会出现 conflicts：
+    
+    假设 `C` 中，其他人更新了 `README.md`（当然，在你的 commit `X` 和 `Y` 中，你都没有修改这个 `README.md`），常理上来说，这件事**应该**发生在 `X` 之前。但由于在你的分支 `my-translate` 中，`X` 是先于 `M`（包含 `C` 和 `D`）发生的，那么这里就造成了 Git 的困扰：它觉得，根据 `upstream/translate` 分支，说好了 `B` 之后就改 `README.md` 的；然而在你的分支里，却告诉我 `B` 之后 `README.md` 不需要改，那我该怎么办？——那我就只能告诉你我遇到了 conflicts，请你手动解决下吧。
+    
+    这时，如果你**错误地**使用了 `git commit` 命令，那么 Git 就会觉得，这个 `README.md` 你也改动过了，事实上你并没有，以及你也没打算改，这是**我认为**导致引入他人更改文件的一种原因。
+    
+    后续哪怕再 `git pull --rebase`，Git 也会去找 commit `B` 作为 common ancestor。这依然会导致 conflicts，因为在 `my-translate` 里，从一开始，`B` 之后是 `X` 这件事就是错的。
+    
+    **我认为**的另一种可能，在这个例子中，就是如果后续还有其他人改了 `README.md` 那么本地执行 `git pull` 的时候也会产生 conflicts，这时出现的根源是 `git merge`，因为目前 `my-translate` 的 `HEAD` 显然不是那个 `README.md` 更改的 ancestor，因此 Git 没法 fast forward 那个新的 `README.md` 改动，感兴趣的朋友可以去了解下什么是 `fast-forward`。此时需要手动处理 conflicts，处理之后 `git commit`，那么 Git 就会认为你也参与到了这个 commit 中。
+    
+    ## 那么，`git pull --rebase` 对这种情况会有什么帮助？
+    
+    还是上面的例子，你的 `my-translate` 是 `A -> B -> X`，远程以及是 `A -> B -> C -> D` 了，其中 `C` 里面更改了 `README.md`。
+    
+    如果你采用 `git pull --rebase`，那么你的本地就会是 `A -> B -> C -> D -> X`。后续你又 `commit` 了新的代码，比如现在你的本地是 `A -> B -> C -> D -> X -> Y -> Z`。此时，远程那边也加了几个 commit，变成了 `A -> B -> C -> D -> E -> F`。
+    
+    如果你继续 `git pull --rebase`，那么 Git 此时寻找到的 common ancestor commit 是 `D`，而不再是上面使用 `git pull` 的 `B` 了。除非 `E` 和 `F` 里也改了你正在改的文件，否则就不太可能产生冲突。
+    
+    结果，你就会得到 `A -> B -> C -> D -> E -> F -> X -> Y -> Z`，这也正是我们期望的结果。
+    
+  </details>
+  
+  所以，麻烦大家花一点时间处理下。感谢 :pray:
