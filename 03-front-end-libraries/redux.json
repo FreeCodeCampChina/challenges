@@ -17,13 +17,13 @@
       "title": "Create a Redux Store",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。",
-        "在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个组件且每个组件都有自己的本地状态的 React 项目，那么这个项目的整个状态将通过 Redux <code>store</code> 被定义为单个状态对象， 这是学习 Redux 时要理解的第一个重要原则：Redux 存储是应用程序状态的唯一真实来源。",
-        "这也意味着，如果你的应用程序想要更新状态，只能通过 Redux store 执行，单向数据流可以更轻松地对应用程序中的状态进行监测管理。",
+        " Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。",
+        " 在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个组件且每个组件都有自己的本地状态的 React 项目，那么这个项目的整个状态将通过 Redux <code>store</code> 被定义为单个状态对象， 这是学习 Redux 时要理解的第一个重要原则：Redux 存储是应用程序状态的唯一真实来源。",
+        " 这也意味着，如果你的应用程序想要更新状态，只能通过 Redux store 执行，单向数据流可以更轻松地对应用程序中的状态进行监测管理。",
 
-        "Redux <code>store</code> 是一个保存和管理应用程序状态的 <code>state</code>，你可以使用Redux对象中的 <code>createStore()</code> 来创建一个 redux <code>store</code>，此方法将 <code>reducer</code> 函数作为必需参数，<code>reducer</code> 函数将在后面的挑战中介绍,该函数已在代码编辑器中为您定义，它只需将 <code>state</code> 作为参数并返回一个 <code>state</code> 即可。",
-        "声明一个 <code>store</code> 变量并把它分配给 <code>createStore()</code> 方法，然后把 <code>reducer</code> 作为一个参数传入即可。",
-        "注意: 编辑器中的代码使用ES6默认参数语法初始化 state 以保存 <code>5</ code> 的值， 如果你不熟悉默认参数，你可以参考<a target=\"_blank\" href=\"http://beta.freecodecamp.com/en/challenges/es6/set-default-parameters-for-your-functions\">ES6全部课程</a>，它里面涵盖了这个内容。"
+        " Redux <code>store</code> 是一个保存和管理应用程序状态的 <code>state</code>，你可以使用Redux对象中的 <code>createStore()</code> 来创建一个 redux <code>store</code>，此方法将 <code>reducer</code> 函数作为必需参数，<code>reducer</code> 函数将在后面的挑战中介绍,该函数已在代码编辑器中为您定义，它只需将 <code>state</code> 作为参数并返回一个 <code>state</code> 即可。",
+        " 声明一个 <code>store</code> 变量并把它分配给 <code>createStore()</code> 方法，然后把 <code>reducer</code> 作为一个参数传入即可。",
+        " 注意: 编辑器中的代码使用ES6默认参数语法初始化 state 以保存 <code>5</ code> 的值， 如果你不熟悉默认参数，你可以参考<a target=\"_blank\" href=\"http://beta.freecodecamp.com/en/challenges/es6/set-default-parameters-for-your-functions\">ES6全部课程</a>，它里面涵盖了这个内容。"
       ],
       "files": {
         "indexjsx": {
@@ -67,9 +67,8 @@
       "title": "Get State from the Redux Store",
       "releasedOn": "December 25, 2017",
       "description": [
-        "The Redux store object provides several methods that allow you to interact with it. For example, you can retrieve the current <code>state</code> held in the Redux store object with the <code>getState()</code> method.",
-        "<hr>",
-        "The code from the previous challenge is re-written more concisely in the code editor. Use <code>store.getState()</code> to retrieve the <code>state</code> from the <code>store</code>, and assign this to a new variable <code>currentState</code>."
+        " Redux存储对象提供了几种允许您与之交互的方法，您可以使用 <code>getState()</code> 方法检索 Redux 存储对象中保存的当前的 <code>state</code> 。",
+        " 在代码编辑器中可以将上一个挑战中的代码更简洁地重写， 在 <code>store</code> 中使用 <code>store.getState() </code> 检索 <code>state</code> ，并将其分配给新变量 <code>currentState</code> 。"
       ],
       "files": {
         "indexjsx": {
@@ -81,7 +80,7 @@
             "  (state = 5) => state",
             ");",
             "",
-            "// change code below this line",
+            "// 更改此行下方的代码。",
             ""
           ],
           "head": [],
@@ -90,16 +89,16 @@
       },
       "tests": [
         {
-          "text": "The redux store should have a value of 5 for the initial state.",
-          "testString": "assert(store.getState()===5, 'The redux store should have a value of 5 for the initial state.');"
+          "text": " redux store 的 state 应该有一个初始值 5 。",
+          "testString": "assert(store.getState()===5, ' redux store 的 state 应该有一个初始值 5 。');"
         },
         {
-          "text": "A variable <code>currentState</code> should exist and should be assigned the current state of the Redux store.",
-          "testString": "getUserInput => assert(currentState === 5 && getUserInput('index').includes('store.getState()'), 'A variable <code>currentState</code> should exist and should be assigned the current state of the Redux store.');"
+          "text": " 应该存在一个变量 <code>currentState</code> ，并为其分配 Redux store 的当前状态。",
+          "testString": "getUserInput => assert(currentState === 5 && getUserInput('index').includes('store.getState()'), ' 应该存在一个变量 <code>currentState</code> ，并为其分配 Redux store 的当前状态。');"
         }
       ],
       "solutions": [
-        "const store = Redux.createStore(\n  (state = 5) => state\n);\n\n// change code below this line\nconst currentState = store.getState();"
+        "const store = Redux.createStore(\n  (state = 5) => state\n);\n\n// 更改此行下方的代码\nconst currentState = store.getState();"
       ],
       "challengeType": 6,
       "isRequired": false,
@@ -110,10 +109,10 @@
       "title": "Define a Redux Action",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Since Redux is a state management framework, updating state is one of its core tasks. In Redux, all state updates are triggered by dispatching actions. An action is simply a JavaScript object that contains information about an action event that has occurred. The Redux store receives these action objects, then updates its state accordingly. Sometimes a Redux action also carries some data. For example, the action carries a username after a user logs in. While the data is optional, actions must carry a <code>type</code> property that specifies the 'type' of action that occurred.",
-        "Think of Redux actions as messengers that deliver information about events happening in your app to the Redux store. The store then conducts the business of updating state based on the action that occurred.",
-        "<hr>",
-        "Writing a Redux action is as simple as declaring an object with a type property. Declare an object <code>action</code> and give it a property <code>type</code> set to the string <code>'LOGIN'</code>."
+        " 由于 Redux 是一个状态管理框架，因此更新状态是其核心任务之一。 在 Redux 中，所有状态更新都由分发操作触发，操作只是一个JavaScript对象，其中包含有关已发生的操作事件的信息， Redux 存储接收这些操作对象，然后相应地更新其状态。有时， Redux 操作也会携带一些数据，例如，在用户登录后携带用户名，虽然数据是可选的，但操作必须带有 <code>type</code> 属性，该属性指定发生操作的“类型”。",
+        " 我们可以将 Redux 操作视为信使，将有关应用程序中发生的事件信息提供给 Redux store ，然后store根据发生的操作进行状态的更新。",
+
+        " 编写 Redux 操作就像声明具有 type 属性的对象一样简单，声明一个对象 <code>action</code> 并为它设置一个属性 <code>type</ code>，并将他的值设置成字符串 <code>'LOGIN'</code>。"
       ],
       "files": {
         "indexjsx": {
@@ -121,7 +120,7 @@
           "ext": "jsx",
           "name": "index",
           "contents": [
-            "// Define an action here:",
+            "// 在此处定义操作:",
             ""
           ],
           "head": [],
@@ -130,12 +129,12 @@
       },
       "tests": [
         {
-          "text": "An action object should exist.",
-          "testString": "assert((function() { return typeof action === 'object' })(), 'An action object should exist.');"
+          "text": " 应该有一个操作对象 ",
+          "testString": "assert((function() { return typeof action === 'object' })(), ' 应该有一个操作对象 ');"
         },
         {
-          "text": "The action should have a key property type with value <code>LOGIN</code>.",
-          "testString": "assert((function() { return action.type === 'LOGIN' })(), 'The action should have a key property type with value <code>LOGIN</code>.');"
+          "text": " 该操作应具有值为 <code>LOGIN</code> 的键值类型。",
+          "testString": "assert((function() { return action.type === 'LOGIN' })(), '该操作应具有值为 <code>LOGIN</code> 的键值类型。');"
         }
       ],
       "solutions": [
@@ -150,9 +149,9 @@
       "title": "Define an Action Creator",
       "releasedOn": "December 25, 2017",
       "description": [
-        "After creating an action, the next step is sending the action to the Redux store so it can update its state. In Redux, you define action creators to accomplish this. An action creator is simply a JavaScript function that returns an action. In other words, action creators create objects that represent action events.",
-        "<hr>",
-        "Define a function named <code>actionCreator()</code> that returns the <code>action</code> object when called."
+        " 创建操作后要将操作发送到 Redux store，以便它可以更新其状态。在 Redux 中，您可以定义动作创建器来完成此任务，动作创建者只是一个返回动作的 JavaScript 函数，换句话说，动作创建者创建表示动作事件的对象。",
+
+        " 定义名为 <code>actionCreator()</code> 的函数，该函数在调用时返回 <code>action</code> 对象。"
       ],
       "files": {
         "indexjsx": {
@@ -163,7 +162,7 @@
             "const action = {",
             "  type: 'LOGIN'",
             "}",
-            "// Define an action creator here:",
+            "// 在此处定义动作创建者：",
             ""
           ],
           "head": [],
@@ -172,20 +171,20 @@
       },
       "tests": [
         {
-          "text": "The function <code>actionCreator</code> should exist.",
-          "testString": "assert(typeof actionCreator === 'function', 'The function <code>actionCreator</code> should exist.');"
+          "text": " 函数 <code>actionCreator</code> 应该存在。",
+          "testString": "assert(typeof actionCreator === 'function', ' 函数 <code>actionCreator</code> 应该存在。"
         },
         {
-          "text": "Running the <code>actionCreator</code> function should return the action object.",
-          "testString": "assert(typeof action === 'object', 'Running the <code>actionCreator</code> function should return the action object.');"
+          "text": " 运行 <code>actionCreator</code> 函数应返回操作对象。",
+          "testString": "assert(typeof action === 'object', ' 运行 <code>actionCreator</code> 函数应返回操作对象。');"
         },
         {
-          "text": "The returned action should have a key property type with value <code>LOGIN</code>.",
-          "testString": "assert(action.type === 'LOGIN', 'The returned action should have a key property type with value <code>LOGIN</code>.');"
+          "text": " 返回的操作应具有值为 <code>LOGIN</code> 的键值类型。",
+          "testString": "assert(action.type === 'LOGIN', '返回的操作应具有值为 <code>LOGIN</code> 的键值类型。');"
         }
       ],
       "solutions": [
-        "const action = {\n  type: 'LOGIN'\n}\n// Define an action creator here:\nconst actionCreator = () => {\n  return action;\n};"
+        "const action = {\n  type: 'LOGIN'\n}\n// 在此处定义动作创建者:\nconst actionCreator = () => {\n  return action;\n};"
       ],
       "challengeType": 6,
       "isRequired": false,
@@ -196,11 +195,11 @@
       "title": "Dispatch an Action Event",
       "releasedOn": "December 25, 2017",
       "description": [
-        "<code>dispatch</code> method is what you use to dispatch actions to the Redux store. Calling <code>store.dispatch()</code> and passing the value returned from an action creator sends an action back to the store.",
-        "Recall that action creators return an object with a type property that specifies the action that has occurred. Then the method dispatches an action object to the Redux store. Based on the previous challenge's example, the following lines are equivalent, and both dispatch the action of type <code>LOGIN</code>:",
-        "<blockquote>store.dispatch(actionCreator());<br>store.dispatch({ type: 'LOGIN' });</blockquote>",
-        "<hr>",
-        "The Redux store in the code editor has an initialized state that's an object containing a <code>login</code> property currently set to <code>false</code>. There's also an action creator called <code>loginAction()</code> which returns an action of type <code>LOGIN</code>. Dispatch the <code>LOGIN</code> action to the Redux store by calling the <code>dispatch</code> method, and pass in the action created by <code>loginAction()</code>."
+        " <code>dispatch</code> 方法用于将操作分派给 Redux store，调用 <code>store.dispatch()</code> 并将从操作创建者返回的值发送回 store 。",
+        " 动作创建者返回一个具有 type 属性的对象，该属性指定已发生的动作，然后，该方法将操作对象分发到 Redux store ，根据之前的挑战示例，以下内容是等效的，并且都分发类型 <code>LOGIN</code> 的操作：",
+        " <blockquote>store.dispatch(actionCreator());<br>store.dispatch({ type: 'LOGIN' });</blockquote>",
+
+        " 代码编辑器中的 Redux store 具有将 <code>login</code> 的属性值设置为 <code>false</code> 的初始化状态对象，还有一个名为 <code>loginAction()</code> 的动作创建器，它返回类型为 <code>LOGIN</code> 的动作，然后通过调用 <code>dispatch</code> 方法将 <code>LOGIN</code> 操作分发给 Redux store，并传递 <code>loginAction()</code> 创建的操作。"
       ],
       "files": {
         "indexjsx": {
@@ -218,7 +217,7 @@
             "  }",
             "};",
             "",
-            "// Dispatch the action here:",
+            "// 在这里分发动作:",
             ""
           ],
           "head": [],
@@ -227,16 +226,16 @@
       },
       "tests": [
         {
-          "text": "Calling the function <code>loginAction</code> should return an object with <code>type</code> property set to the string <code>LOGIN</code>.",
-          "testString": "assert(loginAction().type === 'LOGIN', 'Calling the function <code>loginAction</code> should return an object with <code>type</code> property set to the string <code>LOGIN</code>.');"
+          "text": " 调用函数 <code>loginAction</code> 应该返回一个 <code>type</code> 属性值为字符串 <code>LOGIN</code> 的对象。",
+          "testString": "assert(loginAction().type === 'LOGIN', '调用函数 <code>loginAction</code> 应该返回一个 <code>type</code> 属性值为字符串 <code>LOGIN</code> 的对象。');"
         },
         {
-          "text": "The store should be initialized with an object with property <code>login</code> set to <code>false</code>.",
-          "testString": "assert(store.getState().login === false, 'The store should be initialized with an object with property <code>login</code> set to <code>false</code>.');"
+          "text": " store 应该初始化一个 <code>login</code> 属性为 <code>false</code> 的对象。",
+          "testString": "assert(store.getState().login === false, 'store 应该初始化一个 <code>login</code> 属性为 <code>false</code> 的对象。');"
         },
         {
-          "text": "The <code>store.dispatch()</code> method should be used to dispatch an action of type <code>LOGIN</code>.",
-          "testString": "getUserInput => assert((function() {  let noWhiteSpace = getUserInput('index').replace(/\\s/g,''); return noWhiteSpace.includes('store.dispatch(loginAction())') || noWhiteSpace.includes('store.dispatch({type: \\'LOGIN\\'})') === true })(), 'The <code>store.dispatch()</code> method should be used to dispatch an action of type <code>LOGIN</code>.');"
+          "text": " 应使用 <code>store.dispatch() </code> 方法分派类型为 <code>LOGIN</code> 的操作。",
+          "testString": "getUserInput => assert((function() {  let noWhiteSpace = getUserInput('index').replace(/\\s/g,''); return noWhiteSpace.includes('store.dispatch(loginAction())') || noWhiteSpace.includes('store.dispatch({type: \\'LOGIN\\'})') === true })(), ' 应使用 <code>store.dispatch() </code> 方法分派类型为 <code>LOGIN</code> 的操作。');"
         }
       ],
       "solutions": [
