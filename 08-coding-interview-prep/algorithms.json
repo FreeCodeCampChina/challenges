@@ -8,10 +8,10 @@
       "id": "a3f503de51cf954ede28891d",
       "title": "Find the Symmetric Difference",
       "description": [
-        "知识提要：<a href='https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%B7%AE'target='_blank'> 对称差 (Symmetric Difference)</a>，数学上，两个 <a href='https://baike.baidu.com/item/%E9%9B%86%E5%90%88/2908117'target='_blank'> 集合 </a> 的对称差分是只属于其中一个集合，而不属于另一个集合的元素组成的集合，例如：集合 A = { 1, 2, 3} 和 B = { 2, 3, 4} 的对称差分为 A &xutri; B = C = {1,4},。 集合论中的这个运算相当于布尔逻辑中的异或运算。",
-        "创建一个函数 sym，输入两个或两个以上的数组作为参数，然后返回值为 ** 对称差分 ** 的数组",
+        "知识提要：<a href='https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%B7%AE'target='_blank'> 对称差 (Symmetric Difference)</a>，数学上，两个 <a href='https://baike.baidu.com/item/%E9%9B%86%E5%90%88/2908117'target='_blank'> 集合 </a> 的对称差分是只属于其中一个集合，而不属于另一个集合的元素组成的集合，例如：集合<code>let A = [ 1, 2, 3]</code>和<code>let B = [ 2, 3, 4]</code>的对称差分为<code>A &xutri; B = C = [ 1, 4]</code>,。 集合论中的这个运算相当于布尔逻辑中的异或运算。",
+        "创建一个函数 sym，输入两个或两个以上的数组作为参数，然后返回值为<em>对称差分</em>的数组",
         "思路：设定两个数组 (例如：<code>let A = [1, 2, 3]</code>，<code>let B = [2, 3, 4]</code>，) 作为参数传入，返回对称差分数组（<code>A &xutri; B = C = [1, 4]</code>），且数组元素具有唯一性（没有重复项）。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人” 结对编程 “，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'>帮助</a>。你可以找人“结对编程”，但不要因此放弃思考。",
       ],
       "solutions": [
         "function sym() {\n  var arrays = [].slice.call(arguments);\n  return arrays.reduce(function (symDiff, arr) {\n    return symDiff.concat(arr).filter(function (val, idx, theArr) {\n      return theArr.indexOf(val) === idx \n        && (symDiff.indexOf(val) === -1 || arr.indexOf(val) === -1);\n    });\n  });\n}\nsym([1, 2, 3], [5, 2, 1, 4]);\n"
@@ -101,8 +101,8 @@
       "title": "Inventory Update",
       "description": [
         "",
-        "比较和更新存储在 <a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84'target='_blank'> 二维数组 </a > 中的库存，并将其与新交付的第二个二维数组进行比较。更新当前的库存项数量（arr1）。如果找不到项目，请将新项目和数量添加到库存数组中。返回的库存数组应该按照项目的字母顺序排列。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人” 结对编程 “，但不要因此放弃思考。",
+        "比较和更新存储在<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84'target='_blank'> 二维数组 </a>中的库存，并将其与新交付的第二个二维数组进行比较。更新当前的库存项数量（arr1）。如果找不到项目，请将新项目和数量添加到库存数组中。返回的库存数组应该按照项目的字母顺序排列。",
+        "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'>帮助</a>。你可以找人“结对编程“，但不要因此放弃思考。",
       ],
       "solutions": [
         "function updateInventory(arr1, arr2) {\n  arr2.forEach(function(item) {\n    createOrUpdate(arr1, item);\n  });\n  // 所有的存货都必须记帐，否则你将被解雇！\n  return arr1;\n}\n\nfunction createOrUpdate(arr1, item) {\n  var index = -1;\n  while (++index < arr1.length) {\n    if (arr1[index][1] === item[1]) {\n      arr1[index][0] += item[0];\n      return;\n    }\n    if (arr1[index][1] > item[1]) {\n      break;\n    }\n  }\n  arr1.splice(index, 0, item);\n}\n\n// 示例库存列表 \nvar curInv = [\n    [21,'Bowling Ball'],\n    [2,'Dirty Sock'],\n    [1,'Hair Pin'],\n    [5,'Microphone']\n];\n\nvar newInv = [\n    [2,'Hair Pin'],\n    [3,'Half-Eaten Apple'],\n    [67,'Bowling Ball'],\n    [7,'Toothpaste']\n];\n\nupdateInventory(curInv, newInv);\n"
