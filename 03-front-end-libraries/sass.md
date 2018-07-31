@@ -9,23 +9,3 @@ There are two syntaxes available for Sass. The first, known as SCSS (Sassy CSS) 
 The second and older syntax, known as the indented syntax (or sometimes just "Sass"), uses indentation rather than brackets to indicate nesting of selectors, and newlines rather than semicolons to separate properties. Files using this syntax have the .sass extension.
 
 This section introduces the basic features of Sass.
-
-# Upcoming Lessons #
-
-Store Data with Sass Variables
-
-Nest CSS with Sass
-
-Create Reusable CSS with Mixins
-
-Use @if and @else to Add Logic To Your Styles
-
-Use @for to Create a Sass Loop
-
-Use @each to Map Over Items in a List
-
-Apply a Style Until a Condition is Met with @while
-
-Split Your Styles into Smaller Chunks with Partials
-
-Extend One Set of CSS Styles to Another Element

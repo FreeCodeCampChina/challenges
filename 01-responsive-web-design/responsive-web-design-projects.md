@@ -1,13 +1,13 @@
-# Introduction to the Responsive Web Design Challenges #
+# Introduction to the Responsive Web Design Projects #
 
-Today, there are many types of devices that can access the web. They range from large desktop computers to small mobile phones. These devices have different screen sizes, resolutions, and processing power. Responsive Web Design is an approach to designing web content that responds to the constraints of different devices. The page structure and CSS rules should be flexible to accommodate these differences. In general, design the page's CSS to your target audience. If you expect most of your traffic to be from mobile users, take a 'mobile-first' approach. Then add conditional rules for larger screen sizes. If your visitors are desktop users, then design for larger screens with conditional rules for smaller sizes. CSS gives you the tools to write different style rules, then apply them depending on the device displaying the page. This section will cover the basic ways to use CSS for Responsive Web Design.
+Time to put your newly learnt skills to work! By working on projects you would have the opportunity of applying all the skills, principles and concepts you have learnt so far HTML, CSS, Visual Design, Accessibility, etc.
 
-# Upcoming Lessons # 
+In this section you get the chance to:
 
-Create a Media Query
+* Build a Tribute Page
+* Build a Survey Form
+* Build a Product Landing Page
+* Build a Technical Documentation Page
+* Build a Personal Portfolio Webpage
 
-Make an Image Responsive
 
-Use a Retina Image for Higher Resolution Displays
-
-Make Typography Responsive
