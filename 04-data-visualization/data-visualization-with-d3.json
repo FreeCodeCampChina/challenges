@@ -13,43 +13,43 @@
         }
       ],
       "description": [
-        "D3 has several methods that let you add and change elements in your document.",
-        "The <code>select()</code> method selects one element from the document. It takes an argument for the name of the element you want and returns an HTML node for the first element in the document that matches the name. Here's an example:",
+        "D3 提供了多种方法让你添加或改变你的文本中的元素。",
+        "<code>select()</code> 从文本中选择一个元素。 他的参数是你想选择的元素的名字，返回一个 HTML 结点给文本中第一个和这个名字匹配的元素。下面是一个例子：",     
         "<code>const anchor = d3.select(\"a\");</code>",
-        "The above example finds the first anchor tag on the page and saves an HTML node for it in the variable <code>anchor</code>. You can use the selection with other methods. The \"d3\" part of the example is a reference to the D3 object, which is how you access D3 methods.",
-        "Two other useful methods are <code>append()</code> and <code>text()</code>.",
-        "The <code>append()</code> method takes an argument for the element you want to add to the document. It appends an HTML node to a selected item, and returns a handle to that node.",
-        "The <code>text()</code> method either sets the text of the selected node, or gets the current text. To set the value, you pass a string as an argument inside the parentheses of the method.",
-        "Here's an example that selects an unordered list, appends a list item, and adds text:",
+        "上面这个例子找到页面上的第一个 a标签（锚标签）, 在变量 <code>anchor</code> 中保存一个 HTML 结点。 你还可以用其他方法来选择。 例子中的 \"d3\" 是对 D3 对象的引用，可以通过他来访问 D3 的方法",        
+        "其他两个很有用的方法是 <code>append()</code> 和 <code>text()</code> 。",
+        "<code>append()</code> 的参数是你想添加到文本中的的元素。 他给选择的元素添加一个HTML结点， 返回那个结点的句柄。",
+        "<code>text()</text> 设置选中结点的文字内容或者得到当前的文字内容。 如果要设置文字内容，需要在圆括号中传入一个string类型的参数。",
+        "这里是一个例子。选择一个无序列表，添加列表项，添加文字：",
         "<blockquote>d3.select(\"ul\")<br>&nbsp;&nbsp;.append(\"li\")<br>&nbsp;&nbsp;.text(\"Very important item\");</blockquote>",
-        "D3 allows you to chain several methods together with periods to perform a number of actions in a row.",
+        "D3 允许多个方法用英文句号串联来在一行中完成多个操作。",
         "<hr>",
-        "Use the <code>select</code> method to select the <code>body</code> tag in the document. Then <code>append</code> an <code>h1</code> tag to it, and add the text \"Learning D3\" into the <code>h1</code> element."
-      ],
+        "<code>select</code> 方法选择文本中的 <code>body</code>标签。 <code>append</code> 一个 <code>h1</code> 标签给它，同时在 <code>h1</code> 中添加文本 \"Learning D3\" 。"
+        ],
       "tests": [
         {
-          "text": "The <code>body</code> should have one <code>h1</code> element.",
-          "testString": "assert($('body').children('h1').length == 1, 'The <code>body</code> should have one <code>h1</code> element.');"
+          "text": "你的 <code>body</code> 元素应该包含元素 <code>h1</code> 。",
+          "testString": "assert($('body').children('h1').length == 1, '你的 <code>body</code> 元素应该包含元素 <code>h1</code> 。');"
         },
         {
-          "text": "The <code>h1</code> element should have the text \"Learning D3\" in it.",
-          "testString": "assert($('h1').text() == \"Learning D3\", 'The <code>h1</code> element should have the text \"Learning D3\" in it.');"
+          "text": "你的 <code>h1</code> 元素应该包含文本 \"Learning D3\" 。",
+          "testString": "assert($('h1').text() == \"Learning D3\", '你的 <code>h1</code> 元素应该包含文本 \"Learning D3\" 。');"
         },
         {
-          "text": "Your code should access the <code>d3</code> object.",
-          "testString": "assert(code.match(/d3/g), 'Your code should access the <code>d3</code> object.');"
+          "text": "你的代码应该能访问 <code>d3</code> 的对象。",
+          "testString": "assert(code.match(/d3/g), '你的代码应该能访问 <code>d3</code> 的对象。');"
         },
         {
-          "text": "Your code should use the <code>select</code> method.",
-          "testString": "assert(code.match(/\\.select/g), 'Your code should use the <code>select</code> method.');"
+          "text": "你的代码应该使用 <code>select</code> 方法。",
+          "testString": "assert(code.match(/\\.select/g), '你的代码应该使用 <code>select</code> 方法。');"
         },
         {
-          "text": "Your code should use the <code>append</code> method.",
-          "testString": "assert(code.match(/\\.append/g), 'Your code should use the <code>append</code> method.');"
+          "text": "你的代码应该使用 <code>append</code> 方法。",
+          "testString": "assert(code.match(/\\.append/g), '你的代码应该使用 <code>append</code> 方法。');"
         },
         {
-          "text": "Your code should use the <code>text</code> method.",
-          "testString": "assert(code.match(/\\.text/g), 'Your code should use the <code>text</code> method.');"
+          "text": "你的代码应该使用 <code>text</code> 方法。",
+          "testString": "assert(code.match(/\\.text/g), '你的代码应该使用 <code>text</code> 方法。');"
         }
       ],
       "solutions": [],
@@ -86,24 +86,24 @@
         }
       ],
       "description": [
-        "D3 also has the <code>selectAll()</code> method to select a group of elements. It returns an array of HTML nodes for all the items in the document that match the input string. Here's an example to select all the anchor tags in a document:",
+       "<code>selectAll()</code> 方法选择一组元素。 它以 HTML 结点数组的形式返回该文本中所有匹配所输入字符串的对象。 这里是一个选择文本中所有锚标签的例子：",
         "<code>const anchors = d3.selectAll(\"a\");</code>",
-        "Like the <code>select()</code> method, <code>selectAll()</code> supports method chaining, and you can use it with other methods.",
+        "像方法 <code>select()</code> 一样，<code>selectAll()</code> 也支持链式法则，你也可以用于其他方法。",
         "<hr>",
-        "Select all of the <code>li</code> tags in the document, and change their text to \"list item\" by chaining the <code>.text()</code> method."
-      ],
+        "选择所有的 <code>li</code> 标签，通过 <code>.text()</code> 方法将它的文本改为 \"list item\" 。"
+       ],
       "tests": [
         {
-          "text": "There should be 3 <code>li</code> elements on the page, and the text in each one should say \"list item\". Capitalization and spacing should match exactly.",
-          "testString": "assert($('li').text().match(/list item/g).length == 3, 'There should be 3 <code>li</code> elements on the page, and the text in each one should say \"list item\". Capitalization and spacing should match exactly.');"
+          "text": "页面上应该有3个 <code>li</code> 元素，每个元素的文本内容应为 \"list item\"。 大小写和空格必须一致。",
+          "testString": "assert($('li').text().match(/list item/g).length == 3, '页面上应该有3个 <code>li</code> 元素，每个元素的文本内容应为 \"list item\"。 大小写和空格必须一致。');"
         },
         {
-          "text": "Your code should access the <code>d3</code> object.",
-          "testString": "assert(code.match(/d3/g), 'Your code should access the <code>d3</code> object.');"
+          "text": "你的代码应该能访问 <code>d3</code> 的对象。",
+          "testString": "assert(code.match(/d3/g), '你的代码应该能访问 <code>d3</code> 的对象。');"
         },
         {
-          "text": "Your code should use the <code>selectAll</code> method.",
-          "testString": "assert(code.match(/\\.selectAll/g), 'Your code should use the <code>selectAll</code> method.');"
+          "text": "你的代码应该使用 <code>selectAll</code> 方法。",
+          "testString": "assert(code.match(/\\.selectAll/g), '你的代码应该使用 <code>selectAll</code> 方法。');"
         }
       ],
       "solutions": [],
