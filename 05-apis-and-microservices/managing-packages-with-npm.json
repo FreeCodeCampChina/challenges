@@ -8,21 +8,21 @@
       "id": "587d7fb3367417b2b2512bfb",
       "title": "How to Use package.json, the Core of Any Node.js Project or npm Package",
       "description": [
-        "The file package.json is the center of any Node.js project or npm package. It stores information about your project just like the <head>-section in a HTML document describes the content of a webpage. The package.json consists of a single JSON-object where information is stored in \"key\": value-pairs. There are only two required fields in a minimal package.json - name and version - but it’s a good practice to provide additional information about your project that could be useful to future users or maintainers.",
-        "The author-field",
-        "If you go to the Glitch project that you set up previously and look at on the left side of your screen, you’ll find the file tree where you can see an overview of the various files in your project. Under the file tree’s back-end section, you’ll find package.json - the file that we’ll be improving in the next couple of challenges.",
-        "One of the most common pieces of information in this file is the author-field that specifies who’s the creator of a project. It can either be a string or an object with contact details. The object is recommended for bigger projects but in our case, a simple string like the following example will do.",
+        "package.json 是任何 Node.js 项目或 npm 包的中心。它存储项目的相关信息，就像 HTML 文档中的 <head> 区域是用来描述网页的通用信息（元信息）一样。package.json 由单个 JSON 对象组成，它以键值对的形式存储项目的信息。一个最小的 package.json 文件至少包含两个必须字段：name 和 version——但是提供有关项目的附加信息是一个更好的做法，在以后它可能对你的用户或者维护者有所帮助。",
+        "author 字段",
+        "如果你转到之前设置的 Glitch 项目并查看屏幕左侧，你会看到一个文件树，你可以在其中查看项目中各种文件的概述。在文件树的末尾部分，你会看到 package.json——我们将在接下来的几个挑战中改进这个文件。",
+        "这个文件中最常见的信息之一是 author 字段，它指定了谁是项目的创建者。它可以是字符串，也可以是带有联系人详细信息的对象。对于较大的项目，建议使用对象，但是在我们的例子中，一个简单的字符串就可以了，比如下面的例子。",
         "<code>\"author\": \"Jane Doe\",</code>",
-        "Instructions",
-        "Add your name to the author-field in the package.json of your Glitch project.",
-        "Remember that you’re writing JSON.",
-        "All field-names must use double-quotes (\"), e.g. \"author\"",
-        "All fields must be separated with a comma (,)"
+        "说明",
+        "将你的名字添加到 Glitch 项目中，package.json 的 author 字段。",
+        "请记住，你正在编写 JSON 文件。",
+        "所有的字段名必须使用双引号（\"）包裹, 比如：\"author\"",
+        "所有字段必须用逗号（,）分隔"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"author\" key",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.author, '\"author\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "package.json 应该有一个有效的 \"author\" 键",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.author, '缺少 \"author\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -33,18 +33,18 @@
       "id": "587d7fb3367417b2b2512bfc",
       "title": "Add a Description to Your package.json",
       "description": [
-        "The next part of a good package.json is the description-field, where a short but informative description about your project belongs.",
-        "If you some day plan to publishing a package to npm, remember that this is the string that should sell your idea to the user when they decide whether to install your package or not. However, that’s not the only use case for the description: Since it’s a great way to summarize what a project does, it’s just as important for your normal Node.js-projects to help other developers, future maintainers or even your future self understand the project quickly.",
-        "Regardless of what you plan for your project, a description is definitely recommended. Let’s add something similar to this:",
+        "一个好的 package.json 文件的下一部分就是 description 字段, 通过简洁的文字来描述你的项目。",
+        "如果你计划将来把这个包发布到 npm, 请注意 description 字段的作用是告知用户这个包的用途，这样用户就可以决定是否要安装你发布的包。然而，这并不是描述信息的唯一使用场景：它也是一种很好的总结项目的方式，对于一个普通的 Node.js 项目来说，它可以帮助其它开发者、未来的维护者以及你自己快速地了解项目，这同样非常重要。",
+        "无论你如何计划项目，都建议你使用描述信息。我们来添加类似这样的信息：",
         "<code>\"description\": \"A project that does something awesome\",</code>",
-        "Instructions",
-        "Add a description to the package.json in your Glitch project.",
-        "Remember to use double-quotes for field-names (\") and commas (,) to separate fields."
+        "说明",
+        "在 Glitch 项目的 package.json 中添加描述。",
+        "请记住使用 （\"）包裹字段名并且使用（,）分隔字段"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"description\" key",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.description, '\"description\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "package.json 应该有一个有效的 \"description\" 键",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.description, '缺少 \"description\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -55,26 +55,26 @@
       "id": "587d7fb4367417b2b2512bfd",
       "title": "Add Keywords to Your package.json",
       "description": [
-        "The keywords-field is where you can describe your project using related keywords.",
-        "Example",
+        "你可以在 keywords 字段中使用相关的关键字描述项目。",
+        "例子",
         "<code>\"keywords\": [ \"descriptive\", \"related\", \"words\" ],</code>",
-        "As you can see, this field is structured as an array of double-quoted strings.",
-        "Instructions",
-        "Add an array of suitable strings to the keywords-field in the package.json of your Glitch project.",
-        "One of the keywords should be freecodecamp."
+        "正如你所见，这个字段的结构是一个由双引号字符串组成的数组。",
+        "说明",
+        "在 Glitch 项目的 package.json 中，给 keywords 添加适当的字符串数组。",
+        "关键词之一应该是 freecodecamp。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"keywords\" key",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.keywords, '\"keywords\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "package.json 应该有一个有效的 \"keywords\" 键",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.keywords, '缺少 \"keywords\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" field should be an Array",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.isArray(packJson.keywords, '\"keywords\" is not an array'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"keywords\" 应该是一个数组",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.isArray(packJson.keywords, '\"keywords\" 不是一个数组'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" should include \"freecodecamp\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);     assert.include(packJson.keywords, 'freecodecamp', '\"keywords\" does not include \"freecodecamp\"'); },  xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"keywords\" 中应该包含关键词 \"freecodecamp\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);     assert.include(packJson.keywords, 'freecodecamp', '\"keywords\" 未包含 \"freecodecamp\"'); },  xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -85,18 +85,18 @@
       "id": "587d7fb4367417b2b2512bfe",
       "title": "Add a License to Your package.json",
       "description": [
-        "The license-field is where you inform users of your project what they are allowed to do with it.",
-        "Some common licenses for open source projects include MIT and BSD. http://choosealicense.com is a great resource if you want to learn more about what license could fit your project.",
-        "License information is not required. Copyright laws in most countries will give you ownership of what you create by default. However, it’s always a good practice to explicitly state what users can and can’t do.",
-        "Example",
+        "license 字段是你告知用户允许他们拿这个项目干什么的地方。",
+        "常见的开源协议是 MIT 和 BSD。如果你想了解更多适合你项目的许可证的信息，那么 http://choosealicense.com 是一个不错的网站。",
+        "许可证信息并不是必须的。大多数国家的版权法会默认让你拥有自己创作的作品的所有权。但是，明确说明用户可以做什么和不能做什么会是一个很好的做法。",
+        "例子",
         "<code>\"license\": \"MIT\",</code>",
-        "Instructions",
-        "Fill the license-field in the package.json of your Glitch project as you find suitable."
+        "说明",
+        "在 Glitch 项目的 package.json 中填写合适的 license 字段。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"license\" key",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.license, '\"license\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "package.json 应该有一个有效的 \"license\" 键",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.license, '缺少 \"license\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -107,16 +107,16 @@
       "id": "587d7fb4367417b2b2512bff",
       "title": "Add a Version to Your package.json",
       "description": [
-        "The version is together with name one of the required fields in a package.json. This field describes the current version of your project.",
-        "Example",
+        "在 package.json 中 version 和 name 是所必填的字段之一。version 字段描述了当前项目的版本。",
+        "例子",
         "<code>\"version\": \"1.2\",</code>",
-        "Instructions",
-        "Add a version to the package.json in your Glitch project."
+        "说明",
+        "在 Glitch 项目中的 package.json 中添加一个版本号。"
       ],
       "tests": [
         {
-          "text": "package.json should have a valid \"version\" key",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.version, '\"version\" is missing'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "package.json 应该包含一个有效的 \"version\" 键",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.version, '缺少 \"version\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -127,24 +127,24 @@
       "id": "587d7fb4367417b2b2512c00",
       "title": "Expand Your Project with External Packages from npm",
       "description": [
-        "One of the biggest reasons to use a package manager is their powerful dependency management. Instead of manually having to make sure that you get all dependencies whenever you set up a project on a new computer, npm automatically installs everything for you. But how can npm know exactly what your project needs? Meet the dependencies-section of your package.json.",
-        "In the dependencies-section, packages your project require are stored using the following format:",
+        "使用包管理器的最大原因之一是它们强大的依赖管理特性。在新的计算机上开始一个项目时，不用手动确认你已安装所有的依赖，npm 会自动为你安装它们。但是 npm 如何准确的知道你项目需要哪些依赖呢？我们来看看 package.json 中 dependencies 这一部分。",
+        "在 dependencies 这一部分，你的项目需要按照下面这种格式来存储这些依赖包：",
         "<code>\"dependencies\": {</code>",
         "<code>  \"package-name\": \"version\",</code>",
         "<code>  \"express\": \"4.14.0\"</code>",
         "<code>}</code>",
-        "Instructions",
-        "Add version 2.14.0 of the package moment to the dependencies-field of your package.json",
-        "Moment is a handy library for working with time and dates."
+        "说明",
+        "在 package.json 的 dependencies 字段中添加一个版本号为 2.14.0 的 moment 包",
+        "Moment 是一个非常方便的库，它用来处理时间和日期。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" version should be \"2.14.0\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.14\\.0/, 'Wrong version of \"moment\" installed. It should be 2.14.0'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"moment\" 的版本应该是 \"2.14.0\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.14\\.0/, '安装的 \"moment\" 版本有误。它应该是 2.14.0'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -155,29 +155,29 @@
       "id": "587d7fb5367417b2b2512c01",
       "title": "Manage npm Dependencies By Understanding Semantic Versioning",
       "description": [
-        "Versions of the npm packages in the dependencies-section of your package.json follow what’s called Semantic Versioning (SemVer), an industry standard for software versioning aiming to make it easier to manage dependencies. Libraries, frameworks or other tools published on npm should use SemVer in order to clearly communicate what kind of changes that projects who depend on the package can expect if they update.",
-        "SemVer doesn’t make sense in projects without public APIs - so unless your project is similar to the examples above, use another versioning format.",
-        "So why do you need to understand SemVer?",
-        "Knowing SemVer can be useful when you develop software that use external dependencies (which you almost always do). One day, your understanding of these numbers will save you from accidentally introducing breaking changes to your project without understanding why things “that worked yesterday” suddenly doesn’t.",
-        "This is how Semantic Versioning works according to the official website:",
-        "Given a version number MAJOR.MINOR.PATCH, increment the:",
-        "MAJOR version when you make incompatible API changes,",
-        "MINOR version when you add functionality in a backwards-compatible manner, and",
-        "PATCH version when you make backwards-compatible bug fixes.",
-        "This means that PATCHes are bug fixes and MINORs add new features but neither of them break what worked before. Finally, MAJORs add changes that won’t work with earlier versions.",
-        "Example",
-        "A semantic version number: 1.3.8",
-        "Instructions",
-        "In the dependencies-section of your package.json, change the version of moment to match MAJOR version 2, MINOR version 10 and PATCH version 2"
+        "在 package.json 中，dependencies 这部分的 npm 包的版本号遵循所谓的语义化版本（SemVer），它是一种软件版本控制的行业标准，旨在使管理依赖项更加容易。在 npm 上发布的库、框架或其它工具都应该使用语义化版本（SemVer），以便让使用该依赖包的用户能够在依赖包需要升级时，提前规划自己的项目需要为之做出的改动。",
+        "在没有公共 API 的项目中，语义化版本（SemVer）没有意义——除非你的项目与上面的例子类似，否则请使用其它的版本控制方式吧。",
+        "为什么你需要了解语义化版本（SemVer）？",
+        "在开发使用外部依赖项的软件（大多数情况都是这样）时，了解语义化版本（SemVer）会很有用。有一天你会明白这些数字的含义，在项目中它可以避免你意外地引入一些非向下兼容的更改，同时也能避免“昨天还能好好的运行，今天就不行了”这种情况发生。",
+        "根据语义化版本（SemVer）官方网站，它是这样规定的：",
+        "版本格式：<code>主版本号.次版本号.修订号</code>，版本号递增规则如下：",
+        "主版本号：当你做了不向下兼容的公共 API 修改，",
+        "次版本号：当你添加了向下兼容的新功能，",
+        "修订号：当你做了向下兼容的问题修正。",
+        "这意味着修订号是用来修复错误的，次版本号则是添加了新功能，但它们都没有破坏之前的功能。最后，主版本号的变更则是添加了对早期版本不兼容的更改。",
+        "例子",
+        "一个语义化的版本号：1.3.8",
+        "说明",
+        "在 package.json 中，修改 dependencies 里的 moment 的版本号，让它的主版本是 2，次版本号是 10，修订号是 2。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" version should be \"2.10.2\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.10\\.2/, 'Wrong version of \"moment\". It should be 2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"moment\" 的版本号应该是 \"2.10.2\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.10\\.2/, '\"moment\" 的版本号有误。它应该是 2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -188,22 +188,22 @@
       "id": "587d7fb5367417b2b2512c02",
       "title": "Use the Tilde-Character to Always Use the Latest Patch Version of a Dependency",
       "description": [
-        "In the last challenge, we told npm to only include a specific version of a package. That’s a useful way to freeze your dependencies if you need to make sure that different parts of your project stay compatible with each other. But in most use cases you don’t want to miss bug fixes, since they often include important security patches and (hopefully) don’t break things in doing so.",
-        "To allow a npm dependency to get updated to the latest PATCH-version, you can prefix the dependency’s version with the tilde-character (~). In package.json, our current rule for how npm may upgrade moment is to use a specific version only (2.10.2), but we want to allow the latest 2.10.x-version.",
-        "Example",
-        "<code>\"some-package-name\": \"~1.3.8\" allows updates to any 1.3.x version.</code>",
-        "Instructions",
-        "Use the tilde-character (~) to prefix the version of moment in your dependencies and allow npm to update it to any new PATCH release.",
-        "Note that the version numbers themselves not should be changed."
+        "在最后一个挑战中，我们告诉 npm 只包含特定版本的依赖包。如果想让项目各个部分保持相互兼容，锁定依赖包版本是一个有效的办法。但是大多数情况下，我们并不希望错过依赖项的问题修复，因为它们通常包含重要的安全补丁，而且它们理论上也会兼容我们既有的代码。",
+        "为了让 npm 依赖项更新到最新的修订版，你可以在依赖包的版本号前加一个波浪符号（~）。在 package.json 中，我们当前的 moment 依赖包更新规则是：仅使用特定版本（2.10.2），但我们想用它最新的 2.10.x 版本。",
+        "例子",
+        "<code>\"some-package-name\": \"~1.3.8\" 定义这个包允许使用的版本为 1.3.x。</code>",
+        "说明",
+        "在 dependencies 中，给 moment 的版本号添加波浪符号（~）前缀，允许 npm 将其更新为最新的修订版。",
+        "请注意，原本的版本号不用更改。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" version should match \"~2.10.2\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\~2\\.10\\.2/, 'Wrong version of \"moment\". It should be ~2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"moment\" 的版本号应该是 \"~2.10.2\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\~2\\.10\\.2/, '\"moment\" 版本号有误，它应该是 ~2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -214,22 +214,22 @@
       "id": "587d7fb5367417b2b2512c03",
       "title": "Use the Caret-Character to Use the Latest Minor Version of a Dependency",
       "description": [
-        "Similar to how the tilde (~) we learned about in the last challenge allow npm to install the latest PATCH for a dependency, the caret (^) allows npm to install future updates as well. The difference is that the caret will allow both MINOR updates and PATCHes.",
-        "At the moment, your current version of moment should be ~2.10.2 which allows npm to install to the latest 2.10.x-version. If we instead were to use the caret (^) as our version prefix, npm would instead be allowed to update to any 2.x.x-version.",
-        "Example",
-        "<code>\"some-package-name\": \"^1.3.8\" allows updates to any 1.x.x version.</code>",
-        "Instructions",
-        "Use the caret-character (^) to prefix the version of moment in your dependencies and allow npm to update it to any new MINOR release.",
-        "Note that the version numbers themselves not should be changed."
+        "和上一个挑战中我们学到的波浪符号（~）来安装最新的修订版依赖一样，使用插入符号（^）允许 npm 来安装功能更新。它们的不同之处在于：插入符号（^）允许次版本和修订版更新。",
+        "此刻，你项目中的 moment 依赖包的版本应该是 ~2.10.2，这意味着 npm 可以安装 2.10.x 版的 moment，如果使用插入符号（^）来替换版本号的前缀，那么 npm 可以安装的版本则是 2.x.x。",
+        "例子",
+        "<code>\"some-package-name\": \"^1.3.8\" 定义这个包允许使用的版本为 1.x.x。</code>",
+        "说明",
+        "使用插入符号（^）为依赖项中的 moment 版本添加前缀，允许 npm 更新依赖包到任意向下兼容的新功能版。",
+        "请注意，原本的版本号不用更改。"
       ],
       "tests": [
         {
           "text": "\"dependencies\" should include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" does not include \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "\"moment\" version should match \"^2.x.x\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\^2\\./, 'Wrong version of \"moment\". It should be ^2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\^2\\./, '\"moment\" 的版本号有误，它应该是 ^2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -240,17 +240,17 @@
       "id": "587d7fb5367417b2b2512c04",
       "title": "Remove a Package from Your Dependencies",
       "description": [
-        "Now you’ve tested a few ways you can manage dependencies of your project by using the package.json's dependencies-section. You’ve included external packages by adding them to the file and even told npm what types of versions you want by using special characters as the tilde (~) or the caret (^).",
-        "But what if you want to remove an external package that you no longer need? You might already have guessed it - Just remove the corresponding \"key\": value-pair for that from your dependencies.",
-        "This same method applies to removing other fields in your package.json as well",
-        "Instructions",
-        "Remove the package moment from your dependencies.",
-        "Make sure you have the right amount of commas after removing it."
+        "在 package.json 中 dependencies 这一部分，目前尝试了一些管理依赖的方式。你已经添加了一些外部的依赖包到项目中，甚至通过一些特殊的字符比如波浪符号（~）或者插入符号（^）来告诉 npm 你想要的版本类型。",
+        "但是，如果想要删除不需要的依赖包，该怎么办呢？你可能已经猜到了——只需要删除 dependencies 中的键值对就行了。",
+        "同样的方法也适用于删除 package.json 中的其它字段",
+        "说明",
+        "删除 moment 依赖包。",
+        "删除依赖包后，确保没有多余的逗号。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should not include \"moment\"",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.notProperty(packJson.dependencies, 'moment', '\"dependencies\" still includes \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "\"dependencies\" 不包含 \"moment\"",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.notProperty(packJson.dependencies, 'moment', '\"dependencies\" 中仍然有 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
