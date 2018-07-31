@@ -23,7 +23,7 @@
           "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>元素应该为红色。');"
         },
         {
-          "text": "<code>h2</code>元素的<code>style</code> 属性的值应该以<code>;</code>结束。",
+          "text": "<code>h2</code>元素的<code>style</code>属性的值应该以<code>;</code>结束。",
           "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。');"
         
       ],
@@ -76,9 +76,9 @@
       "title": "Use CSS Selectors to Style Elements",
       "description": [
         "在CSS中，有上百种<code>属性</code>可以让你改变页面样式。",
-        "通过输入 <code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code> 的<code>行内样式</code>，修改单一的<code>h2</code>元素的颜色的方式，配置 <code>层叠样式表（CSS）</code> 的方式之一。",
+        "通过输入<code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code>的<code>行内样式</code>，修改单一的<code>h2</code>元素的颜色的方式，配置<code>层叠样式表（CSS）</code>的方式之一。",
         "这是改变元素样式的一个特别方法，不过存在着更好的方法来设置<code>层叠样式表（CSS</code>。",
-        "在代码的顶部，创建一个 <code>style</code> 声明区域，如下方所示：",
+        "在代码的顶部，创建一个<code>style</code>声明区域，如下方所示：",
         "<blockquote>&#60;style&#62;<br>&#60;/style&#62;</blockquote>",
         "在style样式声明区域内，可以创建一个<code>CSS 选择器</code>的规则来应用于所有的<code>h2</code>元素。例如，如果你想所有<code>h2</code>元素变成红色，可以添加下方的样式规则：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;h2 {color: red;}<br>&#60;/style&#62;</blockquote>",
@@ -158,7 +158,7 @@
         "可以看到，我们在<code>&#60;style&#62;</code>样式声明区域里，创建了一个名为<code>blue-text</code>的<code>class</code>选择器。",
         "你可以将 CSS<code>class</code>选择器应用到一个HTML元素里，如下所示：",
         "<code>&#60;h2 class=\"blue-text\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "注意你的<code>style</code>样式区域声明里，<code>class</code>需以句号开头。而在你的HTML元素里的<code>class</code>属性的类名，不需要包含句号",
+        "注意你的<code>style</code>样式区域声明里，<code>class</code>需以句号开头。而在你的HTML元素里的<code>class</code>属性的类名，不需要包含句号。",
         "<hr>",
         "在<code>style</code>样式声明里，<code>h2</code>元素选择器改为<code>.red-text</code>的 CSS <code>class</code> 择器，同时将颜色<code>blue</code>变为<code>red</code>。",
         "在你的<code>h2</code>元素里，添加一个<code>class</code>属性，且值为<code>'red-text'</code>。"
@@ -177,7 +177,7 @@
           "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), '你的<code>style</code>样式声明区域里应该包含一个<code>red-text</code> class 选择器，并且它的颜色应为红色。');"
         },
         {
-          "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。",
+          "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式。",
           "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。');"
         }
       ],
@@ -448,33 +448,33 @@
       "id": "bad87fee1348bd9aedf08807",
       "title": "Import a Google Font",
       "description": [
-        "In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are various sources for web fonts on the internet but, for this example we will focus on the Google Fonts library.",
-        "<a href='https://fonts.google.com/' target='_blank'>Google Fonts</a> is a free library of web fonts that you can use in your CSS by referencing the font's URL.",
-        "So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country, you will need to skip this challenge).",
-        "To import a Google Font, you can copy the font(s) URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the <code>Lobster</code> font. To do this, copy the following code snippet and paste it into the top of your code editor(before the opening <code>style</code> element):",
+        "除了大多数系统提供的默认字体以外，我们也可以在我们的网站上使用自定义的字体。网络上有各种各样的字体，不过在这个例子中，我们将会尝试使用<code>Google</code>字体库。",
+        "<a href='https://fonts.google.com/' target='_blank'>Google 字体</a> 是一个免费的字体库，可以通过在 CSS 里面设置字体的 URL 来引用。",
+        "因此，下一步，我们将引入和使用<code>Google</code>字体（注意：如果你所在国家禁止使用<code>Google</code>，则可以跳过这个挑战）。",
+        "引入<code>Google</code>字体，你需要复制<code>Google</code>字体的 URL，并粘贴到你的 HTML 里面。在这个挑战中，我们需要引入<code>Lobster</code>字体。因此，请复制以下代码段，并粘贴到你的代码编辑器顶部。（在<code>style</code>标签之前）。",
         "<code>&#60;link href=\"https://fonts.googleapis.com/css?family=Lobster\" rel=\"stylesheet\" type=\"text/css\"&#62;</code>",
-        "Now you can use the <code>Lobster</code> font in your CSS by using <code>Lobster</code> as the FAMILY_NAME as in the following example:<br><code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.",
-        "The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. This is covered in the next challenge.",
-        "Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the <code>\"Open Sans\"</code> font, but not to use the <code>Lobster</code> font.",
+        "现在你可以设置<code>font-family</code>属性为<code>Lobster</code>，来使用<code>Lobster</code>字体。例子如下：<br><code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.",
+        "<code>GENERIC_NAME</code>是可选的，其他字体不可用时便作为后备字体。在下一个挑战中可以得到体现。",
+        "字体名区分大小写，并且如果字体名含有空格，需要用引号括起来。例如，使用<code>\"Open Sans\"</code>字体需要添加引号，而<code>Lobster</code>字体则不需要",
         "<hr>",
-        "Create a <code>font-family</code> CSS rule that uses the <code>Lobster</code> font, and ensure that it will be applied to your <code>h2</code> element."
+        "创建一个CSS规则，<code>font-family</code>属性里设置为<code>Lobster</code>字体，并确保适用于你所有的<code>h2</code>元素。"
       ],
       "tests": [
         {
-          "text": "Import the <code>Lobster</code> font.",
-          "testString": "assert(new RegExp(\"googleapis\", \"gi\").test(code), 'Import the <code>Lobster</code> font.');"
+          "text": "引入<code>Lobster</code>字体。",
+          "testString": "assert(new RegExp(\"googleapis\", \"gi\").test(code), '引入<code>Lobster</code>字体。');"
         },
         {
-          "text": "Your <code>h2</code> element should use the font <code>Lobster</code>.",
-          "testString": "assert($(\"h2\").css(\"font-family\").match(/lobster/i), 'Your <code>h2</code> element should use the font <code>Lobster</code>.');"
+          "text": "你的<code>h2</code>元素必须适用<code>Lobster</code>字体。",
+          "testString": "assert($(\"h2\").css(\"font-family\").match(/lobster/i), '你的<code>h2</code>元素必须适用<code>Lobster</code>字体。');"
         },
         {
-          "text": "Use an <code>h2</code> CSS selector to change the font.",
-          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?\\s*;\\s*\\}/gi.test(code), 'Use an <code>h2</code> CSS selector to change the font.');"
+          "text": "使用<code>h2</code>选择器去改变字体样式。",
+          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?\\s*;\\s*\\}/gi.test(code), '使用<code>h2</code>选择器去改变字体样式。');"
         },
         {
-          "text": "Your <code>p</code> element should still use the font <code>monospace</code>.",
-          "testString": "assert($(\"p\").css(\"font-family\").match(/monospace/i), 'Your <code>p</code> element should still use the font <code>monospace</code>.');"
+          "text": "你的<code>p</code>元素应该保持使用<code>monospace</code>字体。",
+          "testString": "assert($(\"p\").css(\"font-family\").match(/monospace/i), '你的<code>p</code>元素应该保持使用<code>monospace</code>字体。');"
         }
       ],
       "challengeType": 0,
@@ -536,13 +536,13 @@
       "id": "bad87fee1348bd9aedf08808",
       "title": "Specify How Fonts Should Degrade",
       "description": [
-        "There are several default fonts that are available in all browsers. These generic font families include <code>monospace</code>, <code>serif</code> and <code>sans-serif</code>",
-        "When one font isn't available, you can tell the browser to \"degrade\" to another font.",
-        "For example, if you wanted an element to use the <code>Helvetica</code> font, but degrade to the <code>sans-serif</code> font when <code>Helvetica</code> wasn't available, you will specify it as follows:",
+        "所有浏览器都有几种默认字体。这些通用字体包括<code>monospace</code>，<code>serif</code>和<code>sans-serif</code>",
+        "当字体不可用，你可以告诉浏览器通过 “降级” 去使用其他字体。",
+        "例如，如果你想将一个元素的字体设置成<code>Helvetica</code>，当<code>Helvetica</code>不可用时，降级使用<code>sans-serif</code>字体，可使用以下方法：",
         "<blockquote>p {<br>&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>}</blockquote>",
-        "Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.",
+        "通用字体名字不区分大小写。同时，也不需要使用引号，因为它们是 CSS 关键字。",
         "<hr>",
-        "To begin with, apply the <code>monospace</code> font to the <code>h2</code> element, so that it now has two fonts - <code>Lobster</code> and <code>monospace</code>.",
+        "首先，将<code>monospace</code>字体添加到<code>h2</code>元素里，同时拥有<code>Lobster</code>字体和 <code>monospace</code>字体。",
         "In the last challenge, you imported the <code>Lobster</code> font using the <code>link</code> tag. Now comment out that import of the <code>Lobster</code> font(using the HTML comments you learned before) from Google Fonts so that it isn't available anymore. Notice how your <code>h2</code> element degrades to the <code>monospace</code> font.",
         "<strong>Note</strong><br>If you have the Lobster font installed on your computer, you won't see the degradation because your browser is able to find the font."
       ],
