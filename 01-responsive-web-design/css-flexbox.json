@@ -8,15 +8,15 @@
       "id": "587d78ab367417b2b2512af0",
       "title": "Use display: flex to Position Two Boxes",
       "description": [
-        "This section uses alternating challenge styles to show how to use CSS to position elements in a flexible way. First, a challenge will explain theory, then a practical challenge using a simple tweet component will apply the flexbox concept.",
-        "Placing the CSS property <code>display: flex;</code> on an element allows you to use other flex properties to build a responsive page.",
+        "这节会使用一种不同的挑战方式来学习一下如何更灵活地使用 CSS 布局元素。首先，我们会先用一个挑战解释原理，然后使用“弹性盒子”（flexbox）调整一个推文组件的样式来完成挑战。" ,
+        "只要在一个元素的 CSS 中添加<code>display: flex;</code>，就可以使用其他 flex 属性来构建响应式页面了。",
         "<hr>",
-        "Add the CSS property <code>display</code> to <code>#box-container</code> and set its value to flex."
+        "为<code>#box-container</code>添加<code>display</code>属性，设置其值为 flex。"
       ],
       "tests": [
         {
-          "text": "<code>#box-container</code> should have the <code>display</code> property set to a value of flex.",
-          "testString": "assert($('#box-container').css('display') == 'flex', '<code>#box-container</code> should have the <code>display</code> property set to a value of flex.');"
+          "text": "<code>#box-container</code>应有<code>display</code>属性，其值应为 flex。",
+          "testString": "assert($('#box-container').css('display') == 'flex', '<code>#box-container</code>应有<code>display</code>属性，其值应为 flex。');"
         }
       ],
       "solutions": [],
@@ -63,39 +63,39 @@
       "id": "587d78ab367417b2b2512af1",
       "title": "Add Flex Superpowers to the Tweet Embed",
       "description": [
-        "To the right is the tweet embed that will be used as the practical example. Some of the elements would look better with a different layout. The last challenge demonstrated <code>display: flex</code>. Here you'll add it to several components in the tweet embed to start adjusting their positioning.",
+        "我们以右边的内嵌推文为基础开始实践。一些元素换一个布局方式或许更好看。上一个挑战演示了<code>display: flex</code>，现在你需要把它添加到推文内嵌的多个组件中，调整它们的位置。",
         "<hr>",
-        "Add the CSS property <code>display: flex</code> to all of the following items - note that the selectors are already set up in the CSS:",
-        "<code>header</code>, the header's <code>.profile-name</code>, the header's <code>.follow-btn</code>, the header's <code>h3</code> and <code>h4</code>, the <code>footer</code>, and the footer's <code>.stats</code>."
+        "为下列项目添加 CSS 属性<code>display: flex</code>—— 注意，选择器已在 CSS 中给出：",
+        "<code>header</code>、header 的<code>.profile-name</code>、header 的<code>.follow-btn</code>、header 的<code>h3</code>和<code>h4</code>、<code>footer</code>以及 footer 的<code>.stats</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>header</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('header').css('display') == 'flex', 'Your <code>header</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>header</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('header').css('display') == 'flex', '<code>header</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>footer</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('footer').css('display') == 'flex', 'Your <code>footer</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>footer</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('footer').css('display') == 'flex', '<code>footer</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>h3</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('h3').css('display') == 'flex', 'Your <code>h3</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>h3</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('h3').css('display') == 'flex', '<code>h3</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>h4</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('h4').css('display') == 'flex', 'Your <code>h4</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>h4</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('h4').css('display') == 'flex', '<code>h4</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>.profile-name</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('.profile-name').css('display') == 'flex', 'Your <code>.profile-name</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>.profile-name</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.profile-name').css('display') == 'flex', '<code>.profile-name</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>.follow-btn</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('.follow-btn').css('display') == 'flex', 'Your <code>.follow-btn</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>.follow-btn</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.follow-btn').css('display') == 'flex', '<code>.follow-btn</code>的<code>display</code>属性应为 flex。');"
         },
         {
-          "text": "Your <code>.stats</code> should have a <code>display</code> property set to flex.",
-          "testString": "assert($('.stats').css('display') == 'flex', 'Your <code>.stats</code> should have a <code>display</code> property set to flex.');"
+          "text": "<code>.stats</code>的<code>display</code>属性应为 flex。",
+          "testString": "assert($('.stats').css('display') == 'flex', '<code>.stats</code>的<code>display</code>属性应为 flex。');"
         }
       ],
       "solutions": [],
@@ -207,16 +207,16 @@
       "id": "587d78ab367417b2b2512af2",
       "title": "Use the flex-direction Property to Make a Row",
       "description": [
-        "Adding <code>display: flex</code> to an element turns it into a flex container. This makes it possible to align any children of that element into rows or columns. You do this by adding the <code>flex-direction</code> property to the parent item and setting it to row or column. Creating a row will align the children horizontally, and creating a column will align the children vertically.",
-        "Other options for <code>flex-direction</code> are row-reverse and column-reverse.",
-        "<strong>Note</strong><br>The default value for the <code>flex-direction</code> property is row.",
+        "添加了<code>display: flex</code>的元素会成为 flex 容器。只要把<code>flex-direction</code>属性添加到父元素，并设置其为 row 或 column 即可轻易横或竖排列它的子元素。设为 row 可以让子元素水平排列，column 可以让子元素垂直排列。",
+        "<code>flex-direction</code>的其他可选值还有 row-reverse 和 column-reverse。",
+        "<strong>注意</strong><br><code>flex-direction</code>的默认值为 row。",
         "<hr>",
-        "Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of row-reverse."
+        "为<code>#box-container</code>添加 CSS 属性<code>flex-direction</code>，其值设为 row-reverse。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-container</code> element should have a <code>flex-direction</code> property set to row-reverse.",
-          "testString": "assert($('#box-container').css('flex-direction') == 'row-reverse', 'The <code>#box-container</code> element should have a <code>flex-direction</code> property set to row-reverse.');"
+          "text": "<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 row-reverse。",
+          "testString": "assert($('#box-container').css('flex-direction') == 'row-reverse', '<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 row-reverse。');"
         }
       ],
       "solutions": [],
@@ -262,18 +262,18 @@
       "id": "587d78ab367417b2b2512af3",
       "title": "Apply the flex-direction Property to Create Rows in the Tweet Embed",
       "description": [
-        "The <code>header</code> and <code>footer</code> in the tweet embed example have child items that could be arranged as rows using the <code>flex-direction</code> property. This tells CSS to align the children horizontally.",
+        "内嵌推文样例中的<code>header</code>和<code>footer</code>有自己的子元素，使用<code>flex-direction</code>属性可以把这些子元素排列成一行。这个属性告诉 CSS 需要将这个元素的子元素水平排列。",
         "<hr>",
-        "Add the CSS property <code>flex-direction</code> to both the <code>header</code> and <code>footer</code> and set the value to row."
+        "为<code>header</code>和<code>footer</code>添加 CSS 属性<code>flex-direction</code>并把值设为 row。"
       ],
       "tests": [
         {
-          "text": "The <code>header</code> should have a <code>flex-direction</code> property set to row.",
-          "testString": "assert(code.match(/header\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), 'The <code>header</code> should have a <code>flex-direction</code> property set to row.');"
+          "text": "<code>header</code>应有<code>flex-direction</code>属性，其值应为 row。",
+          "testString": "assert(code.match(/header\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>header</code>应有<code>flex-direction</code>属性，其值应为 row。');"
         },
         {
-          "text": "The <code>footer</code> should have a <code>flex-direction</code> property set to row.",
-          "testString": "assert(code.match(/footer\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), 'The <code>footer</code> should have a <code>flex-direction</code> property set to row.');"
+          "text": "<code>footer</code>应有<code>flex-direction</code>属性，其值应为 row。",
+          "testString": "assert(code.match(/footer\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-direction:\\s*?row;/g), '<code>footer</code>应有<code>flex-direction</code>属性，其值应为 row。');"
         }
       ],
       "solutions": [],
@@ -387,14 +387,14 @@
       "id": "587d78ac367417b2b2512af4",
       "title": "Use the flex-direction Property to Make a Column",
       "description": [
-        "The last two challenges used the <code>flex-direction</code> property set to row. This property can also create a column by vertically stacking the children of a flex container.",
+        "之前两项挑战把<code>flex-direction</code>设为 row。这个属性还能创建一个列，让子元素垂直排列在 flex 容器中。",
         "<hr>",
-        "Add the CSS property <code>flex-direction</code> to the <code>#box-container</code> element, and give it a value of column."
+        "给<code>#box-container</code>元素添加 CSS 属性<code>flex-direction</code>，赋值为 column。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-container</code> element should have a <code>flex-direction</code> property set to column.",
-          "testString": "assert($('#box-container').css('flex-direction') == 'column', 'The <code>#box-container</code> element should have a <code>flex-direction</code> property set to column.');"
+          "text": "<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 column。",
+          "testString": "assert($('#box-container').css('flex-direction') == 'column', '<code>#box-container</code>应有<code>flex-direction</code>属性，其值应为 column。');"
         }
       ],
       "solutions": [],
@@ -440,14 +440,14 @@
       "id": "587d78ac367417b2b2512af5",
       "title": "Apply the flex-direction Property to Create a Column in the Tweet Embed",
       "description": [
-        "The tweet embed <code>header</code> and <code>footer</code> used the <code>flex-direction</code> property earlier with a row value. Similarly, the items inside the <code>.profile-name</code> element would work well stacked as a column.",
+        "上面，内嵌推文的<code>header</code>和<code>footer</code>把<code>flex-direction</code>属性设为 row。相似地，<code>.profile-name</code>里的元素或许竖着排列会好看一点。",
         "<hr>",
-        "Add the CSS property <code>flex-direction</code> to the header's <code>.profile-name</code> element and set the value to column."
+        "在 header 的<code>.profile-name</code>元素添加 CSS 属性<code>flex-direction</code>，将其值设为 column。"
       ],
       "tests": [
         {
-          "text": "The <code>.profile-name</code> element should have a <code>flex-direction</code> property set to column.",
-          "testString": "assert($('.profile-name').css('flex-direction') == 'column', 'The <code>.profile-name</code> element should have a <code>flex-direction</code> property set to column.');"
+          "text": "<code>.profile-name</code>应有<code>flex-direction</code>属性，其值应为 column。",
+          "testString": "assert($('.profile-name').css('flex-direction') == 'column', '<code>.profile-name</code>应有<code>flex-direction</code>属性，其值应为 column。');"
         }
       ],
       "solutions": [],
@@ -558,19 +558,19 @@
       "id": "587d78ac367417b2b2512af6",
       "title": "Align Elements Using the justify-content Property",
       "description": [
-        "Sometimes the flex items within a flex container do not fill all the space in the container. It is common to want to tell CSS how to align and space out the flex items a certain way. Fortunately, the <code>justify-content</code> property has several options to do this. But first, there is some important terminology to understand before reviewing those options.",
-        "<a href=\"https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg\" target=\"_blank\">Here is a useful image showing a row to illustrate the concepts below.</a>",
-        "Recall that setting a flex container as a row places the flex items side-by-side from left-to-right. A flex container set as a column places the flex items in a vertical stack from top-to-bottom. For each, the direction the flex items are arranged is called the <strong>main axis</strong>. For a row, this is a horizontal line that cuts through each item. And for a column, the main axis is a vertical line through the items.",
-        "There are several options for how to space the flex items along the line that is the main axis. One of the most commonly used is <code>justify-content: center;</code>, which aligns all the flex items to the center inside the flex container. Others options include:",
-        "<ul><li><code>flex-start</code>: aligns items to the start of the flex container. For a row, this pushes the items to the left of the container. For a column, this pushes the items to the top of the container.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For a row, this pushes the items to the right of the container. For a column, this pushes the items to the bottom of the container.</li><li><code>space-between</code>: aligns items to the center of the main axis, with extra space placed between the items. The first and last items are pushed to the very edge of the flex container. For example, in a row the first item is against the left side of the container, the last item is against the right side of the container, then the other items between them are spaced evenly.</li><li><code>space-around</code>: similar to <code>space-between</code> but the first and last items are not locked to the edges of the container, the space is distributed around all the items</li></ul>",
+        "flex 容器里的 flex 子元素有时不能充满整个容器，所以我们需要告诉 CSS 如何以特定方案排列和调整 flex 子元素。幸运的是，我们有<code>justify-content</code>属性处理这个问题。但在介绍<code>justify-content</code>的可选值之前，我们要先理解一些重要术语。",
+        "<a href=\"https://www.w3.org/TR/css-flexbox-1/images/flex-direction-terms.svg\" target=\"_blank\">这张图片的元素横着排列，很好地描述了下面的概念。</a>",
+        "回忆一下，把 flex 容器设为一个行，它的子元素会从左到右逐个排列，把 flex 容器设为一个列，它的子元素会从上到下逐个排列。子元素排列的方向被称为 <strong>main axis（主轴）</strong>。对于行，主轴水平贯穿每一个项目；对于列，主轴垂直贯穿每一个项目。",
+        "关于 flex 子元素在主轴排列方式，可以选择以下值：其中一个很常用的是<code>justify-content: center;</code>，可以让 flex 子元素排列在 flex 容器中间。其他可选值还有：",
+        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠左放，对于列是把项目都靠顶部放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠右放，对于列是把项目都靠底部放。</li><li><code>space-between</code>：项目间保留一定间距地在主轴排列。第一个和最后一个项目会被挤到容器边沿。例如，在行中第一个项目会紧贴着容器左侧，最后一个项目会紧贴着容器右侧，然后其他项目均匀排布。</li><li><code>space-around</code>：与<code>space-between</code>相似，但头尾两个项目不会紧贴容器边缘，空间会均匀分布在所有项目两边</li></ul>",
         "<hr>",
-        "An example helps show this property in action. Add the CSS property <code>justify-content</code> to the <code>#box-container</code> element, and give it a value of center.",
-        "<strong>Bonus</strong><br>Try the other options for the <code>justify-content</code> property in the code editor to see their differences. But note that a value of center is the only one that will pass this challenge."
+        "这个例子可以帮助你理解这个属性，在<code>#box-container</code>元素添加 CSS 属性<code>justify-content</code>，其值为 center。",
+        "<strong>提示：</strong><br>在编辑器里试试<code>justify-content</code>的其他可用值，看看它们之间的区别。但要通过挑战，你必须把值设为 center."
       ],
       "tests": [
         {
-          "text": "The <code>#box-container</code> element should have a <code>justify-content</code> property set to a value of center.",
-          "testString": "assert($('#box-container').css('justify-content') == 'center', 'The <code>#box-container</code> element should have a <code>justify-content</code> property set to a value of center.');"
+          "text": "<code>#box-container</code>应有<code>justify-content</code>属性，其值应为 center。",
+          "testString": "assert($('#box-container').css('justify-content') == 'center', '<code>#box-container</code>应有<code>justify-content</code>属性，其值应为 center。');"
         }
       ],
       "solutions": [],
@@ -617,14 +617,14 @@
       "id": "587d78ac367417b2b2512af7",
       "title": "Use the justify-content Property in the Tweet Embed",
       "description": [
-        "The last challenge showed an example of the <code>justify-content</code> property. For the tweet embed, this property can be applied to align the items in the <code>.profile-name</code> element.",
+        "上一项挑战展示了<code>justify-content</code>属性的作用。如果我们想对齐推文内的子元素，可以把<code>justify-content</code>应用在<code>.profile-name</code>上。",
         "<hr>",
-        "Add the CSS property <code>justify-content</code> to the header's <code>.profile-name</code> element and set the value to any of the options from the last challenge."
+        "在 header 的<code>.profile-name</code>元素添加 CSS 属性<code>justify-content</code>，把它的值设为上面挑战提到的任意可用值。"
       ],
       "tests": [
         {
-          "text": "The <code>.profile-name</code> element should have the <code>justify-content</code> property set to any of these values: center, flex-start, flex-end, space-between, or space-around.",
-          "testString": "assert(code.match(/header\\s.profile-name\\s*{\\s*?.*?\\s*?.*?\\s*?\\s*?.*?\\s*?justify-content\\s*:\\s*(center|flex-start|flex-end|space-between|space-around)\\s*;/g), 'The <code>.profile-name</code> element should have the <code>justify-content</code> property set to any of these values: center, flex-start, flex-end, space-between, or space-around.');"
+          "text": "<code>.profile-name</code>元素的<code>justify-content</code>属性可选以下值：center、flex-start、flex-end、space-between、space-around。",
+          "testString": "assert(code.match(/header\\s.profile-name\\s*{\\s*?.*?\\s*?.*?\\s*?\\s*?.*?\\s*?justify-content\\s*:\\s*(center|flex-start|flex-end|space-between|space-around)\\s*;/g), '<code>.profile-name</code>元素的<code>justify-content</code>属性可选以下值：center、flex-start、flex-end、space-between、space-around。');"
         }
       ],
       "solutions": [],
@@ -736,19 +736,19 @@
       "id": "587d78ad367417b2b2512af8",
       "title": "Align Elements Using the align-items Property",
       "description": [
-        "The <code>align-items</code> property is similar to <code>justify-content</code>. Recall that the <code>justify-content</code> property aligned flex items along the main axis. For rows, the main axis is a horizontal line and for columns it is a vertical line.",
-        "Flex containers also have a <strong>cross axis</strong> which is the opposite of the main axis. For rows, the cross axis is vertical and for columns, the cross axis is horizontal.",
-        "CSS offers the <code>align-items</code> property to align flex items along the cross axis. For a row, it tells CSS how to push the items in the entire row up or down within the container. And for a column, how to push all the items left or right within the container.",
-        "The different values available for <code>align-items</code> include:",
-        "<ul><li><code>flex-start</code>: aligns items to the start of the flex container. For rows, this aligns items to the top of the container. For columns, this aligns items to the left of the container.</li><li><code>flex-end</code>: aligns items to the end of the flex container. For rows, this aligns items to the bottom of the container. For columns, this aligns items to the right of the container.</li><li><code>center</code>: align items to the center. For rows, this vertically aligns items (equal space above and below the items). For columns, this horizontally aligns them (equal space to the left and right of the items).</li><li><code>stretch</code>: stretch the items to fill the flex container. For example, rows items are stretched to fill the flex container top-to-bottom.</li><li><code>baseline</code>: align items to their baselines. Baseline is a text concept, think of it as the line that the letters sit on.</li></ul>",
+        "<code>align-items</code>属性与<code>justify-content</code>类似。回忆一下，<code>justify-content</code>属性使 flex 子元素沿主轴排列。行的主轴是水平线，列的主轴是垂直线。",
+        "Flex 容器中，与主轴垂直的叫做 <strong>cross axis（交叉轴）</strong>。行的交叉轴是垂直的，列的交叉轴是水平的。",
+        "CSS 提供了<code>align-items</code>属性，可以用于在交叉轴调整 flex 子元素。对于行，它规定了项目在容器中应该靠上还是靠下，而对于列，就是靠左或靠右。",
+        "<code>align-items</code>的可选值包括：",
+        "<ul><li><code>flex-start</code>：从 flex 容器的前端开始排列项目。对行来说是把项目都靠顶部放，对于列是把项目都靠左放。</li><li><code>flex-end</code>：从 flex 容器的后端开始排列项目。对行来说是把项目都靠底部放，对于列是把项目都靠右放。</li><li><code>center</code>：把项目的位置调整到中间。对于行，垂直居中（项目上下方空间相等）。对于列，水平居中（项目左右方空间相等）。</li><li><code>stretch</code>：拉伸项目，填满 flex 容器。例如，排成行的项目从容器顶部拉伸到底部。</li><li><code>baseline</code>：基线对齐地排列。基线是字体相关的概念，可以认为字体坐落在基线上。</li></ul>",
         "<hr>",
-        "An example helps show this property in action. Add the CSS property <code>align-items</code> to the <code>#box-container</code> element, and give it a value of center.",
-        "<strong>Bonus</strong><br>Try the other options for the <code>align-items</code> property in the code editor to see their differences. But note that a value of center is the only one that will pass this challenge."
+        "这个例子可以帮助你理解这个属性，在<code>#box-container</code>添加 CSS 属性<code>align-items</code>并将值设为 center。",
+        "<strong>提示：</strong><br>在编辑器里试试<code>align-items</code>的其他可用值，看看它们之间的区别。但要通过挑战，你必须把值设为 center。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-container</code> element should have an <code>align-items</code> property set to a value of center.",
-          "testString": "assert($('#box-container').css('align-items') == 'center', 'The <code>#box-container</code> element should have an <code>align-items</code> property set to a value of center.');"
+          "text": "<code>#box-container</code>元素应有<code>align-items</code>属性，其值应为 center。",
+          "testString": "assert($('#box-container').css('align-items') == 'center', '<code>#box-container</code>元素应有<code>align-items</code>属性，其值应为 center。');"
         }
       ],
       "solutions": [],
@@ -795,14 +795,14 @@
       "id": "587d78ad367417b2b2512af9",
       "title": "Use the align-items Property in the Tweet Embed",
       "description": [
-        "The last challenge introduced the <code>align-items</code> property and gave an example. This property can be applied to a few tweet embed elements to align the flex items inside them.",
+        "上一个挑战介绍了<code>align-items</code>并给出了例子。这个属性可以应用在不少元素上，调整它们的子元素的位置。",
         "<hr>",
-        "Add the CSS property <code>align-items</code> to the header's <code>.follow-btn</code> element. Set the value to center."
+        "在 header 的<code>.follow-btn</code>添加 CSS 属性<code>align-items</code>，把值设为 center。"
       ],
       "tests": [
         {
-          "text": "The <code>.follow-btn</code> element should have the <code>align-items</code> property set to a value of center.",
-          "testString": "assert($('.follow-btn').css('align-items') == 'center', 'The <code>.follow-btn</code> element should have the <code>align-items</code> property set to a value of center.');"
+          "text": "<code>.follow-btn</code>应有<code>align-items</code>属性，其值应为 center.",
+          "testString": "assert($('.follow-btn').css('align-items') == 'center', '<code>.follow-btn</code>应有<code>align-items</code>属性，其值应为 center.');"
         }
       ],
       "solutions": [],
@@ -916,17 +916,17 @@
       "id": "587d78ad367417b2b2512afa",
       "title": "Use the flex-wrap Property to Wrap a Row or Column",
       "description": [
-        "CSS flexbox has a feature to split a flex item into multiple rows (or columns). By default, a flex container will fit all flex items together. For example, a row will all be on one line.",
-        "However, using the <code>flex-wrap</code> property, it tells CSS to wrap items. This means extra items move into a new row or column. The break point of where the wrapping happens depends on the size of the items and the size of the container.",
-        "CSS also has options for the direction of the wrap:",
-        "<ul><li><code>nowrap</code>: this is the default setting, and does not wrap items.</li><li><code>wrap</code>: wraps items from left-to-right if they are in a row, or top-to-bottom if they are in a column.</li><li><code>wrap-reverse</code>: wraps items from bottom-to-top if they are in a row, or left-to-right if they are in a column.</li></ul>",
+        "CSS flexbox 有一个把 flex 子元素拆分为多行（或多列）的特性。默认情况下，flex 容器会调整项目大小，把它们都塞到一起。如果是行的话，所有项目都会在一条直线上。",
+        "不过，使用<code>flex-wrap</code>属性可以使项目换行。这意味着多出来的项目会被移到新的行或列。换行发生的断点由项目和容器的大小决定。",
+        "换行方向的可选值有这些：",
+        "<ul><li><code>nowrap</code>：默认值，不换行。</li><li><code>wrap</code>：行从上到下排，列从左到又排。</li><li><code>wrap-reverse</code>：行从下到上排，列从右到左排。</li></ul>",
         "<hr>",
-        "The current layout has too many boxes for one row. Add the CSS property <code>flex-wrap</code> to the <code>#box-container</code> element, and give it a value of wrap."
+        "现在的布局一行里面元素太多了，在<code>#box-container</code>元素添加 CSS 属性<code>flex-wrap</code>，把值设为 wrap。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-container</code> element should have the <code>flex-wrap</code> property set to a value of wrap.",
-          "testString": "assert($('#box-container').css('flex-wrap') == 'wrap', 'The <code>#box-container</code> element should have the <code>flex-wrap</code> property set to a value of wrap.');"
+          "text": "<code>#box-container</code>元素应有<code>flex-wrap</code>属性，其值应为 wrap。",
+          "testString": "assert($('#box-container').css('flex-wrap') == 'wrap', '<code>#box-container</code>元素应有<code>flex-wrap</code>属性，其值为 wrap。');"
         }
       ],
       "solutions": [],
@@ -997,20 +997,20 @@
       "id": "587d78ad367417b2b2512afb",
       "title": "Use the flex-shrink Property to Shrink Items",
       "description": [
-        "So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.",
-        "The first is the <code>flex-shrink</code> property. When it's used, it allows an item to shrink if the flex container is too small. Items shrink when the width of the parent container is smaller than the combined widths of all the flex items within it.",
-        "The <code>flex-shrink</code> property takes numbers as values. The higher the number, the more it will shrink compared to the other items in the container. For example, if one item has a <code>flex-shrink</code> value of 1 and the other has a <code>flex-shrink</code> value of 3, the one with the value of 3 will shrink three times as much as the other.",
+        "目前为止，挑战里的提到的属性都应用于 flex 容器（flex 子元素的父元素）。除此之外，flex 子元素也有很多实用属性。",
+        "首先介绍的是<code>flex-shrink</code>属性。使用之后，如果 flex 容器太小，该项目会自动缩小。当容器的宽度小于里面所有项目的宽度，项目就会自动压缩。",
+        "<code>flex-shrink</code>属性接受 number 类型的值。数值越大，与其他项目相比会被压缩得更厉害。例如，如果一个项目的<code>flex-shrink</code>为 1 ，另一个项目<code>flex-shrink</code>为 3，那么 3 的那个与另一个相比会受到 3 倍压缩。",
         "<hr>",
-        "Add the CSS property <code>flex-shrink</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of 1 and <code>#box-2</code> a value of 2."
+        "为<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>flex-shrink</code>，<code>#box-1</code>的值设为 1，<code>#box-2</code>的值设为 2。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have the <code>flex-shrink</code> property set to a value of 1.",
-          "testString": "assert($('#box-1').css('flex-shrink') == '1', 'The <code>#box-1</code> element should have the <code>flex-shrink</code> property set to a value of 1.');"
+          "text": "<code>#box-1</code>元素应有<code>flex-shrink</code>属性，其值应为 1.",
+          "testString": "assert($('#box-1').css('flex-shrink') == '1', '<code>#box-1</code>元素应有<code>flex-shrink</code>属性，其值应为 1.');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>flex-shrink</code> property set to a value of 2.",
-          "testString": "assert($('#box-2').css('flex-shrink') == '2', 'The <code>#box-2</code> element should have the <code>flex-shrink</code> property set to a value of 2.');"
+          "text": "<code>#box-2</code>元素应有<code>flex-shrink</code>属性，其值应为 2.",
+          "testString": "assert($('#box-2').css('flex-shrink') == '2', '<code>#box-2</code>元素应有<code>flex-shrink</code>属性，其值应为 2.');"
         }
       ],
       "solutions": [],
@@ -1057,19 +1057,19 @@
       "id": "587d78ae367417b2b2512afc",
       "title": "Use the flex-grow Property to Expand Items",
       "description": [
-        "The opposite of <code>flex-shrink</code> is the <code>flex-grow</code> property. Recall that <code>flex-shrink</code> controls the size of the items when the container shrinks. The <code>flex-grow</code> property controls the size of items when the parent container expands.",
-        "Using a similar example from the last challenge, if one item has a <code>flex-grow</code> value of 1 and the other has a <code>flex-grow</code> value of 3, the one with the value of 3 will grow three times as much as the other.",
+        "与<code>flex-shrink</code>相对的是<code>flex-grow</code>。你应该还记得，<code>flex-shrink</code>会在容器太小时对元素作出调整。相应地，<code>flex-grow</code>会在容器太大时对元素作出调整。",
+        "例子与上一个挑战相似，如果一个项目<code>flex-grow</code>属性的值为 1，另一个<code>flex-grow</code>为 3，那么 3 的会比 1 的扩大三倍。",
         "<hr>",
-        "Add the CSS property <code>flex-grow</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of 1 and <code>#box-2</code> a value of 2."
+        "为<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>flex-grow</code>，<code>#box-1</code>的值设为 1，<code>#box-2</code>的值设为 2。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have the <code>flex-grow</code> property set to a value of 1.",
-          "testString": "assert($('#box-1').css('flex-grow') == '1', 'The <code>#box-1</code> element should have the <code>flex-grow</code> property set to a value of 1.');"
+          "text": "<code>#box-1</code>元素应有<code>flex-grow</code>属性，其值应为 1。",
+          "testString": "assert($('#box-1').css('flex-grow') == '1', '<code>#box-1</code>元素应有<code>flex-grow</code>属性，其值应为 1。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>flex-grow</code> property set to a value of 2.",
-          "testString": "assert($('#box-2').css('flex-grow') == '2', 'The <code>#box-2</code> element should have the <code>flex-grow</code> property set to a value of 2.');"
+          "text": "<code>#box-2</code>元素应有<code>flex-grow</code>属性，其值应为 2。",
+          "testString": "assert($('#box-2').css('flex-grow') == '2', '<code>#box-2</code>元素应有<code>flex-grow</code>属性，其值应为 2。');"
         }
       ],
       "solutions": [],
@@ -1115,27 +1115,27 @@
       "id": "587d78ae367417b2b2512afd",
       "title": "Use the flex-basis Property to Set the Initial Size of an Item",
       "description": [
-        "The <code>flex-basis</code> property specifies the initial size of the item before CSS makes adjustments with <code>flex-shrink</code> or <code>flex-grow</code>.",
-        "The units used by the <code>flex-basis</code> property are the same as other size properties (<code>px</code>, <code>em</code>, <code>%</code>, etc.). The value <code>auto</code> sizes items based on the content.",
+        "<code>flex-basis</code>属性指定了项目在 CSS 进行<code>flex-shrink</code>或<code>flex-grow</code>调整前的初始大小。",
+        "<code>flex-basis</code>属性的单位与其他 size 属性一致（<code>px</code>、<code>em</code>、<code>%</code>等）。如果值为<code>auto</code>，项目的大小依赖于自身内容。",
         "<hr>",
-        "Set the initial size of the boxes using <code>flex-basis</code>. Add the CSS property <code>flex-basis</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of <code>10em</code> and <code>#box-2</code> a value of <code>20em</code>."
+        "使用<code>flex-basis</code>为盒子设置原始值。在<code>#box-1</code>和<code>#box-2</code>添加 CSS  属性<code>flex-basis</code>。设置<code>#box-1</code>为<code>10em</code>，<code>#box-2</code>为<code>20em</code>。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have a <code>flex-basis</code> property.",
-          "testString": "assert($('#box-1').css('flex-basis') != 'auto', 'The <code>#box-1</code> element should have a <code>flex-basis</code> property.');"
+          "text": "<code>#box-1</code>元素应有<code>flex-basis</code>属性。",
+          "testString": "assert($('#box-1').css('flex-basis') != 'auto', '<code>#box-1</code>元素应有<code>flex-basis</code>属性。');"
         },
         {
-          "text": "The <code>#box-1</code> element should have a <code>flex-basis</code> value of <code>10em</code>.",
-          "testString": "assert(code.match(/#box-1\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?10em;/g), 'The <code>#box-1</code> element should have a <code>flex-basis</code> value of <code>10em</code>.');"
+          "text": "<code>#box-1</code>的<code>flex-basis</code>应为<code>10em</code>。",
+          "testString": "assert(code.match(/#box-1\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?10em;/g), '<code>#box-1</code>的<code>flex-basis</code>应为<code>10em</code>。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>flex-basis</code> property.",
-          "testString": "assert($('#box-2').css('flex-basis') != 'auto', 'The <code>#box-2</code> element should have the <code>flex-basis</code> property.');"
+          "text": "<code>#box-2</code>元素应有<code>flex-basis</code>属性。",
+          "testString": "assert($('#box-2').css('flex-basis') != 'auto', '<code>#box-2</code>元素应有<code>flex-basis</code>属性。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have a <code>flex-basis</code> value of <code>20em</code>.",
-          "testString": "assert(code.match(/#box-2\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?20em;/g), 'The <code>#box-2</code> element should have a <code>flex-basis</code> value of <code>20em</code>.');"
+          "text": "<code>#box-2</code>的<code>flex-basis</code>应为<code>20em</code>。",
+          "testString": "assert(code.match(/#box-2\\s*?{\\s*?.*?\\s*?.*?\\s*?flex-basis:\\s*?20em;/g), '<code>#box-2</code>的<code>flex-basis</code>应为<code>20em</code>。');"
         }
       ],
       "solutions": [],
@@ -1181,25 +1181,25 @@
       "id": "587d78ae367417b2b2512afe",
       "title": "Use the flex Shorthand Property",
       "description": [
-        "There is a shortcut available to set several flex properties at once. The <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code> properties can all be set together by using the <code>flex</code> property.",
-        "For example, <code>flex: 1 0 10px;</code> will set the item to <code>flex-grow: 1;</code>, <code>flex-shrink: 0;</code>, and <code>flex-basis: 10px;</code>.",
-        "The default property settings are <code>flex: 0 1 auto;</code>.",
+        "上面几个 flex 属性有一个简写方式。<code>flex-grow</code>、<code>flex-shrink</code>和<code>flex-basis</code>属性可以在<code>flex</code>中一同设置。",
+        "例如，<code>flex: 1 0 10px;</code>会把项目属性设为<code>flex-grow: 1;</code>、<code>flex-shrink: 0;</code>以及<code>flex-basis: 10px;</code>。",
+        "属性的默认设置是<code>flex: 0 1 auto;</code>。",
         "<hr>",
-        "Add the CSS property <code>flex</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> the values so its <code>flex-grow</code> is 2, its <code>flex-shrink</code> is 2, and its <code>flex-basis</code> is 150px. Give <code>#box-2</code> the values so its <code>flex-grow</code> is 1, its <code>flex-shrink</code> is 1, and its <code>flex-basis</code> is 150px.",
-        "These values will cause <code>#box-1</code> to grow to fill the extra space at twice the rate of <code>#box-2</code> when the container is greater than 300px and shrink at twice the rate of <code>#box-2</code> when the container is less than 300px. 300px is the combined size of the <code>flex-basis</code> values of the two boxes."
+        "在<code>#box-1</code>和<code>#box-2</code>添加<code>flex</code>属性。把<code>#box-1</code>设置成<code>flex-grow</code>为 2，<code>flex-shrink</code>为 2，<code>flex-basis</code>为 150px。把<code>#box-2</code>设置成<code>flex-grow</code>为 1，<code>flex-shrink</code>为 1，<code>flex-basis</code>为 150px。",
+        "上面设置的属性，在容器大于 300px 时，会让<code>#box-1</code>填充倍率为<code>#box-2</code>的两倍；在容器小于 300px 时，缩小倍率为<code>#box-2</code>的两倍。300px 是两个盒子的<code>flex-basis</code>的值之和。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have the <code>flex</code> property set to a value of 2 2 150px.",
-          "testString": "assert($('#box-1').css('flex-grow') == '2' && $('#box-1').css('flex-shrink') == '2' && $('#box-1').css('flex-basis') == '150px', 'The <code>#box-1</code> element should have the <code>flex</code> property set to a value of 2 2 150px.');"
+          "text": "<code>#box-1</code>元素应有<code>flex</code>属性，其值应为 2 2 150px。",
+          "testString": "assert($('#box-1').css('flex-grow') == '2' && $('#box-1').css('flex-shrink') == '2' && $('#box-1').css('flex-basis') == '150px', '<code>#box-1</code>元素应有<code>flex</code>属性，其值应为 2 2 150px。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>flex</code> property set to a value of 1 1 150px.",
-          "testString": "assert($('#box-2').css('flex-grow') == '1' && $('#box-2').css('flex-shrink') == '1' && $('#box-2').css('flex-basis') == '150px', 'The <code>#box-2</code> element should have the <code>flex</code> property set to a value of 1 1 150px.');"
+          "text": "<code>#box-2</code>元素应有<code>flex</code>属性，其值应为 1 1 150px。",
+          "testString": "assert($('#box-2').css('flex-grow') == '1' && $('#box-2').css('flex-shrink') == '1' && $('#box-2').css('flex-basis') == '150px', '<code>#box-2</code>元素应有<code>flex</code>属性，其值应为 1 1 150px。');"
         },
         {
-          "text": "Your code should use the <code>flex</code> property for <code>#box-1</code> and <code>#box-2</code>.",
-          "testString": "assert(code.match(/flex:\\s*?\\d\\s+?\\d\\s+?150px;/g).length == 2, 'Your code should use the <code>flex</code> property for <code>#box-1</code> and <code>#box-2</code>.');"
+          "text": "应对<code>#box-1</code>和<code>#box-2</code>使用<code>flex</code>属性。",
+          "testString": "assert(code.match(/flex:\\s*?\\d\\s+?\\d\\s+?150px;/g).length == 2, '应对<code>#box-1</code>和<code>#box-2</code>使用<code>flex</code>属性。');"
         }
       ],
       "solutions": [],
@@ -1244,18 +1244,18 @@
       "id": "587d78ae367417b2b2512aff",
       "title": "Use the order Property to Rearrange Items",
       "description": [
-        "The <code>order</code> property is used to tell CSS the order of how flex items appear in the flex container. By default, items will appear in the same order they come in the source HTML. The property takes numbers as values, and negative numbers can be used.",
+        "<code>order</code>属性告诉 CSS flex 容器里项目的顺序。默认情况下，项目排列顺序与源 HTML 文件中顺序相同。这个属性接受数字作为参数，可以使用负数。",
         "<hr>",
-        "Add the CSS property <code>order</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of 2 and give <code>#box-2</code> a value of 1."
+        "在<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>order</code>。<code>#box-1</code>设为 2，<code>#box-2</code>设为 1。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have the <code>order</code> property set to a value of 2.",
-          "testString": "assert($('#box-1').css('order') == '2', 'The <code>#box-1</code> element should have the <code>order</code> property set to a value of 2.');"
+          "text": "<code>#box-1</code>元素应有<code>order</code>属性，其值应为 2。",
+          "testString": "assert($('#box-1').css('order') == '2', '<code>#box-1</code>元素应有<code>order</code>属性，其值应为 2。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>order</code> property set to a value of 1.",
-          "testString": "assert($('#box-2').css('order') == '1', 'The <code>#box-2</code> element should have the <code>order</code> property set to a value of 1.');"
+          "text": "<code>#box-2</code>元素应有<code>order</code>属性，其值应为 1。",
+          "testString": "assert($('#box-2').css('order') == '1', '<code>#box-2</code>元素应有<code>order</code>属性，其值应为 1。');"
         }
       ],
       "solutions": [],
@@ -1302,19 +1302,19 @@
       "id": "587d78af367417b2b2512b00",
       "title": "Use the align-self Property",
       "description": [
-        "The final property for flex items is <code>align-self</code>. This property allows you to adjust each item's alignment individually, instead of setting them all at once. This is useful since other common adjustment techniques using the CSS properties <code>float</code>, <code>clear</code>, and <code>vertical-align</code> do not work on flex items.",
-        "<code>align-self</code> accepts the same values as <code>align-items</code> and will override any value set by the <code>align-items</code> property.",
+        "flex 子元素的最后一个属性是<code>align-self</code>。这个属性允许你调整每个项目自己的对齐方式，而不是一次性设置全部项目。因为<code>float</code>、<code>clear</code>和<code>vertical-align</code>等调整使用的属性都不能应用在 flex 子元素，所以这个属性显得十分有用。",
+        "<code>align-self</code>的允许值与<code>align-items</code>一样，并且它会覆盖<code>align-items</code>的值。",
         "<hr>",
-        "Add the CSS property <code>align-self</code> to both <code>#box-1</code> and <code>#box-2</code>. Give <code>#box-1</code> a value of center and give <code>#box-2</code> a value of flex-end."
+        "在<code>#box-1</code>和<code>#box-2</code>添加 CSS 属性<code>align-self</code>。<code>#box-1</code>设为 center，<code>#box-2</code>设为 flex-end。"
       ],
       "tests": [
         {
-          "text": "The <code>#box-1</code> element should have the <code>align-self</code> property set to a value of center.",
-          "testString": "assert($('#box-1').css('align-self') == 'center', 'The <code>#box-1</code> element should have the <code>align-self</code> property set to a value of center.');"
+          "text": "<code>#box-1</code>元素应有<code>align-self</code>属性，其值应为 center。",
+          "testString": "assert($('#box-1').css('align-self') == 'center', '<code>#box-1</code>元素应有<code>align-self</code>属性，其值应为 center。');"
         },
         {
-          "text": "The <code>#box-2</code> element should have the <code>align-self</code> property set to a value of flex-end.",
-          "testString": "assert($('#box-2').css('align-self') == 'flex-end', 'The <code>#box-2</code> element should have the <code>align-self</code> property set to a value of flex-end.');"
+          "text": "<code>#box-2</code>元素应有<code>align-self</code>属性，其值应为 flex-end。",
+          "testString": "assert($('#box-2').css('align-self') == 'flex-end', '<code>#box-2</code>元素应有<code>align-self</code>属性，其值应为 flex-end。');"
         }
       ],
       "solutions": [],

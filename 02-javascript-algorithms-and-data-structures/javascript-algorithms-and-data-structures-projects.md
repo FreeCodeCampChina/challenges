@@ -15,15 +15,3 @@ In this section you will create the following small JavaScript programs:
 Have fun and remember to use the Read-Search-Ask method if you get stuck.
 
 Good Luck!
-
-# Upcoming Lessons #
-
-Palindrome Checker
-
-Roman Numeral Converter
-
-Caesars Cipher
-
-Telephone Number Validator
-
-Cash Register
