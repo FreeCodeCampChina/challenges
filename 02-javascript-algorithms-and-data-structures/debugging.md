@@ -39,29 +39,3 @@ Debugging is frustrating, but it helps to develop (and follow) a step-by-step ap
 For example, if function A works and returns what it's supposed to, then function B may have the issue. Or start checking values in a block of code from the middle to try to cut the search space in half. A problem in one spot indicates a bug in the first half of the code. If not, it's likely in the second.
 
 This section will cover a couple helpful tools to find bugs, and some of the common forms they take. Fortunately, debugging is a learnable skill that just requires a little patience and practice to master.
-
-# Upcoming Lessons #
-
-Use the JavaScript Console to Check the Value of a Variable
-
-Understanding the Differences between the freeCodeCamp and Browser Console
-
-Use typeof to Check the Type of a Variable
-
-Catch Misspelled Variable and Function Names
-
-Catch Unclosed Parentheses, Brackets, Braces and Quotes
-
-Catch Mixed Usage of Single and Double Quotes
-
-Catch Use of Assignment Operator Instead of Equality Operator
-
-Catch Missing Open and Closing Parenthesis After a Function Call
-
-Catch Arguments Passed in the Wrong Order When Calling a Function
-
-Catch Off By One Errors When Using Indexing
-
-Use Caution When Reinitializing Variables Inside a Loop
-
-Prevent Infinite Loops with a Valid Terminal Condition
