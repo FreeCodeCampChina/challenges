@@ -18,13 +18,13 @@
       "title": "Create a Simple JSX Element",
       "releasedOn": "December 25, 2017",
       "description": [
-        "<strong>Intro:</strong> React is an Open Source view library created and maintained by Facebook. It's a great tool to render the User Interface (UI) of modern web applications.",
-        "React uses a syntax extension of JavaScript called JSX that allows you to write HTML directly within JavaScript. This has several benefits. It lets you use the full programmatic power of JavaScript within HTML, and helps to keep your code readable. For the most part, JSX is similar to the HTML that you have already learned, however there are a few key differences that will be covered throughout these challenges.",
-        "For instance, because JSX is a syntactic extension of JavaScript, you can actually write JavaScript directly within JSX. To do this, you simply include the code you want to be treated as JavaScript within curly braces: <code>{ 'this is treated as JavaScript code' }</code>. Keep this in mind, since it's used in several future challenges.",
-        "However, because JSX is not valid JavaScript, JSX code must be compiled into JavaScript. The transpiler Babel is a popular tool for this process. For your convenience, it's already added behind the scenes for these challenges. If you happen to write syntactically invalid JSX, you will see the first test in these challenges fail.",
-        "It's worth noting that under the hood the challenges are calling <code>ReactDOM.render(JSX, document.getElementById('root'))</code>. This function call is what places your JSX into React's own lightweight representation of the DOM. React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM.",
+        "<strong>简介：</strong>React是由 Facebook 创建和维护的开源视图库。它是渲染当代 Web 应用程序用户界面（UI）的绝佳工具。",
+        "React 使用名为 JSX 的 JavaScript 语法扩展，允许您直接在 JavaScript 中编写 HTML。这有几个好处。它允许您在 HTML 中使用 JavaScript 的完整程序功能，并有助于保持代码的可读性。在大多数情况下，JSX 类似于您已经学过的 HTML，但是在这些挑战中将会涉及一些关键差异。",
+        "例如，因为 JSX 是 JavaScript 的语法扩展，所以您实际上可以直接在 JSX 中编写 JavaScript。要做到这一点，您只需在花括号中包含您希望被视为 JavaScript 的代码：<code>{“这被视为 JavaScript 代码”}</code>。记住这一点，因为它将用于接下来的几个挑战。",
+        "但是，由于 JSX 不是有效的 JavaScript，因此必须将 JSX 代码编译为 JavaScript。在这个过程中，转换器 Babel 是一个很受欢迎的工具。为了您的方便，它已经添加在了这些挑战的后台。如果您碰巧编写的 JSX 语法无效，您将看到这些挑战中的第一个测试失败。",
+        "值得注意的是，这些挑战在底层调用<code>ReactDOM.render(JSX, document.getElementById('root'))</code>。这个函数调用是将你的 JSX 置于 React 自己的轻量级 DOM 中。然后，React 使用自己的 DOM 快照来优化更新实际 DOM 的特定部分。",
         "<hr>",
-        "<strong>Instructions:</strong> The current code uses JSX to assign a <code>div</code> element to the constant <code>JSX</code>. Replace the <code>div</code> with an <code>h1</code> element and add the text <code>Hello JSX!</code> inside it."
+        "<strong>说明：</strong>当前代码使用 JSX 将<code>div</code>元素分配给常量<code>JSX</code>。将<code>div</code>替换为<code>h1</code>元素，并在其中添加文本<code>Hello JSX!</code>。"
       ],
       "files": {
         "indexjsx": {
@@ -44,12 +44,12 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return an <code>h1</code> element.",
-          "testString": "assert(JSX.type === 'h1', 'The constant <code>JSX</code> should return an <code>h1</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>h1</code>元素。",
+          "testString": "assert(JSX.type === 'h1', '常量<code>JSX</code>应该返回一个<code>h1</code>元素。');"
         },
         {
-          "text": "The <code>h1</code> tag should include the text <code>Hello JSX!</code>",
-          "testString": "assert(Enzyme.shallow(JSX).contains('Hello JSX!'), 'The <code>h1</code> tag should include the text <code>Hello JSX!</code>');"
+          "text": "<code>h1</code>标签应该包含文本<code>Hello JSX!</code>。",
+          "testString": "assert(Enzyme.shallow(JSX).contains('Hello JSX!'), '<code>h1</code>标签应该包含文本<code>Hello JSX!</code>。');"
         }
       ],
       "solutions": [
@@ -64,19 +64,19 @@
       "title": "Create a Complex JSX Element",
       "releasedOn": "December 25, 2017",
       "description": [
-        "The last challenge was a simple example of JSX, but JSX can represent more complex HTML as well.",
-        "One important thing to know about nested JSX is that it must return a single element.",
-        "This one parent element would wrap all of the other levels of nested elements.",
-        "For instance, several JSX elements written as siblings with no parent wrapper element will not transpile.",
-        "Here's an example:",
-        "<b>Valid JSX:</b>",
+        "上一个挑战是 JSX 的一个简单示例，但 JSX 也可以表示更复杂的 HTML。",
+        "关于嵌套的 JSX，你需要知道的一件重要的事情，那就是是它必须返回单个元素。",
+        "这个父元素将包裹所有其他级别的嵌套元素。",
+        "例如，几个作为兄弟元素而编写的JSX元素没有父元素包裹将不会被转换。",
+        "这里是一个示例：",
+        "<b>有效的 JSX：</b>",
         "<blockquote>&lt;div&gt;<br>&nbsp;&nbsp;&lt;p&gt;Paragraph One&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p&gt;Paragraph Two&lt;/p&gt;<br>&nbsp;&nbsp;&lt;p&gt;Paragraph Three&lt;/p&gt;<br>&lt;/div&gt;</blockquote>",
-        "<b>Invalid JSX:</b>",
+        "<b>无效的 JSX：</b>",
         "<blockquote>&lt;p&gt;Paragraph One&lt;/p&gt;<br>&lt;p&gt;Paragraph Two&lt;/p&gt;<br>&lt;p&gt;Paragraph Three&lt;/p&gt;<br></blockquote>",
         "<hr>",
-        "Define a new constant <code>JSX</code> that renders a <code>div</code> which contains the following elements in order:",
-        "An <code>h1</code>, a <code>p</code>, and an unordered list that contains three <code>li</code> items. You can include any text you want within each element.",
-        "<strong>Note:</strong>&nbsp;When rendering multiple elements like this, you can wrap them all in parentheses, but it's not strictly required. Also notice this challenge uses a <code>div</code> tag to wrap all the child elements within a single parent element. If you remove the <code>div</code>, the JSX will no longer transpile. Keep this in mind, since it will also apply when you return JSX elements in React components."
+        "定义一个新的常量<code>JSX</code>，渲染一个<code>div</code>，其中依次包含以下元素：",
+        "一个<code>h1</code>，一个<code>p</code>，一个包含三个<code>li</code>项的无序列表。您可以在每个元素中包含任何您想要的文本。",
+        "<strong>注意：</strong>&nbsp;当像这样渲染多个元素时，你可以把它们都用圆括号括起来，但是这并不是必须的。还请注意，此挑战使用<code>div</code>标签把所有子元素包裹在单个父元素中。如果删除<code>div</code>，JSX将不再转换。请记住这一点，因为当您在React组件中返回JSX元素时它也适用。"
       ],
       "files": {
         "indexjsx": {
@@ -95,24 +95,24 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return a <code>div</code> element.",
-          "testString": "assert(JSX.type === 'div', 'The constant <code>JSX</code> should return a <code>div</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert(JSX.type === 'div', '常量<code>JSX</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> should contain a <code>p</code> tag as the second element.",
-          "testString": "assert(JSX.props.children[1].type === 'p', 'The <code>div</code> should contain a <code>p</code> tag as the second element.');"
+          "text": "<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。",
+          "testString": "assert(JSX.props.children[1].type === 'p', '<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。');"
         },
         {
-          "text": "The <code>div</code> should contain a <code>ul</code> tag as the third element.",
-          "testString": "assert(JSX.props.children[2].type === 'ul', 'The <code>div</code> should contain a <code>ul</code> tag as the third element.');"
+          "text": "<code>div</code>应该包含一个<code>ul</code>标签作为第三个元素。",
+          "testString": "assert(JSX.props.children[2].type === 'ul', '<code>div</code>应该包含一个<code>ul</code>标签作为第三个元素。');"
         },
         {
-          "text": "The <code>div</code> should contain an <code>h1</code> tag as the first element.",
-          "testString": "assert(JSX.props.children[0].type === 'h1', 'The <code>div</code> should contain an <code>h1</code> tag as the first element.');"
+          "text": "<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。",
+          "testString": "assert(JSX.props.children[0].type === 'h1', '<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。');"
         },
         {
-          "text": "The <code>ul</code> should contain three <code>li</code> elements.",
-          "testString": "assert(JSX.props.children[2].props.children.length === 3, 'The <code>ul</code> should contain three <code>li</code> elements.');"
+          "text": "<code>ul</code>应该包含三个<code>li</code>元素。",
+          "testString": "assert(JSX.props.children[2].props.children.length === 3, '<code>ul</code>应该包含三个<code>li</code>元素。');"
         }
       ],
       "solutions": [
@@ -127,10 +127,10 @@
       "title": "Add Comments in JSX",
       "releasedOn": "December 25, 2017",
       "description": [
-        "JSX is a syntax that gets compiled into valid JavaScript. Sometimes, for readability, you might need to add comments to your code. Like most programming languages, JSX has its own way to do this.",
-        "To put comments inside JSX, you use the syntax <code>{/* */}</code> to wrap around the comment text.",
+        "JSX 是一种可以编译成有效 JavaScript 的语法。有时，为了便于阅读，您可能需要在代码中添加注释。像大多数编程语言一样，JSX 也有自己的方法来实现这一点。",
+        "要将注释放在 JSX 中，可以使用<code>{/* */}</code>语法来包裹注释文本。",
         "<hr>",
-        "The code editor has a JSX element similar to what you created in the last challenge. Add a comment somewhere within the provided <code>div</code> element, without modifying the existing <code>h1</code> or <code>p</code> elements."
+        "代码编辑器中的 JSX 元素与您在上一个挑战中创建的元素类似。在提供的<code>div</code>元素中的某处添加注释，而不修改现有的<code>h1</code>或<code>p</code>元素。"
       ],
       "files": {
         "indexjsx": {
@@ -153,20 +153,20 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return a <code>div</code> element.",
-          "testString": "assert(JSX.type === 'div', 'The constant <code>JSX</code> should return a <code>div</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert(JSX.type === 'div', '常量<code>JSX</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> should contain an <code>h1</code> tag as the first element.",
-          "testString": "assert(JSX.props.children[0].type === 'h1', 'The <code>div</code> should contain an <code>h1</code> tag as the first element.');"
+          "text": "<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。",
+          "testString": "assert(JSX.props.children[0].type === 'h1', '<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。');"
         },
         {
-          "text": "The <code>div</code> should contain a <code>p</code> tag as the second element.",
-          "testString": "assert(JSX.props.children[1].type === 'p', 'The <code>div</code> should contain a <code>p</code> tag as the second element.');"
+          "text": "<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。",
+          "testString": "assert(JSX.props.children[1].type === 'p', '<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。');"
         },
         {
-          "text": "The <code>JSX</code> should include a comment.",
-          "testString": "getUserInput => assert(getUserInput('index').includes('/*') && getUserInput('index').includes('*/'), 'The <code>JSX</code> should include a comment.');"
+          "text": "<code>JSX</code>应该包含一个注释。",
+          "testString": "getUserInput => assert(getUserInput('index').includes('/*') && getUserInput('index').includes('*/'), '<code>JSX</code>应该包含一个注释。');"
         }
       ],
       "solutions": [
@@ -181,11 +181,11 @@
       "title": "Render HTML Elements to the DOM",
       "releasedOn": "December 25, 2017",
       "description": [
-        "So far, you've learned that JSX is a convenient tool to write readable HTML within JavaScript. With React, we can render this JSX directly to the HTML DOM using React's rendering API known as ReactDOM.",
-        "ReactDOM offers a simple method to render React elements to the DOM which looks like this: <code>ReactDOM.render(componentToRender, targetNode)</code>, where the first argument is the React element or component that you want to render, and the second argument is the DOM node that you want to render the component to.",
-        "As you would expect, <code>ReactDOM.render()</code> must be called after the JSX element declarations, just like how you must declare variables before using them.",
+        "到目前为止，您已经了解到 JSX 是一种在 JavaScript 中编写可读 HTML 的便捷工具。使用 React，我们可以使用 React 的渲染 API（ReactDOM）将此 JSX 直接渲染到 HTML DOM。",
+        "ReactDOM 提供了一个简单的方法来将 React 元素呈现给 DOM，如下所示：<code>ReactDOM.render(componentToRender, targetNode)</code>，其中第一个参数是要渲染的 React 元素或组件，第二个参数是要将组件渲染到的 DOM 节点。",
+        "如你所料，必须在 JSX元素声明之后调用<code>ReactDOM.render()</code>，就像您在使用变量之前必须声明它一样。",
         "<hr>",
-        "The code editor has a simple JSX component. Use the <code>ReactDOM.render()</code> method to render this component to the page. You can pass defined JSX elements directly in as the first argument and use <code>document.getElementById()</code> to select the DOM node to render them to. There is a <code>div</code> with <code>id='challenge-node'</code> available for you to use. Make sure you don't change the <code>JSX</code> constant."
+        "代码编辑器有一个简单的 JSX 组件。使用<code>ReactDOM.render()</code>方法将该组件渲染到页面。可以将定义好的 JSX 元素直接作为第一个参数传入，并使用<code>document.getElementById()</code>来选择要渲染到的 DOM 节点。有一个<code>id='challenge-node'</code>的<code>div</code>可供您使用。确保不要更改<code>JSX</code>常量。"
       ],
       "files": {
         "indexjsx": {
@@ -208,20 +208,20 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return a <code>div</code> element.",
-          "testString": "assert(JSX.type === 'div', 'The constant <code>JSX</code> should return a <code>div</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert(JSX.type === 'div', '常量<code>JSX</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> should contain an <code>h1</code> tag as the first element.",
-          "testString": "assert(JSX.props.children[0].type === 'h1', 'The <code>div</code> should contain an <code>h1</code> tag as the first element.');"
+          "text": "<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。",
+          "testString": "assert(JSX.props.children[0].type === 'h1', '<code>div</code>应该包含一个<code>h1</code>标签作为第一个元素。');"
         },
         {
-          "text": "The <code>div</code> should contain a <code>p</code> tag as the second element.",
-          "testString": "assert(JSX.props.children[1].type === 'p', 'The <code>div</code> should contain a <code>p</code> tag as the second element.');"
+          "text": "<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。",
+          "testString": "assert(JSX.props.children[1].type === 'p', '<code>div</code>应该包含一个<code>p</code>标签作为第二个元素。');"
         },
         {
-          "text": "The provided JSX element should render to the DOM node with id <code>challenge-node</code>.",
-          "testString": "assert(document.getElementById('challenge-node').childNodes[0].innerHTML === '<h1>Hello World</h1><p>Lets render this to the DOM</p>', 'The provided JSX element should render to the DOM node with id <code>challenge-node</code>.');"
+          "text": "提供的 JSX 元素应该以 id<code>challenge-node</code>渲染到 DOM 节点。",
+          "testString": "assert(document.getElementById('challenge-node').childNodes[0].innerHTML === '<h1>Hello World</h1><p>Lets render this to the DOM</p>', '提供的 JSX 元素应该以 id <code>challenge-node</code>渲染到 DOM 节点。');"
         }
       ],
       "solutions": [
@@ -236,12 +236,12 @@
       "title": "Define an HTML Class in JSX",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Now that you're getting comfortable writing JSX, you may be wondering how it differs from HTML.",
-        "So far, it may seem that HTML and JSX are exactly the same.",
-        "One key difference in JSX is that you can no longer use the word <code>class</code> to define HTML classes. This is because <code>class</code> is a reserved word in JavaScript. Instead, JSX uses <code>className</code>.",
-        "In fact, the naming convention for all HTML attributes and event references in JSX become camelCase. For example, a click event in JSX is <code>onClick</code>, instead of <code>onclick</code>. Likewise, <code>onchange</code> becomes <code>onChange</code>. While this is a subtle difference, it is an important one to keep in mind moving forward.",
+        "现在您已经习惯了编写 JSX ，您可能想知道它与HTML有什么不同。",
+        "到目前为止，HTML 和 JSX 似乎完全相同。",
+        "JSX 的一个关键区别是你不能再使用<code>class</code>这个单词来定义 HTML 的 class 名。这是因为<code>class</code>是 JavaScript 中的保留字。JSX 使用<code>className</code> 代替。",
+        "事实上，JSX 中所有 HTML 属性和事件引用的命名约定都变成了驼峰式。例如，JSX 中的单击事件是 <code>onClick</code>，而不是 <code>onclick</ code>。同样，<code>onchange</code>变成了<code>onChange</code>。虽然这是一个微妙的差异，但重要的是要记住并继续前进。",
         "<hr>",
-        "Apply a class of <code>myDiv</code> to the <code>div</code> provided in the JSX code."
+        "将 class<code>myDiv</code> 应用于 JSX 提供的<code>div</code>上。"
       ],
       "files": {
         "indexjsx": {
@@ -263,12 +263,12 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return a <code>div</code> element.",
-          "testString": "assert.strictEqual(JSX.type, 'div', 'The constant <code>JSX</code> should return a <code>div</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert.strictEqual(JSX.type, 'div', '常量<code>JSX</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> has a class of <code>myDiv</code>.",
-          "testString": "assert.strictEqual(JSX.props.className, 'myDiv', 'The <code>div</code> has a class of <code>myDiv</code>.');"
+          "text": "<code>div</code>有一个<code>myDiv</code>class。",
+          "testString": "assert.strictEqual(JSX.props.className, 'myDiv', '<code>div</code>有一个<code>myDiv</code>class。');"
         }
       ],
       "solutions": [
@@ -283,13 +283,13 @@
       "title": "Learn About Self-Closing JSX Tags",
       "releasedOn": "December 25, 2017",
       "description": [
-        "So far, you’ve seen how JSX differs from HTML in a key way with the use of <code>className</code> vs. <code>class</code> for defining HTML classes.",
-        "Another important way in which JSX differs from HTML is in the idea of the self-closing tag.",
-        "In HTML, almost all tags have both an opening and closing tag: <code>&lt;div&gt;&lt;/div&gt;</code>; the closing tag always has a forward slash before the tag name that you are closing. However, there are special instances in HTML called “self-closing tags”, or tags that don’t require both an opening and closing tag before another tag can start.",
-        "For example the line-break tag can be written as <code>&lt;br&gt;</code> or as <code>&lt;br /&gt;</code>, but should never be written as <code>&lt;br&gt;&lt;/br&gt;</code>, since it doesn't contain any content.",
-        "In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed. The line-break tag, for example, must always be written as <code>&lt;br /&gt;</code> in order to be valid JSX that can be transpiled. A <code>&lt;div&gt;</code>, on the other hand, can be written as <code>&lt;div /&gt;</code> or <code>&lt;div&gt;&lt;/div&gt;</code>. The difference is that in the first syntax version there is no way to include anything in the <code>&lt;div /&gt;</code>. You will see in later challenges that this syntax is useful when rendering React components.",
+        "到目前为止，您已经看到 JSX 与 HTML 的不同之处在于使用<code>className</code>和使用<code>class</code>来定义 HTML 的 class。",
+        "JSX 不同于 HTML 的另一个重要方面是自闭合标签。",
+        "在HTML中，几乎所有的标签都有一个开始和结束标签：<code>&lt;div&gt;&lt;/div&gt;</code>；结束标签在您要关闭的标签名之前始终具有正斜杠。但是，HTML 中有一些称为“自闭合标签”的特殊实例，它们在另一个标签开始之前，不需要开始和结束标签都存在。",
+        "例如，换行标签可以写成<code>&lt;br&gt;</code>或者<code>&lt;br /&gt;</code>，但是不应该写成<code>&lt;br&gt;&lt;/br&gt;</code>，因为它不包含任何内容。",
+        "在 JSX 中，规则略有不同。任何 JSX 元素都可以使用自闭合标签编写，并且每个元素都必须关闭。例如，换行标签必须始终编写为 <code>&lt;br /&gt;</code>，以便成为有效的可转换的 JSX。另一方面 <code>&lt;div&gt;</code> 可以写成 <code>&lt;div /&gt;</code> 或者 <code>&lt;div&gt;&lt;/div&gt;</code>。 不同之处在于，在第一个语法版本中，无法在 <code>&lt;div /&gt;</code> 中包含任何内容。在后面的挑战中你会发现，这种语法在渲染 React 组件时非常有用。",
         "<hr>",
-        "Fix the errors in the code editor so that it is valid JSX and successfully transpiles. Make sure you don't change any of the content - you only need to close tags where they are needed."
+        "修复代码编辑器中的错误，使其成为有效的JSX并成功转换。确保您不更改任何内容--您只需要在需要的地方关闭标签。"
       ],
       "files": {
         "indexjsx": {
@@ -316,16 +316,16 @@
       },
       "tests": [
         {
-          "text": "The constant <code>JSX</code> should return a <code>div</code> element.",
-          "testString": "assert.strictEqual(JSX.type, 'div', 'The constant <code>JSX</code> should return a <code>div</code> element.');"
+          "text": "常量<code>JSX</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert.strictEqual(JSX.type, 'div', '常量<code>JSX</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> should contain a <code>br</code> tag.",
-          "testString": "assert(Enzyme.shallow(JSX).find('br').length === 1, 'The <code>div</code> should contain a <code>br</code> tag.');"
+          "text": "<code>div</code>应该包含一个<code>br</code>标签。",
+          "testString": "assert(Enzyme.shallow(JSX).find('br').length === 1, '<code>div</code>应该包含一个<code>br</code>标签。');"
         },
         {
-          "text": "The <code>div</code> should contain an <code>hr</code> tag.",
-          "testString": "assert(Enzyme.shallow(JSX).find('hr').length === 1, 'The <code>div</code> should contain an <code>hr</code> tag.');"
+          "text": "<code>div</code>应该包含一个<code>hr</code>标签。",
+          "testString": "assert(Enzyme.shallow(JSX).find('hr').length === 1, '<code>div</code>应该包含一个<code>hr</code>标签。');"
         }
       ],
       "solutions": [
@@ -340,14 +340,14 @@
       "title": "Create a Stateless Functional Component",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Components are the core of React. Everything in React is a component and here you will learn how to create one.",
-        "There are two ways to create a React component. The first way is to use a JavaScript function. Defining a component in this way creates a <em>stateless functional component</em>. The concept of state in an application will be covered in later challenges. For now, think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data. (We'll cover the second way to create a React component in the next challenge.)",
-        "To create a component with a function, you simply write a JavaScript function that returns either JSX or <code>null</code>. One important thing to note is that React requires your function name to begin with a capital letter. Here's an example of a stateless functional component that assigns an HTML class in JSX:",
+        "组件是 React 的核心。React 中的所有内容都是一个组件，在这里您将学习如何创建一个组件。",
+        "有两种方法可以创建 React 组件。第一种方法是使用 JavaScript 函数。以这种方式定义组件会创建<em>无状态功能组件</em>。应用程序中的状态概念将在以后的挑战中介绍。目前，可以将无状态组件视为可以接收数据并对其进行渲染的组件，但是它不管理或跟踪对数据的更改。（我们将在下一次挑战中介绍创建 React 组件的第二种方法。）",
+        "要用函数创建组件，只需编写一个返回 JSX 或<code>null</code>的 JavaScript 函数。需要注意的一点是，React 要求你的函数名以大写字母开头。下面是一个无状态功能组件的示例，该组件在 JSX 中分配一个 HTML 的 class：",
         "<blockquote>// After being transpiled, the &lt;div&gt; will have a CSS class of 'customClass'<br>const DemoComponent = function() {<br>&nbsp;&nbsp;return (<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div className='customClass' /&gt;<br>&nbsp;&nbsp;);<br>};</blockquote>",
-        "Because a JSX component represents HTML, you could put several components together to create a more complex HTML page. This is one of the key advantages of the component architecture React provides. It allows you to compose your UI from many separate, isolated components. This makes it easier to build and maintain complex user interfaces.",
+        "因为 JSX 组件代表 HTML，所以您可以将几个组件放在一起以创建更复杂的 HTML 页面，这是 React 提供的组件架构的关键优势之一，它允许您用许多独立的组件组成 UI。这使得构建和维护复杂的用户界面变得更加容易。",
         "<hr>",
-        "The code editor has a function called <code>MyComponent</code>. Complete this function so it returns a single <code>div</code> element which contains some string of text.",
-        "<strong>Note:</strong>&nbsp;The text is considered a child of the <code>div</code> element, so you will not be able to use a self-closing tag."
+        "代码编辑器中有一个名为<code>MyComponent</code>的函数。完成此函数，使其返回包含一些文本字符串的单个<code>div</code>元素。",
+        "<strong>注意：</strong>&nbsp;文本被视为是<code>div</code>的子元素，因此您将不能使用自闭合标签。"
       ],
       "files": {
         "indexjsx": {
@@ -371,16 +371,16 @@
       },
       "tests": [
         {
-          "text": "<code>MyComponent</code> should return JSX.",
-          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.length === 1; })(), '<code>MyComponent</code> should return JSX.');"
+          "text": "<code>MyComponent</code>应该返回 JSX。",
+          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.length === 1; })(), '<code>MyComponent</code>应该返回 JSX。');"
         },
         {
-          "text": "<code>MyComponent</code> should return a <code>div</code> element.",
-          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.children().type() === 'div' })(), '<code>MyComponent</code> should return a <code>div</code> element.');"
+          "text": "<code>MyComponent</code>应该返回一个<code>div</code>元素。",
+          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.children().type() === 'div' })(), '<code>MyComponent</code>应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>div</code> element should contain a string of text.",
-          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.find('div').text() !== ''; })(), 'The <code>div</code> element should contain a string of text.');"
+          "text": "<code>div</code>元素应该包含一个文本字符串。",
+          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(MyComponent)); return mockedComponent.find('div').text() !== ''; })(), '<code>div</code>元素应该包含一个文本字符串。');"
         }
       ],
       "solutions": [
@@ -395,12 +395,12 @@
       "title": "Create a React Component",
       "releasedOn": "December 25, 2017",
       "description": [
-        "The other way to define a React component is with the ES6 <code>class</code> syntax. In the following example, <code>Kitten</code> extends <code>React.Component</code>:",
+        "定义 React 组件的另一种方法是使用 ES6 的<code>class</code>语法。在以下示例中，<code>Kitten</code>扩展了<code>React.Component</code>：",
         "<blockquote>class Kitten extends React.Component {<br>&nbsp;&nbsp;constructor(props) {<br>&nbsp;&nbsp;&nbsp;&nbsp;super(props);<br>&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;render() {<br>&nbsp;&nbsp;&nbsp;&nbsp;return (<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hi&lt;/h1&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;);<br>&nbsp;&nbsp;}<br>}</blockquote>",
-        "This creates an ES6 class <code>Kitten</code> which extends the <code>React.Component</code> class. So the <code>Kitten</code> class now has access to many useful React features, such as local state and lifecycle hooks. Don't worry if you aren't familiar with these terms yet, they will be covered in greater detail in later challenges.",
-        "Also notice the <code>Kitten</code> class has a <code>constructor</code> defined within it that calls <code>super()</code>. It uses <code>super()</code> to call the constructor of the parent class, in this case <code>React.Component</code>. The constructor is a special method used during the initialization of objects that are created with the <code>class</code> keyword. It is best practice to call a component's <code>constructor</code> with <code>super</code>, and pass <code>props</code> to both. This makes sure the component is initialized properly. For now, know that it is standard for this code to be included. Soon you will see other uses for the constructor as well as <code>props</code>.",
+        "这将创建一个 ES6类<code>Kitten</code>，它扩展了<code>React.Component</code>类。因此，<code>Kitten</code>类现在可以访问许多有用的 React 功能，例如本地状态和生命周期钩子。如果您还不熟悉这些术语，请不要担心，在以后的挑战中我们将更详细地介绍它们。",
+        "另请注意，<code>Kitten</code>类中定义了一个调用<code>super()</code>方法的<code>constructor</code>。它使用<code>super()</code>调用父类的构造函数，即本例中的<code>React.Component</code>。构造函数是使用<code>class</code>关键字创建的特殊方法，它用在对象初始化期间。最佳做法是使用<code>super</code>调用组件的<code>constructor</code>，并将<code>props</code>传递给它们，这可确保组件正确初始化。现在，你只需要知道包含的这些代码都是标准的。很快你会看到构造函数的其他用途以及<code>props</code>。",
         "<hr>",
-        "<code>MyComponent</code> is defined in the code editor using class syntax. Finish writing the <code>render</code> method so it returns a <code>div</code> element that contains an <code>h1</code> with the text <code>Hello React!</code>."
+        "<code>MyComponent</code>是使用类语法在代码编辑器中定义的。完成<code>render</code>方法的编写，使其返回<code>div</code>元素，其中包含文本内容为<code>Hello React!</code>的<code>h1</code>元素。"
       ],
       "files": {
         "indexjsx": {
@@ -430,16 +430,16 @@
       },
       "tests": [
         {
-          "text": "The React component should return a <code>div</code> element.",
-          "testString": "assert(Enzyme.shallow(React.createElement(MyComponent)).type() === 'div', 'The React component should return a <code>div</code> element.');"
+          "text": "该 React 组件应该返回一个<code>div</code>元素。",
+          "testString": "assert(Enzyme.shallow(React.createElement(MyComponent)).type() === 'div', '该 React 组件应该返回一个<code>div</code>元素。');"
         },
         {
-          "text": "The returned <code>div</code> should render an <code>h1</code> header within it.",
-          "testString": "assert(/<div><h1>.*<\\/h1><\\/div>/.test(Enzyme.shallow(React.createElement(MyComponent)).html()), 'The returned <code>div</code> should render an <code>h1</code> header within it.');"
+          "text": "返回的<code>div</code>中应该渲染一个<code>h1</code>标题。",
+          "testString": "assert(/<div><h1>.*<\\/h1><\\/div>/.test(Enzyme.shallow(React.createElement(MyComponent)).html()), '返回的<code>div</code>中应该渲染一个<code>h1</code>标题。');"
         },
         {
-          "text": "The <code>h1</code> header should contain the string <code>Hello React!</code>.",
-          "testString": "assert(Enzyme.shallow(React.createElement(MyComponent)).html() === '<div><h1>Hello React!</h1></div>', 'The <code>h1</code> header should contain the string <code>Hello React!</code>.');"
+          "text": "<code>h1</code>标题中应该包含字符串<code>Hello React!</code>。",
+          "testString": "assert(Enzyme.shallow(React.createElement(MyComponent)).html() === '<div><h1>Hello React!</h1></div>', '<code>h1</code>标题中应该包含字符串<code>Hello React!</code>。');"
         }
       ],
       "solutions": [
@@ -454,13 +454,13 @@
       "title": "Create a Component with Composition",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a <code>Navbar</code>, <code>Dashboard</code>, and <code>Footer</code>.",
-        "To compose these components together, you could create an <code>App</code> <i>parent</i> component which renders each of these three components as <i>children</i>. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the <code>render</code> method you could write:",
+        "现在我们来看看如何组合多个 React 组件。想象一下，您正在构建一个应用程序，并创建了三个组件：<code>Navbar</code>、<code>Dashboard</code>和<code>Footer</code>。",
+        "要将这些组件组合在一起，您可以创建一个<code>App</code><i>父组件</i>，将这三个组件分别渲染成为<i>子组件</i>。要在 React 组件中渲染一个子组件，您需要在 JSX 中包含作为自定义 HTML 标签编写的组件名称。例如，在<code>render</code>方法中，您可以这样编写：",
         "<blockquote>return (<br> &lt;App&gt;<br>&nbsp;&nbsp;&lt;Navbar /&gt;<br>&nbsp;&nbsp;&lt;Dashboard /&gt;<br>&nbsp;&nbsp;&lt;Footer /&gt;<br> &lt;/App&gt;<br>)</blockquote>",
-        "When React encounters a custom HTML tag that references another component (a component name wrapped in <code>&lt; /&gt;</code> like in this example), it renders the markup for that component in the location of the tag. This should illustrate the parent/child relationship between the <code>App</code> component and the <code>Navbar</code>, <code>Dashboard</code>, and <code>Footer</code>.",
+        "当 React 遇到引用另一个组件的自定义 HTML 标签时（如本例所示，组件名称包含在<code>&lt; /&gt;</code>中），它在标签的位置渲染该组件的标签。这可以说明<code>App</code>组件和<code>Navbar</code>、<code>Dashboard</code>以及<code>Footer</code> >之间的父/子关系。",
         "<hr>",
-        "In the code editor, there is a simple functional component called <code>ChildComponent</code> and a React component called <code>ParentComponent</code>. Compose the two together by rendering the <code>ChildComponent</code> within the <code>ParentComponent</code>. Make sure to close the <code>ChildComponent</code> tag with a forward slash.",
-        "<strong>Note:</strong>&nbsp;<code>ChildComponent</code> is defined with an ES6 arrow function because this is a very common practice when using React. However, know that this is just a function. If you aren't familiar with the arrow function syntax, please refer to the JavaScript section."
+        "在代码编辑器中，有一个名为<code>ChildComponent</code>的简单功能组件和一个名为<code>ParentComponent</code>的 React 组件。通过在<code>ParentComponent</code>中渲染<code>ChildComponent</code>来将两者组合在一起。确保使用正斜杠关闭<code>ChildComponent</code>标签。",
+        "<strong>注意：</strong>&nbsp;<code>ChildComponent</code>是使用 ES6 的箭头函数定义的，因为这是使用 React 时非常常见的做法。但是，要知道这只是一个函数。如果您不熟悉箭头函数语法，请参阅 JavaScript 部分。"
       ],
       "files": {
         "indexjsx": {
@@ -501,16 +501,16 @@
       },
       "tests": [
         {
-          "text": "The React component should return a single <code>div</code> element.",
-          "testString": "assert((function() { var shallowRender = Enzyme.shallow(React.createElement(ParentComponent)); return shallowRender.type() === 'div'; })(), 'The React component should return a single <code>div</code> element.');"
+          "text": "React 组件应该返回单个<code>div</code>元素。",
+          "testString": "assert((function() { var shallowRender = Enzyme.shallow(React.createElement(ParentComponent)); return shallowRender.type() === 'div'; })(), 'React 组件应该返回单个<code>div</code>元素。');"
         },
         {
-          "text": "The component should return two nested elements.",
-          "testString": "assert((function() { var shallowRender = Enzyme.shallow(React.createElement(ParentComponent)); return shallowRender.children().length === 2; })(), 'The component should return two nested elements.');"
+          "text": "组件应该返回两个嵌套的元素。",
+          "testString": "assert((function() { var shallowRender = Enzyme.shallow(React.createElement(ParentComponent)); return shallowRender.children().length === 2; })(), '组件应该返回两个嵌套的元素。');"
         },
         {
-          "text": "The component should return the ChildComponent as its second child.",
-          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(ParentComponent)); return mockedComponent.find('ParentComponent').find('ChildComponent').length === 1; })(), 'The component should return the ChildComponent as its second child.');"
+          "text": "组件的第二个子元素应该是 ChildComponent。",
+          "testString": "assert((function() { const mockedComponent = Enzyme.mount(React.createElement(ParentComponent)); return mockedComponent.find('ParentComponent').find('ChildComponent').length === 1; })(), '组件的第二个子元素应该是 ChildComponent。');"
         }
       ],
       "solutions": [
@@ -525,10 +525,10 @@
       "title": "Use React to Render Nested Components",
       "releasedOn": "December 25, 2017",
       "description": [
-        "The last challenge showed a simple way to compose two components, but there are many different ways you can compose components with React.",
-        "Component composition is one of React's powerful features. When you work with React, it is important to start thinking about your user interface in terms of components like the App example in the last challenge. You break down your UI into its basic building blocks, and those pieces become the components. This helps to separate the code responsible for the UI from the code responsible for handling your application logic. It can greatly simplify the development and maintenance of complex projects.",
+        "上一个挑战显示了组合两个组件的简单方法，但是有许多不同的方法可以把 React 组件组合在一起。",
+        "组件组合是 React 的强大功能之一。当您使用 React 时，先考虑您的用户界面的组件构成很重要（如上一个挑战中的 App 示例）。您将UI分解为基本的构建块，这些块就变成了组件。这有助于将负责 UI 的代码与负责处理应用程序逻辑的代码分开，并可以大大简化复杂项目的开发和维护。",
         "<hr>",
-        "There are two functional components defined in the code editor, called <code>TypesOfFruit</code> and <code>Fruits</code>. Take the <code>TypesOfFruit</code> component and compose it, or <em>nest</em> it, within the <code>Fruits</code> component. Then take the <code>Fruits</code> component and nest it within the <code>TypesOfFood</code> component. The result should be a child component, nested within a parent component, which is nested within a parent component of its own!"
+        "代码编辑器中定义了两个功能组件，分别是<code>TypesOfFruit</code>和<code>Fruits</code>。取<code>TypesOfFruit</code>组件，并在<code>Fruits</code>组件中嵌套它。然后将<code>Fruits</code>组件嵌套到<code>TypesOfFood</code>组件中。结果应该是子组件嵌套在父组件中，父组件嵌套在父组件的父组件中！"
       ],
       "files": {
         "indexjsx": {
@@ -585,20 +585,20 @@
       },
       "tests": [
         {
-          "text": "The <code>TypesOfFood</code> component should return a single <code>div</code> element.",
-          "testString": "assert(Enzyme.shallow(React.createElement(TypesOfFood)).type() === 'div', 'The <code>TypesOfFood</code> component should return a single <code>div</code> element.');"
+          "text": "<code>TypesOfFood</code>组件应该返回单个<code>div</code>元素。",
+          "testString": "assert(Enzyme.shallow(React.createElement(TypesOfFood)).type() === 'div', '<code>TypesOfFood</code>组件应该返回单个<code>div</code>元素。');"
         },
         {
-          "text": "The <code>TypesOfFood</code> component should return the <code>Fruits</code> component.",
-          "testString": "assert(Enzyme.shallow(React.createElement(TypesOfFood)).props().children[1].type.name === 'Fruits', 'The <code>TypesOfFood</code> component should return the <code>Fruits</code> component.');"
+          "text": "<code>TypesOfFood</code>组件应该包含<code>Fruits</code>组件。",
+          "testString": "assert(Enzyme.shallow(React.createElement(TypesOfFood)).props().children[1].type.name === 'Fruits', '<code>TypesOfFood</code>组件应该包含<code>Fruits</code>组件。');"
         },
         {
-          "text": "The <code>Fruits</code> component should return the <code>TypesOfFruit</code> component.",
-          "testString": "assert(Enzyme.mount(React.createElement(TypesOfFood)).find('h2').html() === '<h2>Fruits:</h2>', 'The <code>Fruits</code> component should return the <code>TypesOfFruit</code> component.');"
+          "text": "<code>Fruits</code>组件应该包含<code>TypesOfFruit</code>组件。",
+          "testString": "assert(Enzyme.mount(React.createElement(TypesOfFood)).find('h2').html() === '<h2>Fruits:</h2>', '<code>Fruits</code>组件应该包含<code>TypesOfFruit</code>组件。');"
         },
         {
-          "text": "The <code>TypesOfFruit</code> component should return the <code>h2</code> and <code>ul</code> elements.",
-          "testString": "assert(Enzyme.mount(React.createElement(TypesOfFood)).find('ul').text() === 'ApplesBlueberriesStrawberriesBananas', 'The <code>TypesOfFruit</code> component should return the <code>h2</code> and <code>ul</code> elements.');"
+          "text": "<code>TypesOfFruit</code>组件应该包含<code>h2</code>和<code>ul</code>元素。",
+          "testString": "assert(Enzyme.mount(React.createElement(TypesOfFood)).find('ul').text() === 'ApplesBlueberriesStrawberriesBananas', '<code>TypesOfFruit</code>组件应该包含<code>h2</code>和<code>ul</code>元素。');"
         }
       ],
       "solutions": [
