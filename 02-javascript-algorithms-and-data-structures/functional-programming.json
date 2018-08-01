@@ -16,7 +16,7 @@
         "3）有限的副作用 - 任何在函数外部更改或状态变化都严格地被控制。",
         "<hr>",
         "freeCodeCamp 成员在 love tea 的故事。",
-        "在代码编辑器中，已经为你定义好了<code>prepareTea</code>和<code>getTea</code>方法。调用<code>getTea</code>函数为团队准备 40 杯茶，并将它们存储在<code>tea4TeamFCC</code>变量里。"
+        "在代码编辑器中，已经为你定义好了<code>prepareTea</code>和<code>getTea</code>函数。调用<code>getTea</code>函数为团队准备 40 杯茶，并将它们存储在<code>tea4TeamFCC</code>变量里。"
       ],
       "tests": [
         {
@@ -38,7 +38,7 @@
           "name": "index",
           "contents": [
             "/**",
-            " * 漫长的备茶过程",
+            " * 备茶过程",
             " * @return {string} 一杯茶",
             " **/",
             "const prepareTea = () => 'greenTea';",
@@ -76,29 +76,29 @@
       "id": "587d7b8e367417b2b2512b5c",
       "title": "Understand Functional Programming Terminology",
       "description": [
-        "FCC 团队需求有变更，现在想要两种茶：绿茶和红茶。常见的事实：用户需求变更很常见。",
-        "基于以上信息，我们需要重构上一节挑战中的<code>getTea</code>方法来处理多种茶的请求。我们可以修改<code>getTea</code>接受一个函数作为参数，以便能够修改茶的类型。这使<code>getTea</code>更灵活，也使需求变更时为程序员提供更多控制权。",
+        "FCC 团队需求有变更，现在想要两种茶：绿茶和红茶。事实证明，用户需求变更是很常见的。",
+        "基于以上信息，我们需要重构上一节挑战中的<code>getTea</code>函数来处理多种茶的请求。我们可以修改<code>getTea</code>接受一个函数作为参数，使它能够修改茶的类型。这让<code>getTea</code>更灵活，也使需求变更时为程序员提供更多控制权。",
         "首先，我们将介绍一些术语：",
-        "<code>Callbacks</code>是被传递到另一个函数中调用的函数。你可能已经在其他方法中看过他们的传递，例如在<code>filter</code>中，回调函数告诉 JavaScript 以什么规则过滤数组。",
+        "<code>Callbacks</code>是被传递到另一个函数中调用的函数。你可能已经在其他函数中看过他们的传递，例如在<code>filter</code>中，回调函数告诉 JavaScript 以什么规则过滤数组。",
         "函数就像其他正常值一样，可以赋值给变量、传递给另一个函数，或从其它函数返回，称为<code>first class</code>函数。在 JavaScript 中，所有函数都是<code>first class</code>函数。",
         "将函数为参数或返回值的函数称为<code>higher order</code>函数。",
         "当函数传递给另一个函数或从另一个函数返回时，那些传入或返回的函数可以称为<code>lambda</code>。",
         "<hr>",
-        "准备27杯绿茶和13杯红茶，分别存入<code>tea4GreenTeamFCC</code>和<code>tea4BlackTeamFCC</code>变量。请注意，<code>getTea</code>函数已被修改为以函数作为第一个参数。",
+        "准备27杯绿茶和13杯红茶，分别存入<code>tea4GreenTeamFCC</code>和<code>tea4BlackTeamFCC</code>变量。请注意，<code>getTea</code>函数已经修改为以函数作为第一个参数。",
         "注意：数据（茶的数量）作为最后一个参数。我们将在后面的课程中对此进行更多讨论。"
       ],
       "tests": [
         {
-          "text": "<code>tea4GreenTeamFCC</code>变量应该存有为团队准备的 27 杯茶。",
-          "testString": "assert(tea4GreenTeamFCC.length === 27, '<code>tea4GreenTeamFCC</code>变量应该存有为团队准备的 27 杯茶。');"
+          "text": "<code>tea4GreenTeamFCC</code>变量应存有为团队准备的 27 杯茶。",
+          "testString": "assert(tea4GreenTeamFCC.length === 27, '<code>tea4GreenTeamFCC</code>变量应存有为团队准备的 27 杯茶。');"
         },
         {
           "text": "<code>tea4GreenTeamFCC</code>变量应存有绿茶。",
           "testString": "assert(tea4GreenTeamFCC[0] === 'greenTea', '<code>tea4GreenTeamFCC</code>变量应存有绿茶。');"
         },
         {
-          "text": "<code>tea4BlackTeamFCC</code>变量应该存有 13 杯红茶。",
-          "testString": "assert(tea4BlackTeamFCC.length === 13, '<code>tea4BlackTeamFCC</code>变量应该存有 13 杯红茶。');"
+          "text": "<code>tea4BlackTeamFCC</code>变量应存有 13 杯红茶。",
+          "testString": "assert(tea4BlackTeamFCC.length === 13, '<code>tea4BlackTeamFCC</code>变量应存有 13 杯红茶。');"
         },
         {
           "text": "<code>tea4BlackTeamFCC</code>变量应存有红茶。",
@@ -115,13 +115,13 @@
           "name": "index",
           "contents": [
             "/**",
-            " * 漫长的备绿茶过程",
+            " * 绿茶准备过程",
             " * @return {string} 一杯绿茶",
             " **/",
             "const prepareGreenTea = () => 'greenTea';",
             "",
             "/**",
-            " * 漫长的备绿茶过程",
+            " * 备红茶准备过程",
             " * @return {string} 一杯红茶",
             " **/",
             "const prepareBlackTea = () => 'blackTea';",
@@ -164,17 +164,17 @@
       "id": "587d7b8e367417b2b2512b5d",
       "title": "Understand the Hazards of Using Imperative Code",
       "description": [
-        "函数式编程是一种好习惯，它能让代码管理更简单，不受隐藏 bug 影响。在我们开始函数式编程之前，我们先看看命令式编程，以突显可能遇到的问题。",
+        "函数式编程是一种好习惯，它能让代码管理更简单，不受隐藏 bug 影响。在我们开始函数式编程之前，为了更好的突显可能遇到的问题，我们先看看命令式编程。",
         "类似在英语（和许多其他语言）中，命令式时态用于给出命令，编程中的命令式是给计算机一组语句来执行任务。",
         "这些语句通常会改变程序的状态，例如更新全局变量。典型的例子就是写一个<code>for</code>循环，它给出了迭代数组索引的精确方向。",
-        "相反，函数式编程是声明式编程的一种形式。通过调用方法或函数来告诉计算机你想要做什么。",
-        "JavaScript 预置了许多方法处理常见的任务，所以你无需写出计算机应如何执行它们。例如，你可以调用<code>map</code>方法替代上面提到的<code>for</code>循环来处理数组迭代。这有助于避免语义错误，如调试章节介绍的\"Off By One Errors\"",
+        "相反，函数式编程是声明式编程的一种形式。通过调用方法或函数来告诉计算机要做什么。",
+        "JavaScript 预置了许多方法处理常见的任务，所以你无需写出计算机应如何执行它们。例如，你可以调用<code>map</code>函数替代上面提到的<code>for</code>循环来处理数组迭代。这有助于避免语义错误，如调试章节介绍的\"Off By One Errors\"。",
         "",
         "考虑这样的场景：你正在浏览器中浏览网页，并想跟踪你打开的标签。让我们试着用一些简单的面向对象代码对此建模。",
-        "窗口对象由选项卡组成，通常会打开多个窗口。每个窗口对象中每个打开网站的标题都保存在一个数组中。在浏览器工作时（打开新标签，合并窗口和关闭标签），您想要打印仍然打开的标签。关闭的选项卡将从数组中删除，新的选项卡（为简单起见）添加到数组的末尾。",
+        "窗口对象由选项卡组成，通常会打开多个窗口。窗口对象中每个打开网站的标题都保存在一个数组中。在浏览器工作时（打开新标签，合并窗口和关闭标签），你想要打印仍然打开的标签。关闭的选项卡将从数组中删除，新的选项卡（为简单起见）添加到数组的末尾。",
         "代码编辑器中显示了此功能的实现，其中包含<code>tabOpen()</code>，<code>tabClose()</code>，和 <code>join()</code>函数。<code>tabs</code>数组是窗口对象的一部分用于储存打开页面的名称。",
         "<h4>说明<h4>",
-        "在编辑器中运行代码。它使用的方法在程序中有副作用，导致输出错误。打开标签的最终列表应该是<code>['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']</code>但输出会略有不同。",
+        "在编辑器中运行代码。它使用了有副作用的方法，导致输出错误。打开标签的最终列表应该是<code>['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']</code>但输出会略有不同。",
         "仔细阅读代码，看看你是否能找出问题所在，然后进入下一个挑战，了解更多信息。"
       ],
       "tests": [
@@ -205,7 +205,7 @@
             "",
             "// 在末尾打开一个新标签",
             "Window.prototype.tabOpen = function (tab) {",
-            "  this.tabs.push('new tab'); // let's open a new tab for now",
+            "  this.tabs.push('new tab'); // 打开一个新的标签",
             "  return this;",
             "};",
             "",
@@ -240,14 +240,14 @@
       "id": "587d7b8e367417b2b2512b5e",
       "title": "Avoid Mutations and Side Effects Using Functional Programming",
       "description": [
-        "如果你还没想通，上一个挑战的问题出在<code>splice</code>对<code>tabClose()</code>方法的调用里。不幸的是，<code>splice</code>修改了调用它的原始数组，所以第二次调用它时是基于修改后的数组，才给出了意料之外的结果。",
+        "如果你还没想通，上一个挑战的问题出在<code>splice</code>对<code>tabClose()</code>函数的调用里。不幸的是，<code>splice</code>修改了调用它的原始数组，所以第二次调用它时是基于修改后的数组，才给出了意料之外的结果。",
         "这是一个小例子，还有更广义的定义——你在变量，数组或对象上调用一个函数，这个会函数改变对象中的变量或其他东西。",
         "函数式编程的核心原则之一是不改变任何东西。变化会导致错误。知道函数不会改变任何东西，包括函数参数或任何全局变量，更容易阻止产生错误。",
         "前面的例子没有任何复杂的操作，但是<code>splice</code>方法改变了原始数组，导致 bug 产生。",
-        "回想一下，在函数式编程中，改变或变更事物称为<code>mutation</code>，结果被称为<code>side effect</code>。理想情况下，函数应该是<code>pure function</code>，意味着不会产生任何副作用。",
-        "让我们尝试掌握这个原则，不要改变代码中的任何变量或对象。",
+        "回想一下，在函数式编程中，改变或变更称为<code>mutation</code>，结果被称为<code>side effect</code>。理想情况下，函数应该是不会产生任何副作用的<code>pure function</code>。",
+        "让我们尝试掌握这个原则：不要改变代码中的任何变量或对象。",
         "<hr>",
-        "填写<code>incrementer</code>函数的代码，使其返回全局变量<code>fixedValue</code>的值加1。"
+        "填写<code>incrementer</code>函数的代码，使其返回全局变量<code>fixedValue</code>的值增加 1。"
       ],
       "tests": [
         {
@@ -290,15 +290,15 @@
       "id": "587d7b8e367417b2b2512b5f",
       "title": "Pass Arguments to Avoid External Dependence in a Function",
       "description": [
-        "最后一个挑战是更接近函数式编程原则，但是仍然缺少一些东西。",
-        "我们没有改变全局变量值，但如果没有全局变量<code>fixedValue</code>，<code>incrementer</code>函数将不起作用。",
-        "函数编程的另一个原则是总是显式声明依赖关系。这意味着如果函数依赖于一个变量或对象，那么将该变量或对象作为参数直接传递到函数中。",
-        "这个原则有几个好的影响。让函数更容易测试，你确切知道它需要什么输入，并且它不依赖于程序中的任何其他内容。",
-        "当更改，删除或添加新代码时，可以让你更加自信。你会知道什么是可以或不可以改变的，能看出哪里有潜在的陷阱。",
+        "最后一个挑战是更接近函数式编程原则的挑战，但是仍然缺少一些东西。",
+        "虽然我们没有改变全局变量值，但在没有全局变量<code>fixedValue</code>情况下，<code>incrementer</code>函数将不起作用。",
+        "函数式编程的另一个原则是：总是显式声明依赖关系。如果函数依赖于一个变量或对象，那么将该变量或对象作为参数直接传递到函数中。",
+        "这个原则带来几个好的影响。让函数更容易测试，确切知道它需要什么输入，并且它不依赖于程序中的任何其他内容。",
+        "可以让你更加自信地更改，删除或添加新代码。你会知道什么是可以或不可以改变的，你能看出哪里有潜在的陷阱。",
         "最后，无论代码的哪一部分执行它，函数总是会为同一组输入生成相同的输出。",
         "<hr>",
-        "让我们更新<code>incrementer</code>函数以明确声明其依赖项",
-        "编写<code>incrementer</code>函数，使其获取参数，然后将值增加1。"
+        "更新<code>incrementer</code>函数，明确声明其依赖项。",
+        "编写<code>incrementer</code>函数，获取它的参数，然后将值增加 1。"
       ],
       "tests": [
         {
@@ -345,12 +345,12 @@
       "id": "587d7b8f367417b2b2512b60",
       "title": "Refactor Global Variables Out of Functions",
       "description": [
-        "到目前为止，我们已经看到了函数式编程的两个不同原则：",
+        "目前为止，我们已经看到了函数式编程的两个不同原则：",
         "1) 不要更改变量或对象——创建新变量和对象，并在需要时从函数返回它们。",
         "2) 声明函数参数——函数内的任何计算仅取决于参数，而不取决于任何全局对象或变量。",
         "给数字加 1 不够刺激，我们可以在处理数组或更复杂的对象时应用这些原则。",
         "<hr>",
-        "重构代码，使全局数组<code>bookList</code>在任何函数内部都不会改变。<code>add</code>函数可以将指定的<code>bookName</code>增加到数组末尾。<code>remove</code>函数可以从数组中移除指定<code>bookName</code>。两个函数都返回数组，并且任何参数都应该添加到<code>bookName</code>前面。"
+        "重构代码，使全局数组<code>bookList</code>在任何函数内部都不会被改变。<code>add</code>函数可以将指定的<code>bookName</code>增加到数组末尾。<code>remove</code>函数可以从数组中移除指定<code>bookName</code>。两个函数都返回数组，并且任何参数都应该添加到<code>bookName</code>前面。"
       ],
       "tests": [
         {
@@ -425,30 +425,30 @@
       "id": "587d7b8f367417b2b2512b61",
       "title": "Use the map Method to Extract Data from an Array",
       "description": [
-        "So far we have learned to use pure functions to avoid side effects in a program. Also, we have seen the value in having a function only depend on its input arguments.",
-        "This is only the beginning. As its name suggests, functional programming is centered around a theory of functions.",
-        "It would make sense to be able to pass them as arguments to other functions, and return a function from another function. Functions are considered <code>First Class Objects</code> in JavaScript, which means they can be used like any other object. They can be saved in variables, stored in an object, or passed as function arguments.",
-        "Let's start with some simple array functions, which are methods on the array object prototype. In this exercise we are looking at <code>Array.prototype.map()</code>, or more simply <code>map</code>.",
-        "Remember that the <code>map</code> method is a way to iterate over each item in an array. It creates a new array (without changing the original one) after applying a callback function to every element.",
+        "目前为止，我们已经学会了使用纯函数来避免程序中的副作用。此外，我们已经看到函数的值仅取决于其输入参数。",
+        "这仅仅是个开始。顾名思义，函数式编程以函数理论为中心。",
+        "能够将它们作为参数传递给其他函数，和从另一个函数返回一个函数是有意义的。函数在 JavaScript 中被视为<code>First Class Objects</code>，它们可以像任何其他对象一样使用。它们可以保存在变量中，存储在对象中，也可以作为函数参数传递。",
+        "让我们从一些简单的数组函数开始，这些函数是数组对象原型上的方法。在本练习中，我们将看到<code>Array.prototype.map()</code>或者更简单的<code>map</code>。",
+        "请记住，<code>map</code>方法是迭代数组中每一项的方法。在对每个元素应用回调函数后，它会创建一个新数组(不改变原来的数组)。",
         "<hr>",
-        "The <code>watchList</code> array holds objects with information on several movies. Use <code>map</code> to pull the title and rating from <code>watchList</code> and save the new array in the <code>rating</code> variable. The code in the editor currently uses a <code>for</code> loop to do this, replace the loop functionality with your <code>map</code> expression."
+        "<code>watchList</code>数组保存了包含一些电影信息的对象。使用<code>map</code>从<code>watchList</code>中提取标题和评分，并将新数组保存在<code>rating</code>变量里。目前编辑器中的代码是使用<code>for</code>循环实现，使用<code>map</code>表达式替换循环功能。"
       ],
       "tests": [
         {
-          "text": "The <code>watchList</code> variable should not change.",
-          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", 'The <code>watchList</code> variable should not change.');"
+          "text": "<code>watchList</code>不能被改变",
+          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", '<code>watchList</code>不能被改变');"
         },
         {
-          "text": "Your code should not use a <code>for</code> loop.",
-          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), 'Your code should not use a <code>for</code> loop.');"
+          "text": "你的代码不能使用<code>for</code>循环。",
+          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), '你的代码不能使用<code>for</code>循环。');"
         },
         {
-          "text": "Your code should use the <code>map</code> method.",
-          "testString": "assert(code.match(/\\.map/g), 'Your code should use the <code>map</code> method.');"
+          "text": "你的代码应使用<code>map</code>方法。",
+          "testString": "assert(code.match(/\\.map/g), '你的代码应使用<code>map</code>方法。');"
         },
         {
-          "text": "<code>rating</code> should equal <code>[{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]</code>.",
-          "testString": "assert(JSON.stringify(rating) === JSON.stringify([{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]), '<code>rating</code> should equal <code>[{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]</code>.');"
+          "text": "<code>rating</code>应等于<code>[{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]</code>.",
+          "testString": "assert(JSON.stringify(rating) === JSON.stringify([{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]), '<code>rating</code>应等于<code>[{\"title\":\"Inception\",\"rating\":\"8.8\"},{\"title\":\"Interstellar\",\"rating\":\"8.6\"},{\"title\":\"The Dark Knight\",\"rating\":\"9.0\"},{\"title\":\"Batman Begins\",\"rating\":\"8.3\"},{\"title\":\"Avatar\",\"rating\":\"7.9\"}]</code>.');"
         }
       ],
       "solutions": [],
