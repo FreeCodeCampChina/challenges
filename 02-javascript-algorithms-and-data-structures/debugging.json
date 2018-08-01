@@ -18,8 +18,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应使用<code>console.log()</code>来检查变量<code>a</code>的值。",
-          "testString": "assert(code.match(/console\\.log\\(a\\)/g), '你的代码应使用<code>console.log()</code>来检查变量<code>a</code>的值。');"
+          "text": "你应使用<code>console.log()</code>来检查变量<code>a</code>的值。",
+          "testString": "assert(code.match(/console\\.log\\(a\\)/g), '你应使用<code>console.log()</code>来检查变量<code>a</code>的值。');"
         }
       ],
       "solutions": [],
@@ -115,16 +115,16 @@
       ],
       "tests": [
         {
-          "text": "你的代码应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。",
-          "testString": "assert(code.match(/console\\.log\\(typeof[\\( ].*\\)?\\)/g).length == 2, '你的代码应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。');"
+          "text": "你应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。",
+          "testString": "assert(code.match(/console\\.log\\(typeof[\\( ].*\\)?\\)/g).length == 2, '你应在两个<code>console.log()</code>语句中使用<code>typeof</code>来检查变量的类型。');"
         },
         {
-          "text": "你的代码应使用<code>typeof</code>来检查变量<code>seven</code>的类型。",
-          "testString": "assert(code.match(/typeof[\\( ]seven\\)?/g), '你的代码应使用<code>typeof</code>来检查变量<code>seven</code>的类型。');"
+          "text": "你应使用<code>typeof</code>来检查变量<code>seven</code>的类型。",
+          "testString": "assert(code.match(/typeof[\\( ]seven\\)?/g), '你应使用<code>typeof</code>来检查变量<code>seven</code>的类型。');"
         },
         {
-          "text": "你的代码应使用<code>typeof</code>来检查变量<code>three</code>的类型。",
-          "testString": "assert(code.match(/typeof[\\( ]three\\)?/g), '你的代码应使用<code>typeof</code>来检查变量<code>three</code>的类型。');"
+          "text": "你应使用<code>typeof</code>来检查变量<code>three</code>的类型。",
+          "testString": "assert(code.match(/typeof[\\( ]three\\)?/g), '你应使用<code>typeof</code>来检查变量<code>three</code>的类型。');"
         }
       ],
       "solutions": [],
@@ -210,12 +210,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该修复数组缺少的部分。",
-          "testString": "assert(code.match(/myArray\\s*?=\\s*?\\[\\s*?1\\s*?,\\s*?2\\s*?,\\s*?3\\s*?\\];/g), '你的代码应该修复数组缺少的部分。');"
+          "text": "你应该修复数组缺少的部分。",
+          "testString": "assert(code.match(/myArray\\s*?=\\s*?\\[\\s*?1\\s*?,\\s*?2\\s*?,\\s*?3\\s*?\\];/g), '你应该修复数组缺少的部分。');"
         },
         {
-          "text": "你的代码应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。",
-          "testString": "assert(arraySum === 6, '你的代码应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。');"
+          "text": "你应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。",
+          "testString": "assert(arraySum === 6, '你应该修复<code>.reduce()</code>方法缺少的部分。控制台应输出 \"Sum of array values is: 6\"。');"
         }
       ],
       "solutions": [],
@@ -252,12 +252,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。",
-          "testString": "assert(code.match(/<a href=\\s*?('|\\\\\")#Home\\1\\s*?>/g), '你的代码应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。');"
+          "text": "你应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。",
+          "testString": "assert(code.match(/<a href=\\s*?('|\\\\\")#Home\\1\\s*?>/g), '你应通过更改或转义来修复<code>href</code>的值 \"#Home\" 周围的引号。');"
         },
         {
-          "text": "你的代码应该在整个字符串外围保留双引号。",
-          "testString": "assert(code.match(/\"<p>.*?<\\/p>\";/g), '你的代码应该在整个字符串外围保留双引号。');"
+          "text": "你应该在整个字符串外围保留双引号。",
+          "testString": "assert(code.match(/\"<p>.*?<\\/p>\";/g), '你应该在整个字符串外围保留双引号。');"
         }
       ],
       "solutions": [],
@@ -292,8 +292,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该修复条件语句，使其判断是否相等,而不是赋值。",
-          "testString": "assert(result == \"Not equal!\", '你的代码应该修复条件语句，使其判断是否相等,而不是赋值。');"
+          "text": "你应该修复条件语句，使其判断是否相等,而不是赋值。",
+          "testString": "assert(result == \"Not equal!\", '你应该修复条件语句，使其判断是否相等,而不是赋值。');"
         },
         {
           "text": "条件语句可以使用<code>==</code>或<code>===</code>来测试是否相等。",
@@ -339,12 +339,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。",
-          "testString": "assert(result == 9, '你的代码应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。');"
+          "text": "你应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。",
+          "testString": "assert(result == 9, '你应该修复变量<code>result</code>使其为函数<code>getNine</code>的返回值。');"
         },
         {
-          "text": "你的代码应该调用<code>getNine</code>函数。",
-          "testString": "assert(code.match(/getNine\\(\\)/g).length == 2, '你的代码应该调用<code>getNine</code>函数。');"
+          "text": "你应该调用<code>getNine</code>函数。",
+          "testString": "assert(code.match(/getNine\\(\\)/g).length == 2, '你应该调用<code>getNine</code>函数。');"
         }
       ],
       "solutions": [],
@@ -381,12 +381,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。",
-          "testString": "assert(power == 8, '你的代码应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。');"
+          "text": "你应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。",
+          "testString": "assert(power == 8, '你应修复变量<code>power</code>，使其等于 2 的 3 次方，而不是 3 的 2 次方。');"
         },
         {
-          "text": "你的代码调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。",
-          "testString": "assert(code.match(/raiseToPower\\(\\s*?base\\s*?,\\s*?exp\\s*?\\);/g), '你的代码调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。');"
+          "text": "你调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。",
+          "testString": "assert(code.match(/raiseToPower\\(\\s*?base\\s*?,\\s*?exp\\s*?\\);/g), '你调用<code>raiseToPower</code>函数时，传递参数的顺序应正确。');"
         }
       ],
       "solutions": [],
@@ -425,20 +425,20 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该设置循环的初始条件，使循环从第一个索引开始。",
-          "testString": "assert(code.match(/i\\s*?=\\s*?0\\s*?;/g).length == 1, '你的代码应该设置循环的初始条件，使循环从第一个索引开始。');"
+          "text": "你应该设置循环的初始条件，使循环从第一个索引开始。",
+          "testString": "assert(code.match(/i\\s*?=\\s*?0\\s*?;/g).length == 1, '你应该设置循环的初始条件，使循环从第一个索引开始。');"
         },
         {
-          "text": "你的代码应修复循环的初始条件，使循环从索引 0 开始。",
-          "testString": "assert(!code.match(/i\\s?=\\s*?1\\s*?;/g), '你的代码应修复循环的初始条件，使循环从索引 0 开始。');"
+          "text": "你应修复循环的初始条件，使循环从索引 0 开始。",
+          "testString": "assert(!code.match(/i\\s?=\\s*?1\\s*?;/g), '你应修复循环的初始条件，使循环从索引 0 开始。');"
         },
         {
-          "text": "你的代码应设置循环的终止条件，使循环在最后一个索引处停止。",
-          "testString": "assert(code.match(/i\\s*?<\\s*?len\\s*?;/g).length == 1, '你的代码应设置循环的终止条件，使循环在最后一个索引处停止。');"
+          "text": "你应设置循环的终止条件，使循环在最后一个索引处停止。",
+          "testString": "assert(code.match(/i\\s*?<\\s*?len\\s*?;/g).length == 1, '你应设置循环的终止条件，使循环在最后一个索引处停止。');"
         },
         {
-          "text": "你的代码应修复循环的终止条件，使循环在索引为字符串长度减 1 时停止。",
-          "testString": "assert(!code.match(/i\\s*?<=\\s*?len;/g), '你的代码应修复循环的终止条件，使循环在索引为字符串长度减 1 时停止。');"
+          "text": "你应修复循环的终止条件，使循环在索引为字符串长度减 1 时停止。",
+          "testString": "assert(!code.match(/i\\s*?<=\\s*?len;/g), '你应修复循环的终止条件，使循环在索引为字符串长度减 1 时停止。');"
         }
       ],
       "solutions": [],
@@ -479,8 +479,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。",
-          "testString": "assert(JSON.stringify(matrix) == \"[[0,0],[0,0],[0,0]]\", '你的代码应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。');"
+          "text": "你应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。",
+          "testString": "assert(JSON.stringify(matrix) == \"[[0,0],[0,0],[0,0]]\", '你应将变量<code>matrix</code>设置为 3 行 2 列“零”的二维数组。');"
         },
         {
           "text": "变量<code>matrix</code>应有 3 行。",
@@ -539,12 +539,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。",
-          "testString": "assert(code.match(/i\\s*?<=\\s*?4;/g).length == 1, '你的代码应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。');"
+          "text": "你应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。",
+          "testString": "assert(code.match(/i\\s*?<=\\s*?4;/g).length == 1, '你应该在<code>for</code>循环的终止条件（中间部分）中更改比较运算符。');"
         },
         {
-          "text": "你的代码应该在循环的终止条件中修复比较运算符。",
-          "testString": "assert(!code.match(/i\\s*?!=\\s*?4;/g), '你的代码应该在循环的终止条件中修复比较运算符。');"
+          "text": "你应该修改比较运算符来避免出现死循环。",
+          "testString": "assert(!code.match(/i\\s*?!=\\s*?4;/g), '你应该修改比较运算符来避免出现死循环。');"
         }
       ],
       "solutions": [],
