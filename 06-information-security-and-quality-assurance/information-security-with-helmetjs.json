@@ -108,11 +108,11 @@
       "title": "Prevent IE from Opening Untrusted HTML with helmet.ieNoOpen()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "Some web applications will serve untrusted HTML for download. Some versions of Internet Explorer by default open those HTML files in the context of your site. This means that an untrusted HTML page could start doing bad things in the context of your pages. This middleware sets the X-Download-Options header to noopen. This will prevent IE users from executing downloads in the trusted site’s context."
+        "有些网站会下载不安全的 HTML 文件，某些版本的 IE 默认情况下还在你网站的作用域下打开这些 HTML 文件。换句话说，这些不安全的 HTML 页面可以在你的网站做恶意行为。我们可以通过中间件来设置 ``X-Download-Options`` 头部为 to ``noopen``。这可以防治 IE 在信任的网站下执行下载的文件。"
       ],
       "tests": [
         {
-          "text": "helmet.ieNoOpen() middleware should be mounted correctly",
+          "text": "helmet.ieNoOpen() 中间件应该被正确加载",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'ienoopen'); assert.equal(data.headers['x-download-options'], 'noopen'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
