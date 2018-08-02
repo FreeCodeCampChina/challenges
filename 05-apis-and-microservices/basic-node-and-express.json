@@ -84,13 +84,13 @@
       "id": "587d7fb1367417b2b2512bf1",
       "title": "Serve JSON on a Specific Route",
       "description": [
-        "HTML 服务器返回 HTML，API 服务器返回处理的数据。<dfn>REST</dfn>（表现层状态转换）API 允许使用更简易的方式交换数据，从而不需要客户端知道服务器的实现细节。客户端只需要通过 URL 知道请求的资源在哪，以及需要对请求的数据进行何种动作。比如 GET 这个动作，就是从服务器上获取某些信息，它不会修改任何数据。如今，在 web 上传输数据的首选数据格式是 JSON。简言之，JSON 是一种将 JavaScript 对象表示为字符串的简易方式，因此可以很容易地传输这些数据。",
-        "我们来创建一个简单的 API，通过创建一个简易的路由 <code>/json</code>，当客户端请求这个路由时，返回一个 JSON 数据。你可以像之前那样通过 <code>app.get()</code> 方法来做。在路由处理程序中使用 <code>res.json()</code> 方法返回 JSON 格式的数据，只需要给它传一个对象作为参数。这个方法会结束请求响应循环（request-response loop），然后返回数据。<code>res.json()</code> 将一个有效的 JavaScript 对象转化为字符串，然后会设置适当的头信息（headers）来告诉浏览器，这是一个 JSON 数据，最后返回给客户端进行处理。一个有效的对象通常是这种结构：<code>{key: data}</code>。数据可以是数字、字符串、嵌套对象或数组。也可以是变量或者函数返回值，在这种情况下，将以它们的实际值为准（转成字符串）。",
-        "当 GET 请求路由 <code>/json</code> 时，将对象 <code>{\"message\": \"Hello json\"}</code> 作为 JSON 格式返回给客户端。然后在浏览器里输入完整的 URL，比如 <code>your-app-url/json</code>，就可以在屏幕上看到这个消息了。"
+        "HTML 服务器提供 HTML，API 服务器提供数据。<dfn>REST</dfn>（表现层状态转换）API 允许使用更简易的方式交换数据，从而不需要客户端知道服务器的实现细节。客户端只要知道需请求资源对应的 URL 是什么，以及需要对这个 URL 进行何种操作就够了。比如 GET 这个动作，就是从服务器上获取某些信息，它不会修改任何数据。如今，在 web 上传输数据的首选数据格式是 JSON。简言之，JSON 是一种将 JavaScript 对象表示为字符串的简易方式，因此可以很容易地传输这些数据。",
+        "我们来创建一个简单的 API，一个路径为<code>/json</code>且返回数据是 JSON 格式的路由，path 为 /json，你可以像之前那样通过<code>app.get()</code>方法来做，然后在路由处理部分使用<code>res.json()</code>方法返回 JSON 格式的数据，这个方法可以接收一个配置对象。这个方法会结束请求响应循环（request-response loop），然后返回数据。<code>res.json()</code> 将一个有效的 JavaScript 对象转化为字符串，然后会设置适当的头信息（headers）来告诉浏览器，这是一个 JSON 数据，最后返回给客户端进行处理。一个有效的对象通常是这种结构：<code>{key: data}</code>。数据可以是数字、字符串、嵌套对象或数组。也可以是变量或者函数返回值，在这种情况下，会以它们的执行结果为基准，再转成字符串。",
+        "当 GET 请求路由<code>/json</code>时，将对象<code>{\"message\": \"Hello json\"}</code> 作为 JSON 格式返回给客户端。然后在浏览器里输入完整的 URL，比如 <code>your-app-url/json</code>，就可以在屏幕上看到这个消息了。"
       ],
       "tests": [
         {
-          "text": "服务端 <code>/json</code> 应该返回一个 JSON 对象 <code>{\"message\": \"Hello json\"}</code>",
+          "text": "服务端<code>/json</code>应该返回一个 JSON 对象 <code>{\"message\": \"Hello json\"}</code>",
           "testString": "getUserInput => $.get(getUserInput('url') + '/json').then(data => { assert.equal(data.message, 'Hello json', '服务端 \\'/json\\' 没有返回正确的数据'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -102,14 +102,14 @@
       "id": "587d7fb1367417b2b2512bf2",
       "title": "Use the .env File",
       "description": [
-        "The <code>.env</code> file is a hidden file that is used to pass environment variables to your application. This file is secret, no one but you can access it, and it can be used to store data that you want to keep private or hidden. For example, you can store API keys from external services or your database URI. You can also use it to store configuration options. By setting configuration options, you can change the behavior of your application, without the need to rewrite some code.",
-        "The environment variables are accessible from the app as <code>process.env.VAR_NAME</code>. The <code>process.env</code> object is a global Node object, and variables are passed as strings. By convention, the variable names are all uppercase, with words separated by an underscore. The <code>.env</code> is a shell file, so you don’t need to wrap names or values in quotes. It is also important to note that there cannot be space around the equals sign when you are assigning values to your variables, e.g. <code>VAR_NAME=value</code>. Usually, you will put each variable definition on a separate line.",
-        "Let's add an environment variable as a configuration option. Store the variable <code>MESSAGE_STYLE=uppercase</code> in the <code>.env</code> file. Then tell the GET <code>/json</code> route handler that you created in the last challenge to transform the response object’s message to uppercase if <code>process.env.MESSAGE_STYLE</code> equals <code>uppercase</code>. The response object should become <code>{\"message\": \"HELLO JSON\"}</code>."
+        "<code>.env</code>文件是一个隐藏文件，用于将环境变量传给应用程序。这是一个私密文件，除了你之外没人可以访问它，它可以用来存储你想保持私有或者隐藏的数据。举个例子，可以存储第三方服务 API 密钥或者数据库 URI。你也可以使用它来存储配置选项。通过设置配置选项，你可以改变应用程序的行为，而无需重写一些代码。",
+        "在应用程序中可以通过<code>process.env.VAR_NAME</code>访问到环境变量。<code>process.env</code>是 Node 程序中的一个全局对象，可以给这个变量传字符串。按照惯例，变量名都是大写的，单词之间用下划线隔开。<code>.env</code>是一个 shell 文件，因此不需要用给变量名和值加引号。还有一点需要注意，当你给变量赋值时，等号周围不能有空格，举个例子：<code>VAR_NAME=value</code>。通常来讲，每一个变量会单独定义在新的一行。",
+        "让我们添加一个环境变量作为配置选项。在<code>.env</code>文件中保存变量<code>MESSAGE_STYLE=uppercase</code>。它的作用是，告诉上一次挑战中的路由处理程序，当我们 GET 方法请求 /JSON 时，如果<code>process.env.MESSAGE_STYLE</code>的值为<code>uppercase</code>，那么返回的对象则应该是<code>{\"message\": \"HELLO JSON\"}</code>."
       ],
       "tests": [
         {
-          "text": "The response of the endpoint <code>/json</code> should change according to the environment variable <code>MESSAGE_STYLE</code>",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/use-env-vars').then(data => { assert.isTrue(data.passed, 'The response of \"/json\" does not change according to MESSAGE_STYLE'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "客户端响应<code>/json</code>的值，应该随着环境变量<code>MESSAGE_STYLE</code>的值而改变",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/use-env-vars').then(data => { assert.isTrue(data.passed, '响应 \"/json\" 时，并没有随着 MESSAGE_STYLE 的值改变而改变'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
