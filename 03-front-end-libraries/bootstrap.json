@@ -108,7 +108,7 @@
       "description": [
         "首先，在已有的图片下面添加一张新的图片. 设置 <code>src</code> 属性为 <code>https://bit.ly/fcc-running-cats</code>。",
         "如果图片的大小恰恰和我们手机屏幕尺寸大小一样自然是最好的。",
-        "幸运的是现在通过 Bootstrap， 我们只需要为 image 标签上添加 class 为 <code>img-responsive</code> 就可以让它完美的适应你页面的宽度了。"
+        "幸运的是现在通过 Bootstrap，我们仅仅只需要为 image 标签上添加 <code>img-responsive</code> class 就可以让它完美的适应你页面的宽度了。"
       ],
       "tests": [
         {
@@ -205,7 +205,7 @@
       "id": "bad87fee1348bd8acde08812",
       "title": "Center Text with Bootstrap",
       "description": [
-        "现在我们正在使用 Bootstrap，因此我们可以将头部元素居中来让页面看起来更棒。而我们需要做的仅仅是为我们的 <code>h2</code> 元素添加一个 <code>text-center</code> 的类（class）属性",
+        "现在我们正在使用 Bootstrap，因此我们可以将顶部的元素居中来让页面变得更好看。而我们需要做的仅仅是为我们的 <code>h2</code> 元素添加一个 <code>text-center</code> 的类（class）属性",
         "记住：我们通过空格分隔不同的 class 可以为一个元素添加多个 class ，就像这样：",
         "<code>&#60h2 class=\"red-text text-center\"&#62your text&#60/h2&#62</code>"
       ],
@@ -294,7 +294,7 @@
       "title": "Create a Bootstrap Button",
       "description": [
         "Bootstrap 的 <code>button</code> 元素有着独有的、比默认 HTML 按钮更好的样式风格。",
-        "在大的小猫图片下方创建新的 <code>button</code> 元素。 给它添加 <code>btn</code> 与 <code>btn-default</code> 两个 class 和 \"Like\" 文本内容。"
+        "在较大的小猫图片下方创建新的 <code>button</code> 元素。 给它添加 <code>btn</code> 与 <code>btn-default</code> 两个 class 和 \"Like\" 文本。"
       ],
       "tests": [
         {
@@ -486,7 +486,7 @@
       "title": "Taste the Bootstrap Button Color Rainbow",
       "description": [
         "<code>btn-primary</code> 类的颜色是你在应用中的主题色。这样 “突出显示” 是引导用户根据你的想法进行操作的有效办法。",
-        "将你的按钮的class从 Bootstrap 的 <code>btn-primary</code> 替换为 <code>btn-default</code>。",
+        "将你的按钮的 class 从 Bootstrap 的 <code>btn-primary</code> 替换为 <code>btn-default</code>。",
         "记住：你的按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> 类."
       ],
       "tests": [
@@ -675,8 +675,8 @@
       "id": "bad87fee1348ce8acef08814",
       "title": "Warn Your Users of a Dangerous Action with btn-danger",
       "description": [
-        "Bootstrap 有着丰富的预定义按钮颜色。 红色 <code>btn-danger</code> 用来提醒用户这种行为具有破坏性，比如删除一张猫的图片。",
-        "创建一个文本内容为 \"Delete\" 的按钮并给它一个 class <code>btn-danger</code>。",
+        "Bootstrap 有着丰富的预定义按钮颜色。 红色 <code>btn-danger</code> 类用来提醒用户这种行为具有破坏性，比如删除一张猫的图片。",
+        "创建一个文本内容为 \"Delete\" 的按钮并给它一个 class <code>btn-danger</code> 类。",
         "记住：你的这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> 类。"
       ],
       "tests": [
