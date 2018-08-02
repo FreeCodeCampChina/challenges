@@ -13,7 +13,7 @@
         "那些无法通过视觉获取信息的用户，只能通过屏幕阅读器将网页内容转换为音频的方式获取信息，而屏幕阅读器是通过识别并朗读图片<code>alt</code>属性中的内容，来传递图片包含的关键信息。",
         "良好的<code>alt</code>文本可以简明扼要地描述图片信息，所以你的图片最好总是包含一个<code>alt</code>属性。HTML5文档正在考虑强制要求这点。",
         "<hr>",
-        "碰巧，Camper Cat是忍者中，写代码最厉害的，他正在建立一个可以分享忍者知识的网站。他要使用一张对所有网站访问者都能有效识别的个人资料图片来展示他的技巧。给<code>img</code>标签上添加一个<code>alt</code>属性，就是Camper Cat的绝招。（图片的<code>src</code>并不指向任何文件，你应该能在显示器上看到<code>alt</code>文本。）"
+        "碰巧，Camper Cat 是忍者中，写代码最厉害的，他正在建立一个可以分享忍者知识的网站。他要使用一张对所有网站访问者都能有效识别的个人资料图片来展示他的技巧。给<code>img</code>标签上添加一个<code>alt</code>属性，就是 Camper Cat 的绝招。（图片的<code>src</code>并不指向任何文件，你应该能在显示器上看到<code>alt</code>文本。）"
       ],
       "tests": [
         {
@@ -49,7 +49,7 @@
         "对于背景图片，它们通常起装饰作用，而且含有CSS类，所以，背景图片不会被屏幕阅读器处理。",
         "<strong>Note</strong><br>对于有说明文字的图片，我们依然需要添加<code>alt</code>属性，因为这样有助于搜索引擎记录图片内容。",
         "<hr>",
-        "Camper Cat已经为他的网站中的博客页面编码好了框架。他打算使用忍者刀图片作为两篇文章之间的分割线。为 <code>img</code> 标签添加一个空的<code>alt</code>属性。（<code>img</code>标签的<code>src</code>不需要连接到真实的图片 - 显示器不会显示任何刀剑。）"
+        "Camper Cat 已经为他的网站中的博客页面编码好了框架。他打算使用忍者刀图片作为两篇文章之间的分割线。为 <code>img</code> 标签添加一个空的<code>alt</code>属性。（<code>img</code>标签的<code>src</code>不需要连接到真实的图片 - 显示器不会显示任何刀剑。）"
       ],
       "tests": [
         {
@@ -100,7 +100,7 @@
         "例如：一个 <code>h2</code> 标签后紧跟若干用 <code>h4</code> 标签标记的小节的页面，会使屏幕阅读器用户感到疑惑。使用6个标题标签来控制字体的大小是很吸引人的，因为在浏览器中，它们看起来更好，但是你也可以使用CSS来控制字体的相对大小。",
         "最后一点，每个页面只能有一个 <code>h1</code> 标签，用来说明页面主要内容。这个标签和其他的标题标签一起用于辅助搜索引擎理解页面的主题。",
         "<hr>",
-        "Camper Cat希望他的网站有个页面，指明如何成为忍者。帮助他修改标题标签，使它们对标题具有语义，并且父子关系正确。将所有的 <code>h5</code> 标题标签修改为恰当的级别，以表示它们是 <code>h2</code> 标题标签的子级。"
+        "Camper Cat 希望他的网站有个页面，指明如何成为忍者。帮助他修改标题标签，使它们对标题具有语义，并且父子关系正确。将所有的 <code>h5</code> 标题标签修改为恰当的级别，以表示它们是 <code>h2</code> 标题标签的子级。"
       ],
       "tests": [
         {
@@ -153,7 +153,7 @@
         "<code> main </code> 标签用于修饰（你猜对了）主题，且每个页面应该只有一个。它旨在包含与页面中心主题相关的信息。这并不意味着包含那些跨页面重复出现的项目，如导航连接、网页横幅。",
         "<code>main</code> 标签也具有锚点功能，使辅助技术可以快速定位到主题。如果你曾在页面顶部见到过“跳转到主题”连接的话，使用 <code>main</code> 标签就能使辅助设备自动具备这个功能。",
         "<hr>",
-        "Camper Cat对他的忍者武器页面有一些重要想法。通过在 <code>header</code> 标签和 <code>footer</code> 标签（在其他挑战中会涉及）之间添加起始和闭合 <code>main</code> 标签来帮助他建立标志。现在保持 <code>main</code> 为空。"
+        "Camper Cat 对他的忍者武器页面有一些重要想法。通过在 <code>header</code> 标签和 <code>footer</code> 标签（在其他挑战中会涉及）之间添加起始和闭合 <code>main</code> 标签来帮助他建立标志。现在保持 <code>main</code> 为空。"
       ],
       "tests": [
         {
@@ -192,13 +192,13 @@
       "id": "587d774e367417b2b2512aa0",
       "title": "Wrap Content in the article Element",
       "description": [
-        "<code>article</code>是另一个可以使你的标记语义化的新HTML5标签。<code>Article</code>是一个分段标签，用于修饰独立的、自包含的内容。这个标签适用于博客入口，论坛帖子或者新闻文章。",
-        "这里有些技巧可以用来判断内容是否独立。问自己如果删除了上下文，该内容是否仍然有意义？相似地，对于文本，如果它在RSS提要中，它的意义是否保留。",
+        "<code>article</code>是另一个可以使你的标记语义化的新 HTML5 标签。<code>Article</code>是一个分段标签，用于修饰独立的、自包含的内容。这个标签适用于博客入口，论坛帖子或者新闻文章。",
+        "这里有些技巧可以用来判断内容是否独立。你可以询问自己如果删除了上下文，该内容是否仍然有意义？相似地，对于文本，如果它在 RSS 提要中，它的意义是否保留。",
         "请牢记，使用辅助技术的用户依赖于组织良好的、语义化的标志，来更好的理解你的页面。",
         "<strong>注意<code>section</code>与<code>div</code></strong><br><code>section</code>也是一个新的HTML5标签，与<code>article</code>标签的语义含义略有不同。<code>article</code>用于独立的内容，而<code>section</code>用于对与主题相关的内容进行分组。它们可以根据需要批次之间互相包含着使用。如果一本书是一个<code>article</code>的话，那么每个章节就是<code>section</code>。如果内容组之间没有联系，请使用<code>div</code>。",
         "<blockquote>&lt;div&gt; - 内容组<br>&lt;section&gt; - 有联系的内容组<br>&lt;article&gt; - 独立的、自包含的内容<br></blockquote>",
         "<hr>",
-        "Camper Cat使用<code>article</code>标签来修饰他的博客页面里的帖子，但是他忘记在顶部的帖子上使用它。使用<code>article</code>标签来代替<code>div</code>标签。"
+        "Camper Cat 使用<code>article</code>标签来修饰他的博客页面里的帖子，但是他忘记在顶部的帖子上使用它。使用<code>article</code>标签来代替<code>div</code>标签。"
       ],
       "tests": [
         {
@@ -255,12 +255,12 @@
         "<code>header</code> shares the embedded landmark feature you saw with <code>main</code>, 可以使辅助技术快速导航到它的内容。",
         "<strong>注意</strong><br><code>header</code>用于HTML文档的<code>body</code>标签中。这点不同于包含页面标题、元信息的<code>head</code>标签。",
         "<hr>",
-        "Camper Cat正在写一些关于忍者训练的精彩文章，他想在他的站点中为这些文章建立一个页面。使用<code>header</code>替代位于页面顶端的包含<code>h1</code>的<code>div</code>标签。"
+        "Camper Cat 正在写一些关于忍者训练的精彩文章，他想在他的站点中为这些文章建立一个页面。使用<code>header</code>替代位于页面顶端的包含<code>h1</code>的<code>div</code>标签。"
       ],
       "tests": [
         {
-          "text": "你的代码因该包含一个<code>header</code>标签。",
-          "testString": "assert($('header').length == 1, '你的代码因该包含一个<code>header</code>标签。');"
+          "text": "你的代码应该包含一个<code>header</code>标签。",
+          "testString": "assert($('header').length == 1, '你的代码应该包含一个<code>header</code>标签。');"
         },
         {
           "text": "你的<code>header</code>标签应该包含<code>h1</code>。",
@@ -323,7 +323,7 @@
         "<code>nav</code>是另一个具有标识特性的HTML5标签，便于屏幕阅读器快速识别导航内容。它用于包含页面中的主导航链接。",
         "对于页面底部辅助性质的链接，无需使用<code>nav</code>，用<code>footer</code>（在下个挑战中介绍）就可以了",
         "<hr>",
-        "Camper Cat在他的忍者训练页面中使用了很多导航链接，但是将它们包含在<code>div</code>中。将<code>div</code>改为<code>nav</code>标签，以提升页面的可访问性。"
+        "Camper Cat 在他的忍者训练页面中使用了很多导航链接，但是将它们包含在<code>div</code>中。将<code>div</code>改为<code>nav</code>标签，以提升页面的可访问性。"
       ],
       "tests": [
         {
@@ -396,7 +396,7 @@
       "description": [
         "与<code>header</code>和<code>nav</code>类似，<code>footer</code>也具有标识特性，可以使辅助设备快速导航到它。它主要用于包含版权信息或者位于页面底部的相关文档的链接。",
         "<hr>",
-        "Camper Cat的训练页面进展顺利。把他在页面底部包含版权信息的<code>div</code>标签改为<code>footer</code>标签。"
+        "Camper Cat 的训练页面进展顺利。把他在页面底部包含版权信息的<code>div</code>标签改为<code>footer</code>标签。"
       ],
       "tests": [
         {
