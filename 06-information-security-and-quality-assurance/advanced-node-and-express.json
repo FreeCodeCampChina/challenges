@@ -6,13 +6,13 @@
   "challenges": [
     {
       "id": "5895f700f9fc0f352b528e63",
-      "title": "创建引擎模版",
+      "title": "Set up a Template Engine",
       "description": [
-        "提醒一下，这个项目建立在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-advancednode/'>Glitch</a>上的启动项目中，或是从<a href='https://github.com/freeCodeCamp/boilerplate-advancednode/'>GitHub</a>上克隆",
-        "你可以在应用程序的模版引擎中使用静态模板文件（如那些写在<em>Pug</em>里的）。在运行时，模版引擎会用服务端的真实值替换掉在模版文件中的变量，然后将模版转译成发送给客户端的 HTML 静态文件。这样可以更轻松地去构造 HTML 页面，在页面上不需要在客户端发送 API 请求去呈现变量。",
+        "提醒一下，这个项目建立在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-advancednode/'>Glitch</a>上的启动项目中，也可以从<a href='https://github.com/freeCodeCamp/boilerplate-advancednode/'>GitHub</a>上克隆",
+        "你可以在应用程序的模版引擎中使用静态模板文件（如那些写在<em>Pug</em>里的）。在运行时，模版引擎会用服务端的真实数据替换掉在模版文件中的变量，然后将模版转译成发送给客户端的 HTML 静态文件。这样可以更轻松地去构造 HTML 页面，允许在页面直接显示变量内容而不需要发送 API 请求。",
         "为了在项目中使用 <em>Pug</em>，你需要在你的 package.json 中添加依赖<code>\"pug\": \"^0.1.0\"</code>",
         "为了在 Node/Express 中运用模版引擎，你需要告诉你的 express <b>应用</b>去<b>建立</b>'pug'作为'view-engine' <code>app.set('view engine', 'pug')</code>",
-        "最后, 你需要改变你对索引路由用页面路径<em>views/pug/index.pug</em>到<code>res.render</code>的请求的响应。",
+        "最后, 你需要使用<code>res.render</code>方法去渲染<em>views/pug/index.pug</em>页面来作为路由请求的返回。",
         "如果一切就绪, 你需要刷新应用程序的主页，你可以看到 Pug 的成功建立的提示！你确定后就可以提交你的页面了。"
       ],
       "tests": [
