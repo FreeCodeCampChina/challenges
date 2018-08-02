@@ -21,7 +21,7 @@
         "<strong>需求 #8：</strong><code>img</code> 元素应相对于其父元素的宽度响应地调整大小，但不超过其原始大小。",
         "<strong>需求 #9：</strong><code>img</code> 在其父元素内居中。",
         "你可以通过 fork 此 CodePen 来构建项目，或者你可以使用此 CDN 链接在你喜欢的任何环境中运行测试：<code>https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js</code>。",
-        "完成项目并通过所有测试后，输入你的项目互联网上的公开链接。",
+        "完成项目并通过所有测试后，输入你的项目在互联网上的公开链接。",
         "要是卡住的话，记得使用 <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。"
       ],
       "releasedOn": "January 1, 2016",
@@ -53,7 +53,7 @@
         "<strong>需求 #15：</strong>在表单元素内，我能看见在最后有个 <code>textarea</code> 用于附加注释。",
         "<strong>需求 #16：</strong>在表单元素内，我能看见一个 <code>id=\"submit\"</code> 的按钮，用于提交我所有的输入。",
         "你可以通过 fork 此 <a href='http://codepen.io/freeCodeCamp/pen/MJjpwO' target='_blank'>this CodePen pen</a> 来构建项目，或者你可以使用此 CDN 链接在你喜欢的任何环境中运行测试：<code>https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js</code>。",
-        "完成项目并通过所有测试后，输入你的项目互联网上的公开链接。",
+        "完成项目并通过所有测试后，输入你的项目在互联网上的公开链接。",
         "要是卡住的话，记得使用 <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。"
       ],
       "releasedOn": "January 15, 2017",
@@ -84,7 +84,7 @@
         "<strong>需求 #14：</strong>我的产品主页应至少有一个媒体查询。",
         "<strong>需求 #15：</strong>我的产品主页应至少使用一次 flexbox。",
         "你可以通过 fork 此 <a href='http://codepen.io/freeCodeCamp/full/MJjpwO' target='_blank'>this CodePen pen</a> 来构建项目，或者你可以使用此 CDN 链接在你喜欢的任何环境中运行测试：<code>https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js</code>。",
-        "完成项目并通过所有测试后，输入你的项目互联网上的公开链接。",
+        "完成项目并通过所有测试后，输入你的项目在互联网上的公开链接。",
         "要是卡住的话，记得使用 <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。"
       ],
       "releasedOn": "January 15, 2017",
@@ -115,7 +115,7 @@
         "<strong>需求 #14：</strong>在常规尺寸的设备上（笔记本电脑，台式机），带有<code>id=\"navbar\"</code>的元素应该显示在屏幕左侧，并且始终对用户可见。",
         "<strong>需求 #15：</strong>我的技术文档页面应该至少使用一次媒体查询。",
         "你可以通过 fork 此 <a href='http://codepen.io/freeCodeCamp/pen/MJjpwO' target='_blank'>this CodePen pen</a> 来构建项目，或者你可以使用此 CDN 链接在你喜欢的任何环境中运行测试：<code>https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js</code>。",
-        "完成项目并通过所有测试后，输入你的项目互联网上的公开链接。",
+        "完成项目并通过所有测试后，输入你的项目在互联网上的公开链接。",
         "要是卡住的话，记得使用 <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。"
       ],
       "releasedOn": "January 15, 2017",
@@ -142,7 +142,7 @@
         "<strong>需求 #10：</strong>欢迎区的高度应该与视窗的高度保持一致。",
         "<strong>需求 #11：</strong>导航栏应保持在视窗的顶部。",
         "你可以通过 fork 此 <a href='http://codepen.io/freeCodeCamp/pen/MJjpwO' target='_blank'>this CodePen pen</a> 来构建项目，或者你可以使用此 CDN 链接在你喜欢的任何环境中运行测试： <code>https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js</code>。",
-        "完成项目并通过所有测试后，输入你的项目互联网上的公开链接。",
+        "完成项目并通过所有测试后，输入你的项目在互联网上的公开链接。",
         "要是卡住的话，记得使用 <a href='https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a>。"
       ],
       "tests": [],
