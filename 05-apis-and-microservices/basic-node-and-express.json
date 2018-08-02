@@ -108,7 +108,7 @@
       ],
       "tests": [
         {
-          "text": "客户端响应<code>/json</code>的值，应该随着环境变量<code>MESSAGE_STYLE</code>的值而改变",
+          "text": "客户端响应<code>/json</code>的值，应该随着环境变量<code>MESSAGE_STYLE</code>的变化而改变",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/use-env-vars').then(data => { assert.isTrue(data.passed, '响应 \"/json\" 时，并没有随着 MESSAGE_STYLE 的值改变而改变'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
