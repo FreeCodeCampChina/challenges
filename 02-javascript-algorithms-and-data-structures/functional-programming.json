@@ -11,9 +11,9 @@
         "函数式编程是一种解决方案简单，功能独立，对作用域外没有任何副作用的编程范式。",
         "<code>INPUT -> PROCESS -> OUTPUT</code>",
         "函数式编程：",
-        "1）功能独立 — 不依赖于程序的状态，其中包括可能发生变化的全局变量；",
-        "2）纯函数 - 同一个输入永远能得到同一个输出；",
-        "3）有限的副作用 - 任何在函数外部更改或状态变化都严格地被控制。",
+        "1）功能独立——不依赖于程序的状态（比如可能发生变化的全局变量）；",
+        "2）纯函数——同一个输入永远能得到同一个输出；",
+        "3）有限的副作用——可以严格地限制函数外部对状态的更改导致的状态变化。",
         "<hr>",
         "freeCodeCamp 成员在 love tea 的故事。",
         "在代码编辑器中，已经为你定义好了<code>prepareTea</code>和<code>getTea</code>函数。调用<code>getTea</code>函数为团队准备 40 杯茶，并将它们存储在<code>tea4TeamFCC</code>变量里。"
@@ -24,8 +24,8 @@
           "testString": "assert(tea4TeamFCC.length === 40, '<code>tea4TeamFCC</code>变量里应有 40 杯为团队准备的茶。');"
         },
         {
-          "text": "<code>tea4TeamFCC</code>变量里应有绿茶。",
-          "testString": "assert(tea4TeamFCC[0] === 'greenTea', '<code>tea4TeamFCC</code>变量里应有绿茶。');"
+          "text": "<code>tea4TeamFCC</code>变量里应有 greenTea。",
+          "testString": "assert(tea4TeamFCC[0] === 'greenTea', '<code>tea4TeamFCC</code>变量里应有 greenTea。');"
         }
       ],
       "solutions": [],
@@ -76,15 +76,15 @@
       "id": "587d7b8e367417b2b2512b5c",
       "title": "Understand Functional Programming Terminology",
       "description": [
-        "FCC 团队需求有变更，现在想要两种茶：绿茶和红茶。事实证明，用户需求变更是很常见的。",
+        "FCC 团队需求有变更，现在想要两种茶：绿茶（green tea）和红茶（black tea）。事实证明，用户需求变更是很常见的。",
         "基于以上信息，我们需要重构上一节挑战中的<code>getTea</code>函数来处理多种茶的请求。我们可以修改<code>getTea</code>接受一个函数作为参数，使它能够修改茶的类型。这让<code>getTea</code>更灵活，也使需求变更时为程序员提供更多控制权。",
         "首先，我们将介绍一些术语：",
-        "<code>Callbacks</code>是被传递到另一个函数中调用的函数。你可能已经在其他函数中看过他们的传递，例如在<code>filter</code>中，回调函数告诉 JavaScript 以什么规则过滤数组。",
-        "函数就像其他正常值一样，可以赋值给变量、传递给另一个函数，或从其它函数返回，称为<code>first class</code>函数。在 JavaScript 中，所有函数都是<code>first class</code>函数。",
-        "将函数为参数或返回值的函数称为<code>higher order</code>函数。",
-        "当函数传递给另一个函数或从另一个函数返回时，那些传入或返回的函数可以称为<code>lambda</code>。",
+        "<code>Callbacks</code>是被传递到另一个函数中调用的函数。你应该已经在其他函数中看过这个写法，例如在<code>filter</code>中，回调函数告诉 JavaScript 以什么规则过滤数组。",
+        "函数就像其他正常值一样，可以赋值给变量、传递给另一个函数，或从其它函数返回，这种函数叫做<code>first class</code>函数。在 JavaScript 中，所有函数都是<code>first class</code>函数。",
+        "将函数为参数或返回值的函数叫做<code>higher order</code>函数。",
+        "当函数传递给另一个函数或从另一个函数返回时，那些传入或返回的函数可以叫做<code>lambda</code>。",
         "<hr>",
-        "准备27杯绿茶和13杯红茶，分别存入<code>tea4GreenTeamFCC</code>和<code>tea4BlackTeamFCC</code>变量。请注意，<code>getTea</code>函数已经修改为以函数作为第一个参数。",
+        "准备 27 杯绿茶和 13 杯红茶，分别存入<code>tea4GreenTeamFCC</code>和<code>tea4BlackTeamFCC</code>变量。请注意，<code>getTea</code>函数已经变了，现在它接收一个函数作为第一个参数。",
         "注意：数据（茶的数量）作为最后一个参数。我们将在后面的课程中对此进行更多讨论。"
       ],
       "tests": [
@@ -166,12 +166,11 @@
       "description": [
         "函数式编程是一种好习惯，它能让代码管理更简单，不受隐藏 bug 影响。在我们开始函数式编程之前，为了更好的突显可能遇到的问题，我们先看看命令式编程。",
         "类似在英语（和许多其他语言）中，命令式时态用于给出命令，编程中的命令式是给计算机一组语句来执行任务。",
-        "这些语句通常会改变程序的状态，例如更新全局变量。典型的例子就是写一个<code>for</code>循环，它给出了迭代数组索引的精确方向。",
-        "相反，函数式编程是声明式编程的一种形式。通过调用方法或函数来告诉计算机要做什么。",
-        "JavaScript 预置了许多方法处理常见的任务，所以你无需写出计算机应如何执行它们。例如，你可以调用<code>map</code>函数替代上面提到的<code>for</code>循环来处理数组迭代。这有助于避免语义错误，如调试章节介绍的\"Off By One Errors\"。",
-        "",
-        "考虑这样的场景：你正在浏览器中浏览网页，并想跟踪你打开的标签。让我们试着用一些简单的面向对象代码对此建模。",
-        "窗口对象由选项卡组成，通常会打开多个窗口。窗口对象中每个打开网站的标题都保存在一个数组中。在浏览器工作时（打开新标签，合并窗口和关闭标签），你想要打印仍然打开的标签。关闭的选项卡将从数组中删除，新的选项卡（为简单起见）添加到数组的末尾。",
+        "这些语句通常会改变程序的状态，例如更新全局变量，典型的例子就是写一个<code>for</code>循环，它给出了迭代数组索引的精确方向。",
+        "相反，函数式编程是声明式编程的一种形式，通过调用方法或函数来告诉计算机要做什么。",
+        "JavaScript 提供了许多处理常见任务的方法，所以你无需写出计算机应如何执行它们。例如，你可以用<code>map</code>函数替代上面提到的<code>for</code>循环来处理数组迭代。这有助于避免语义错误，如调试章节介绍的\"Off By One Errors\"。",
+        "考虑这样的场景：你正在浏览器中浏览网页，并想操作你打开的标签。下面我们来试试用面向对象的思路来描述这种情景。",
+        "窗口对象由选项卡组成，通常会打开多个窗口。窗口对象中每个打开网站的标题都保存在一个数组中。在对浏览器进行了如打开新标签、合并窗口、关闭标签之类的操作后，你需要输出所有打开的标签。关掉的标签将从数组中删除，新打开的标签（为简单起见）则添加到数组的末尾。",
         "代码编辑器中显示了此功能的实现，其中包含<code>tabOpen()</code>，<code>tabClose()</code>，和 <code>join()</code>函数。<code>tabs</code>数组是窗口对象的一部分用于储存打开页面的名称。",
         "<h4>说明<h4>",
         "在编辑器中运行代码。它使用了有副作用的方法，导致输出错误。打开标签的最终列表应该是<code>['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']</code>但输出会略有不同。",
@@ -219,7 +218,7 @@
             " };",
             "",
             "// 创建三个浏览器窗口",
-            "var workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // mailbox, drive和其他网站",
+            "var workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // 邮箱、文档及其他与工作相关的网站",
             "var socialWindow = new Window(['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium']); // 社交网站",
             "var videoWindow = new Window(['Netflix', 'YouTube', 'Vimeo', 'Vine']); // 娱乐网站",
             "",
@@ -240,11 +239,11 @@
       "id": "587d7b8e367417b2b2512b5e",
       "title": "Avoid Mutations and Side Effects Using Functional Programming",
       "description": [
-        "如果你还没想通，上一个挑战的问题出在<code>splice</code>对<code>tabClose()</code>函数的调用里。不幸的是，<code>splice</code>修改了调用它的原始数组，所以第二次调用它时是基于修改后的数组，才给出了意料之外的结果。",
+        "如果你还没想通，上一个挑战的问题出在<code>tabClose()</code>函数里的<code>splice</code>。不幸的是，<code>splice</code>修改了调用它的原始数组，所以第二次调用它时是基于修改后的数组，才给出了意料之外的结果。",
         "这是一个小例子，还有更广义的定义——你在变量，数组或对象上调用一个函数，这个会函数改变对象中的变量或其他东西。",
-        "函数式编程的核心原则之一是不改变任何东西。变化会导致错误。知道函数不会改变任何东西，包括函数参数或任何全局变量，更容易阻止产生错误。",
+        "函数式编程的核心原则之一是不改变任何东西。变化会导致错误。如果一个函数不改变传入的参数、全局变量等数据，那么它造成问题的可能性就会小很多。",
         "前面的例子没有任何复杂的操作，但是<code>splice</code>方法改变了原始数组，导致 bug 产生。",
-        "回想一下，在函数式编程中，改变或变更称为<code>mutation</code>，结果被称为<code>side effect</code>。理想情况下，函数应该是不会产生任何副作用的<code>pure function</code>。",
+        "回想一下，在函数式编程中，改变或变更叫做<code>mutation</code>，这种改变的结果叫做“副作用”（<code>side effect</code>）。理想情况下，函数应该是不会产生任何副作用的<code>pure function</code>。",
         "让我们尝试掌握这个原则：不要改变代码中的任何变量或对象。",
         "<hr>",
         "填写<code>incrementer</code>函数的代码，使其返回全局变量<code>fixedValue</code>的值增加 1。"
@@ -293,8 +292,8 @@
         "最后一个挑战是更接近函数式编程原则的挑战，但是仍然缺少一些东西。",
         "虽然我们没有改变全局变量值，但在没有全局变量<code>fixedValue</code>情况下，<code>incrementer</code>函数将不起作用。",
         "函数式编程的另一个原则是：总是显式声明依赖关系。如果函数依赖于一个变量或对象，那么将该变量或对象作为参数直接传递到函数中。",
-        "这个原则带来几个好的影响。让函数更容易测试，确切知道它需要什么输入，并且它不依赖于程序中的任何其他内容。",
-        "可以让你更加自信地更改，删除或添加新代码。你会知道什么是可以或不可以改变的，你能看出哪里有潜在的陷阱。",
+        "这样做会有很多好处，其中一点是让函数更容易测试，因为你确切地知道参数是什么，并且这个参数也不依赖于程序中的任何其他内容。",
+        "其次，这样做可以让你更加自信地更改，删除或添加新代码。因为你很清楚哪些是可以改的，哪些是不可以改的，这样你就知道哪里可能会有潜在的陷阱。",
         "最后，无论代码的哪一部分执行它，函数总是会为同一组输入生成相同的输出。",
         "<hr>",
         "更新<code>incrementer</code>函数，明确声明其依赖项。",
@@ -428,10 +427,10 @@
         "目前为止，我们已经学会了使用纯函数来避免程序中的副作用。此外，我们已经看到函数的值仅取决于其输入参数。",
         "这仅仅是个开始。顾名思义，函数式编程以函数理论为中心。",
         "能够将它们作为参数传递给其他函数，和从另一个函数返回一个函数是有意义的。函数在 JavaScript 中被视为<code>First Class Objects</code>，它们可以像任何其他对象一样使用。它们可以保存在变量中，存储在对象中，也可以作为函数参数传递。",
-        "让我们从一些简单的数组函数开始，这些函数是数组对象原型上的方法。在本练习中，我们将看到<code>Array.prototype.map()</code>或者更简单的<code>map</code>。",
-        "请记住，<code>map</code>方法是迭代数组中每一项的方法。在对每个元素应用回调函数后，它会创建一个新数组(不改变原来的数组)。",
+        "让我们从一些简单的数组函数开始，这些函数是数组对象原型上的方法。在本练习中，我们来了解下数组的<code>map</code>方法（即<code>Array.prototype.map()</code>）。",
+        "请记住，<code>map</code>方法是迭代数组中每一项的方式之一。在对每个元素应用回调函数后，它会创建一个新数组(不改变原来的数组)。",
         "<hr>",
-        "<code>watchList</code>数组保存了包含一些电影信息的对象。使用<code>map</code>从<code>watchList</code>中提取标题和评分，并将新数组保存在<code>rating</code>变量里。目前编辑器中的代码是使用<code>for</code>循环实现，使用<code>map</code>表达式替换循环功能。"
+        "<code>watchList</code>数组保存了包含一些电影信息的对象。使用<code>map</code>从<code>watchList</code>中提取标题（<code>title</code>）和评分（<code>rating</code>），并将新数组保存在<code>rating</code>变量里。目前编辑器中的代码是使用<code>for</code>循环实现，使用<code>map</code>表达式替换循环功能。"
       ],
       "tests": [
         {
