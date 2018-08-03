@@ -8,10 +8,10 @@
       "id": "587d7b83367417b2b2512b33",
       "title": "Use the JavaScript Console to Check the Value of a Variable",
       "description": [
-        "Chrome 和 Firefox 都有出色的 JavaScript 控制台，也称为 DevTools，用于调试你的 JavaScript 代码。",
-        "你可以在 Chrome 的菜单中找到“开发者工具”或 FireFox 的菜单中的“ Web 控制台”。如果你使用其他浏览器或手机，我们强烈建议你切换到桌面版 Firefox 或 Chrome。",
-        "<code>console.log()</code>方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台，将它放在代码中的关键点可以显示变量的中间值。在查看输出之前，最好先了解输出应该是什么。在整个代码中使用检查点来查看计算状态将有助于缩小问题所在。",
-        "下面是输出 'Hello world！' 到控制台的示例：",
+        "Chrome 和 Firefox 都有出色的 JavaScript 控制台（也称为 DevTools），可以用来调试你的 JavaScript 代码",
+        "你可以在 Chrome 的菜单中找到“开发者工具”或 FireFox 的菜单中的 “Web 控制台”。如果你使用其他浏览器或手机，我们强烈建议你切换到桌面版 Firefox 或 Chrome。",
+        "<code>console.log()</code>方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台，将它放在代码中的关键点可以显示变量在当时的值。在查看输出之前，最好先想清楚输出应该是什么。在整个代码中使用检查点来查看计算状态将有助于缩小问题所在。",
+        "下面是输出 'Hello world!' 到控制台的示例：",
         "<code>console.log('Hello world!');</code>",
         "<hr>",
         "请使用<code>console.log()</code>方法在代码中注明的地方输出变量<code>a</code>的值。"
@@ -50,7 +50,7 @@
       "id": "587d7b83367417b2b2512b37",
       "title": "Understanding the Differences between the freeCodeCamp and Browser Console",
       "description": [
-        "你可能已经注意到一些 freeCodeCamp JavaScript 的挑战有他们自己的控制台。这些控制台的行为与你在上一次挑战中使用的浏览器控制台略有不同。",
+        "你可能已经注意到一些 freeCodeCamp JavaScript 的挑战有自己的控制台。这些控制台的行为与你在上一次挑战中使用的浏览器控制台略有不同。",
         "以下挑战旨在强调 freeCodeCamp 控制台与浏览器控制台之间的一些差异。",
         "对于浏览器控制台。当你在浏览器中加载并运行 JavaScript 文件时，<code>console.log()</code>语句会在控制台中按照你调用的次数准确地打印出你要求的内容。然而，在 freeCodeCamp 的代码编辑器中使用<code>console.log()</code>会略有不同，一开始可能会让你感到困惑。",
         "在 freeCodeCamp 代码编辑器中，传给<code>console.log()</code>的值会在每组测试执行的时候输出。另外，如果你在代码中还手动调用过挑战题目的函数，调用几次就会增加几次传入值的输出。",
@@ -282,7 +282,7 @@
       "id": "587d7b85367417b2b2512b38",
       "title": "Catch Use of Assignment Operator Instead of Equality Operator",
       "description": [
-        "分支程序，即在满足某些条件时执行不同操作的程序，依赖于 JavaScript中的<code>if</code>，<code>else if</code>和<code>else</code>语句。条件有时采取测试一个结果是否等于一个值的形式。",
+        "分支程序，即在满足某些条件时执行不同操作的程序，依赖于 JavaScript 中的<code>if</code>，<code>else if</code>、<code>else</code>语句。条件有时采取测试一个结果是否等于一个值的形式。",
         "这种逻辑可以表述为“如果 x 等于 y ，则......”，听起来像是可以使用<code>=</code>（即赋值运算符）。然而，这会导致程序中流程出问题。",
         "如前面的挑战所述，JavaScript 中的赋值运算符 (<code>=</code>) 是用来为变量名赋值的。并且<code>==</code>和<code>===</code>运算符检查相等性（三等号<code>===</code>是用来测试是否严格相等的，严格相等的意思是值和类型都必须相同）。",
         "下面的代码将<code>x</code>赋值为 2，表达式<code>x = y</code>会在执行后得到<code>true</code>。JavaScript 会把大部分的值都视为<code>true</code>，除了所谓的 \"falsy\" 值，即：<code>false</code>，<code>0</code>，<code>\"\"</code>（空字符串），<code>NaN</code>，<code>undefined</code>和<code>null</code>。",
@@ -417,7 +417,7 @@
       "id": "587d7b86367417b2b2512b3b",
       "title": "Catch Off By One Errors When Using Indexing",
       "description": [
-        "当你试图访问字符串或数组的特定索引（分割或访问一个片段）或循环索引时，有时会出现<code>Off by one errors</code>错误（有时称为 OBOE）。 JavaScript 索引从<code>0</code>开始，而不是<code>1</code>，这意味着最后一个索引总会比字符串或数组的长度少 1。 如果你尝试访问等于长度的索引，程序可能会抛出“索引超出范围”引用错误或打印出<code>undefined</code>。",
+        "当你试图访问字符串或数组的特定索引（分割或访问一个片段）或循环索引时，有时会出现<code>Off by one errors</code>错误（有时称为 OBOE）。JavaScript 索引从<code>0</code>开始，而不是<code>1</code>，这意味着最后一个索引总会比字符串或数组的长度少 1。如果你尝试访问等于长度的索引，程序可能会抛出“索引超出范围”引用错误或打印出<code>undefined</code>。",
         "当你使用将索引范围作为参数的字符串或数组方法时，阅读相关的文档并了解参数中的索引的包含性（即是否考虑进返回值中）很重要。以下是一些错误的示例：",
         "<blockquote>let alphabet = \"abcdefghijklmnopqrstuvwxyz\";<br>let len = alphabet.length;<br>for (let i = 0; i <= len; i++) {<br>&nbsp;&nbsp;// 在最后多了一次循环<br>&nbsp;&nbsp;console.log(alphabet[i]);<br>}<br>for (let j = 1; j < len; j++) {<br>&nbsp;&nbsp;// 循环少了一次，漏掉了索引 0 处的字符<br>&nbsp;&nbsp;console.log(alphabet[j]);<br>}<br>for (let k = 0; k < len; k++) {<br>&nbsp;&nbsp;// 不多不少，这才是正确的<br>&nbsp;&nbsp;console.log(alphabet[k]);<br>}</blockquote>",
         "<hr>",
@@ -475,7 +475,7 @@
         "有时需要在循环中保存信息，增加计数器或重置变量。一个潜在的问题是变量什么时候该重新初始化，什么时候不该重新初始化，反之亦然。如果你不小心重置了用于终止条件的变量，导致无限循环，这将特别危险。",
         "使用<code>console.log()</code>在每个循环中打印变量值可以发现与重置相关的错误行为，或者重置变量失败。",
         "<hr>",
-        "以下函数应该创建一个具有<code>m</code>行和<code>n</code>列“零”的二维数组。不幸的是，它没有产生预期的输出，因为<code>row</code>变量没有在外部循环中重新初始化（设置回空数组）。修改代码，使其正确地返回包含 3 行 2 列“零”的二维数组，即<code>[[0,0]，[0,0]，[0,0]]</code>。"
+        "以下函数应该创建一个具有<code>m</code>行和<code>n</code>列“零”的二维数组。不幸的是，它没有产生预期的输出，因为<code>row</code>变量没有在外部循环中重新初始化（设置回空数组）。修改代码，使其正确地返回包含 3 行 2 列“零”的二维数组，即<code>[[0, 0], [0, 0], [0, 0]]</code>。"
       ],
       "tests": [
         {
@@ -535,7 +535,7 @@
         "<blockquote>function loopy() {<br>&nbsp;&nbsp;while(true) {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Hello, world!\");<br>&nbsp;&nbsp;}<br>}</blockquote>",
         "程序员的工作是确保最终达到终止条件，该条件告诉程序何时跳出循环。有一种错误是从终端条件向错误方向递增或递减计数器变量。另一种是在循环代码中意外重置计数器或索引变量，而不是递增或递减它。",
         "<hr>",
-        "<code>myFunc()</code>函数包含一个无限循环，因为终止条件<code>i != 4</code>永远不会为<code>false</code>(并中断循环) -<code>i</code>将每次递增2，然后跳过4，因为<code>i</code>是从奇数开始递增。在终端条件中输入比较运算符，使循环仅在<code>i</code>小于或等于4的情况下运行。"
+        "<code>myFunc()</code>函数包含一个无限循环，因为终止条件<code>i != 4</code>永远不会为<code>false</code>(并中断循环) -<code>i</code>将每次递增 2，然后跳过 4，因为<code>i</code>是从奇数开始递增。在终端条件中输入比较运算符，使循环仅在<code>i</code>小于或等于 4 的情况下运行。"
       ],
       "tests": [
         {
