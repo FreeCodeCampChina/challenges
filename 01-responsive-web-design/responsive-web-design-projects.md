@@ -1,13 +1,13 @@
 # Introduction to the Responsive Web Design Projects #
 
-是时候把你学到的新技能付诸实践了！通过接下来的项目，你将有机会实践你目前所学的所有技能，原理和概念，HTML，CSS，可视化设计，辅助功能等。
+Time to put your newly learnt skills to work! By working on projects you would have the opportunity of applying all the skills, principles and concepts you have learnt so far HTML, CSS, Visual Design, Accessibility, etc.
 
-在本节中，你有机会去：
+In this section you get the chance to:
 
-* 设计一个致敬页
-* 设计一个调查表格
-* 设计一个产品主页
-* 设计一个技术文档主页
-* 设计个人作品集网页
+* Build a Tribute Page
+* Build a Survey Form
+* Build a Product Landing Page
+* Build a Technical Documentation Page
+* Build a Personal Portfolio Webpage
 
 
