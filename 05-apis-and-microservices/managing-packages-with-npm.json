@@ -8,12 +8,12 @@
       "id": "587d7fb3367417b2b2512bfb",
       "title": "How to Use package.json, the Core of Any Node.js Project or npm Package",
       "description": [
-        "package.json 是任何 Node.js 项目或 npm 包的中心。它存储项目的相关信息，就像 HTML 文档中的 <head> 区域是用来描述网页的通用信息（元信息）一样。package.json 由单个 JSON 对象组成，它以键值对的形式存储项目的信息。一个最小的 package.json 文件至少包含两个必须字段：name 和 version——但是提供有关项目的附加信息是一个更好的做法，在以后它可能对你的用户或者维护者有所帮助。",
-        "author 字段",
+        "package.json 是任何 Node.js 项目或 npm 包的中心。它存储项目的相关信息，就像 HTML 文档中的<code><head></code>区域是用来描述网页的通用信息（元信息）一样。package.json 由单个 JSON 对象组成，它以键值对的形式存储项目的信息。一个最小的 package.json 文件至少包含两个必须字段：name 和 version——但是提供有关项目的附加信息是一个更好的做法，在以后它可能对你的用户或者维护者有所帮助。",
+        "author 字段：",
         "如果你转到之前设置的 Glitch 项目并查看屏幕左侧，你会看到一个文件树，你可以在其中查看项目中各种文件的概述。在文件树的末尾部分，你会看到 package.json——我们将在接下来的几个挑战中改进这个文件。",
         "这个文件中最常见的信息之一是 author 字段，它指定了谁是项目的创建者。它可以是字符串，也可以是带有联系人详细信息的对象。对于较大的项目，建议使用对象，但是在我们的例子中，一个简单的字符串就可以了，比如下面的例子。",
         "<code>\"author\": \"Jane Doe\",</code>",
-        "说明",
+        "说明：",
         "将你的名字添加到 Glitch 项目中，package.json 的 author 字段。",
         "请记住，你正在编写 JSON 文件。",
         "所有的字段名必须使用双引号（\"）包裹, 比如：\"author\"",
@@ -21,7 +21,7 @@
       ],
       "tests": [
         {
-          "text": "package.json 应该有一个有效的 \"author\" 键",
+          "text": "package.json 应该有一个有效的 \"author\" 键。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.author, '缺少 \"author\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -33,17 +33,17 @@
       "id": "587d7fb3367417b2b2512bfc",
       "title": "Add a Description to Your package.json",
       "description": [
-        "一个好的 package.json 文件的下一部分就是 description 字段, 通过简洁的文字来描述你的项目。",
-        "如果你计划将来把这个包发布到 npm, 请注意 description 字段的作用是告知用户这个包的用途，这样用户就可以决定是否要安装你发布的包。然而，这并不是描述信息的唯一使用场景：它也是一种很好的总结项目的方式，对于一个普通的 Node.js 项目来说，它可以帮助其它开发者、未来的维护者以及你自己快速地了解项目，这同样非常重要。",
+        "一个好的 package.json 文件的下一部分就是 description 字段，通过简洁的文字来描述你的项目。",
+        "如果你计划将来把这个包发布到 npm，请注意 description 字段的作用是告知用户这个包的用途，这样用户就可以决定是否要安装你发布的包。然而，这并不是描述信息的唯一使用场景：它也是一种很好的总结项目的方式，对于一个普通的 Node.js 项目来说，它可以帮助其它开发者、未来的维护者以及你自己快速地了解项目，这同样非常重要。",
         "无论你如何计划项目，都建议你使用描述信息。我们来添加类似这样的信息：",
         "<code>\"description\": \"A project that does something awesome\",</code>",
-        "说明",
+        "说明：",
         "在 Glitch 项目的 package.json 中添加描述。",
-        "请记住使用 （\"）包裹字段名并且使用（,）分隔字段"
+        "请记住使用（\"）包裹字段名并且使用（,）分隔字段。"
       ],
       "tests": [
         {
-          "text": "package.json 应该有一个有效的 \"description\" 键",
+          "text": "package.json 应该有一个有效的 \"description\" 键。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.description, '缺少 \"description\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -56,24 +56,24 @@
       "title": "Add Keywords to Your package.json",
       "description": [
         "你可以在 keywords 字段中使用相关的关键字描述项目。",
-        "例子",
+        "例子：",
         "<code>\"keywords\": [ \"descriptive\", \"related\", \"words\" ],</code>",
         "正如你所见，这个字段的结构是一个由双引号字符串组成的数组。",
-        "说明",
+        "说明：",
         "在 Glitch 项目的 package.json 中，给 keywords 添加适当的字符串数组。",
         "关键词之一应该是 freecodecamp。"
       ],
       "tests": [
         {
-          "text": "package.json 应该有一个有效的 \"keywords\" 键",
+          "text": "package.json 应该有一个有效的 \"keywords\" 键。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.keywords, '缺少 \"keywords\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" 应该是一个数组",
+          "text": "\"keywords\" 应该是一个数组。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.isArray(packJson.keywords, '\"keywords\" 不是一个数组'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"keywords\" 中应该包含关键词 \"freecodecamp\"",
+          "text": "\"keywords\" 中应该包含关键词 \"freecodecamp\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);     assert.include(packJson.keywords, 'freecodecamp', '\"keywords\" 未包含 \"freecodecamp\"'); },  xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -88,14 +88,14 @@
         "license 字段是你告知用户允许他们拿这个项目干什么的地方。",
         "常见的开源协议是 MIT 和 BSD。如果你想了解更多适合你项目的许可证的信息，那么 http://choosealicense.com 是一个不错的网站。",
         "许可证信息并不是必须的。大多数国家的版权法会默认让你拥有自己创作的作品的所有权。但是，明确说明用户可以做什么和不能做什么会是一个很好的做法。",
-        "例子",
+        "例子：",
         "<code>\"license\": \"MIT\",</code>",
-        "说明",
+        "说明：",
         "在 Glitch 项目的 package.json 中填写合适的 license 字段。"
       ],
       "tests": [
         {
-          "text": "package.json 应该有一个有效的 \"license\" 键",
+          "text": "package.json 应该有一个有效的 \"license\" 键。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.license, '缺少 \"license\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -108,14 +108,14 @@
       "title": "Add a Version to Your package.json",
       "description": [
         "在 package.json 中 version 和 name 是所必填的字段之一。version 字段描述了当前项目的版本。",
-        "例子",
+        "例子：",
         "<code>\"version\": \"1.2\",</code>",
-        "说明",
+        "说明：",
         "在 Glitch 项目中的 package.json 中添加一个版本号。"
       ],
       "tests": [
         {
-          "text": "package.json 应该包含一个有效的 \"version\" 键",
+          "text": "package.json 应该包含一个有效的 \"version\" 键。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert(packJson.version, '缺少 \"version\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -133,17 +133,17 @@
         "<code>  \"package-name\": \"version\",</code>",
         "<code>  \"express\": \"4.14.0\"</code>",
         "<code>}</code>",
-        "说明",
-        "在 package.json 的 dependencies 字段中添加一个版本号为 2.14.0 的 moment 包",
+        "说明：",
+        "在 package.json 的 dependencies 字段中添加一个版本号为 2.14.0 的 moment 包。",
         "Moment 是一个非常方便的库，它用来处理时间和日期。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "text": "\"dependencies\" 应该包含 \"moment\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" 的版本应该是 \"2.14.0\"",
+          "text": "\"moment\" 的版本应该是 \"2.14.0\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data);  assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.14\\.0/, '安装的 \"moment\" 版本有误。它应该是 2.14.0'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -165,18 +165,18 @@
         "次版本号：当你添加了向下兼容的新功能，",
         "修订号：当你做了向下兼容的问题修正。",
         "这意味着修订号是用来修复错误的，次版本号则是添加了新功能，但它们都没有破坏之前的功能。最后，主版本号的变更则是添加了对早期版本不兼容的更改。",
-        "例子",
+        "例子：",
         "一个语义化的版本号：1.3.8",
-        "说明",
+        "说明：",
         "在 package.json 中，修改 dependencies 里的 moment 的版本号，让它的主版本是 2，次版本号是 10，修订号是 2。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "text": "\"dependencies\" 应该包含 \"moment\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" 的版本号应该是 \"2.10.2\"",
+          "text": "\"moment\" 的版本号应该是 \"2.10.2\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^[\\^\\~]?2\\.10\\.2/, '\"moment\" 的版本号有误。它应该是 2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -190,19 +190,19 @@
       "description": [
         "在最后一个挑战中，我们告诉 npm 只包含特定版本的依赖包。如果想让项目各个部分保持相互兼容，锁定依赖包版本是一个有效的办法。但是大多数情况下，我们并不希望错过依赖项的问题修复，因为它们通常包含重要的安全补丁，而且它们理论上也会兼容我们既有的代码。",
         "为了让 npm 依赖项更新到最新的修订版，你可以在依赖包的版本号前加一个波浪符号（~）。在 package.json 中，我们当前的 moment 依赖包更新规则是：仅使用特定版本（2.10.2），但我们想用它最新的 2.10.x 版本。",
-        "例子",
+        "例子：",
         "<code>\"some-package-name\": \"~1.3.8\" 定义这个包允许使用的版本为 1.3.x。</code>",
-        "说明",
+        "说明：",
         "在 dependencies 中，给 moment 的版本号添加波浪符号（~）前缀，允许 npm 将其更新为最新的修订版。",
         "请注意，原本的版本号不用更改。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" 应该包含 \"moment\"",
+          "text": "\"dependencies\" 应该包含 \"moment\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" 的版本号应该是 \"~2.10.2\"",
+          "text": "\"moment\" 的版本号应该是 \"~2.10.2\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\~2\\.10\\.2/, '\"moment\" 版本号有误，它应该是 ~2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -216,19 +216,19 @@
       "description": [
         "和上一个挑战中我们学到的波浪符号（~）来安装最新的修订版依赖一样，使用插入符号（^）允许 npm 来安装功能更新。它们的不同之处在于：插入符号（^）允许次版本和修订版更新。",
         "此刻，你项目中的 moment 依赖包的版本应该是 ~2.10.2，这意味着 npm 可以安装 2.10.x 版的 moment，如果使用插入符号（^）来替换版本号的前缀，那么 npm 可以安装的版本则是 2.x.x。",
-        "例子",
+        "例子：",
         "<code>\"some-package-name\": \"^1.3.8\" 定义这个包允许使用的版本为 1.x.x。</code>",
-        "说明",
+        "说明：",
         "使用插入符号（^）为依赖项中的 moment 版本添加前缀，允许 npm 更新依赖包到任意向下兼容的新功能版。",
         "请注意，原本的版本号不用更改。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" should include \"moment\"",
+          "text": "\"dependencies\" 应包含 \"moment\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'moment', '\"dependencies\" 未包含 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "\"moment\" version should match \"^2.x.x\"",
+          "text": "\"moment\" 的版本应匹配 \"^2.x.x\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.match(packJson.dependencies.moment, /^\\^2\\./, '\"moment\" 的版本号有误，它应该是 ^2.10.2'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -243,13 +243,13 @@
         "在 package.json 中 dependencies 这一部分，目前尝试了一些管理依赖的方式。你已经添加了一些外部的依赖包到项目中，甚至通过一些特殊的字符比如波浪符号（~）或者插入符号（^）来告诉 npm 你想要的版本类型。",
         "但是，如果想要删除不需要的依赖包，该怎么办呢？你可能已经猜到了——只需要删除 dependencies 中的键值对就行了。",
         "同样的方法也适用于删除 package.json 中的其它字段",
-        "说明",
+        "说明：",
         "删除 moment 依赖包。",
         "删除依赖包后，确保没有多余的逗号。"
       ],
       "tests": [
         {
-          "text": "\"dependencies\" 不包含 \"moment\"",
+          "text": "\"dependencies\" 不包含 \"moment\"。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/package.json').then(data => { var packJson = JSON.parse(data); assert.notProperty(packJson.dependencies, 'moment', '\"dependencies\" 中仍然有 \"moment\"'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
