@@ -6,7 +6,7 @@
   "challenges": [
     {
       "id": "587d7791367417b2b2512ab3",
-      "title": "Create Visual Balance Using the text-align Property",
+      "title": "用 text-align 属性来设置对齐方式",
       "description": [
         "这部分课程主要关于应用视觉设计。开始的挑战展示了一些核心的原则，代码基于一个指定的卡片布局。",
         "web 内容大部分都是文本。CSS 里面的<code>text-align</code>属性可以控制文本的对齐方式。",
@@ -15,7 +15,7 @@
         "<code>text-align: right;</code>文本右对齐。",
         "<code>text-align: left;</code>（默认）文本左对齐。",
         "<hr>",
-        "居中对齐<code>h4</code>标签文字，文字内容为“Google”。两端对齐段落标签文字，文字介绍了 Google 的创立。"
+        "居中对齐<code>h4</code>标签文字，文字内容为 “Google”。两端对齐段落标签文字，文字介绍了 Google 的创立。"
       ],
       "tests": [
         {
@@ -78,7 +78,7 @@
     },
     {
       "id": "587d7791367417b2b2512ab4",
-      "title": "Adjust the Width of an Element Using the width Property",
+      "title": "用 width 属性来设置元素的宽度",
       "description": [
         "你可以使用 CSS 里面的<code>width</code>属性来指定元素的宽度。属性值可以是相对单位（比如 em），绝对单位（比如 px），或者包含块（父元素）宽度的百分比宽度。下面这个例子把图片的宽度设置为 220px：",
         "<blockquote>img {<br>&nbsp;&nbsp;width: 220px;<br>}</blockquote>",
@@ -143,7 +143,7 @@
     },
     {
       "id": "587d7791367417b2b2512ab5",
-      "title": "Adjust the Height of an Element Using the height Property",
+      "title": "用 height 属性来设置元素的高度",
       "description": [
         "和<code>width</code>属性类似，你可以使用 CSS 里面的<code>height</code>属性来指定元素的高度。下面这个例子把图片的高度设置为 20px：",
         "<blockquote>img {<br>&nbsp;&nbsp;height: 20px;<br>}</blockquote>",
@@ -209,11 +209,11 @@
     },
     {
       "id": "587d781a367417b2b2512ab7",
-      "title": "Use the strong Tag to Make Text Bold",
+      "title": "用 strong 标签来加粗文字",
       "description": [
         "你可以使用<code>strong</code>标签来加粗文字。这通常用来强调文字，表示它很重要。添加了<code>strong</code>标签后，浏览器会给元素应用<code>font-weight:bold;</code>的 CSS 属性。",
         "<hr>",
-        "在<code>p</code>标签里的“斯坦福大学”外面添加<code>strong</code>标签。"
+        "在<code>p</code>标签里的 “斯坦福大学” 外面添加<code>strong</code>标签。"
       ],
       "tests": [
         {
@@ -225,8 +225,8 @@
           "testString": "assert($('p').children('strong').length == 1, '<code>strong</code>标签应该在<code>p</code>标签里。');"
         },
         {
-          "text": "<code>strong</code>标签应该包围“斯坦福大学”。",
-          "testString": "assert($('strong').text().match(/^斯坦福大学$/gi), '<code>strong</code>标签应该包围“斯坦福大学”。');"
+          "text": "<code>strong</code>标签应该包围 “斯坦福大学”。",
+          "testString": "assert($('strong').text().match(/^斯坦福大学$/gi), '<code>strong</code>标签应该包围 “斯坦福大学”。');"
         }
       ],
       "solutions": [],
@@ -285,11 +285,11 @@
     },
     {
       "id": "587d781a367417b2b2512ab8",
-      "title": "Use the u Tag to Underline Text",
+      "title": "用 u 标签来给文字添加下划线",
       "description": [
         "你可以使用<code>u</code>标签来给文字添加下划线。这通常用来表示这部分文字很重要，或者是一些需要被记住的内容。添加了<code>u</code>标签后，浏览器会给元素应用<code>text-decoration: underline;</code>的 CSS 属性。",
         "<hr>",
-        "在“理工博士”外面添加<code>u</code>标签。不要给整个 class 为<code>cardText</code>的父<code>div</code>添加。",
+        "在 “理工博士” 外面添加<code>u</code>标签。不要给整个 class 为<code>cardText</code>的父<code>div</code>添加。",
         "<strong>注意</strong>超链接标签默认给文本添加下划线，如果<code>u<code>标签的下滑线和页面的链接混淆，请避免使用它。"
       ],
       "tests": [
@@ -298,8 +298,8 @@
           "testString": "assert($('u').length === 1, '你的代码里应该有一个<code>u</code>标签。');"
         },
         {
-          "text": "<code>u</code>标签应该包围“理工博士”。",
-          "testString": "assert($('u').text() === '理工博士', '<code>u</code>标签应该包围“理工博士”。');"
+          "text": "<code>u</code>标签应该包围 “理工博士”。",
+          "testString": "assert($('u').text() === '理工博士', '<code>u</code>标签应该包围 “理工博士”。');"
         },
         {
           "text": "<code>u</code>标签不应该嵌套父<code>div</code>。",
@@ -362,20 +362,20 @@
     },
     {
       "id": "587d781a367417b2b2512ab9",
-      "title": "Use the em Tag to Italicize Text",
+      "title": "用 em 标签来把文字变成斜体",
       "description": [
-        "To emphasize text, you can use the <code>em</code> tag. This displays text as italicized, as the browser applies the CSS of <code>font-style: italic;</code> to the element.",
+        "你可以使用 <code>em</code> 标签来强调文字。由于浏览器会给元素应用<code>font-style: italic;</code>CSS，这时文字会显示为斜体。",
         "<hr>",
-        "Wrap an <code>em</code> tag around the contents of the paragraph tag to give it emphasis."
+        "在段落标签里的文字外面添加<code>em</code>标签来强调段落。"
       ],
       "tests": [
         {
-          "text": "Your code should add an <code>em</code> tag to the markup.",
-          "testString": "assert($('em').length == 1, 'Your code should add an <code>em</code> tag to the markup.');"
+          "text": "你的代码应该添加一个<code>em</code>标签。",
+          "testString": "assert($('em').length == 1, '你的代码应该添加一个<code>em</code>标签。');"
         },
         {
-          "text": "The <code>em</code> tag should wrap around the contents of the <code>p</code> tag but not the <code>p</code> tag itself.",
-          "testString": "assert($('p').children().length == 1 && $('em').children().length == 2, 'The <code>em</code> tag should wrap around the contents of the <code>p</code> tag but not the <code>p</code> tag itself.');"
+          "text": "<code>em</code>标签应该在<code>p</code>标签的文字外面而不是在<code>p</code>标签的外面。",
+          "testString": "assert($('p').children().length == 1 && $('em').children().length == 2, '<code>em</code>标签应该在<code>p</code>标签的文字外面而不是在<code>p</code>标签的外面。');"
         }
       ],
       "solutions": [],
@@ -418,11 +418,11 @@
             "  <div class=\"cardContent\">",
             "    <div class=\"cardText\">",
             "      <h4>Google</h4>",
-            "      <p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p>",
+            "      <p>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -434,24 +434,24 @@
     },
     {
       "id": "587d781b367417b2b2512aba",
-      "title": "Use the s Tag to Strikethrough Text",
+      "title": "用 s 标签来给文字添加删除线",
       "description": [
-        "To strikethrough text, which is when a horizontal line cuts across the characters, you can use the <code>s</code> tag. It shows that a section of text is no longer valid. With the <code>s</code> tag, the browser applies the CSS of <code>text-decoration: line-through;</code> to the element.",
+        "你可以用<code>s</code>标签来给文字添加删除线，<s>他的效果是在文字正中间有一条细线</s>。它代表着这段文字不在有效。添加了<code>s</code>标签后，浏览器会给元素应用<code>text-decoration: line-through;</code>CSS 属性。",
         "<hr>",
-        "Wrap the <code>s</code> tag around \"Google\" inside the <code>h4</code> tag and then add the word Alphabet beside it, which should not have the strikethrough formatting."
+        "在<code>h4</code>标签里的 “Google” 外添加<code>s</code>标签，然后在<code>s</code>标签外面添加单词 Alphabet，Alphabet 不要有删除线格式。"
       ],
       "tests": [
         {
-          "text": "Your code should add one <code>s</code> tag to the markup.",
-          "testString": "assert($('s').length == 1, 'Your code should add one <code>s</code> tag to the markup.');"
+          "text": "你的代码应该添加一个<code>s</code>标签。",
+          "testString": "assert($('s').length == 1, '你的代码应该添加一个<code>s</code>标签。');"
         },
         {
-          "text": "A <code>s</code> tag should wrap around the Google text in the <code>h4</code> tag. It should not contain the word Alphabet.",
-          "testString": "assert($('s').text().match(/Google/gi) && !$('s').text().match(/Alphabet/gi), 'A <code>s</code> tag should wrap around the Google text in the <code>h4</code> tag. It should not contain the word Alphabet.');"
+          "text": "<code>s</code>标签应该在<code>h4</code>标签内的 Google 文字外面，它不应该包含单词 Alphabet。",
+          "testString": "assert($('s').text().match(/Google/gi) && !$('s').text().match(/Alphabet/gi), '<code>s</code>标签应该在<code>h4</code>标签内的 Google 文字外面，它不应该包含单词 Alphabet。');"
         },
         {
-          "text": "Include the word Alphabet in the <code>h4</code> tag, without strikethrough formatting.",
-          "testString": "assert($('h4').html().match(/Alphabet/gi), 'Include the word Alphabet in the <code>h4</code> tag, without strikethrough formatting.');"
+          "text": "<code>h4</code>标签内应该有单词 Alphabet，Alphabet 应该没有删除线格式。",
+          "testString": "assert($('h4').html().match(/Alphabet/gi), '<code>h4</code>标签内应该有单词 Alphabet，Alphabet 应该没有删除线格式。');"
         }
       ],
       "solutions": [],
@@ -494,11 +494,11 @@
             "  <div class=\"cardContent\">",
             "    <div class=\"cardText\">",
             "      <h4>Google</h4>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -510,21 +510,21 @@
     },
     {
       "id": "587d781b367417b2b2512abb",
-      "title": "Create a Horizontal Line Using the hr Element",
+      "title": "用 hr 元素创建一条横线",
       "description": [
-        "You can use the <code>hr</code> tag to add a horizontal line across the width of its containing element. This can be used to define a change in topic or to visually separate groups of content.",
+        "你可以用<code>hr</code>标签来添加一条宽度撑满父元素的横线。它可以用来表示文档主题的改变，或者用来在视觉上将文档分隔成几个部分。",
         "<hr>",
-        "Add an <code>hr</code> tag underneath the <code>h4</code> which contains the card title.",
-        "<strong>Note</strong><br>In HTML, <code>hr</code> is a self-closing tag, and therefore doesn't need a separate closing tag."
+        "在包含卡片标题的<code>h4</code>下面添加一个<code>hr</code>标签。",
+        "<strong>注意</strong><br>在 HTML 里，<code>hr</code>是自关闭标签，所以不需要一个单独的关闭标签。"
       ],
       "tests": [
         {
-          "text": "Your code should add an <code>hr</code> tag to the markup.",
-          "testString": "assert($('hr').length == 1, 'Your code should add an <code>hr</code> tag to the markup.');"
+          "text": "你的代码里应该添加一个<code>hr</code>标签。",
+          "testString": "assert($('hr').length == 1, '你的代码里应该添加一个<code>hr</code>标签。');"
         },
         {
-          "text": "The <code>hr</code> tag should come between the title and the paragraph.",
-          "testString": "assert(code.match(/<\\/h4>\\s*?<hr(>|\\s*?\\/>)\\s*?<em>/gi), 'The <code>hr</code> tag should come between the title and the paragraph.');"
+          "text": "<code>hr</code>标签应该在标题和段落中间。",
+          "testString": "assert(code.match(/<\\/h4>\\s*?<hr(>|\\s*?\\/>)\\s*?<p>/gi), '<code>hr</code>标签应该在标题和段落中间。');"
         }
       ],
       "solutions": [],
@@ -567,12 +567,11 @@
             "  <div class=\"cardContent\">",
             "    <div class=\"cardText\">",
             "      <h4><s>Google</s>Alphabet</h4>",
-            "      ",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -584,28 +583,28 @@
     },
     {
       "id": "587d781b367417b2b2512abc",
-      "title": "Adjust the background-color Property of Text",
+      "title": "改变文字的背景色",
       "description": [
-        "Instead of adjusting your overall background or the color of the text to make the foreground easily readable, you can add a <code>background-color</code> to the element holding the text you want to emphasize. This challenge uses <code>rgba()</code> instead of <code>hex</code> codes or normal <code>rgb()</code>.",
-        "<blockquote>rgba stands for:<br>&nbsp;&nbsp;r = red<br>&nbsp;&nbsp;g = green<br>&nbsp;&nbsp;b = blue<br>&nbsp;&nbsp;a = alpha/level of opacity</blockquote>",
-        "The RGB values can range from 0 to 255. The alpha value can range from 1, which is fully opaque or a solid color, to 0, which is fully transparent or clear. <code>rgba()</code> is great to use in this case, as it allows you to adjust the opacity. This means you don't have to completely block out the background.",
-        "You'll use <code>background-color: rgba(45, 45, 45, 0.1)</code> for this challenge. It produces a dark gray color that is nearly transparent given the low opacity value of 0.1.",
+        "为了让页面更美观，除了设置整个页面的背景色以及文字颜色外，你还可以单独设置文字的背景色，即在文字的父元素上添加<code>background-color</code>属性。在本挑战里我们将使用<code>rgba()</code>颜色，而不是之前学到的<code>hex</code>编码或者<code>rgb()</code>颜色。",
+        "<blockquote>rgba 代表：<br>&nbsp;&nbsp;r = red 红色<br>&nbsp;&nbsp;g = green 绿色<br>&nbsp;&nbsp;b = blue 蓝色<br>&nbsp;&nbsp;a = alpha 透明度</blockquote>",
+        "RGB 值可以在 0 到 255 之间。alpha 值可以在 0 到 1 之间，其中 0 代表完全透明，1 代表完全不透明。<code>rgba()</code>非常棒，因为你可以设置颜色的透明度，这意味着你可以做出一些很漂亮的半透明效果。",
+        "在本挑战里你将会用到这个代码<code>background-color: rgba(45, 45, 45, 0.1)</code>。它表示背景是黑灰色，因为设置了透明度为 0.1，所以几乎是透明的。",
         "<hr>",
-        "To make the text stand out more, adjust the <code>background-color</code> of the <code>h4</code> element to the given <code>rgba()</code> value.",
-        "Also for the <code>h4</code>, remove the <code>height</code> property and add <code>padding</code> of 10px."
+        "为了让文字更醒目，设置<code>h4</code>元素的<code>background-color</code>属性值为上面指定的<code>rgba()</code>。",
+        "同时移除<code>h4</code>的<code>height</code>属性，并添加<code>padding</code>属性，值为 10px。"
       ],
       "tests": [
         {
-          "text": "Your code should add a <code>background-color</code> property to the <code>h4</code> element set to <code>rgba(45, 45, 45, 0.1)</code>.",
-          "testString": "assert(code.match(/background-color:\\s*?rgba\\(\\s*?45\\s*?,\\s*?45\\s*?,\\s*?45\\s*?,\\s*?0?\\.1\\s*?\\)/gi), 'Your code should add a <code>background-color</code> property to the <code>h4</code> element set to <code>rgba(45, 45, 45, 0.1)</code>.');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>background-color: rgba(45, 45, 45, 0.1)</code>。",
+          "testString": "assert(code.match(/background-color:\\s*?rgba\\(\\s*?45\\s*?,\\s*?45\\s*?,\\s*?45\\s*?,\\s*?0?\\.1\\s*?\\)/gi), '你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>background-color: rgba(45, 45, 45, 0.1)</code>。');"
         },
         {
-          "text": "Your code should add a <code>padding</code> property to the <code>h4</code> element and set it to 10 pixels.",
-          "testString": "assert($('h4').css('padding-top') == '10px' && $('h4').css('padding-right') == '10px' && $('h4').css('padding-bottom') == '10px' && $('h4').css('padding-left') == '10px', 'Your code should add a <code>padding</code> property to the <code>h4</code> element and set it to 10 pixels.');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值 10 像素。",
+          "testString": "assert($('h4').css('padding-top') == '10px' && $('h4').css('padding-right') == '10px' && $('h4').css('padding-bottom') == '10px' && $('h4').css('padding-left') == '10px', '你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值 10 像素。');"
         },
         {
-          "text": "The <code>height</code> property on the <code>h4</code> element should be removed.",
-          "testString": "assert(!($('h4').css('height') == '25px'), 'The <code>height</code> property on the <code>h4</code> element should be removed.');"
+          "text": "<code>h4</code>元素的<code>height</code>属性应该被移除。",
+          "testString": "assert(!($('h4').css('height') == '25px'), '<code>h4</code>元素的<code>height</code>属性应该被移除。');"
         }
       ],
       "solutions": [],
@@ -651,11 +650,11 @@
             "    <div class=\"cardText\">",
             "      <h4>Alphabet</h4>",
             "      <hr>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -667,16 +666,16 @@
     },
     {
       "id": "587d781b367417b2b2512abd",
-      "title": "Adjust the Size of a Header Versus a Paragraph Tag",
+      "title": "调整标题的大小使之区别于段落标签",
       "description": [
-        "The font size of header tags (<code>h1</code> through <code>h6</code>) should generally be larger than the font size of paragraph tags. This makes it easier for the user to visually understand the layout and level of importance of everything on the page. You use the <code>font-size</code> property to adjust the size of the text in an element.",
+        "标题（<code>h1</code>到<code>h6</code>）的文字应该比的段落的文字大，这样可以让用户更直观的看到页面的布局，同时能区别出不同元素的重要程度，更方便用户捕捉关键的信息。你可以使用<code>font-size</code>属性来设置元素内文字的大小。",
         "<hr>",
-        "To make the heading significantly larger than the paragraph, change the <code>font-size</code> of the <code>h4</code> tag to 27 pixels."
+        "把<code>h4</code>标签的<code>font-size</code>改成27 像素，让标题更醒目。"
       ],
       "tests": [
         {
-          "text": "Your code should add a <code>font-size</code> property to the <code>h4</code> element set to 27 pixels.",
-          "testString": "assert($('h4').css('font-size') == '27px', 'Your code should add a <code>font-size</code> property to the <code>h4</code> element set to 27 pixels.');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值 27 像素。",
+          "testString": "assert($('h4').css('font-size') == '27px', '你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值 27 像素。');"
         }
       ],
       "solutions": [],
@@ -722,11 +721,11 @@
             "    <div class=\"cardText\">",
             "      <h4>Alphabet</h4>",
             "      <hr>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -738,23 +737,23 @@
     },
     {
       "id": "587d781b367417b2b2512abe",
-      "title": "Add a box-shadow to a Card-like Element",
+      "title": "给卡片式元素添加阴影（box-shadow）",
       "description": [
-        "The <code>box-shadow</code> property applies one or more shadows to an element.",
-        "The <code>box-shadow</code> property takes values for <code>offset-x</code> (how far to push the shadow horizontally from the element), <code>offset-y</code> (how far to push the shadow vertically from the element), <code>blur-radius</code>, <code>spread-radius</code> and a color value, in that order. The <code>blur-radius</code> and <code>spread-radius</code> values are optional.",
-        "Here's an example of the CSS to create multiple shadows with some blur, at mostly-transparent black colors:",
+        "<code>box-shadow</code>属性用来给元素添加阴影，该属性值是由逗号分隔的一个或多个阴影列表。",
+        "<code>box-shadow</code>属性的每个阴影依次由下面这些值描述：<ul><li><code>offset-x</code>阴影的水平偏移量；</li><li><code>offset-y</code>阴影的垂直偏移量;</li><li><code>blur-radius</code>模糊距离；</li><li><code>spread-radius</code>阴影尺寸；</li><li>颜色。</li></ul>其中<code>blur-raduis</code>和<code>spread-raduis</code>是可选的。",
+        "下面是创建了多个阴影的 CSS 例子，阴影加了模糊效果，颜色是透明度很高的黑色:",
         "<blockquote>box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);</blockquote>",
         "<hr>",
-        "The element now has an id of <code>thumbnail</code>. With this selector, use the example CSS values above to place a <code>box-shadow</code> on the card."
+        "现在卡片已经添加了 id<code>thumbnail</code>。把上面的<code>box-shadow</code>值赋给卡片。"
       ],
       "tests": [
         {
-          "text": "Your code should add a <code>box-shadow</code> property for the <code>thumbnail</code> id.",
-          "testString": "assert(code.match(/#thumbnail\\s*?{\\s*?box-shadow/g), 'Your code should add a <code>box-shadow</code> property for the <code>thumbnail</code> id.');"
+          "text": "你的代码应该给<code>thumbnail</code>id 添加<code>box-shadow</code>属性。",
+          "testString": "assert(code.match(/#thumbnail\\s*?{\\s*?box-shadow/g), '你的代码应该给<code>thumbnail</code>id 添加<code>box-shadow</code>属性。');"
         },
         {
-          "text": "You should use the given CSS for the <code>box-shadow</code> value.",
-          "testString": "assert(code.match(/box-shadow:\\s*?0\\s+?10px\\s+?20px\\s+?rgba\\(\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0?\\.19\\),\\s*?0\\s+?6px\\s+?6px\\s+?rgba\\(\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0?\\.23\\)/gi), 'You should use the given CSS for the <code>box-shadow</code> value.');"
+          "text": "<code>box-shadow</code>值应该是指定的 CSS 值。",
+          "testString": "assert(code.match(/box-shadow:\\s*?0\\s+?10px\\s+?20px\\s+?rgba\\(\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0?\\.19\\),\\s*?0\\s+?6px\\s+?6px\\s+?rgba\\(\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0\\s*?,\\s*?0?\\.23\\)/gi), '<code>box-shadow</code>值应该是指定的 CSS 值。');"
         }
       ],
       "solutions": [],
@@ -803,11 +802,11 @@
             "    <div class=\"cardText\">",
             "      <h4>Alphabet</h4>",
             "      <hr>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -819,18 +818,18 @@
     },
     {
       "id": "587d781c367417b2b2512abf",
-      "title": "Decrease the Opacity of an Element",
+      "title": "设置元素的透明度",
       "description": [
-        "The <code>opacity</code> property in CSS is used to adjust the opacity, or conversely, the transparency for an item.",
-        "<blockquote>A value of 1 is opaque, which isn't transparent at all.<br>A value of 0.5 is half see-through.<br>A value of 0 is completely transparent.</blockquote>",
-        "The value given will apply to the entire element, whether that's an image with some transparency, or the foreground and background colors for a block of text.",
+        "CSS 里的<code>opacity</code>属性用来设置元素的透明度。",
+        "<blockquote>值 1 代表完全不透明。<br>值 0.5 代表半透明。<br>值 0 代表完全透明。</blockquote>",
+        "透明度会应用到元素内的所有内容，不论是图片，还是文本，或是背景色。",
         "<hr>",
-        "Set the <code>opacity</code> of the anchor tags to 0.7 using <code>links</code> class to select them."
+        "使用<code>links</code>class 选择所有的超链接并设置其<code>opacity</code>值为 0.7。"
       ],
       "tests": [
         {
-          "text": "Your code should set the <code>opacity</code> property to 0.7 on the anchor tags by selecting the class of <code>links</code>.",
-          "testString": "assert.approximately(parseFloat($('.links').css('opacity')), 0.7, 0.1, 'Your code should set the <code>opacity</code> property to 0.7 on the anchor tags by selecting the class of <code>links</code>.');"
+          "text": "你的代码应该使用<code>links</code>class 选择所有的超链接并设置其<code>opacity</code>值为 0.7。",
+          "testString": "assert.approximately(parseFloat($('.links').css('opacity')), 0.7, 0.1, '你的代码应该使用<code>links</code>class 选择所有的超链接并设置其<code>opacity</code>值为 0.7。');"
         }
       ],
       "solutions": [],
@@ -880,11 +879,11 @@
             "    <div class=\"cardText\">",
             "      <h4>Alphabet</h4>",
             "      <hr>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -896,22 +895,22 @@
     },
     {
       "id": "587d781c367417b2b2512ac0",
-      "title": "Use the text-transform Property to Make Text Uppercase",
+      "title": "用 text-transform 属性来改变英文中字母的大小写",
       "description": [
-        "The <code>text-transform</code> property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.",
-        "The following table shows how the different <code>text-transform</code>values change the example text \"Transform me\".",
-        "<table class=\"table table-striped\"><thead><th>Value<th>Result<tbody><tr><td><code>lowercase</code><td>\"transform me\"<tr><td><code>uppercase</code><td>\"TRANSFORM ME\"<tr><td><code>capitalize</code><td>\"Transform Me\"<tr><td><code>initial</code><td>Use the default value<tr><td><code>inherit</code><td>Use the <code>text-transform</code> value from the parent element<tr><td><code>none</code><td><strong>Default:</strong> Use the original text</td></table>",
+        "CSS 里面的<code>text-transform</code>属性来改变英文中字母的大小写。它通常用来统一页面里英文的显示，且无需直接改变 HTML 元素中的文本。",
+        "下面的表格展示了<code>text-transform</code>的不同值对文字 “Transform me” 的影响。",
+        "<table class=\"table table-striped\"><thead><th>Value<th>Result<tbody><tr><td><code>lowercase</code><td>\"transform me\"<tr><td><code>uppercase</code><td>\"TRANSFORM ME\"<tr><td><code>capitalize</code><td>\"Transform Me\"<tr><td><code>initial</code><td>使用默认值<tr><td><code>inherit</code><td>使用父元素的<code>text-transform</code>值。<tr><td><code>none</code><td><strong>Default:</strong>不改变文字。</td></table>",
         "<hr>",
-        "Transform the text of the <code>h4</code> to be uppercase using the <code>text-transform</code> property."
+        "使用<code>text-transform</code>属性把<code>h4</code>内的英文的所有字母变成大写。"
       ],
       "tests": [
         {
-          "text": "The <code>h4</code> text should be uppercase.",
-          "testString": "assert($('h4').css('text-transform') === 'uppercase', 'The <code>h4</code> text should be uppercase.');"
+          "text": "<code>h4</code>内的英文的所有字母应该为大写。",
+          "testString": "assert($('h4').css('text-transform') === 'uppercase', '<code>h4</code>内的英文的所有字母应该为大写。');"
         },
         {
-          "text": "The original text of the h4 should not be changed.",
-          "testString": "assert(($('h4').text() !== $('h4').text().toUpperCase()), 'The original text of the h4 should not be changed.');"
+          "text": "<code>h4</code>内的原文不能被改变。",
+          "testString": "assert(($('h4').text() !== $('h4').text().toUpperCase()), '<code>h4</code>内的原文不能被改变。');"
         }
       ],
       "solutions": [],
@@ -962,11 +961,11 @@
             "    <div class=\"cardText\">",
             "      <h4>Alphabet</h4>",
             "      <hr>",
-            "      <em><p>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</p></em>",
+            "      <p><em>Google 由在<strong>斯坦福大学</strong>攻读<u>理工博士</u>的拉里·佩奇和谢尔盖·布林共同创建。</em></p>",
             "    </div>",
             "    <div class=\"cardLinks\">",
-            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">Larry Page</a><br><br>",
-            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">Sergey Brin</a>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Larry_Page\" target=\"_blank\" class=\"links\">拉里·佩奇</a><br><br>",
+            "      <a href=\"https://en.wikipedia.org/wiki/Sergey_Brin\" target=\"_blank\" class=\"links\">谢尔盖·布林</a>",
             "    </div>",
             "  </div>",
             "</div>"
@@ -978,36 +977,36 @@
     },
     {
       "id": "587d781c367417b2b2512ac2",
-      "title": "Set the font-size for Multiple Heading Elements",
+      "title": "设置多个标题元素的文字大小（font-size）",
       "description": [
-        "The <code>font-size</code> property is used to specify how large the text is in a given element. This rule can be used for multiple elements to create visual consistency of text on a page. In this challenge, you'll set the values for all <code>h1</code> through <code>h6</code> tags to balance the heading sizes.",
+        "<code>font-size</code>属性用来指定元素内文字的大小。这个规则可以应用到多个元素上，合理的使用，能让页面的文字显示的错落有致。在本挑战里，你将要设置<code>h1</code>到<code>h6</code>的每个标题文字的大小。",
         "<hr>",
-        "<ul><li>Set the <code>font-size</code> of the <code>h1</code> tag to 68px.</li><li>Set the <code>font-size</code> of the <code>h2</code> tag to 52px.</li><li>Set the <code>font-size</code> of the <code>h3</code> tag to 40px.</li><li>Set the <code>font-size</code> of the <code>h4</code> tag to 32px.</li><li>Set the <code>font-size</code> of the <code>h5</code> tag to 21px.</li><li>Set the <code>font-size</code> of the <code>h6</code> tag to 14px.</li></ul>"
+        "<ul><li>设置<code>h1</code>标签的<code>font-size</code>为 68px。</li><li>设置<code>h2</code>标签的<code>font-size</code>为 52px。</li><li>设置<code>h3</code>标签的<code>font-size</code>为 40px。</li><li>设置<code>h4</code>标签的<code>font-size</code>为 32px。</li><li>设置<code>h5</code>标签的<code>font-size</code>为 21px。</li><li>设置<code>h6</code>标签的<code>font-size</code>为 14px。</li></ul>"
       ],
       "tests": [
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h1</code> tag to 68 pixels.",
-          "testString": "assert($('h1').css('font-size') == '68px', 'Your code should set the <code>font-size</code> property for the <code>h1</code> tag to 68 pixels.');"
+          "text": "你的代码应该设置<code>h1</code>标签的<code>font-size</code>为 68 像素。",
+          "testString": "assert($('h1').css('font-size') == '68px', '你的代码应该设置<code>h1</code>标签的<code>font-size</code>为 68 像素。');"
         },
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h2</code> tag to 52 pixels.",
-          "testString": "assert($('h2').css('font-size') == '52px', 'Your code should set the <code>font-size</code> property for the <code>h2</code> tag to 52 pixels.');"
+          "text": "你的代码应该设置<code>h2</code>标签的<code>font-size</code>为 52 像素。",
+          "testString": "assert($('h2').css('font-size') == '52px', '你的代码应该设置<code>h2</code>标签的<code>font-size</code>为 52 像素。');"
         },
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h3</code> tag to 40 pixels.",
-          "testString": "assert($('h3').css('font-size') == '40px', 'Your code should set the <code>font-size</code> property for the <code>h3</code> tag to 40 pixels.');"
+          "text": "你的代码应该设置<code>h3</code>标签的<code>font-size</code>为 40 像素。",
+          "testString": "assert($('h3').css('font-size') == '40px', '你的代码应该设置<code>h3</code>标签的<code>font-size</code>为 40 像素。');"
         },
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h4</code> tag to 32 pixels.",
-          "testString": "assert($('h4').css('font-size') == '32px', 'Your code should set the <code>font-size</code> property for the <code>h4</code> tag to 32 pixels.');"
+          "text": "你的代码应该设置<code>h4</code>标签的<code>font-size</code>为 32 像素。",
+          "testString": "assert($('h4').css('font-size') == '32px', '你的代码应该设置<code>h4</code>标签的<code>font-size</code>为 32 像素。');"
         },
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h5</code> tag to 21 pixels.",
-          "testString": "assert($('h5').css('font-size') == '21px', 'Your code should set the <code>font-size</code> property for the <code>h5</code> tag to 21 pixels.');"
+          "text": "你的代码应该设置<code>h5</code>标签的<code>font-size</code>为 21 像素。",
+          "testString": "assert($('h5').css('font-size') == '21px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 21 像素。');"
         },
         {
-          "text": "Your code should set the <code>font-size</code> property for the <code>h6</code> tag to 14 pixels.",
-          "testString": "assert($('h6').css('font-size') == '14px', 'Your code should set the <code>font-size</code> property for the <code>h6</code> tag to 14 pixels.');"
+          "text": "你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 14 像素。",
+          "testString": "assert($('h6').css('font-size') == '14px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 14 像素。');"
         }
       ],
       "solutions": [],
@@ -1028,12 +1027,12 @@
             "  ",
             "  ",
             "</style>",
-            "<h1>This is h1 text</h1>",
-            "<h2>This is h2 text</h2>",
-            "<h3>This is h3 text</h3>",
-            "<h4>This is h4 text</h4>",
-            "<h5>This is h5 text</h5>",
-            "<h6>This is h6 text</h6>"
+            "<h1>我是 h1 文字</h1>",
+            "<h2>我是 h2 文字</h2>",
+            "<h3>我是 h3 文字</h3>",
+            "<h4>我是 h4 文字</h4>",
+            "<h5>我是 h5 文字</h5>",
+            "<h6>我是 h6 文字</h6>"
           ],
           "head": [],
           "tail": []
@@ -1042,37 +1041,37 @@
     },
     {
       "id": "587d781c367417b2b2512ac3",
-      "title": "Set the font-weight for Multiple Heading Elements",
+      "title": "设置多个标题元素的文字粗细（font-weight）",
       "description": [
-        "You set the <code>font-size</code> of each heading tag in the last challenge, here you'll adjust the <code>font-weight</code>.",
-        "The <code>font-weight</code> property sets how thick or thin characters are in a section of text.",
+        "在上一个挑战里你已经设置了每个标题的<code>font-size</code>，接下来你将设置<code>font-weight</code>。",
+        "<code>font-weight</code>属性用于设置文本中所用的字体的粗细。",
         "<hr>",
-        "<ul><li>Set the <code>font-weight</code> of the <code>h1</code> tag to 800.</li><li>Set the <code>font-weight</code> of the <code>h2</code> tag to 600.</li><li>Set the <code>font-weight</code> of the <code>h3</code> tag to 500.</li><li>Set the <code>font-weight</code> of the <code>h4</code> tag to 400.</li><li>Set the <code>font-weight</code> of the <code>h5</code> tag to 300.</li><li>Set the <code>font-weight</code> of the <code>h6</code> tag to 200.</li></ul>"
+        "<ul><li>设置<code>h1</code>标签的<code>font-weight</code>为 800。</li><li>设置<code>h2</code>标签的<code>font-weight</code>为 600。</li><li>设置<code>h3</code>标签的<code>font-weight</code>为 500。</li><li>设置<code>h4</code>标签的<code>font-weight</code>为 400。</li><li>设置<code>h5</code>标签的<code>font-weight</code>为 300。</li><li>设置<code>h6</code>标签的<code>font-weight</code>为 200。</li></ul>"
       ],
       "tests": [
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h1</code> tag to 800.",
-          "testString": "assert($('h1').css('font-weight') == '800', 'Your code should set the <code>font-weight</code> property for the <code>h1</code> tag to 800.');"
+          "text": "你的代码应该设置<code>h1</code>标签的<code>font-weight</code>为 800。",
+          "testString": "assert($('h1').css('font-weight') == '800', '你的代码应该设置<code>h1</code>标签的<code>font-weight</code>为 800。');"
         },
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h2</code> tag to 600.",
-          "testString": "assert($('h2').css('font-weight') == '600', 'Your code should set the <code>font-weight</code> property for the <code>h2</code> tag to 600.');"
+          "text": "你的代码应该设置<code>h2</code>标签的<code>font-weight</code>为 600。",
+          "testString": "assert($('h2').css('font-weight') == '600', '你的代码应该设置<code>h2</code>标签的<code>font-weight</code>为 600。');"
         },
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h3</code> tag to 500.",
-          "testString": "assert($('h3').css('font-weight') == '500', 'Your code should set the <code>font-weight</code> property for the <code>h3</code> tag to 500.');"
+          "text": "你的代码应该设置<code>h3</code>标签的<code>font-weight</code>为 500。",
+          "testString": "assert($('h3').css('font-weight') == '500', '你的代码应该设置<code>h3</code>标签的<code>font-weight</code>为 500。');"
         },
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h4</code> tag to 400.",
-          "testString": "assert($('h4').css('font-weight') == '400', 'Your code should set the <code>font-weight</code> property for the <code>h4</code> tag to 400.');"
+          "text": "你的代码应该设置<code>h4</code>标签的<code>font-weight</code>为 400。",
+          "testString": "assert($('h4').css('font-weight') == '400', '你的代码应该设置<code>h4</code>标签的<code>font-weight</code>为 400。');"
         },
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h5</code> tag to 300.",
-          "testString": "assert($('h5').css('font-weight') == '300', 'Your code should set the <code>font-weight</code> property for the <code>h5</code> tag to 300.');"
+          "text": "你的代码应该设置<code>h5</code>标签的<code>font-weight</code>为 300。",
+          "testString": "assert($('h5').css('font-weight') == '300', '你的代码应该设置<code>h5</code>标签的<code>font-weight</code>为 300。');"
         },
         {
-          "text": "Your code should set the <code>font-weight</code> property for the <code>h6</code> tag to 200.",
-          "testString": "assert($('h6').css('font-weight') == '200', 'Your code should set the <code>font-weight</code> property for the <code>h6</code> tag to 200.');"
+          "text": "你的代码应该设置<code>h6</code>标签的<code>font-weight</code>为 200。",
+          "testString": "assert($('h6').css('font-weight') == '200', '你的代码应该设置<code>h6</code>标签的<code>font-weight</code>为 200。');"
         }
       ],
       "solutions": [],
@@ -1111,12 +1110,12 @@
             "    ",
             "  }",
             "</style>",
-            "<h1>This is h1 text</h1>",
-            "<h2>This is h2 text</h2>",
-            "<h3>This is h3 text</h3>",
-            "<h4>This is h4 text</h4>",
-            "<h5>This is h5 text</h5>",
-            "<h6>This is h6 text</h6>"
+            "<h1>我是 h1 文字</h1>",
+            "<h2>我是 h2 文字</h2>",
+            "<h3>我是 h3 文字</h3>",
+            "<h4>我是 h4 文字</h4>",
+            "<h5>我是 h5 文字</h5>",
+            "<h6>我是 h6 文字</h6>"
           ],
           "head": [],
           "tail": []
@@ -1125,16 +1124,16 @@
     },
     {
       "id": "587d781c367417b2b2512ac4",
-      "title": "Set the font-size of Paragraph Text",
+      "title": "设置段落的文字大小（font-size）",
       "description": [
-        "The <code>font-size</code> property in CSS is not limited to headings, it can be applied to any element containing text.",
+        "CSS 里面的<code>font-size</code>属性不只限于标题，它可以应用于任何包含文字的元素内。",
         "<hr>",
-        "Change the value of the <code>font-size</code> property for the paragraph to 16px to make it more visible."
+        "把段落的<code>font-size</code>设置为 16px 让它看起来更清晰。"
       ],
       "tests": [
         {
-          "text": "Your <code>p</code> tag should have a <code>font-size</code> of 16 pixels.",
-          "testString": "assert($('p').css('font-size') == '16px', 'Your <code>p</code> tag should have a <code>font-size</code> of 16 pixels.');"
+          "text": "你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为 16 像素。",
+          "testString": "assert($('p').css('font-size') == '16px', '你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为 16 像素。');"
         }
       ],
       "solutions": [],
@@ -1153,7 +1152,7 @@
             "  }",
             "</style>",
             "<p>",
-            "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "  天地玄黄　宇宙洪荒　日月盈昃　辰宿列张　寒来暑往　秋收冬藏　闰余成岁　律召调阳　云腾致雨　露结为霜　金生丽水　玉出昆冈　剑号巨阙　珠称夜光　果珍李柰　菜重芥姜　海咸河淡　鳞潜羽翔　龙师火帝　鸟官人皇　始制文字　乃服衣裳　推位让国　有虞陶唐　吊民伐罪　周发殷汤　坐朝问道　垂拱平章　爱育黎首　臣伏戎羌　遐迩壹体　率宾归王　鸣凤在树　白驹食场　化被草木　赖及万方　盖此身发　四大五常　恭惟鞠养　岂敢毁伤　女慕贞絜　男效才良　知过必改　得能莫忘　罔谈彼短　靡恃己长　信使可覆　器欲难量　墨悲丝染　诗讃羔羊",
             "</p>"
           ],
           "head": [],
@@ -1163,16 +1162,16 @@
     },
     {
       "id": "587d781d367417b2b2512ac5",
-      "title": "Set the line-height of Paragraphs",
+      "title": "设置段落的行高（line-height）",
       "description": [
-        "CSS offers the <code>line-height</code> property to change the height of each line in a block of text. As the name suggests, it changes the amount of vertical space that each line of text gets.",
+        "CSS 提供<code>line-height</code>属性来设置行间的距离。行高，顾名思义，用来设置每行文字所占据的垂直空间。",
         "<hr>",
-        "Add a <code>line-height</code> property to the <code>p</code> tag and set it to 25px."
+        "给<code>p</code>标签添加<code>line-height</code>属性并赋值 25px。"
       ],
       "tests": [
         {
-          "text": "Your code should set the <code>line-height</code> of the <code>p</code> tag to 25 pixels.",
-          "testString": "assert($('p').css('line-height') == '25px', 'Your code should set the <code>line-height</code> of the <code>p</code> tag to 25 pixels.');"
+          "text": "你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值 25px。",
+          "testString": "assert($('p').css('line-height') == '25px', '你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值 25px。');"
         }
       ],
       "solutions": [],
@@ -1192,7 +1191,7 @@
             "  }",
             "</style>",
             "<p>",
-            "  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "  天地玄黄　宇宙洪荒　日月盈昃　辰宿列张　寒来暑往　秋收冬藏　闰余成岁　律召调阳　云腾致雨　露结为霜　金生丽水　玉出昆冈　剑号巨阙　珠称夜光　果珍李柰　菜重芥姜　海咸河淡　鳞潜羽翔　龙师火帝　鸟官人皇　始制文字　乃服衣裳　推位让国　有虞陶唐　吊民伐罪　周发殷汤　坐朝问道　垂拱平章　爱育黎首　臣伏戎羌　遐迩壹体　率宾归王　鸣凤在树　白驹食场　化被草木　赖及万方　盖此身发　四大五常　恭惟鞠养　岂敢毁伤　女慕贞絜　男效才良　知过必改　得能莫忘　罔谈彼短　靡恃己长　信使可覆　器欲难量　墨悲丝染　诗讃羔羊",
             "</p>"
           ],
           "head": [],
@@ -1202,22 +1201,22 @@
     },
     {
       "id": "587d781d367417b2b2512ac8",
-      "title": "Adjust the Hover State of an Anchor Tag",
+      "title": "设置超链接的鼠标滑过（Hover）状态",
       "description": [
-        "This challenge will touch on the usage of pseudo-classes. A pseudo-class is a keyword that can be added to selectors, in order to select a specific state of the element.",
-        "For example, the styling of an anchor tag can be changed for its hover state using the <code>:hover</code> pseudo-class selector. Here's the CSS to change the <code>color</code> of the anchor tag to red during its hover state:",
+        "本挑战将要涉及到伪类。伪类是可以添加到选择器上的关键字，用来选择元素的指定状态。",
+        "比如，超链接可以使用<code>:hover</code>伪类选择器定义它的鼠标滑过状态样式。下面是鼠标滑过超链接时改变超链接颜色的 CSS：",
         "<blockquote>a:hover {<br>&nbsp;&nbsp;color: red;<br>}</blockquote>",
         "<hr>",
-        "The code editor has a CSS rule to style all <code>a</code> tags black. Add a rule so that when the user hovers over the <code>a</code> tag, the <code>color</code> is blue."
+        "代码编辑器里面已经有了一个 CSS 规则把所有的<code>a</code>标签定义成了黑色。添加一个规则，满足如下，当用户鼠标滑过<code>a</code>标签时，把<code>color</code>变成蓝色。"
       ],
       "tests": [
         {
-          "text": "The anchor tag <code>color</code> should remain black, only add CSS rules for the <code>:hover</code> state.",
-          "testString": "assert($('a').css('color') == 'rgb(0, 0, 0)', 'The anchor tag <code>color</code> should remain black, only add CSS rules for the <code>:hover</code> state.');"
+          "text": "超链接的<code>color</code>应该保持黑色，只添加<code>:hover</code> CSS 规则。",
+          "testString": "assert($('a').css('color') == 'rgb(0, 0, 0)', '超链接的<code>color</code>应该保持黑色，只添加<code>:hover</code> CSS 规则。');"
         },
         {
-          "text": "The anchor tag should have a <code>color</code> of blue on hover.",
-          "testString": "assert(code.match(/a:hover\\s*?{\\s*?color:\\s*?blue;\\s*?}/gi), 'The anchor tag should have a <code>color</code> of blue on hover.');"
+          "text": "鼠标滑过超链接时超链接<code>color</code>应该变成蓝色。",
+          "testString": "assert(code.match(/a:hover\\s*?{\\s*?color:\\s*?blue;\\s*?}/gi), '鼠标滑过超链接时超链接<code>color</code>应该变成蓝色。');"
         }
       ],
       "solutions": [],
@@ -1238,7 +1237,7 @@
             "  ",
             "  ",
             "</style>",
-            "<a href=\"http://freecatphotoapp.com/\" target=\"_blank\">CatPhotoApp</a>"
+            "<a href=\"http://freecatphotoapp.com/\" target=\"_blank\">猫咪相册 App</a>"
           ],
           "head": [],
           "tail": []
@@ -1247,24 +1246,24 @@
     },
     {
       "id": "587d781e367417b2b2512ac9",
-      "title": "Change an Element's Relative Position",
+      "title": "改变元素的相对位置（Relative Position）",
       "description": [
-        "CSS treats each HTML element as its own box, which is usually referred to as the <code>CSS Box Model</code>. Block-level items automatically start on a new line (think headings, paragraphs, and divs) while inline items sit within surrounding content (like images or spans). The default layout of elements in this way is called the <code>normal flow</code> of a document, but CSS offers the position property to override it.",
-        "When the position of an element is set to <code>relative</code>, it allows you to specify how CSS should move it <i>relative</i> to its current position in the normal flow of the page. It pairs with the CSS offset properties of <code>left</code> or <code>right</code>, and <code>top</code> or <code>bottom</code>. These say how many pixels, percentages, or ems to move the item <i>away</i> from where it is normally positioned. The following example moves the paragraph 10 pixels away from the bottom:",
+        "在 CSS 里一切 HTML 元素皆为盒子，也就是通常所说的<code>盒模型</code>。块级元素自动从新的一行开始（比如标题、段落以及 div），行内元素排列在上一个元素后（比如图片以及 span）。元素默认按照这种方式布局称为文档的<code>普通流</code>，同时 CSS 提供了 position 属性来覆盖它。",
+        "当元素的 position 设置为<code>relative</code>时，它允许你通过 CSS 指定该元素在当前普通流页面下的相对偏移量。 CSS 里控制各个方向偏移量的对应的属性是<code>left</code>、<code>right</code>、<code>top</code>和<code>bottom</code>。它们代表着从原来的位置向对应的方向偏移指定的像素、百分比或者 ems。下面的例子展示了段落向上偏移 10 像素：",
         "<blockquote>p {<br>&nbsp;&nbsp;position: relative;<br>&nbsp;&nbsp;bottom: 10px;<br>}</blockquote>",
-        "Changing an element's position to relative does not remove it from the normal flow - other elements around it still behave as if that item were in its default position.",
-        "<strong>Note</strong><br>Positioning gives you a lot of flexibility and power over the visual layout of a page. It's good to remember that no matter the position of elements, the underlying HTML markup should be organized and make sense when read from top to bottom. This is how users with visual impairments (who rely on assistive devices like screen readers) access your content.",
+        "把元素的 position 设置成 relative 并不会改变该元素在普通流布局所占的位置，也不会对其它元素的位置产生影响。",
+        "<strong>注意</strong><br>定位可以让你在页面布局上更灵活、高效。注意不管元素的定位是怎样，内部的 HTML 代码阅读起来应该是整洁、有意义的。这样也可以让视障人员（他们重度依赖辅助设备比如屏幕阅读软件）能够浏览你的网页。",
         "<hr>",
-        "Change the <code>position</code> of the <code>h2</code> to <code>relative</code>, and use a CSS offset to move it 15 pixels away from the <code>top</code> of where it sits in the normal flow. Notice there is no impact on the positions of the surrounding h1 and p elements."
+        "把<code>h2</code>的<code>position</code>设置成<code>relative</code>，使用相应的 CSS 属性调整<code>h2</code>的位置，使其向上偏移 15 像素，同时还在普通流中占据原来的位置。注意不要对 h1 和 p 元素的位置产生影响。"
       ],
       "tests": [
         {
-          "text": "The <code>h2</code> element should have a <code>position</code> property set to <code>relative</code>.",
-          "testString": "assert($('h2').css('position') == 'relative', 'The <code>h2</code> element should have a <code>position</code> property set to <code>relative</code>.');"
+          "text": "<code>h2</code>元素应该添加<code>position</code>属性并赋值<code>relative</code>。",
+          "testString": "assert($('h2').css('position') == 'relative', '<code>h2</code>元素应该添加<code>position</code>属性并赋值<code>relative</code>。');"
         },
         {
-          "text": "Your code should use a CSS offset to relatively position the <code>h2</code> 15px away from the <code>top</code> of where it normally sits.",
-          "testString": "assert($('h2').css('top') == '15px', 'Your code should use a CSS offset to relatively position the <code>h2</code> 15px away from the <code>top</code> of where it normally sits.');"
+          "text": "你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移 15 像素。",
+          "testString": "assert($('h2').css('top') == '15px', '你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移 15 像素。');"
         }
       ],
       "solutions": [],
@@ -1284,9 +1283,9 @@
             "  }",
             "</style>",
             "<body>",
-            "  <h1>On Being Well-Positioned</h1>",
-            "  <h2>Move me!</h2>",
-            "  <p>I still think the h2 is where it normally sits.</p>",
+            "  <h1>论如何优雅定位</h1>",
+            "  <h2>我要离 h1 近一点！</h2>",
+            "  <p>我觉得 h2 没变，还是在它原来的位置，相离莫相忘，且行且珍惜。</p>",
             "</body>"
           ],
           "head": [],
