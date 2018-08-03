@@ -459,7 +459,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global variable",
+            "// 全局变量",
             "var watchList = [",
             "                 {  ",
             "                   \"Title\": \"Inception\",",
@@ -593,21 +593,21 @@
       "id": "587d7b8f367417b2b2512b62",
       "title": "Implement map on a Prototype",
       "description": [
-        "As you have seen from applying <code>Array.prototype.map()</code>, or simply <code>map()</code> earlier, the <code>map</code> method returns an array of the same length as the one it was called on. It also doesn't alter the original array, as long as its callback function doesn't.",
-        "In other words, <code>map</code> is a pure function, and its output depends solely on its inputs. Plus, it takes another function as its argument.",
-        "It would teach us a lot about <code>map</code> to try to implement a version of it that behaves exactly like the <code>Array.prototype.map()</code> with a <code>for</code> loop or <code>Array.prototype.forEach()</code>.",
-        "Note: A pure function is allowed to alter local variables defined within its scope, although, it's preferable to avoid that as well.",
+        "你前面用的<code>map</code>方法（即<code>Array.prototype.map()</code>，<code>map</code>方法返回一个与调用它的数组长度相同的数组。只要它的回调函数不改变原始数组，它就不会改变原始数组。",
+        "换一句话说，<code>map</code>是一个纯函数，它的输出完全取决于它的输入；另外，它需要另一个函数作为它的参数。",
+        "它会教会我们更多关于用<code>map</code>去实现一个与<code>for</code>或<code>Array.prototype.forEach()</code>行为完全一样的<code>Array.prototype.map()</code>版本。",
+        "注意：纯函数可以改变其作用域内定义的局部变量，最好也尽管避免使用。",
         "<hr>",
-        "Write your own <code>Array.prototype.myMap()</code>, which should behave exactly like <code>Array.prototype.map()</code>. You may use a <code>for</code> loop or the <code>forEach</code> method."
+        "编写一个和<code>Array.prototype.map()</code>行为一样的<code>Array.prototype.myMap()</code>。你可以使用<code>for</code>循环或者<code>forEach</code>方法。"
       ],
       "tests": [
         {
-          "text": "<code>new_s</code> should equal <code>[46, 130, 196, 10]</code>.",
-          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]), '<code>new_s</code> should equal <code>[46, 130, 196, 10]</code>.');"
+          "text": "<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>.",
+          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]), '<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>.');"
         },
         {
-          "text": "Your code should not use the <code>map</code> method.",
-          "testString": "assert(!code.match(/\\.map/g), 'Your code should not use the <code>map</code> method.');"
+          "text": "你的代码不能使用<code>map</code>方法。",
+          "testString": "assert(!code.match(/\\.map/g), '你的代码不能使用<code>map</code>方法。');"
         }
       ],
       "solutions": [],
@@ -619,7 +619,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global Array",
+            "// 全局变量",
             "var s = [23, 65, 98, 5];",
             "",
             "Array.prototype.myMap = function(callback){",
@@ -644,27 +644,27 @@
       "id": "587d7b8f367417b2b2512b63",
       "title": "Use the filter Method to Extract Data from an Array",
       "description": [
-        "Another useful array function is <code>Array.prototype.filter()</code>, or simply <code>filter()</code>. The <code>filter</code> method returns a new array which is at most as long as the original array, but usually has fewer items.",
-        "<code>Filter</code> doesn't alter the original array, just like <code>map</code>. It takes a callback function that applies the logic inside the callback on each element of the array. If an element returns true based on the criteria in the callback function, then it is included in the new array.",
+        "另一个有用的数组函数是<code>filter()</code>（即<code>Array.prototype.filter()</code>）。<code>filter</code>方法通常返回一个比原始数组短的新数组，最多与原始数组一样长。",
+        "和<code>map</code>一样，<code>Filter</code>不会改变原始数组，它需要一个回调函数，它将回调内的逻辑应用于数组的每个元素。新数组中包含根据回调函数中的条件返回 true 的元素。",
         "<hr>",
-        "The variable <code>watchList</code> holds an array of objects with information on several movies. Use a combination of <code>filter</code> and <code>map</code> to return a new array of objects with only <code>title</code> and <code>rating</code> keys, but where <code>imdbRating</code> is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may want to convert them into numbers to perform mathematical operations on them."
+        "<code>watchList</code>是包含一些电影信息的对象。结合使用<code>filter</code>和<code>map</code>返回一个只包含<code>title</code>和<code>rating</code>关键字的新数组，但是<code>imdbRating</code>需要大于或等于 8.0。请注意，评级值在对象中保存为字符串，你可能需要将它转换成数字来执行运算。"
       ],
       "tests": [
         {
-          "text": "The <code>watchList</code> variable should not change.",
-          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", 'The <code>watchList</code> variable should not change.');"
+          "text": "<code>watchList</code>不能被改变。",
+          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", '<code>watchList</code>不能被改变。');"
         },
         {
-          "text": "Your code should use the <code>filter</code> method.",
-          "testString": "assert(code.match(/\\.filter/g), 'Your code should use the <code>filter</code> method.');"
+          "text": "你的代码中应使用<code>filter</code>方法",
+          "testString": "assert(code.match(/\\.filter/g), '你的代码中应使用<code>filter</code>方法');"
         },
         {
-          "text": "Your code should not use a <code>for</code> loop.",
-          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), 'Your code should not use a <code>for</code> loop.');"
+          "text": "你的代码中不应该使用<code>for</code>循环。",
+          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), '你的代码中不应该使用<code>for</code>循环。');"
         },
         {
-          "text": "<code>filteredList</code> should equal <code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.",
-          "testString": "assert.deepEqual(filteredList, [{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}], '<code>filteredList</code> should equal <code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.');"
+          "text": "<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.",
+          "testString": "assert.deepEqual(filteredList, [{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}], '<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.');"
         }
       ],
       "solutions": [],
@@ -676,7 +676,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global variable",
+            "// 全局变量",
             "var watchList = [",
             "                 {  ",
             "                   \"Title\": \"Inception\",",
@@ -807,19 +807,20 @@
       "id": "587d7b8f367417b2b2512b64",
       "title": "Implement the filter Method on a Prototype",
       "description": [
-        "It would teach us a lot about the <code>filter</code> method if we try to implement a version of it that behaves exactly like <code>Array.prototype.filter()</code>. It can use either a <code>for</code> loop or <code>Array.prototype.forEach()</code>.",
-        "Note: A pure function is allowed to alter local variables defined within its scope, although, it's preferable to avoid that as well.",
+        "如果我们尝试实现与<code>Array.prototype.filter()</code>完全相同的功能，我们将会学到很多关于<code>filter</code>方法的内容。",
+        "可以使用<code>for</code>循环或<code>Array.prototype.forEach()</code>。",
+        "请注意：纯函数可以改变其作用域内定义的局部变量，最好也尽管避免使用。",
         "<hr>",
-        "Write your own <code>Array.prototype.myFilter()</code>, which should behave exactly like <code>Array.prototype.filter()</code>. You may use a <code>for</code> loop or the <code>Array.prototype.forEach()</code> method."
+        "编写一个和<code>Array.prototype.filter()</code>行为一样的<code>Array.prototype.myFilter()</code>方法。你可以使用<code>for</code>循环或<code>Array.prototype.forEach()</code>方法。"
       ],
       "tests": [
         {
-          "text": "<code>new_s</code> should equal <code>[23, 65, 5]</code>.",
-          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]), '<code>new_s</code> should equal <code>[23, 65, 5]</code>.');"
+          "text": "<code>new_s</code>应等于<code>[23, 65, 5]</code>.",
+          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]), '<code>new_s</code>应等于<code>[23, 65, 5]</code>.');"
         },
         {
-          "text": "Your code should not use the <code>filter</code> method.",
-          "testString": "assert(!code.match(/\\.filter/g), 'Your code should not use the <code>filter</code> method.');"
+          "text": "不可以使用<code>filter</code>方法。",
+          "testString": "assert(!code.match(/\\.filter/g), '不可以使用<code>filter</code>方法。');"
         }
       ],
       "solutions": [],
@@ -831,7 +832,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global Array",
+            "// 全局变量",
             "var s = [23, 65, 98, 5];",
             "",
             "Array.prototype.myFilter = function(callback){",
@@ -1088,8 +1089,8 @@
           "testString": "assert(code.match(/\\.reduce/g), 'Your code should use the <code>reduce</code> method.');"
         },
         {
-          "text": "The <code>averageRating</code> should equal 8.675.",
-          "testString": "assert(averageRating == 8.675, 'The <code>averageRating</code> should equal 8.675.');"
+          "text": "The <code>averageRating</code>应等于8.675.",
+          "testString": "assert(averageRating == 8.675, 'The <code>averageRating</code>应等于8.675.');"
         },
         {
           "text": "Your code should not use a <code>for</code> loop.",
@@ -1109,7 +1110,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global variable",
+            "// 全局变量",
             "var watchList = [",
             "                 {  ",
             "                   \"Title\": \"Inception\",",
@@ -1501,7 +1502,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// the global variable",
+            "// 全局变量",
             "var globalTitle = \"Winter Is Coming\";",
             "",
             "// 请在本行以下添加你的代码",
@@ -1511,7 +1512,7 @@
             "}",
             "// 请在本行以上添加你的代码",
             "",
-            "var winterComing = urlSlug(globalTitle); // Should be \"winter-is-coming\""
+            "var winterComing = urlSlug(globalTitle); // 应为 \"winter-is-coming\""
           ],
           "head": [],
           "tail": []
