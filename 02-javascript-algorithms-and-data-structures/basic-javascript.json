@@ -8,27 +8,27 @@
       "id": "bd7123c9c441eddfaeb4bdef",
       "title": "Comment Your JavaScript Code",
       "description": [
-        "Comments are lines of code that JavaScript will intentionally ignore. Comments are a great way to leave notes to yourself and to other people who will later need to figure out what that code does.",
-        "There are two ways to write comments in JavaScript:",
-        "Using <code>//</code> will tell JavaScript to ignore the remainder of the text on the current line:",
-        "<blockquote>// This is an in-line comment.</blockquote>",
-        "You can make a multi-line comment beginning with <code>/*</code> and ending with <code>*/</code>:",
-        "<blockquote>/* This is a<br>multi-line comment */</blockquote>",
-        "<strong>Best Practice</strong><br>As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code&mdash;both for others <em>and</em> for your future self.",
+        "被注释的代码块在 JavaScript 之中是不会执行的。注释是一个非常好的方式让你自己以及其他人明白这段代码是怎么执行的。",
+        "JavaScript 中的注释方式有以下两种：",
+        "使用<code>//</code>来告诉 JavaScript 来忽略当前行的代码",
+        "<blockquote>// 这是一条单行注释。</blockquote>",
+        "你也可以使用多行注释来注释你的代码，以<code>/*</code>开始，用<code>*/</code>来结束，就像下面这样：",
+        "<blockquote>/* 这是一个<br>多行注释 */</blockquote>",
+        "<strong>最佳实践</strong><br>给你写的代码添加注释，让你的代码看起来更加清晰易懂。良好的注释能够清晰地传达你写代码的意图——无论是别人看你的代码还是以后你自己再看的时候。",
         "<hr>",
-        "Try creating one of each type of comment."
+        "尝试创建这两种类型的注释。"
       ],
       "solutions": [
         "// Fake Comment\n/* Another Comment */"
       ],
       "tests": [
         {
-          "text": "Create a <code>//</code> style comment that contains at least five letters.",
-          "testString": "assert(code.match(/(\\/\\/)...../g), 'Create a <code>//</code> style comment that contains at least five letters.');"
+          "text": "创建一个<code>//</code>样式的注释, 被注释的文本至少要包含5个字符。",
+          "testString": "assert(code.match(/(\\/\\/)...../g), '创建一个<code>//</code>样式的注释, 被注释的文本至少要包含5个字符。');"
         },
         {
-          "text": "Create a <code>/* */</code> style comment that contains at least five letters.",
-          "testString": "assert(code.match(/(\\/\\*)([^\\/]{5,})(?=\\*\\/)/gm), 'Create a <code>/* */</code> style comment that contains at least five letters.');"
+          "text": "创建一个<code>/* */</code>样式的注释, 被注释的文本至少要包含5个字符。",
+          "testString": "assert(code.match(/(\\/\\*)([^\\/]{5,})(?=\\*\\/)/gm), '创建一个<code>/* */</code>样式的注释, 被注释的文本至少要包含5个字符。');"
         }
       ],
       "challengeType": 1,
@@ -47,25 +47,25 @@
       "id": "bd7123c9c443eddfaeb5bdef",
       "title": "Declare JavaScript Variables",
       "description": [
-        "In computer science, <dfn>data</dfn> is anything that is meaningful to the computer. JavaScript provides seven different <dfn>data types</dfn> which are <code>undefined</code>, <code>null</code>, <code>boolean</code>, <code>string</code>, <code>symbol</code>, <code>number</code>, and <code>object</code>.",
-        "For example, computers distinguish between numbers, such as the number <code>12</code>, and <code>strings</code>, such as <code>\"12\"</code>, <code>\"dog\"</code>, or <code>\"123 cats\"</code>, which are collections of characters. Computers can perform mathematical operations on a number, but not on a string.",
-        "<dfn>Variables</dfn> allow computers to store and manipulate data in a dynamic fashion. They do this by using a \"label\" to point to the data rather than using the data itself. Any of the seven data types may be stored in a variable.",
-        "<code>Variables</code> are similar to the x and y variables you use in mathematics, which means they're a simple name to represent the data we want to refer to. Computer <code>variables</code> differ from mathematical variables in that they can store different values at different times.",
-        "We tell JavaScript to create or <dfn>declare</dfn> a variable by putting the keyword <code>var</code> in front of it, like so:",
+        "在计算机科学中,<code>data</code>(数据)就是一切，它对于计算机意义重大。JavaScript 提供七种不同的<dfn>data types</dfn>(数据类型)，它们是<code>undefined</code>（未定义）， <code>null</code>（空），<code>boolean</code>（布尔型），<code>string</code>（字符串），<code>symbol</code>(符号)，<code>number</code>（数字），和<code>object</code>（对象）。",
+        "例如，计算机区分数字（例如数字<code>12</code>）和字符集合的字符串<code>strings</code>（例如<code>\"12\"</code>，<code>\"dog\"</code>或<code>\"123 cats\"</code>）。计算机可以对数字执行数学运算，但不能对字符串执行数学运算。",
+        "<code>Variables</code>（变量）允许计算机以一种动态的形式来存储和操作数据，通过操作指向数据的指针而不是数据本身来避免了内存泄露，以上的七种数据类型都可以存储到一个变量（variable）中。",
+        "<code>Variables</code> 非常类似于你在数学中使用的 x，y 变量，都是以一个简单命名的名称来代替我们赋值给它的数据。计算机中的<code>variables</code>（变量）与数学中的变量不同的是，计算机可以在不同的时间存储不同类型的变量。",
+        "通过在变量的前面使用关键字<code>var</code>，声明一个变量，例如：",
         "<blockquote>var ourName;</blockquote>",
-        "creates a <code>variable</code> called <code>ourName</code>. In JavaScript we end statements with semicolons.",
-        "<code>Variable</code> names can be made up of numbers, letters, and <code>$</code> or <code>_</code>, but may not contain spaces or start with a number.",
+        "上面代码的意思是创建一个名为<code>ourName</code>的<code>variable</code>（变量），在 JavaScript 中我们以分号结束语句。",
+        "<code>Variable</code>（变量）名称可以由数字、字母、<code>$</code> 或者 <code>_</code>组成，但是不能包含空格或者以数字为开头。",
         "<hr>",
-        "Use the <code>var</code> keyword to create a variable called <code>myName</code>.",
-        "<strong>Hint</strong><br>Look at the <code>ourName</code> example if you get stuck."
+        "使用<code>var</code> 关键字来创建一个名为<code>myName</code>的变量。",
+        "<strong>提示</strong><br>如果遇到困难了，请看下<code>ourName</code>的例子是怎么写的。"
       ],
       "solutions": [
         "var myName;"
       ],
       "tests": [
         {
-          "text": "You should declare <code>myName</code> with the <code>var</code> keyword, ending with a semicolon",
-          "testString": "assert(/var\\s+myName\\s*;/.test(code), 'You should declare <code>myName</code> with the <code>var</code> keyword, ending with a semicolon');"
+          "text": "你需要使用<code>var</code>关键字定义一个变量<code>myName</code>，并使用分号结尾。",
+          "testString": "assert(/var\\s+myName\\s*;/.test(code), '你需要使用<code>var</code>关键字定义一个变量<code>myName</code>。并使用分号结尾。');"
         }
       ],
       "challengeType": 1,
@@ -75,10 +75,10 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 举例",
             "var ourName;",
             "",
-            "// Declare myName below this line",
+            "// 请在这条注释以下定义 myName 变量",
             ""
           ],
           "head": [],
@@ -92,15 +92,15 @@
       "id": "56533eb9ac21ba0edf2244a8",
       "title": "Storing Values with the Assignment Operator",
       "description": [
-        "In JavaScript, you can store a value in a variable with the <dfn>assignment</dfn> operator.",
+        "在 JavaScript 中，你可以使用赋值运算符将值存储在变量中。",
         "<code>myVariable = 5;</code>",
-        "This assigns the <code>Number</code> value <code>5</code> to <code>myVariable</code>.",
-        "Assignment always goes from right to left. Everything to the right of the <code>=</code> operator is resolved before the value is assigned to the variable to the left of the operator.",
+        "这条语句把<code>Number</code>值<code>5</code>赋给变量<code>myVariable</code>。",
+        "赋值过程是从右到左进行的。在将值分配给运算符左侧的变量之前，将解析<code>=</code>运算符右侧的所有内容。",
         "<blockquote>myVar = 5;<br>myNum = myVar;</blockquote>",
-        "This assigns <code>5</code> to <code>myVar</code> and then resolves <code>myVar</code> to <code>5</code>  again and assigns it to <code>myNum</code>.",
+        "数值<code>5</code>被赋给变量<code>myVar</code>中，然后再次将变量<code>myVar</code>解析为 5 并将其赋给<code>myNum</code>变量。",
         "<hr>",
-        "Assign the value <code>7</code> to variable <code>a</code>.",
-        "Assign the contents of <code>a</code> to variable <code>b</code>."
+        "把数值<code>7</code>赋给变量 <code>a</code>。",
+        "把变量<code>a</code>中的内容赋给变量<code>b</code>。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -108,20 +108,20 @@
       ],
       "tests": [
         {
-          "text": "Do not change code above the line",
-          "testString": "assert(/var a;/.test(code) && /var b = 2;/.test(code), 'Do not change code above the line');"
+          "text": "不要修改注释上方的代码",
+          "testString": "assert(/var a;/.test(code) && /var b = 2;/.test(code), '不要修改注释上方的代码');"
         },
         {
-          "text": "<code>a</code> should have a value of 7",
-          "testString": "assert(typeof a === 'number' && a === 7, '<code>a</code> should have a value of 7');"
+          "text": "<code>a</code>的值应该是 7",
+          "testString": "assert(typeof a === 'number' && a === 7, '<code>a</code>的值应该是 7');"
         },
         {
-          "text": "<code>b</code> should have a value of 7",
-          "testString": "assert(typeof b === 'number' && b === 7, '<code>b</code> should have a value of 7');"
+          "text": "<code>b</code>的值应该是 7",
+          "testString": "assert(typeof b === 'number' && b === 7, '<code>b</code>的值应该是 7');"
         },
         {
-          "text": "<code>a</code> should be assigned to <code>b</code> with <code>=</code>",
-          "testString": "assert(/b\\s*=\\s*a\\s*;/g.test(code), '<code>a</code> should be assigned to <code>b</code> with <code>=</code>');"
+          "text": "你需要用<code>=</code>把<code>a</code>的值赋给<code>b</code>",
+          "testString": "assert(/b\\s*=\\s*a\\s*;/g.test(code), '你需要用<code>=</code>把<code>a</code>的值赋给<code>b</code>');"
         }
       ],
       "challengeType": 1,
@@ -131,11 +131,11 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Setup",
+            "// 举例",
             "var a;",
             "var b = 2;",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             ""
           ],
           "head": [
@@ -156,11 +156,11 @@
       "id": "56533eb9ac21ba0edf2244a9",
       "title": "Initializing Variables with the Assignment Operator",
       "description": [
-        "It is common to <dfn>initialize</dfn> a variable to an initial value in the same line as it is declared.",
+        "通常地我们会在<dfn>initialize</dfn>开始声明变量的时候就会给变量赋一个初始值。",
         "<code>var myVar = 0;</code>",
-        "Creates a new variable called <code>myVar</code> and assigns it an initial value of <code>0</code>.",
+        "创建一个名为<code>myVar</code>的变量并指定一个初始值<code>0</code>。",
         "<hr>",
-        "Define a variable <code>a</code> with <code>var</code> and initialize it to a value of <code>9</code>."
+        "通过关键字<code>var</code>定义一个变量<code>a</code>并且给它一个初始值<code>9</code>。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -168,8 +168,8 @@
       ],
       "tests": [
         {
-          "text": "Initialize <code>a</code> to a value of <code>9</code>",
-          "testString": "assert(/var\\s+a\\s*=\\s*9\\s*/.test(code), 'Initialize <code>a</code> to a value of <code>9</code>');"
+          "text": "你需要初始化<code>a</code>的值为<code>9</code>",
+          "testString": "assert(/var\\s+a\\s*=\\s*9\\s*/.test(code), '你需要初始化<code>a</code>的值为<code>9</code>');"
         }
       ],
       "challengeType": 1,
@@ -179,10 +179,10 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 举例",
             "var ourVar = 19;",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下", 
             ""
           ],
           "head": [],
@@ -196,9 +196,9 @@
       "id": "56533eb9ac21ba0edf2244aa",
       "title": "Understanding Uninitialized Variables",
       "description": [
-        "When JavaScript variables are declared, they have an initial value of <code>undefined</code>. If you do a mathematical operation on an <code>undefined</code> variable your result will be <code>NaN</code> which means <dfn>\"Not a Number\"</dfn>. If you concatenate a string with an <code>undefined</code> variable, you will get a literal <dfn>string</dfn> of <code>\"undefined\"</code>.",
+        "当 JavaScript 中的变量被声明的时候，程序内部会给它一个初始值<code>undefined</code>。当你对一个值为<code>undefined</code>的变量进行运算操作的时候，算出来的结果将会是<code>NaN</code>，<code>NaN</code>的意思是<dfn>\"Not a Number\"</dfn>。当你用一个值是<code>undefined</code>的变量来做字符串拼接操作的时候，它会输出字符串<code>\"undefined\"</code>。",
         "<hr>",
-        "Initialize the three variables <code>a</code>, <code>b</code>, and <code>c</code> with <code>5</code>, <code>10</code>, and <code>\"I am a\"</code> respectively so that they will not be <code>undefined</code>."
+        "定义3个变量<code>a</code>、<code>b</code>、<code>c</code>，并且分别给他们赋值：<code>5</code>、<code>10</code>、<code>\"I am a\"</code>，这样它们值就不会是<code>undefined</code>了。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -206,20 +206,20 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should be defined and evaluated to have the value of <code>6</code>",
-          "testString": "assert(typeof a === 'number' && a === 6, '<code>a</code> should be defined and evaluated to have the value of <code>6</code>');"
+          "text": "<code>a</code>应该被定义，并且值为<code>6</code>",
+          "testString": "assert(typeof a === 'number' && a === 6, '<code>a</code>应该被定义，并且值为<code>6</code>');"
         },
         {
-          "text": "<code>b</code> should be defined and evaluated to have the value of <code>15</code>",
-          "testString": "assert(typeof b === 'number' && b === 15, '<code>b</code> should be defined and evaluated to have the value of <code>15</code>');"
+          "text": "<code>a</code>应该被定义，并且值为<code>15</code>",
+          "testString": "assert(typeof b === 'number' && b === 15, '<code>a</code>应该被定义，并且值为<code>15</code>');"
         },
         {
-          "text": "<code>c</code> should not contain <code>undefined</code> and should have a value of \"I am a String!\"",
-          "testString": "assert(!/undefined/.test(c) && c === \"I am a String!\", '<code>c</code> should not contain <code>undefined</code> and should have a value of \"I am a String!\"');"
+          "text": "<code>c</code>的值不能包含<code>undefined</code>，应该为 \"I am a String!\"",
+          "testString": "assert(!/undefined/.test(c) && c === \"I am a String!\", '<code>c</code>的值不能包含<code>undefined</code>，应该为 \"I am a String!\"');"
         },
         {
-          "text": "Do not change code below the line",
-          "testString": "assert(/a = a \\+ 1;/.test(code) && /b = b \\+ 5;/.test(code) && /c = c \\+ \" String!\";/.test(code), 'Do not change code below the line');"
+          "text": "不要修改第二条注释下的代码",
+          "testString": "assert(/a = a \\+ 1;/.test(code) && /b = b \\+ 5;/.test(code) && /c = c \\+ \" String!\";/.test(code), '不要修改第二条注释下的代码');"
         }
       ],
       "challengeType": 1,
@@ -229,12 +229,12 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Initialize these three variables",
+            "// 初始化变量",
             "var a;",
             "var b;",
             "var c;",
             "",
-            "// Do not change code below this line",
+            "// 请只修改这条注释以上的代码",
             "",
             "a = a + 1;",
             "b = b + 5;",
@@ -252,14 +252,14 @@
       "id": "56533eb9ac21ba0edf2244ab",
       "title": "Understanding Case Sensitivity in Variables",
       "description": [
-        "In JavaScript all variables and function names are case sensitive. This means that capitalization matters.",
-        "<code>MYVAR</code> is not the same as <code>MyVar</code> nor <code>myvar</code>. It is possible to have multiple distinct variables with the same name but different casing. It is strongly recommended that for the sake of clarity, you <em>do not</em> use this language feature.",
-        "<h4>Best Practice</h4>",
-        "Write variable names in JavaScript in <dfn>camelCase</dfn>. In <dfn>camelCase</dfn>, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalized.",
-        "<strong>Examples:</strong>",
-        "<blockquote>var someVariable;<br>var anotherVariableName;<br>var thisVariableNameIsSoLong;</blockquote>",
+        "在 JavaScript 中所有的变量和函数名都是大小写敏感的。要区别对待大写字母和小写字母。",
+        "<code>MYVAR</code>与<code>MyVar</code>和<code>myvar</code>是截然不同的变量。这就有可能导致多个截然不同的变量却有着有相似的名字。正是由于以上原因所以强烈地建议你，<em>不要</em>使用这一特性。（以免给自己带来麻烦）",
+        "<h4>最佳实践</h4>",
+        "使用<dfn>驼峰命名法</dfn>来书写一个 Javascript 变量，在<dfn>驼峰命名法</dfn>中，变量名的第一个单词的首写字母小写，后面的单词的第一个字母大写。",
+        "<strong>示例：</strong>",
+        "<blockquote>var someVariable;<br>var anotherVariableName;<br>var thisVariableNameIsTooLong;</blockquote>",
         "<hr>",
-        "Modify the existing declarations and assignments so their names use <dfn>camelCase</dfn>.<br>Do not create any new variables."
+        "修改已声明的变量，让它们的命名符合<dfn>驼峰命名法</dfn>的规范。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -267,28 +267,28 @@
       ],
       "tests": [
         {
-          "text": "<code>studlyCapVar</code> is defined and has a value of <code>10</code>",
-          "testString": "assert(typeof studlyCapVar !== 'undefined' && studlyCapVar === 10, '<code>studlyCapVar</code> is defined and has a value of <code>10</code>');"
+          "text": "<code>studlyCapVar</code>应该被定义并且值为<code>10</code>",
+          "testString": "assert(typeof studlyCapVar !== 'undefined' && studlyCapVar === 10, '<code>studlyCapVar</code>应该被定义并且值为<code>10</code>');"
         },
         {
-          "text": "<code>properCamelCase</code> is defined and has a value of <code>\"A String\"</code>",
-          "testString": "assert(typeof properCamelCase !== 'undefined' && properCamelCase === \"A String\", '<code>properCamelCase</code> is defined and has a value of <code>\"A String\"</code>');"
+          "text": "<code>properCamelCase</code>应该被定义并且值为<code>\"A String\"</code>",
+          "testString": "assert(typeof properCamelCase !== 'undefined' && properCamelCase === \"A String\", '<code>properCamelCase</code>应该被定义并且值为<code>\"A String\"</code>');"
         },
         {
-          "text": "<code>titleCaseOver</code> is defined and has a value of <code>9000</code>",
-          "testString": "assert(typeof titleCaseOver !== 'undefined' && titleCaseOver === 9000, '<code>titleCaseOver</code> is defined and has a value of <code>9000</code>');"
+          "text": "<code>titleCaseOver</code>应该被定义并且值为<code>9000</code>",
+          "testString": "assert(typeof titleCaseOver !== 'undefined' && titleCaseOver === 9000, '<code>titleCaseOver</code>应该被定义并且值为<code>9000</code>');"
         },
         {
-          "text": "<code>studlyCapVar</code> should use camelCase in both declaration and assignment sections.",
-          "testString": "assert(code.match(/studlyCapVar/g).length === 2, '<code>studlyCapVar</code> should use camelCase in both declaration and assignment sections.');"
+          "text": "<code>studlyCapVar</code>在声明和赋值时都应该使用驼峰命名法。",
+          "testString": "assert(code.match(/studlyCapVar/g).length === 2, '<code>studlyCapVar</code>在声明和赋值时都应该使用驼峰命名法。');"
         },
         {
-          "text": "<code>properCamelCase</code> should use camelCase in both declaration and assignment sections.",
-          "testString": "assert(code.match(/properCamelCase/g).length === 2, '<code>properCamelCase</code> should use camelCase in both declaration and assignment sections.');"
+          "text": "<code>properCamelCase</code> 在声明和赋值时都应该使用驼峰命名法。",
+          "testString": "assert(code.match(/properCamelCase/g).length === 2, '<code>properCamelCase</code>在声明和赋值时都应该使用驼峰命名法。');"
         },
         {
-          "text": "<code>titleCaseOver</code> should use camelCase in both declaration and assignment sections.",
-          "testString": "assert(code.match(/titleCaseOver/g).length === 2, '<code>titleCaseOver</code> should use camelCase in both declaration and assignment sections.');"
+          "text": "<code>titleCaseOver</code> 在声明和赋值时都应该使用驼峰命名法。",
+          "testString": "assert(code.match(/titleCaseOver/g).length === 2, '<code>titleCaseOver</code>在声明和赋值时都应该使用驼峰命名法。');"
         }
       ],
       "challengeType": 1,
@@ -298,12 +298,12 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Declarations",
+            "// 初始化变量",
             "var StUdLyCapVaR;",
             "var properCamelCase;",
             "var TitleCaseOver;",
             "",
-            "// Assignments",
+            "// 给变量赋值",
             "STUDLYCAPVAR = 10;",
             "PRoperCAmelCAse = \"A String\";",
             "tITLEcASEoVER = 9000;"
@@ -317,25 +317,25 @@
       "id": "cf1111c1c11feddfaeb3bdef",
       "title": "Add Two Numbers with JavaScript",
       "description": [
-        "<code>Number</code> is a data type in JavaScript which represents numeric data.",
-        "Now let's try to add two numbers using JavaScript.",
-        "JavaScript uses the <code>+</code> symbol as addition operation when placed between two numbers.",
-        "<strong>Example</strong>",
+        "<code>Number</code>是 JavaScript 中的数据类型，表示数值。",
+        "现在让我们来尝试在JavaScript中做加法运算。",
+        "JavaScript 中使用<code>+</code>号来让两个数字执行加法运算。",
+        "<strong>示例</strong>",
         "<blockquote>myVar = 5 + 10; // assigned 15</blockquote>",
         "<hr>",
-        "Change the <code>0</code> so that sum will equal <code>20</code>."
+        "改变数字<code>0</code>让变量 sum 的值为<code>20</code>。"
       ],
       "solutions": [
         "var sum = 10 + 10;"
       ],
       "tests": [
         {
-          "text": "<code>sum</code> should equal <code>20</code>",
-          "testString": "assert(sum === 20, '<code>sum</code> should equal <code>20</code>');"
+          "text": "<code>sum</code>应该等于<code>20</code>",
+          "testString": "assert(sum === 20, '<code>sum</code>应该等于<code>20</code>');"
         },
         {
-          "text": "Use the <code>+</code> operator",
-          "testString": "assert(/\\+/.test(code), 'Use the <code>+</code> operator');"
+          "text": "要使用<code>+</code>运算符",
+          "testString": "assert(/\\+/.test(code), '要使用<code>+</code>运算符');"
         }
       ],
       "challengeType": 1,
@@ -359,26 +359,26 @@
       "id": "cf1111c1c11feddfaeb4bdef",
       "title": "Subtract One Number from Another with JavaScript",
       "description": [
-        "We can also subtract one number from another.",
-        "JavaScript uses the <code>-</code> symbol for subtraction.",
+        "我们也可以在 JavaScript 中执行减法运算。",
+        "JavaScript 中使用<code>-</code>来做减法运算。",
         "",
-        "<strong>Example</strong>",
-        "<blockquote>myVar = 12 - 6; // assigned 6</blockquote>",
+        "<strong>示例</strong>",
+        "<blockquote>myVar = 12 - 6; // 等于 6</blockquote>",
         "",
         "<hr>",
-        "Change the <code>0</code> so the difference is <code>12</code>."
+        "改变数字<code>0</code>让变量 difference 的值为<code>12</code>。"
       ],
       "solutions": [
         "var difference = 45 - 33;"
       ],
       "tests": [
         {
-          "text": "Make the variable <code>difference</code> equal 12.",
-          "testString": "assert(difference === 12, 'Make the variable <code>difference</code> equal 12.');"
+          "text": "要使<code>difference</code>的值等于 12。",
+          "testString": "assert(difference === 12, '要使<code>difference</code>的值等于 12。');"
         },
         {
-          "text": "Only subtract one number from 45.",
-          "testString": "assert(/var\\s*difference\\s*=\\s*45\\s*-\\s*[0-9]*;(?!\\s*[a-zA-Z0-9]+)/.test(code),'Only subtract one number from 45.');"
+          "text": "只用 45 减去一个数。",
+          "testString": "assert(/var\\s*difference\\s*=\\s*45\\s*-\\s*[0-9]*;(?!\\s*[a-zA-Z0-9]+)/.test(code),'只用 45 减去一个数。');"
         }
       ],
       "challengeType": 1,
@@ -403,26 +403,26 @@
       "id": "cf1231c1c11feddfaeb5bdef",
       "title": "Multiply Two Numbers with JavaScript",
       "description": [
-        "We can also multiply one number by another.",
-        "JavaScript uses the <code>*</code> symbol for multiplication of two numbers.",
+        "我们也可在 JavaScript 中使用乘法运算。",
+        "JavaScript 使用<code>*</code>符号表示两数相乘。",
         "",
-        "<strong>Example</strong>",
-        "<blockquote>myVar = 13 * 13; // assigned 169</blockquote>",
+        "<strong>示例</strong>",
+        "<blockquote>myVar = 13 * 13; // 把 169 赋值给 myVar</blockquote>",
         "",
         "<hr>",
-        "Change the <code>0</code> so that product will equal <code>80</code>."
+        "改变数值<code>0</code>来让变量 product 的值等于<code>80</code>。"
       ],
       "solutions": [
         "var product = 8 * 10;"
       ],
       "tests": [
         {
-          "text": "Make the variable <code>product</code> equal 80",
-          "testString": "assert(product === 80,'Make the variable <code>product</code> equal 80');"
+          "text": "要使<code>product</code>的值等于 80",
+          "testString": "assert(product === 80,'要使<code>product</code>的值等于 80');"
         },
         {
           "text": "Use the <code>*</code> operator",
-          "testString": "assert(/\\*/.test(code), 'Use the <code>*</code> operator');"
+          "testString": "assert(/\\*/.test(code), '使用<code>*</code>运算符');"
         }
       ],
       "challengeType": 1,
@@ -447,26 +447,26 @@
       "id": "cf1111c1c11feddfaeb6bdef",
       "title": "Divide One Number by Another with JavaScript",
       "description": [
-        "We can also divide one number by another.",
-        "JavaScript uses the <code>/</code> symbol for division.",
+        "我们可以在 JavaScript 中做除法运算。",
+        "JavaScript 中使用<code>/</code>符号做除法运算。",
         "",
-        "<strong>Example</strong>",
-        "<blockquote>myVar = 16 / 2; // assigned 8</blockquote>",
+        "<strong>示例</strong>",
+        "<blockquote>myVar = 16 / 2; // 把 8 赋值给 myVar</blockquote>",
         "",
         "<hr>",
-        "Change the <code>0</code> so that the <code>quotient</code> is equal to <code>2</code>."
+        "改变数值<code>0</code>来让变量<code>quotient</code>的值等于<code>2</code>。"
       ],
       "solutions": [
         "var quotient = 66 / 33;"
       ],
       "tests": [
         {
-          "text": "Make the variable <code>quotient</code> equal to 2.",
-          "testString": "assert(quotient === 2, 'Make the variable <code>quotient</code> equal to 2.');"
+          "text": "要使<code>quotient</code>的值等于 2。",
+          "testString": "assert(quotient === 2, '要使<code>quotient</code>的值等于 2。');"
         },
         {
-          "text": "Use the <code>/</code> operator",
-          "testString": "assert(/\\d+\\s*\\/\\s*\\d+/.test(code), 'Use the <code>/</code> operator');"
+          "text": "使用<code>/</code>运算符。",
+          "testString": "assert(/\\d+\\s*\\/\\s*\\d+/.test(code), '使用<code>/</code>运算符。');"
         }
       ],
       "challengeType": 1,
@@ -491,14 +491,14 @@
       "id": "56533eb9ac21ba0edf2244ac",
       "title": "Increment a Number with JavaScript",
       "description": [
-        "You can easily <dfn>increment</dfn> or add one to a variable with the <code>++</code> operator.",
+        "使用<code>++</code>，我们可以很容易地对变量进行自增或者<code>+1</code>运算。",
         "<code>i++;</code>",
-        "is the equivalent of",
+        "等效于",
         "<code>i = i + 1;</code>",
-        "<strong>Note</strong><br>The entire line becomes <code>i++;</code>, eliminating the need for the equal sign.",
+        "<strong>注意</strong><br><code>i++;</code>这种写法，省去了书写 = 符号的必要。",
         "<hr>",
-        "Change the code to use the <code>++</code> operator on <code>myVar</code>.",
-        "<strong>Hint</strong><br>Learn more about <a href=\"https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()\" target=\"_blank\">Arithmetic operators - Increment (++)</a>."
+        "重写代码，使用<code>++</code>来对变量<code>myVar</code>进行自增操作。",
+        "<strong>提示</strong><br>了解更多关于<a href=\"https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment_()\" target=\"_blank\">Arithmetic operators - Increment (++)</a>."
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -506,20 +506,20 @@
       ],
       "tests": [
         {
-          "text": "<code>myVar</code> should equal <code>88</code>",
-          "testString": "assert(myVar === 88, '<code>myVar</code> should equal <code>88</code>');"
+          "text": "<code>myVar</code>应该等于<code>88</code>",
+          "testString": "assert(myVar === 88, '<code>myVar</code>应该等于<code>88</code>');"
         },
         {
-          "text": "<code>myVar = myVar + 1;</code> should be changed",
-          "testString": "assert(/var\\s*myVar\\s*=\\s*87;\\s*\\/*.*\\s*myVar\\+\\+;/.test(code), '<code>myVar = myVar + 1;</code> should be changed');"
+          "text": "<code>myVar = myVar + 1;</code>语句应该被修改",
+          "testString": "assert(/var\\s*myVar\\s*=\\s*87;\\s*\\/*.*\\s*myVar\\+\\+;/.test(code), '<code>myVar = myVar + 1;</code> 语句应该被修改');"
         },
         {
-          "text": "Use the <code>++</code> operator",
-          "testString": "assert(/[+]{2}\\s*myVar|myVar\\s*[+]{2}/.test(code), 'Use the <code>++</code> operator');"
+          "text": "使用<code>++</code>运算符",
+          "testString": "assert(/[+]{2}\\s*myVar|myVar\\s*[+]{2}/.test(code), '使用<code>++</code>运算符');"
         },
         {
-          "text": "Do not change code above the line",
-          "testString": "assert(/var myVar = 87;/.test(code), 'Do not change code above the line');"
+          "text": "不要修改注释上方的代码",
+          "testString": "assert(/var myVar = 87;/.test(code), '不要修改注释上方的代码');"
         }
       ],
       "challengeType": 1,
@@ -531,7 +531,7 @@
           "contents": [
             "var myVar = 87;",
             "",
-            "// Only change code below this line",
+            "// 请只修改这条注释以下的代码",
             "myVar = myVar + 1;",
             ""
           ],
@@ -546,13 +546,13 @@
       "id": "56533eb9ac21ba0edf2244ad",
       "title": "Decrement a Number with JavaScript",
       "description": [
-        "You can easily <dfn>decrement</dfn> or decrease a variable by one with the <code>--</code> operator.",
+        "使用自减符号<code>--</code>，你可以很方便地对一个变量执行<dfn>自减</dfn>或者减 1 操作。",
         "<code>i--;</code>",
-        "is the equivalent of",
+        "等效于",
         "<code>i = i - 1;</code>",
-        "<strong>Note</strong><br>The entire line becomes <code>i--;</code>, eliminating the need for the equal sign.",
+        "<strong>提示</strong><br><code>i--;</code>这种写法，省去了书写等号的必要。",
         "<hr>",
-        "Change the code to use the <code>--</code> operator on <code>myVar</code>."
+        "重写代码，使用<code>--</code>符号对<code>myVar</code>执行自减操作。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -560,20 +560,20 @@
       ],
       "tests": [
         {
-          "text": "<code>myVar</code> should equal <code>10</code>",
-          "testString": "assert(myVar === 10, '<code>myVar</code> should equal <code>10</code>');"
+          "text": "<code>myVar</code>应该等于<code>10</code>",
+          "testString": "assert(myVar === 10, '<code>myVar</code>应该等于<code>10</code>');"
         },
         {
-          "text": "<code>myVar = myVar - 1;</code> should be changed",
-          "testString": "assert(/var\\s*myVar\\s*=\\s*11;\\s*\\/*.*\\s*myVar--;/.test(code), '<code>myVar = myVar - 1;</code> should be changed');"
+          "text": "<code>myVar = myVar - 1;</code>语句应该被修改",
+          "testString": "assert(/var\\s*myVar\\s*=\\s*11;\\s*\\/*.*\\s*myVar--;/.test(code), '<code>myVar = myVar - 1;</code>语句应该被修改');"
         },
         {
-          "text": "Use the <code>--</code> operator on <code>myVar</code>",
-          "testString": "assert(/[-]{2}\\s*myVar|myVar\\s*[-]{2}/.test(code), 'Use the <code>--</code> operator on <code>myVar</code>');"
+          "text": "对<code>myVar</code>使用<code>--</code>运算符",
+          "testString": "assert(/[-]{2}\\s*myVar|myVar\\s*[-]{2}/.test(code), '对<code>myVar</code>使用<code>--</code>运算符');"
         },
         {
-          "text": "Do not change code above the line",
-          "testString": "assert(/var myVar = 11;/.test(code), 'Do not change code above the line');"
+          "text": "不要修改注释上面的代码",
+          "testString": "assert(/var myVar = 11;/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -585,7 +585,7 @@
           "contents": [
             "var myVar = 11;",
             "",
-            "// Only change code below this line",
+            "// 请只修改这条注释以下的代码",
             "myVar = myVar - 1;",
             ""
           ],
@@ -600,22 +600,22 @@
       "id": "cf1391c1c11feddfaeb4bdef",
       "title": "Create Decimal Numbers with JavaScript",
       "description": [
-        "We can store decimal numbers in variables too. Decimal numbers are sometimes referred to as <dfn>floating point</dfn> numbers or <dfn>floats</dfn>.",
-        "<strong>Note</strong><br>Not all real numbers can accurately be represented in <dfn>floating point</dfn>. This can lead to rounding errors. <a href=\"https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems\" target=\"_blank\">Details Here</a>.",
+        "我们也可以把小数存储到变量中。小数也被称作<dfn>浮点数</dfn> 。",
+        "<strong>提示</strong><br>不是所有的实数都可以用 <dfn>浮点数</dfn> 来表示。因为可能存在四舍五入的错误，<a href=\"https://en.wikipedia.org/wiki/Floating_point#Accuracy_problems\" target=\"_blank\">详情查看</a>。",
         "<hr>",
-        "Create a variable <code>myDecimal</code> and give it a decimal value with a fractional part (e.g. <code>5.7</code>)."
+        "创建一个变量<code>myDecimal</code>并给它赋值一个浮点数。(例如<code>5.21</code>)。"
       ],
       "solutions": [
         "var myDecimal = 9.9;"
       ],
       "tests": [
         {
-          "text": "<code>myDecimal</code> should be a number.",
-          "testString": "assert(typeof myDecimal === \"number\", '<code>myDecimal</code> should be a number.');"
+          "text": "<code><code>myDecimal</code>应该是一个数字",
+          "testString": "assert(typeof myDecimal === \"number\", '<code><code>myDecimal</code>应该是一个数字');"
         },
         {
-          "text": "<code>myDecimal</code> should have a decimal point",
-          "testString": "assert(myDecimal % 1 != 0, '<code>myDecimal</code> should have a decimal point'); "
+          "text": "<code><code>myDecimal</code>应该包含小数点",
+          "testString": "assert(myDecimal % 1 != 0, '<code><code>myDecimal</code>应该包含小数点'); "
         }
       ],
       "challengeType": 1,
@@ -627,7 +627,7 @@
           "contents": [
             "var ourDecimal = 5.7;",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             ""
           ],
@@ -642,22 +642,22 @@
       "id": "bd7993c9c69feddfaeb7bdef",
       "title": "Multiply Two Decimals with JavaScript",
       "description": [
-        "In JavaScript, you can also perform calculations with decimal numbers, just like whole numbers.",
-        "Let's multiply two decimals together to get their product.",
+        "在 JavaScript 中，你也可以用小数进行计算，就像整数一样。",
+        "把两个小数相乘，并得到它们乘积。",
         "<hr>",
-        "Change the <code>0.0</code> so that product will equal <code>5.0</code>."
-      ],
+        "改变<code>0.0</code>的数值让变量<code>product</code>的值等于<code>5.0</code>。"
+    ],
       "solutions": [
         "var product = 2.0 * 2.5;"
       ],
       "tests": [
         {
-          "text": "The variable <code>product</code> should equal <code>5.0</code>.",
-          "testString": "assert(product === 5.0, 'The variable <code>product</code> should equal <code>5.0</code>.');"
+          "text": "变量<code>product</code>应该等于<code>5.0</code>.",
+          "testString": "assert(product === 5.0, '变量<code>product</code>应该等于<code>5.0</code>.');"
         },
         {
-          "text": "You should use the <code>*</code> operator",
-          "testString": "assert(/\\*/.test(code), 'You should use the <code>*</code> operator');"
+          "text": "要使用<code>*</code>运算符",
+          "testString": "assert(/\\*/.test(code), '要使用<code>*</code>运算符');"
         }
       ],
       "challengeType": 1,
@@ -682,23 +682,23 @@
       "id": "bd7993c9ca9feddfaeb7bdef",
       "title": "Divide One Decimal by Another with JavaScript",
       "description": [
-        "Now let's divide one decimal by another.",
+        "现在让我们将一个小数除以另一个小数。",
         "<hr>",
-        "Change the <code>0.0</code> so that <code>quotient</code> will equal to <code>2.2</code>."
+        "改变数值<code>0.0</code>的值让变量<code>quotient</code>的值等于<code>2.2</code>."
       ],
       "solutions": [],
       "tests": [
         {
-          "text": "The variable <code>quotient</code> should equal <code>2.2</code>",
-          "testString": "assert(quotient === 2.2, 'The variable <code>quotient</code> should equal <code>2.2</code>');"
+          "text": "<code>quotient</code>的值应该等于<code>2.2</code>",
+          "testString": "assert(quotient === 2.2, '<code>quotient</code>的值应该等于<code>2.2</code>');"
         },
         {
-          "text": "You should use the <code>/</code> operator to divide 4.4 by 2",
-          "testString": "assert(/4\\.40*\\s*\\/\\s*2\\.*0*/.test(code), 'You should use the <code>/</code> operator to divide 4.4 by 2');"
+          "text": "使用<code>/</code>运算符将 4.4 除以 2",
+          "testString": "assert(/4\\.40*\\s*\\/\\s*2\\.*0*/.test(code), '使用<code>/</code>运算符将 4.4 除以 2');"
         },
         {
-          "text": "The quotient variable should only be assigned once",
-          "testString": "assert(code.match(/quotient/g).length === 1, 'The quotient variable should only be assigned once');"
+          "text": "quotient 变量应该只被赋值一次",
+          "testString": "assert(code.match(/quotient/g).length === 1, 'quotient 变量应该只被赋值一次');"
         }
       ],
       "challengeType": 1,
@@ -708,7 +708,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "var quotient = 0.0 / 2.0; // Fix this line",
+            "var quotient = 0.0 / 2.0; // 修改这一行",
             "",
             ""
           ],
@@ -723,14 +723,14 @@
       "id": "56533eb9ac21ba0edf2244ae",
       "title": "Finding a Remainder in JavaScript",
       "description": [
-        "The <dfn>remainder</dfn> operator <code>%</code> gives the remainder of the division of two numbers.",
-        "<strong>Example</strong>",
-        "<blockquote>5 % 2 = 1 because<br>Math.floor(5 / 2) = 2 (Quotient)<br>2 * 2 = 4<br>5 - 4 = 1 (Remainder)</blockquote>",
-        "<strong>Usage</strong><br>In mathematics, a number can be checked to be even or odd by checking the remainder of the division of the number by <code>2</code>.",
-        "<blockquote>17 % 2 = 1 (17 is Odd)<br>48 % 2 = 0 (48 is Even)</blockquote>",
-        "<strong>Note</strong><br>The <dfn>remainder</dfn> operator is sometimes incorrectly referred to as  the \"modulus\" operator. It is very similar to modulus, but does not work properly with negative numbers.",
+        "<dfn>remainder</dfn>余数运算符<code>%</code>对两个数取余。",
+        "<strong>示例</strong>",
+        "<blockquote>5 % 2 = 1 因为<br>Math.floor(5 / 2) = 2 （商）<br>2 * 2 = 4<br>5 - 4 = 1 （余数）</blockquote>",
+        "<strong>用法</strong><br>在数学中，看一个数是奇数还是偶数，只需要看这个数除以 2 得到的余数是 0 还是 1。  ",
+        "<blockquote>17 % 2 = 1（17 是奇数）<br>48 % 2 = 0（48 是偶数）</blockquote>",
+        "<strong>提示<strong><br><dfn>remainder</dfn>余数运算符有时被错误地称为“模数”运算符。它与模数非常相似，但在负数下不能正常工作。",
         "<hr>",
-        "Set <code>remainder</code> equal to the remainder of <code>11</code> divided by <code>3</code> using the <dfn>remainder</dfn> (<code>%</code>) operator."
+        "使用<code>%</code>运算符，计算11除以3的余数，并把余数赋给变量remainder。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -738,16 +738,16 @@
       ],
       "tests": [
         {
-          "text": "The variable <code>remainder</code> should be initialized",
-          "testString": "assert(/var\\s+?remainder/.test(code), 'The variable <code>remainder</code> should be initialized');"
+          "text": "变量<code>remainder</code>应该被初始化",
+          "testString": "assert(/var\\s+?remainder/.test(code), '变量<code>remainder</code>应该被初始化');"
         },
         {
-          "text": "The value of <code>remainder</code> should be <code>2</code>",
-          "testString": "assert(remainder === 2, 'The value of <code>remainder</code> should be <code>2</code>');"
+          "text": "<code>remainder</code>的值应该等于<code>2</code>",
+          "testString": "assert(remainder === 2, '<code>remainder</code>的值应该等于<code>2</code>');"
         },
         {
-          "text": "You should use the <code>%</code> operator",
-          "testString": "assert(/\\s+?remainder\\s*?=\\s*?.*%.*;/.test(code), 'You should use the <code>%</code> operator');"
+          "text": "你应该使用<code>%</code>运算符",
+          "testString": "assert(/\\s+?remainder\\s*?=\\s*?.*%.*;/.test(code), '你应该使用<code>%</code>运算符');"
         }
       ],
       "challengeType": 1,
@@ -757,7 +757,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Only change code below this line",
+            "// 请只修改这条注释以下的代码",
             "",
             "var remainder;",
             ""
