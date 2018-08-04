@@ -8,8 +8,8 @@
       "id": "587d8247367417b2b2512c36",
       "title": "Install and Require Helmet",
       "description": [
-        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "Helmet 通过配置不同的 HTTP 头部信息来使你的 Express 应用更加安全。安装，并引入 Helmet 这个包。"
+        "注意，本项目在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a>的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
+        "Helmet 通过配置不同的 HTTP 头部信息来使你的 Express 应用更加安全。在这个挑战中，请安装并引入 Helmet 这个包。"
       ],
       "tests": [
         {
@@ -26,8 +26,8 @@
       "id": "587d8247367417b2b2512c37",
       "title": "Hide Potentially Dangerous Information Using helmet.hidePoweredBy()",
       "description": [
-        "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "如果黑客发现你的网站是用 Express 搭建的，那么他们就可以利用 Express 或 Node 现存的漏洞来攻击你的网站。<code>X-Powered-By: Express</code> 默认情况下会被添加到所有响应的头部。不过 helmet.hidePoweredBy() 中间件可以帮你移除 X-Powered-By 头。你甚至可以把头设置成其它的值。 如 <code>app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }))</code>"
+        "温馨提醒，本项目在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a>的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
+        "如果黑客发现你的网站是用 Express 搭建的，那么他们就可以利用 Express 或 Node 现存的漏洞来攻击你的网站。<code>X-Powered-By: Express</code>默认情况下会被添加到所有响应的头部。不过<code>helmet.hidePoweredBy()</code>中间件可以帮你移除<code>X-Powered-By</code>头。你甚至可以把头设置成其它的值。 如<code>app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }))</code>。"
       ],
       "tests": [
         {
@@ -44,17 +44,17 @@
       "id": "587d8247367417b2b2512c38",
       "title": "Mitigate the Risk of Clickjacking with helmet.frameguard()",
       "description": [
-        "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "黑客可能会不经过你的允许，把你的页面嵌套在 <frame> 或者 <iframe> 标签里，用以实现“点击劫持”。点击劫持是一种视觉上的欺骗手段，让用户误以为自己在与所看到的网页交互。通过 iframe，黑客可以在你的页面上添加一个透明的“层”，然后把自己的恶意代码放在一个用户看不到的按钮中。这样一来，你网站的执行环境就被黑客设置成了他想要的效果。helmet 中间件可以设置 X-Frame-Options 这个头部。这样就能限制谁可以通过 iframe 引入你的页面了。 有三个模式可供配置: DENY, SAMEORIGIN, 和 ALLOW-FROM.",
-        "我们的应用不需要被 iframe 引用。你可以调用 <code>helmet.frameguard()</code> 这个方法，然后传入配置对象  <code>{action: 'deny'}</code> 就可以了。"
+        "温馨提醒，本项目在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a>的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
+        "黑客可能会不经过你的允许，把你的页面嵌套在 <frame> 或者 <iframe> 标签里，用以实现 “点击劫持”。点击劫持是一种视觉上的欺骗手段，让用户误以为自己在与所看到的网页交互。通过 iframe，黑客可以在你的页面上添加一个透明的 “层”，然后把自己的恶意代码放在一个用户看不到的按钮中。这样一来，你网站的执行环境就被黑客设置成了他想要的效果。helmet 中间件可以设置<code>X-Frame-Options</code>这个头部。这样就能限制谁可以通过 iframe 引入你的页面了。有三个模式可供配置：DENY、SAMEORIGIN 和 ALLOW-FROM。",
+        "我们的应用不需要被 iframe 引用。你可以调用<code>helmet.frameguard()</code>这个方法，然后传入配置对象<code>{action: 'deny'}</code>就可以了。"
       ],
       "tests": [
         {
-          "text": "helmet.frameguard() 中间件应该被正确加载",
+          "text": "helmet.frameguard() 中间件应该被正确加载。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'frameguard', 'helmet.frameguard() middleware is not mounted correctly'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "<code>helmet.frameguard()</code> 中的 <code>action</code> 属性的值应该为 'DENY'",
+          "text": "<code>helmet.frameguard()</code>中的<code>action</code>属性的值应该为 'DENY'。",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.property(data.headers, 'x-frame-options'); assert.equal(data.headers['x-frame-options'], 'DENY');}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -67,7 +67,7 @@
       "id": "587d8247367417b2b2512c39",
       "title": "Mitigate the Risk of Cross Site Scripting (XSS) Attacks with helmet.xssFilter()",
       "description": [
-        "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
+        "温馨提醒，本项目在<a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a>的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "Cross-site scripting (XSS) is a frequent type of attack where malicious scripts are injected into vulnerable pages, with the purpose of stealing sensitive data like session cookies, or passwords.",
         "The basic rule to lower the risk of an XSS attack is simple: “Never trust user’s input”. As a developer you should always sanitize all the input coming from the outside. This includes data coming from forms, GET query urls, and even from POST bodies. Sanitizing means that you should find and encode the characters that may be dangerous e.g. <, >.",
         "Modern browsers can help mitigating the risk by adopting better software strategies. Often these are configurable via http headers.",

@@ -10,19 +10,19 @@
       "description": [
         "欢迎来到 freeCodeCamp 的 HTML 编码挑战，这些挑战将会帮助你逐步掌握 Web 开发。",
         "HTML 是英文 Hyper Text Markup Language（超文本标记语言）的缩写。首先，使用 HTML 来制作一个简单的网页，你可以直接在本网页内置的代码编辑器中编辑代码。",
-        "你看到代码编辑器中的 <code>&#60;h1&#62;Hello&#60;/h1&#62;</code> 了吗? 那就是一个 HTML 标签。",
-        "大部分 HTML 标签都有一个 <code>开始标记</code> 和一个 <code>结束标记</code>。",
+        "你看到代码编辑器中的<code>&#60;h1&#62;Hello&#60;/h1&#62;</code>了吗? 那就是一个 HTML 标签。",
+        "大部分 HTML 标签都有一个<code>开始标记</code>和一个<code>结束标记</code>。",
         "开始标记像这样：<code>&#60;h1&#62;</code>",
         "结束标记像这样：<code>&#60;/h1&#62;</code>",
-        "开始标记和结束标记的唯一区别就是结束标记多了一个 <code>/</code>。",
+        "开始标记和结束标记的唯一区别就是结束标记多了一个<code>/</code>。",
         "每个挑战都有测试，任何时候点击<strong>运行测试</strong>按钮就可以运行测试。如果代码通过测试，将会弹出一个窗口，你就可以提交你的代码并顺利进入下一个挑战。",
         "<hr>",
-        "请把 <code>h1</code> 标签的内容改为：<code>Hello World</code>。"
+        "请把<code>h1</code>标签的内容改为：<code>Hello World</code>。"
       ],
       "tests": [
         {
-          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
-          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), '<code>h1</code> 标签的内容应该为：<code>Hello World</code>。');"
+          "text": "<code>h1</code>标签的内容应该为：<code>Hello World</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+world/gi).test($('h1').text()), '<code>h1</code>标签的内容应该为：<code>Hello World</code>。');"
         }
       ],
       "challengeType": 0,
@@ -44,26 +44,26 @@
       "title": "Headline with the h2 Element",
       "description": [
         "在接下来的几节课里，我们将会由浅入深地制作一个关于猫的图片应用。",
-        "这节课将会引入 <code>h2</code> 标签。",
-        "这些标签用来告诉浏览器，网站的结构长什么样子。<code>h1</code> 标签通常被用作主标题，<code>h2</code> 标签通常被用作副标题，还有 <code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code> 标签，它们分别用作不同级别的标题。",
+        "这节课将会引入<code>h2</code>标签。",
+        "这些标签用来告诉浏览器，网站的结构长什么样子。<code>h1</code>标签通常被用作主标题，<code>h2</code>标签通常被用作副标题，还有<code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code>标签，它们分别用作不同级别的标题。",
         "<hr>",
-        "在 <code>h1</code> 标签下面创建一个 <code>h2</code> 标签，标签内容为：<code>CatPhotoApp</code>。"
+        "在<code>h1</code>标签下面创建一个<code>h2</code>标签，标签内容为：<code>CatPhotoApp</code>。"
       ],
       "tests": [
         {
-          "text": "创建一个 <code>h2</code> 标签。",
-          "testString": "assert(($(\"h2\").length > 0), '创建一个 <code>h2</code> 标签。');"
+          "text": "创建一个<code>h2</code>标签。",
+          "testString": "assert(($(\"h2\").length > 0), '创建一个<code>h2</code>标签。');"
         },
         {
-          "text": "<code>h2</code> 标签应该有结束标记。",
-          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, '<code>h2</code> 标签应该有结束标记。');"
+          "text": "<code>h2</code>标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/h2>/g) && code.match(/<\\/h2>/g).length === code.match(/<h2>/g).length, '<code>h2</code>标签应该有结束标记。');"
         },
         {
-          "text": "<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。",
-          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), '<code>h2</code> 标签的内容应该为：<code>CatPhotoApp</code>。');"
+          "text": "<code>h2</code>标签的内容应该为：<code>CatPhotoApp</code>。",
+          "testString": "assert.isTrue((/cat(\\s)?photo(\\s)?app/gi).test($(\"h2\").text()), '<code>h2</code>标签的内容应该为：<code>CatPhotoApp</code>。');"
         },
         {
-          "text": "<code>h1</code> 标签的内容应该为：<code>Hello World</code>。",
+          "text": "<code>h1</code>标签的内容应该为：<code>Hello World</code>。",
           "testString": "assert.isTrue((/hello(\\s)+world/gi).test($(\"h1\").text()), '主标题的内容应该为：<code>Hello World</code>。');"
         }
       ],
@@ -85,24 +85,24 @@
       "id": "bad87fee1348bd9aedf08801",
       "title": "Inform with the Paragraph Element",
       "description": [
-        "<code>p</code> 是 <code>paragraph</code> 的缩写，通常被用来创建一个段落，就和你写作文一样。",
+        "<code>p</code>是<code>paragraph</code>的缩写，通常被用来创建一个段落，就和你写作文一样。",
         "你可以像这样创建一个段落：",
         "<code>&#60;p&#62;I'm a p tag!&#60;/p&#62;</code>",
         "<hr>",
-        "在 <code>h2</code> 标签下面新增一个 <code>p</code> 标签，标签内容是：<code>Hello Paragraph</code>。"
+        "在<code>h2</code>标签下面新增一个<code>p</code>标签，标签内容是：<code>Hello Paragraph</code>。"
       ],
       "tests": [
         {
-          "text": "创建一个 <code>p</code> 标签。",
-          "testString": "assert(($(\"p\").length > 0), '创建一个 <code>p</code> 标签。');"
+          "text": "创建一个<code>p</code>标签。",
+          "testString": "assert(($(\"p\").length > 0), '创建一个<code>p</code>标签。');"
         },
         {
-          "text": "<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。",
-          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), '<code>p</code> 标签的内容应该为：<code>Hello Paragraph</code>。');"
+          "text": "<code>p</code>标签的内容应该为：<code>Hello Paragraph</code>。",
+          "testString": "assert.isTrue((/hello(\\s)+paragraph/gi).test($(\"p\").text()), '<code>p</code>标签的内容应该为：<code>Hello Paragraph</code>。');"
         },
         {
-          "text": "<code>p</code> 标签应该有结束标记。",
-          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '<code>p</code> 标签应该有结束标记。');"
+          "text": "<code>p</code>标签应该有结束标记。",
+          "testString": "assert(code.match(/<\\/p>/g) && code.match(/<\\/p>/g).length === code.match(/<p/g).length, '<code>p</code>标签应该有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -125,15 +125,15 @@
       "title": "Fill in the Blank with Placeholder Text",
       "description": [
         "Web 开发者通常用 <a href='http://www.ruanyifeng.com/blog/2009/04/lorem_ipsum.html'>lorem ipsum text</a> 来做占位符，占位符就是占着位置的一些文字，没有实际意义。",
-        "为什么叫 <code>lorem ipsum text</code> 呢?是因为 <code>lorem ipsum</code> 是古罗马西塞罗谚语的前两个单词。",
-        "从公元16世纪开始 <code>lorem ipsum text</code> 就被当做占位符了，这种传统延续到了互联网时代。于此同时，孙悟空也在五指山下被压了500年，然后就进化成程序猿了，是不是很巧合。^_^",
+        "为什么叫<code>lorem ipsum text</code>呢?是因为<code>lorem ipsum</code>是古罗马西塞罗谚语的前两个单词。",
+        "从公元16世纪开始<code>lorem ipsum text</code>就被当做占位符了，这种传统延续到了互联网时代。与此同时，孙悟空也在五指山下被压了 500 年，然后就进化成程序猿了，是不是很巧合。^_^",
         "<hr>",
-        "把 <code>p</code> 标签的内容更换为：<code>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</code>"
+        "把<code>p</code>标签的内容更换为：<code>Monkey code 猴哥猴哥，你真了不得，金箍棒在手，问世间谁是英雄。</code>"
       ],
       "tests": [
         {
-          "text": "<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。",
-          "testString": "assert.isTrue((/Monkey(\\s)+code/gi).test($(\"p\").text()), '<code>p</code> 标签的内容必须包含 <code>Monkey code</code>。');"
+          "text": "<code>p</code>标签的内容必须包含<code>Monkey code</code>。",
+          "testString": "assert.isTrue((/Monkey(\\s)+code/gi).test($(\"p\").text()), '<code>p</code>标签的内容必须包含<code>Monkey code</code>。');"
         }
       ],
       "challengeType": 0,
@@ -160,26 +160,26 @@
       "description": [
         "注释的作用是给代码添加一些说明，方便团队合作或日后自己查看，但又不影响代码本身。",
         "注释也可以用来在不删除代码的前提下，让代码不起作用。",
-        "在 HTML 中，注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
+        "在 HTML 中，注释的开始标记是<code>&#60;!--</code>，结束标记是<code>--&#62;</code>。",
         "<hr>",
-        "现在我们反其道而行之，干掉 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的注释。"
+        "现在我们反其道而行之，干掉<code>h1</code>标签、<code>h2</code>标签、<code>p</code>标签的注释。"
       ],
       "tests": [
         {
-          "text": "确保网页中能看到 <code>h1</code> 标签。",
-          "testString": "assert($(\"h1\").length > 0, '确保网页中能看到 <code>h1</code> 标签。');"
+          "text": "确保网页中能看到<code>h1</code>标签。",
+          "testString": "assert($(\"h1\").length > 0, '确保网页中能看到<code>h1</code>标签。');"
         },
         {
-          "text": "确保网页中能看到 <code>h2</code> 标签。",
-          "testString": "assert($(\"h2\").length > 0, '确保网页中能看到 <code>h2</code> 标签。');"
+          "text": "确保网页中能看到<code>h2</code>标签。",
+          "testString": "assert($(\"h2\").length > 0, '确保网页中能看到<code>h2</code>标签。');"
         },
         {
-          "text": "确保网页中能看到 <code>p</code> 标签。",
-          "testString": "assert($(\"p\").length > 0, '确保网页中能看到 <code>p</code> 标签。');"
+          "text": "确保网页中能看到<code>p</code>标签。",
+          "testString": "assert($(\"p\").length > 0, '确保网页中能看到<code>p</code>标签。');"
         },
         {
-          "text": "确保删除了注释的结束标记 <code>--&#62;</code>",
-          "testString": "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), '确保删除了注释的结束标记 <code>--&#62;</code>');"
+          "text": "确保删除了注释的结束标记<code>--&#62;</code>",
+          "testString": "assert(!/[^fc]-->/gi.test(code.replace(/ *<!--[^fc]*\\n/g,'')), '确保删除了注释的结束标记<code>--&#62;</code>');"
         }
       ],
       "challengeType": 0,
@@ -206,31 +206,31 @@
       "id": "bad87fee1348bd9aedf08804",
       "title": "Comment out HTML",
       "description": [
-        "记住：注释的开始标记是 <code>&#60;!--</code>，结束标记是 <code>--&#62;</code>。",
-        "现在你需要在 <code>h2</code> 标签前终止注释。",
+        "记住：注释的开始标记是<code>&#60;!--</code>，结束标记是<code>--&#62;</code>。",
+        "现在你需要在<code>h2</code>标签前终止注释。",
         "<hr>",
-        "任务：<code>h1</code> 标签和 <code>p</code> 标签都注释掉，<code>h2</code> 标签保留。"
+        "任务：<code>h1</code>标签和<code>p</code>标签都注释掉，<code>h2</code>标签保留。"
       ],
       "tests": [
         {
-          "text": "注释掉 <code>h1</code> 标签，这样它就从网页上消失了。",
-          "testString": "assert(($(\"h1\").length === 0), '注释掉 <code>h1</code> 标签，这样它就从网页上消失了。');"
+          "text": "注释掉<code>h1</code>标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"h1\").length === 0), '注释掉<code>h1</code>标签，这样它就从网页上消失了。');"
         },
         {
-          "text": "<code>h2</code> 标签保持原样，这样网页上还能看到它。",
-          "testString": "assert(($(\"h2\").length > 0), '<code>h2</code> 标签保持原样，这样网页上还能看到它。');"
+          "text": "<code>h2</code>标签保持原样，这样网页上还能看到它。",
+          "testString": "assert(($(\"h2\").length > 0), '<code>h2</code>标签保持原样，这样网页上还能看到它。');"
         },
         {
-          "text": "注释掉 <code>p</code> 标签，这样它就从网页上消失了。",
-          "testString": "assert(($(\"p\").length === 0), '注释 <code>p</code> 标签，这样它就从网页上消失了。);"
+          "text": "注释掉<code>p</code>标签，这样它就从网页上消失了。",
+          "testString": "assert(($(\"p\").length === 0), '注释<code>p</code>标签，这样它就从网页上消失了。);"
         },
         {
-          "text": "确保每一个注释都以 <code>--&#62;</code> 结尾。",
+          "text": "确保每一个注释都以<code>--&#62;</code>结尾。",
           "testString": "assert(code.match(/[^fc]-->/g).length > 1, '确保每一个注释都以<code>--&#62;</code>结尾。');"
         },
         {
-          "text": "不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。",
-          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要更改 <code>h1</code> 标签、<code>h2</code> 标签、<code>p</code> 标签的顺序。');"
+          "text": "不要更改<code>h1</code>标签、<code>h2</code>标签、<code>p</code>标签的顺序。",
+          "testString": "assert((code.match(/<([a-z0-9]){1,2}>/g)[0]===\"<h1>\" && code.match(/<([a-z0-9]){1,2}>/g)[1]===\"<h2>\" && code.match(/<([a-z0-9]){1,2}>/g)[2]===\"<p>\") , '不要更改<code>h1</code>标签、<code>h2</code>标签、<code>p</code>标签的顺序。');"
         }
       ],
       "challengeType": 0,
@@ -260,20 +260,20 @@
         "手机的屏幕空间是有限的。",
         "让我们删除不必要的标签，开始设计我们的 CatPhotoApp。",
         "<hr>",
-        "任务：删除 <code>h1</code> 标签以简化视图。"
+        "任务：删除<code>h1</code>标签以简化视图。"
       ],
       "tests": [
         {
-          "text": "删除 <code>h1</code> 标签。",
-          "testString": "assert(($(\"h1\").length == 0), '删除 <code>h1</code> 标签。');"
+          "text": "删除<code>h1</code>标签。",
+          "testString": "assert(($(\"h1\").length == 0), '删除<code>h1</code>标签。');"
         },
         {
-          "text": "保留 <code>h2</code> 标签。",
-          "testString": "assert(($(\"h2\").length > 0), '保留 <code>h2</code> 标签。');"
+          "text": "保留<code>h2</code>标签。",
+          "testString": "assert(($(\"h2\").length > 0), '保留<code>h2</code>标签。');"
         },
         {
-          "text": "保留 <code>p</code> 标签。",
-          "testString": "assert(($(\"p\").length > 0), '保留 <code>p</code> 标签。');"
+          "text": "保留<code>p</code>标签。",
+          "testString": "assert(($(\"p\").length > 0), '保留<code>p</code>标签。');"
         }
       ],
       "challengeType": 0,
@@ -298,13 +298,13 @@
       "id": "bad87fee1348bd9aecf08801",
       "title": "Introduction to HTML5 Elements",
       "description": [
-        "HTML5 引入了很多更具描述性的 HTML 标签，例如：<code>header</code>、<code>footer</code>、<code>nav</code>、<code>video</code>、<code>article</code>、<code>section</code> 等等。",
+        "HTML5 引入了很多更具描述性的 HTML 标签，例如：<code>header</code>、<code>footer</code>、<code>nav</code>、<code>video</code>、<code>article</code>、<code>section</code>等等。",
         "这些标签让 HTML 更易读，同时有助于搜索引擎优化和无障碍访问。",
-        "<code>main</code> 标签让搜索引擎和开发者瞬间就能找到网页的主要内容。",
+        "<code>main</code>标签让搜索引擎和开发者瞬间就能找到网页的主要内容。",
         "<strong>注意</strong><br>在后面的应用无障碍课程中我们会接触到更多新的 HTML5 标签，以及明白它们的用处。",
         "<hr>",
         "在现有的段落下创建一个新的段落，段落内容为：养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。",
-        "在第一个段落前添加 <code><main></code>，在第二个段落后添加 <code></main></code>。"
+        "在第一个段落前添加<code><main></code>，在第二个段落后添加<code></main></code>。"
       ],
       "tests": [
         {
@@ -320,20 +320,20 @@
           "testString": "assert.isTrue((/养猫/).test($(\"p\").text()), '新建的段落应该包含关键词：养猫。');"
         },
         {
-          "text": "代码中应该包含 <code>main</code> 标签。",
-          "testString": "assert($('main').length === 1, '代码中应该包含 <code>main</code> 标签。');"
+          "text": "代码中应该包含<code>main</code>标签。",
+          "testString": "assert($('main').length === 1, '代码中应该包含<code>main</code>标签。');"
         },
         {
-          "text": "<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。",
-          "testString": "assert($(\"main\").children(\"p\").length === 2, '<code>main</code> 标签应有两个 <code>p</code> 标签作为它的子标签。');"
+          "text": "<code>main</code>标签应有两个<code>p</code>标签作为它的子标签。",
+          "testString": "assert($(\"main\").children(\"p\").length === 2, '<code>main</code>标签应有两个<code>p</code>标签作为它的子标签。');"
         },
         {
-          "text": "开始标记 <code><main></code> 应位于第一个段落之前。",
-          "testString": "assert(code.match(/<main>\\s*?<p>/g), '开始标记 <code><main></code> 应位于第一个段落之前。');"
+          "text": "开始标记<code><main></code>应位于第一个段落之前。",
+          "testString": "assert(code.match(/<main>\\s*?<p>/g), '开始标记<code><main></code>应位于第一个段落之前。');"
         },
         {
-          "text": "结束标记 <code></main></code> 应位于第二段落之后。",
-          "testString": "assert(code.match(/<\\/p>\\s*?<\\/main>/g), '结束标记 <code></main></code> 应位于第二个段落之后。');"
+          "text": "结束标记<code></main></code>应位于第二段落之后。",
+          "testString": "assert(code.match(/<\\/p>\\s*?<\\/main>/g), '结束标记<code></main></code>应位于第二个段落之后。');"
         }
       ],
       "challengeType": 0,
@@ -356,21 +356,21 @@
       "id": "bad87fee1348bd9aedf08812",
       "title": "Add Images to Your Website",
       "description": [
-        "用 <code>img</code> 标签来为你的网站添加图片，其中 <code>src</code> 属性指向一个图片的地址。",
+        "用<code>img</code>标签来为你的网站添加图片，其中<code>src</code>属性指向一个图片的地址。",
         "举例如下：",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\"&#62</code>",
-        "注意：<code>img</code> 标签是自关闭标签，不需要结束标记。",
-        "所有的 <code>img</code> 标签必须有 <code>alt</code> 属性，<code>alt</code> 属性的文本是当图片无法加载时显示的替代文本，这对于通过屏幕阅读器来浏览网页的用户非常重要。",
-        "注意：如果图片是纯装饰性的，用一个空的 <code>alt</code> 是最佳实践。",
+        "注意：<code>img</code>标签是自关闭标签，不需要结束标记。",
+        "所有的<code>img</code>标签必须有<code>alt</code>属性，<code>alt</code>属性的文本是当图片无法加载时显示的替代文本，这对于通过屏幕阅读器来浏览网页的用户非常重要。",
+        "注意：如果图片是纯装饰性的，用一个空的<code>alt</code>是最佳实践。",
         "理想情况下，<code>alt</code>属性不应该包含特殊字符，除非需要。",
-        "让我们给上面例子的 <code>img</code> 添加 <code>alt</code> 属性。",
+        "让我们给上面例子的<code>img</code>添加<code>alt</code>属性。",
         "<code>&#60img src=\"https://www.your-image-source.com/your-image.jpg\" alt=\"作者站在沙滩上竖起两个大拇指\"&#62</code>",
         "<hr>",
         "让我们给网站添加图片：",
-        "在 <code>h2</code> 标签前，插入一个 <code>img</code> 标签",
-        "现在设置 <code>src</code> 属性指向这个地址：",
+        "在<code>h2</code>标签前，插入一个<code>img</code>标签",
+        "现在设置<code>src</code>属性指向这个地址：",
         "<code>https://bit.ly/fcc-relaxing-cat</code>",
-        "最后不要忘记给图片添加一个 <code>alt</code> 文本。"
+        "最后不要忘记给图片添加一个<code>alt</code>文本。"
       ],
       "tests": [
         {
@@ -382,8 +382,8 @@
           "testString": "assert(new RegExp(\"\\/\\/bit.ly\\/fcc-relaxing-cat|\\/\\/s3.amazonaws.com\\/freecodecamp\\/relaxing-cat.jpg\", \"gi\").test($(\"img\").attr(\"src\")), '这张图片应该是一只小猫。');"
         },
         {
-          "text": "图片必须有 <code>alt</code> 属性。",
-          "testString": "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), '图片必须有 <code>alt</code> 属性。');"
+          "text": "图片必须有<code>alt</code>属性。",
+          "testString": "assert(code.match(/alt\\s*?=\\s*?(\\\"|\\').*(\\\"|\\')/), '图片必须有<code>alt</code>属性。');"
         }
       ],
       "challengeType": 0,
@@ -412,24 +412,24 @@
       "title": "Link to External Pages with Anchor Elements",
       "description": [
         "你可以用锚点（Anchor，简写 a）来实现网页间的跳转。",
-        "锚点需要一个 <code>href</code> 属性指向目的地，它还需要有锚点文本，例如：",
+        "锚点需要一个<code>href</code>属性指向目的地，它还需要有锚点文本，例如：",
         "<code>&#60;a href=\"https://freecodecamp.org\">this links to freecodecamp.org&#60;/a&#62;</code>",
         "然后你的浏览器会显示一个可以点击的文本，点击该文本就会跳转到 <strong>https://www.freecodecamp.org</strong>。",
         "<hr>",
-        "创建一个 <code>a</code> 标签，<code>href</code> 属性为 <code>http://freecatphotoapp.com</code> ，锚点文本为：<code>cat photos</code>。"
+        "创建一个<code>a</code>标签，<code>href</code>属性为<code>http://freecatphotoapp.com</code>，锚点文本为：<code>cat photos</code>。"
       ],
       "tests": [
         {
-          "text": "<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。",
-          "testString": "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code> 标签的锚点文本应为：<code>cat photos</code>。');"
+          "text": "<code>a</code>标签的锚点文本应为：<code>cat photos</code>。",
+          "testString": "assert((/cat photos/gi).test($(\"a\").text()), '<code>a</code>标签的锚点文本应为：<code>cat photos</code>。');"
         },
         {
-          "text": "<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。",
-          "testString": "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), '<code>a</code> 标签的 <code>href</code> 属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。');"
+          "text": "<code>a</code>标签的<code>href</code>属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。",
+          "testString": "assert(/http:\\/\\/(www\\.)?freecatphotoapp\\.com/gi.test($(\"a\").attr(\"href\")), '<code>a</code>标签的<code>href</code>属性应为：\"<code>http&#58;//freecatphotoapp<wbr>.com</code>\"。');"
         },
         {
-          "text": "确保 <code>a</code> 标签有结束标记。",
-          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保 <code>a</code> 标签有结束标记。');"
+          "text": "确保<code>a</code>标签有结束标记。",
+          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, '确保<code>a</code>标签有结束标记。');"
         }
       ],
       "challengeType": 0,
@@ -460,14 +460,14 @@
       "title": "Link to Internal Sections of a Page with Anchor Elements",
       "description": [
         "锚点同样也可以用来在网页内不同区域的跳转。",
-        "用一个井号 <code>#</code> 加上你想跳转到的区域对应的 <code>id</code> 属性值，通过把它作为锚点的 <code>href</code> 属性值来创建一个内部链接。 <code>id</code> 是用来描述网页元素的一个属性，它的值在整个页面中唯一。",
+        "用一个井号<code>#</code>加上你想跳转到的区域对应的<code>id</code>属性值，通过把它作为锚点的<code>href</code>属性值来创建一个内部链接。<code>id</code>是用来描述网页元素的一个属性，它的值在整个页面中唯一。",
         "下面是用来创建内部锚点链接的例子：",
         "<blockquote>&lt;a href=\"#contacts-header\"&gt;Contacts&lt;/a&gt;<br>...<br>&lt;h2 id=\"contacts-header\"&gt;Contacts&lt;/h2&gt;</blockquote>",
-        "当用户点击了 <code>Contacts</code> 链接，页面就会跳转到网页的 <b>Contacts</b> 区域。",
+        "当用户点击了<code>Contacts</code>链接，页面就会跳转到网页的 <b>Contacts</b> 区域。",
         "<hr>",
-        "通过修改 <code>href</code> 属性为 <code>#footer</code> 来更改外部链接为内部链接，同时修改文本 <code>cat photos</code> 为 <code>Jump to Bottom</code>。",
-        "移除 <code>target=\"_blank\"</code> 属性避免点击链接会打开新的标签页。",
-        "然后添加一个 <code>&lt;footer&gt;</code> 标签，它的 <code>id</code> 值为 <code>footer</code>。"
+        "通过修改<code>href</code>属性为<code>#footer</code>来更改外部链接为内部链接，同时修改文本<code>cat photos</code>为<code>Jump to Bottom</code>。",
+        "移除<code>target=\"_blank\"</code>属性避免点击链接会打开新的标签页。",
+        "然后添加一个<code>&lt;footer&gt;</code>标签，它的<code>id</code>值为<code>footer</code>。"
       ],
       "tests": [
         {
@@ -475,24 +475,24 @@
           "testString": "assert($('a').length == 1, '页面中应该只有一个锚点。');"
         },
         {
-          "text": "页面中应该只有一个 <code>footer</code> 标签。",
-          "testString": "assert($('footer').length == 1, '页面中应该只有一个 <code>footer</code> 标签。');"
+          "text": "页面中应该只有一个<code>footer</code>标签。",
+          "testString": "assert($('footer').length == 1, '页面中应该只有一个<code>footer</code>标签。');"
         },
         {
-          "text": "<code>a</code> 标签的 <code>href</code> 属性应为：\"#footer\"。",
-          "testString": "assert($('a').eq(0).attr('href') == \"#footer\", '<code>a</code> 标签的 <code>href</code> 属性应为：\"#footer\"。');"
+          "text": "<code>a</code>标签的<code>href</code>属性应为：\"#footer\"。",
+          "testString": "assert($('a').eq(0).attr('href') == \"#footer\", '<code>a</code>标签的<code>href</code>属性应为：\"#footer\"。');"
         },
         {
-          "text": "<code>a</code> 标签不应该有 <code>target</code> 属性。",
-          "testString": "assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true, '<code>a</code> 标签不应该有 <code>target</code> 属性。');"
+          "text": "<code>a</code>标签不应该有<code>target</code>属性。",
+          "testString": "assert(typeof $('a').eq(0).attr('target') == typeof undefined || $('a').eq(0).attr('target') == true, '<code>a</code>标签不应该有<code>target</code>属性。');"
         },
         {
-          "text": "<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。",
-          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), '<code>a</code> 标签的文本应为 <code>Jump to Bottom</code>。');"
+          "text": "<code>a</code>标签的文本应为<code>Jump to Bottom</code>。",
+          "testString": "assert($('a').eq(0).text().match(/Jump to Bottom/gi), '<code>a</code>标签的文本应为<code>Jump to Bottom</code>。');"
         },
         {
-          "text": "<code>footer</code> 标签的 <code>id</code> 属性应为 \"footer\"。",
-          "testString": "assert($('footer').eq(0).attr('id') == \"footer\", '<code>footer</code> 标签的 <code>id</code> 属性应为 \"footer\"。');"
+          "text": "<code>footer</code>标签的<code>id</code>属性应为 \"footer\"。",
+          "testString": "assert($('footer').eq(0).attr('id') == \"footer\", '<code>footer</code>标签的<code>id</code>属性应为 \"footer\"。');"
         }
       ],
       "challengeType": 0,
@@ -509,8 +509,8 @@
             "  ",
             "  <img src=\"https://bit.ly/fcc-relaxing-cat\" alt=\"A cute orange cat lying on its back.\">",
             "  ",
-            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
-            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。养猫有的时候，就是介于爱与恨之间，当你钦羡别人萌宠这么可爱的时候，你一定没有想过，猫咪会到处掉毛，甚至会屯老鼠，啃鞋子，用爪子爬门，你不理它，它就挠你，你要对它发脾气，它会比你更来劲。所以，猫咪慎入，没有一定的准备，切勿随便去侍养动物。它们一旦认定你了，你就是它们的主人，如果你抛弃它们，它们必定心中重创。</p>",
             "  ",
             "</main>",
             "  ",
@@ -528,14 +528,14 @@
         "你可以在其他文本标签内嵌套链接。You can nest links within other text elements.",
         "<blockquote>&#60;p&#62;<br> Here's a &#60;a target=\"_blank\" href=\"http://freecodecamp.org\"&#62; link to freecodecamp.org&#60;/a&#62; for you to follow.<br>&#60;/p&#62;</blockquote>",
         "让我们来分解这个例子：",
-        "通常，文本是被包裹在 <code>p</code> 标签内：<br> <code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
-        "接下来是 <code>anchor</code> 标签 <code>&#60;a&#62;</code>（需要结束标记 <code>&#60;/a&#62;</code>）:<br>  <code>&#60;a&#62; ... &#60;/a&#62;</code>",
-        "<code>target</code> 是锚点标签的一个属性，它指定了会以什么方式来打开链接，属性值 <code>\"_blank\"</code> 的意思是链接会在新标签页打开。",
-        "<code>href</code> 是锚点标签的另一个属性：它指定了链接的 URL 地址：<br>  <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
-        "锚点标签内的文本：<strong>\"link to freecodecamp.org\"</strong>，会显示为一个可以点击的链接：<br>  <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
+        "通常，文本是被包裹在<code>p</code>标签内：<br><code>&#60;p&#62; Here's a ... for you to follow. &#60;/p&#62;</code>",
+        "接下来是<code>anchor</code>标签<code>&#60;a&#62;</code>（需要结束标记<code>&#60;/a&#62;</code>）:<br> <code>&#60;a&#62; ... &#60;/a&#62;</code>",
+        "<code>target</code>是锚点标签的一个属性，它指定了会以什么方式来打开链接，属性值<code>\"_blank\"</code>的意思是链接会在新标签页打开。",
+        "<code>href</code>是锚点标签的另一个属性：它指定了链接的 URL 地址：<br> <code>&#60;a href=\"http://freecodecamp.org\"> ... &#60;/a&#62;</code>",
+        "锚点标签内的文本：<strong>\"link to freecodecamp.org\"</strong>，会显示为一个可以点击的链接：<br> <code>&#60;a href=\" ... \"&#62;link to freecodecamp.org&#60;/a&#62;</code>",
         "例子的最后输出将会是这样：<br><p>Here's a <a target=\"_blank\" href=\"http://freecodecamp.org\"> link to freecodecamp.org</a> for you to follow.</p>",
         "<hr>",
-        "现在用一个新的 <code>p</code> 标签来包裹现存的 <code>a</code> 标签（必须放在 <code>main</code> 标签之后才行)。新段落的文本为：View more cat photos，其中 \"cat photos\" 是一个链接，其他是纯文本。"
+        "现在用一个新的<code>p</code>标签来包裹现存的<code>a</code>标签（必须放在<code>main</code>标签之后才行)。新段落的文本为：View more cat photos，其中 \"cat photos\" 是一个链接，其他是纯文本。"
       ],
       "tests": [
         {
@@ -598,16 +598,16 @@
       "id": "bad87fee1348bd9aedf08817",
       "title": "Make Dead Links Using the Hash Symbol",
       "description": [
-        "Sometimes you want to add <code>a</code> elements to your website before you know where they will link.",
-        "This is also handy when you're changing the behavior of a link using <code>JavaScript</code>, which we'll learn about later.",
+        "Sometimes you want to add<code>a</code>elements to your website before you know where they will link.",
+        "This is also handy when you're changing the behavior of a link using<code>JavaScript</code>, which we'll learn about later.",
         "<hr>",
-        "The current value of the <code>href</code> attribute is a link that points to \"http://freecatphotoapp.com\". Replace the <code>href</code> attribute value with a <code>#</code>, also known as a hash symbol, to create a dead link.",
-        "For example: <code>href=\"#\"</code>"
+        "The current value of the<code>href</code>attribute is a link that points to \"http://freecatphotoapp.com\". Replace the<code>href</code>attribute value with a<code>#</code>, also known as a hash symbol, to create a dead link.",
+        "For example:<code>href=\"#\"</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>a</code> element should be a dead link with the value of the <code>href</code> attribute set to \"#\".",
-          "testString": "assert($(\"a\").attr(\"href\") === \"#\", 'Your <code>a</code> element should be a dead link with the value of the <code>href</code> attribute set to \"#\".');"
+          "text": "Your<code>a</code>element should be a dead link with the value of the<code>href</code>attribute set to \"#\".",
+          "testString": "assert($(\"a\").attr(\"href\") === \"#\", 'Your<code>a</code>element should be a dead link with the value of the<code>href</code>attribute set to \"#\".');"
         }
       ],
       "challengeType": 0,
@@ -636,26 +636,26 @@
       "id": "bad87fee1348bd9aedf08820",
       "title": "Turn an Image into a Link",
       "description": [
-        "You can make elements into links by nesting them within an <code>a</code> element.",
-        "Nest your image within an <code>a</code> element. Here's an example:",
+        "You can make elements into links by nesting them within an<code>a</code>element.",
+        "Nest your image within an<code>a</code>element. Here's an example:",
         "<code>&#60;a href=\"#\"&#62;&#60;img src=\"https://bit.ly/fcc-running-cats\" alt=\"Three kittens running towards the camera.\"&#62;&#60;/a&#62;</code>",
-        "Remember to use <code>#</code> as your <code>a</code> element's <code>href</code> property in order to turn it into a dead link.",
+        "Remember to use<code>#</code>as your<code>a</code>element's<code>href</code>property in order to turn it into a dead link.",
         "<hr>",
         "Place the existing image element within an anchor element.",
         "Once you've done this, hover over your image with your cursor. Your cursor's normal pointer should become the link clicking pointer. The photo is now a link."
       ],
       "tests": [
         {
-          "text": "Nest the existing <code>img</code> element within an <code>a</code> element.",
-          "testString": "assert($(\"a\").children(\"img\").length > 0, 'Nest the existing <code>img</code> element within an <code>a</code> element.');"
+          "text": "Nest the existing<code>img</code>element within an<code>a</code>element.",
+          "testString": "assert($(\"a\").children(\"img\").length > 0, 'Nest the existing<code>img</code>element within an<code>a</code>element.');"
         },
         {
-          "text": "Your <code>a</code> element should be a dead link with a <code>href</code> attribute set to <code>#</code>.",
-          "testString": "assert(new RegExp(\"#\").test($(\"a\").children(\"img\").parent().attr(\"href\")), 'Your <code>a</code> element should be a dead link with a <code>href</code> attribute set to <code>#</code>.');"
+          "text": "Your<code>a</code>element should be a dead link with a<code>href</code>attribute set to<code>#</code>.",
+          "testString": "assert(new RegExp(\"#\").test($(\"a\").children(\"img\").parent().attr(\"href\")), 'Your<code>a</code>element should be a dead link with a<code>href</code>attribute set to<code>#</code>.');"
         },
         {
-          "text": "Make sure each of your <code>a</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure each of your <code>a</code> elements has a closing tag.');"
+          "text": "Make sure each of your<code>a</code>elements has a closing tag.",
+          "testString": "assert(code.match(/<\\/a>/g) && code.match(/<a/g) && code.match(/<\\/a>/g).length === code.match(/<a/g).length, 'Make sure each of your<code>a</code>elements has a closing tag.');"
         }
       ],
       "challengeType": 0,
@@ -684,30 +684,30 @@
       "id": "bad87fee1348bd9aedf08827",
       "title": "Create a Bulleted Unordered List",
       "description": [
-        "HTML has a special element for creating <code>unordered lists</code>, or bullet point style lists.",
-        "Unordered lists start with an opening <code>&#60;ul&#62;</code> element, followed by any number of <code>&#60;li&#62;</code> elements. Finally, unordered lists close with a <code>&#60;/ul&#62;</code>",
+        "HTML has a special element for creating<code>unordered lists</code>, or bullet point style lists.",
+        "Unordered lists start with an opening<code>&#60;ul&#62;</code>element, followed by any number of<code>&#60;li&#62;</code>elements. Finally, unordered lists close with a<code>&#60;/ul&#62;</code>",
         "For example: ",
         "<blockquote>&#60;ul&#62;<br>&nbsp;&nbsp;&#60;li&#62;milk&#60;/li&#62;<br>&nbsp;&nbsp;&#60;li&#62;cheese&#60;/li&#62;<br>&#60;/ul&#62;</blockquote>",
         "would create a bullet point style list of \"milk\" and \"cheese\".",
         "<hr>",
-        "Remove the last two <code>p</code> elements and create an unordered list of three things that cats love at the bottom of the page."
+        "Remove the last two<code>p</code>elements and create an unordered list of three things that cats love at the bottom of the page."
       ],
       "tests": [
         {
-          "text": "Create a <code>ul</code> element.",
-          "testString": "assert($(\"ul\").length > 0, 'Create a <code>ul</code> element.');"
+          "text": "Create a<code>ul</code>element.",
+          "testString": "assert($(\"ul\").length > 0, 'Create a<code>ul</code>element.');"
         },
         {
-          "text": "You should have three <code>li</code> elements within your <code>ul</code> element.",
-          "testString": "assert($(\"ul li\").length > 2, 'You should have three <code>li</code> elements within your <code>ul</code> element.');"
+          "text": "You should have three<code>li</code>elements within your<code>ul</code>element.",
+          "testString": "assert($(\"ul li\").length > 2, 'You should have three<code>li</code>elements within your<code>ul</code>element.');"
         },
         {
-          "text": "Make sure your <code>ul</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/ul>/gi) && code.match(/<ul/gi) && code.match(/<\\/ul>/gi).length === code.match(/<ul/gi).length, 'Make sure your <code>ul</code> element has a closing tag.');"
+          "text": "Make sure your<code>ul</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/ul>/gi) && code.match(/<ul/gi) && code.match(/<\\/ul>/gi).length === code.match(/<ul/gi).length, 'Make sure your<code>ul</code>element has a closing tag.');"
         },
         {
-          "text": "Make sure your <code>li</code> elements have closing tags.",
-          "testString": "assert(code.match(/<\\/li>/gi) && code.match(/<li[\\s>]/gi) && code.match(/<\\/li>/gi).length === code.match(/<li[\\s>]/gi).length, 'Make sure your <code>li</code> elements have closing tags.');"
+          "text": "Make sure your<code>li</code>elements have closing tags.",
+          "testString": "assert(code.match(/<\\/li>/gi) && code.match(/<li[\\s>]/gi) && code.match(/<\\/li>/gi).length === code.match(/<li[\\s>]/gi).length, 'Make sure your<code>li</code>elements have closing tags.');"
         }
       ],
       "challengeType": 0,
@@ -736,8 +736,8 @@
       "id": "bad87fee1348bd9aedf08828",
       "title": "Create an Ordered List",
       "description": [
-        "HTML has another special element for creating <code>ordered lists</code>, or numbered lists.",
-        "Ordered lists start with an opening <code>&#60;ol&#62;</code> element, followed by any number of <code>&#60;li&#62;</code> elements. Finally, ordered lists close with a <code>&#60;/ol&#62;</code>",
+        "HTML has another special element for creating<code>ordered lists</code>, or numbered lists.",
+        "Ordered lists start with an opening<code>&#60;ol&#62;</code>element, followed by any number of<code>&#60;li&#62;</code>elements. Finally, ordered lists close with a<code>&#60;/ol&#62;</code>",
         "For example:",
         "<blockquote>&#60;ol&#62;<br>&nbsp;&nbsp;&#60;li&#62;Garfield&#60;/li&#62;<br>&nbsp;&nbsp;&#60;li&#62;Sylvester&#60;/li&#62;<br>&#60;/ol&#62;</blockquote>",
         "would create a numbered list of \"Garfield\" and \"Sylvester\".",
@@ -754,32 +754,32 @@
           "testString": "assert((/Things cats love:/i).test($(\"ul\").prev().text()), 'You should have an unordered list for \"Things cats love:\"');"
         },
         {
-          "text": "You should have only one <code>ul</code> element.",
-          "testString": "assert.equal($(\"ul\").length, 1, 'You should have only one <code>ul</code> element.');"
+          "text": "You should have only one<code>ul</code>element.",
+          "testString": "assert.equal($(\"ul\").length, 1, 'You should have only one<code>ul</code>element.');"
         },
         {
-          "text": "You should have only one <code>ol</code> element.",
-          "testString": "assert.equal($(\"ol\").length, 1, 'You should have only one <code>ol</code> element.');"
+          "text": "You should have only one<code>ol</code>element.",
+          "testString": "assert.equal($(\"ol\").length, 1, 'You should have only one<code>ol</code>element.');"
         },
         {
-          "text": "You should have three <code>li</code> elements within your <code>ul</code> element.",
-          "testString": "assert.equal($(\"ul li\").length, 3, 'You should have three <code>li</code> elements within your <code>ul</code> element.');"
+          "text": "You should have three<code>li</code>elements within your<code>ul</code>element.",
+          "testString": "assert.equal($(\"ul li\").length, 3, 'You should have three<code>li</code>elements within your<code>ul</code>element.');"
         },
         {
-          "text": "You should have three <code>li</code> elements within your <code>ol</code> element.",
-          "testString": "assert.equal($(\"ol li\").length, 3, 'You should have three <code>li</code> elements within your <code>ol</code> element.');"
+          "text": "You should have three<code>li</code>elements within your<code>ol</code>element.",
+          "testString": "assert.equal($(\"ol li\").length, 3, 'You should have three<code>li</code>elements within your<code>ol</code>element.');"
         },
         {
-          "text": "Make sure your <code>ul</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/ul>/g) && code.match(/<\\/ul>/g).length === code.match(/<ul>/g).length, 'Make sure your <code>ul</code> element has a closing tag.');"
+          "text": "Make sure your<code>ul</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/ul>/g) && code.match(/<\\/ul>/g).length === code.match(/<ul>/g).length, 'Make sure your<code>ul</code>element has a closing tag.');"
         },
         {
-          "text": "Make sure your <code>ol</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/ol>/g) && code.match(/<\\/ol>/g).length === code.match(/<ol>/g).length, 'Make sure your <code>ol</code> element has a closing tag.');"
+          "text": "Make sure your<code>ol</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/ol>/g) && code.match(/<\\/ol>/g).length === code.match(/<ol>/g).length, 'Make sure your<code>ol</code>element has a closing tag.');"
         },
         {
-          "text": "Make sure your <code>li</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/li>/g) && code.match(/<li>/g) && code.match(/<\\/li>/g).length === code.match(/<li>/g).length, 'Make sure your <code>li</code> element has a closing tag.');"
+          "text": "Make sure your<code>li</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/li>/g) && code.match(/<li>/g) && code.match(/<\\/li>/g).length === code.match(/<li>/g).length, 'Make sure your<code>li</code>element has a closing tag.');"
         }
       ],
       "challengeType": 0,
@@ -818,14 +818,14 @@
         "Input elements are a convenient way to get input from your user.",
         "You can create a text input like this:",
         "<code>&#60;input type=\"text\"&#62;</code>",
-        "Note that <code>input</code> elements are self-closing.",
+        "Note that<code>input</code>elements are self-closing.",
         "<hr>",
-        "Create an <code>input</code> element of type <code>text</code> below your lists."
+        "Create an<code>input</code>element of type<code>text</code>below your lists."
       ],
       "tests": [
         {
-          "text": "Your app should have an <code>input</code> element of type <code>text</code>.",
-          "testString": "assert($(\"input[type=text]\").length > 0, 'Your app should have an <code>input</code> element of type <code>text</code>.');"
+          "text": "Your app should have an<code>input</code>element of type<code>text</code>.",
+          "testString": "assert($(\"input[type=text]\").length > 0, 'Your app should have an<code>input</code>element of type<code>text</code>.');"
         }
       ],
       "challengeType": 0,
@@ -866,24 +866,24 @@
       "id": "bad87fee1348bd9aedf08830",
       "title": "Add Placeholder Text to a Text Field",
       "description": [
-        "Placeholder text is what is displayed in your <code>input</code> element before your user has inputted anything.",
+        "Placeholder text is what is displayed in your<code>input</code>element before your user has inputted anything.",
         "You can create placeholder text like so:",
         "<code>&#60;input type=\"text\" placeholder=\"this is placeholder text\"&#62;</code>",
         "<hr>",
-        "Set the <code>placeholder</code> value of your text <code>input</code> to \"cat photo URL\"."
+        "Set the<code>placeholder</code>value of your text<code>input</code>to \"cat photo URL\"."
       ],
       "tests": [
         {
-          "text": "Add a <code>placeholder</code> attribute to the existing text <code>input</code> element.",
-          "testString": "assert($(\"input[placeholder]\").length > 0, 'Add a <code>placeholder</code> attribute to the existing text <code>input</code> element.');"
+          "text": "Add a<code>placeholder</code>attribute to the existing text<code>input</code>element.",
+          "testString": "assert($(\"input[placeholder]\").length > 0, 'Add a<code>placeholder</code>attribute to the existing text<code>input</code>element.');"
         },
         {
           "text": "Set the value of your placeholder attribute to \"cat photo URL\".",
           "testString": "assert($(\"input\") && $(\"input\").attr(\"placeholder\") && $(\"input\").attr(\"placeholder\").match(/cat\\s+photo\\s+URL/gi), 'Set the value of your placeholder attribute to \"cat photo URL\".');"
         },
         {
-          "text": "The finished <code>input</code> element should have valid syntax.",
-          "testString": "assert($(\"input[type=text]\").length > 0 && code.match(/<input((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[\\^'\">\\s]+))?)+\\s*|\\s*)\\/?>/gi), 'The finished <code>input</code> element should have valid syntax.');"
+          "text": "The finished<code>input</code>element should have valid syntax.",
+          "testString": "assert($(\"input[type=text]\").length > 0 && code.match(/<input((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[\\^'\">\\s]+))?)+\\s*|\\s*)\\/?>/gi), 'The finished<code>input</code>element should have valid syntax.');"
         }
       ],
       "challengeType": 0,
@@ -924,24 +924,24 @@
       "id": "bad87fee1348bd9aede08830",
       "title": "Create a Form Element",
       "description": [
-        "You can build web forms that actually submit data to a server using nothing more than pure HTML. You can do this by specifying an action on your <code>form</code> element.",
+        "You can build web forms that actually submit data to a server using nothing more than pure HTML. You can do this by specifying an action on your<code>form</code>element.",
         "For example:",
         "<code>&#60;form action=\"/url-where-you-want-to-submit-form-data\"&#62;&#60;/form&#62;</code>",
         "<hr>",
-        "Nest your text field inside a <code>form</code> element, and add the <code>action=\"/submit-cat-photo\"</code> attribute to the form element."
+        "Nest your text field inside a<code>form</code>element, and add the<code>action=\"/submit-cat-photo\"</code>attribute to the form element."
       ],
       "tests": [
         {
-          "text": "Nest your text input element within a <code>form</code> element.",
-          "testString": "assert($(\"form\") && $(\"form\").children(\"input\") && $(\"form\").children(\"input\").length > 0, 'Nest your text input element within a <code>form</code> element.');"
+          "text": "Nest your text input element within a<code>form</code>element.",
+          "testString": "assert($(\"form\") && $(\"form\").children(\"input\") && $(\"form\").children(\"input\").length > 0, 'Nest your text input element within a<code>form</code>element.');"
         },
         {
-          "text": "Make sure your <code>form</code> has an <code>action</code> attribute which is set to <code>/submit-cat-photo</code>",
-          "testString": "assert($(\"form\").attr(\"action\") === \"/submit-cat-photo\", 'Make sure your <code>form</code> has an <code>action</code> attribute which is set to <code>/submit-cat-photo</code>');"
+          "text": "Make sure your<code>form</code>has an<code>action</code>attribute which is set to<code>/submit-cat-photo</code>",
+          "testString": "assert($(\"form\").attr(\"action\") === \"/submit-cat-photo\", 'Make sure your<code>form</code>has an<code>action</code>attribute which is set to<code>/submit-cat-photo</code>');"
         },
         {
-          "text": "Make sure your <code>form</code> element has well-formed open and close tags.",
-          "testString": "assert(code.match(/<\\/form>/g) && code.match(/<form [^<]*>/g) && code.match(/<\\/form>/g).length === code.match(/<form [^<]*>/g).length, 'Make sure your <code>form</code> element has well-formed open and close tags.');"
+          "text": "Make sure your<code>form</code>element has well-formed open and close tags.",
+          "testString": "assert(code.match(/<\\/form>/g) && code.match(/<form [^<]*>/g) && code.match(/<\\/form>/g).length === code.match(/<form [^<]*>/g).length, 'Make sure your<code>form</code>element has well-formed open and close tags.');"
         }
       ],
       "challengeType": 0,
@@ -981,11 +981,11 @@
       "id": "bad87fee1348bd9aedd08830",
       "title": "Add a Submit Button to a Form",
       "description": [
-        "Let's add a <code>submit</code> button to your form. Clicking this button will send the data from your form to the URL you specified with your form's <code>action</code> attribute.",
+        "Let's add a<code>submit</code>button to your form. Clicking this button will send the data from your form to the URL you specified with your form's<code>action</code>attribute.",
         "Here's an example submit button:",
         "<code>&#60;button type=\"submit\"&#62;this button submits the form&#60;/button&#62;</code>",
         "<hr>",
-        "Add a button as the last element of your <code>form</code> element with a type of <code>submit</code>, and \"Submit\" as its text."
+        "Add a button as the last element of your<code>form</code>element with a type of<code>submit</code>, and \"Submit\" as its text."
       ],
       "tests": [
         {
@@ -993,16 +993,16 @@
           "testString": "assert($(\"form\").children(\"button\").length > 0, 'Your form should have a button inside it.');"
         },
         {
-          "text": "Your submit button should have the attribute <code>type</code> set to <code>submit</code>.",
-          "testString": "assert($(\"button\").attr(\"type\") === \"submit\", 'Your submit button should have the attribute <code>type</code> set to <code>submit</code>.');"
+          "text": "Your submit button should have the attribute<code>type</code>set to<code>submit</code>.",
+          "testString": "assert($(\"button\").attr(\"type\") === \"submit\", 'Your submit button should have the attribute<code>type</code>set to<code>submit</code>.');"
         },
         {
           "text": "Your submit button should only have the text \"Submit\".",
           "testString": "assert($(\"button\").text().match(/^\\s*submit\\s*$/gi), 'Your submit button should only have the text \"Submit\".');"
         },
         {
-          "text": "Make sure your <code>button</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure your <code>button</code> element has a closing tag.');"
+          "text": "Make sure your<code>button</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure your<code>button</code>element has a closing tag.');"
         }
       ],
       "challengeType": 0,
@@ -1046,15 +1046,15 @@
       "title": "Use HTML5 to Require a Field",
       "description": [
         "You can require specific form fields so that your user will not be able to submit your form until he or she has filled them out.",
-        "For example, if you wanted to make a text input field required, you can just add the attribute <code>required</code> within your <code>input</code> element, like this: <code>&#60;input type=\"text\" required&#62;</code>",
+        "For example, if you wanted to make a text input field required, you can just add the attribute<code>required</code>within your<code>input</code>element, like this:<code>&#60;input type=\"text\" required&#62;</code>",
         "<hr>",
-        "Make your text <code>input</code> a <code>required</code> field, so that your user can't submit the form without completing this field.",
+        "Make your text<code>input</code>a<code>required</code>field, so that your user can't submit the form without completing this field.",
         "Then try to submit the form without inputting any text. See how your HTML5 form notifies you that the field is required?"
       ],
       "tests": [
         {
-          "text": "Your text <code>input</code> element should have the <code>required</code> attribute.",
-          "testString": "assert($(\"input\").prop(\"required\"), 'Your text <code>input</code> element should have the <code>required</code> attribute.');"
+          "text": "Your text<code>input</code>element should have the<code>required</code>attribute.",
+          "testString": "assert($(\"input\").prop(\"required\"), 'Your text<code>input</code>element should have the<code>required</code>attribute.');"
         }
       ],
       "challengeType": 0,
@@ -1097,16 +1097,16 @@
       "id": "bad87fee1348bd9aedf08834",
       "title": "Create a Set of Radio Buttons",
       "description": [
-        "You can use <code>radio buttons</code> for questions where you want the user to only give you one answer out of multiple options.",
-        "Radio buttons are a type of <code>input</code>.",
-        "Each of your radio buttons can be nested within its own <code>label</code> element. By wrapping an <code>input</code> element inside of a <code>label</code> element it will automatically associate the radio button input with the label element surrounding it.",
-        "All related radio buttons should have the same <code>name</code> attribute to create a radio button group. By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group ensuring only one answer is provided by the user.",
+        "You can use<code>radio buttons</code>for questions where you want the user to only give you one answer out of multiple options.",
+        "Radio buttons are a type of<code>input</code>.",
+        "Each of your radio buttons can be nested within its own<code>label</code>element. By wrapping an<code>input</code>element inside of a<code>label</code>element it will automatically associate the radio button input with the label element surrounding it.",
+        "All related radio buttons should have the same<code>name</code>attribute to create a radio button group. By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group ensuring only one answer is provided by the user.",
         "Here's an example of a radio button:",
         "<blockquote>&#60;label&#62; <br>&nbsp;&nbsp;&#60;input type=\"radio\" name=\"indoor-outdoor\"&#62;Indoor <br>&#60;/label&#62;</blockquote>",
-        "It is considered best practice to set a <code>for</code> attribute on the <code>label</code> element, with a value that matches the value of the <code>id</code> attribute of the <code>input</code> element. This allows assistive technologies to create a linked relationship between the label and the child <code>input</code> element. For example:",
+        "It is considered best practice to set a<code>for</code>attribute on the<code>label</code>element, with a value that matches the value of the<code>id</code>attribute of the<code>input</code>element. This allows assistive technologies to create a linked relationship between the label and the child<code>input</code>element. For example:",
         "<blockquote>&#60;label for=\"indoor\"&#62; <br>&nbsp;&nbsp;&#60;input id=\"indoor\" type=\"radio\" name=\"indoor-outdoor\"&#62;Indoor <br>&#60;/label&#62;</blockquote>",
         "<hr>",
-        "Add a pair of radio buttons to your form, each nested in its own label element. One should have the option of <code>indoor</code> and the other should have the option of <code>outdoor</code>. Both should share the <code>name</code> attribute of <code>indoor-outdoor</code> to create a radio group."
+        "Add a pair of radio buttons to your form, each nested in its own label element. One should have the option of<code>indoor</code>and the other should have the option of<code>outdoor</code>. Both should share the<code>name</code>attribute of<code>indoor-outdoor</code>to create a radio group."
       ],
       "tests": [
         {
@@ -1114,28 +1114,28 @@
           "testString": "assert($('input[type=\"radio\"]').length > 1, 'Your page should have two radio button elements.');"
         },
         {
-          "text": "Give your radio buttons the <code>name</code> attribute of <code>indoor-outdoor</code>.",
-          "testString": "assert($('label > input[type=\"radio\"]').filter(\"[name='indoor-outdoor']\").length > 1, 'Give your radio buttons the <code>name</code> attribute of <code>indoor-outdoor</code>.');"
+          "text": "Give your radio buttons the<code>name</code>attribute of<code>indoor-outdoor</code>.",
+          "testString": "assert($('label > input[type=\"radio\"]').filter(\"[name='indoor-outdoor']\").length > 1, 'Give your radio buttons the<code>name</code>attribute of<code>indoor-outdoor</code>.');"
         },
         {
-          "text": "Each of your two radio button elements should be nested in its own <code>label</code> element.",
-          "testString": "assert($('label > input[type=\"radio\"]:only-child').length > 1, 'Each of your two radio button elements should be nested in its own <code>label</code> element.');"
+          "text": "Each of your two radio button elements should be nested in its own<code>label</code>element.",
+          "testString": "assert($('label > input[type=\"radio\"]:only-child').length > 1, 'Each of your two radio button elements should be nested in its own<code>label</code>element.');"
         },
         {
-          "text": "Make sure each of your <code>label</code> elements has a closing tag.",
-          "testString": "assert((code.match(/<\\/label>/g) && code.match(/<label/g) && code.match(/<\\/label>/g).length === code.match(/<label/g).length), 'Make sure each of your <code>label</code> elements has a closing tag.');"
+          "text": "Make sure each of your<code>label</code>elements has a closing tag.",
+          "testString": "assert((code.match(/<\\/label>/g) && code.match(/<label/g) && code.match(/<\\/label>/g).length === code.match(/<label/g).length), 'Make sure each of your<code>label</code>elements has a closing tag.');"
         },
         {
-          "text": "One of your radio buttons should have the label <code>indoor</code>.",
-          "testString": "assert($(\"label\").text().match(/indoor/gi), 'One of your radio buttons should have the label <code>indoor</code>.');"
+          "text": "One of your radio buttons should have the label<code>indoor</code>.",
+          "testString": "assert($(\"label\").text().match(/indoor/gi), 'One of your radio buttons should have the label<code>indoor</code>.');"
         },
         {
-          "text": "One of your radio buttons should have the label <code>outdoor</code>.",
-          "testString": "assert($(\"label\").text().match(/outdoor/gi), 'One of your radio buttons should have the label <code>outdoor</code>.');"
+          "text": "One of your radio buttons should have the label<code>outdoor</code>.",
+          "testString": "assert($(\"label\").text().match(/outdoor/gi), 'One of your radio buttons should have the label<code>outdoor</code>.');"
         },
         {
-          "text": "Each of your radio button elements should be added within the <code>form</code> tag.",
-          "testString": "assert($(\"label\").parent().get(0).tagName.match('FORM'), 'Each of your radio button elements should be added within the <code>form</code> tag.');"
+          "text": "Each of your radio button elements should be added within the<code>form</code>tag.",
+          "testString": "assert($(\"label\").parent().get(0).tagName.match('FORM'), 'Each of your radio button elements should be added within the<code>form</code>tag.');"
         }
       ],
       "challengeType": 0,
@@ -1178,15 +1178,15 @@
       "id": "bad87fee1348bd9aedf08835",
       "title": "Create a Set of Checkboxes",
       "description": [
-        "Forms commonly use <code>checkboxes</code> for questions that may have more than one answer.",
-        "Checkboxes are a type of <code>input</code>",
-        "Each of your checkboxes can be nested within its own <code>label</code> element. By wrapping an <code>input</code> element inside of a <code>label</code> element it will automatically associate the checkbox input with the label element surrounding it.",
-        "All related checkbox inputs should have the same <code>name</code> attribute.",
-        "It is considered best practice to explicitly define the relationship between a checkbox <code>input</code> and its corresponding <code>label</code> by setting the <code>for</code> attribute on the <code>label</code> element to match the <code>id</code> attribute of the associated <code>input</code> element.",
+        "Forms commonly use<code>checkboxes</code>for questions that may have more than one answer.",
+        "Checkboxes are a type of<code>input</code>",
+        "Each of your checkboxes can be nested within its own<code>label</code>element. By wrapping an<code>input</code>element inside of a<code>label</code>element it will automatically associate the checkbox input with the label element surrounding it.",
+        "All related checkbox inputs should have the same<code>name</code>attribute.",
+        "It is considered best practice to explicitly define the relationship between a checkbox<code>input</code>and its corresponding<code>label</code>by setting the<code>for</code>attribute on the<code>label</code>element to match the<code>id</code>attribute of the associated<code>input</code>element.",
         "Here's an example of a checkbox:",
         "<code>&#60;label for=\"loving\"&#62;&#60;input id=\"loving\" type=\"checkbox\" name=\"personality\"&#62; Loving&#60;/label&#62;</code>",
         "<hr>",
-        "Add to your form a set of three checkboxes. Each checkbox should be nested within its own <code>label</code> element. All three should share the <code>name</code> attribute of <code>personality</code>."
+        "Add to your form a set of three checkboxes. Each checkbox should be nested within its own<code>label</code>element. All three should share the<code>name</code>attribute of<code>personality</code>."
       ],
       "tests": [
         {
@@ -1194,16 +1194,16 @@
           "testString": "assert($('input[type=\"checkbox\"]').length > 2, 'Your page should have three checkbox elements.');"
         },
         {
-          "text": "Each of your three checkbox elements should be nested in its own <code>label</code> element.",
-          "testString": "assert($('label > input[type=\"checkbox\"]:only-child').length > 2, 'Each of your three checkbox elements should be nested in its own <code>label</code> element.');"
+          "text": "Each of your three checkbox elements should be nested in its own<code>label</code>element.",
+          "testString": "assert($('label > input[type=\"checkbox\"]:only-child').length > 2, 'Each of your three checkbox elements should be nested in its own<code>label</code>element.');"
         },
         {
-          "text": "Make sure each of your <code>label</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/label>/g) && code.match(/<label/g) && code.match(/<\\/label>/g).length === code.match(/<label/g).length, 'Make sure each of your <code>label</code> elements has a closing tag.');"
+          "text": "Make sure each of your<code>label</code>elements has a closing tag.",
+          "testString": "assert(code.match(/<\\/label>/g) && code.match(/<label/g) && code.match(/<\\/label>/g).length === code.match(/<label/g).length, 'Make sure each of your<code>label</code>elements has a closing tag.');"
         },
         {
-          "text": "Give your checkboxes the <code>name</code> attribute of <code>personality</code>.",
-          "testString": "assert($('label > input[type=\"checkbox\"]').filter(\"[name='personality']\").length > 2, 'Give your checkboxes the <code>name</code> attribute of <code>personality</code>.');"
+          "text": "Give your checkboxes the<code>name</code>attribute of<code>personality</code>.",
+          "testString": "assert($('label > input[type=\"checkbox\"]').filter(\"[name='personality']\").length > 2, 'Give your checkboxes the<code>name</code>attribute of<code>personality</code>.');"
         }
       ],
       "challengeType": 0,
@@ -1248,11 +1248,11 @@
       "id": "bad87fee1348bd9aedd08835",
       "title": "Check Radio Buttons and Checkboxes by Default",
       "description": [
-        "You can set a checkbox or radio button to be checked by default using the <code>checked</code> attribute.",
+        "You can set a checkbox or radio button to be checked by default using the<code>checked</code>attribute.",
         "To do this, just add the word \"checked\" to the inside of an input element. For example:",
         "<code>&#60;input type=\"radio\" name=\"test-name\" checked&#62;</code>",
         "<hr>",
-        "Set the first of your <code>radio buttons</code> and the first of your <code>checkboxes</code> to both be checked by default."
+        "Set the first of your<code>radio buttons</code>and the first of your<code>checkboxes</code>to both be checked by default."
       ],
       "tests": [
         {
@@ -1309,29 +1309,29 @@
       "id": "bad87fee1348bd9aede08835",
       "title": "Nest Many Elements within a Single div Element",
       "description": [
-        "The <code>div</code> element, also known as a division element, is a general purpose container for other elements.",
-        "The <code>div</code> element is probably the most commonly used HTML element of all.",
-        "Just like any other non-self-closing element, you can open a <code>div</code> element with <code>&#60;div&#62;</code> and close it on another line with <code>&#60;/div&#62;</code>.",
+        "The<code>div</code>element, also known as a division element, is a general purpose container for other elements.",
+        "The<code>div</code>element is probably the most commonly used HTML element of all.",
+        "Just like any other non-self-closing element, you can open a<code>div</code>element with<code>&#60;div&#62;</code>and close it on another line with<code>&#60;/div&#62;</code>.",
         "<hr>",
-        "Nest your \"Things cats love\" and \"Things cats hate\" lists all within a single <code>div</code> element.",
-        "Hint: Try putting your opening <code>div</code> tag above your \"Things cats love\" <code>p</code> element and your closing <code>div</code> tag after your closing <code>ol</code> tag so that both of your lists are within one <code>div</code>."
+        "Nest your \"Things cats love\" and \"Things cats hate\" lists all within a single<code>div</code>element.",
+        "Hint: Try putting your opening<code>div</code>tag above your \"Things cats love\"<code>p</code>element and your closing<code>div</code>tag after your closing<code>ol</code>tag so that both of your lists are within one<code>div</code>."
       ],
       "tests": [
         {
-          "text": "Nest your <code>p</code> elements inside your <code>div</code> element.",
-          "testString": "assert($(\"div\").children(\"p\").length > 1, 'Nest your <code>p</code> elements inside your <code>div</code> element.');"
+          "text": "Nest your<code>p</code>elements inside your<code>div</code>element.",
+          "testString": "assert($(\"div\").children(\"p\").length > 1, 'Nest your<code>p</code>elements inside your<code>div</code>element.');"
         },
         {
-          "text": "Nest your <code>ul</code> element inside your <code>div</code> element.",
-          "testString": "assert($(\"div\").children(\"ul\").length > 0, 'Nest your <code>ul</code> element inside your <code>div</code> element.');"
+          "text": "Nest your<code>ul</code>element inside your<code>div</code>element.",
+          "testString": "assert($(\"div\").children(\"ul\").length > 0, 'Nest your<code>ul</code>element inside your<code>div</code>element.');"
         },
         {
-          "text": "Nest your <code>ol</code> element inside your <code>div</code> element.",
-          "testString": "assert($(\"div\").children(\"ol\").length > 0, 'Nest your <code>ol</code> element inside your <code>div</code> element.');"
+          "text": "Nest your<code>ol</code>element inside your<code>div</code>element.",
+          "testString": "assert($(\"div\").children(\"ol\").length > 0, 'Nest your<code>ol</code>element inside your<code>div</code>element.');"
         },
         {
-          "text": "Make sure your <code>div</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<\\/div>/g).length === code.match(/<div>/g).length, 'Make sure your <code>div</code> element has a closing tag.');"
+          "text": "Make sure your<code>div</code>element has a closing tag.",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<\\/div>/g).length === code.match(/<div>/g).length, 'Make sure your<code>div</code>element has a closing tag.');"
         }
       ],
       "challengeType": 0,
@@ -1382,26 +1382,26 @@
       "description": [
         "The challenges so far have covered specific HTML tags and their uses. However, there are a few elements that give overall structure to your page, and should be included in every HTML document.",
         "At the top of your document, you need to tell the browser which version of HTML your page is using. HTML is an evolving language, and is updated regularly. Most major browsers support the latest specification, which is HTML5. However, older web pages may use previous versions of the language.",
-        "You tell the browser this information by adding the <code>&lt;!DOCTYPE ...&gt;</code> tag on the first line, where the \"<code>...</code>\" part is the version of HTML. For HTML5, you use <code>&lt;!DOCTYPE html&gt;</code>.",
-        "The <code>!</code> and uppercase <code>DOCTYPE</code> is important, especially for older browsers. The <code>html</code> is not case sensitive.",
-        "Next, the rest of your HTML code needs to be wrapped in <code>html</code> tags. The opening <code>&lt;html&gt;</code> goes directly below the <code>&lt;!DOCTYPE html&gt;</code> line, and the closing <code>&lt;/html&gt;</code> goes at the end of the page.",
+        "You tell the browser this information by adding the<code>&lt;!DOCTYPE ...&gt;</code>tag on the first line, where the \"<code>...</code>\" part is the version of HTML. For HTML5, you use<code>&lt;!DOCTYPE html&gt;</code>.",
+        "The<code>!</code>and uppercase<code>DOCTYPE</code>is important, especially for older browsers. The<code>html</code>is not case sensitive.",
+        "Next, the rest of your HTML code needs to be wrapped in<code>html</code>tags. The opening<code>&lt;html&gt;</code>goes directly below the<code>&lt;!DOCTYPE html&gt;</code>line, and the closing<code>&lt;/html&gt;</code>goes at the end of the page.",
         "Here's an example of the page structure:",
         "<blockquote>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&lt;!-- Your HTML code goes here --&gt;<br>&lt;/html&gt;</blockquote>",
         "<hr>",
-        "Add a <code>DOCTYPE</code> tag for HTML5 to the top of the blank HTML document in the code editor. Under it, add opening and closing <code>html</code> tags, which wrap around an <code>h1</code> element. The heading can include any text."
+        "Add a<code>DOCTYPE</code>tag for HTML5 to the top of the blank HTML document in the code editor. Under it, add opening and closing<code>html</code>tags, which wrap around an<code>h1</code>element. The heading can include any text."
       ],
       "tests": [
         {
-          "text": "Your code should include a <code>&lt;!DOCTYPE html&gt;</code> tag.",
-          "testString": "assert(code.match(/<!DOCTYPE\\s+?html\\s*?>/gi), 'Your code should include a <code>&lt;!DOCTYPE html&gt;</code> tag.');"
+          "text": "Your code should include a<code>&lt;!DOCTYPE html&gt;</code>tag.",
+          "testString": "assert(code.match(/<!DOCTYPE\\s+?html\\s*?>/gi), 'Your code should include a<code>&lt;!DOCTYPE html&gt;</code>tag.');"
         },
         {
-          "text": "There should be one <code>html</code> element.",
-          "testString": "assert($('html').length == 1, 'There should be one <code>html</code> element.');"
+          "text": "There should be one<code>html</code>element.",
+          "testString": "assert($('html').length == 1, 'There should be one<code>html</code>element.');"
         },
         {
-          "text": "The <code>html</code> tags should wrap around one <code>h1</code> element.",
-          "testString": "assert(code.match(/<html>\\s*?<h1>\\s*?.*?\\s*?<\\/h1>\\s*?<\\/html>/gi), 'The <code>html</code> tags should wrap around one <code>h1</code> element.');"
+          "text": "The<code>html</code>tags should wrap around one<code>h1</code>element.",
+          "testString": "assert(code.match(/<html>\\s*?<h1>\\s*?.*?\\s*?<\\/h1>\\s*?<\\/html>/gi), 'The<code>html</code>tags should wrap around one<code>h1</code>element.');"
         }
       ],
       "challengeType": 0,
@@ -1420,37 +1420,37 @@
       "id": "587d78aa367417b2b2512aec",
       "title": "Define the Head and Body of an HTML Document",
       "description": [
-        "You can add another level of organization in your HTML document within the <code>html</code> tags with the <code>head</code> and <code>body</code> elements. Any markup with information about your page would go into the <code>head</code> tag. Then any markup with the content of the page (what displays for a user) would go into the <code>body</code> tag.",
-        "Metadata elements, such as <code>link</code>, <code>meta</code>, <code>title</code>, and <code>style</code>, typically go inside the <code>head</code> element.",
+        "You can add another level of organization in your HTML document within the<code>html</code>tags with the<code>head</code>and<code>body</code>elements. Any markup with information about your page would go into the<code>head</code>tag. Then any markup with the content of the page (what displays for a user) would go into the<code>body</code>tag.",
+        "Metadata elements, such as<code>link</code>,<code>meta</code>,<code>title</code>, and<code>style</code>, typically go inside the<code>head</code>element.",
         "Here's an example of a page's layout:",
         "<blockquote>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- metadata elements --&gt;<br>&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- page contents --&gt;<br>&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</blockquote>",
         "<hr>",
-        "Edit the markup so there's a <code>head</code> and a <code>body</code>. The <code>head</code> element should only include the <code>title</code>, and the <code>body</code> element should only include the <code>h1</code> and <code>p</code>."
+        "Edit the markup so there's a<code>head</code>and a<code>body</code>. The<code>head</code>element should only include the<code>title</code>, and the<code>body</code>element should only include the<code>h1</code>and<code>p</code>."
       ],
       "tests": [
         {
-          "text": "There should be only one <code>head</code> element on the page.",
-          "testString": "assert($('head').length == 1, 'There should be only one <code>head</code> element on the page.');"
+          "text": "There should be only one<code>head</code>element on the page.",
+          "testString": "assert($('head').length == 1, 'There should be only one<code>head</code>element on the page.');"
         },
         {
-          "text": "There should be only one <code>body</code> element on the page.",
-          "testString": "assert($('body').length == 1, 'There should be only one <code>body</code> element on the page.');"
+          "text": "There should be only one<code>body</code>element on the page.",
+          "testString": "assert($('body').length == 1, 'There should be only one<code>body</code>element on the page.');"
         },
         {
-          "text": "The <code>head</code> element should be a child of the <code>html</code> element.",
-          "testString": "assert($('html').children('head').length == 1, 'The <code>head</code> element should be a child of the <code>html</code> element.');"
+          "text": "The<code>head</code>element should be a child of the<code>html</code>element.",
+          "testString": "assert($('html').children('head').length == 1, 'The<code>head</code>element should be a child of the<code>html</code>element.');"
         },
         {
-          "text": "The <code>body</code> element should be a child of the <code>html</code> element.",
-          "testString": "assert($('html').children('body').length == 1, 'The <code>body</code> element should be a child of the <code>html</code> element.');"
+          "text": "The<code>body</code>element should be a child of the<code>html</code>element.",
+          "testString": "assert($('html').children('body').length == 1, 'The<code>body</code>element should be a child of the<code>html</code>element.');"
         },
         {
-          "text": "The <code>head</code> element should wrap around the <code>title</code> element.",
-          "testString": "assert(code.match(/<head>\\s*?<title>\\s*?.*?\\s*?<\\/title>\\s*?<\\/head>/gi), 'The <code>head</code> element should wrap around the <code>title</code> element.');"
+          "text": "The<code>head</code>element should wrap around the<code>title</code>element.",
+          "testString": "assert(code.match(/<head>\\s*?<title>\\s*?.*?\\s*?<\\/title>\\s*?<\\/head>/gi), 'The<code>head</code>element should wrap around the<code>title</code>element.');"
         },
         {
-          "text": "The <code>body</code> element should wrap around both the <code>h1</code> and <code>p</code> elements.",
-          "testString": "assert($('body').children('h1').length == 1 && $('body').children('p').length == 1, 'The <code>body</code> element should wrap around both the <code>h1</code> and <code>p</code> elements.');"
+          "text": "The<code>body</code>element should wrap around both the<code>h1</code>and<code>p</code>elements.",
+          "testString": "assert($('body').children('h1').length == 1 && $('body').children('p').length == 1, 'The<code>body</code>element should wrap around both the<code>h1</code>and<code>p</code>elements.');"
         }
       ],
       "challengeType": 0,
@@ -1465,7 +1465,7 @@
             "  <title>The best page ever</title>",
             "  ",
             "  <h1>The best page ever</h1>",
-            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。 在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
+            "  <p>在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。在大家心目中，猫是慵懒和可爱的化身，它可以睡饱了再起来吃饭，可以逗趣小耗子，可以卖得了萌，使得了坏，这样百变的小怪兽就集结在一只宠物上，怎能不惹人怜爱。</p>",
             "  ",
             "</html>  "
           ],
