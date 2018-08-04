@@ -12,30 +12,30 @@
         "<code>var complexArr = [1, 5, \"2\", \"Word\", {\"name\": \"James\"}];</code>",
         "通常浏览器会自动地为数组分配合适的内存空间，同时内存大小也会随着你增删元素而发生变化。",
         "然而，在一些对高性能有要求以及有不同数据类型的情况下，有时需要更精确地给一个数组分配内存空间。",
-        "<dfn>Typed arrays</dfn> 就是解决这类问题的一种方案。 我们可以精确地给一个数组分配内存空间。如下列表说明了这种数组能够存放的数据类型以及不同数据类型所占据的字节数。",
+        "<dfn>Typed arrays</dfn>就是解决这类问题的一种方案。我们可以精确地给一个数组分配内存空间。如下列表说明了这种数组能够存放的数据类型以及不同数据类型所占据的字节数。",
         "<table class='table table-striped'><tr><th>类型</th><th>元素所占字节数</th></tr><tr><td><code>Int8Array</code></td><td>1</td></tr><tr><td><code>Uint8Array</code></td><td>1</td></tr><tr><td><code>Uint8ClampedArray</code></td><td>1</td></tr><tr><td><code>Int16Array</code></td><td>2</td></tr><tr><td><code>Uint16Array</code></td><td>2</td></tr><tr><td><code>Int32Array</code></td><td>4</td></tr><tr><td><code>Uint32Array</code></td><td>4</td></tr><tr><td><code>Float32Array</code></td><td>4</td></tr><tr><td><code>Float64Array</code></td><td>8</td></tr></table>",
         "有两种方式可以创这类数组。其中一种是直接创建，如下代码创建了一个长度为 3 的 <code>Int16Array</code>.",
         "<blockquote>var i8 = new Int16Array(3);<br>console.log(i8);<br>// Returns [0, 0, 0]</blockquote>",
-        "我们也可以通过创建 <dfn>buffer</dfn> 的方式来决定一个数组要容纳多少元素。",
+        "我们也可以通过创建<dfn>buffer</dfn>的方式来决定一个数组要容纳多少元素。",
         "<strong>注意</strong><br>我们可以通过分配上面列出的多个 bytes 的倍数来创建一个和上方代码中一样的类型数组。",
         "<blockquote>// Create same Int16Array array differently<br>var byteSize = 6; // Needs to be multiple of 2<br>var buffer = new ArrayBuffer(byteSize);<br>var i8View = new Int16Array(buffer);<br>buffer.byteLength; // Returns 6<br>i8View.byteLength; // Returns 6<br>console.log(i8View); // Returns [0, 0, 0]</blockquote>",
-        " <dfn>Buffers</dfn> 是一类存储数据的特定类型对象。我们需要通过创建视图来访问这类对象，不能直接访问。",
+        "<dfn>Buffers</dfn>是一类存储数据的特定类型对象。我们需要通过创建视图来访问这类对象，不能直接访问。",
         "<blockquote>i8View[0] = 42;<br>console.log(i8View); // Returns [42, 0, 0]</blockquote>",
-        "<strong>注意</strong><br>Typed Arrays并没有像<code>.pop()</code>或<code>.push()</code>这些一般数组拥有的方法。 使用 <code>Array.isArray()</code> 方法对Typed Arrays做判断返回的是fail，而非true。因为更加简洁，所以更便于简化JavaScript引擎去实现这类数组。",
+        "<strong>注意</strong><br>Typed Arrays 并没有像<code>.pop()</code>或<code>.push()</code>这些一般数组拥有的方法。使用<code>Array.isArray()</code>方法对 Typed Arrays 做判断返回的是 fail ，而非 true。因为更加简洁，所以更便于简化 JavaScript 引擎去实现这类数组。",
         "<hr>",
-        "先创建一个64个字节的<code>buffer</code>，再创建一个类型是 <code>Int32Array</code> 名称叫做 <code>i32View</code>的视图。"
+        "先创建一个64个字节的<code>buffer</code>，再创建一个类型是<code>Int32Array</code>名称叫做<code>i32View</code>的视图。"
       ],
       "tests": [
         {
-          "text": " <code>buffer</code> 应该有64个字节的长度。",
+          "text": "<code>buffer</code>应该有 64 个字节的长度。",
           "testString": "assert(buffer.byteLength === 64, 'Your <code>buffer</code> should be 64 bytes large.');"
         },
         {
-          "text": " <code>i32View</code> 视图应该有64个字节的长度。",
+          "text": "<code>i32View</code>视图应该有 64 个字节的长度。",
           "testString": "assert(i32View.byteLength === 64, 'Your <code>i32View</code> view of your buffer should be 64 bytes large.');"
         },
         {
-          "text": " <code>i32View</code> 视图应该能容纳16个元素。",
+          "text": "<code>i32View</code>视图应该能容纳 16 个元素。",
           "testString": "assert(i32View.length === 16, 'Your <code>i32View</code> view of your buffer should be 16 elements long.');"
         }
       ],
@@ -62,30 +62,30 @@
       "id": "587d8250367417b2b2512c5e",
       "title": "Learn how a Stack Works",
       "description": [
-        "You are probably familiar with stack of books on your table. You have likely used the undo feature of a text editor. You are also probably used to hitting the back button on your phone to go back to the previous view in your app.",
-        "You know what they all have in common? They all store the data in a way so that you can traverse backwards.",
-        "The topmost book in the stack was the one that was put there last. If you remove that book from your stack's top, you would expose the book that was put there before the last book and so on.",
-        "If you think about it, in all the above examples, you are getting <dfn>Last-In-First-Out</dfn> type of service. We will try to mimic this with our code.",
-        "This data storage scheme is called a <dfn>Stack</dfn>. In particular, we would have to implement the <code>push()</code> method that pushes JavaScript objects at the top of the stack; and <code>pop()</code> method, that removes the JavaScript object that's at the top of the stack at the current moment.",
+        "我们应该都熟悉桌上摆着一堆书的场景，也可能应该使用过文本编辑器的撤销功能，同样我们也点击过手机应用里面的返回键来回到上一个操作页面。",
+        "这些场景是否有什么共同之处呢？他们都以某种方式存储了数据，我们都可以通过一些操作返回到之前的状态。",
+        "最上层的书总是最后放上去的。如果我们拿走了最上面的书，我们看到的总是倒数第二本放上去的书。",
+        "我们会发现上述例子都遵循“后进先出”这个原则。而我们会在代码中实现这种原则。",
+        "我们将这种类型的数据存储方式称为“栈”。需要特别注意的是我们通常使用<code>push()</code>方法将 JavaScript 对象压入栈中，同时使用<code>pop()</code>方法将 JavaScript 对象弹出栈。",
         "<hr>",
-        "Here we have a stack of homework assignments represented as an array: <code>\"BIO12\"</code> is at the base, and <code>\"PSY44\"</code> is at the top of the stack.",
-        "Modify the given array and treat it like a <code>stack</code> using the JavaScript methods mentioned above. Remove the top element <code>\"PSY44\"</code> from the stack. Then add <code>\"CS50\"</code> to be the new top element of the stack."
+        "现在我们以数组形式存储一些作业信息，<code>\"BIO12\"</code>位于栈底，而<code>\"PSY44\"</code>则处于栈顶。",
+        "现在用上文提到的 JavaScript 方法来对这个数组做栈操作。移除栈顶元素<code>\"PSY44\"</code>，然后再往栈顶添加<code>\"CS50\"</code>元素。"
       ],
       "tests": [
         {
-          "text": "<code>homeworkStack</code> should only contain 4 elements.",
+          "text": "<code>homeworkStack</code>应该包含4个元素。",
           "testString": "assert(homeworkStack.length === 4, '<code>homeworkStack</code> should only contain 4 elements.');"
         },
         {
-          "text": "The last element in <code>homeworkStack</code> should be <code>\"CS50\"</code>.",
+          "text": "<code>homeworkStack</code>当中最后一个元素应该是<code>\"CS50\"</code>。",
           "testString": "assert(homeworkStack[3] === 'CS50', 'The last element in <code>homeworkStack</code> should be <code>\"CS50\"</code>.');"
         },
         {
-          "text": "<code>homeworkStack</code> should not contain <code>\"PSY44\"</code>.",
+          "text": "<code>homeworkStack</code>当中不存在<code>\"PSY44\"</code>元素。",
           "testString": "assert(homeworkStack.indexOf('PSY44') === -1, '<code>homeworkStack</code> should not contain <code>\"PSY44\"</code>.');"
         },
         {
-          "text": "The initial declaration of the <code>homeworkStack</code> should not be changed.",
+          "text": "对于<code>homeworkStack</code>的命名不能有变动。",
           "testString": "assert(code.match(/=/g).length === 1 && /homeworkStack\\s*=\\s*\\[\"BIO12\"\\s*,\\s*\"HIS80\"\\s*,\\s*\"MAT122\"\\s*,\\s*\"PSY44\"\\]/.test(code), 'The initial declaration of the <code>homeworkStack</code> should not be changed.');"
         }
       ],
@@ -100,7 +100,7 @@
           "name": "index",
           "contents": [
             "var homeworkStack = [\"BIO12\",\"HIS80\",\"MAT122\",\"PSY44\"];",
-            "// Only change code below this line",
+            "// 请在本行下方输入代码",
             ""
           ],
           "head": [],
@@ -112,48 +112,48 @@
       "id": "587d8250367417b2b2512c5f",
       "title": "Create a Stack Class",
       "description": [
-        "In the last section, we talked about what a stack is and how we can use an array to represent a stack. In this section, we will be creating our own stack class.",
-        "Although you can use arrays to create stacks, sometimes it is best to limit the amount of control we have with our stacks.",
-        "Apart from the <code>push</code> and <code>pop</code> method, stacks have other useful methods. Let's add a <code>peek</code>, <code>isEmpty</code>, and <code>clear</code> method to our stack class.",
-        "Instructions",
-        "Write a <code>push</code> method that pushes an element to the top of the stack, a <code>pop</code> method that removes the element on the top of the stack, a <code>peek</code> method that looks at the first element in the stack, an <code>isEmpty</code> method that checks if the stack is empty, and a <code>clear</code> method that removes all elements from the stack.",
-        "Normally stacks don't have this, but we've added a <code>print</code> helper method that console logs the collection."
+        "通过上一章内容我们了解了栈的概念，同时也学习了如何使用数组去表示一个栈。本章内容我们学习如何创建一个栈类。",
+        "虽然我们可以使用数组来创建栈，但是有时我们需要控制栈拥有哪些方法。",
+        "除了<code>push</code>和<code>pop</code>两个方法，栈还拥有其它一些很有效的方法。现在我们来给栈类添加<code>peek</code>, <code>isEmpty</code>以及<code>clear</code>这些方法。",
+        "提示",
+        "编写能够将元素压入栈顶的<code>push</code>方法，移除栈顶元素的<code>pop</code>方法，查看栈中第一个元素的<code>peek</code>方法，判断栈是否为空的<code>isEmpty</code>方法，以及清空栈内容所有元素的<code>clear</code>方法。",
+        "通常栈类当中并没有这些方法，但是我们在右侧代码区为栈类添加了一个<code>print</code>方法，该方法会打印出集合。"
       ],
       "tests": [
         {
-          "text": "Your <code>Stack</code> class should have a <code>push</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>push</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.push === 'function')}()), 'Your <code>Stack</code> class should have a <code>push</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>pop</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>pop</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.pop === 'function')}()), 'Your <code>Stack</code> class should have a <code>pop</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>peek</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>peek</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.peek === 'function')}()), 'Your <code>Stack</code> class should have a <code>peek</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>isEmpty</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.isEmpty === 'function')}()), 'Your <code>Stack</code> class should have a <code>isEmpty</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>clear</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>clear</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.clear === 'function')}()), 'Your <code>Stack</code> class should have a <code>clear</code> method.');"
         },
         {
-          "text": "The <code>peek</code> method should return the top element of the stack",
+          "text": "<code>peek</code>方法应该返回栈顶元素。",
           "testString": "assert((function(){var test = new Stack();  test.push('CS50'); return (test.peek() === 'CS50')}()), 'The <code>peek</code> method should return the top element of the stack');"
         },
         {
-          "text": "The <code>pop</code> method should remove and return the top element of the stack",
+          "text": "<code>pop</code>方法应该移除栈顶元素并返回该元素。",
           "testString": "assert((function(){var test = new Stack(); test.push('CS50'); return (test.pop() === 'CS50');}()), 'The <code>pop</code> method should remove and return the top element of the stack');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return true if a stack does not contain any elements",
+          "text": "当栈内没有元素时<code>isEmpty</code>方法返回true。",
           "testString": "assert((function(){var test = new Stack(); return test.isEmpty()}()), 'The <code>isEmpty</code> method should return true if a stack does not contain any elements');"
         },
         {
-          "text": "The <code>clear</code> method should remove all element from the stack",
+          "text": "<code>clear</code>移除栈内所有元素。",
           "testString": "assert((function(){var test = new Stack();  test.push('CS50'); test.clear(); return (test.isEmpty())}()), 'The <code>clear</code> method should remove all element from the stack');"
         }
       ],
@@ -172,9 +172,9 @@
             "    this.print = function() {",
             "        console.log(collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -186,47 +186,47 @@
       "id": "587d8250367417b2b2512c60",
       "title": "Create a Queue Class",
       "description": [
-        "Like stacks, queues are a collection of elements. But unlike stacks, queues follow the FIFO (First-In First-Out) principle. Elements added to a queue are pushed to the tail, or the end, of the queue, and only the element at the front of the queue is allowed to be removed.",
-        "We could use an array to represent a queue, but just like stacks, we want to limit the amount of control we have over our queues.",
-        "The two main methods of a queue class is the enqueue and the dequeue method. The enqueue method pushes an element to the tail of the queue, and the dequeue method removes and returns the element at the front of the queue. Other useful methods are the front, size, and isEmpty methods.",
-        "Instructions",
-        "Write an enqueue method that pushes an element to the tail of the queue, a dequeue method that removes and returns the front element, a front method that lets us see the front element, a size method that shows the length, and an isEmpty method to check if the queue is empty."
+        "如同栈一样，队列也是一系列元素的集合。但是与栈不同的是队列遵循的是 FIFO (First-In First-Out 先进先出) 原则。新增元素会被添加进队列尾部，队列中元素的移除是头部操作。",
+        "我们可以使用数组像创建栈那样来创建队列，同时我们也希望控制队列中拥有哪些操作方法。",
+        " enqueue 和 dequeue 是队列类当中两个最主要的方法。入队方法将元素推入队尾，而出队方法将队首元素移动并返回该元素。其它比较实用的方法有 front,size 以及 isEmpty 方法。",
+        "提示",
+        "编写 enqueue 方法，该方法将新元素推入队尾；编写 dequeue 方法，该方法移除并返回队首元素；编写 front 方法，该方法返回队首元素；编写 size 方法，该方法返回队列长度；编写 isEmpty 方法，该方法判断队列是否为空。"
       ],
       "tests": [
         {
-          "text": "Your <code>Queue</code> class should have a <code>enqueue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>enqueue</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.enqueue === 'function')}()), 'Your <code>Queue</code> class should have a <code>enqueue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>dequeue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>dequeue</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.dequeue === 'function')}()), 'Your <code>Queue</code> class should have a <code>dequeue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>front</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>front</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.front === 'function')}()), 'Your <code>Queue</code> class should have a <code>front</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>size</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.size === 'function')}()), 'Your <code>Queue</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have an <code>isEmpty</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.isEmpty === 'function')}()), 'Your <code>Queue</code> class should have an <code>isEmpty</code> method.');"
         },
         {
-          "text": "The <code>dequeue</code> method should remove and return the front element of the queue",
+          "text": "<code>dequeue</code>方法应该移除并返回队首元素",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return (test.dequeue() === 'Smith')}()), 'The <code>dequeue</code> method should remove and return the front element of the queue');"
         },
         {
-          "text": "The <code>front</code> method should return value of the front element of the queue",
+          "text": "<code>front</code>方法应该返回队首元素",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); test.enqueue('John'); return (test.front() === 'Smith')}()), 'The <code>front</code> method should return value of the front element of the queue');"
         },
         {
-          "text": "The <code>size</code> method should return the length of the queue",
+          "text": "<code>size</code>方法应该返回队列长度。",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return (test.size() === 1)}()), 'The <code>size</code> method should return the length of the queue');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return <code>false</code> if there are elements in the queue",
+          "text": "当队列当中有元素时<code>isEmpty</code>方法应该返回<code>false</code>",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return !(test.isEmpty())}()), 'The <code>isEmpty</code> method should return <code>false</code> if there are elements in the queue');"
         }
       ],
@@ -245,9 +245,9 @@
             "    this.print = function() {",
             "        console.log(collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -259,41 +259,41 @@
       "id": "587d8255367417b2b2512c74",
       "title": "Create a Priority Queue Class",
       "description": [
-        "In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue in which items may have additional information which specifies their priority. This could be simply represented with an integer. Item priority will override placement order in determining the sequence items are dequeued. If an item with a higher priority is enqueued after items with lower priority, the higher priority item will be dequeued before all the others.",
-        "For instance, let’s imagine we have a priority queue with three items:",
+        "在这次挑战中我们来创建优先队列。优先队列是一种特殊类型的队列，这种队列中会有额外的信息来说明队列中元素的优先次序。这种优先次序可以使用整型数据来表示。元素的优先级会直接影响到元素的出队顺序。如果一个优先级较高的元素比较低优先级的元素后入队，但是高优先级的元素会先出队列。",
+        "举个栗子，现在有一个拥有 3 个元素的优先队列：",
         "<code>[[’kitten’, 2], [‘dog’, 2], [‘rabbit’, 2]]</code>",
-        "Here the second value (an integer) represents item priority. If we enqueue <code>[‘human’, 1]</code> with a priority of <code>1</code> (assuming lower priorities are given precedence) it would then be the first item to be dequeued. The collection would like this:",
+        "元素当中的第二个值（一个整型数字）代表它的优先级。如果我们入队<code>[‘human’, 1]</code>这个优先级为<code>1</code>的元素（这里规定数字越小优先级越高），那么这个元素在本优先队列当中会第一个出队。新的集合如下：",
         "<code>[[‘human’, 1], [’kitten’, 2], [‘dog’, 2], [‘rabbit’, 2]]</code>.",
-        "We’ve started writing a <code>PriorityQueue</code> in the code editor. You will need to add an <code>enqueue</code> method for adding items with a priority, a <code>dequeue</code> method for removing items, a <code>size</code> method to return the number of items in the queue, a <code>front</code> method to return the element at the front of the queue, and finally an <code>isEmpty</code> method that will return <code>true</code> if the queue is empty or <code>false</code> if it is not.",
-        "The <code>enqueue</code> should accept items with the format shown above (<code>['human', 1]</code>) where <code>1</code> represents the priority. The <code>dequeue</code> should return only the current item, not its priority."
+        "我们已经在代码编辑器当中编写了<code>PriorityQueue</code>。你需要添加一个<code>enqueue</code>方法，使用该方法入队的元素都带有优先级；添加一个移除元素的<code>dequeue</code>方法；添加能够返回队列中元素总数的<code>size</code>方法；添加能够返回队列头部元素的<code>front</code>方法；最后需要添加<code>isEmpty</code>方法，当队列为空时<code>isEmpty</code>方法返回<code>true</code>否则返回<code>false</code>。",
+        "<code>enqueue</code>方法接收如上 (<code>['human', 1]</code>) 这种元素，其中数字<code>1</code>表示元素优先级。<code>dequeue</code>方法应该返回的是当前元素，无需返回它的优先级。"
       ],
       "tests": [
         {
-          "text": "Your <code>Queue</code> class should have a <code>enqueue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>enqueue</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.enqueue === 'function')}()), 'Your <code>Queue</code> class should have a <code>enqueue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>dequeue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>dequeue</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.dequeue === 'function')}()), 'Your <code>Queue</code> class should have a <code>dequeue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>size</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.size === 'function')}()), 'Your <code>Queue</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have an <code>isEmpty</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.isEmpty === 'function')}()), 'Your <code>Queue</code> class should have an <code>isEmpty</code> method.');"
         },
         {
-          "text": "Your PriorityQueue should correctly keep track of the current number of items using the <code>size</code> method as items are enqueued and dequeued.",
+          "text": "当元素出队和入队时你的优先队列应该使用<code>size</code>方法实时跟踪队列当中元素的数量。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['David Brown', 2]); test.enqueue(['Jon Snow', 1]); var size1 = test.size(); test.dequeue(); var size2 = test.size(); test.enqueue(['A', 3]); test.enqueue(['B', 3]); test.enqueue(['C', 3]); return (size1 === 2 && size2 === 1 && test.size() === 4)}()), 'Your PriorityQueue should correctly keep track of the current number of items using the <code>size</code> method as items are enqueued and dequeued.');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return <code>true</code> when the queue is empty.",
+          "text": "当队列为空时<code>isEmpty</code>方法应该返回<code>true</code>。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['A', 1]); test.enqueue(['B', 1]); test.dequeue(); var first = test.isEmpty(); test.dequeue(); return (!first && test.isEmpty()); }()), 'The <code>isEmpty</code> method should return <code>true</code> when the queue is empty.');"
         },
         {
-          "text": "The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.",
+          "text": "优先队列当中高优先级的元素应该先于低优先级的元素出队，同一优先级的元素则遵循先进先出的原则。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['A', 5]); test.enqueue(['B', 5]); test.enqueue(['C', 5]); test.enqueue(['D', 3]); test.enqueue(['E', 1]); test.enqueue(['F', 7]); var result = []; result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); return result.join('') === 'EDABCF';}()), 'The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.');"
         }
       ],
@@ -313,9 +313,9 @@
             "    this.printCollection = function() {",
             "      console.log(this.collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -327,39 +327,39 @@
       "id": "587d8255367417b2b2512c75",
       "title": "Create a Circular Queue",
       "description": [
-        "In this challenge you will be creating a Circular Queue. A circular queue is basically a queue that writes to the end of a collection then begins over writing itself at the beginning of the collection. This is type of data structure has some useful applications in certain situations. For example, a circular queue can be used for streaming media. Once the queue is full, new media data simply begins to overwrite old data.",
-        "A good way to illustrate this concept is with an array:",
+        "在本次挑战中我们来创建一个循环队列。当往循环队列的尾部添加元素时新增的元素会覆盖队列当中起始位置的元素。这种数据结构在某些特定场合会有一些实际应用。比如循环队列可以用于流媒体服务，当队列满了以后新的媒体数据会从头部直接覆盖原有的数据。",
+        "下面我们用数组来给你说明循环数组这个概念：",
         "<blockquote>[1, 2, 3, 4, 5]<br> ^Read @ 0<br> ^Write @ 0</blockquote>",
-        "Here the read and write are both at position <code>0</code>. Now the queue gets 3 new records <code>a</code>, <code>b</code>, and <code>c</code>. Our queue now looks like:",
+        "读和写两个操作都从<code>0</code>这个位置开始。现在队列获取了<code>a</code>, <code>b</code>, 以及<code>c</code>这 3 个数据。新队列显示如下：",
         "<blockquote>[a, b, c, 4, 5]<br> ^Read @ 0<br>       ^Write @ 3</blockquote>",
-        "As the read head reads, it can remove values or keep them:",
+        "当读取头读取数据时，我们可以选择移除或者保留数据：",
         "<blockquote>[null, null, null, 4, 5]<br>                   ^Read @ 3<br>                   ^Write @ 3</blockquote>",
-        "Once the write reaches the end of the array it loops back to the beginning:",
+        "一旦写操作到达队列末尾时会从队列开头从新开始写入数据：",
         "<blockquote>[f, null, null, d, e]<br>                ^Read @ 3<br> ^Write @ 1</blockquote>",
-        "This approach requires a constant amount of memory but allows files of a much larger size to be processed.",
-        "Instructions:",
-        "In this challenge we will implement a circular queue. The circular queue should provide <code>enqueue</code> and <code>dequeue</code> methods which allow you to read from and write to the queue. The class itself should also accept an integer which you can use to specify the size of the queue when you create it. We've written the starting version of this class for you in the code editor. When you enqueue items to the queue, the write pointer should advance forward and loop back to the beginning once it reaches the end of the queue. Likewise, the read pointer should advance forward as you dequeue items. The write pointer should not be allowed to move past the read pointer (our class won't let you overwrite data you haven't read yet) and the read pointer should not be able to advance past data you have written.",
-        "In addition, the <code>enqueue</code> method should return the item you enqueued if it is successfully and otherwise return <code>null</code>. Similarly, when you dequeue an item it should be returned and if you cannot dequeue you should return <code>null</code>."
+        "虽然这种数据结构有着固定的内存空间，但是却能够处理空间大于该内存大小的文件。",
+        "提示：",
+        "在本次挑战中我们来实现一个循环队列。该循环队列应该有<code>enqueue</code>和<code>dequeue</code>这两个方法，通过这两个方法我们从队列中读取以及写入数据。这个类当中应该含有一个整型数据，我们通过这个数据来定义队列的长度。我们已经在编辑器当中为你写好了这个循环队列的初始版本。当你往队列当中插入数据时书写头需要前移一个位置，而如果书写头到达队列的末尾的话则需要回到队列头部重新开始写入操作。类似的，在进行出队操作时读取头也应该向前移动。书写头的位置不应该越过读取头（我们的类当中不允许发生一个数据未经读取就已经被覆盖的情况发生），同时读取头也不能越过已经写入的数据。",
+        "此外，当成功入队一个元素时<code>enqueue</code>方法应该返回该入队元素，否则就要返回<code>null</code>。同样，当出队一个元素时该元素应该被返回，否则就应该返回<code>null</code>。"
       ],
       "tests": [
         {
-          "text": "The <code>enqueue</code> method adds items to the circular queue.",
+          "text": "<code>enqueue</code>方法将元素添加进循环队列。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); var print = test.print(); return print[0] === 17 && print[1] === 32 && print[2] === 591; })(), 'The <code>enqueue</code> method adds items to the circular queue.');"
         },
         {
-          "text": "You cannot enqueue items past the read pointer.",
+          "text": "入队元素不能越过读取头。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); test.enqueue(13); test.enqueue(25); test.enqueue(59); var print = test.print(); return print[0] === 17 && print[1] === 32 && print[2] === 591; })(), 'You cannot enqueue items past the read pointer.');"
         },
         {
-          "text": "The <code>dequeue</code> method dequeues items from the queue.",
+          "text": "<code>dequeue</code>方法让元素出队。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); return test.dequeue() === 17 && test.dequeue() === 32 && test.dequeue() === 591; })(), 'The <code>dequeue</code> method dequeues items from the queue.');"
         },
         {
-          "text": "After an item is dequeued its position in the queue should be reset to <code>null</code>.",
+          "text": "一个元素出队之后该位置应该被重置为<code>null</code>。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(672); test.dequeue(); test.dequeue(); var print = test.print(); return print[0] === null && print[1] === null && print[2] === 672; })(), 'After an item is dequeued its position in the queue should be reset to <code>null</code>.');"
         },
         {
-          "text": "Trying to dequeue past the write pointer returns <code>null</code> and does not advance the write pointer.",
+          "text": "尝试出队书写头时会返回<code>null</code>，同时不要越过书写头。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); return test.dequeue() === 17 && test.dequeue() === 32 && test.dequeue() === 591 && test.dequeue() === null && test.dequeue() === null && test.dequeue() === null && test.dequeue() === null && test.enqueue(100) === 100 && test.dequeue() === 100; })(), 'Trying to dequeue past the write pointer returns <code>null</code> and does not advance the write pointer.');"
         }
       ],
@@ -395,15 +395,15 @@
             "",
             "",
             "   enqueue(item) {",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "   }",
             "",
             "   dequeue() {",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "   }",
             "}"
           ],
