@@ -1,19 +1,19 @@
 # Introduction to the Debugging Challenges #
 
-Debugging is a valuable and (unfortunately) necessary tool for programmers. It follows the testing phase of checking if your code works as intended, and discovering it does not. Debugging is the process of finding exactly what isn't working and fixing it. After spending time creating a brilliant block of code, it is tough realizing it may have errors. These issues generally come in three forms: 1) syntax errors that prevent a program from running, 2) runtime errors when code fails to execute or has unexpected behavior, and 3) semantic (or logical) errors when code doesn't do what it's meant to.
+对程序员来说，调试是一种非常有用并且必不可少到技能。在测试阶段，通过调试检查代码是否按预期执行。调试就是找 bug 然后修复 bug 的过程。你花时间写了一段漂亮的代码，感觉良好很难看出有错误。 代码中的错误通常有三种情形：1）语法错误导致程序停止运行，2）代码无法执行或具有意外行为导致运行时错误，以及 3）代码有语义（逻辑）错误，没有实现原来的意图。
 
-Modern code editors (and experience) can help identify syntax errors. Semantic and runtime errors are harder to find. They may cause your program to crash, make it run forever, or give incorrect output. Think of debugging as trying to understand why your code is behaving the way it is.
+主流的代码编辑器（还有你的经验）可以帮你发现语法错误。语义和运行时错误会难找一点。这些错误可能会导致程序崩溃，死循环，或者输出错误的结果。调试就是去理解代码为什么会出现这样的错误。
 
-Example of a syntax error - often detected by the code editor:
+语法错误的示例 - 通常会被代码编辑器检测到：
 
 ```
 funtion willNotWork( {
   console.log("Yuck");
 }
-// "function" keyword is misspelled and there's a missing parenthesis
+// "function" 关键字拼写错误而且在最后缺少括号
 ```
 
-Here's an example of a runtime error - often detected while the program executes:
+以下是运行时错误的示例 - 通常在程序执行时检测到：
 
 ```
 function loopy() {
@@ -21,21 +21,21 @@ function loopy() {
     console.log("Hello, world!");
   }
 }
-// Calling loopy starts an infinite loop, which may crash your browser
+// 调用 loopy 函数会进入一个死循环，这可能会导致浏览器崩溃。
 ```
 
-Example of a semantic error - often detected after testing code output:
+语义错误的示例 - 通常在测试代码输出结果时被检测到：
 
 ```
 function calcAreaOfRect(w, h) {
-  return w + h; // This should be w * h
+  return w + h; // 应该是 w * h
 }
 let myRectArea = calcAreaOfRect(2, 3);
-// Correct syntax and the program executes, but this gives the wrong answer
+// 语法和执行过程都没错，但是结果是错的。
 ```
 
-Debugging is frustrating, but it helps to develop (and follow) a step-by-step approach to review your code. This means checking the intermediate values and types of variables to see if they are what they should be. You can start with a simple process of elimination.
+调试会让人抓狂，但它有助于开发（并遵循）逐步审查代码的方法。检查变量在程序运行过程中的值和类型是否正确。你可以从一个简单的消除过程开始。
 
-For example, if function A works and returns what it's supposed to, then function B may have the issue. Or start checking values in a block of code from the middle to try to cut the search space in half. A problem in one spot indicates a bug in the first half of the code. If not, it's likely in the second.
+例如，如果函数 A 正常执行并返回正确的值，那么函数 B 可能有问题。或者从整段代码中间开始检查代码中的值，将检查的区间先排除一半，如果出现了 bug 说明代码前半部分存在错误，如果没有，说明代码后半部分存在错误。
 
-This section will cover a couple helpful tools to find bugs, and some of the common forms they take. Fortunately, debugging is a learnable skill that just requires a little patience and practice to master.
+本节将介绍一些有用的工具来查找 bug，以及常见的使用情形。 好消息是，调试是一项可学习的技能，只需一点耐心和练习就能掌握。
