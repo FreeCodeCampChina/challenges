@@ -15,17 +15,22 @@
 
 * 把**你的 fork** 克隆到本地。
   ```bash
-  git clone https://github.com/your_name/challenges.git  # 注意，`your_name` 是你的 github ID。
+  git clone https://github.com/your_name/challenges.git  # 注意，your_name 是你的 github ID。
   ```
 * 切换到 challenges 文件夹。
   ```bash
   cd challenges
   ```
+* 如果你没有关联过上游，请先：
+  ```bash
+  git remote add upstream https://github.com/FreeCodeCampChina/challenges.git
+  ```
 * 根据你在翻译的项目名称或者你正在做的事情，新建分支。
   ```bash
-  # 建议每次都从 translate 分支建立新的分支
+  # 建议每次都基于 upstream 的 translate 分支新建你的分支
   # 请参考后面的“常见问题”
-  git checkout -b your_branch_name  #  `your_branch_name` 是你的分支名
+  git fetch upstream
+  git checkout -b your_branch_name upstream/translate  # 其中 your_branch_name 是你的分支名
   ```
 * 在本地进行代码或文件修改。
 
@@ -235,7 +240,7 @@
 
 </details>
 
-<details><summary><b>我已经开了 PR，但代码历史记录很乱，而且文件改动包含了不是我改的东西，如何修复？（多见于曾经在这个分支上用过 `pull` 命令，现在使用 `pull --rebase` 的情况，见下文分析）</b></summary>
+<details><summary><b>我已经开了 PR，但代码历史记录很乱，而且文件改动包含了不是我改的东西，如何修复？（多见于曾经在这个分支上用过 pull 命令，现在使用 pull --rebase 的情况，见下文分析）</b></summary>
 
   如果对 git 不是很熟悉（特别是 `git brease -i` 以及 `rebase` 命令的原理），重建一个新的分支，然后把当前这个分支里属于你的 file change 给 apply 过去，再用新的分支开 PR 是最省事的做法。
   
