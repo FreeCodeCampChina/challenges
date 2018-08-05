@@ -64,36 +64,36 @@
       "id": "5895f70cf9fc0f352b528e65",
       "title": "Set up Passport",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-advancednode/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-advancednode/'>GitHub</a>.",
-        "It's time to set up <em>Passport</em> so we can finally start allowing a user to register or login to an account! In addition to Passport, we will use Express-session to handle sessions. Using this middleware saves the session id as a cookie in the client and allows us to access the session data using that id on the server. This way we keep personal account information out of the cookie used by the client to verify to our server they are authenticated and just keep the <em>key</em> to access the data stored on the server.",
-        "To set up Passport for use in your project, you will need to add it as a dependency first in your package.json. <code>\"passport\": \"^0.3.2\"</code>",
-        "In addition, add Express-session as a dependency now as well. Express-session has a ton of advanced features you can use but for now we're just going to use the basics! <code>\"express-session\": \"^1.15.0\"</code>",
-        "You will need to set up the session settings now and initialize Passport. Be sure to first create the variables 'session' and 'passport' to require 'express-session' and 'passport' respectively.",
-        "To set up your express app to use use the session we'll define just a few basic options. Be sure to add 'SESSION_SECRET' to your .env file and give it a random value. This is used to compute the hash used to encrypt your cookie!",
+        "注意, 这个项目建立在  <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-advancednode/'>Glitch</a> 上的启动项目中，也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-advancednode/'>GitHub</a> 上克隆。",
+        "现在我们来创建 <em>Passport</em>，最终可以允许一个用户注册或登录账户。除了 Passport，我们会用 Express-session 来处理会话。在客户端用这个中间件来储存会话 id 作为 cookie 并且通过服务器上的 id 访问会话数据。通过这种方式，我们可以用客户端的 cookie 到服务端验证身份，从而得到个人账户信息，保存  <em>key</em>  来获取存储在服务器上的数据。",
+        "为了在你的项目中创建 Passport 来用，首先你需要在你的 package.json 文件中添加依赖。 <code>\"passport\": \"^0.3.2\"</code>",
+        "此外，还需要添加 Express-session 作为依赖。 Express-session 有许多你可以用的高级特性，但我们现在暂时使用一些基础即可。 <code>\"express-session\": \"^1.15.0\"</code>",
+        "你需要建立会话设置，初始化 Passport。请先确定分别创建了变量 “session” 和 “passport” 来引入 “express-session” and “passport”。",
+        "为了设置你的 express app 可以使用会话，我们要定义一些基础的选项。请确认在你的 .env 文件中添加了 “SESSION_SECRET”，并且创建了一些值。这是计算hash来加密你的 cookie。",
         "<pre>app.use(session({\n  secret: process.env.SESSION_SECRET,\n  resave: true,\n  saveUninitialized: true,\n}));</pre>",
-        "As well you can go ahead and tell your express app to <b>use</b> 'passport.initialize()' and 'passport.session()'. (For example, <code>app.use(passport.initialize());</code>)",
-        "Submit your page when you think you've got it right. If you're running into errors, you can check out the project completed up to this point <a href='https://gist.github.com/JosephLivengood/338a9c5a326923c3826a666d430e65c3'>here</a>."
+        "还有，你可以先告诉你的 express app 去使用 “passport.initialize()” 和 “passport.session()”。（例如，<code>app.use(passport.initialize());</code>）",
+        "思考好后就可以提交你的页面了。如果运行出错，你可以在这儿 <a href='https://gist.github.com/JosephLivengood/338a9c5a326923c3826a666d430e65c3'>here</a> 检查项目的完成情况。"
       ],
       "tests": [
         {
-          "text": "Passort and Express-session are dependencies",
+          "text": "Passort and Express-session 是依赖",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/_api/package.json') .then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'passport', 'Your project should list \"passport\" as a dependency'); assert.property(packJson.dependencies, 'express-session', 'Your project should list \"express-session\" as a dependency'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/_api/package.json') .then(data => { var packJson = JSON.parse(data); assert.property(packJson.dependencies, 'passport', '你的项目应使用 \"passport\" 作为依赖'); assert.property(packJson.dependencies, 'express-session', 'Your project should list \"express-session\" as a dependency'); }, xhr => { throw new Error(xhr.statusText); })"
         },
         {
           "text": "Dependencies correctly required",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /require.*(\"|')passport(\"|')/gi, 'You should have required passport'); assert.match(data, /require.*(\"|')express-session(\"|')/gi, 'You should have required express-session'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /require.*(\"|')passport(\"|')/gi, 'You should have required passport'); assert.match(data, /require.*(\"|')express-session(\"|')/gi, '你的项目应引入 express-session'); }, xhr => { throw new Error(xhr.statusText); })"
         },
         {
           "text": "Express app uses new dependencies",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /passport.initialize/gi, 'Your express app should use \"passport.initialize()\"'); assert.match(data, /passport.session/gi, 'Your express app should use \"passport.session()\"'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /passport.initialize/gi, '你的 express app 应使用 \"passport.initialize()\"'); assert.match(data, /passport.session/gi, '你的 express app 应使用 \"passport.session()\"'); }, xhr => { throw new Error(xhr.statusText); })"
         },
         {
           "text": "Session and session secret correctly set up",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /secret:( |)process.env.SESSION_SECRET/gi, 'Your express app should have express-session set up with your secret as process.env.SESSION_SECRET'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/_api/server.js') .then(data => { assert.match(data, /secret:( |)process.env.SESSION_SECRET/gi, '你的 express app 应设置 express-session 并将 process.env.SESSION_SECRET 作为加密'); }, xhr => { throw new Error(xhr.statusText); })"
         }
       ],
       "solutions": [],
