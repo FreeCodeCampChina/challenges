@@ -8,7 +8,7 @@
       "id": "bd7158d8c442eddfaeb5bd10",
       "title": "Show the Local Weather",
       "description": [
-        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/bELRjV target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/bELRjV' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "<strong>要求 #1:</strong> 不要看示例项目中的代码。自己想办法解决问题。",
         "<strong>要求 #2:</strong>满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>。你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> 我可以看到我当前位置的天气。",
@@ -27,7 +27,7 @@
       "id": "bd7158d8c442eddfaeb5bd19",
       "title": "Build a Wikipedia Viewer",
       "description": [
-        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/wGqEga/ target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/wGqEga/' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列 <a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>。你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong>我可以在搜索框中进行搜索，并查看相应的维基百科条目。",
         "<strong>需求:</strong> 我可以通过一个按钮来查看一条随机的维基百科条目。",
@@ -46,7 +46,7 @@
       "id": "bd7158d8c442eddfaeb5bd1f",
       "title": "Use the Twitch JSON API",
       "description": [
-        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/Myvqmo/ target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/Myvqmo/' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列 <a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>。 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can see whether freeCodeCamp is currently streaming on Twitch.tv.",
         "<strong>需求:</strong> I can click the status output and be sent directly to the freeCodeCamp's Twitch.tv channel.",
@@ -67,13 +67,13 @@
       "id": "bd7158d8c443edefaeb5bdee",
       "title": "Build an Image Search Abstraction Layer",
       "description": [
-        "<strong>Objective:</strong> Build a full stack JavaScript app that allows you to search for images like this: <a href='https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10' target='_blank'>https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10</a> and browse recent search queries like this: <a href='https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/' target='_blank'>https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/</a>. Then deploy it to Glitch.",
-        "Note that for each project, you should create a new GitHub repository and a new Glitch project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-api-development-projects'>https://freecodecamp.org/challenges/get-set-for-our-api-development-projects</a>.",
-        "Here are the specific 需求 you should implement for this project:",
+        "<strong>目标:</strong> Build a full stack JavaScript app that allows you to search for images like this: <a href='https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10' target='_blank'>https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10</a> and browse recent search queries like this: <a href='https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/' target='_blank'>https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/</a>. 然后将其部署到 Glitch.",
+        "注意：对于每一个项目，你应该创建一个新的 Github 库，并创建一个新的 Glitch 项目。 如果你忘记如何操作，请问访问 <a href='/challenges/get-set-for-our-api-development-projects'>https://freecodecamp.org/challenges/get-set-for-our-api-development-projects</a>。",
+        "以下是你应为此项目所满足的需求:",
         "<strong>需求:</strong> I can get the image URLs, alt text and page urls for a set of images relating to a given search string.",
         "<strong>需求:</strong> I can paginate through the responses by adding a ?offset=2 parameter to the URL.",
         "<strong>需求:</strong> I can get a list of the most recently submitted search strings.",
-        "Once you've finished implementing these 需求, click the \"I've completed this challenge\" button and enter the URLs for both your GitHub repository and your live app running on Glitch.",
+        "一旦你满足这些需求, 点击 \"I've completed this challenge\" 按钮并输入你的 Github 库地址和 Glitch 项目地址。",
         "你可以通过将你的项目分享到社交网络来获得反馈。."
       ],
       "tests": [],
@@ -85,11 +85,11 @@
       "id": "bd7158d8c442eedfaeb5bd1c",
       "title": "Build a Tic Tac Toe Game",
       "description": [
-        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/KzXQgy/ target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/KzXQgy/' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
-        "<strong>需求:</strong> I can play a game of Tic Tac Toe with the computer.",
-        "<strong>需求:</strong> My game will reset as soon as it's over so I can play again.",
-        "<strong>需求:</strong> I can choose whether I want to play as X or O.",
+        "<strong>需求:</strong> 我可以用电脑玩井字游戏 。",
+        "<strong>需求:</strong> 当一局游戏结束，游戏将会立刻重启，这样我可以再玩一次。",
+        "<strong>需求:</strong> 我可以选择我玩 X 还是 O。",
         "当你遇到困难时，记住<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>阅读-搜素-询问</a>。",
         "当你完成时，请点击下方的 \"I've completed this challenge\" 按钮并输入你在 CodePen 上的项目链接。",
         "你可以通过将你的项目分享到社交网络来获得反馈。."
@@ -102,7 +102,7 @@
       "id": "bd7158d8c442eddfaeb5bd1c",
       "title": "Build a Simon Game",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/Em-Ant/full/QbRyqq/' target='_blank'>https://codepen.io/freeCodeCamp/full/obYBjE</a>.",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/Em-Ant/full/QbRyqq/' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I am presented with a random series of button presses.",
         "<strong>需求:</strong> Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.",
@@ -125,7 +125,7 @@
       "id": "bd7156d8c242eddfaeb5bd13",
       "title": "Build a Camper Leaderboard",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/eZGMjp/' target='_blank'>https://codepen.io/freeCodeCamp/full/eZGMjp/</a>.",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/eZGMjp' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can see a table of the freeCodeCamp campers who've earned the most brownie points in the past 30 days.",
         "<strong>需求:</strong> I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.",
@@ -145,7 +145,7 @@
       "id": "bd7155d8c242eddfaeb5bd13",
       "title": "Build a Recipe Box",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/dNVazZ/' target='_blank'>https://codepen.io/freeCodeCamp/full/dNVazZ/</a>.",
+        "<strong>目标:</strong> 开发一个功能类似于<a href='https://codepen.io/freeCodeCamp/full/dNVazZ/' target='_blank'>此</a>的<a href='https://codepen.io' target='_blank'>CodePen.io</a>应用。",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can create recipes that have names and ingredients.",
         "<strong>需求:</strong> I can see an index view where the names of all the recipes are visible.",
@@ -154,7 +154,7 @@
         "<strong>需求:</strong> I can delete these recipes.",
         "<strong>需求:</strong> All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there.",
         "<strong>提示: </strong> You should prefix your local storage keys on CodePen, i.e. <code>_username_recipes</code>",
-        "Remember to use <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>Read-Search-Ask</a> if you get stuck.",
+        "如果你遇到困难，记住 <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>阅读-搜索-询问</a>。",
         "当你完成时，请点击下方的 \"I've completed this challenge\" 按钮并输入你在 CodePen 上的项目链接。",
         "你可以通过将你的项目分享到社交网络来获得反馈。."
       ],
@@ -167,7 +167,7 @@
       "id": "bd7154d8c242eddfaeb5bd13",
       "title": "Build the Game of Life",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/BpwMZv/' target='_blank'>https://codepen.io/freeCodeCamp/full/BpwMZv/</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/BpwMZv/' target='_blank'>https://codepen.io/freeCodeCamp/full/BpwMZv/</a>.",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> When I first arrive at the game, it will randomly generate a board and start playing.",
         "<strong>需求:</strong> I can start and stop the board.",
@@ -177,7 +177,7 @@
         "<strong>需求:</strong> Each time the board changes, I can see how many generations have gone by.",
         "<strong>提示:</strong> Here's an explanation of Conway's Game of Life from John Conway himself: <a href='https://www.youtube.com/watch?v=E8kUJL04ELA' target='_blank'>https://www.youtube.com/watch?v=E8kUJL04ELA</a>",
         "<strong>提示:</strong> Here's an overview of Conway's Game of Life with rules for your reference: <a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life' target='_blank'>https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life</a>",
-        "Remember to use <a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>Read-Search-Ask</a> if you get stuck.",
+        "如果你遇到困难，记住a href='//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help' target='_blank'>阅读-搜索-询问</a>。",
         "当你完成时，请点击下方的 \"I've completed this challenge\" 按钮并输入你在 CodePen 上的项目链接。 ",
         "你可以通过将你的项目分享到社交网络来获得反馈。."
       ],
@@ -190,7 +190,7 @@
       "id": "bd7153d8c242eddfaeb5bd13",
       "title": "Build a Roguelike Dungeon Crawler Game",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/apLXEJ/' target='_blank'>https://codepen.io/freeCodeCamp/full/apLXEJ/</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/apLXEJ/' target='_blank'>https://codepen.io/freeCodeCamp/full/apLXEJ/</a>.",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I have health, a level, and a weapon. I can pick up a better weapon. I can pick up health items.",
         "<strong>需求:</strong> All the items and enemies on the map are arranged at random.",
@@ -214,7 +214,7 @@
       "id": "bd7150d8c442eddfafb5bd1c",
       "title": "P2P Video Chat Application",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://grove-voice.glitch.me/' target='_blank'>https://grove-voice.glitch.me</a>.",
+        "<strong>目标:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://grove-voice.glitch.me/' target='_blank'>https://grove-voice.glitch.me</a>.",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> Upon arriving, the browser will prompt me to access my camera and microphone. ",
         "<strong>需求:</strong> After I give it permission, I am prompted to type in a room name.",
@@ -238,7 +238,7 @@
       "id": "bd7198d8c242eddfaeb5bd13",
       "title": "Show National Contiguity with a Force Directed Graph",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/xVopBo' target='_blank'>https://codepen.io/freeCodeCamp/full/xVopBo</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/xVopBo' target='_blank'>https://codepen.io/freeCodeCamp/full/xVopBo</a>.",
         "Fulfill the following <a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can see a Force-directed Graph that shows which countries share borders.",
         "<strong>需求:</strong> I can see each country's flag on its node.",
@@ -257,7 +257,7 @@
       "id": "bd7108d8c242eddfaeb5bd13",
       "title": "Map Data Across the Globe",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/mVEJag' target='_blank'>https://codepen.io/freeCodeCamp/full/mVEJag</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/mVEJag' target='_blank'>https://codepen.io/freeCodeCamp/full/mVEJag</a>.",
         "Fulfill the following <a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can see where all Meteorites landed on a world map.",
         "<strong>需求:</strong> I can tell the relative size of the meteorite, just by looking at the way it's represented on the map.",
@@ -276,7 +276,7 @@
       "id": "bd7158d8c443eddfaeb5bd0f",
       "title": "Manage a Book Trading Club",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://chrome-delivery.glitch.me/ /' target='_blank'>https://chrome-delivery.glitch.me</a>.",
+        "<strong>目标:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://chrome-delivery.glitch.me/ /' target='_blank'>https://chrome-delivery.glitch.me</a>.",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can view all books posted by every user.",
         "<strong>需求:</strong> I can add a new book.",
@@ -292,7 +292,7 @@
       "id": "bd7158d8c443eddfaeb5bdee",
       "title": "Build a Pinterest Clone",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://wild-song.glitch.me/' target='_blank'>https://wild-song.glitch.me</a>.",
+        "<strong>目标:</strong> Build a <a href='https://glitch.com' target='_blank'>Glitch</a> app that is functionally similar to this: <a href='https://wild-song.glitch.me/' target='_blank'>https://wild-song.glitch.me</a>.",
         "满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> As an unauthenticated user, I can login with GitHub.",
         "<strong>需求:</strong> As an authenticated user, I can link to images.",
@@ -311,7 +311,7 @@
       "id": "bd7158d8c443eddfaeb5bdff",
       "title": "Build a Nightlife Coordination App",
       "description": [
-        "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://whatsgoinontonight.herokuapp.com/' target='_blank'>http://whatsgoinontonight.herokuapp.com/</a> and deploy it to Heroku.",
+        "<strong>目标:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://whatsgoinontonight.herokuapp.com/' target='_blank'>http://whatsgoinontonight.herokuapp.com/</a> and deploy it to Heroku.",
         "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-dynamic-web-application-projects'>https://freecodecamp.com/challenges/get-set-for-our-dynamic-web-application-projects</a>.",
         "Here are the specific 需求 you should implement for this project:",
         "<strong>需求:</strong> As an unauthenticated user, I can view all bars in my area.",
@@ -330,7 +330,7 @@
       "id": "bd7158d8c443eddfaeb5bd0e",
       "title": "Chart the Stock Market",
       "description": [
-        "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://watchstocks.herokuapp.com/' target='_blank'>http://watchstocks.herokuapp.com/</a> and deploy it to Heroku.",
+        "<strong>目标:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='http://watchstocks.herokuapp.com/' target='_blank'>http://watchstocks.herokuapp.com/</a> and deploy it to Heroku.",
         "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-dynamic-web-application-projects'>https://freecodecamp.com/challenges/get-set-for-our-dynamic-web-application-projects</a>.",
         "Here are the specific 需求 you should implement for this project:",
         "<strong>需求:</strong> I can view a graph displaying the recent trend lines for each added stock.",
@@ -348,7 +348,7 @@
       "id": "bd7158d8c443eddfaeb5bdef",
       "title": "Build a Voting App",
       "description": [
-        "<strong>Objective:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='https://fcc-voting-arthow4n.herokuapp.com/' target='_blank'>https://fcc-voting-arthow4n.herokuapp.com/</a> and deploy it to Heroku.",
+        "<strong>目标:</strong> Build a full stack JavaScript app that is functionally similar to this: <a href='https://fcc-voting-arthow4n.herokuapp.com/' target='_blank'>https://fcc-voting-arthow4n.herokuapp.com/</a> and deploy it to Heroku.",
         "Note that for each project, you should create a new GitHub repository and a new Heroku project. If you can't remember how to do this, revisit <a href='/challenges/get-set-for-our-dynamic-web-application-projects'>https://freecodecamp.com/challenges/get-set-for-our-dynamic-web-application-projects</a>.",
         "Here are the specific 需求 you should implement for this project:",
         "<strong>需求:</strong> As an authenticated user, I can keep my polls and come back later to access them.",
@@ -370,7 +370,7 @@
       "id": "5a4b7fcdb66f799f199e11db",
       "title": "Build a Pong Game",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/satyamdev/full/pdMmBp' target='_blank'>https://codepen.io/satyamdev/full/pdMmBp</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/satyamdev/full/pdMmBp' target='_blank'>https://codepen.io/satyamdev/full/pdMmBp</a>.",
         "<strong>Rule #1:</strong> Don't look at the example project's code. Figure it out for yourself.",
         "<strong>Rule #2:</strong> 满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can control a paddle.",
@@ -389,7 +389,7 @@
       "id": "5a5d02bd919fcf9ca8cf46cb",
       "title": "Build a Light-Bright App",
       "description": [
-        "<strong>Objective:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/eyLYXE' target='_blank'>https://codepen.io/freeCodeCamp/full/eyLYXE</a>.",
+        "<strong>目标:</strong> Build a <a href='https://codepen.io' target='_blank'>CodePen.io</a> app that is functionally similar to this: <a href='https://codepen.io/freeCodeCamp/full/eyLYXE' target='_blank'>https://codepen.io/freeCodeCamp/full/eyLYXE</a>.",
         "<strong>Rule #1:</strong> Don't look at the example project's code. Figure it out for yourself.",
         "<strong>Rule #2:</strong> 满足下列<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>. 你可以使用任何你需要的库或 API。 发挥你自己的代码风格。",
         "<strong>需求:</strong> I can click or drag the mouse cursor to color the circles.",
