@@ -773,13 +773,13 @@
       "id": "56533eb9ac21ba0edf2244af",
       "title": "Compound Assignment With Augmented Addition",
       "description": [
-        "In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:",
+        "在编程当中，通常通过赋值来修改变量的内容。请记住，先计算<code>=</code>右边，然后把计算出来的结果赋给左边。",
         "<code>myVar = myVar + 5;</code>",
-        "to add <code>5</code> to <code>myVar</code>. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.",
-        "One such operator is the <code>+=</code> operator.",
-        "<blockquote>var myVar = 1;<br>myVar += 5;<br>console.log(myVar); // Returns 6</blockquote>",
-        "<hr>",
-        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>+=</code> operator."
+        "以上是最常见的运算赋值语句，先运算、再赋值。还有一类操作符是一步到位既做运算也赋值的。",
+        "这类操作符的其中一种就是<code>+=</code>运算符。",
+        "<blockquote>var myVar = 1;<br>myVar += 5;<br>console.log(myVar); // 返回 6</blockquote>",
+        "<hr>>",
+        "使用<code>+=</code>操作符实现同样的效果。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -787,24 +787,24 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>15</code>",
-          "testString": "assert(a === 15, '<code>a</code> should equal <code>15</code>');"
+          "text": "<code>a</code>应该等于<code>15</code>",
+          "testString": "assert(a === 15, '<code>a</code>应该等于<code>15</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>26</code>",
-          "testString": "assert(b === 26, '<code>b</code> should equal <code>26</code>');"
+          "text": "<code>b</code>应该等于<code>26</code>",
+          "testString": "assert(b === 26, '<code>b</code>应该等于<code>26</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>19</code>",
-          "testString": "assert(c === 19, '<code>c</code> should equal <code>19</code>');"
+          "text": "<code>c</code>应该等于<code>19</code>",
+          "testString": "assert(c === 19, '<code>c</code>应该等于<code>19</code>');"
         },
         {
-          "text": "You should use the <code>+=</code> operator for each variable",
-          "testString": "assert(code.match(/\\+=/g).length === 3, 'You should use the <code>+=</code> operator for each variable');"
+          "text": "你应该对每个变量使用<code>+=</code>操作符",
+          "testString": "assert(code.match(/\\+=/g).length === 3, '你应该对每个变量使用<code>+=</code>操作符');"
         },
         {
-          "text": "Do not modify the code above the line",
-          "testString": "assert(/var a = 3;/.test(code) && /var b = 17;/.test(code) && /var c = 12;/.test(code), 'Do not modify the code above the line');"
+          "text": "不要修改注释上面的代码",
+          "testString": "assert(/var a = 3;/.test(code) && /var b = 17;/.test(code) && /var c = 12;/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -818,7 +818,7 @@
             "var b = 17;",
             "var c = 12;",
             "",
-            "// Only modify code below this line",
+            "// 请只修改这条注释以下的代码",
             "",
             "a = a + 12;",
             "b = 9 + b;",
@@ -836,12 +836,12 @@
       "id": "56533eb9ac21ba0edf2244b0",
       "title": "Compound Assignment With Augmented Subtraction",
       "description": [
-        "Like the <code>+=</code> operator, <code>-=</code> subtracts a number from a variable.",
+        "与<code>+=</code>操作符类似，<code>-=</code>操作符用来对一个变量进行减法赋值操作。",
         "<code>myVar = myVar - 5;</code>",
-        "will subtract <code>5</code> from <code>myVar</code>. This can be rewritten as: ",
+        "将会从变量<code>myVar</code>中减去数值<code>5</code>。也可以写成这种形式：",
         "<code>myVar -= 5;</code>",
         "<hr>",
-        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>-=</code> operator."
+        "使用<code>-=</code>操作符实现同样的效果。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -849,24 +849,24 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>5</code>",
-          "testString": "assert(a === 5, '<code>a</code> should equal <code>5</code>');"
+          "text": "<code>a</code>应该等于<code>5</code>",
+          "testString": "assert(a === 5, '<code>a</code>应该等于<code>5</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>-6</code>",
-          "testString": "assert(b === -6, '<code>b</code> should equal <code>-6</code>');"
+          "text": "<code>b</code>应该等于<code>-6</code>",
+          "testString": "assert(b === -6, '<code>b</code>应该等于<code>-6</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>2</code>",
-          "testString": "assert(c === 2, '<code>c</code> should equal <code>2</code>');"
+          "text": "<code>c</code>应该等于<code>2</code>",
+          "testString": "assert(c === 2, '<code>c</code>应该等于<code>2</code>');"
         },
         {
-          "text": "You should use the <code>-=</code> operator for each variable",
-          "testString": "assert(code.match(/-=/g).length === 3, 'You should use the <code>-=</code> operator for each variable');"
+          "text": "应该对每个变量使用<code>-=</code>操作符",
+          "testString": "assert(code.match(/-=/g).length === 3, '应该对每个变量使用<code>-=</code>操作符');"
         },
         {
-          "text": "Do not modify the code above the line",
-          "testString": "assert(/var a = 11;/.test(code) && /var b = 9;/.test(code) && /var c = 3;/.test(code), 'Do not modify the code above the line');"
+          "text": "不要修改注释上面的代码",
+          "testString": "assert(/var a = 11;/.test(code) && /var b = 9;/.test(code) && /var c = 3;/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -880,7 +880,7 @@
             "var b = 9;",
             "var c = 3;",
             "",
-            "// Only modify code below this line",
+            "// 请只修改这条注释以下的代码",
             "",
             "a = a - 6;",
             "b = b - 15;",
@@ -899,12 +899,12 @@
       "id": "56533eb9ac21ba0edf2244b1",
       "title": "Compound Assignment With Augmented Multiplication",
       "description": [
-        "The <code>*=</code> operator multiplies a variable by a number.",
+        "<code>*=</code>操作符是让变量与一个数相乘并赋值。",
         "<code>myVar = myVar * 5;</code>",
-        "will multiply <code>myVar</code> by <code>5</code>. This can be rewritten as: ",
+        "将会把变量<code>myVar</code>与数值<code>5</code>相乘。也可以写作这样的形式: ",
         "<code>myVar *= 5;</code>",
         "<hr>",
-        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>*=</code> operator."
+        "使用<code>*=</code>操作符实现同样的效果。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -912,24 +912,24 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>25</code>",
-          "testString": "assert(a === 25, '<code>a</code> should equal <code>25</code>');"
+          "text": "<code>a</code>应该等于<code>25</code>",
+          "testString": "assert(a === 25, '<code>a</code>应该等于<code>25</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>36</code>",
-          "testString": "assert(b === 36, '<code>b</code> should equal <code>36</code>');"
+          "text": "<code>b</code>应该等于<code>36</code>",
+          "testString": "assert(b === 36, '<code>b</code>应该等于<code>36</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>46</code>",
-          "testString": "assert(c === 46, '<code>c</code> should equal <code>46</code>');"
+          "text": "<code>c</code>应该等于<code>46</code>",
+          "testString": "assert(c === 46, '<code>c</code>应该等于<code>46</code>');"
         },
         {
-          "text": "You should use the <code>*=</code> operator for each variable",
-          "testString": "assert(code.match(/\\*=/g).length === 3, 'You should use the <code>*=</code> operator for each variable');"
+          "text": "应该对每个变量使用<code>*=</code>操作符",
+          "testString": "assert(code.match(/\\*=/g).length === 3, '应该对每个变量使用<code>*=</code>操作符');"
         },
         {
-          "text": "Do not modify the code above the line",
-          "testString": "assert(/var a = 5;/.test(code) && /var b = 12;/.test(code) && /var c = 4\\.6;/.test(code), 'Do not modify the code above the line');"
+          "text": "不要修改注释上面的代码",
+          "testString": "assert(/var a = 5;/.test(code) && /var b = 12;/.test(code) && /var c = 4\\.6;/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -943,7 +943,7 @@
             "var b = 12;",
             "var c = 4.6;",
             "",
-            "// Only modify code below this line",
+            "// 请只修改这条注释以下的代码",
             "",
             "a = a * 5;",
             "b = 3 * b;",
@@ -962,12 +962,12 @@
       "id": "56533eb9ac21ba0edf2244b2",
       "title": "Compound Assignment With Augmented Division",
       "description": [
-        "The <code>/=</code> operator divides a variable by another number.",
+        "<code>/=</code>操作符是让变量与另一个数相除并赋值。",
         "<code>myVar = myVar / 5;</code>",
-        "Will divide <code>myVar</code> by <code>5</code>. This can be rewritten as: ",
+        "会把变量<code>myVar</code>的值除于<code>5</code>。等价于: ",
         "<code>myVar /= 5;</code>",
         "<hr>",
-        "Convert the assignments for <code>a</code>, <code>b</code>, and <code>c</code> to use the <code>/=</code> operator."
+        "使用<code>/=</code>操作符实现同样的效果。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -975,24 +975,24 @@
       ],
       "tests": [
         {
-          "text": "<code>a</code> should equal <code>4</code>",
-          "testString": "assert(a === 4, '<code>a</code> should equal <code>4</code>');"
+          "text": "<code>a</code>应该等于<code>4</code>",
+          "testString": "assert(a === 4, '<code>a</code>应该等于<code>4</code>');"
         },
         {
-          "text": "<code>b</code> should equal <code>27</code>",
-          "testString": "assert(b === 27, '<code>b</code> should equal <code>27</code>');"
+          "text": "<code>b</code>应该等于<code>27</code>",
+          "testString": "assert(b === 27, '<code>b</code>应该等于<code>27</code>');"
         },
         {
-          "text": "<code>c</code> should equal <code>3</code>",
-          "testString": "assert(c === 3, '<code>c</code> should equal <code>3</code>');"
+          "text": "<code>c</code>应该等于<code>3</code>",
+          "testString": "assert(c === 3, '<code>c</code>应该等于<code>3</code>');"
         },
         {
-          "text": "You should use the <code>/=</code> operator for each variable",
-          "testString": "assert(code.match(/\\/=/g).length === 3, 'You should use the <code>/=</code> operator for each variable');"
+          "text": "应该对每个变量使用<code>/=</code>操作符",
+          "testString": "assert(code.match(/\\/=/g).length === 3, '应该对每个变量使用<code>/=</code>操作符');"
         },
         {
-          "text": "Do not modify the code above the line",
-          "testString": "assert(/var a = 48;/.test(code) && /var b = 108;/.test(code) && /var c = 33;/.test(code), 'Do not modify the code above the line');"
+          "text": "不要修改注释上面的代码",
+          "testString": "assert(/var a = 48;/.test(code) && /var b = 108;/.test(code) && /var c = 33;/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -1006,7 +1006,7 @@
             "var b = 108;",
             "var c = 33;",
             "",
-            "// Only modify code below this line",
+            "// 请只修改这条注释以下的代码",
             "",
             "a = a / 12;",
             "b = b / 4;",
@@ -1024,23 +1024,23 @@
       "id": "bd7123c9c444eddfaeb5bdef",
       "title": "Declare String Variables",
       "description": [
-        "Previously we have used the code",
+        "先前我们使用过的代码：",
         "<code>var myName = \"your name\";</code>",
-        "<code>\"your name\"</code> is called a <dfn>string</dfn> <dfn>literal</dfn>. It is a string because it is a series of zero or more characters enclosed in single or double quotes.",
+        "<code>\"your name\"</code>被称作<dfn>字符串</dfn>。字符串是用单引号或双引号包裹起来的一连串的零个或多个字符。",
         "<hr>",
-        "Create two new <code>string</code> variables: <code>myFirstName</code> and <code>myLastName</code> and assign them the values of your first and last name, respectively."
+        "创建两个新的<code>字符串</code>变量：<code>myFirstName</code>和<code>myLastName</code>分别为它们赋上你的姓和名的值。"
       ],
       "solutions": [
         "var myFirstName = \"Alan\";\nvar myLastName = \"Turing\";"
       ],
       "tests": [
         {
-          "text": "<code>myFirstName</code> should be a string with at least one character in it.",
-          "testString": "assert((function(){if(typeof myFirstName !== \"undefined\" && typeof myFirstName === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), '<code>myFirstName</code> should be a string with at least one character in it.');"
+          "text": "<code>myFirstName</code>应该是一个字符串,并且至少包含一个字符。",
+          "testString": "assert((function(){if(typeof myFirstName !== \"undefined\" && typeof myFirstName === \"string\" && myFirstName.length > 0){return true;}else{return false;}})(), '<code>myFirstName</code>应该是一个字符串,并且至少包含一个字符。');"
         },
         {
-          "text": "<code>myLastName</code> should be a string with at least one character in it.",
-          "testString": "assert((function(){if(typeof myLastName !== \"undefined\" && typeof myLastName === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), '<code>myLastName</code> should be a string with at least one character in it.');"
+          "text": "<code>myLastName</code>应该是一个字符串,并且至少包含一个字符。",
+          "testString": "assert((function(){if(typeof myLastName !== \"undefined\" && typeof myLastName === \"string\" && myLastName.length > 0){return true;}else{return false;}})(), '<code>myLastName</code>应该是一个字符串,并且至少包含一个字符。');"
         }
       ],
       "challengeType": 1,
@@ -1050,11 +1050,11 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstName = \"Alan\";",
             "var lastName = \"Turing\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             ""
           ],
@@ -1069,14 +1069,14 @@
       "id": "56533eb9ac21ba0edf2244b5",
       "title": "Escaping Literal Quotes in Strings",
       "description": [
-        "When you are defining a string you must start and end with a single or double quote. What happens when you need a literal quote: <code>\"</code> or <code>'</code> inside of your string?",
-        "In JavaScript, you can <dfn>escape</dfn> a quote from considering it as an end of string quote by placing a <dfn>backslash</dfn> (<code>\\</code>) in front of the quote.",
+        "当你定义一个字符串必须要用单引号或双引号来包裹它。那么当你需要在字符串中使用一个：<code>\"</code>或者<code>'</code>时该怎么办呢?",
+        "在 JavaScript 中，你可以通过在引号前面使用 <dfn>反斜杠</dfn> (<code>\\</code>) 来转义引号。",
         "<code>var sampleStr = \"Alan said, \\\"Peter is learning JavaScript\\\".\";</code>",
-        "This signals to JavaScript that the following quote is not the end of the string, but should instead appear inside the string. So if you were to print this to the console, you would get:",
+        "这标志着提醒 JavaScript 单引号或双引号并不是字符串的结尾，而是出现在字符串内的字符。所以，如果你要打印字符串到控制台，你将得到：",
         "<code>Alan said, \"Peter is learning JavaScript\".</code>",
         "<hr>",
-        "Use <dfn>backslashes</dfn> to assign a string to the <code>myStr</code> variable so that if you were to print it to the console, you would see:",
-        "<code>I am a \"double quoted\" string inside \"double quotes\".</code>"
+        "使用 <dfn>反斜杠</dfn> 将一个字符串赋值给变量<code>myStr</code>，以便如果你要打印到控制台，你会看到：",
+        "<code>I am a \"double quoted\" string inside \"double quotes\"</code>"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1084,12 +1084,12 @@
       ],
       "tests": [
         {
-          "text": "You should use two double quotes (<code>&quot;</code>) and four escaped double quotes (<code>&#92;&quot;</code>).",
-          "testString": "assert(code.match(/\\\\\"/g).length === 4 && code.match(/[^\\\\]\"/g).length === 2, 'You should use two double quotes (<code>&quot;</code>) and four escaped double quotes (<code>&#92;&quot;</code>).');"
+          "text": "你的代码中应该包含两个双引号 (<code>&quot;</code>) 以及四个转义的双引 (<code>&#92;&quot;</code>).",
+          "testString": "assert(code.match(/\\\\\"/g).length === 4 && code.match(/[^\\\\]\"/g).length === 2, '你的代码中应该包含两个双引号 (<code>&quot;</code>) 以及四个转义的双引 (<code>&#92;&quot;</code>).');"
         },
         {
-          "text": "Variable myStr should contain the string: <code>I am a \"double quoted\" string inside \"double quotes\".</code>",
-          "testString": "assert(myStr === \"I am a \\\"double quoted\\\" string inside \\\"double quotes\\\".\", 'Variable myStr should contain the string: <code>I am a \"double quoted\" string inside \"double quotes\".</code>');"
+          "text": "变量 myStr 应该包含字符串<code>I am a \"double quoted\" string inside \"double quotes\".</code>",
+          "testString": "assert(myStr === \"I am a \\\"double quoted\\\" string inside \\\"double quotes\\\".\", '变量 myStr 应该包含字符串<code>I am a \"double quoted\" string inside \"double quotes\".</code>');"
         }
       ],
       "challengeType": 1,
@@ -1099,7 +1099,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "var myStr = \"\"; // Change this line",
+            "var myStr = \"\"; // 请修改这一行",
             "",
             ""
           ],
@@ -1120,17 +1120,17 @@
       "id": "56533eb9ac21ba0edf2244b4",
       "title": "Quoting Strings with Single Quotes",
       "description": [
-        "<dfn>String</dfn> values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote. Unlike some other programming languages, single and double quotes work the same in JavaScript.",
+        "在 JavaScript 中的 <dfn>字符串</dfn> 要用单引号或双引号来包裹它，只要你在开始和结束都使用相同类型的引号，单引号和双引号的功能在JavaScript中是相同的。",
         "<blockquote>doubleQuoteStr = \"This is a string\"; <br/>singleQuoteStr = 'This is also a string';</blockquote>",
-        "The reason why you might want to use one type of quote over the other is if you want to use both in a string. This might happen if you want to save a conversation in a string and have the conversation in quotes. Another use for it would be saving an <code>&#60;a&#62;</code> tag with various attributes in quotes, all within a string.",
+        "当你需要在一个字符串中使用多个引号的时候，你可以使用一种类型的引号包裹另一种类型的引号。常见的场景比如在字符串中保存的句子包含对话，需要用引号包裹的时候。另外一个用处是在一个字符串中保存带有用引号包裹的属性的<code>&#60;a&#62;</code>标签的时候。",
         "<blockquote>conversation = 'Finn exclaims to Jake, \"Algebraic!\"';</blockquote>",
-        "However, this becomes a problem if you need to use the outermost quotes within it. Remember, a string has the same kind of quote at the beginning and end. But if you have that same quote somewhere in the middle, the string will stop early and throw an error.",
-        "<blockquote>goodStr = 'Jake asks Finn, \"Hey, let\\'s go on an adventure?\"'; <br/>badStr = 'Finn responds, \"Let's go!\"'; // Throws an error</blockquote>",
-        "In the <dfn>goodStr</dfn> above, you can use both quotes safely by using the backslash <code>\\</code> as an escape character.",
-        "<strong>Note</strong><br/>The backslash <code>\\</code> should not be be confused with the forward slash <code>/</code>. They do not do the same thing.",
+        "但是，如果你想值字符串中使用与最外层相同的引号，会有一些问题。要记住，字符串在开头和结尾都有相同的引号，如果在中间使用了相同的引号，字符串将提前中止并抛出错误。",
+        "<blockquote>goodStr = 'Jake asks Finn, \"Hey, let\\'s go on an adventure?\"'; <br/>badStr = 'Finn responds, \"Let's go!\"'; // 抛出错误</blockquote>",
+        "在上面的<dfn>goodStr</dfn>中，可以使用反斜杠<code>\\</code>转义字符安全地使用两个引号",
+        "<strong>提示</strong><br/>不要把反斜杠<code>\\</code> 和斜杠<code>/</code>搞混，它们不是一回事。",
         "<hr>",
-        "Change the provided string to a string with single quotes at the beginning and end and no escape characters.",
-        "Right now, the <code>&#60;a&#62;</code> tag in the string uses double quotes everywhere. You will need to change the outer quotes to single quotes so you can remove the escape characters."
+        "将字符串更改为在开头和结尾使用单引号的字符串，并且不包含转义字符。",
+        "然后字符串中的<code>&#60;a&#62;</code>标签在任何地方都可以使用双引号。你需要将最外层引号更改为单引号，以便删除转义字符。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1138,12 +1138,12 @@
       ],
       "tests": [
         {
-          "text": "Remove all the <code>backslashes</code> (<code>\\</code>)",
-          "testString": "assert(!/\\\\/g.test(code) && myStr.match('\\\\s*<a href\\\\s*=\\\\s*\"http://www.example.com\"\\\\s*target\\\\s*=\\\\s*\"_blank\">\\\\s*Link\\\\s*</a>\\\\s*'), 'Remove all the <code>backslashes</code> (<code>\\</code>)');"
+          "text": "删除所有<code>反斜杠</code> (<code>\\</code>)",
+          "testString": "assert(!/\\\\/g.test(code) && myStr.match('\\\\s*<a href\\\\s*=\\\\s*\"http://www.example.com\"\\\\s*target\\\\s*=\\\\s*\"_blank\">\\\\s*Link\\\\s*</a>\\\\s*'), '删除所有<code>反斜杠</code> (<code>\\</code>)');"
         },
         {
-          "text": "You should have two single quotes <code>&#39;</code> and four double quotes <code>&quot;</code>",
-          "testString": "assert(code.match(/\"/g).length === 4 && code.match(/'/g).length === 2, 'You should have two single quotes <code>&#39;</code> and four double quotes <code>&quot;</code>');"
+          "text": "应该要有两个单引号<code>&#39;</code>和四个双引号<code>&quot;</code>",
+          "testString": "assert(code.match(/\"/g).length === 4 && code.match(/'/g).length === 2, '应该要有两个单引号<code>&#39;</code>和四个双引号<code>&quot;</code>');"
         }
       ],
       "challengeType": 1,
@@ -1168,15 +1168,15 @@
       "id": "56533eb9ac21ba0edf2244b6",
       "title": "Escape Sequences in Strings",
       "description": [
-        "Quotes are not the only characters that can be <dfn>escaped</dfn> inside a string. There are two reasons to use escaping characters: First is to allow you to use characters you might not otherwise be able to type out, such as a backspace. Second is to allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean. We learned this in the previous challenge.",
-        "<table class=\"table table-striped\"><thead><tr><th>Code</th><th>Output</th></tr></thead><tbody><tr><td><code>\\'</code></td><td>single quote</td></tr><tr><td><code>\\\"</code></td><td>double quote</td></tr><tr><td><code>\\\\</code></td><td>backslash</td></tr><tr><td><code>\\n</code></td><td>newline</td></tr><tr><td><code>\\r</code></td><td>carriage return</td></tr><tr><td><code>\\t</code></td><td>tab</td></tr><tr><td><code>\\b</code></td><td>backspace</td></tr><tr><td><code>\\f</code></td><td>form feed</td></tr></tbody></table>",
-        "<em>Note that the backslash itself must be escaped in order to display as a backslash.</em>",
+        "引号不是字符串中唯一的可以被转义<dfn>escaped</dfn>的字符。使用转义字符有两个原因：首先是可以让你使用无法输入的字符，例如退格。其次是可以让你在一个字符串中表示多个引号，而不会出错。我们在之前的挑战中学到了这一点。",
+        "<table class=\"table table-striped\"><thead><tr><th>代码</th><th>输出</th></tr></thead><tbody><tr><td><code>\\'</code></td><td>单引号</td></tr><tr><td><code>\\\"</code></td><td>双引号</td></tr><tr><td><code>\\\\</code></td><td>反斜杠</td></tr><tr><td><code>\\n</code></td><td>换行符</td></tr><tr><td><code>\\r</code></td><td>回车符</td></tr><tr><td><code>\\t</code></td><td>制表符</td></tr><tr><td><code>\\b</code></td><td>backspace</td></tr><tr><td><code>\\f</code></td><td>换页符</td></tr></tbody></table>",
+        "<em>请注意，必须对反斜杠本身进行转义才能显示为反斜杠。</em>",
         "<hr>",
-        "Assign the following three lines of text into the single variable <code>myStr</code> using escape sequences.",
+        "使用转义字符将下面三行文本字符串赋给变量<code>myStr</code>。",
         "<blockquote>FirstLine<br/>&nbsp;&nbsp;&nbsp;&nbsp;\\SecondLine<br/>ThirdLine</blockquote>",
-        "You will need to use escape sequences to insert special characters correctly. You will also need to follow the spacing as it looks above, with no spaces between escape sequences or words.",
-        "Here is the text with the escape sequences written out.",
-        "<q>FirstLine<code>newline</code><code>tab</code><code>backslash</code>SecondLine<code>newline</code>ThirdLine</q>"
+        "你需要使用转义字符正确的插入特殊字符，确保间距与上面文本一致并且单词或转义字符之间没有空格。",
+        "像这样用转义字符写出来：",
+        "<q>FirstLine<code>换行符</code><code>制表符</code><code>反斜杠</code>SecondLine<code>换行符</code>ThirdLine</q>"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1184,28 +1184,28 @@
       ],
       "tests": [
         {
-          "text": "<code>myStr</code> should not contain any spaces",
+          "text": "<code>myStr</code>不能包含空格",
           "testString": "assert(!/ /.test(myStr), '<code>myStr</code> should not contain any spaces');"
         },
         {
-          "text": "<code>myStr</code> should contain the strings <code>FirstLine</code>, <code>SecondLine</code> and <code>ThirdLine</code> (remember case sensitivity)",
-          "testString": "assert(/FirstLine/.test(myStr) && /SecondLine/.test(myStr) && /ThirdLine/.test(myStr), '<code>myStr</code> should contain the strings <code>FirstLine</code>, <code>SecondLine</code> and <code>ThirdLine</code> (remember case sensitivity)');"
+          "text": "<code>myStr</code>应该包含字符串<code>FirstLine</code>, <code>SecondLine</code> and <code>ThirdLine</code> （记得区分大小写）",
+          "testString": "assert(/FirstLine/.test(myStr) && /SecondLine/.test(myStr) && /ThirdLine/.test(myStr), '<code>myStr</code>应该包含字符串<code>FirstLine</code>, <code>SecondLine</code> and <code>ThirdLine</code> （记得区分大小写）');"
         },
         {
-          "text": "<code>FirstLine</code> should be followed by the newline character <code>\\n</code>",
-          "testString": "assert(/FirstLine\\n/.test(myStr), '<code>FirstLine</code> should be followed by the newline character <code>\\n</code>');"
+          "text": "<code>FirstLine</code>后面应该是一个新行<code>\\n</code>",
+          "testString": "assert(/FirstLine\\n/.test(myStr), '<code>FirstLine</code>后面应该是一个换行符<code>\\n</code>');"
         },
         {
-          "text": "<code>myStr</code> should contain a tab character <code>\\t</code> which follows a newline character",
-          "testString": "assert(/\\n\\t/.test(myStr), '<code>myStr</code> should contain a tab character <code>\\t</code> which follows a newline character');"
+          "text": "<code>myStr</code>应该包含制表符<code>\\t</code>并且制表符要在换行符后面",
+          "testString": "assert(/\\n\\t/.test(myStr), '<code>myStr</code>应该包含制表符<code>\\t</code>并且制表符要在换行符后面');"
         },
         {
-          "text": "<code>SecondLine</code> should be preceded by the backslash character <code>\\\\</code>",
-          "testString": "assert(/\\SecondLine/.test(myStr), '<code>SecondLine</code> should be preceded by the backslash character <code>\\\\</code>');"
+          "text": "<code>SecondLine</code>前面应该是反斜杠<code>\\\\</code>",
+          "testString": "assert(/\\SecondLine/.test(myStr), '<code>SecondLine</code>前面应该是反斜杠<code>\\\\</code>');"
         },
         {
-          "text": "There should be a newline character between <code>SecondLine</code> and <code>ThirdLine</code>",
-          "testString": "assert(/SecondLine\\nThirdLine/.test(myStr), 'There should be a newline character between <code>SecondLine</code> and <code>ThirdLine</code>');"
+          "text": "<code>SecondLine</code>和<code>ThirdLine</code>之间应该是换行符",
+          "testString": "assert(/SecondLine\\nThirdLine/.test(myStr), '<code>SecondLine</code>和<code>ThirdLine</code>之间该是换行符');"
         }
       ],
       "challengeType": 1,
@@ -1215,7 +1215,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "var myStr; // Change this line",
+            "var myStr; // 请修改这一行",
             "",
             ""
           ],
@@ -1232,12 +1232,12 @@
       "id": "56533eb9ac21ba0edf2244b7",
       "title": "Concatenating Strings with Plus Operator",
       "description": [
-        "In JavaScript, when the <code>+</code> operator is used with a <code>String</code> value, it is called the <dfn>concatenation</dfn> operator. You can build a new string out of other strings by <dfn>concatenating</dfn> them together.",
-        "<strong>Example</strong>",
+        "在 JavaScript 中，当对一个<code>String</code>类型的值使用<code>+</code>操作符的时候，它被称作 <dfn>concatenation</dfn> 操作符。你可以通过和其他字符串<dfn>concatenation</dfn>来创建一个新的字符串。",
+        "<strong>示例</strong>",
         "<blockquote>'My name is Alan,' + ' I concatenate.'</blockquote>",
-        "<strong>Note</strong><br>Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.",
+        "<strong>提示</strong><br>注意空格。拼接操作不会在两个字符串之间添加空格，所以想加上空格的话，你需要自己在字符串里面添加。",
         "<hr>",
-        "Build <code>myStr</code> from the strings <code>\"This is the start. \"</code> and <code>\"This is the end.\"</code> using the <code>+</code> operator."
+        "使用<code>+</code>操作符，把字符串<code>\"This is the start. \"</code>和<code>\"This is the end.\"</code>连接起来并赋值给变量<code>myStr</code>。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1245,20 +1245,20 @@
       ],
       "tests": [
         {
-          "text": "<code>myStr</code> should have a value of <code>This is the start. This is the end.</code>",
-          "testString": "assert(myStr === \"This is the start. This is the end.\", '<code>myStr</code> should have a value of <code>This is the start. This is the end.</code>');"
+          "text": "<code>myStr</code>的值应该是<code>This is the start. This is the end.</code>",
+          "testString": "assert(myStr === \"This is the start. This is the end.\", '<code>myStr</code>的值应该是<code>This is the start. This is the end.</code>');"
         },
         {
-          "text": "Use the <code>+</code> operator to build <code>myStr</code>",
-          "testString": "assert(code.match(/([\"']).*([\"'])\\s*\\+\\s*([\"']).*([\"'])/g).length > 1, 'Use the <code>+</code> operator to build <code>myStr</code>');"
+          "text": "使用<code>+</code>操作符构建<code>myStr</code>",
+          "testString": "assert(code.match(/([\"']).*([\"'])\\s*\\+\\s*([\"']).*([\"'])/g).length > 1, '使用<code>+</code>操作符构建<code>myStr</code>');"
         },
         {
-          "text": "<code>myStr</code> should be created using the <code>var</code> keyword.",
-          "testString": "assert(/var\\s+myStr/.test(code), '<code>myStr</code> should be created using the <code>var</code> keyword.');"
+          "text": "<code>myStr</code>应该被<code>var</code>关键字声明",
+          "testString": "assert(/var\\s+myStr/.test(code), '<code>myStr</code>应该被<code>var</code>关键字声明');"
         },
         {
-          "text": "Make sure to assign the result to the <code>myStr</code> variable.",
-          "testString": "assert(/myStr\\s*=/.test(code), 'Make sure to assign the result to the <code>myStr</code> variable.');"
+          "text": "确保有给<code>myStr</code>赋值",
+          "testString": "assert(/myStr\\s*=/.test(code), '确保有给<code>myStr</code>赋值');"
         }
       ],
       "challengeType": 1,
@@ -1268,10 +1268,10 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var ourStr = \"I come first. \" + \"I come second.\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "var myStr;",
             "",
@@ -1294,10 +1294,10 @@
       "id": "56533eb9ac21ba0edf2244b8",
       "title": "Concatenating Strings with the Plus Equals Operator",
       "description": [
-        "We can also use the <code>+=</code> operator to <dfn>concatenate</dfn> a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.",
-        "<strong>Note</strong><br>Watch out for spaces. Concatenation does not add spaces between concatenated strings, so you'll need to add them yourself.",
+        "我们还可以使用<code>+=</code>运算符来<dfn>concatenate</dfn>（拼接）字符串到现有字符串的结尾。对于那些被分割成几段的长的字符串来说，这一操作是非常有用的。",
+        "<strong>提示</strong><br>注意空格。连接操作不会添加两个字符串外面的空格，所以如果想要加上空格的话，你需要自己在字符串里面添加。",
         "<hr>",
-        "Build <code>myStr</code> over several lines by concatenating these two strings: <code>\"This is the first sentence. \"</code> and <code>\"This is the second sentence.\"</code> using the <code>+=</code> operator. Use the <code>+=</code> operator similar to how it is shown in the editor. Start by assigning the first string to <code>myStr</code>, then add on the second string."
+        "通过使用<code>+=</code>操作符来连接这两个字符串：<br><code>\"This is the first sentence. \"</code>和<code>\"This is the second sentence.\"</code>并赋给变量<code>myStr</code>。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1305,12 +1305,12 @@
       ],
       "tests": [
         {
-          "text": "<code>myStr</code> should have a value of <code>This is the first sentence. This is the second sentence.</code>",
-          "testString": "assert(myStr === \"This is the first sentence. This is the second sentence.\", '<code>myStr</code> should have a value of <code>This is the first sentence. This is the second sentence.</code>');"
+          "text": "<code>myStr</code>的值应该是<code>This is the first sentence. This is the second sentence.</code>",
+          "testString": "assert(myStr === \"This is the first sentence. This is the second sentence.\", '<code>myStr</code>的值应该是<code>This is the first sentence. This is the second sentence.</code>');"
         },
         {
-          "text": "Use the <code>+=</code> operator to build <code>myStr</code>",
-          "testString": "assert(code.match(/\\w\\s*\\+=\\s*[\"']/g).length > 1 && code.match(/\\w\\s*\\=\\s*[\"']/g).length > 1, 'Use the <code>+=</code> operator to build <code>myStr</code>');"
+          "text": "使用<code>+=</code>操作符创建<code>myStr</code>变量",
+          "testString": "assert(code.match(/\\w\\s*\\+=\\s*[\"']/g).length > 1 && code.match(/\\w\\s*\\=\\s*[\"']/g).length > 1, '使用<code>+=</code>操作符创建<code>myStr</code>变量');"
         }
       ],
       "challengeType": 1,
@@ -1320,11 +1320,11 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var ourStr = \"I come first. \";",
             "ourStr += \"I come second.\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "var myStr;",
             "",
@@ -1347,9 +1347,9 @@
       "id": "56533eb9ac21ba0edf2244b9",
       "title": "Constructing Strings with Variables",
       "description": [
-        "Sometimes you will need to build a string, <a href=\"https://en.wikipedia.org/wiki/Mad_Libs\" target=\"_blank\">Mad Libs</a> style. By using the concatenation operator (<code>+</code>), you can insert one or more variables into a string you're building.",
+        "有时候你需要创建一个类似<a href=\"https://en.wikipedia.org/wiki/Mad_Libs\" target=\"_blank\">Mad Libs</a>(填词游戏）风格的字符串。通过使用连接运算符<code> + </code>，你可以插入一个或多个变量来组成一个字符串。",
         "<hr>",
-        "Set <code>myName</code> to a string equal to your name and build <code>myStr</code> with <code>myName</code> between the strings <code>\"My name is \"</code> and <code>\" and I am well!\"</code>"
+        "把你的名字赋值给变量<code>myName</code>，然后把变量<code>myName</code>插入到字符串<code>\"My name is \"</code>和<code>\" and I am well!\"</code>之间，并把连接后的结果赋值给变量<code>myStr</code>。 "
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1357,12 +1357,12 @@
       ],
       "tests": [
         {
-          "text": "<code>myName</code> should be set to a string at least 3 characters long",
-          "testString": "assert(typeof myName !== 'undefined' && myName.length > 2, '<code>myName</code> should be set to a string at least 3 characters long');"
+          "text": "<code>myName</code>至少要包含三个字符",
+          "testString": "assert(typeof myName !== 'undefined' && myName.length > 2, '<code>myName</code>至少要包含三个字符');"
         },
         {
-          "text": "Use two <code>+</code> operators to build <code>myStr</code> with <code>myName</code> inside it",
-          "testString": "assert(code.match(/[\"']\\s*\\+\\s*myName\\s*\\+\\s*[\"']/g).length > 0, 'Use two <code>+</code> operators to build <code>myStr</code> with <code>myName</code> inside it');"
+          "text": "使用两个<code>+</code>操作符创建包含<code>myName</code>的<code>myStr</code>变量",
+          "testString": "assert(code.match(/[\"']\\s*\\+\\s*myName\\s*\\+\\s*[\"']/g).length > 0, '使用两个<code>+</code>操作符创建包含<code>myName</code>的<code>myStr</code>变量');"
         }
       ],
       "challengeType": 1,
@@ -1372,11 +1372,11 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var ourName = \"freeCodeCamp\";",
             "var ourStr = \"Hello, our name is \" + ourName + \", how are you?\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "var myName;",
             "var myStr;",
             "",
@@ -1406,9 +1406,9 @@
       "id": "56533eb9ac21ba0edf2244ed",
       "title": "Appending Variables to Strings",
       "description": [
-        "Just as we can build a string over multiple lines out of string <dfn>literals</dfn>, we can also append variables to a string using the plus equals (<code>+=</code>) operator.",
+        "我们不仅可以创建出多行的字符串，还可以使用加等号(<code>+=</code>)运算符来追加变量到字符串上。",
         "<hr>",
-        "Set <code>someAdjective</code> and append it to <code>myStr</code> using the <code>+=</code> operator."
+        "设置变量<code>someAdjective</code>的值，并使用<code>+=</code>运算符把它追加到变量<code>myStr</code>上。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1416,12 +1416,12 @@
       ],
       "tests": [
         {
-          "text": "<code>someAdjective</code> should be set to a string at least 3 characters long",
-          "testString": "assert(typeof someAdjective !== 'undefined' && someAdjective.length > 2, '<code>someAdjective</code> should be set to a string at least 3 characters long');"
+          "text": "<code>someAdjective</code>应该是一个至少包含三个字符的字符串",
+          "testString": "assert(typeof someAdjective !== 'undefined' && someAdjective.length > 2, '<code>someAdjective</code>应该是一个至少包含三个字符的字符串');"
         },
         {
-          "text": "Append <code>someAdjective</code> to <code>myStr</code> using the <code>+=</code> operator",
-          "testString": "assert(code.match(/myStr\\s*\\+=\\s*someAdjective\\s*/).length > 0, 'Append <code>someAdjective</code> to <code>myStr</code> using the <code>+=</code> operator');"
+          "text": "使用<code>+=</code>操作符把<code>someAdjective</code>追加到<code>myStr</code>的后面",
+          "testString": "assert(code.match(/myStr\\s*\\+=\\s*someAdjective\\s*/).length > 0, '使用<code>+=</code>操作符把<code>someAdjective</code>追加到<code>myStr</code>的后面');"
         }
       ],
       "challengeType": 1,
@@ -1432,12 +1432,12 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var anAdjective = \"awesome!\";",
             "var ourStr = \"freeCodeCamp is \";",
             "ourStr += anAdjective;",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "var someAdjective;",
             "var myStr = \"Learning to code is \";",
@@ -1467,23 +1467,23 @@
       "id": "bd7123c9c448eddfaeb5bdef",
       "title": "Find the Length of a String",
       "description": [
-        "You can find the length of a <code>String</code> value by writing <code>.length</code> after the string variable or string literal.",
+        "你可以通过在字符串变量或字符串后面写上<code>.length</code>来获得字符串变量<code>字符串</code>值的长度。",
         "<code>\"Alan Peter\".length; // 10</code>",
-        "For example, if we created a variable <code>var firstName = \"Charles\"</code>, we could find out how long the string <code>\"Charles\"</code> is by using the <code>firstName.length</code> property.",
+        "例如，我们创建了一个变量<code>var firstName = \"Charles\"</code>，我们就可以通过使用<code>firstName.length</code>来获得<code>\"Charles\"</code>字符串的长度。",
         "<hr>",
-        "Use the <code>.length</code> property to count the number of characters in the <code>lastName</code> variable and assign it to <code>lastNameLength</code>."
+        "使用<code>.length</code>属性来获得变量<code>lastName</code>的长度，并把它赋值给变量<code>lastNameLength</code>。"
       ],
       "solutions": [
         "var firstNameLength = 0;\nvar firstName = \"Ada\";\nfirstNameLength = firstName.length;\n\nvar lastNameLength = 0;\nvar lastName = \"Lovelace\";\nlastNameLength = lastName.length;"
       ],
       "tests": [
         {
-          "text": "<code>lastNameLength</code> should be equal to eight.",
-          "testString": "assert((function(){if(typeof lastNameLength !== \"undefined\" && typeof lastNameLength === \"number\" && lastNameLength === 8){return true;}else{return false;}})(), '<code>lastNameLength</code> should be equal to eight.');"
+          "text": "<code>lastNameLength</code>应该等于 8",
+          "testString": "assert((function(){if(typeof lastNameLength !== \"undefined\" && typeof lastNameLength === \"number\" && lastNameLength === 8){return true;}else{return false;}})(), '<code>lastNameLength</code>应该等于 8');"
         },
         {
-          "text": "You should be getting the length of <code>lastName</code> by using <code>.length</code> like this: <code>lastName.length</code>.",
-          "testString": "assert((function(){if(code.match(/\\.length/gi) && code.match(/\\.length/gi).length >= 2 && code.match(/var lastNameLength \\= 0;/gi) && code.match(/var lastNameLength \\= 0;/gi).length >= 1){return true;}else{return false;}})(), 'You should be getting the length of <code>lastName</code> by using <code>.length</code> like this: <code>lastName.length</code>.');"
+          "text": "你应该使用<code>.length</code>获取<code>lastName</code>的长度, 像这样：<code>lastName.length</code>",
+          "testString": "assert((function(){if(code.match(/\\.length/gi) && code.match(/\\.length/gi).length >= 2 && code.match(/var lastNameLength \\= 0;/gi) && code.match(/var lastNameLength \\= 0;/gi).length >= 1){return true;}else{return false;}})(), '你应该使用<code>.length</code>获取<code>lastName</code>的长度, 像这样：<code>lastName.length</code>');"
         }
       ],
       "challengeType": 1,
@@ -1493,17 +1493,17 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstNameLength = 0;",
             "var firstName = \"Ada\";",
             "",
             "firstNameLength = firstName.length;",
             "",
-            "// Setup",
+            "// 初始化",
             "var lastNameLength = 0;",
             "var lastName = \"Lovelace\";",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             "lastNameLength = lastName;",
             "",
@@ -1520,24 +1520,24 @@
       "id": "bd7123c9c549eddfaeb5bdef",
       "title": "Use Bracket Notation to Find the First Character in a String",
       "description": [
-        "<code>Bracket notation</code> is a way to get a character at a specific <code>index</code> within a string.",
-        "Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as <dfn>Zero-based</dfn> indexing.",
-        "For example, the character at index 0 in the word \"Charles\" is \"C\". So if <code>var firstName = \"Charles\"</code>, you can get the value of the first letter of the string by using <code>firstName[0]</code>.",
+        "方括号表示法是一种在字符串中的特定<code>index</code>（索引）处获取字符的方法。",
+        "大多数现代编程语言，如JavaScript，不同于人类从1开始计数。它们是从0开始计数，这被称为 <dfn>基于零</dfn> 的索引。",
+        "例如, 在单词 \"Charles\" 中索引0上的字符为 \"C\"，所以在<code>var firstName = \"Charles\"</code>中，你可以使用<code>firstName[0]</code>来获得第一个位置上的字符。",
         "<hr>",
-        "Use <dfn>bracket notation</dfn> to find the first character in the <code>lastName</code> variable and assign it to <code>firstLetterOfLastName</code>.",
-        "<strong>Hint</strong><br>Try looking at the <code>firstLetterOfFirstName</code> variable declaration if you get stuck."
+        "使用方括号表示法来得到变量<code>lastName</code>中的第一个字符，并赋给变量<code>firstLetterOfLastName</code>。",
+        "<strong>提示</strong><br>如果你遇到困难了，不妨看看变量<code>firstLetterOfFirstName</code>是如何赋值的。"
       ],
       "solutions": [
-        "var firstLetterOfLastName = \"\";\nvar lastName = \"Lovelace\";\n\n// Only change code below this line\nfirstLetterOfLastName = lastName[0];"
+        "var firstLetterOfLastName = \"\";\nvar lastName = \"Lovelace\";\n\n// 请把你的代码写在这条注释以下\nfirstLetterOfLastName = lastName[0];"
       ],
       "tests": [
         {
-          "text": "The <code>firstLetterOfLastName</code> variable should have the value of <code>L</code>.",
-          "testString": "assert(firstLetterOfLastName === 'L', 'The <code>firstLetterOfLastName</code> variable should have the value of <code>L</code>.');"
+          "text": "<code>firstLetterOfLastName</code>的值应该是<code>L</code>",
+          "testString": "assert(firstLetterOfLastName === 'L', '<code>firstLetterOfLastName</code>的值应该是<code>L</code>');"
         },
         {
-          "text": "You should use bracket notation.",
-          "testString": "assert(code.match(/firstLetterOfLastName\\s*?=\\s*?lastName\\[.*?\\]/), 'You should use bracket notation.');"
+          "text": "你应该使用中括号",
+          "testString": "assert(code.match(/firstLetterOfLastName\\s*?=\\s*?lastName\\[.*?\\]/), '你应该使用中括号');"
         }
       ],
       "challengeType": 1,
@@ -1547,17 +1547,17 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstLetterOfFirstName = \"\";",
             "var firstName = \"Ada\";",
             "",
             "firstLetterOfFirstName = firstName[0];",
             "",
-            "// Setup",
+            "// 初始化",
             "var firstLetterOfLastName = \"\";",
             "var lastName = \"Lovelace\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "firstLetterOfLastName = lastName;",
             "",
             ""
@@ -1573,13 +1573,13 @@
       "id": "56533eb9ac21ba0edf2244ba",
       "title": "Understand String Immutability",
       "description": [
-        "In JavaScript, <code>String</code> values are <dfn>immutable</dfn>, which means that they cannot be altered once created.",
-        "For example, the following code:",
+        "在 JavaScript 中，<code>字符串</code>的值是 <dfn>不可变的</dfn>，这意味着一旦字符串被创建就不能被改变。",
+        "例如，下面的代码：",
         "<blockquote>var myStr = \"Bob\";<br>myStr[0] = \"J\";</blockquote>",
-        "cannot change the value of <code>myStr</code> to \"Job\", because the contents of <code>myStr</code> cannot be altered. Note that this does <em>not</em> mean that <code>myStr</code> cannot be changed, just that the individual characters of a <dfn>string literal</dfn> cannot be changed. The only way to change <code>myStr</code> would be to assign it with a new string, like this:",
+        "是不会把变量<code>myStr</code>的值改变成 \"Job\" 的，因为变量<code>myStr</code>是不可变的。注意，这<em>并不</em>意味着<code>myStr</code>永远不能被改变，只是字符串字面量 <dfn>string literal</dfn> 的各个字符不能被改变。改变<code>myStr</code>中的唯一方法是重新给它赋一个值，就像这样：",
         "<blockquote>var myStr = \"Bob\";<br>myStr = \"Job\";</blockquote>",
         "<hr>",
-        "Correct the assignment to <code>myStr</code> so it contains the string value of <code>Hello World</code> using the approach shown in the example above."
+        "把<code>myStr</code>的值改为<code>Hello World</code>。"
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
@@ -1587,12 +1587,12 @@
       ],
       "tests": [
         {
-          "text": "<code>myStr</code> should have a value of <code>Hello World</code>",
-          "testString": "assert(myStr === \"Hello World\", '<code>myStr</code> should have a value of <code>Hello World</code>');"
+          "text": "message:<code>myStr</code>的值应该是<code>Hello World</code>",
+          "testString": "assert(myStr === \"Hello World\", 'message:<code>myStr</code>的值应该是<code>Hello World</code>');"
         },
         {
           "text": "Do not change the code above the line",
-          "testString": "assert(/myStr = \"Jello World\"/.test(code), 'Do not change the code above the line');"
+          "testString": "assert(/myStr = \"Jello World\"/.test(code), '不要修改注释上面的代码');"
         }
       ],
       "challengeType": 1,
@@ -1602,10 +1602,10 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Setup",
+            "// 初始化变量",
             "var myStr = \"Jello World\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "myStr[0] = \"H\"; // Fix Me",
             "",
@@ -1622,23 +1622,23 @@
       "id": "bd7123c9c450eddfaeb5bdef",
       "title": "Use Bracket Notation to Find the Nth Character in a String",
       "description": [
-        "You can also use <dfn>bracket notation</dfn> to get the character at other positions within a string.",
-        "Remember that computers start counting at <code>0</code>, so the first character is actually the zeroth character.",
+        "你也可以使用方括号来获得一个字符串中的其他位置的字符。",
+        "请记住，程序是从<code>0</code>开始计数，所以获取第一个字符实际上是[0]。",
         "<hr>",
-        "Let's try to set <code>thirdLetterOfLastName</code> to equal the third letter of the <code>lastName</code> variable using bracket notation.",
-        "<strong>Hint</strong><br>Try looking at the <code>secondLetterOfFirstName</code> variable declaration if you get stuck."
+        "让我们使用方括号，把<code>lastName</code>变量的第三个字符赋值给<code>thirdLetterOfLastName</code>。",
+        "<strong>提示</strong><br>如果你遇到困难了，看看<code>secondLetterOfFirstName</code>变量是如何做的。"
       ],
       "solutions": [
         "var lastName = \"Lovelace\";\nvar thirdLetterOfLastName = lastName[2];"
       ],
       "tests": [
         {
-          "text": "The <code>thirdLetterOfLastName</code> variable should have the value of <code>v</code>.",
-          "testString": "assert(thirdLetterOfLastName === 'v', 'The <code>thirdLetterOfLastName</code> variable should have the value of <code>v</code>.');"
+          "text": "<code>thirdLetterOfLastName</code>的值应该是<code>v</code>",
+          "testString": "assert(thirdLetterOfLastName === 'v', '<code>thirdLetterOfLastName</code>的值应该是<code>v</code>');"
         },
         {
-          "text": "You should use bracket notation.",
-          "testString": "assert(code.match(/thirdLetterOfLastName\\s*?=\\s*?lastName\\[.*?\\]/), 'You should use bracket notation.');"
+          "text": "你应该使用方括号",
+          "testString": "assert(code.match(/thirdLetterOfLastName\\s*?=\\s*?lastName\\[.*?\\]/), '你应该使用方括号');"
         }
       ],
       "challengeType": 1,
@@ -1648,14 +1648,14 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstName = \"Ada\";",
             "var secondLetterOfFirstName = firstName[1];",
             "",
-            "// Setup",
+            "// 初始化变量",
             "var lastName = \"Lovelace\";",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var thirdLetterOfLastName = lastName;",
             "",
             ""
@@ -1671,23 +1671,23 @@
       "id": "bd7123c9c451eddfaeb5bdef",
       "title": "Use Bracket Notation to Find the Last Character in a String",
       "description": [
-        "In order to get the last letter of a string, you can subtract one from the string's length.",
-        "For example, if <code>var firstName = \"Charles\"</code>, you can get the value of the last letter of the string by using <code>firstName[firstName.length - 1]</code>.",
+        "要获取字符串的最后一个字符，可以用字符串的长度减 1 的索引值。",
+        "例如，在<code>var firstName = \"Charles\"</code>中，你可以这样操作<code>firstName[firstName.length - 1]</code>来得到字符串的最后的一个字符。",
         "<hr>",
-        "Use <dfn>bracket notation</dfn> to find the last character in the <code>lastName</code> variable.",
-        "<strong>Hint</strong><br>Try looking at the <code>lastLetterOfFirstName</code> variable declaration if you get stuck."
+        "使用<dfn>方括号<dfn来取得<code>lastName</code>变量中的最后一个字符。",
+        "<strong>提示</strong><br>如果你遇到困难了，不妨看看在<code>lastLetterOfFirstName</code>变量上是怎么做的。"
       ],
       "solutions": [
         "var firstName = \"Ada\";\nvar lastLetterOfFirstName = firstName[firstName.length - 1];\n\nvar lastName = \"Lovelace\";\nvar lastLetterOfLastName = lastName[lastName.length - 1];"
       ],
       "tests": [
         {
-          "text": "<code>lastLetterOfLastName</code> should be \"e\".",
-          "testString": "assert(lastLetterOfLastName === \"e\", '<code>lastLetterOfLastName</code> should be \"e\".');"
+          "text": "<code>lastLetterOfLastName</code>应该是\"e\".",
+          "testString": "assert(lastLetterOfLastName === \"e\", '<code>lastLetterOfLastName</code>应该是 \"e\".');"
         },
         {
-          "text": "You have to use <code>.length</code> to get the last letter.",
-          "testString": "assert(code.match(/\\.length/g).length === 2, 'You have to use <code>.length</code> to get the last letter.');"
+          "text": "你需要使用<code>.length</code>获取最后一个字符",
+          "testString": "assert(code.match(/\\.length/g).length === 2, '你需要使用<code>.length</code>获取最后一个字符');"
         }
       ],
       "challengeType": 1,
@@ -1697,14 +1697,14 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstName = \"Ada\";",
             "var lastLetterOfFirstName = firstName[firstName.length - 1];",
             "",
-            "// Setup",
+            "// 初始化变量",
             "var lastName = \"Lovelace\";",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var lastLetterOfLastName = lastName;",
             "",
             ""
@@ -1720,23 +1720,23 @@
       "id": "bd7123c9c452eddfaeb5bdef",
       "title": "Use Bracket Notation to Find the Nth-to-Last Character in a String",
       "description": [
-        "You can use the same principle we just used to retrieve the last character in a string to retrieve the Nth-to-last character.",
-        "For example, you can get the value of the third-to-last letter of the <code>var firstName = \"Charles\"</code> string by using <code>firstName[firstName.length - 3]</code>",
+        "我们既可以获取字符串的最后一个字符，也可以用获取字符串的倒数第N个字符。",
+        "例如，你可以这样<code>firstName[firstName.length - 3]</code>操作来获得<code>var firstName = \"Charles\"</code>字符串中的倒数第三个字符。",
         "<hr>",
-        "Use <dfn>bracket notation</dfn> to find the second-to-last character in the <code>lastName</code> string.",
-        "<strong>Hint</strong><br>Try looking at the <code>thirdToLastLetterOfFirstName</code> variable declaration if you get stuck."
+        "使用<dfn>方括号</dfn>来获得<code>lastName</code>字符串中的倒数第二个字符。",
+        "<strong>提示</strong><br>如果你遇到困难了，不妨看看<code>thirdToLastLetterOfFirstName</code>变量是如何做到的。"
       ],
       "solutions": [
         "var firstName = \"Ada\";\nvar thirdToLastLetterOfFirstName = firstName[firstName.length - 3];\n\nvar lastName = \"Lovelace\";\nvar secondToLastLetterOfLastName = lastName[lastName.length - 2];"
       ],
       "tests": [
         {
-          "text": "<code>secondToLastLetterOfLastName</code> should be \"c\".",
-          "testString": "assert(secondToLastLetterOfLastName === 'c', '<code>secondToLastLetterOfLastName</code> should be \"c\".');"
+          "text": "<code>secondToLastLetterOfLastName</code>应该是\"c\".",
+          "testString": "assert(secondToLastLetterOfLastName === 'c', '<code>secondToLastLetterOfLastName</code>应该是\"c\".');"
         },
         {
-          "text": "You have to use <code>.length</code> to get the second last letter.",
-          "testString": "assert(code.match(/\\.length/g).length === 2, 'You have to use <code>.length</code> to get the second last letter.');"
+          "text": "你需要使用<code>.length</code>获取倒数第二个字符",
+          "testString": "assert(code.match(/\\.length/g).length === 2, '你需要使用<code>.length</code>获取倒数第二个字符');"
         }
       ],
       "challengeType": 1,
@@ -1746,14 +1746,14 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// Example",
+            "// 示例",
             "var firstName = \"Ada\";",
             "var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];",
             "",
-            "// Setup",
+            "// 初始化变量",
             "var lastName = \"Lovelace\";",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "var secondToLastLetterOfLastName = lastName;",
             "",
             ""
@@ -1860,7 +1860,7 @@
             "// Example",
             "var ourArray = [\"John\", 23];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var myArray = [];",
             ""
           ],
@@ -1898,7 +1898,7 @@
             "// Example",
             "var ourArray = [[\"the universe\", 42], [\"everything\", 101010]];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var myArray = [];",
             ""
           ],
@@ -1949,7 +1949,7 @@
             "// Setup",
             "var myArray = [50,60,70];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             ""
           ],
           "head": [],
@@ -1997,7 +1997,7 @@
             "// Setup",
             "var myArray = [18,64,99];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -2044,7 +2044,7 @@
             "// Setup",
             "var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var myData = myArray[0][0];",
             ""
           ],
@@ -2089,7 +2089,7 @@
             "// Setup",
             "var myArray = [[\"John\", 23], [\"cat\", 2]];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -2143,7 +2143,7 @@
             "// Setup",
             "var myArray = [[\"John\", 23], [\"cat\", 2]];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var removedFromMyArray;",
             "",
             ""
@@ -2165,7 +2165,7 @@
         "Use the <code>.shift()</code> function to remove the first item from <code>myArray</code>, assigning the \"shifted off\" value to <code>removedFromMyArray</code>."
       ],
       "solutions": [
-        "var myArray = [[\"John\", 23], [\"dog\", 3]];\n\n// Only change code below this line.\nvar removedFromMyArray = myArray.shift();"
+        "var myArray = [[\"John\", 23], [\"dog\", 3]];\n\n// 请把你的代码写在这条注释以下.\nvar removedFromMyArray = myArray.shift();"
       ],
       "tests": [
         {
@@ -2192,7 +2192,7 @@
             "// Setup",
             "var myArray = [[\"John\", 23], [\"dog\", 3]];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "var removedFromMyArray;",
             "",
             ""
@@ -2239,7 +2239,7 @@
             "var myArray = [[\"John\", 23], [\"dog\", 3]];",
             "myArray.shift();",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -2368,7 +2368,7 @@
             "",
             "ourReusableFunction();",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             ""
           ],
           "head": [
@@ -2453,7 +2453,7 @@
             "}",
             "ourFunctionWithArgs(10, 5); // Outputs 5",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -2696,7 +2696,7 @@
             "var outerWear = \"T-Shirt\";",
             "",
             "function myOutfit() {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  ",
@@ -2756,7 +2756,7 @@
             "  return num - 7;",
             "}",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "",
@@ -2813,7 +2813,7 @@
             "  sum = sum + 3;",
             "}",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "",
@@ -2879,7 +2879,7 @@
             "  return (num + 3) / 5;",
             "}",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             ""
           ],
@@ -2935,7 +2935,7 @@
             "function nextInLine(arr, item) {",
             "  // Your code here",
             "  ",
-            "  return item;  // Change this line",
+            "  return item;  // 请修改这一行",
             "}",
             "",
             "// Test Setup",
@@ -2986,7 +2986,7 @@
         "Modify the <code>welcomeToBooleans</code> function so that it returns <code>true</code> instead of <code>false</code> when the run button is clicked."
       ],
       "solutions": [
-        "function welcomeToBooleans() {\n  return true; // Change this line\n}"
+        "function welcomeToBooleans() {\n  return true; // 请修改这一行\n}"
       ],
       "tests": [
         {
@@ -3007,9 +3007,9 @@
           "contents": [
             "function welcomeToBooleans() {",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
-            "return false; // Change this line",
+            "return false; // 请修改这一行",
             "",
             "// Only change code above this line.",
             "}"
@@ -3078,7 +3078,7 @@
             "// Setup",
             "function trueOrFalse(wasThatTrue) {",
             "",
-            "  // Only change code below this line.",
+            "  // 请把你的代码写在这条注释以下.",
             "  ",
             "  ",
             "  ",
@@ -3138,7 +3138,7 @@
           "contents": [
             "// Setup",
             "function testEqual(val) {",
-            "  if (val) { // Change this line",
+            "  if (val) { // 请修改这一行",
             "    return \"Equal\";",
             "  }",
             "  return \"Not Equal\";",
@@ -3195,7 +3195,7 @@
           "contents": [
             "// Setup",
             "function testStrict(val) {",
-            "  if (val) { // Change this line",
+            "  if (val) { // 请修改这一行",
             "    return \"Equal\";",
             "  }",
             "  return \"Not Equal\";",
@@ -3249,7 +3249,7 @@
           "contents": [
             "// Setup",
             "function compareEquality(a, b) {",
-            "  if (a == b) { // Change this line",
+            "  if (a == b) { // 请修改这一行",
             "    return \"Equal\";",
             "  }",
             "  return \"Not Equal\";",
@@ -3312,7 +3312,7 @@
           "contents": [
             "// Setup",
             "function testNotEqual(val) {",
-            "  if (val) { // Change this line",
+            "  if (val) { // 请修改这一行",
             "    return \"Not Equal\";",
             "  }",
             "  return \"Equal\";",
@@ -3374,7 +3374,7 @@
           "contents": [
             "// Setup",
             "function testStrictNotEqual(val) {",
-            "  // Only Change Code Below this Line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  if (val) {",
             "",
@@ -3406,7 +3406,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "function testGreaterThan(val) {\n  if (val > 100) {  // Change this line\n    return \"Over 100\";\n  }\n  if (val > 10) {  // Change this line\n    return \"Over 10\";\n  }\n  return \"10 or Under\";\n}"
+        "function testGreaterThan(val) {\n  if (val > 100) {  // 请修改这一行\n    return \"Over 100\";\n  }\n  if (val > 10) {  // 请修改这一行\n    return \"Over 10\";\n  }\n  return \"10 or Under\";\n}"
       ],
       "tests": [
         {
@@ -3450,11 +3450,11 @@
           "name": "index",
           "contents": [
             "function testGreaterThan(val) {",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Over 100\";",
             "  }",
             "  ",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Over 10\";",
             "  }",
             "",
@@ -3482,7 +3482,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "function testGreaterOrEqual(val) {\n  if (val >= 20) {  // Change this line\n    return \"20 or Over\";\n  }\n  \n  if (val >= 10) {  // Change this line\n    return \"10 or Over\";\n  }\n\n  return \"Less than 10\";\n}"
+        "function testGreaterOrEqual(val) {\n  if (val >= 20) {  // 请修改这一行\n    return \"20 or Over\";\n  }\n  \n  if (val >= 10) {  // 请修改这一行\n    return \"10 or Over\";\n  }\n\n  return \"Less than 10\";\n}"
       ],
       "tests": [
         {
@@ -3526,11 +3526,11 @@
           "name": "index",
           "contents": [
             "function testGreaterOrEqual(val) {",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"20 or Over\";",
             "  }",
             "  ",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"10 or Over\";",
             "  }",
             "",
@@ -3557,7 +3557,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "function testLessThan(val) {\n  if (val < 25) {  // Change this line\n    return \"Under 25\";\n  }\n  \n  if (val < 55) {  // Change this line\n    return \"Under 55\";\n  }\n\n  return \"55 or Over\";\n}"
+        "function testLessThan(val) {\n  if (val < 25) {  // 请修改这一行\n    return \"Under 25\";\n  }\n  \n  if (val < 55) {  // 请修改这一行\n    return \"Under 55\";\n  }\n\n  return \"55 or Over\";\n}"
       ],
       "tests": [
         {
@@ -3597,11 +3597,11 @@
           "name": "index",
           "contents": [
             "function testLessThan(val) {",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Under 25\";",
             "  }",
             "  ",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Under 55\";",
             "  }",
             "",
@@ -3628,7 +3628,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "function testLessOrEqual(val) {\n  if (val <= 12) {  // Change this line\n    return \"Smaller Than or Equal to 12\";\n  }\n  \n  if (val <= 24) {  // Change this line\n    return \"Smaller Than or Equal to 24\";\n  }\n\n  return \"More Than 24\";\n}"
+        "function testLessOrEqual(val) {\n  if (val <= 12) {  // 请修改这一行\n    return \"Smaller Than or Equal to 12\";\n  }\n  \n  if (val <= 24) {  // 请修改这一行\n    return \"Smaller Than or Equal to 24\";\n  }\n\n  return \"More Than 24\";\n}"
       ],
       "tests": [
         {
@@ -3672,11 +3672,11 @@
           "name": "index",
           "contents": [
             "function testLessOrEqual(val) {",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Smaller Than or Equal to 12\";",
             "  }",
             "  ",
-            "  if (val) {  // Change this line",
+            "  if (val) {  // 请修改这一行",
             "    return \"Smaller Than or Equal to 24\";",
             "  }",
             "",
@@ -3758,7 +3758,7 @@
           "name": "index",
           "contents": [
             "function testLogicalAnd(val) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "",
             "  if (val) {",
             "    if (val) {",
@@ -3845,7 +3845,7 @@
           "name": "index",
           "contents": [
             "function testLogicalOr(val) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "",
             "  if (val) {",
             "    return \"Outside\";",
@@ -3919,7 +3919,7 @@
           "contents": [
             "function testElse(val) {",
             "  var result = \"\";",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  if (val > 5) {",
             "    result = \"Bigger than 5\";",
@@ -4147,7 +4147,7 @@
           "name": "index",
           "contents": [
             "function testSize(num) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  return \"Change Me\";",
@@ -4230,7 +4230,7 @@
           "contents": [
             "var names = [\"Hole-in-one!\", \"Eagle\", \"Birdie\", \"Par\", \"Bogey\", \"Double Bogey\", \"Go Home!\"];",
             "function golfScore(par, strokes) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  return \"Change Me\";",
@@ -4298,7 +4298,7 @@
           "contents": [
             "function caseInSwitch(val) {",
             "  var answer = \"\";",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  ",
@@ -4373,7 +4373,7 @@
           "contents": [
             "function switchOfStuff(val) {",
             "  var answer = \"\";",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  ",
@@ -4460,7 +4460,7 @@
           "contents": [
             "function sequentialSizes(val) {",
             "  var answer = \"\";",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  ",
@@ -4543,7 +4543,7 @@
           "contents": [
             "function chainToSwitch(val) {",
             "  var answer = \"\";",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  if (val === \"bob\") {",
             "    answer = \"Marley\";",
@@ -4675,7 +4675,7 @@
           "contents": [
             "// Setup",
             "function abTest(a, b) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  ",
@@ -4747,7 +4747,7 @@
             "var count = 0;",
             "",
             "function cc(card) {",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  ",
             "  return \"Change Me\";",
@@ -4819,7 +4819,7 @@
             "  \"friends\": [\"everything!\"]",
             "};",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             "var myDog = {",
             "  ",
@@ -4886,10 +4886,10 @@
             "  \"shoes\": \"cleats\"",
             "};",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
-            "var hatValue = testObj;      // Change this line",
-            "var shirtValue = testObj;    // Change this line"
+            "var hatValue = testObj;      // 请修改这一行",
+            "var shirtValue = testObj;    // 请修改这一行"
           ],
           "head": [],
           "tail": [
@@ -4951,10 +4951,10 @@
             "  \"the drink\": \"water\"",
             "};",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
-            "var entreeValue = testObj;   // Change this line",
-            "var drinkValue = testObj;    // Change this line"
+            "var entreeValue = testObj;   // 请修改这一行",
+            "var drinkValue = testObj;    // 请修改这一行"
           ],
           "head": [],
           "tail": [
@@ -5021,10 +5021,10 @@
             "  19: \"Unitas\"",
             "};",
             "",
-            "// Only change code below this line;",
+            "// 请把你的代码写在这条注释以下;",
             "",
-            "var playerNumber;       // Change this Line",
-            "var player = testObj;   // Change this Line"
+            "var playerNumber;       // 请修改这一行",
+            "var player = testObj;   // 请修改这一行"
           ],
           "head": [],
           "tail": [
@@ -5085,7 +5085,7 @@
             "  \"friends\": [\"freeCodeCamp Campers\"]",
             "};",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5147,7 +5147,7 @@
             "  \"friends\": [\"freeCodeCamp Campers\"]",
             "};",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             ""
           ],
           "head": [],
@@ -5206,7 +5206,7 @@
             "  \"bark\": \"woof\"",
             "};",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5280,7 +5280,7 @@
             "function phoneticLookup(val) {",
             "  var result = \"\";",
             "",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  switch(val) {",
             "    case \"alpha\": ",
             "      result = \"Adams\";",
@@ -5501,7 +5501,7 @@
             "  }",
             "};",
             "",
-            "var gloveBoxContents = undefined; // Change this line",
+            "var gloveBoxContents = undefined; // 请修改这一行",
             ""
           ],
           "head": [],
@@ -5528,7 +5528,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "var myPlants = [\n  { \n    type: \"flowers\",\n    list: [\n      \"rose\",\n      \"tulip\",\n      \"dandelion\"\n    ]\n  },\n  {\n    type: \"trees\",\n    list: [\n      \"fir\",\n      \"pine\",\n      \"birch\"\n    ]\n  }  \n];\n\n// Only change code below this line\n\nvar secondTree = myPlants[1].list[1];"
+        "var myPlants = [\n  { \n    type: \"flowers\",\n    list: [\n      \"rose\",\n      \"tulip\",\n      \"dandelion\"\n    ]\n  },\n  {\n    type: \"trees\",\n    list: [\n      \"fir\",\n      \"pine\",\n      \"birch\"\n    ]\n  }  \n];\n\n// 请把你的代码写在这条注释以下\n\nvar secondTree = myPlants[1].list[1];"
       ],
       "tests": [
         {
@@ -5568,9 +5568,9 @@
             "  }  ",
             "];",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
-            "var secondTree = \"\"; // Change this line",
+            "var secondTree = \"\"; // 请修改这一行",
             ""
           ],
           "head": [],
@@ -5603,7 +5603,7 @@
       ],
       "releasedOn": "January 1, 2016",
       "solutions": [
-        "var collection = {\n    2548: {\n      album: \"Slippery When Wet\",\n      artist: \"Bon Jovi\",\n      tracks: [ \n        \"Let It Rock\", \n        \"You Give Love a Bad Name\" \n      ]\n    },\n    2468: {\n      album: \"1999\",\n      artist: \"Prince\",\n      tracks: [ \n        \"1999\", \n        \"Little Red Corvette\" \n      ]\n    },\n    1245: {\n      artist: \"Robert Palmer\",\n      tracks: [ ]\n    },\n    5439: {\n      album: \"ABBA Gold\"\n    }\n};\n// Keep a copy of the collection for tests\nvar collectionCopy = JSON.parse(JSON.stringify(collection));\n\n// Only change code below this line\nfunction updateRecords(id, prop, value) {\n  if(value === \"\") delete collection[id][prop];\n  else if(prop === \"tracks\") {\n    collection[id][prop] = collection[id][prop] || [];\n    collection[id][prop].push(value);\n  } else {\n    collection[id][prop] = value;\n  }\n  \n  return collection;\n}"
+        "var collection = {\n    2548: {\n      album: \"Slippery When Wet\",\n      artist: \"Bon Jovi\",\n      tracks: [ \n        \"Let It Rock\", \n        \"You Give Love a Bad Name\" \n      ]\n    },\n    2468: {\n      album: \"1999\",\n      artist: \"Prince\",\n      tracks: [ \n        \"1999\", \n        \"Little Red Corvette\" \n      ]\n    },\n    1245: {\n      artist: \"Robert Palmer\",\n      tracks: [ ]\n    },\n    5439: {\n      album: \"ABBA Gold\"\n    }\n};\n// Keep a copy of the collection for tests\nvar collectionCopy = JSON.parse(JSON.stringify(collection));\n\n// 请把你的代码写在这条注释以下\nfunction updateRecords(id, prop, value) {\n  if(value === \"\") delete collection[id][prop];\n  else if(prop === \"tracks\") {\n    collection[id][prop] = collection[id][prop] || [];\n    collection[id][prop].push(value);\n  } else {\n    collection[id][prop] = value;\n  }\n  \n  return collection;\n}"
       ],
       "tests": [
         {
@@ -5671,7 +5671,7 @@
             "// Keep a copy of the collection for tests",
             "var collectionCopy = JSON.parse(JSON.stringify(collection));",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "function updateRecords(id, prop, value) {",
             "  ",
             "  ",
@@ -5723,7 +5723,7 @@
             "// Setup",
             "var myArray = [];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5781,7 +5781,7 @@
             "// Setup",
             "var myArray = [];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5834,7 +5834,7 @@
             "// Setup",
             "var myArray = [];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5892,7 +5892,7 @@
             "// Setup",
             "var myArray = [];",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             ""
           ],
@@ -5953,7 +5953,7 @@
             "// Setup",
             "var myArr = [ 2, 3, 4, 5, 6];",
             "",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             ""
           ],
@@ -6001,7 +6001,7 @@
           "contents": [
             "function multiplyAll(arr) {",
             "  var product = 1;",
-            "  // Only change code below this line",
+            "  // 请把你的代码写在这条注释以下",
             "  ",
             "  // Only change code above this line",
             "  return product;",
@@ -6063,7 +6063,7 @@
             "var myArray = [];",
             "var i = 10;",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             "while (i < 5) {",
             "  myArray.push(i);",
@@ -6156,7 +6156,7 @@
             "",
             "",
             "function lookUpProfile(name, prop){",
-            "// Only change code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "// Only change code above this line",
             "}",
@@ -6205,7 +6205,7 @@
           "contents": [
             "function randomFraction() {",
             "",
-            "  // Only change code below this line.",
+            "  // 请把你的代码写在这条注释以下.",
             "",
             "  return 0;",
             "",
@@ -6264,7 +6264,7 @@
             "",
             "function randomWholeNum() {",
             "",
-            "  // Only change code below this line.",
+            "  // 请把你的代码写在这条注释以下.",
             "",
             "  return Math.random();",
             "}"
@@ -6323,11 +6323,11 @@
             "",
             "ourRandomRange(1, 9);",
             "",
-            "// Only change code below this line.",
+            "// 请把你的代码写在这条注释以下.",
             "",
             "function randomRange(myMin, myMax) {",
             "",
-            "  return 0; // Change this line",
+            "  return 0; // 请修改这一行",
             "",
             "}",
             "",
