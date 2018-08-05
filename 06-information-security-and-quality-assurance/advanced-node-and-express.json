@@ -29,7 +29,7 @@
         {
           "text": "Pug 正在运行",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/') .then(data => { assert.match(data, /pug-success-message/gi, '项目的主页应用 pug 来呈现，但 .pug文件'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/') .then(data => { assert.match(data, /pug-success-message/gi, '你的项目主页应使用 pug 作为渲染引擎，且 .pug 文件不应改变'); }, xhr => { throw new Error(xhr.statusText); })"
         }
       ],
       "solutions": [],
@@ -42,18 +42,18 @@
       "description": [
         "注意, 这个项目建立在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-advancednode/'>Glitch</a> 上的启动项目中，也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-advancednode/'>GitHub</a> 上克隆。",
         "模版引擎最棒的特点之一就是在 HTML 页面展示之前，可以从服务端传变量到模版文件。",
-        "在 Pug 文件中，你可以引用变量名来使用变量，像 <code>#{variable_name}</code> 插入元素中或像 <code>p= variable_name</code> 把元素与变量直接写在一起，这表示 p 元素的内容等价于这个变量。",
+        "在 Pug 文件中，你可以引用变量名来使用变量，像<code>#{variable_name}</code>插入元素中或像<code>p= variable_name</code>把元素与变量直接写在一起，这表示 p 元素的内容等价于这个变量。",
         "建议大家在 Pug 的 Githubs README <a href='https://github.com/pugjs/pug'>here</a> 看看它的语法与结构。 Pug 使用空格和标签来展示嵌套元素和间隔大量的代码。",
         "在 pug 的 'index.pug' 文件中，我们用变量 <em>title</em> 和 <em>message</em>",
-        "从服务器传递这些信息，你需要用变量和数据在 <em>res.render</em> 中添加一个对象作为第二论据。举一个例子，创建一个变量来传递对象： <code>{title: 'Hello', message: 'Please login'</code> 到你的主页",
-        "应该这样写： <code>res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});</code> ",
+        "从服务器传递这些信息，你需要用变量和数据在 <em>res.render</em> 中添加一个对象作为第二论据。举一个例子，创建一个变量来传递对象：<code>{title: 'Hello', message: 'Please login'</code>到你的主页",
+        "应该这样写：<code>res.render(process.cwd() + '/views/pug/index', {title: 'Hello', message: 'Please login'});</code>",
         "刷新页面，页面中数据显示正确，这时你就可以提交你的页面了。"
       ],
       "tests": [
         {
           "text": "Pug 正确展示变量",
           "testString":
-            "getUserInput => $.get(getUserInput('url')+ '/') .then(data => { assert.match(data, /pug-variable(\"|')>Please login/gi, '项目的主页应用 pug 来呈现，但 .pug文件'); }, xhr => { throw new Error(xhr.statusText); })"
+            "getUserInput => $.get(getUserInput('url')+ '/') .then(data => { assert.match(data, /pug-variable(\"|')>Please login/gi, '你的项目主页应使用 pug 作为渲染引擎，且 .pug 文件不应改变'); }, xhr => { throw new Error(xhr.statusText); })"
         }
       ],
       "solutions": [],
