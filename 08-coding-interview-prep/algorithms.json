@@ -100,8 +100,7 @@
       "id": "a56138aff60341a09ed6c480",
       "title": "Inventory Update",
       "description": [
-        "",
-        "比较和更新存储在<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84'target='_blank'>二维数组</a>中的库存，并将其与新交付的第二个二维数组进行比较。更新当前的库存项数量（arr1）。如果找不到项目，请将新项目和数量添加到库存数组中。返回的库存数组应该按照项目的字母顺序排列。",
+        "创建一个<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84'target='_blank'>二维数组</a>，比较并更新存储在<code>二维数组</code>中的”库存“元素，然后并将其与新产生的第二个二维数组进行对比，更新当前的”库存“项的数量（<code>arr1</code>），如果找不到这个对比对象，那么将新的对象和数量添加到“库存”数组中。注意：返回的“库存”数组应该是按照数组元素的首字母顺序排序",
         "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'>帮助</a>。你可以找人“结对编程“，但不要因此放弃思考。",
       ],
       "solutions": [
