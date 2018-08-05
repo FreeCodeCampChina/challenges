@@ -416,28 +416,28 @@
       "id": "8d1323c8c441eddfaeb5bdef",
       "title": "Create a Set Class",
       "description": [
-        "In the next few exercises we are going to create a function to emulate a data structure called a \"Set\". A Set is like an array, but it cannot contain duplicate values. The typical use for a Set is to simply check for the presence of an item. This can be implemented with an object, for instance:",
+        "在接下来的几个章节里面我们会通过创建一个函数来模拟 “集合” 这种数据结构。集合跟数组很类似，但是集合中元素具有唯一性。集合的典型应用是检查其中是否存在某一元素。这种应用可以通过对象来实现，举例如下：",
         "<blockquote>var set = new Object();<br>set.foo = true;<br>// See if foo exists in our set:<br>console.log(set.foo) // true</blockquote>",
-        "In the next few exercises, we will build a full featured Set from scratch.",
-        "For this exercise, create a function that will add a value to our set collection as long as the value does not already exist in the set. For example:",
+        "在接下来的几个联系当中，我们会从零开始创建一个拥有完整特性的集合。",
+        "在本次联系中，当中集合不存在某个元素时我们会将该元素添加进 set 集合当中，例子如下：",
         "<blockquote>this.add = function(element) {<br>  //some code to add value to the set<br>}</blockquote>",
-        "The function should return <code>true</code> if the value is successfully added and <code>false</code> otherwise."
+        "当成功添加元素时函数会返回<code>true</code>，否则会返回<code>false</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have an <code>add</code> method.",
+          "text": "<code>Set</code>类应该具有<code>add</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.add === 'function')}()), 'Your <code>Set</code> class should have an <code>add</code> method.');"
         },
         {
-          "text": "Your <code>add</code> method should not add duplicate values.",
+          "text": "<code>add</code>方法不能添加重复值。",
           "testString": "assert((function(){var test = new Set(); test.add('a'); test.add('b'); test.add('a'); var vals = test.values(); return (vals[0] === 'a' && vals[1] === 'b' && vals.length === 2)}()), 'Your <code>add</code> method should not add duplicate values.');"
         },
         {
-          "text": "Your <code>add</code> method should return <code>true</code> when a value has been successfully added.",
+          "text": "当成功添加元素时<code>add</code>方法应该返回<code>true</code>。",
           "testString": "assert((function(){var test = new Set(); var result = test.add('a'); return (result != undefined) && (result === true);}()), 'Your <code>add</code> method should return <code>true</code> when a value has been successfully added.');"
         },
         {
-          "text": "Your <code>add</code> method should return <code>false</code> when a duplicate value is added.",
+          "text": "当添加重复元素时<code>add</code>方法应该返回<code>false</code>。",
           "testString": "assert((function(){var test = new Set(); test.add('a'); var result = test.add('a'); return (result != undefined) && (result === false);}()), 'Your <code>add</code> method should return <code>false</code> when a duplicate value is added.');"
         }
       ],
@@ -453,18 +453,18 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold our set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -476,19 +476,19 @@
       "id": "587d8253367417b2b2512c6b",
       "title": "Remove from a Set",
       "description": [
-        "In this exercises we are going to create a delete function for our set. The function should be named <code>this.remove</code>. This function should accept a value and check if it exists in the set. If it does, remove that value from the set, and return true. Otherwise, return false."
+        "在本次练习当中我们来为 set 集合创建一个 delete 函数。该函数应该被命名为<code>this.remove</code>。该函数接收一个值并判断该值在集合中是否存在，如何存在就从集合中移除该元素并返回 true 否则就返回 false 。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>remove</code> method.",
+          "text": "<code>Set</code>类应该有<code>remove</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.remove === 'function')}()), 'Your <code>Set</code> class should have a <code>remove</code> method.');"
         },
         {
-          "text": "Your <code>remove</code> method should only remove items that are present in the set.",
+          "text": "<code>remove</code>方法应该只移除集合中存在的元素。",
           "testString": "assert.deepEqual((function(){var test = new Set(); test.add('a');test.add('b');test.remove('c'); return test.values(); })(), ['a', 'b'], 'Your <code>remove</code> method should only remove items that are present in the set.');"
         },
         {
-          "text": "Your <code>remove</code> method should remove the given item from the set.",
+          "text": "<code>remove</code>方法应该移除集合中的指定值。",
           "testString": "assert((function(){var test = new Set(); test.add('a');test.add('b');test.remove('a'); var vals = test.values(); return (vals[0] === 'b' && vals.length === 1)}()), 'Your <code>remove</code> method should remove the given item from the set.');"
         }
       ],
@@ -504,17 +504,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -522,8 +522,8 @@
             "        }",
             "        return false;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -535,15 +535,15 @@
       "id": "8d1923c8c441eddfaeb5bdef",
       "title": "Size of the Set",
       "description": [
-        "In this exercise we are going to create a size function for our Set. This function should be named <code>this.size</code> and it should return the size of the collection."
+        "在本次练习当中我们会为 Set 集合创建一个 size 函数。该函数应该被命名为<code>this.size</code>并该函数会返回集合的长度。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>size</code> method.",
+          "text": "<code>Set</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.size === 'function')}()), 'Your <code>Set</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "The <code>size</code> method should return the number of elements in the collection.",
+          "text": "<code>size</code>应该返回集合中元素的个数。",
           "testString": "assert((function(){var test = new Set(); test.add('a');test.add('b');test.remove('a');return (test.size() === 1)}()), 'The <code>size</code> method should return the number of elements in the collection.');"
         }
       ],
@@ -559,17 +559,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -577,7 +577,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -586,8 +586,8 @@
             "        }",
             "        return false;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -599,17 +599,17 @@
       "id": "587d8253367417b2b2512c6c",
       "title": "Perform a Union on Two Sets",
       "description": [
-        "In this exercise we are going to perform a union on two sets of data. We will create a method on our <code>Set</code> data structure called <code>union</code>. This method should take another <code>Set</code> as an argument and return the <code>union</code> of the two sets, excluding any duplicate values.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the union of setA and setB is: <code>setA.union(setB) = ['a', 'b', 'c', 'd', 'e']</code>."
+        "在本次练习当中我们来合并两个集合当中的元素。我们会在<code>Set</code>数据结构当中创建<code>union</code>方法。该方法将<code>Set</code>作为参数并返回两个集合的合集，并且其中的元素具有唯一性。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>和集合<code>setB = ['a','b','d','e']</code>合并之后的集合为：<code>setA.union(setB) = ['a', 'b', 'c', 'd', 'e']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>union</code> method.",
+          "text": "<code>Set</code>类应该有<code>union</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.union === 'function')})(), 'Your <code>Set</code> class should have a <code>union</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert((function(){var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var unionSetAB = setA.union(setB); var final = unionSetAB.values(); return (final.indexOf('a') !== -1 && final.indexOf('b') !== -1 && final.indexOf('c') !== -1 && final.indexOf('d') !== -1 && final.length === 4)})(), 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert((function(){var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var unionSetAB = setA.union(setB); var final = unionSetAB.values(); return (final.indexOf('a') !== -1 && final.indexOf('b') !== -1 && final.indexOf('c') !== -1 && final.indexOf('d') !== -1 && final.length === 4)})(), '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -624,17 +624,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -642,7 +642,7 @@
             "        }",
             "        return false;",
             "    };",
-            "   // this method will remove an element from a set",
+            "   // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -651,13 +651,13 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the set",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -669,17 +669,17 @@
       "id": "587d8253367417b2b2512c6d",
       "title": "Perform an Intersection on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform an intersection on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>intersection</code>. An intersection of sets represents all values that are common to two or more sets. This method should take another <code>Set</code> as an argument and return the <code>intersection</code> of the two sets.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the intersection of setA and setB is: <code>setA.intersection(setB) = ['a', 'b']</code>."
+        "在本次练习当中我们要计算出两个的并集。我们会在<code>Set</code>数据结构中写一个<code>intersection</code>方法。并集是两个或者多个 set 共同拥有的元素的集合。该方法应该接收<code>Set</code>作为参数并返回两个集合的并集。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>和集合<code>setB = ['a','b','d','e']</code>的并集计算结果为：<code>setA.intersection(setB) = ['a', 'b']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>intersection</code> method.",
+          "text": "<code>Set</code>类应该有<code>intersection</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.intersection === 'function')}, 'Your <code>Set</code> class should have a <code>intersection</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert(function(){  var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var intersectionSetAB = setA.intersection(setB); return (intersectionSetAB.size() === 1 && intersectionSetAB.values()[0] === 'c')}, 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert(function(){  var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var intersectionSetAB = setA.intersection(setB); return (intersectionSetAB.size() === 1 && intersectionSetAB.values()[0] === 'c')}, '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -694,17 +694,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "   // this method will add an element to the set",
+            "   // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -712,7 +712,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -721,11 +721,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -738,8 +738,8 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -751,17 +751,17 @@
       "id": "587d8254367417b2b2512c6e",
       "title": "Perform a Difference on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform a difference on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>difference</code>. A difference of sets should compare two sets and return the items present in the first set that are absent in the second. This method should take another <code>Set</code> as an argument and return the <code>difference</code> of the two sets.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the difference of setA and setB is: <code>setA.difference(setB) = ['c']</code>."
+        "在本次练习当中我们来比较两个集合中元素的不同。我们在<code>Set</code>数据结构当中创建<code>difference</code>方法。两个集合差集的概念为：在第一个集合中存在而第二个集合不存在的元素的集合。该方法应该接收<code>Set</code>作为参数并且返回两个集合的差集。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>与<code>setB = ['a','b','d','e']</code>的差集比较结果为：<code>setA.difference(setB) = ['c']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>difference</code> method.",
+          "text": "<code>Set</code>类应该有<code>difference</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.difference === 'function')}, 'Your <code>Set</code> class should have a <code>difference</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('c'); setB.add('d'); var differenceSetAB = setA.difference(setB); return (differenceSetAB.size() === 2) && (differenceSetAB.values() === [ 'a', 'b' ])}, 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('c'); setB.add('d'); var differenceSetAB = setA.difference(setB); return (differenceSetAB.size() === 2) && (differenceSetAB.values() === [ 'a', 'b' ])}, '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -776,17 +776,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -794,7 +794,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -803,11 +803,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法会返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -820,7 +820,7 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // this method will return the intersection of two sets as a new set",
+            "    // 该方法会返回两个集合的交集",
             "    this.intersection = function(otherSet) {",
             "        var intersectionSet = new Set();",
             "        var firstSet = this.values();",
@@ -831,8 +831,8 @@
             "        });",
             "        return intersectionSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -844,32 +844,32 @@
       "id": "587d8254367417b2b2512c6f",
       "title": "Perform a Subset Check on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform a subset test on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>subset</code>. This will compare the first set, against the second and if the first set is fully contained within the Second then it will return true.",
-        "For example, if <code>setA = ['a','b']</code> and <code>setB = ['a','b','c','d']</code>, then the subset of setA and setB is: <code>setA.subset(setB)</code> should be <code>true</code>."
+        "在本次练习中我们将对两个集合元素做子集测试。我们会为<code>Set</code>数据结构创建<code>subset</code>方法。第一个集合会与第二个集合做对比，如何第二个集合完全包含第一个集合该方法会返回 true 。",
+        "举个栗子，假设有集合<code>setA = ['a','b']</code>与<code>setB = ['a','b','c','d']</code>，那么<code>setA.subset(setB)</code>的运算结果应该为<code>true</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>union</code> method.",
+          "text": "<code>Set</code>类应该有<code>union</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.subset === 'function')}, 'Your <code>Set</code> class should have a <code>union</code> method.');"
         },
         {
-          "text": "The first Set() was contained in the second Set",
+          "text": "第二个集合完全包含第一个集合。",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setB.add('b'); setB.add('c'); setB.add('a'); setB.add('d'); var subsetSetAB = setA.subset(setB);return (subsetSetAB === true)}, 'The first Set() was contained in the second Set');"
         },
         {
-          "text": "<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code> should return <code>true</code>\")",
+          "text": "<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code>运算应该返回<code>true</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setB.add('a'); setB.add('b'); setB.add('c'); setB.add('d'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === true)}, \"<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code> should return <code>true</code>\");"
         },
         {
-          "text": "<code>['a', 'b', 'c'].subset(['a', 'b'])</code> should return <code>false</code>\")",
+          "text": "<code>['a', 'b', 'c'].subset(['a', 'b'])</code>运算应该返回<code>false</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('a'); setB.add('b'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === false)}, \"<code>['a', 'b', 'c'].subset(['a', 'b'])</code> should return <code>false</code>\");"
         },
         {
-          "text": "<code>[].subset([])</code> should return <code>true</code>",
+          "text": "<code>[].subset([])</code>运算应该返回<code>true</code>",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); var subsetSetAB = setA.subset(setB); return (subsetSetAB === true)}, '<code>[].subset([])</code> should return <code>true</code>');"
         },
         {
-          "text": "<code>['a', 'b'].subset(['c', 'd'])</code> should return <code>false</code>\")",
+          "text": "<code>['a', 'b'].subset(['c', 'd'])</code>运算应该返回<code>false</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setB.add('c'); setB.add('d'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === false)}, \"<code>['a', 'b'].subset(['c', 'd'])</code> should return <code>false</code>\");"
         }
       ],
@@ -885,17 +885,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -903,7 +903,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -912,11 +912,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法会返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -929,7 +929,7 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // this method will return the intersection of two sets as a new set",
+            "    // 该方法会返回两个集合的交集",
             "    this.intersection = function(otherSet) {",
             "        var intersectionSet = new Set();",
             "        var firstSet = this.values();",
@@ -940,7 +940,7 @@
             "        });",
             "        return intersectionSet;",
             "    };",
-            "    // this method will return the difference of two sets as a new set",
+            "    // 该方法会返回两个集合的差集",
             "    this.difference = function(otherSet) {",
             "        var differenceSet = new Set();",
             "        var firstSet = this.values();",
@@ -951,8 +951,8 @@
             "        });",
             "        return differenceSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -997,9 +997,9 @@
           "contents": [
             "function checkSet() {",
             "  var set = new Set([1, 2, 3, 3, 2, 1, 2, 3, 1]);",
-            "  // change code below this line",
+            "  // 请在本行下方输入代码",
             "  ",
-            "  // change code above this line",
+            "  // 请在本行上方输入代码",
             "  console.log(set);",
             "  return set;",
             "}",
@@ -1086,9 +1086,9 @@
           "contents": [
             "function checkSet(arrToBeSet, checkValue){",
             "",
-            "   // change code below this line",
+            "   // 请在本行下方输入代码",
             "",
-            "   // change code above this line",
+            "   // 请在本行上方输入代码",
             "",
             "}",
             "",
@@ -1129,9 +1129,9 @@
           "name": "index",
           "contents": [
             "function checkSet(set){",
-            "   // change code below this line",
+            "   // 请在本行下方输入代码",
             "",
-            "   // change code above this line",
+            "   // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1195,8 +1195,8 @@
           "contents": [
             "var Map = function() {",
             "  this.collection = {};",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -1237,7 +1237,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// change code below this line"
+            "// 请在本行下方输入代码"
           ],
           "head": [],
           "tail": []
@@ -1306,8 +1306,8 @@
             "};",
             "var HashTable = function() {",
             "  this.collection = {};",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [
@@ -1430,9 +1430,9 @@
             "  };",
             "",
             "  this.add = function(element){",
-            "    // Only change code below this line",
+            "    // Only 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // Only 请在本行上方输入代码",
             "  };",
             "}"
           ],
@@ -1519,9 +1519,9 @@
             "  }; ",
             "",
             "  this.remove = function(element){",
-            "    // Only change code below this line",
+            "    // Only 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // Only 请在本行上方输入代码",
             "  };",
             "}"
           ],
@@ -1623,9 +1623,9 @@
             "    length --;",
             "  };",
             "",
-            "  // Only change code below this line",
+            "  // Only 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // Only 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1729,9 +1729,9 @@
             "    length --;",
             "  };",
             "",
-            "  // Only change code below this line",
+            "  // Only 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // Only 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1809,9 +1809,9 @@
             "    length++;",
             "  }; ",
             "",
-            "  // Only change code below this line",
+            "  // Only 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // Only 请在本行上方输入代码",
             "",
             "}"
           ],
@@ -1881,8 +1881,8 @@
             "var DoublyLinkedList = function() {",
             "  this.head = null;",
             "  this.tail = null;",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -1970,8 +1970,8 @@
             "var DoublyLinkedList = function() {",
             "  this.head = null;",
             "  this.tail = null;",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -2081,8 +2081,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2164,8 +2164,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2246,8 +2246,8 @@
             "}",
             "function BinarySearchTree() {    ",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2346,8 +2346,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2457,8 +2457,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2552,8 +2552,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2644,7 +2644,7 @@
             "",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // case 1: target has no children, change code below this line",
+            "    // case 1: target has no children, 请在本行下方输入代码",
             "}"
           ],
           "head": [],
@@ -2823,7 +2823,7 @@
             "        }",
             "      }",
             "    }",
-            "    // case 2: target has one child, change code below this line",
+            "    // case 2: target has one child, 请在本行下方输入代码",
             "  };",
             "}"
           ],
@@ -3026,7 +3026,7 @@
             "      }",
             "      target = null;",
             "    }",
-            "    // case 3: target has two children, change code below this line",
+            "    // case 3: target has two children, 请在本行下方输入代码",
             "  };",
             "}"
           ],
@@ -3152,8 +3152,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -3263,8 +3263,8 @@
             "  };",
             "};",
             "var Trie = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3321,8 +3321,8 @@
           "name": "index",
           "contents": [
             "var MaxHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3372,8 +3372,8 @@
           "name": "index",
           "contents": [
             "var MaxHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3432,8 +3432,8 @@
             "  return (size > 1) ? createArray(size - 1) : undefined;",
             "})(25);",
             "var MinHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
