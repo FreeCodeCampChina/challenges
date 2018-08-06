@@ -25,12 +25,12 @@
       "id": "587d7fb0367417b2b2512bee",
       "title": "Start a Working Express Server",
       "description": [
-        "在 myApp.js 文件的前两行中，你可以看到创建一个 Express 应用对象是很简单的。这个 Express 对象有几个方法，在这些挑战中，我们将会学习它们更多的方法。一个基础的方法是 <code>app.listen(port)</code>。它告诉服务器监听指定的端口，并且让这个服务处于运行状态。你可以在文件的底部看到它们。它在注释里面，因为出于测试原因，我们需要知道这个应用正在后台运行。你想要添加的所有代码，都放在这两部分之间。Glitch 将端口号存储在环境变量 <code>process.env.PORT</code>中。它的值是 <code>3000</code>。",
-        "让我们在服务端输出第一个字符串！在 Express 中，路由采用这种结构：<code>app.METHOD(PATH, HANDLER)</code>。<code>METHOD</code> 是小写的 http 方法。<code>PATH</code> 是服务器上的相对路径（它是一个字符串，甚至是正则表达式）<code>HANDLER</code> 是 Express 匹配路由时调用的处理函数。",
-        "处理函数采用这种形式：<code>function(req, res) {...}</code>，在这个处理函数的参数中 <code>req</code>and 是请求对象。<code>res</code> 是响应对象。举个例子，处理函数：",
+        "在 myApp.js 文件的前两行中，你可以看到创建一个 Express 应用对象是很简单的。这个 Express 对象有几个方法，在这些挑战中，我们将会学习它们更多的方法。一个基础的方法是<code>app.listen(port)</code>。它告诉服务器监听指定的端口，并且让这个服务处于运行状态。你可以在文件的底部看到它们。它在注释里面，因为出于测试原因，我们需要知道这个应用正在后台运行。你想要添加的所有代码，都放在这两部分之间。Glitch 将端口号存储在环境变量<code>process.env.PORT</code>中。它的值是<code>3000</code>。",
+        "让我们在服务端输出第一个字符串！在 Express 中，路由采用这种结构：<code>app.METHOD(PATH, HANDLER)</code>。<code>METHOD</code>是小写的 http 方法。<code>PATH</code>是服务器上的相对路径（它是一个字符串，甚至是正则表达式）<code>HANDLER</code>是 Express 匹配路由时调用的处理函数。",
+        "处理函数采用这种形式：<code>function(req, res) {...}</code>，在这个处理函数的参数中<code>req</code>是请求对象。<code>res</code>是响应对象。举个例子，处理函数：",
         "<blockquote>function(req, res) {<br> res.send('Response String');<br>}</blockquote>",
         "将会响应一个字符串 'Response String'。",
-        "当 GET 请求根路由（ \"/\" ）时，使用 <code>app.get()</code> 方法端响应一个 \"Hello Express\" 字符串。在 Glitch 中点击 \"Show Live\" 按钮，通过查看日志确保你的代码正常运行，然后在浏览器中查看结果。"
+        "当 GET 请求根路由（ \"/\" ）时，使用<code>app.get()</code>方法端响应一个 \"Hello Express\" 字符串。在 Glitch 中点击 \"Show Live\" 按钮，通过查看日志确保你的代码正常运行，然后在浏览器中查看结果。"
       ],
       "tests": [
         {
@@ -46,10 +46,10 @@
       "id": "587d7fb0367417b2b2512bef",
       "title": "Serve an HTML File",
       "description": [
-        "我们可以使用 <code>res.sendFile(path)</code> 方法来响应一个文件。",
-        "你可以把响应一个文件的方法放到路由处理程序中：<code>app.get('/', ...)</code>。在后台，这个方法会根据你想发送的文件的类型，设置适当的 headers 头信息来告诉浏览器如何处理它。然后它会读取并发送文件。此方法需要文件的绝对路径。我们建议你使用 Node.js 的全局变量 <code>__dirname</code> 来计算出这个文件的绝对路径。",
+        "我们可以使用<code>res.sendFile(path)</code>方法来响应一个文件。",
+        "你可以把响应一个文件的方法放到路由处理程序中：<code>app.get('/', ...)</code>。在后台，这个方法会根据你想发送的文件的类型，设置适当的 headers 头信息来告诉浏览器如何处理它。然后它会读取并发送文件。此方法需要文件的绝对路径。我们建议你使用 Node.js 的全局变量<code>__dirname</code>来计算出这个文件的绝对路径。",
         "例子：<code>absolutePath = __dirname + relativePath/file.ext</code>.",
-        "要发送的文件是 <code>/views/index.html</code>。在 app 中点击 \"Show Live\" 按钮，你会看到一个大的 HTML 标题（以及我们稍后将使用的表单…），目前它们还没有任何样式。",
+        "要发送的文件是<code>/views/index.html</code>。在 app 中点击 \"Show Live\" 按钮，你会看到一个大的 HTML 标题（以及我们稍后将使用的表单…），目前它们还没有任何样式。",
         "注意: 你可以编辑上一个挑战的解题代码，或者创建一个新的挑战。如果你重写了之前的代码，请注意 Express 会从上到下重新解析对应的路由方法。它执行第一个匹配的路由处理方法。你必须注释掉前面的代码，否则服务器还是响应之前的字符串。"
       ],
       "tests": [
@@ -66,13 +66,13 @@
       "id": "587d7fb0367417b2b2512bf0",
       "title": "Serve Static Assets",
       "description": [
-        "HTML 服务器通常有一个或多个用户可以访问的目录。你可以将应用程序所需的静态资源 (样式表、脚本、图片) 放在那里。在 Express 中你可以使用中间件 <code>express.static(path)</code> 来设置此功能，它的参数就是静态资源文件的绝对路径。如果你不知道什么是中间件，也不用担心。我们稍后将详细讨论此事。一个最基本的中间件可以看做是一个函数，它拦截路由处理方法，并在里面添加了一点别的信息。使用 <code>app.use(path, middlewareFunction)</code> 方法来加载一个中间件。它的第一个参数是可选的，如果没设置第一个参数，那么应用的所有请求都会经过这个中间件处理。",
-        "使用 <code>app.use()</code> 来加载 <code>express.static()</code> 中间件，让所有的请求都能访问我们的静态资源目录。静态资源的绝对路径是 <code>__dirname + /public</code>。",
+        "HTML 服务器通常有一个或多个用户可以访问的目录。你可以将应用程序所需的静态资源 (样式表、脚本、图片) 放在那里。在 Express 中你可以使用中间件<code>express.static(path)</code>来设置此功能，它的参数就是静态资源文件的绝对路径。如果你不知道什么是中间件，也不用担心。我们稍后将详细讨论此事。一个最基本的中间件可以看做是一个函数，它拦截路由处理方法，并在里面添加了一点别的信息。使用<code>app.use(path, middlewareFunction)</code>方法来加载一个中间件。它的第一个参数是可选的，如果没设置第一个参数，那么应用的所有请求都会经过这个中间件处理。",
+        "使用<code>app.use()</code>来加载<code>express.static()</code>中间件，让所有的请求都能访问我们的静态资源目录。静态资源的绝对路径是<code>__dirname + /public</code>。",
         "现在 app 就能正常返回一个样式文件了，访问 app 根路径时，静态资源目录的文件就会被加载进来，现在你的首页看起来应该好些了！"
       ],
       "tests": [
         {
-          "text": "应用的静态资源文件应该来自 <code>/public</code> 目录",
+          "text": "应用的静态资源文件应该来自<code>/public</code>目录",
           "testString": "getUserInput => $.get(getUserInput('url') + '/style.css').then(data => { assert.match(data, /body\\s*\\{[^\\}]*\\}/, 'app 无法输出静态资源文件'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -85,12 +85,12 @@
       "title": "Serve JSON on a Specific Route",
       "description": [
         "HTML 服务器提供 HTML，API 服务器提供数据。<dfn>REST</dfn>（表现层状态转换）API 允许使用更简易的方式交换数据，从而不需要客户端知道服务器的实现细节。客户端只要知道需请求资源对应的 URL 是什么，以及需要对这个 URL 进行何种操作就够了。比如 GET 这个动作，就是从服务器上获取某些信息，它不会修改任何数据。如今，在 web 上传输数据的首选数据格式是 JSON。简言之，JSON 是一种将 JavaScript 对象表示为字符串的简易方式，因此可以很容易地传输这些数据。",
-        "我们来创建一个简单的 API，一个路径为<code>/json</code>且返回数据是 JSON 格式的路由，你可以像之前那样通过<code>app.get()</code>方法来做，然后在路由处理部分使用<code>res.json()</code>方法返回 JSON 格式的数据，这个方法可以接收一个配置对象。这个方法会结束请求响应循环（request-response loop），然后返回数据。<code>res.json()</code> 将一个有效的 JavaScript 对象转化为字符串，然后会设置适当的头信息（headers）来告诉浏览器，这是一个 JSON 数据，最后返回给客户端进行处理。一个有效的对象通常是这种结构：<code>{key: data}</code>。数据可以是数字、字符串、嵌套对象或数组。也可以是变量或者函数返回值，在这种情况下，会以它们的执行结果为基准，再转成字符串。",
-        "当 GET 请求路由<code>/json</code>时，将对象<code>{\"message\": \"Hello json\"}</code> 作为 JSON 格式返回给客户端。然后在浏览器里输入完整的 URL，比如 <code>your-app-url/json</code>，就可以在屏幕上看到这个消息了。"
+        "我们来创建一个简单的 API，一个路径为<code>/json</code>且返回数据是 JSON 格式的路由，你可以像之前那样通过<code>app.get()</code>方法来做，然后在路由处理部分使用<code>res.json()</code>方法返回 JSON 格式的数据，这个方法可以接收一个配置对象。这个方法会结束请求响应循环（request-response loop），然后返回数据。<code>res.json()</code>将一个有效的 JavaScript 对象转化为字符串，然后会设置适当的头信息（headers）来告诉浏览器，这是一个 JSON 数据，最后返回给客户端进行处理。一个有效的对象通常是这种结构：<code>{key: data}</code>。数据可以是数字、字符串、嵌套对象或数组。也可以是变量或者函数返回值，在这种情况下，会以它们的执行结果为基准，再转成字符串。",
+        "当 GET 请求路由<code>/json</code>时，将对象<code>{\"message\": \"Hello json\"}</code>作为 JSON 格式返回给客户端。然后在浏览器里输入完整的 URL，比如<code>your-app-url/json</code>，就可以在屏幕上看到这个消息了。"
       ],
       "tests": [
         {
-          "text": "服务端<code>/json</code>应该返回一个 JSON 对象 <code>{\"message\": \"Hello json\"}</code>",
+          "text": "服务端<code>/json</code>应该返回一个 JSON 对象<code>{\"message\": \"Hello json\"}</code>",
           "testString": "getUserInput => $.get(getUserInput('url') + '/json').then(data => { assert.equal(data.message, 'Hello json', '服务端 \\'/json\\' 没有返回正确的数据'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -120,18 +120,18 @@
       "id": "587d7fb1367417b2b2512bf3",
       "title": "Implement a Root-Level Request Logger Middleware",
       "description": [
-        "Before we introduced the <code>express.static()</code> middleware function. Now it’s time to see what middleware is, in more detail. Middleware functions are functions that take 3 arguments: the request object, the response object, and the next function in the application’s request-response cycle. These functions execute some code that can have side effects on the app, and usually add informations to the request or response objects. They can also end the cycle sending the response, when some condition is met. If they don’t send the response, when they are done they start the execution of the next function in the stack. This is triggered calling the 3rd argument <code>next()</code>. More information in the <a href='http://expressjs.com/en/guide/using-middleware.html' target='_blank'>express documentation</a>.",
-        "Look at the following example :",
-        "<blockquote>function(req, res, next) {<br>  console.log(\"I'm a middleware...\");<br>  next();<br>}</blockquote>",
-        "Let’s suppose we mounted this function on a route. When a request matches the route, it displays the string “I’m a middleware…”. Then it executes the next function in the stack.",
-        "In this exercise we are going to build a root-level middleware. As we have seen in challenge 4, to mount a middleware function at root level we can use the method <code>app.use(&lt;mware-function&gt;)</code>. In this case the function will be executed for all the requests, but you can also set more specific conditions. For example, if you want a function to be executed only for POST requests, you could use <code>app.post(&lt;mware-function&gt;)</code>. Analogous methods exist for all the http verbs (GET, DELETE, PUT, …).",
-        "Build a simple logger. For every request, it should log in the console a string taking the following format: <code>method path - ip</code>. An example would look like: <code>GET /json - ::ffff:127.0.0.1</code>. Note that there is a space between <code>method</code> and <code>path</code> and that the dash separating <code>path</code> and <code>ip</code> is surrounded by a space on either side. You can get the request method (http verb), the relative route path, and the caller’s ip from the request object, using <code>req.method</code>, <code>req.path</code> and <code>req.ip</code>. Remember to call <code>next()</code> when you are done, or your server will be stuck forever. Be sure to have the ‘Logs’ opened, and see what happens when some request arrives…",
-        "Hint: Express evaluates functions in the order they appear in the code. This is true for middleware too. If you want it to work for all the routes, it should be mounted before them."
+        "前面我们介绍了<code>express.static()</code>中间件函数。现在是时候更详细地了解什么是中间件了。中间件是一个接收 3 个参数的函数：请求对象、响应对象和在应用请求响应循环中的下一个函数。这些函数执行一些可能对应用程序产生副作用的代码，通常还会在请求对象或者响应对象里添加一些信息。当满足某些条件时，它们也可以结束发送响应的循环。如果它们没有发送响应，那么当它们完成时就会开始执行堆栈中的下一个函数。这将触发调用第 3 个参数<code>next()</code>。更多信息请查看 <a href='http://expressjs.com/en/guide/using-middleware.html' target='_blank'>express 文档</a>。",
+        "看看下面的例子：",
+        "<blockquote>function(req, res, next) {<br>  console.log(\"我是一个中间件...\");<br>  next();<br>}</blockquote>",
+        "假设我们在某个路由上安装了这个中间件函数。当一个请求与路由匹配时，它会显示字符串\"我是中间件...\"。然后它执行堆栈中的下一个函数。",
+        "在这个练习中，我们将构建根级中间件。正如我们在挑战 4 中看到的，要在根层级安装中间件函数，我们可以使用<code>app.use(&lt;mware-function&gt;)</code>方法。在这种情况下，该函数将对所有请求执行，但是你还是可以设置成更具体的条件来执行。举个例子，如果你希望某个函数只针对 POST 请求执行，可以使用<code>app.post(&lt;mware-function&gt;)</code>方法。所有 http 动作都有类似的方法，比如 GET、DELETE、PUT 等等。",
+        "构建一个简单的日志记录器。对于每个请求，它应该在控制台中记录一个采用以下格式的字符串：<code>method path - ip</code>。一个简单的日志看起来就像这样：<code>GET /json - ::ffff:127.0.0.1</code>。注意<code>method</code>和<code>path</code>有一个空格，并且<code>path</code>和<code>ip</code>中间的破折号两边都有空格。在请求对象中，可以使用<code>req.method</code>、<code>req.path</code>和<code>req.ip</code>获取请求方法（http 动词）、路由相对路径和请求者的 IP 信息。记住，当你完成时，要调用<code>next()</code>方法，否则你的服务器将一直处于挂起状态。请确保 \"Logs\" 是打开的，观察一下当一些请求被响应时会发生什么……",
+        "提示: Express 按照函数在代码中出现的顺序来评估函数。中间件也是如此。如果你想让中间件函数适用于所有路由，那么应该在路由之前配置好中间件。"
       ],
       "tests": [
         {
           "text": "Root level logger middleware should be active",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/root-middleware-logger').then(data => { assert.isTrue(data.passed, 'root-level logger is not working as expected'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/root-middleware-logger').then(data => { assert.isTrue(data.passed, '根级日志记录器未按照预期执行'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -142,11 +142,11 @@
       "id": "587d7fb1367417b2b2512bf4",
       "title": "Chain Middleware to Create a Time Server",
       "description": [
-        "Middleware can be mounted at a specific route using <code>app.METHOD(path, middlewareFunction)</code>. Middleware can also be chained inside route definition.",
+        "Middleware can be mounted at a specific route using<code>app.METHOD(path, middlewareFunction)</code>. Middleware can also be chained inside route definition.",
         "Look at the following example:",
         "<blockquote>app.get('/user', function(req, res, next) {<br>  req.user = getTheUserSync();  // Hypothetical synchronous operation<br>  next();<br>}, function(req, res) {<br>  res.send(req.user);<br>})</blockquote>",
         "This approach is useful to split the server operations into smaller units. That leads a to a better app structure, and the possibility to reuse code in different places. This approach can also be used to perform some validation on the data. At each point of the middleware stack you can block the execution of the current chain and pass control to functions specifically designed to handle errors. Or you can pass control to the next matching route, to handle special cases. We will see how in the advanced Express section.",
-        "In the route <code>app.get('/now', ...)</code> chain a middleware function and the final handler. In the middleware function you should add the current time to the request object in the <code>req.time</code> key. You can use <code>new Date().toString()</code>. In the handler, respond with a JSON object, taking the structure <code>{time: req.time}</code>.",
+        "In the route<code>app.get('/now', ...)</code>chain a middleware function and the final handler. In the middleware function you should add the current time to the request object in the<code>req.time</code>key. You can use<code>new Date().toString()</code>. In the handler, respond with a JSON object, taking the structure<code>{time: req.time}</code>.",
         "Hint: The test will not pass if you don’t chain the middleware. If you mount the function somewhere else, the test will fail, even if the output result is correct."
       ],
       "tests": [
@@ -167,9 +167,9 @@
       "id": "587d7fb2367417b2b2512bf5",
       "title": "Get Route Parameter Input from the Client",
       "description": [
-        "When building an API, we have to allow users to comunicate us what they want to get from our service. For example, if the client is requesting information about a user stored in the database, they need a way to let us know which user they're interested in. One possible way to achieve this result is using route parameters. Route parameters are named segments of the URL, delimited by slashes (/). Each segment captures the value of the part of the URL which matches its position. The captured values can be found in the <code>req.params</code> object.",
+        "When building an API, we have to allow users to comunicate us what they want to get from our service. For example, if the client is requesting information about a user stored in the database, they need a way to let us know which user they're interested in. One possible way to achieve this result is using route parameters. Route parameters are named segments of the URL, delimited by slashes (/). Each segment captures the value of the part of the URL which matches its position. The captured values can be found in the<code>req.params</code>object.",
         "<blockquote>route_path: '/user/:userId/book/:bookId'<br>actual_request_URL: '/user/546/book/6754' <br>req.params: {userId: '546', bookId: '6754'}</blockquote>",
-        "Build an echo server, mounted at the route <code>GET /:word/echo</code>. Respond with a JSON object, taking the structure <code>{echo: word}</code>. You can find the word to be repeated at <code>req.params.word</code>. You can test your route from your browser's address bar, visiting some matching routes, e.g. your-app-rootpath/freecodecamp/echo"
+        "Build an echo server, mounted at the route<code>GET /:word/echo</code>. Respond with a JSON object, taking the structure<code>{echo: word}</code>. You can find the word to be repeated at<code>req.params.word</code>. You can test your route from your browser's address bar, visiting some matching routes, e.g. your-app-rootpath/freecodecamp/echo"
       ],
       "tests": [
         {
@@ -189,10 +189,10 @@
       "id": "587d7fb2367417b2b2512bf6",
       "title": "Get Query Parameter Input from the Client",
       "description": [
-        "Another common way to get input from the client is by encoding the data after the route path, using a query string. The query string is delimited by a question mark (?), and includes field=value couples. Each couple is separated by an ampersand (&). Express can parse the data from the query string, and populate the object <code>req.query</code>. Some characters cannot be in URLs, they have to be encoded in a <a href='https://en.wikipedia.org/wiki/Percent-encoding' target='_blank'>different format</a> before you can send them. If you use the API from JavaScript, you can use specific methods to encode/decode these characters.",
+        "Another common way to get input from the client is by encoding the data after the route path, using a query string. The query string is delimited by a question mark (?), and includes field=value couples. Each couple is separated by an ampersand (&). Express can parse the data from the query string, and populate the object<code>req.query</code>. Some characters cannot be in URLs, they have to be encoded in a <a href='https://en.wikipedia.org/wiki/Percent-encoding' target='_blank'>different format</a> before you can send them. If you use the API from JavaScript, you can use specific methods to encode/decode these characters.",
         "<blockquote>route_path: '/library'<br>actual_request_URL: '/library?userId=546&bookId=6754' <br>req.query: {userId: '546', bookId: '6754'}</blockquote>",
-        "Build an API endpoint, mounted at <code>GET /name</code>. Respond with a JSON document, taking the structure <code>{ name: 'firstname lastname'}</code>. The first and last name parameters should be encoded in a query string e.g. <code>?first=firstname&last=lastname</code>.",
-        "TIP: In the following exercise we are going to receive data from a POST request, at the same <code>/name</code> route path. If you want you can use the method <code>app.route(path).get(handler).post(handler)</code>. This syntax allows you to chain different verb handlers on the same path route. You can save a bit of typing, and have cleaner code."
+        "Build an API endpoint, mounted at<code>GET /name</code>. Respond with a JSON document, taking the structure<code>{ name: 'firstname lastname'}</code>. The first and last name parameters should be encoded in a query string e.g.<code>?first=firstname&last=lastname</code>.",
+        "TIP: In the following exercise we are going to receive data from a POST request, at the same<code>/name</code>route path. If you want you can use the method<code>app.route(path).get(handler).post(handler)</code>. This syntax allows you to chain different verb handlers on the same path route. You can save a bit of typing, and have cleaner code."
       ],
       "tests": [
         {
@@ -219,7 +219,7 @@
         "In this exercise we will use an urlencoded body.",
         "To parse the data coming from POST requests, you have to install a package: the body-parser. This package allows you to use a series of middleware, which can decode data in different formats. See the docs <a href=\"https://github.com/expressjs/body-parser\" target=\"_blank\" >here</a>.",
         "Install the body-parser module in your package.json. Then require it at the top of the file. Store it in a variable named bodyParser.",
-        "The middleware to handle url encoded data is returned by <code>bodyParser.urlencoded({extended: false})</code>. <code>extended=false</code> is a configuration option that tells the parser to use the classic encoding. When using it, values can be only strings or arrays. The extended version allows more data flexibility, but it is outmatched by JSON. Pass to <code>app.use()</code> the function returned by the previous method call. As usual, the middleware must be mounted before all the routes which need it."
+        "The middleware to handle url encoded data is returned by<code>bodyParser.urlencoded({extended: false})</code>.<code>extended=false</code>is a configuration option that tells the parser to use the classic encoding. When using it, values can be only strings or arrays. The extended version allows more data flexibility, but it is outmatched by JSON. Pass to<code>app.use()</code>the function returned by the previous method call. As usual, the middleware must be mounted before all the routes which need it."
       ],
       "tests": [
         {
@@ -235,9 +235,9 @@
       "id": "587d7fb2367417b2b2512bf8",
       "title": "Get Data from POST Requests",
       "description": [
-        "Mount a POST handler at the path <code>/name</code>. It’s the same path as before. We have prepared a form in the html frontpage. It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object <code>req.body</code>. Have a look at the usual library example:",
+        "Mount a POST handler at the path<code>/name</code>. It’s the same path as before. We have prepared a form in the html frontpage. It will submit the same data of exercise 10 (Query string). If the body-parser is configured correctly, you should find the parameters in the object<code>req.body</code>. Have a look at the usual library example:",
         "<blockquote>route: POST '/library'<br>urlencoded_body: userId=546&bookId=6754 <br>req.body: {userId: '546', bookId: '6754'}</blockquote>",
-        "Respond with the same JSON object as before: <code>{name: 'firstname lastname'}</code>. Test if your endpoint works using the html form we provided in the app frontpage.",
+        "Respond with the same JSON object as before:<code>{name: 'firstname lastname'}</code>. Test if your endpoint works using the html form we provided in the app frontpage.",
         "Tip: There are several other http methods other than GET and POST. And by convention there is a correspondence between the http verb, and the operation you are going to execute on the server. The conventional mapping is:",
         "POST (sometimes PUT) - Create a new resource using the information sent with the request,",
         "GET - Read an existing resource without modifying it,",
