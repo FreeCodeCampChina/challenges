@@ -529,30 +529,32 @@
       "id": "587d825c367417b2b2512c8f",
       "title": "Implement Merge Sort",
       "description": [
-        "Another intermediate sorting algorithm that is very common is merge sort. Like quick sort, merge sort also uses a divide-and-conquer, recursive methodology to sort an array. It takes advantage of the fact that it is relatively easy to sort two arrays as long as each is sorted in the first place. But we'll start with only one array as input, so how do we get to two sorted arrays from that? Well, we can recursively divide the original input in two until we reach the base case of an array with one item. A single-item array is naturally sorted, so then we can start combining. This combination will unwind the recursive calls that split the original array, eventually producing a final sorted array of all the elements. The steps of merge sort, then, are:",
-        "<strong>1)</strong> Recursively split the input array in half until a sub-array with only one element is produced.",
-        "<strong>2)</strong> Merge each sorted sub-array together to produce the final sorted array.",
-        "Merge sort is an efficient sorting method, with time complexity of <i>O(nlog(n))</i>. This algorithm is popular because it is performant and relatively easy to implement.",
-        "As an aside, this will be the last sorting algorithm we cover here. However, later in the section on tree data structures we will describe heap sort, another efficient sorting method that requires a binary heap in its implementation.",
-        "<strong>Instructions:</strong> Write a function <code>mergeSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest. A good way to implement this is to write one function, for instance <code>merge</code>, which is responsible for merging two sorted arrays, and another function, for instance <code>mergeSort</code>, which is responsible for the recursion that produces single-item arrays to feed into merge. Good luck!",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "另一种非常常见的排序方式是<a href='https://baike.baidu.com/item/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F' target='_blank'>归并排序</code>。如同快速排序一样，归并排序也是采用了分而治之的递归方法来排序数组。它利用了这么一个现象，即只要首先对两个数组进行排序，就比较容易对他们进行排序。但是我们的参数只能一个数组，那么又将如何从这个数组中得到两个排序数组呢？我们可以递归的将原始数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然排序的，所以我们可以开始合并。这种合并方式是将拆分的原始数组进行递归调用，最后将所有的元素生成一个最终的排序数组。",
+        "合并的步骤是：",
+        "<strong>1)</strong>：递归的将输入数组拆分成两个子数组，直到所有的子数组都只包含一个元素。",
+        "<strong>2)</strong>：将每一个排序后的子数组合并到一个数组里面，最后返回一个排序的数组。",
+        "归并排序是一种高效的排序方式，<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>为<i>O(nlog(n))</i>。因为归并排序的性能优良且相对容易实现，所有这种排序方式很受欢迎。",
+        "另外，这将是我们在此章节讨论的最后一种排序算法，但是在后续有关<strong>树型数据结构</strong>的章节中，我们将一起研究<strong>堆排序</strong>，同样它也是一种高效的排序方式，其实现过程需要用到二进制堆的概念。",
+        "<strong>Instructions</strong>：创建一个函数并命名为<code>mergeSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组>。实现这个排序方式可以采用两个函数来实现：<code>merge</code>负责合并两个排序的数组，<code>merge sort</code>负责生成单个数组的用于归并使用。祝你好用！",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>mergeSort</code> is a function.",
-          "testString": "assert(typeof mergeSort == 'function', '<code>mergeSort</code> is a function.');"
+          "text": "<code>mergeSort</code>是一个函数。",
+          "testString": "assert(typeof mergeSort == 'function', '<code>mergeSort</code>是一个函数。');"
         },
         {
-          "text": "<code>mergeSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>mergeSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>mergeSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>mergeSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>mergeSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>mergeSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>mergeSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>mergeSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>mergeSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>mergeSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>mergeSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>mergeSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -565,13 +567,13 @@
           "name": "index",
           "contents": [
             "function mergeSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写函数",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写函数",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试函数：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
