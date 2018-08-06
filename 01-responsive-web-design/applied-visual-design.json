@@ -10,8 +10,8 @@
       "description": [
         "这部分课程主要关于应用视觉设计。开始的挑战展示了一些核心的原则，代码基于一个指定的卡片布局。",
         "web 内容大部分都是文本。CSS 里面的<code>text-align</code>属性可以控制文本的对齐方式。",
-        "<code>text-align: justify;</code>文本两端对齐，忽略最后一行，其它行文字左右两端都靠近行边缘。",
-        "<code>text-align: center;</code>文本居中对齐。",
+        "<code>text-align: justify;</code>可以让除最后一行之外的文字两端对齐，即每行的左右两端都紧贴行的边缘。",
+        "<code>text-align: center;</code>可以让文本居中对齐。",
         "<code>text-align: right;</code>可以让文本右对齐。",
         "<code>text-align: left;</code>是<code>text-align</code>的默认值，它可以让文本左对齐。",
         "<hr>",
@@ -83,7 +83,7 @@
         "你可以使用 CSS 里面的<code>width</code>属性来指定元素的宽度。属性值可以是相对单位（比如 em），绝对单位（比如 px），或者包含块（父元素）宽度的百分比。下面这个例子把图片的宽度设置为 220px：",
         "<blockquote>img {<br>&nbsp;&nbsp;width: 220px;<br>}</blockquote>",
         "<hr>",
-        "给卡片添加<code>width</code>属性，设置它的值为绝对单位 245px。使用<code>fullCark</code> class 来选择元素。"
+        "给卡片添加<code>width</code>属性，设置它的宽度为 245px。使用<code>fullCark</code> class 来选择元素。"
       ],
       "tests": [
         {
