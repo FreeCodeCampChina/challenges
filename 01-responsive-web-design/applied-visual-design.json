@@ -6,16 +6,16 @@
   "challenges": [
     {
       "id": "587d7791367417b2b2512ab3",
-      "title": "用 text-align 属性来设置对齐方式",
+      "title": "Create Visual Balance Using the text-align Property",
       "description": [
         "这部分课程主要关于应用视觉设计。开始的挑战展示了一些核心的原则，代码基于一个指定的卡片布局。",
         "web 内容大部分都是文本。CSS 里面的<code>text-align</code>属性可以控制文本的对齐方式。",
         "<code>text-align: justify;</code>文本两端对齐，忽略最后一行，其它行文字左右两端都靠近行边缘。",
         "<code>text-align: center;</code>文本居中对齐。",
-        "<code>text-align: right;</code>文本右对齐。",
-        "<code>text-align: left;</code>（默认）文本左对齐。",
+        "<code>text-align: right;</code>可以让文本右对齐。",
+        "<code>text-align: left;</code>是<code>text-align</code>的默认值，它可以让文本左对齐。",
         "<hr>",
-        "居中对齐<code>h4</code>标签文字，文字内容为 “Google”。两端对齐段落标签文字，文字介绍了 Google 的创立。"
+        "居中对齐<code>h4</code>标签文本，文本内容为 “Google”。两端对齐段落标签文本，文本介绍了 Google 的创立。"
       ],
       "tests": [
         {
@@ -78,17 +78,17 @@
     },
     {
       "id": "587d7791367417b2b2512ab4",
-      "title": "用 width 属性来设置元素的宽度",
+      "title": "Adjust the Width of an Element Using the width Property",
       "description": [
-        "你可以使用 CSS 里面的<code>width</code>属性来指定元素的宽度。属性值可以是相对单位（比如 em），绝对单位（比如 px），或者包含块（父元素）宽度的百分比宽度。下面这个例子把图片的宽度设置为 220px：",
+        "你可以使用 CSS 里面的<code>width</code>属性来指定元素的宽度。属性值可以是相对单位（比如 em），绝对单位（比如 px），或者包含块（父元素）宽度的百分比。下面这个例子把图片的宽度设置为 220px：",
         "<blockquote>img {<br>&nbsp;&nbsp;width: 220px;<br>}</blockquote>",
         "<hr>",
         "给卡片添加<code>width</code>属性，设置它的值为绝对单位 245px。使用<code>fullCark</code> class 来选择元素。"
       ],
       "tests": [
         {
-          "text": "你的代码应该通过<code>fullCard</code> class 选择器改变卡片的<code>width</code>属性使其值为 245 像素。",
-          "testString": "assert(code.match(/.fullCard\\s*{[\\s\\S][^}]*\\n*^\\s*width\\s*:\\s*245px\\s*;/gm), '你的代码应该通过<code>fullCard</code> class 选择器改变卡片的<code>width</code>属性使其值为 245 像素。');"
+          "text": "你的代码应该通过<code>fullCard</code> class 选择器改变卡片的<code>width</code>属性使其值为<code>245px</code>。",
+          "testString": "assert(code.match(/.fullCard\\s*{[\\s\\S][^}]*\\n*^\\s*width\\s*:\\s*245px\\s*;/gm), '你的代码应该通过<code>fullCard</code> class 选择器改变卡片的<code>width</code>属性使其值为<code>245px</code>。');"
         }
       ],
       "solutions": [],
@@ -143,7 +143,7 @@
     },
     {
       "id": "587d7791367417b2b2512ab5",
-      "title": "用 height 属性来设置元素的高度",
+      "title": "Adjust the Height of an Element Using the height Property",
       "description": [
         "和<code>width</code>属性类似，你可以使用 CSS 里面的<code>height</code>属性来指定元素的高度。下面这个例子把图片的高度设置为 20px：",
         "<blockquote>img {<br>&nbsp;&nbsp;height: 20px;<br>}</blockquote>",
@@ -152,8 +152,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该设置<code>h4</code>的<code>height</code>属性，使其值为 25 像素。",
-          "testString": "assert($('h4').css('height') == '25px', '你的代码应该设置<code>h4</code>的<code>height</code>属性，使其值为 25 像素。');"
+          "text": "你的代码应该设置<code>h4</code>的<code>height</code>属性，使其值为<code>25px</code>。",
+          "testString": "assert($('h4').css('height') == '25px', '你的代码应该设置<code>h4</code>的<code>height</code>属性，使其值为<code>25px</code>。');"
         }
       ],
       "solutions": [],
@@ -209,7 +209,7 @@
     },
     {
       "id": "587d781a367417b2b2512ab7",
-      "title": "用 strong 标签来加粗文字",
+      "title": "Use the strong Tag to Make Text Bold",
       "description": [
         "你可以使用<code>strong</code>标签来加粗文字。这通常用来强调文字，表示它很重要。添加了<code>strong</code>标签后，浏览器会给元素应用<code>font-weight:bold;</code>的 CSS 属性。",
         "<hr>",
@@ -285,12 +285,12 @@
     },
     {
       "id": "587d781a367417b2b2512ab8",
-      "title": "用 u 标签来给文字添加下划线",
+      "title": "Use the u Tag to Underline Text",
       "description": [
-        "你可以使用<code>u</code>标签来给文字添加下划线。这通常用来表示这部分文字很重要，或者是一些需要被记住的内容。添加了<code>u</code>标签后，浏览器会给元素应用<code>text-decoration: underline;</code>的 CSS 属性。",
+        "你可以使用<code>u</code>标签来给文字添加下划线。这通常用来表示这部分文字很重要，或者是一些值得注意的内容。添加了<code>u</code>标签后，浏览器会给元素应用<code>text-decoration: underline;</code>的 CSS 属性。",
         "<hr>",
         "在 “理工博士” 外面添加<code>u</code>标签。不要给整个 class 为<code>cardText</code>的父<code>div</code>添加。",
-        "<strong>注意</strong>超链接标签默认给文本添加下划线，如果<code>u<code>标签的下滑线和页面的链接混淆，请避免使用它。"
+        "<strong>注意</strong>超链接标签默认给文本添加下划线，如果<code>u</code>标签的下滑线和页面的链接混淆，请避免使用它。"
       ],
       "tests": [
         {
@@ -302,8 +302,8 @@
           "testString": "assert($('u').text() === '理工博士', '<code>u</code>标签应该包围 “理工博士”。');"
         },
         {
-          "text": "<code>u</code>标签不应该嵌套父<code>div</code>。",
-          "testString": "assert($('u').children('div').length === 0, '<code>u</code>标签不应该嵌套父<code>div</code>。');"
+          "text": "<code>u</code>标签内不应包含额外的<code>div</code>标签。",
+          "testString": "assert($('u').children('div').length === 0, '<code>u</code>标签内不应包含额外的<code>div</code>标签。');"
         }
       ],
       "solutions": [],
@@ -362,7 +362,7 @@
     },
     {
       "id": "587d781a367417b2b2512ab9",
-      "title": "用 em 标签来把文字变成斜体",
+      "title": "Use the em Tag to Italicize Text",
       "description": [
         "你可以使用 <code>em</code> 标签来强调文字。由于浏览器会给元素应用<code>font-style: italic;</code>CSS，这时文字会显示为斜体。",
         "<hr>",
@@ -374,8 +374,8 @@
           "testString": "assert($('em').length == 1, '你的代码应该添加一个<code>em</code>标签。');"
         },
         {
-          "text": "<code>em</code>标签应该在<code>p</code>标签的文字外面而不是在<code>p</code>标签的外面。",
-          "testString": "assert($('p').children().length == 1 && $('em').children().length == 2, '<code>em</code>标签应该在<code>p</code>标签的文字外面而不是在<code>p</code>标签的外面。');"
+          "text": "<code>em</code>标签应该包围<code>p</code>标签里的文本，而不是包围整个<code>p</code>标签。",
+          "testString": "assert($('p').children().length == 1 && $('em').children().length == 2, '<code>em</code>标签应该包围<code>p</code>标签里的文本，而不是包围整个<code>p</code>标签。');"
         }
       ],
       "solutions": [],
@@ -434,9 +434,9 @@
     },
     {
       "id": "587d781b367417b2b2512aba",
-      "title": "用 s 标签来给文字添加删除线",
+      "title": "Use the s Tag to Strikethrough Text",
       "description": [
-        "你可以用<code>s</code>标签来给文字添加删除线，<s>他的效果是在文字正中间有一条细线</s>。它代表着这段文字不在有效。添加了<code>s</code>标签后，浏览器会给元素应用<code>text-decoration: line-through;</code>CSS 属性。",
+        "你可以用<code>s</code>标签来给文字添加删除线，<s>他的效果是在文字正中间有一条细线</s>。它代表着这段文字不再有效。添加了<code>s</code>标签后，浏览器会给元素应用<code>text-decoration: line-through;</code>CSS 属性。",
         "<hr>",
         "在<code>h4</code>标签里的 “Google” 外添加<code>s</code>标签，然后在<code>s</code>标签外面添加单词 Alphabet，Alphabet 不要有删除线格式。"
       ],
@@ -510,7 +510,7 @@
     },
     {
       "id": "587d781b367417b2b2512abb",
-      "title": "用 hr 元素创建一条横线",
+      "title": "Create a Horizontal Line Using the hr Element",
       "description": [
         "你可以用<code>hr</code>标签来添加一条宽度撑满父元素的横线。它可以用来表示文档主题的改变，或者用来在视觉上将文档分隔成几个部分。",
         "<hr>",
@@ -523,8 +523,8 @@
           "testString": "assert($('hr').length == 1, '你的代码里应该添加一个<code>hr</code>标签。');"
         },
         {
-          "text": "<code>hr</code>标签应该在标题和段落中间。",
-          "testString": "assert(code.match(/<\\/h4>\\s*?<hr(>|\\s*?\\/>)\\s*?<p>/gi), '<code>hr</code>标签应该在标题和段落中间。');"
+          "text": "<code>hr</code>标签应该在标题和段落之间。",
+          "testString": "assert(code.match(/<\\/h4>\\s*?<hr(>|\\s*?\\/>)\\s*?<p>/gi), '<code>hr</code>标签应该在标题和段落之间。');"
         }
       ],
       "solutions": [],
@@ -583,7 +583,7 @@
     },
     {
       "id": "587d781b367417b2b2512abc",
-      "title": "改变文字的背景色",
+      "title": "Adjust the background-color Property of Text",
       "description": [
         "为了让页面更美观，除了设置整个页面的背景色以及文字颜色外，你还可以单独设置文字的背景色，即在文字的父元素上添加<code>background-color</code>属性。在本挑战里我们将使用<code>rgba()</code>颜色，而不是之前学到的<code>hex</code>编码或者<code>rgb()</code>颜色。",
         "<blockquote>rgba 代表：<br>&nbsp;&nbsp;r = red 红色<br>&nbsp;&nbsp;g = green 绿色<br>&nbsp;&nbsp;b = blue 蓝色<br>&nbsp;&nbsp;a = alpha 透明度</blockquote>",
@@ -595,12 +595,12 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>background-color: rgba(45, 45, 45, 0.1)</code>。",
-          "testString": "assert(code.match(/background-color:\\s*?rgba\\(\\s*?45\\s*?,\\s*?45\\s*?,\\s*?45\\s*?,\\s*?0?\\.1\\s*?\\)/gi), '你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>background-color: rgba(45, 45, 45, 0.1)</code>。');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>rgba(45, 45, 45, 0.1)</code>。",
+          "testString": "assert(code.match(/background-color:\\s*?rgba\\(\\s*?45\\s*?,\\s*?45\\s*?,\\s*?45\\s*?,\\s*?0?\\.1\\s*?\\)/gi), '你的代码应该给<code>h4</code>元素添加一个<code>background-color</code>属性并且赋值<code>rgba(45, 45, 45, 0.1)</code>。');"
         },
         {
-          "text": "你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值 10 像素。",
-          "testString": "assert($('h4').css('padding-top') == '10px' && $('h4').css('padding-right') == '10px' && $('h4').css('padding-bottom') == '10px' && $('h4').css('padding-left') == '10px', '你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值 10 像素。');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值<code>10px</code>。",
+          "testString": "assert($('h4').css('padding-top') == '10px' && $('h4').css('padding-right') == '10px' && $('h4').css('padding-bottom') == '10px' && $('h4').css('padding-left') == '10px', '你的代码应该给<code>h4</code>元素添加一个<code>padding</code>属性并且赋值<code>10px</code>。');"
         },
         {
           "text": "<code>h4</code>元素的<code>height</code>属性应该被移除。",
@@ -666,16 +666,16 @@
     },
     {
       "id": "587d781b367417b2b2512abd",
-      "title": "调整标题的大小使之区别于段落标签",
+      "title": "Adjust the Size of a Header Versus a Paragraph Tag",
       "description": [
         "标题（<code>h1</code>到<code>h6</code>）的文字应该比的段落的文字大，这样可以让用户更直观的看到页面的布局，同时能区别出不同元素的重要程度，更方便用户捕捉关键的信息。你可以使用<code>font-size</code>属性来设置元素内文字的大小。",
         "<hr>",
-        "把<code>h4</code>标签的<code>font-size</code>改成27 像素，让标题更醒目。"
+        "把<code>h4</code>标签的<code>font-size</code>改成 27 像素，让标题更醒目。"
       ],
       "tests": [
         {
-          "text": "你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值 27 像素。",
-          "testString": "assert($('h4').css('font-size') == '27px', '你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值 27 像素。');"
+          "text": "你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值<code>27px</code>。",
+          "testString": "assert($('h4').css('font-size') == '27px', '你的代码应该给<code>h4</code>元素添加一个<code>font-size</code>属性并且赋值<code>27px</code>。');"
         }
       ],
       "solutions": [],
@@ -737,7 +737,7 @@
     },
     {
       "id": "587d781b367417b2b2512abe",
-      "title": "给卡片式元素添加阴影（box-shadow）",
+      "title": "Add a box-shadow to a Card-like Element",
       "description": [
         "<code>box-shadow</code>属性用来给元素添加阴影，该属性值是由逗号分隔的一个或多个阴影列表。",
         "<code>box-shadow</code>属性的每个阴影依次由下面这些值描述：<ul><li><code>offset-x</code>阴影的水平偏移量；</li><li><code>offset-y</code>阴影的垂直偏移量;</li><li><code>blur-radius</code>模糊距离；</li><li><code>spread-radius</code>阴影尺寸；</li><li>颜色。</li></ul>其中<code>blur-raduis</code>和<code>spread-raduis</code>是可选的。",
@@ -748,8 +748,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该给<code>thumbnail</code>id 添加<code>box-shadow</code>属性。",
-          "testString": "assert(code.match(/#thumbnail\\s*?{\\s*?box-shadow/g), '你的代码应该给<code>thumbnail</code>id 添加<code>box-shadow</code>属性。');"
+          "text": "你的代码应该给 id 为<code>thumbnail</code>的元素添加<code>box-shadow</code>属性。",
+          "testString": "assert(code.match(/#thumbnail\\s*?{\\s*?box-shadow/g), '你的代码应该给 id 为<code>thumbnail</code>的元素添加<code>box-shadow</code>属性。');"
         },
         {
           "text": "<code>box-shadow</code>值应该是指定的 CSS 值。",
@@ -818,7 +818,7 @@
     },
     {
       "id": "587d781c367417b2b2512abf",
-      "title": "设置元素的透明度",
+      "title": "Decrease the Opacity of an Element",
       "description": [
         "CSS 里的<code>opacity</code>属性用来设置元素的透明度。",
         "<blockquote>值 1 代表完全不透明。<br>值 0.5 代表半透明。<br>值 0 代表完全透明。</blockquote>",
@@ -895,7 +895,7 @@
     },
     {
       "id": "587d781c367417b2b2512ac0",
-      "title": "用 text-transform 属性来改变英文中字母的大小写",
+      "title": "Use the text-transform Property to Make Text Uppercase",
       "description": [
         "CSS 里面的<code>text-transform</code>属性来改变英文中字母的大小写。它通常用来统一页面里英文的显示，且无需直接改变 HTML 元素中的文本。",
         "下面的表格展示了<code>text-transform</code>的不同值对文字 “Transform me” 的影响。",
@@ -977,7 +977,7 @@
     },
     {
       "id": "587d781c367417b2b2512ac2",
-      "title": "设置多个标题元素的文字大小（font-size）",
+      "title": "Set the font-size for Multiple Heading Elements",
       "description": [
         "<code>font-size</code>属性用来指定元素内文字的大小。这个规则可以应用到多个元素上，合理的使用，能让页面的文字显示的错落有致。在本挑战里，你将要设置<code>h1</code>到<code>h6</code>的每个标题文字的大小。",
         "<hr>",
@@ -985,28 +985,28 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该设置<code>h1</code>标签的<code>font-size</code>为 68 像素。",
-          "testString": "assert($('h1').css('font-size') == '68px', '你的代码应该设置<code>h1</code>标签的<code>font-size</code>为 68 像素。');"
+          "text": "你的代码应该设置<code>h1</code>标签的<code>font-size</code>为<code>68px</code>。",
+          "testString": "assert($('h1').css('font-size') == '68px', '你的代码应该设置<code>h1</code>标签的<code>font-size</code>为<code>68px</code>。');"
         },
         {
-          "text": "你的代码应该设置<code>h2</code>标签的<code>font-size</code>为 52 像素。",
-          "testString": "assert($('h2').css('font-size') == '52px', '你的代码应该设置<code>h2</code>标签的<code>font-size</code>为 52 像素。');"
+          "text": "你的代码应该设置<code>h2</code>标签的<code>font-size</code>为<code>52px</code>。",
+          "testString": "assert($('h2').css('font-size') == '52px', '你的代码应该设置<code>h2</code>标签的<code>font-size</code>为<code>52px</code>。');"
         },
         {
-          "text": "你的代码应该设置<code>h3</code>标签的<code>font-size</code>为 40 像素。",
-          "testString": "assert($('h3').css('font-size') == '40px', '你的代码应该设置<code>h3</code>标签的<code>font-size</code>为 40 像素。');"
+          "text": "你的代码应该设置<code>h3</code>标签的<code>font-size</code>为<code>40px</code>。",
+          "testString": "assert($('h3').css('font-size') == '40px', '你的代码应该设置<code>h3</code>标签的<code>font-size</code>为<code>40px</code>。');"
         },
         {
-          "text": "你的代码应该设置<code>h4</code>标签的<code>font-size</code>为 32 像素。",
-          "testString": "assert($('h4').css('font-size') == '32px', '你的代码应该设置<code>h4</code>标签的<code>font-size</code>为 32 像素。');"
+          "text": "你的代码应该设置<code>h4</code>标签的<code>font-size</code>为<code>32px</code>。",
+          "testString": "assert($('h4').css('font-size') == '32px', '你的代码应该设置<code>h4</code>标签的<code>font-size</code>为<code>32px</code>。');"
         },
         {
-          "text": "你的代码应该设置<code>h5</code>标签的<code>font-size</code>为 21 像素。",
-          "testString": "assert($('h5').css('font-size') == '21px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 21 像素。');"
+          "text": "你的代码应该设置<code>h5</code>标签的<code>font-size</code>为<code>21px</code>。",
+          "testString": "assert($('h5').css('font-size') == '21px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为<code>21px</code>。');"
         },
         {
-          "text": "你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 14 像素。",
-          "testString": "assert($('h6').css('font-size') == '14px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为 14 像素。');"
+          "text": "你的代码应该设置<code>h6</code>标签的<code>font-size</code>为<code>14px</code>。",
+          "testString": "assert($('h6').css('font-size') == '14px', '你的代码应该设置<code>h6</code>标签的<code>font-size</code>为<code>14px</code>。');"
         }
       ],
       "solutions": [],
@@ -1041,7 +1041,7 @@
     },
     {
       "id": "587d781c367417b2b2512ac3",
-      "title": "设置多个标题元素的文字粗细（font-weight）",
+      "title": "Set the font-weight for Multiple Heading Elements",
       "description": [
         "在上一个挑战里你已经设置了每个标题的<code>font-size</code>，接下来你将设置<code>font-weight</code>。",
         "<code>font-weight</code>属性用于设置文本中所用的字体的粗细。",
@@ -1124,7 +1124,7 @@
     },
     {
       "id": "587d781c367417b2b2512ac4",
-      "title": "设置段落的文字大小（font-size）",
+      "title": "Set the font-size of Paragraph Text",
       "description": [
         "CSS 里面的<code>font-size</code>属性不只限于标题，它可以应用于任何包含文字的元素内。",
         "<hr>",
@@ -1132,8 +1132,8 @@
       ],
       "tests": [
         {
-          "text": "你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为 16 像素。",
-          "testString": "assert($('p').css('font-size') == '16px', '你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为 16 像素。');"
+          "text": "你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为<code>16px</code>。",
+          "testString": "assert($('p').css('font-size') == '16px', '你的<code>p</code>标签应该包含一个<code>font-size</code>属性并且值为<code>16px</code>。');"
         }
       ],
       "solutions": [],
@@ -1162,7 +1162,7 @@
     },
     {
       "id": "587d781d367417b2b2512ac5",
-      "title": "设置段落的行高（line-height）",
+      "title": "Set the line-height of Paragraphs",
       "description": [
         "CSS 提供<code>line-height</code>属性来设置行间的距离。行高，顾名思义，用来设置每行文字所占据的垂直空间。",
         "<hr>",
@@ -1170,8 +1170,8 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值 25px。",
-          "testString": "assert($('p').css('line-height') == '25px', '你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值 25px。');"
+          "text": "你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值<code>25px</code>。",
+          "testString": "assert($('p').css('line-height') == '25px', '你的代码应该给<code>p</code>标签添加<code>line-height</code>属性并赋值<code>25px</code>。');"
         }
       ],
       "solutions": [],
@@ -1201,13 +1201,13 @@
     },
     {
       "id": "587d781d367417b2b2512ac8",
-      "title": "设置超链接的鼠标滑过（Hover）状态",
+      "title": "Adjust the Hover State of an Anchor Tag",
       "description": [
         "本挑战将要涉及到伪类。伪类是可以添加到选择器上的关键字，用来选择元素的指定状态。",
-        "比如，超链接可以使用<code>:hover</code>伪类选择器定义它的鼠标滑过状态样式。下面是鼠标滑过超链接时改变超链接颜色的 CSS：",
+        "比如，超链接可以使用<code>:hover</code>伪类选择器定义它的悬停状态样式。下面是悬停超链接时改变超链接颜色的 CSS：",
         "<blockquote>a:hover {<br>&nbsp;&nbsp;color: red;<br>}</blockquote>",
         "<hr>",
-        "代码编辑器里面已经有了一个 CSS 规则把所有的<code>a</code>标签定义成了黑色。添加一个规则，满足如下，当用户鼠标滑过<code>a</code>标签时，把<code>color</code>变成蓝色。"
+        "代码编辑器里面已经有了一个 CSS 规则把所有的<code>a</code>标签定义成了黑色。添加一个规则，满足如下，当用户悬停<code>a</code>标签时，把<code>color</code>变成蓝色。"
       ],
       "tests": [
         {
@@ -1215,8 +1215,8 @@
           "testString": "assert($('a').css('color') == 'rgb(0, 0, 0)', '超链接的<code>color</code>应该保持黑色，只添加<code>:hover</code> CSS 规则。');"
         },
         {
-          "text": "鼠标滑过超链接时超链接<code>color</code>应该变成蓝色。",
-          "testString": "assert(code.match(/a:hover\\s*?{\\s*?color:\\s*?blue;\\s*?}/gi), '鼠标滑过超链接时超链接<code>color</code>应该变成蓝色。');"
+          "text": "悬停超链接时超链接<code>color</code>应该变成蓝色。",
+          "testString": "assert(code.match(/a:hover\\s*?{\\s*?color:\\s*?blue;\\s*?}/gi), '悬停超链接时超链接<code>color</code>应该变成蓝色。');"
         }
       ],
       "solutions": [],
@@ -1262,8 +1262,8 @@
           "testString": "assert($('h2').css('position') == 'relative', '<code>h2</code>元素应该添加<code>position</code>属性并赋值<code>relative</code>。');"
         },
         {
-          "text": "你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移 15 像素。",
-          "testString": "assert($('h2').css('top') == '15px', '你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移 15 像素。');"
+          "text": "你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移<code>15px</code>。",
+          "testString": "assert($('h2').css('top') == '15px', '你的代码应该使用 CSS 属性调整<code>h2</code>的位置使其从原来的位置向上偏移<code>15px</code>。');"
         }
       ],
       "solutions": [],
