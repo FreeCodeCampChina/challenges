@@ -418,26 +418,27 @@
       "id": "587d8259367417b2b2512c86",
       "title": "Implement Insertion Sort",
       "description": [
-        "The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.",
-        "<strong>Instructions:</strong> Write a function <code>insertionSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "现在我们开始研究<a href='https://baike.baidu.com/item/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F'  target='_blank'>插入排序</a>。这个方法通过在列表的开头见一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的书中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>bubbleSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>insertionSort</code> is a function.",
-          "testString": "assert(typeof insertionSort == 'function', '<code>insertionSort</code> is a function.');"
+          "text": "<code>insertionSort</code>是一个函数。",
+          "testString": "assert(typeof insertionSort == 'function', '<code>insertionSort</code>是一个函数。');"
         },
         {
-          "text": "<code>insertionSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>insertionSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>insertionSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>insertionSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>insertionSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>insertionSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>insertionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>insertionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>insertionSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>insertionSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>insertionSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>insertionSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -450,13 +451,13 @@
           "name": "index",
           "contents": [
             "function insertionSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域标写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域标写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试数组：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
