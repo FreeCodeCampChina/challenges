@@ -363,28 +363,27 @@
       "id": "587d8259367417b2b2512c85",
       "title": "Implement Selection Sort",
       "description": [
-        "现在我们开始实现<a href='https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F' target='_blank'>选择排序</a>。",
-        "Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.",
-        "<strong>Instructions</strong>: Write a function <code>selectionSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!",
+        "现在我们开始实现<a href='https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F' target='_blank'>选择排序</a>。选择排序是通过选择列表中最小值来与列表中的第一个值进行对比交换，然后从第二位置开始逐一对比，选择剩下的列表中最小值与第二个元素交换位置。然后循环遍历列表并交换元素，直到列表最后一个元素，此时的列表就完成了排序。选择排序在所有的情况下都具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>selectionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。"
         "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>selectionSort</code> is a function.",
-          "testString": "assert(typeof selectionSort == 'function', '<code>selectionSort</code> is a function.');"
+          "text": "<code>selectionSort</code>是一个函数。",
+          "testString": "assert(typeof selectionSort == 'function', '<code>selectionSort</code>是一个函数。');"
         },
         {
-          "text": "<code>selectionSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>selectionSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>selectionSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>selectionSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>selectionSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>selectionSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>selectionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>selectionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>selectionSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>selectionSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>selectionSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>selectionSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -397,13 +396,13 @@
           "name": "index",
           "contents": [
             "function selectionSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试数组：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
