@@ -419,7 +419,7 @@
       "title": "Implement Insertion Sort",
       "description": [
         "现在我们开始研究<a href='https://baike.baidu.com/item/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F'  target='_blank'>插入排序</a>。这个方法通过在列表的开头见一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的书中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
-        "<strong>说明：</strong>创建一个函数并命名为<code>bubbleSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>insertionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
         "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
         "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
