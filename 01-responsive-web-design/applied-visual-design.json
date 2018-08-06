@@ -1246,7 +1246,7 @@
     },
     {
       "id": "587d781e367417b2b2512ac9",
-      "title": "改变元素的相对位置（Relative Position）",
+      "title": "Change an Element's Relative Position",
       "description": [
         "在 CSS 里一切 HTML 元素皆为盒子，也就是通常所说的<code>盒模型</code>。块级元素自动从新的一行开始（比如标题、段落以及 div），行内元素排列在上一个元素后（比如图片以及 span）。元素默认按照这种方式布局称为文档的<code>普通流</code>，同时 CSS 提供了 position 属性来覆盖它。",
         "当元素的 position 设置为<code>relative</code>时，它允许你通过 CSS 指定该元素在当前普通流页面下的相对偏移量。 CSS 里控制各个方向偏移量的对应的属性是<code>left</code>、<code>right</code>、<code>top</code>和<code>bottom</code>。它们代表着从原来的位置向对应的方向偏移指定的像素、百分比或者 ems。下面的例子展示了段落向上偏移 10 像素：",
