@@ -13,43 +13,43 @@
         }
       ],
       "description": [
-        "D3 提供了多种方法让你添加或改变你的文本中的元素。",
-        "<code>select()</code> 从文本中选择一个元素。 他的参数是你想选择的元素的名字，返回一个 HTML 结点给文本中第一个和这个名字匹配的元素。下面是一个例子：",     
+        "D3 有多种方法可以用来在文档中增加元素、修改元素",
+        "<code>select()</code>方法用来从文档中选择元素，它以你想查询的元素名称作为参数，返回第一个符合条件的HTML结点。这里是一个例子：",     
         "<code>const anchor = d3.select(\"a\");</code>",
-        "上面这个例子找到页面上的第一个 a标签（锚标签）, 在变量 <code>anchor</code> 中保存一个 HTML 结点。 你还可以用其他方法来选择。 例子中的 \"d3\" 是对 D3 对象的引用，可以通过他来访问 D3 的方法",        
-        "其他两个很有用的方法是 <code>append()</code> 和 <code>text()</code> 。",
-        "<code>append()</code> 的参数是你想添加到文本中的的元素。 他给选择的元素添加一个HTML结点， 返回那个结点的句柄。",
-        "<code>text()</text> 设置选中结点的文字内容或者得到当前的文字内容。 如果要设置文字内容，需要在圆括号中传入一个string类型的参数。",
-        "这里是一个例子。选择一个无序列表，添加列表项，添加文字：",
+        "上面这个例子找到页面上的第一个a标签（锚标签），将它作为一个HTML结点保存在变量<code>anchor</code>中。你也可以用其他的方法选择页面上的元素。例子中的 \"d3\" 是对 D3 对象的引用，可以通过它来访问 D3 的方法。",        
+        "还可以用<code>append()</code>和<code>text()</code>方法。",
+        "<code>append()</code>方法以你想添加到文档中的元素作为参数，给选中的元素添加一个HTML结点，返回那个结点的句柄。",
+        "<code>text()</text>方法既可以给节点设置新的文本，也可以获取节点的当前文本。 如果要设置文字内容，需要在圆括号中传入一个 string（字符串）类型的参数。",
+        "这里是一个选择无序列表、添加列表项和文字的例子：",
         "<blockquote>d3.select(\"ul\")<br>&nbsp;&nbsp;.append(\"li\")<br>&nbsp;&nbsp;.text(\"Very important item\");</blockquote>",
-        "D3 允许多个方法用英文句号串联来在一行中完成多个操作。",
+        "在 D3 中可以使用英文句号将多个方法串联在一起执行多个操作。",
         "<hr>",
-        "<code>select</code> 方法选择文本中的 <code>body</code>标签。 <code>append</code> 一个 <code>h1</code> 标签给它，同时在 <code>h1</code> 中添加文本 \"Learning D3\" 。"
+        "<code>select</code>方法选择文本中的<code>body</code>标签。<code>append</code>方法添加一个<code>h1</code>标签给它，同时在<code>h1</code>中添加文本 \"Learning D3\"。"
         ],
       "tests": [
         {
-          "text": "你的 <code>body</code> 元素应该包含元素 <code>h1</code> 。",
-          "testString": "assert($('body').children('h1').length == 1, '你的 <code>body</code> 元素应该包含元素 <code>h1</code> 。');"
+          "text": "你的<code>body</code>元素应该包含元素<code>h1</code>。",
+          "testString": "assert($('body').children('h1').length == 1, '你的<code>body</code>元素应该包含元素<code>h1</code>。');"
         },
         {
-          "text": "你的 <code>h1</code> 元素应该包含文本 \"Learning D3\" 。",
-          "testString": "assert($('h1').text() == \"Learning D3\", '你的 <code>h1</code> 元素应该包含文本 \"Learning D3\" 。');"
+          "text": "你的<code>h1</code>元素应该包含文本 \"Learning D3\"。",
+          "testString": "assert($('h1').text() == \"Learning D3\", '你的<code>h1</code>元素应该包含文本 \"Learning D3\"。');"
         },
         {
-          "text": "你的代码应该能访问 <code>d3</code> 的对象。",
-          "testString": "assert(code.match(/d3/g), '你的代码应该能访问 <code>d3</code> 的对象。');"
+          "text": "你的代码应该能访问<code>d3</code>的对象。",
+          "testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
         },
         {
-          "text": "你的代码应该使用 <code>select</code> 方法。",
-          "testString": "assert(code.match(/\\.select/g), '你的代码应该使用 <code>select</code> 方法。');"
+          "text": "你的代码应该使用<code>select</code>方法。",
+          "testString": "assert(code.match(/\\.select/g), '你的代码应该使用<code>select</code>方法。');"
         },
         {
-          "text": "你的代码应该使用 <code>append</code> 方法。",
-          "testString": "assert(code.match(/\\.append/g), '你的代码应该使用 <code>append</code> 方法。');"
+          "text": "你的代码应该使用<code>append</code>方法。",
+          "testString": "assert(code.match(/\\.append/g), '你的代码应该使用<code>append</code>方法。');"
         },
         {
-          "text": "你的代码应该使用 <code>text</code> 方法。",
-          "testString": "assert(code.match(/\\.text/g), '你的代码应该使用 <code>text</code> 方法。');"
+          "text": "你的代码应该使用<code>text</code>方法。",
+          "testString": "assert(code.match(/\\.text/g), '你的代码应该使用<code>text</code>方法。');"
         }
       ],
       "solutions": [],
@@ -86,24 +86,24 @@
         }
       ],
       "description": [
-       "<code>selectAll()</code> 方法选择一组元素。 它以 HTML 结点数组的形式返回该文本中所有匹配所输入字符串的对象。 这里是一个选择文本中所有锚标签的例子：",
+       "<code>selectAll()</code>方法选择一组元素。它以 HTML 结点数组的形式返回该文本中所有匹配所输入字符串的对象。这里是一个选择文本中所有锚标签的例子：",
         "<code>const anchors = d3.selectAll(\"a\");</code>",
-        "像方法 <code>select()</code> 一样，<code>selectAll()</code> 也支持链式法则，你也可以用于其他方法。",
+        "像<code>select()</code>方法一样，<code>selectAll()</code>也支持链式法则，你也可以用其他方法。",
         "<hr>",
-        "选择所有的 <code>li</code> 标签，通过 <code>.text()</code> 方法将它的文本改为 \"list item\" 。"
+        "选择所有的<code>li</code>标签，通过<code>.text()</code>方法将它的文本改为 \"list item\" 。"
        ],
       "tests": [
         {
-          "text": "页面上应该有3个 <code>li</code> 元素，每个元素的文本内容应为 \"list item\"。 大小写和空格必须一致。",
-          "testString": "assert($('li').text().match(/list item/g).length == 3, '页面上应该有3个 <code>li</code> 元素，每个元素的文本内容应为 \"list item\"。 大小写和空格必须一致。');"
+          "text": "页面上应该有3个<code>li</code>元素，每个元素的文本内容应为 \"list item\"。大小写和空格必须一致。",
+          "testString": "assert($('li').text().match(/list item/g).length == 3, '页面上应该有3个<code>li</code>元素，每个元素的文本内容应为 \"list item\"。大小写和空格必须一致。');"
         },
         {
-          "text": "你的代码应该能访问 <code>d3</code> 的对象。",
-          "testString": "assert(code.match(/d3/g), '你的代码应该能访问 <code>d3</code> 的对象。');"
+          "text": "你的代码应该能访问<code>d3</code>的对象。",
+          "testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
         },
         {
-          "text": "你的代码应该使用 <code>selectAll</code> 方法。",
-          "testString": "assert(code.match(/\\.selectAll/g), '你的代码应该使用 <code>selectAll</code> 方法。');"
+          "text": "你的代码应该使用<code>selectAll</code>方法。",
+          "testString": "assert(code.match(/\\.selectAll/g), '你的代码应该使用<code>selectAll</code>方法。');"
         }
       ],
       "solutions": [],
@@ -145,32 +145,32 @@
         }
       ],
       "description": [
-        "The D3 library focuses on a data-driven approach. When you have a set of data, you can apply D3 methods to display it on the page. Data comes in many formats, but this challenge uses a simple array of numbers.",
-        "The first step is to make D3 aware of the data. The <code>data()</code> method is used on a selection of DOM elements to attach the data to those elements. The data set is passed as an argument to the method.",
-        "A common workflow pattern is to create a new element in the document for each piece of data in the set. D3 has the <code>enter()</code> method for this purpose.",
-        "When <code>enter()</code> is combined with the <code>data()</code> method, it looks at the selected elements from the page and compares them to the number of data items in the set. If there are fewer elements than data items, it creates the missing elements.",
-        "Here is an example that selects a <code>ul</code> element and creates a new list item based on the number of entries in the array:",
+        "D3 的库是数据驱动的。可以使用 D3 的方法将数组形式的数据显示在页面上。",
+        "第一步是让 D3 知道数据。<code>data</code>方法选择连接着数据的 DOM 元素。数据集作为参数传递给该方法。",
+        "常见的方法是在文档中为数据集中的每一个数据创建一个元素。D3 使用<code>enter()</code>方法",
+        "当<code>enter()</code>和<code>data()</code>方法连接使用时，它把从页面中选择的元素和数据集中的元素作比较。如果页面中选择的元素较少则创建缺少的元素。",
+        "这里是一个选择<code>ul</code>元素并根据添加的数组创建新的列表项的例子。",
         "<blockquote>&lt;body&gt;<br>&nbsp;&nbsp;&lt;ul&gt;&lt;/ul&gt;<br>&nbsp;&nbsp;&lt;script&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;const dataset = [\"a\", \"b\", \"c\"];<br>&nbsp;&nbsp;&nbsp;&nbsp;d3.select(\"ul\").selectAll(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.data(dataset)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.enter()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(\"New item\");<br>&nbsp;&nbsp;&lt;/script&gt;<br>&lt;/body&gt;</blockquote>",
-        "It may seem confusing to select elements that don't exist yet. This code is telling D3 to first select the <code>ul</code> on the page. Next, select all list items, which returns an empty selection. Then the <code>data()</code> method reviews the dataset and runs the following code three times, once for each item in the array. The <code>enter()</code> method sees there are no <code>li</code> elements on the page, but it needs 3 (one for each piece of data in <code>dataset</code>). New <code>li</code> elements are appended to the <code>ul</code> and have the text \"New item\".",
+        "选择不存在的元素似乎有些难以理解。这段代码先选择页面上的<code>ul</code>元素，再选择所有的列表项，它将返回空。然后<code>data()</code>方法接收数组作为参数，并运行下面的代码三次，每次对应数组中的一个对象。<code>enter()</code>方法发现页面中没有<code>li</code>元素，但是需要 3 个（每个对应<code>dataset</code>中的一个对象）。它将在<code>ul</code>中添加带有文本 \"New item\" 的<code>li</code>元素",
         "<hr>",
-        "Select the <code>body</code> node, then select all <code>h2</code> elements. Have D3 create and append an <code>h2</code> tag for each item in the <code>dataset</code> array. The text in the <code>h2</code> should say \"New Title\". Your code should use the <code>data()</code> and <code>enter()</code> methods."
+        "选择<code>body</code>结点，然后选择所有的<code>h2</code>元素。让 D3 为<code>dataset</code>数组中的每一个对象创建并添加文本为 \"New Title\" 的<code>h2</code>标签。你应该使用<code>data()</code>和<code>enter()</code>方法。"
       ],
       "tests": [
         {
-          "text": "Your document should have 9 <code>h2</code> elements.",
-          "testString": "assert($('h2').length == 9, 'Your document should have 9 <code>h2</code> elements.');"
+          "text": "你的文档应该有 9 个<code>h2</code>元素。",
+          "testString": "assert($('h2').length == 9, '你的文档应该有 9 个<code>h2</code>元素。');"
         },
         {
-          "text": "The text in the <code>h2</code> elements should say \"New Title\". The capitalization and spacing should match exactly.",
-          "testString": "assert($('h2').text().match(/New Title/g).length == 9, 'The text in the <code>h2</code> elements should say \"New Title\". The capitalization and spacing should match exactly.');"
+          "text": "<code>h2</code>元素中的文本应为 \"New Title\"。大小写和空格必须一致。",
+          "testString": "assert($('h2').text().match(/New Title/g).length == 9, '<code>h2</code>元素中的文本应为 \"New Title\"。大小写和空格必须一致。');"
         },
         {
-          "text": "Your code should use the <code>data()</code> method.",
-          "testString": "assert(code.match(/\\.data/g), 'Your code should use the <code>data()</code> method.');"
+          "text": "你的代码应该使用使用<code>data()</code>方法。",
+          "testString": "assert(code.match(/\\.data/g), '你的代码应该使用使用<code>data()</code>方法。');"
         },
         {
-          "text": "Your code should use the <code>enter()</code> method.",
-          "testString": "assert(code.match(/\\.enter/g), 'Your code should use the <code>enter()</code> method.');"
+          "text": "你的代码应该使用使用<code>enter()</code>方法。",
+          "testString": "assert(code.match(/\\.enter/g), '你的代码应该使用使用<code>enter()</code>方法。');"
         }
       ],
       "solutions": [],
