@@ -24,7 +24,7 @@
         },
         {
           "text": "<code>h2</code>元素的<code>style</code>属性的值应该以<code>;</code>结束。",
-          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。');"
+          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code>元素<code>style</code>属性的值应该以<code>;</code>结束。');"
         }
       ],
       "challengeType": 0,
@@ -178,7 +178,7 @@
         },
         {
           "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式。",
-          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。');"
+          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式。');"
         }
       ],
       "challengeType": 0,
