@@ -25,7 +25,7 @@
         {
           "text": "<code>h2</code>元素的<code>style</code>属性的值应该以<code>;</code>结束。",
           "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。');"
-        
+        }
       ],
       "challengeType": 0,
       "files": {
@@ -1718,29 +1718,29 @@
       "id": "bad87fee1348bd9afdf08726",
       "title": "Use Clockwise Notation to Specify the Margin of an Element",
       "description": [
-        "Let's try this again, but with <code>margin</code> this time.",
-        "Instead of specifying an element's <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> properties individually, you can specify them all in one line, like this:",
+        "让我们再试一次，不过这一次轮到<code>margin</code>了。",
+        "同样，每个方向的外边距值可以在<code>margin</code>属性里面汇总声明，来代替分别声明<code>margin-top</code>，<code>margin-right</code>，<code>margin-bottom</code>和<code>margin-left</code>属性的方式，代码如下：",
         "<code>margin: 10px 20px 10px 20px;</code>",
-        "These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific margin instructions.",
+        "这四个值按顺时针排序：上，右，下，左，并且设置的效果等同于特定声明每一个方向的<code>margin</code>。",
         "<hr>",
-        "Use <code>Clockwise Notation</code> to give the element with the <code>blue-box</code> class a margin of <code>40px</code> on its top and left side, but only <code>20px</code> on its bottom and right side."
+        "按照顺时针顺序，给\".blue-box\" class的上外边距以及左外边距设置为<code>40px</code>，右外边距和下外边距则设置为<code>20px</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", 'Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的上外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", '<code>blue-box</code>class 的上外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", 'Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的右外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", 'Y<code>blue-box</code>class 的右外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", 'Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的下外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", '<code>blue-box</code>class 的下外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", 'Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的左外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", '<code>blue-box</code>class 的左外边距应为<code>40px</code>。');"
         }
       ],
       "challengeType": 0,
