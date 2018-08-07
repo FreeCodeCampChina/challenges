@@ -593,21 +593,21 @@
       "id": "587d7b8f367417b2b2512b62",
       "title": "Implement map on a Prototype",
       "description": [
-        "你前面用的<code>map</code>方法（即<code>Array.prototype.map()</code>，<code>map</code>方法返回一个与调用它的数组长度相同的数组。只要它的回调函数不改变原始数组，它就不会改变原始数组。",
-        "换一句话说，<code>map</code>是一个纯函数，它的输出完全取决于它的输入；另外，它需要另一个函数作为它的参数。",
-        "它会教会我们更多关于用<code>map</code>去实现一个与<code>for</code>或<code>Array.prototype.forEach()</code>行为完全一样的<code>Array.prototype.map()</code>版本。",
-        "注意：纯函数可以改变其作用域内定义的局部变量，最好也尽管避免使用。",
+        "我们之前用<code>map</code>方法（即<code>Array.prototype.map()</code>）返回一个与调用它的数组长度相同的数组。只要它的回调函数不改变原始数组，它就不会改变原始数组。",
+        "换句话说，<code>map</code>是一个纯函数，它的输出仅取决于输入的数组和作为参数传入的回调函数。",
+        "为了加深对<code>map</code>方法的理解，现在我们来用<code>for</code>或<code>Array.prototype.forEach()</code>自己实现一下这个方法。",
+        "注意：纯函数可以改变其作用域内定义的局部变量，但我们最好不要这样做。",
         "<hr>",
-        "编写一个和<code>Array.prototype.map()</code>行为一样的<code>Array.prototype.myMap()</code>。你可以使用<code>for</code>循环或者<code>forEach</code>方法。"
+        "写一个和<code>Array.prototype.map()</code>一样的<code>Array.prototype.myMap()</code>。你可以用<code>for</code>循环或者<code>forEach</code>方法。"
       ],
       "tests": [
         {
-          "text": "<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>.",
-          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]), '<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>.');"
+          "text": "<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>。",
+          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([46, 130, 196, 10]), '<code>new_s</code>应等于<code>[46, 130, 196, 10]</code>。');"
         },
         {
-          "text": "你的代码不能使用<code>map</code>方法。",
-          "testString": "assert(!code.match(/\\.map/g), '你的代码不能使用<code>map</code>方法。');"
+          "text": "不能使用<code>map</code>方法。",
+          "testString": "assert(!code.match(/\\.map/g), '不能使用<code>map</code>方法。');"
         }
       ],
       "solutions": [],
@@ -644,27 +644,27 @@
       "id": "587d7b8f367417b2b2512b63",
       "title": "Use the filter Method to Extract Data from an Array",
       "description": [
-        "另一个有用的数组函数是<code>filter()</code>（即<code>Array.prototype.filter()</code>）。<code>filter</code>方法通常返回一个比原始数组短的新数组，最多与原始数组一样长。",
-        "和<code>map</code>一样，<code>Filter</code>不会改变原始数组，它需要一个回调函数，它将回调内的逻辑应用于数组的每个元素。新数组中包含根据回调函数中的条件返回 true 的元素。",
+        "另一个有用的数组方法是<code>filter()</code>（即<code>Array.prototype.filter()</code>）。<code>filter</code>方法会返回一个长度不大于原始数组的新数组。",
+        "和<code>map</code>一样，<code>Filter</code>不会改变原始数组，它接收一个回调函数，将回调内的逻辑应用于数组的每个元素。新数组包含根据回调函数内条件返回 true 的元素。",
         "<hr>",
-        "<code>watchList</code>是包含一些电影信息的对象。结合使用<code>filter</code>和<code>map</code>返回一个只包含<code>title</code>和<code>rating</code>关键字的新数组，但是<code>imdbRating</code>需要大于或等于 8.0。请注意，评级值在对象中保存为字符串，你可能需要将它转换成数字来执行运算。"
+        "<code>watchList</code>是包含一些电影信息的对象。结合<code>filter</code>和<code>map</code>返回一个只包含<code>title</code>和<code>rating</code>属性的新数组，并且<code>imdbRating</code>值大于或等于 8.0。请注意，评级值在对象中保存为字符串，你可能需要将它转换成数字来执行运算。"
       ],
       "tests": [
         {
-          "text": "<code>watchList</code>不能被改变。",
-          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", '<code>watchList</code>不能被改变。');"
+          "text": "<code>watchList</code>应保持不变。",
+          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", '<code>watchList</code>应保持不变。');"
         },
         {
-          "text": "你的代码中应使用<code>filter</code>方法",
-          "testString": "assert(code.match(/\\.filter/g), '你的代码中应使用<code>filter</code>方法');"
+          "text": "应使用<code>filter</code>方法。",
+          "testString": "assert(code.match(/\\.filter/g), '应使用<code>filter</code>方法。');"
         },
         {
-          "text": "你的代码中不应该使用<code>for</code>循环。",
-          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), '你的代码中不应该使用<code>for</code>循环。');"
+          "text": "不能使用<code>for</code>循环。",
+          "testString": "assert(!code.match(/for\\s*?\\(.+?\\)/g), '不能使用<code>for</code>循环。');"
         },
         {
-          "text": "<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.",
-          "testString": "assert.deepEqual(filteredList, [{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}], '<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>.');"
+          "text": "<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>。",
+          "testString": "assert.deepEqual(filteredList, [{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}], '<code>filteredList</code>应等于<code>[{\"title\": \"Inception\",\"rating\": \"8.8\"},{\"title\": \"Interstellar\",\"rating\": \"8.6\"},{\"title\": \"The Dark Knight\",\"rating\": \"9.0\"},{\"title\": \"Batman Begins\",\"rating\": \"8.3\"}]</code>。');"
         }
       ],
       "solutions": [],
@@ -807,20 +807,20 @@
       "id": "587d7b8f367417b2b2512b64",
       "title": "Implement the filter Method on a Prototype",
       "description": [
-        "如果我们尝试实现与<code>Array.prototype.filter()</code>完全相同的功能，我们将会学到很多关于<code>filter</code>方法的内容。",
-        "可以使用<code>for</code>循环或<code>Array.prototype.forEach()</code>。",
-        "请注意：纯函数可以改变其作用域内定义的局部变量，最好也尽管避免使用。",
+        "为了加深对<code>filter</code>的理解，现在我们来自己实现一下<code>Array.prototype.filter()</code>方法。",
+        "可以用<code>for</code>循环或<code>Array.prototype.forEach()</code>。",
+        "请注意：纯函数可以改变其作用域内定义的局部变量，但我们最好不要这样做。",
         "<hr>",
-        "编写一个和<code>Array.prototype.filter()</code>行为一样的<code>Array.prototype.myFilter()</code>方法。你可以使用<code>for</code>循环或<code>Array.prototype.forEach()</code>方法。"
+        "编写一个和<code>Array.prototype.filter()</code>功能一样的<code>Array.prototype.myFilter()</code>方法。你可以用<code>for</code>循环或<code>Array.prototype.forEach()</code>方法。"
       ],
       "tests": [
         {
-          "text": "<code>new_s</code>应等于<code>[23, 65, 5]</code>.",
-          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]), '<code>new_s</code>应等于<code>[23, 65, 5]</code>.');"
+          "text": "<code>new_s</code>应等于<code>[23, 65, 5]</code>。",
+          "testString": "assert(JSON.stringify(new_s) === JSON.stringify([23, 65, 5]), '<code>new_s</code>应等于<code>[23, 65, 5]</code>。');"
         },
         {
-          "text": "不可以使用<code>filter</code>方法。",
-          "testString": "assert(!code.match(/\\.filter/g), '不可以使用<code>filter</code>方法。');"
+          "text": "不能使用<code>filter</code>方法。",
+          "testString": "assert(!code.match(/\\.filter/g), '不能使用<code>filter</code>方法。');"
         }
       ],
       "solutions": [],
@@ -857,32 +857,32 @@
       "id": "587d7b90367417b2b2512b65",
       "title": "Return Part of an Array Using the slice Method",
       "description": [
-        "The <code>slice</code> method returns a copy of certain elements of an array. It can take two arguments, the first gives the index of where to begin the slice, the second is the index for where to end the slice (and it's non-inclusive). If the arguments are not provided, the default is to start at the beginning of the array through the end, which is an easy way to make a copy of the entire array. The <code>slice</code> method does not mutate the original array, but returns a new one.",
-        "Here's an example:",
-        "<blockquote>var arr = [\"Cat\", \"Dog\", \"Tiger\", \"Zebra\"];<br>var newArray = arr.slice(1, 3);<br>// Sets newArray to [\"Dog\", \"Tiger\"]</blockquote>",
+        "<code>slice</code>方法可以从已有数组中返回指定元素。它接受两个参数，第一个规定从何处开始选取，第二个规定从何处结束选取（不包括该元素）。如果没有传参，则默认为从数组的开头开始到结尾结束，这是复制整个数组的简单方式。<code>slice</code>返回一个新数组，不会修改原始数组。",
+        "举个例子：",
+        "<blockquote>var arr = [\"Cat\", \"Dog\", \"Tiger\", \"Zebra\"];<br>var newArray = arr.slice(1, 3);<br>// 将新数组设置为 [\"Dog\", \"Tiger\"]</blockquote>",
         "<hr>",
-        "Use the <code>slice</code> method in the <code>sliceArray</code> function to return part of the <code>anim</code> array given the provided <code>beginSlice</code> and <code>endSlice</code> indices. The function should return an array."
+        "在<code>sliceArray</code>函数中使用<code>slice</code>方法，给出<code>beginSlice</code>和<code>endSlice</code>索引，返回<code>anim</code>数组的一部分，这个函数应返回一个数组。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>slice</code> method.",
-          "testString": "assert(code.match(/\\.slice/g), 'Your code should use the <code>slice</code> method.');"
+          "text": "你的代码中应使用<code>slice</code>方法。",
+          "testString": "assert(code.match(/\\.slice/g), '你的代码中应使用<code>slice</code>方法。');"
         },
         {
-          "text": "The <code>inputAnim</code> variable should not change.",
-          "testString": "assert(JSON.stringify(inputAnim) === JSON.stringify([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"]), 'The <code>inputAnim</code> variable should not change.');"
+          "text": "不能改变<code>inputAnim</code>变量。",
+          "testString": "assert(JSON.stringify(inputAnim) === JSON.stringify([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"]), '不能改变<code>inputAnim</code>变量。');"
         },
         {
-          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)</code> should return <code>[\"Dog\", \"Tiger\"]</code>.",
-          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)) === JSON.stringify([\"Dog\", \"Tiger\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)</code> should return <code>[\"Dog\", \"Tiger\"]</code>.');"
+          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)</code>应返回<code>[\"Dog\", \"Tiger\"]</code>。",
+          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)) === JSON.stringify([\"Dog\", \"Tiger\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 3)</code>应返回<code>[\"Dog\", \"Tiger\"]</code>。');"
         },
         {
-          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)</code> should return <code>[\"Cat\"]</code>.",
-          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)) === JSON.stringify([\"Cat\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)</code> should return <code>[\"Cat\"]</code>.');"
+          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)</code>应返回<code>[\"Cat\"]</code>。",
+          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)) === JSON.stringify([\"Cat\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 0, 1)</code>应返回<code>[\"Cat\"]</code>。');"
         },
         {
-          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)</code> should return <code>[\"Dog\", \"Tiger\", \"Zebra\"]</code>.",
-          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)) === JSON.stringify([\"Dog\", \"Tiger\", \"Zebra\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)</code> should return <code>[\"Dog\", \"Tiger\", \"Zebra\"]</code>.');"
+          "text": "<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)</code>应返回<code>[\"Dog\", \"Tiger\", \"Zebra\"]</code>。",
+          "testString": "assert(JSON.stringify(sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)) === JSON.stringify([\"Dog\", \"Tiger\", \"Zebra\"]), '<code>sliceArray([\"Cat\", \"Dog\", \"Tiger\", \"Zebra\", \"Ant\"], 1, 4)</code>应返回<code>[\"Dog\", \"Tiger\", \"Zebra\"]</code>。');"
         }
       ],
       "solutions": [],
@@ -912,29 +912,29 @@
       "id": "9d7123c8c441eeafaeb5bdef",
       "title": "Remove Elements from an Array Using slice Instead of splice",
       "description": [
-        "A common pattern while working with arrays is when you want to remove items and keep the rest of the array. JavaScript offers the <code>splice</code> method for this, which takes arguments for the index of where to start removing items, then the number of items to remove. If the second argument is not provided, the default is to remove items through the end. However, the <code>splice</code> method mutates the original array it is called on. Here's an example:",
-        "<blockquote>var cities = [\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"];<br>cities.splice(3, 1); // Returns \"London\" and deletes it from the cities array<br>// cities is now [\"Chicago\", \"Delhi\", \"Islamabad\", \"Berlin\"]</blockquote>",
-        "As we saw in the last challenge, the <code>slice</code> method does not mutate the original array, but returns a new one which can be saved into a variable. Recall that the <code>slice</code> method takes two arguments for the indices to begin and end the slice (the end is non-inclusive), and returns those items in a new array. Using the <code>slice</code> method instead of <code>splice</code> helps to avoid any array-mutating side effects.",
+        "使用数组时经常遇到要删除一些元素并保留数组剩余部分的情况。为此，JavaScript 提供了<code>splice</code>方法，它接收从哪里开始删除项目的索引，和要删除的项目数两个参数。如果没有提供第二个参数，默认情况下是移除到结尾的元素。但<code>splice</code>方法会改变调用它的原始数组。举个例子：",
+        "<blockquote>var cities = [\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"];<br>cities.splice(3, 1); // 返回 \"London\" 并将它从 cities 数组删除<br>// cities 现在是 [\"Chicago\", \"Delhi\", \"Islamabad\", \"Berlin\"]</blockquote>",
+        "正如我们在上一次挑战中看到的那样，<code>slice</code>方法不会改变原始数组，而是返回一个可以保存到变量中的新数组。回想一下，<code>slice</code>方法接收两个参数，从开始索引开始选取到结束（不包括该元素），并在新数组中返回这些元素。使用<code>slice</code>方法替代<code>splice</code>有助于避免数组变化产生的副作用。",
         "<hr>",
-        "Rewrite the function <code>nonMutatingSplice</code> by using <code>slice</code> instead of <code>splice</code>. It should limit the provided <code>cities</code> array to a length of 3, and return a new array with only the first three items.",
-        "Do not mutate the original array provided to the function."
+        "用<code>slice</code>代替<code>splice</code>重写<code>nonMutatingSplice</code>函数。将<code>cities</code>数组长度限制为3，并返回一个仅包含前 3 项的新数组。",
+        "不要改变提供给函数的原始数组。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>slice</code> method.",
-          "testString": "assert(code.match(/\\.slice/g), 'Your code should use the <code>slice</code> method.');"
+          "text": "你应该使用<code>slice</code>方法。",
+          "testString": "assert(code.match(/\\.slice/g), '你应该使用<code>slice</code>方法。');"
         },
         {
-          "text": "Your code should not use the <code>splice</code> method.",
-          "testString": "assert(!code.match(/\\.splice/g), 'Your code should not use the <code>splice</code> method.');"
+          "text": "你不应该使用<code>splice</code>方法。",
+          "testString": "assert(!code.match(/\\.splice/g), '你不应该使用<code>splice</code>方法。;"
         },
         {
-          "text": "The <code>inputCities</code> array should not change.",
-          "testString": "assert(JSON.stringify(inputCities) === JSON.stringify([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"]), 'The <code>inputCities</code> array should not change.');"
+          "text": "不能改变<code>inputCities</code>数组。",
+          "testString": "assert(JSON.stringify(inputCities) === JSON.stringify([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"]), '不能改变<code>inputCities</code>数组。');"
         },
         {
-          "text": "<code>nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])</code> should return <code>[\"Chicago\", \"Delhi\", \"Islamabad\"]</code>.",
-          "testString": "assert(JSON.stringify(nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])) === JSON.stringify([\"Chicago\", \"Delhi\", \"Islamabad\"]), '<code>nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])</code> should return <code>[\"Chicago\", \"Delhi\", \"Islamabad\"]</code>.');"
+          "text": "<code>nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])</code>应返回<code>[\"Chicago\", \"Delhi\", \"Islamabad\"]</code>。",
+          "testString": "assert(JSON.stringify(nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])) === JSON.stringify([\"Chicago\", \"Delhi\", \"Islamabad\"]), '<code>nonMutatingSplice([\"Chicago\", \"Delhi\", \"Islamabad\", \"London\", \"Berlin\"])</code>应返回<code>[\"Chicago\", \"Delhi\", \"Islamabad\"]</code>。');"
         }
       ],
       "solutions": [],
@@ -964,27 +964,27 @@
       "id": "587d7da9367417b2b2512b66",
       "title": "Combine Two Arrays Using the concat Method",
       "description": [
-        "<code>Concatenation</code> means to join items end to end. JavaScript offers the <code>concat</code> method for both strings and arrays that work in the same way. For arrays, the method is called on one, then another array is provided as the argument to <code>concat</code>, which is added to the end of the first array. It returns a new array and does not mutate either of the original arrays. Here's an example:",
-        "<blockquote>[1, 2, 3].concat([4, 5, 6]);<br>// Returns a new array [1, 2, 3, 4, 5, 6]</blockquote>",
+        "<code>Concatenation</code>意思是连接元素到尾部。同理，JavaScript 为字符串和数组提供了<code>concat</code>方法。对数组来说，在一个数组上调用<code>concat</code>方法，然后提供另一个数组作为参数添加到第一个数组末尾，返回一个新数组，不会改变任何一个原始数组。举个例子：",
+        "<blockquote>[1, 2, 3].concat([4, 5, 6]);<br>// 返回新数组 [1, 2, 3, 4, 5, 6]</blockquote>",
         "<hr>",
-        "Use the <code>concat</code> method in the <code>nonMutatingConcat</code> function to concatenate <code>attach</code> to the end of <code>original</code>. The function should return the concatenated array."
+        "在<code>nonMutatingConcat</code>函数里使用<code>concat</code>，将<code>attach</code>拼接到<code>original</code>尾部，返回拼接后的数组。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>concat</code> method.",
-          "testString": "assert(code.match(/\\.concat/g), 'Your code should use the <code>concat</code> method.');"
+          "text": "你应该使用<code>concat</code>方法。",
+          "testString": "assert(code.match(/\\.concat/g), '你应该使用<code>concat</code>方法。');"
         },
         {
-          "text": "The <code>first</code> array should not change.",
-          "testString": "assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]), 'The <code>first</code> array should not change.');"
+          "text": "不能改变<code>first</code>数组。",
+          "testString": "assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]), '不能改变<code>first</code>数组。');"
         },
         {
-          "text": "The <code>second</code> array should not change.",
-          "testString": "assert(JSON.stringify(second) === JSON.stringify([4, 5]), 'The <code>second</code> array should not change.');"
+          "text": "不能改变<code>second</code>数组。",
+          "testString": "assert(JSON.stringify(second) === JSON.stringify([4, 5]), '不能改变<code>second</code>数组。');"
         },
         {
-          "text": "<code>nonMutatingConcat([1, 2, 3], [4, 5])</code> should return <code>[1, 2, 3, 4, 5]</code>.",
-          "testString": "assert(JSON.stringify(nonMutatingConcat([1, 2, 3], [4, 5])) === JSON.stringify([1, 2, 3, 4, 5]), '<code>nonMutatingConcat([1, 2, 3], [4, 5])</code> should return <code>[1, 2, 3, 4, 5]</code>.');"
+          "text": "<code>nonMutatingConcat([1, 2, 3], [4, 5])</code>应返回<code>[1, 2, 3, 4, 5]</code>。",
+          "testString": "assert(JSON.stringify(nonMutatingConcat([1, 2, 3], [4, 5])) === JSON.stringify([1, 2, 3, 4, 5]), '<code>nonMutatingConcat([1, 2, 3], [4, 5])</code>应返回<code>[1, 2, 3, 4, 5]</code>。');"
         }
       ],
       "solutions": [],
@@ -1015,33 +1015,33 @@
       "id": "587d7da9367417b2b2512b67",
       "title": "Add Elements to the End of an Array Using concat Instead of push",
       "description": [
-        "Functional programming is all about creating and using non-mutating functions.",
-        "The last challenge introduced the <code>concat</code> method as a way to combine arrays into a new one without mutating the original arrays. Compare <code>concat</code> to the <code>push</code> method. <code>Push</code> adds an item to the end of the same array it is called on, which mutates that array. Here's an example:",
-        "<blockquote>var arr = [1, 2, 3];<br>arr.push([4, 5, 6]);<br>// arr is changed to [1, 2, 3, [4, 5, 6]]<br>// Not the functional programming way</blockquote>",
-        "<code>Concat</code> offers a way to add new items to the end of an array without any mutating side effects.",
+        "函数式编程就是创建和使用 non-mutating 函数。",
+        "最后一个挑战介绍了<code>concat</code>方法，这是一种在不改变原始数组的前提下，将数组组合成新数组的方法。将<code>concat</code>方法与<code>push</code>方法做比较，<code>Push</code>将元素添加到调用它的数组的末尾，这样会改变该数组。举个例子：",
+        "<blockquote>var arr = [1, 2, 3];<br>arr.push([4, 5, 6]);<br>// arr 变成了 [1, 2, 3, [4, 5, 6]]<br>// 不是函数式编程</blockquote>",
+        "<code>Concat</code>方法可以将新项目添加到数组末尾，而不产生任何变更副作用。",
         "<hr>",
-        "Change the <code>nonMutatingPush</code> function so it uses <code>concat</code> to add <code>newItem</code> to the end of <code>original</code> instead of <code>push</code>. The function should return an array."
+        "修改<code>nonMutatingPush</code>函数，用<code>concat</code>替代<code>push</code>将<code>newItem</code>添加到<code>original</code>末尾，该函数应返回一个数组。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>concat</code> method.",
-          "testString": "assert(code.match(/\\.concat/g), 'Your code should use the <code>concat</code> method.');"
+          "text": "应该使用<code>concat</code>方法。",
+          "testString": "assert(code.match(/\\.concat/g), '应该使用<code>concat</code>方法。');"
         },
         {
-          "text": "Your code should not use the <code>push</code> method.",
-          "testString": "assert(!code.match(/\\.push/g), 'Your code should not use the <code>push</code> method.');"
+          "text": "不能使用<code>push</code>方法。",
+          "testString": "assert(!code.match(/\\.push/g), '不能使用<code>push</code>方法。');"
         },
         {
-          "text": "The <code>first</code> array should not change.",
-          "testString": "assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]), 'The <code>first</code> array should not change.');"
+          "text": "不能改变<code>first</code>数组。",
+          "testString": "assert(JSON.stringify(first) === JSON.stringify([1, 2, 3]), '不能改变<code>first</code>数组。');"
         },
         {
-          "text": "The <code>second</code> array should not change.",
-          "testString": "assert(JSON.stringify(second) === JSON.stringify([4, 5]), 'The <code>second</code> array should not change.');"
+          "text": "不能改变<code>second</code>数组。",
+          "testString": "assert(JSON.stringify(second) === JSON.stringify([4, 5]), '不能改变<code>second</code>数组。');"
         },
         {
-          "text": "<code>nonMutatingPush([1, 2, 3], [4, 5])</code> should return <code>[1, 2, 3, 4, 5]</code>.",
-          "testString": "assert(JSON.stringify(nonMutatingPush([1, 2, 3], [4, 5])) === JSON.stringify([1, 2, 3, 4, 5]), '<code>nonMutatingPush([1, 2, 3], [4, 5])</code> should return <code>[1, 2, 3, 4, 5]</code>.');"
+          "text": "<code>nonMutatingPush([1, 2, 3], [4, 5])</code>应返回<code>[1, 2, 3, 4, 5]</code>。",
+          "testString": "assert(JSON.stringify(nonMutatingPush([1, 2, 3], [4, 5])) === JSON.stringify([1, 2, 3, 4, 5]), '<code>nonMutatingPush([1, 2, 3], [4, 5])</code>应返回<code>[1, 2, 3, 4, 5]</code>。');"
         }
       ],
       "solutions": [],
@@ -1072,29 +1072,29 @@
       "id": "587d7da9367417b2b2512b68",
       "title": "Use the reduce Method to Analyze Data",
       "description": [
-        "<code>Array.prototype.reduce()</code>, or simply <code>reduce()</code>, is the most general of all array operations in JavaScript. You can solve almost any array processing problem using the <code>reduce</code> method.",
-        "This is not the case with the <code>filter</code> and <code>map</code> methods since they do not allow interaction between two different elements of the array. For example, if you want to compare elements of the array, or add them together, <code>filter</code> or <code>map</code> could not process that.",
-        "The <code>reduce</code> method allows for more general forms of array processing, and it's possible to show that both <code>filter</code> and <code>map</code> can be derived as a special application of <code>reduce</code>.",
-        "However, before we get there, let's practice using <code>reduce</code> first.",
+        "<code>reduce()</code>（即<code>Array.prototype.reduce()</code>），是 JavaScript 所有数组操作中最通用的方法。几乎可以用<code>reduce</code>方法解决所有数组处理问题。",
+        "<code>filter</code>和<code>map</code>方法不支持对数组中两个不同元素的交互。举个例子，如果你想把数组中的元素拿来比较或者相加，用<code>filter</code>和<code>map</code>是做不到的。",
+        "<code>reduce</code>方法允许更通用的数组处理方式，而且<code>filter</code>和<code>map</code>方法都可以当作是<code>reduce</code>的特殊实现。",
+        "然而，在我们介绍它们的特殊实现之前，我们先来练习使用<code>reduce</code>。",
         "<hr>",
-        "The variable <code>watchList</code> holds an array of objects with information on several movies. Use <code>reduce</code> to find the average IMDB rating of the movies <strong>directed by Christopher Nolan</strong>. Recall from prior challenges how to <code>filter</code> data and <code>map</code> over it to pull what you need. You may need to create other variables, but save the final average into the variable <code>averageRating</code>. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations."
+        "<code>watchList</code>变量中包含一组存有多部电影信息对象。使用<code>reduce</code>查找由 Christopher Nolan 导演的电影<strong>directed by Christopher Nolan</strong>的 IMDB 评级。回想一下之前的挑战，如何<code>filter</code>数据，以及使用<code>map</code>来获取你想要的数据。你可能需要创建一些变量，但是请将最后的平均值保存到<code>averageRating</code>变量中。请注意，评级在对象中是字符串，需要将其转换为数字再用于数学运算。"
       ],
       "tests": [
         {
-          "text": "The <code>watchList</code> variable should not change.",
-          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", 'The <code>watchList</code> variable should not change.');"
+          "text": "<code>watchList</code>应保持不变。",
+          "testString": "assert(watchList[0].Title === \"Inception\" && watchList[4].Director == \"James Cameron\", '<code>watchList</code>应保持不变。');"
         },
         {
-          "text": "Your code should use the <code>reduce</code> method.",
-          "testString": "assert(code.match(/\\.reduce/g), 'Your code should use the <code>reduce</code> method.');"
+          "text": "应该使用<code>reduce</code>方法。",
+          "testString": "assert(code.match(/\\.reduce/g), '应该使用<code>reduce</code>方法。');"
         },
         {
-          "text": "The <code>averageRating</code>应等于8.675.",
-          "testString": "assert(averageRating == 8.675, 'The <code>averageRating</code>应等于8.675.');"
+          "text": "The <code>averageRating</code>应等于 8.675。",
+          "testString": "assert(averageRating == 8.675, 'The <code>averageRating</code>应等于 8.675。');"
         },
         {
-          "text": "Your code should not use a <code>for</code> loop.",
-          "testString": "assert(!code.match(/for\\s*?\\(.*\\)/g), 'Your code should not use a <code>for</code> loop.');"
+          "text": "不能使用<code>for</code>循环。",
+          "testString": "assert(!code.match(/for\\s*?\\(.*\\)/g), '不能使用<code>for</code>循环。');"
         }
       ],
       "solutions": [],
@@ -1241,29 +1241,29 @@
       "id": "587d7da9367417b2b2512b69",
       "title": "Sort an Array Alphabetically using the sort Method",
       "description": [
-        "The <code>sort</code> method sorts the elements of an array according to the callback function.",
-        "For example:",
-        "<blockquote>function ascendingOrder(arr) {<br>&nbsp;&nbsp;return arr.sort(function(a, b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>&nbsp;&nbsp;});<br>}<br>ascendingOrder([1, 5, 2, 3, 4]);<br>// Returns [1, 2, 3, 4, 5]<br><br>function reverseAlpha(arr) {<br>&nbsp;&nbsp;return arr.sort(function(a, b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return a < b;<br>&nbsp;&nbsp;});<br>}<br>reverseAlpha(['l', 'h', 'z', 'b', 's']);<br>// Returns ['z', 's', 'l', 'h', 'b']</blockquote>",
-        "Note: It's encouraged to provide a callback function to specify how to sort the array items. JavaScript's default sorting method is by string Unicode point value, which may return unexpected results.",
+        "<code>sort</code>方法可以根据回调函数对数组元素进行排序。",
+        "举个例子：",
+        "<blockquote>function ascendingOrder(arr) {<br>&nbsp;&nbsp;return arr.sort(function(a, b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return a - b;<br>&nbsp;&nbsp;});<br>}<br>ascendingOrder([1, 5, 2, 3, 4]);<br>// Returns [1, 2, 3, 4, 5]<br><br>function reverseAlpha(arr) {<br>&nbsp;&nbsp;return arr.sort(function(a, b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return a < b;<br>&nbsp;&nbsp;});<br>}<br>reverseAlpha(['l', 'h', 'z', 'b', 's']);<br>// 返回 ['z', 's', 'l', 'h', 'b']</blockquote>",
+        "注意：提倡使用回调函数来指定如何对数组项进行排序。JavaScript 的默认排序算法是按照 Unicode 字符编码排序的，所以可能会返回意料之外的结果。",
         "<hr>",
-        "Use the <code>sort</code> method in the <code>alphabeticalOrder</code> function to sort the elements of <code>arr</code> in alphabetical order."
+        "在<code>alphabeticalOrder</code>函数中使用<code>sort</code>方法对<code>arr</code>中的元素按照字母顺序排列。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>sort</code> method.",
-          "testString": "assert(code.match(/\\.sort/g), 'Your code should use the <code>sort</code> method.');"
+          "text": "应该使用<code>sort</code>方法。",
+          "testString": "assert(code.match(/\\.sort/g), '应该使用<code>sort</code>方法。');"
         },
         {
-          "text": "<code>alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])</code> should return <code>[\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]</code>.",
-          "testString": "assert(JSON.stringify(alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])) === JSON.stringify([\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]), '<code>alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])</code> should return <code>[\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]</code>.');"
+          "text": "<code>alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])</code>应返回<code>[\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]</code>。",
+          "testString": "assert(JSON.stringify(alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])) === JSON.stringify([\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]), '<code>alphabeticalOrder([\"a\", \"d\", \"c\", \"a\", \"z\", \"g\"])</code>应返回<code>[\"a\", \"a\", \"c\", \"d\", \"g\", \"z\"]</code>。');"
         },
         {
-          "text": "<code>alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])</code> should return <code>[\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]</code>.",
-          "testString": "assert(JSON.stringify(alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])) === JSON.stringify([\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]), '<code>alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])</code> should return <code>[\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]</code>.');"
+          "text": "<code>alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])</code>应返回<code>[\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]</code>。",
+          "testString": "assert(JSON.stringify(alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])) === JSON.stringify([\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]), '<code>alphabeticalOrder([\"x\", \"h\", \"a\", \"m\", \"n\", \"m\"])</code>应返回<code>[\"a\", \"h\", \"m\", \"m\", \"n\", \"x\"]</code>。');"
         },
         {
-          "text": "<code>alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])</code> should return <code>[\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]</code>.",
-          "testString": "assert(JSON.stringify(alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])) === JSON.stringify([\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]), '<code>alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])</code> should return <code>[\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]</code>.');"
+          "text": "<code>alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])</code>应返回<code>[\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]</code>。",
+          "testString": "assert(JSON.stringify(alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])) === JSON.stringify([\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]), '<code>alphabeticalOrder([\"a\", \"a\", \"a\", \"a\", \"x\", \"t\"])</code>应返回<code>[\"a\", \"a\", \"a\", \"a\", \"t\", \"x\"]</code>。');"
         }
       ],
       "solutions": [],
@@ -1292,26 +1292,26 @@
       "id": "587d7da9367417b2b2512b6a",
       "title": "Return a Sorted Array Without Changing the Original Array",
       "description": [
-        "A side effect of the <code>sort</code> method is that it changes the order of the elements in the original array. In other words, it mutates the array in place. One way to avoid this is to first concatenate an empty array to the one being sorted (remember that <code>concat</code> returns a new array), then run the <code>sort</code> method.",
+        "<code>sort</code>方法会产生改变原始数组中元素顺序的副作用。换句话说，它会改变数组的位置。避免这种情况的一种方法是先将空数组连接到正在排序的数组上（记住<code>concat</code>返回一个新数组），再用<code>sort</code>方法。",
         "<hr>",
-        "Use the <code>sort</code> method in the <code>nonMutatingSort</code> function to sort the elements of an array in ascending order. The function should return a new array, and not mutate the <code>globalArray</code> variable."
+        "在<code>nonMutatingSort</code>函数中使用<code>sort</code>方法对数组中的元素按升序进行排列。函数不能改变<code>globalArray</code>变量，应返回一个新数组。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>sort</code> method.",
-          "testString": "assert(code.match(/\\.sort/g), 'Your code should use the <code>sort</code> method.');"
+          "text": "应该使用<code>sort</code>方法。",
+          "testString": "assert(code.match(/\\.sort/g), '应该使用<code>sort</code>方法。');"
         },
         {
-          "text": "Your code should use the <code>concat</code> method.",
-          "testString": "assert(code.match(/\\.concat/g), 'Your code should use the <code>concat</code> method.');"
+          "text": "应该使用<code>concat</code>方法。",
+          "testString": "assert(code.match(/\\.concat/g), '应该使用<code>concat</code>方法。');"
         },
         {
-          "text": "The <code>globalArray</code> variable should not change.",
-          "testString": "assert(JSON.stringify(globalArray) === JSON.stringify([5, 6, 3, 2, 9]), 'The <code>globalArray</code> variable should not change.');"
+          "text": "<code>globalArray</code> variable 应保持不变。",
+          "testString": "assert(JSON.stringify(globalArray) === JSON.stringify([5, 6, 3, 2, 9]), '<code>globalArray</code> variable 应保持不变。');"
         },
         {
-          "text": "<code>nonMutatingSort(globalArray)</code> should return <code>[2, 3, 5, 6, 9]</code>.",
-          "testString": "assert(JSON.stringify(nonMutatingSort(globalArray)) === JSON.stringify([2, 3, 5, 6, 9]), '<code>nonMutatingSort(globalArray)</code> should return <code>[2, 3, 5, 6, 9]</code>.');"
+          "text": "<code>nonMutatingSort(globalArray)</code>应返回<code>[2, 3, 5, 6, 9]</code>。",
+          "testString": "assert(JSON.stringify(nonMutatingSort(globalArray)) === JSON.stringify([2, 3, 5, 6, 9]), '<code>nonMutatingSort(globalArray)</code>应返回<code>[2, 3, 5, 6, 9]</code>。');"
         }
       ],
       "solutions": [],
@@ -1341,29 +1341,29 @@
       "id": "587d7daa367417b2b2512b6b",
       "title": "Split a String into an Array Using the split Method",
       "description": [
-        "The <code>split</code> method splits a string into an array of strings. It takes an argument for the delimiter, which can be a character to use to break up the string or a regular expression. For example, if the delimiter is a space, you get an array of words, and if the delimiter is an empty string, you get an array of each character in the string.",
-        "Here are two examples that split one string by spaces, then another by digits using a regular expression:",
+        "<code>split</code>方法用于把字符串分割成字符串数组。接收一个分隔符参数，分隔符可以是用于分解字符串或正则表达式的字符。举个例子，如果分隔符是空格，你会得到一个单词数组；如果分隔符是空字符串，你会得到一个由字符串中每个字符组成的数组。",
+        "下面是两个用空格分隔一个字符串的例子，另一个是用数字的正则表达式分隔：",
         "<blockquote>var str = \"Hello World\";<br>var bySpace = str.split(\" \");<br>// Sets bySpace to [\"Hello\", \"World\"]<br><br>var otherString = \"How9are7you2today\";<br>var byDigits = str.split(/\\d/);<br>// Sets byDigits to [\"How\", \"are\", \"you\", \"today\"]</blockquote>",
-        "Since strings are immutable, the <code>split</code> method makes it easier to work with them.",
+        "因为字符串是固定的，<code>split</code>方法可以更简单的操作它们。",
         "<hr>",
-        "Use the <code>split</code> method inside the <code>splitify</code> function to split <code>str</code> into an array of words. The function should return the array. Note that the words are not always separated by spaces, and the array should not contain punctuation."
+        "在<code>splitify</code>函数中用<code>split</code>方法将<code>str</code>分割成单词数组，这个方法应该返回一个数组。单词不一定都是用空格分隔，所以数组中不应包含标点符号。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>split</code> method.",
-          "testString": "assert(code.match(/\\.split/g), 'Your code should use the <code>split</code> method.');"
+          "text": "应该使用<code>split</code>方法。",
+          "testString": "assert(code.match(/\\.split/g), '应该使用<code>split</code>方法。');"
         },
         {
-          "text": "<code>splitify(\"Hello World,I-am code\")</code> should return <code>[\"Hello\", \"World\", \"I\", \"am\", \"code\"]</code>.",
-          "testString": "assert(JSON.stringify(splitify(\"Hello World,I-am code\")) === JSON.stringify([\"Hello\", \"World\", \"I\", \"am\", \"code\"]), '<code>splitify(\"Hello World,I-am code\")</code> should return <code>[\"Hello\", \"World\", \"I\", \"am\", \"code\"]</code>.');"
+          "text": "<code>splitify(\"Hello World,I-am code\")</code>应返回<code>[\"Hello\", \"World\", \"I\", \"am\", \"code\"]</code>。",
+          "testString": "assert(JSON.stringify(splitify(\"Hello World,I-am code\")) === JSON.stringify([\"Hello\", \"World\", \"I\", \"am\", \"code\"]), '<code>splitify(\"Hello World,I-am code\")</code>应返回<code>[\"Hello\", \"World\", \"I\", \"am\", \"code\"]</code>。');"
         },
         {
-          "text": "<code>splitify(\"Earth-is-our home\")</code> should return <code>[\"Earth\", \"is\", \"our\", \"home\"]</code>.",
-          "testString": "assert(JSON.stringify(splitify(\"Earth-is-our home\")) === JSON.stringify([\"Earth\", \"is\", \"our\", \"home\"]), '<code>splitify(\"Earth-is-our home\")</code> should return <code>[\"Earth\", \"is\", \"our\", \"home\"]</code>.');"
+          "text": "<code>splitify(\"Earth-is-our home\")</code>应返回<code>[\"Earth\", \"is\", \"our\", \"home\"]</code>。",
+          "testString": "assert(JSON.stringify(splitify(\"Earth-is-our home\")) === JSON.stringify([\"Earth\", \"is\", \"our\", \"home\"]), '<code>splitify(\"Earth-is-our home\")</code>应返回<code>[\"Earth\", \"is\", \"our\", \"home\"]</code>。');"
         },
         {
-          "text": "<code>splitify(\"This.is.a-sentence\")</code> should return <code>[\"This\", \"is\", \"a\", \"sentence\"]</code>.",
-          "testString": "assert(JSON.stringify(splitify(\"This.is.a-sentence\")) === JSON.stringify([\"This\", \"is\", \"a\", \"sentence\"]), '<code>splitify(\"This.is.a-sentence\")</code> should return <code>[\"This\", \"is\", \"a\", \"sentence\"]</code>.');"
+          "text": "<code>splitify(\"This.is.a-sentence\")</code>应返回<code>[\"This\", \"is\", \"a\", \"sentence\"]</code>。",
+          "testString": "assert(JSON.stringify(splitify(\"This.is.a-sentence\")) === JSON.stringify([\"This\", \"is\", \"a\", \"sentence\"]), '<code>splitify(\"This.is.a-sentence\")</code>应返回<code>[\"This\", \"is\", \"a\", \"sentence\"]</code>。');"
         }
       ],
       "solutions": [],
@@ -1394,36 +1394,36 @@
       "id": "587d7daa367417b2b2512b6c",
       "title": "Combine an Array into a String Using the join Method",
       "description": [
-        "The <code>join</code> method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.",
-        "Here's an example:",
+        "<code>join</code>方法用来把数组中的所有元素放入一个字符串，通过指定的分隔符参数进行分隔。",
+        "举个例子：",
         "<blockquote>var arr = [\"Hello\", \"World\"];<br>var str = arr.join(\" \");<br>// Sets str to \"Hello World\"</blockquote>",
         "<hr>",
-        "Use the <code>join</code> method (among others) inside the <code>sentensify</code> function to make a sentence from the words in the string <code>str</code>. The function should return a string. For example, \"I-like-Star-Wars\" would be converted to \"I like Star Wars\". For this challenge, do not use the <code>replace</code> method."
+        "在函数<code>sentensify</code>内用<code>join</code>方法（及其他方法）用字符串<code>str</code>中的单词造句，这个函数应返回一个字符串。举个例子，\"I-like-Star-Wars\" 会被转换成 \"I like Star Wars\"。在此挑战中请勿使用<code>replace</code>方法。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>join</code> method.",
-          "testString": "assert(code.match(/\\.join/g), 'Your code should use the <code>join</code> method.');"
+          "text": "应该使用<code>join</code>方法。",
+          "testString": "assert(code.match(/\\.join/g), '应该使用<code>join</code>方法。');"
         },
         {
-          "text": "Your code should not use the <code>replace</code> method.",
-          "testString": "assert(!code.match(/\\.replace/g), 'Your code should not use the <code>replace</code> method.');"
+          "text": "不能使用<code>replace</code>方法。",
+          "testString": "assert(!code.match(/\\.replace/g), '不能使用<code>replace</code>方法。');"
         },
         {
-          "text": "<code>sentensify(\"May-the-force-be-with-you\")</code> should return a string.",
-          "testString": "assert(typeof sentensify(\"May-the-force-be-with-you\") === \"string\", '<code>sentensify(\"May-the-force-be-with-you\")</code> should return a string.');"
+          "text": "<code>sentensify(\"May-the-force-be-with-you\")</code>应返回一个字符串",
+          "testString": "assert(typeof sentensify(\"May-the-force-be-with-you\") === \"string\", '<code>sentensify(\"May-the-force-be-with-you\")</code>应返回一个字符串');"
         },
         {
-          "text": "<code>sentensify(\"May-the-force-be-with-you\")</code> should return <code>\"May the force be with you\"</code>.",
-          "testString": "assert(sentensify(\"May-the-force-be-with-you\") === \"May the force be with you\", '<code>sentensify(\"May-the-force-be-with-you\")</code> should return <code>\"May the force be with you\"</code>.');"
+          "text": "<code>sentensify(\"May-the-force-be-with-you\")</code>应返回<code>\"May the force be with you\"</code>。",
+          "testString": "assert(sentensify(\"May-the-force-be-with-you\") === \"May the force be with you\", '<code>sentensify(\"May-the-force-be-with-you\")</code>应返回<code>\"May the force be with you\"</code>。');"
         },
         {
-          "text": "<code>sentensify(\"The.force.is.strong.with.this.one\")</code> should return <code>\"The force is strong with this one\"</code>.",
-          "testString": "assert(sentensify(\"The.force.is.strong.with.this.one\") === \"The force is strong with this one\", '<code>sentensify(\"The.force.is.strong.with.this.one\")</code> should return <code>\"The force is strong with this one\"</code>.');"
+          "text": "<code>sentensify(\"The.force.is.strong.with.this.one\")</code>应返回<code>\"The force is strong with this one\"</code>。",
+          "testString": "assert(sentensify(\"The.force.is.strong.with.this.one\") === \"The force is strong with this one\", '<code>sentensify(\"The.force.is.strong.with.this.one\")</code>应返回<code>\"The force is strong with this one\"</code>。');"
         },
         {
-          "text": "<code>sentensify(\"There,has,been,an,awakening\")</code> should return <code>\"There has been an awakening\"</code>.",
-          "testString": "assert(sentensify(\"There,has,been,an,awakening\") === \"There has been an awakening\", '<code>sentensify(\"There,has,been,an,awakening\")</code> should return <code>\"There has been an awakening\"</code>.');"
+          "text": "<code>sentensify(\"There,has,been,an,awakening\")</code>应返回<code>\"There has been an awakening\"</code>。",
+          "testString": "assert(sentensify(\"There,has,been,an,awakening\") === \"There has been an awakening\", '<code>sentensify(\"There,has,been,an,awakening\")</code>应返回<code>\"There has been an awakening\"</code>。');"
         }
       ],
       "solutions": [],
@@ -1454,40 +1454,40 @@
       "id": "587d7dab367417b2b2512b6d",
       "title": "Apply Functional Programming to Convert Strings to URL Slugs",
       "description": [
-        "The last several challenges covered a number of useful array and string methods that follow functional programming principles. We've also learned about <code>reduce</code>, which is a powerful method used to reduce problems to simpler forms. From computing averages to sorting, any array operation can be achieved by applying it. Recall that <code>map</code> and <code>filter</code> are special cases of <code>reduce</code>.",
-        "Let's combine what we've learned to solve a practical problem.",
-        "Many content management sites (CMS) have the titles of a post added to part of the URL for simple bookmarking purposes. For example, if you write a Medium post titled \"Stop Using Reduce\", it's likely the URL would have some form of the title string in it (\".../stop-using-reduce\"). You may have already noticed this on the freeCodeCamp site.",
+        "最后几个挑战中涵盖了许多符合函数式编程原则并在处理数组和字符串中非常有用的方法。我们还学习了强大的、可以将问题简化为更简单形式的<code>reduce</code>方法，从计算平均值到排序，任何数组操作都可以用它来实现。回想一下，<code>map</code>和<code>filter</code>方法都是<code>reduce</code>的特殊实现。",
+        "让我们把学到的知识结合起来解决一个实际问题。",
+        "许多内容管理站点（CMS）为了让添加书签更简单，会将帖子的标题添加到 URL 上。举个例子，如果你写了一篇标题为 \"Stop Using Reduce\" 的帖子，URL很可能会包含某种形式的标题字符串 (如：\".../stop-using-reduce\")，你可能已经在 freeCodeCamp 网站上注意到了这一点。",
         "<hr>",
-        "Fill in the <code>urlSlug</code> function so it converts a string <code>title</code> and returns the hyphenated version for the URL. You can use any of the methods covered in this section, and don't use <code>replace</code>. Here are the requirements:",
-        "The input is a string with spaces and title-cased words",
-        "The output is a string with the spaces between words replaced by a hyphen (<code>-</code>)",
-        "The output should be all lower-cased letters",
-        "The output should not have any spaces"
+        "填写<code>urlSlug</code>函数，使其转换字符串<code>title</code>带有连字符号的 URL 版本。您可以使用本节中介绍的任何方法，但不要用<code>replace</code>方法。以下是本次挑战的要求：",
+        "输入包含空格和标题大小写单词的字符串",
+        "输出字符串，单词之间的空格用连字符(<code>-</code>)替换",
+        "输出应该是小写字母",
+        "输出不应有任何空格"
       ],
       "tests": [
         {
-          "text": "The <code>globalTitle</code> variable should not change.",
-          "testString": "assert(globalTitle === \"Winter Is Coming\", 'The <code>globalTitle</code> variable should not change.');"
+          "text": "<code>globalTitle</code>变量应保持不变。",
+          "testString": "assert(globalTitle === \"Winter Is Coming\", '<code>globalTitle</code>变量应保持不变。');"
         },
         {
-          "text": "Your code should not use the <code>replace</code> method for this challenge.",
-          "testString": "assert(!code.match(/\\.replace/g), 'Your code should not use the <code>replace</code> method for this challenge.');"
+          "text": "在此挑战中不能使用<code>replace</code>方法。",
+          "testString": "assert(!code.match(/\\.replace/g), '在此挑战中不能使用<code>replace</code>方法。');"
         },
         {
-          "text": "<code>urlSlug(\"Winter Is Coming\")</code> should return <code>\"winter-is-coming\"</code>.",
-          "testString": "assert(urlSlug(\"Winter Is Coming\") === \"winter-is-coming\", '<code>urlSlug(\"Winter Is Coming\")</code> should return <code>\"winter-is-coming\"</code>.');"
+          "text": "<code>urlSlug(\"Winter Is Coming\")</code>应返回<code>\"winter-is-coming\"</code>。",
+          "testString": "assert(urlSlug(\"Winter Is Coming\") === \"winter-is-coming\", '<code>urlSlug(\"Winter Is Coming\")</code>应返回<code>\"winter-is-coming\"</code>。');"
         },
         {
-          "text": "<code>urlSlug(\" Winter Is  &nbsp;Coming\")</code> should return <code>\"winter-is-coming\"</code>.",
-          "testString": "assert(urlSlug(\" Winter Is  Coming\") === \"winter-is-coming\", '<code>urlSlug(\" Winter Is  &nbsp;Coming\")</code> should return <code>\"winter-is-coming\"</code>.');"
+          "text": "<code>urlSlug(\" Winter Is  &nbsp;Coming\")</code>应返回<code>\"winter-is-coming\"</code>。",
+          "testString": "assert(urlSlug(\" Winter Is  Coming\") === \"winter-is-coming\", '<code>urlSlug(\" Winter Is  &nbsp;Coming\")</code>应返回<code>\"winter-is-coming\"</code>。');"
         },
         {
-          "text": "<code>urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\")</code> should return <code>\"a-mind-needs-books-like-a-sword-needs-a-whetstone\"</code>.",
-          "testString": "assert(urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\") === \"a-mind-needs-books-like-a-sword-needs-a-whetstone\", '<code>urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\")</code> should return <code>\"a-mind-needs-books-like-a-sword-needs-a-whetstone\"</code>.');"
+          "text": "<code>urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\")</code>应返回<code>\"a-mind-needs-books-like-a-sword-needs-a-whetstone\"</code>。",
+          "testString": "assert(urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\") === \"a-mind-needs-books-like-a-sword-needs-a-whetstone\", '<code>urlSlug(\"A Mind Needs Books Like A Sword Needs A Whetstone\")</code>应返回<code>\"a-mind-needs-books-like-a-sword-needs-a-whetstone\"</code>。');"
         },
         {
-          "text": "<code>urlSlug(\"Hold The Door\")</code> should return <code>\"hold-the-door\"</code>.",
-          "testString": "assert(urlSlug(\"Hold The Door\") === \"hold-the-door\", '<code>urlSlug(\"Hold The Door\")</code> should return <code>\"hold-the-door\"</code>.');"
+          "text": "<code>urlSlug(\"Hold The Door\")</code>应返回<code>\"hold-the-door\"</code>。",
+          "testString": "assert(urlSlug(\"Hold The Door\") === \"hold-the-door\", '<code>urlSlug(\"Hold The Door\")</code>应返回<code>\"hold-the-door\"</code>。');"
         }
       ],
       "solutions": [],
@@ -1523,28 +1523,28 @@
       "id": "587d7dab367417b2b2512b6e",
       "title": "Use the every Method to Check that Every Element in an Array Meets a Criteria",
       "description": [
-        "The <code>every</code> method works with arrays to check if <em>every</em> element passes a particular test. It returns a Boolean value - <code>true</code> if all values meet the criteria, <code>false</code> if not.",
-        "For example, the following code would check if every element in the <code>numbers</code> array is less than 10:",
-        "<blockquote>var numbers = [1, 5, 8, 0, 10, 11];<br>numbers.every(function(currentValue) {<br>&nbsp;&nbsp;return currentValue < 10;<br>});<br>// Returns false</blockquote>",
+        "<code>every</code>方法用于检测数组<em>所有</em>元素是否都符合指定条件。如果所有元素满足条件，返回布尔值<code>true</code>，反之返回<code>false</code>。",
+        "举个例子，下面的代码检测数组<code>numbers</code>的所有元素是否都小于 10：",
+        "<blockquote>var numbers = [1, 5, 8, 0, 10, 11];<br>numbers.every(function(currentValue) {<br>&nbsp;&nbsp;return currentValue < 10;<br>});<br>// 返回 false</blockquote>",
         "<hr>",
-        "Use the <code>every</code> method inside the <code>checkPositive</code> function to check if every element in <code>arr</code> is positive. The function should return a Boolean value."
+        "在<code>checkPositive</code>函数中使用<code>every</code>方法检查<code>arr</code>中是否所有元素都是正数，函数应返回一个布尔值。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>every</code> method.",
-          "testString": "assert(code.match(/\\.every/g), 'Your code should use the <code>every</code> method.');"
+          "text": "应该使用<code>every</code>方法。",
+          "testString": "assert(code.match(/\\.every/g), '应该使用<code>every</code>方法。');"
         },
         {
-          "text": "<code>checkPositive([1, 2, 3, -4, 5])</code> should return <code>false</code>.",
-          "testString": "assert(!checkPositive([1, 2, 3, -4, 5]), '<code>checkPositive([1, 2, 3, -4, 5])</code> should return <code>false</code>.');"
+          "text": "<code>checkPositive([1, 2, 3, -4, 5])</code>应返回<code>false</code>。",
+          "testString": "assert(!checkPositive([1, 2, 3, -4, 5]), '<code>checkPositive([1, 2, 3, -4, 5])</code>应返回<code>false</code>。');"
         },
         {
-          "text": "<code>checkPositive([1, 2, 3, 4, 5])</code> should return <code>true</code>.",
-          "testString": "assert(checkPositive([1, 2, 3, 4, 5]), '<code>checkPositive([1, 2, 3, 4, 5])</code> should return <code>true</code>.');"
+          "text": "<code>checkPositive([1, 2, 3, 4, 5])</code>应返回<code>true</code>。",
+          "testString": "assert(checkPositive([1, 2, 3, 4, 5]), '<code>checkPositive([1, 2, 3, 4, 5])</code>应返回<code>true</code>。');"
         },
         {
-          "text": "<code>checkPositive([1, -2, 3, -4, 5])</code> should return <code>false</code>.",
-          "testString": "assert(!checkPositive([1, -2, 3, -4, 5]), '<code>checkPositive([1, -2, 3, -4, 5])</code> should return <code>false</code>.');"
+          "text": "<code>checkPositive([1, -2, 3, -4, 5])</code>应返回<code>false</code>。",
+          "testString": "assert(!checkPositive([1, -2, 3, -4, 5]), '<code>checkPositive([1, -2, 3, -4, 5])</code>应返回<code>false</code>。');"
         }
       ],
       "solutions": [],
@@ -1573,28 +1573,28 @@
       "id": "587d7dab367417b2b2512b6f",
       "title": "Use the some Method to Check that Any Elements in an Array Meet a Criteria",
       "description": [
-        "The <code>some</code> method works with arrays to check if <em>any</em> element passes a particular test. It returns a Boolean value - <code>true</code> if any of the values meet the criteria, <code>false</code> if not.",
-        "For example, the following code would check if any element in the <code>numbers</code> array is less than 10:",
-        "<blockquote>var numbers = [10, 50, 8, 220, 110, 11];<br>numbers.some(function(currentValue) {<br>&nbsp;&nbsp;return currentValue < 10;<br>});<br>// Returns true</blockquote>",
+        "<code>some</code>方法用于检测数组中<em>任何</em>元素是否满足指定条件。如果有一个元素满足条件，返回布尔值<code>true</code>，反之返回<code>false</code>。",
+        "举个例子，下面的代码检测数组<code>numbers</code>中是否有元素小于10：",
+        "<blockquote>var numbers = [10, 50, 8, 220, 110, 11];<br>numbers.some(function(currentValue) {<br>&nbsp;&nbsp;return currentValue < 10;<br>});<br>// 返回 true</blockquote>",
         "<hr>",
-        "Use the <code>some</code> method inside the <code>checkPositive</code> function to check if any element in <code>arr</code> is positive. The function should return a Boolean value."
+        "在<code>checkPositive</code>函数值中使用<code>some</code>检查<code>arr</code>中是否有元素为正数，函数应返回一个布尔值。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>some</code> method.",
-          "testString": "assert(code.match(/\\.some/g), 'Your code should use the <code>some</code> method.');"
+          "text": "应该使用<code>some</code> method.",
+          "testString": "assert(code.match(/\\.some/g), '应该使用<code>some</code> method.');"
         },
         {
-          "text": "<code>checkPositive([1, 2, 3, -4, 5])</code> should return <code>true</code>.",
-          "testString": "assert(checkPositive([1, 2, 3, -4, 5]), '<code>checkPositive([1, 2, 3, -4, 5])</code> should return <code>true</code>.');"
+          "text": "<code>checkPositive([1, 2, 3, -4, 5])</code>应返回<code>true</code>。",
+          "testString": "assert(checkPositive([1, 2, 3, -4, 5]), '<code>checkPositive([1, 2, 3, -4, 5])</code>应返回<code>true</code>。');"
         },
         {
-          "text": "<code>checkPositive([1, 2, 3, 4, 5])</code> should return <code>true</code>.",
-          "testString": "assert(checkPositive([1, 2, 3, 4, 5]), '<code>checkPositive([1, 2, 3, 4, 5])</code> should return <code>true</code>.');"
+          "text": "<code>checkPositive([1, 2, 3, 4, 5])</code>应返回<code>true</code>。",
+          "testString": "assert(checkPositive([1, 2, 3, 4, 5]), '<code>checkPositive([1, 2, 3, 4, 5])</code>应返回<code>true</code>。');"
         },
         {
-          "text": "<code>checkPositive([-1, -2, -3, -4, -5])</code> should return <code>false</code>.",
-          "testString": "assert(!checkPositive([-1, -2, -3, -4, -5]), '<code>checkPositive([-1, -2, -3, -4, -5])</code> should return <code>false</code>.');"
+          "text": "<code>checkPositive([-1, -2, -3, -4, -5])</code>应返回<code>false</code>。",
+          "testString": "assert(!checkPositive([-1, -2, -3, -4, -5]), '<code>checkPositive([-1, -2, -3, -4, -5])</code>应返回<code>false</code>。');"
         }
       ],
       "solutions": [],
@@ -1623,34 +1623,34 @@
       "id": "587d7dab367417b2b2512b70",
       "title": "Introduction to Currying and Partial Application",
       "description": [
-        "The <code>arity</code> of a function is the number of arguments it requires. <code>Currying</code> a function means to convert a function of N <code>arity</code> into N functions of <code>arity</code> 1.",
-        "In other words, it restructures a function so it takes one argument, then returns another function that takes the next argument, and so on.",
-        "Here's an example:",
-        "<blockquote>//Un-curried function<br>function unCurried(x, y) {<br>&nbsp;&nbsp;return x + y;<br>}<br><br>//Curried function<br>function curried(x) {<br>&nbsp;&nbsp;return function(y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>&nbsp;&nbsp;}<br>}<br>curried(1)(2) // Returns 3</blockquote>",
-        "This is useful in your program if you can't supply all the arguments to a function at one time. You can save each function call into a variable, which will hold the returned function reference that takes the next argument when it's available. Here's an example using the <code>curried</code> function in the example above:",
-        "<blockquote>// Call a curried function in parts:<br>var funcForY = curried(1);<br>console.log(funcForY(2)); // Prints 3</blockquote>",
-        "Similarly, <code>partial application</code> can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments.",
-        "Here's an example:",
-        "<blockquote>//Impartial function<br>function impartial(x, y, z) {<br>&nbsp;&nbsp;return x + y + z;<br>}<br>var partialFn = impartial.bind(this, 1, 2);<br>partialFn(10); // Returns 13</blockquote>",
+        "<code>arity</code>是函数所需的形参的数量。函数<code>Currying</code>意思是把接受多个<code>arity</code>的函数变换成接受一个单一<code>arity</code>的函数。",
+        "换句话说，重构函数让它接收一个参数，然后返回另一个接收下一个参数的函数，依此类推。",
+        "举个例子：",
+        "<blockquote>//Un-curried function<br>function unCurried(x, y) {<br>&nbsp;&nbsp;return x + y;<br>}<br><br>// 柯里化函数<br>function curried(x) {<br>&nbsp;&nbsp;return function(y) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;<br>&nbsp;&nbsp;}<br>}<br>curried(1)(2) // 返回 3</blockquote>",
+        "如果不能一次为函数提供所有参数，那么在柯里化很有用。可以将每个函数的调用保存到一个变量中，该变量将保存返回的函数引用，该引用在下一个参数可用时接受该参数。下面是一个使用<code>curried</code>函数的例子：",
+        "<blockquote>// Call a curried function in parts:<br>var funcForY = curried(1);<br>console.log(funcForY(2)); // 打印 3</blockquote>",
+        "类似地，<code>partial application</code>可以描述为一次对一个函数应用几个参数，然后返回另一个应用更多参数的函数。",
+        "举个例子：",
+        "<blockquote>//Impartial function<br>function impartial(x, y, z) {<br>&nbsp;&nbsp;return x + y + z;<br>}<br>var partialFn = impartial.bind(this, 1, 2);<br>partialFn(10); // 返回 13</blockquote>",
         "<hr>",
-        "Fill in the body of the <code>add</code> function so it uses currying to add parameters <code>x</code>, <code>y</code>, and <code>z</code>."
+        "填写<code>add</code>函数主体部分，通过柯里化方式来添加参数<code>x</code>，<code>y</code>和<code>z</code>."
       ],
       "tests": [
         {
-          "text": "<code>add(10)(20)(30)</code> should return <code>60</code>.",
-          "testString": "assert(add(10)(20)(30) === 60, '<code>add(10)(20)(30)</code> should return <code>60</code>.');"
+          "text": "<code>add(10)(20)(30)</code>应返回<code>60</code>。",
+          "testString": "assert(add(10)(20)(30) === 60, '<code>add(10)(20)(30)</code>应返回<code>60</code>。');"
         },
         {
-          "text": "<code>add(1)(2)(3)</code> should return <code>6</code>.",
-          "testString": "assert(add(1)(2)(3) === 6, '<code>add(1)(2)(3)</code> should return <code>6</code>.');"
+          "text": "<code>add(1)(2)(3)</code>应返回<code>6</code>。",
+          "testString": "assert(add(1)(2)(3) === 6, '<code>add(1)(2)(3)</code>应返回<code>6</code>。');"
         },
         {
-          "text": "<code>add(11)(22)(33)</code> should return <code>66</code>.",
-          "testString": "assert(add(11)(22)(33) === 66, '<code>add(11)(22)(33)</code> should return <code>66</code>.');"
+          "text": "<code>add(11)(22)(33)</code>应返回<code>66</code>。",
+          "testString": "assert(add(11)(22)(33) === 66, '<code>add(11)(22)(33)</code>应返回<code>66</code>。');"
         },
         {
-          "text": "Your code should include a final statement that returns <code>x + y + z</code>.",
-          "testString": "assert(code.match(/[xyz]\\s*?\\+\\s*?[xyz]\\s*?\\+\\s*?[xyz]/g), 'Your code should include a final statement that returns <code>x + y + z</code>.');"
+          "text": "应包含一个最终返回<code>x + y + z</code>的代码。",
+          "testString": "assert(code.match(/[xyz]\\s*?\\+\\s*?[xyz]\\s*?\\+\\s*?[xyz]/g), '应包含一个最终返回<code>x + y + z</code>的代码。');"
         }
       ],
       "solutions": [],
