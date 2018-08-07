@@ -620,7 +620,7 @@
         "执行该操作的字符叫做<code>asterisk</code>或<code>star</code>，即<code>*</code>。",
         "<blockquote>let soccerWord = \"gooooooooal!\";<br>let gPhrase = \"gut feeling\";<br>let oPhrase = \"over the moon\";<br>let goRegex = /go*/;<br>soccerWord.match(goRegex); // Returns [\"goooooooo\"]<br>gPhrase.match(goRegex); // Returns [\"g\"]<br>oPhrase.match(goRegex); // Returns null</blockquote>",
         "<hr>",
-        "创建一个变量为<code>chewieRegex</code>的正则表达式，使用<code>*</code>符号在<code>chewieQuote</code>中匹配所有<code>\"A\"</code>和<code>\"a\"</code>。它不需要修饰符，也不需要匹配引号。"
+        "创建一个变量为<code>chewieRegex</code>的正则表达式，使用<code>*</code>符号在<code>chewieQuote</code>中匹配所有的<code>\"A\"</code>和<code>\"a\"</code>。它不需要修饰符，也不需要匹配引号。"
       ],
       "tests": [
         {
