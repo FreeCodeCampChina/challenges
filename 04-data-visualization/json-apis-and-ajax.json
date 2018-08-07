@@ -13,7 +13,7 @@
       "id": "587d7fad367417b2b2512be1",
       "title": "Handle Click Events with JavaScript using the onclick property",
       "description": [
-        "You want your code to execute only once your page has finished loading. For that purpose, you can attach a JavaScript event to the document called <code>DOMContentLoaded</code>. Here's the code that does this:",
+        "你 want your code to execute only once your page has finished loading. For that purpose, you can attach a JavaScript event to the document called <code>DOMContentLoaded</code>. Here's the code that does this:",
         "<blockquote>document.addEventListener('DOMContentLoaded',function() {<br><br>});</blockquote>",
         "You can implement event handlers that go inside of the <code>DOMContentLoaded</code> function. You can implement an <code>onclick</code> event handler which triggers when the user clicks on the element with id <code>getMessage</code>, by adding the following code:",
         "<blockquote>document.getElementById('getMessage').onclick=function(){};</blockquote>",
