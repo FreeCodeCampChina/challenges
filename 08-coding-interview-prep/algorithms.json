@@ -473,27 +473,28 @@
       "id": "587d825a367417b2b2512c89",
       "title": "Implement Quick Sort",
       "description": [
-        "Here we will move on to an intermediate sorting algorithm: quick sort. Quick sort is an efficient, recursive divide-and-conquer approach to sorting an array. In this method, a pivot value is chosen in the original array. The array is then partitioned into two subarrays of values less than and greater than the pivot value. We then combine the result of recursively calling the quick sort algorithm on both sub-arrays. This continues until the base case of an empty or single-item array is reached, which we return. The unwinding of the recursive calls return us the sorted array.",
-        "Quick sort is a very efficient sorting method, providing <i>O(nlog(n))</i> performance on average. It is also relatively easy to implement. These attributes make it a popular and useful sorting method.",
-        "<strong>Instructions:</strong> Write a function <code>quickSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest. While the choice of the pivot value is important, any pivot will do for our purposes here. For simplicity, the first or last element could be used.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "现在我们开始讨论<a href='https://baike.baidu.com/item/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95?fromtitle=%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F&fromid=2084344' target='_blank'>快速排序</code>。快速排序是一种高效的递归分治方法来排序数组。在这个方法中，需要在原始数组中选择一个枢轴值，然后将数组划分为两个子数组，其值大于或者小于枢轴值，然后我们将递归调用两个子数组上的快速排序算法的结果来配合使用，直到空数组或者单个元素的数组的情况，然后返回结果。递归调用的展开结果将返回的是排序后的数组。",
+        "快速排序是一种非常有效的排序方式，平均<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>为<i>O(nlog(n))</i>，同时它也是相对比较容易实现的方式。这些特性使得快速排序成为了一种流行而有用的排序方式。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>quickSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。虽然选择一个枢轴值很重要，但任何一个枢轴都能满足要求，为了以防万一，我嘛一般选择第一个或者最后一个元素来作为数轴值。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>quickSort</code> is a function.",
-          "testString": "assert(typeof quickSort == 'function', '<code>quickSort</code> is a function.');"
+          "text": "<code>quickSort</code>是一个函数。",
+          "testString": "assert(typeof quickSort == 'function', '<code>quickSort</code>是一个函数。');"
         },
         {
-          "text": "<code>quickSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>quickSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>quickSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>quickSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>quickSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>quickSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>quickSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>quickSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>quickSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>quickSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>quickSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>quickSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -506,13 +507,13 @@
           "name": "index",
           "contents": [
             "function quickSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试函数：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
