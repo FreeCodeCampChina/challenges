@@ -1,5 +1,5 @@
-# Introduction to Advanced Node and Express Challenges #
+# 关于 Node 与 Express 高级篇介绍
 
-Authentication is the process or action of verifying the identity of a user or process. Up to this point you have not been able to create an app utilizing this key concept.
+身份验证是验证用户身份或处理方式的过程或行为。至此，你还不能创建一个应用去使用这个关键概念。
 
-The most common and easiest to use authentication middleware for Node.js is Passport. It is easy to learn, light-weight, and extremely flexible allowing for many strategies, which we will talk about in later challenges. In addition to authentication we will also look at template engines which allow for use of Pug and web sockets which allow for real time communication between all your clients and your server. Working on these challenges will involve you writing your code on Glitch on our starter project. After completing each challenge you can copy your public glitch url (to the homepage of your app) into the challenge screen to test it! Optionally you may choose to write your project on another platform but it must be publicaly visible for our testing. Start this project on Glitch using this link or clone this repository on GitHub! If you use Glitch, remember to save the link to your project somewhere safe.
+Passport 是运用身份认证最常见也是最简单的中间件。它上手轻松，轻量，极其灵活地可以运用到很多策略中，我们将会在后面章节中讲述。除了身份认证之外，我们还需要学习模版引擎，它可以支持我们使用 Pug 和双向信息传输，而双向信息传输可以让我们的客户端与服务器完成即时通讯。通过挑战这些关卡，你可以在 Glitch 上书写你的代码，完成我们的起步项目。每当完成关卡，你可以复制你的公共 Glitch 链接（在你的应用主页上）到挑战页面去测试！或者你想在其他平台上完成你的项目，但必须对我们的测试公开透明。你可以点击这个链接或者克隆仓库到 GitHub 去开始你的项目。如果你使用 Glitch，记得保存链接到你的安全项目。
