@@ -248,37 +248,37 @@
       "id": "a3f503de51cfab748ff001aa",
       "title": "Pairwise",
       "description": [
-        "Given an array <code>arr</code>, find element pairs whose sum equal the second argument <code>arg</code> and return the sum of their indices.",
-        "You may use multiple pairs that have the same numeric elements but different indices. Each pair should use the lowest possible available indices. Once an element has been used it cannot be reused to pair with another element. For instance, <code>pairwise([1, 1, 2], 3)</code> creates a pair <code>[2, 1]</code> using the 1 at indice 0 rather than the 1 at indice 1, because 0+2 < 1+2.",
-        "For example <code>pairwise([7, 9, 11, 13, 15], 20)</code> returns <code>6</code>. The pairs that sum to 20 are <code>[7, 13]</code> and <code>[9, 11]</code>. We can then write out the array with their indices and values.",
-        "<table class=\"table\"><tr><th><strong>Index</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
-        "Below we'll take their corresponding indices and add them.",
-        "7 + 13 = 20 &#8594; Indices 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indices 1 + 2 = 3<br>3 + 3 = 6 &#8594 Return <code>6</code>",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "给定一个数组<code>arr</code>，查找其总和等于第二个参数“<code> arg </code>”的元素对，并返回其索引的总和。",
+        "你可以使用多个具有相同数字元素但不同索引的对。每对应该使用尽可能低的可用索引。一旦一个元素被使用，它就不能被重用来与另一个元素配对。例如，<code>pairwise([1, 1, 2], 3)</code>使用索引为 0 的元素 1 而不是索引为 1 的元素 1 创建一对<code>[ 2，1 ]</code>，因为 0 + 2 < 1 + 2。",
+        "例如：<code>pairwise([7, 9, 11, 13, 15], 20)</code>返回<code>6</code>。满足和为 20 的一组数组是：<code>[7, 13]</code>和<code>[9, 11]</code>，然后我们可以写出对应的数组，以及他们的索引与他们的值。",
+        "<table class=\"table\"><tr><th><strong>索引</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>值</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
+        "然后我们将对应的索引相加，",
+        "7 + 13 = 20 &#8594；索引 0 + 3 = 3<br>9 + 11 = 20 &#8594； 索引 1 + 2 = 3<br>3 + 3 = 6 &#8594 应该返回<code>6</code>。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "solutions": [
         "function pairwise(arr, arg) {\n  var sum = 0;\n  arr.forEach(function(e, i, a) {\n    if (e != null) {      \n      var diff = arg-e;\n      a[i] = null;\n      var dix = a.indexOf(diff);\n      if (dix !== -1) {\n        sum += dix;\n        sum += i;\n        a[dix] = null;\n      }  \n    }\n  });\n  return sum;\n}\n\npairwise([1,4,2,3,0,5], 7);\n"
       ],
       "tests": [
         {
-          "text": "<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code> should return 11.",
-          "testString": "assert.deepEqual(pairwise([1, 4, 2, 3, 0, 5], 7), 11, '<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code> should return 11.');"
+          "text": "<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code>应该返回 11。",
+          "testString": "assert.deepEqual(pairwise([1, 4, 2, 3, 0, 5], 7), 11,'<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code>应该返回 11。');"
         },
         {
-          "text": "<code>pairwise([1, 3, 2, 4], 4)</code> should return 1.",
-          "testString": "assert.deepEqual(pairwise([1, 3, 2, 4], 4), 1, '<code>pairwise([1, 3, 2, 4], 4)</code> should return 1.');"
+          "text": "<code>pairwise([1, 3, 2, 4], 4)</code>应该返回 1。",
+          "testString": "assert.deepEqual(pairwise([1, 3, 2, 4], 4), 1,'<code>pairwise([1, 3, 2, 4], 4)</code>应该返回 1。');"
         },
         {
-          "text": "<code>pairwise([1, 1, 1], 2)</code> should return 1.",
-          "testString": "assert.deepEqual(pairwise([1, 1, 1], 2), 1, '<code>pairwise([1, 1, 1], 2)</code> should return 1.');"
+          "text": "<code>pairwise([1, 1, 1], 2)</code>应该返回 1。",
+          "testString": "assert.deepEqual(pairwise([1, 1, 1], 2), 1,'<code>pairwise([1, 1, 1], 2)</code>应该返回 1。');"
         },
         {
-          "text": "<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code> should return 10.",
-          "testString": "assert.deepEqual(pairwise([0, 0, 0, 0, 1, 1], 1), 10, '<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code> should return 10.');"
+          "text": "<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code>应该返回 1。.",
+          "testString": "assert.deepEqual(pairwise([0, 0, 0, 0, 1, 1], 1), 10,'<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code>应该返回 1。.');"
         },
         {
-          "text": "<code>pairwise([], 100)</code> should return 0.",
-          "testString": "assert.deepEqual(pairwise([], 100), 0, '<code>pairwise([], 100)</code> should return 0.');"
+          "text": "<code>pairwise([], 100)</code>应该返回 0。",
+          "testString": "assert.deepEqual(pairwise([], 100), 0,'<code>pairwise([], 100)</code>应该返回 0。');"
         }
       ],
       "MDNlinks": [
