@@ -9,7 +9,7 @@
       "title": "Build a Tribute Page",
       "description": [
         "<strong>目标：</strong>使用 <a href='https://codepen.io' target='_blank'>CodePen.io</a> 搭建一个与这个功能上相似的 app：<a href='https://codepen.io/freeCodeCamp/full/zNqgVx' target='_blank'>https://codepen.io/freeCodeCamp/full/zNqgVx</a>。",
-        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>用户故事</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
+        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
         "你可以使用 HTML、JavaScript 以及 CSS 来完成项目，由于目前我们只学到了 CSS，因此建议你只使用 CSS 完成这个项目，顺便还可以巩固一下之前学到的内容。你也可以使用 Bootstrap 或者是 SASS。在当前的项目中，不推荐使用其他技术如 jQurey、React、Angular 或者是 Vue，因为一旦出现问题，风险自担。但在别的项目中我们仍有机会去使用不同的技术栈比如 React，我们会接受并尽力处理你在使用建议的技术栈过程中遇到的问题，编码愉快！",
         "<strong>需求 1：</strong>我的致敬页应有对应<code>id=\"main\"</code>的元素，其中包含其他的所有元素",
         "<strong>需求 2：</strong>我应该看到一个具有相应<code>id=\"title\"</code>的元素，其中包含描述致敬页主题的字符串（即文本），如 \"Dr. Norman Borlaug\"。",
@@ -34,7 +34,7 @@
       "title": "Build a Survey Form",
       "description": [
         "<strong>目标：</strong>使用 <a href='https://codepen.io' target='_blank'>CodePen.io</a> 搭建一个与这个功能上相似的 app：<a href='https://codepen.io/freeCodeCamp/full/VPaoNP' target='_blank'>https://codepen.io/freeCodeCamp/full/VPaoNP</a>。",
-        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>用户故事</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
+        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
         "你可以使用 HTML、JavaScript 以及 CSS 来完成项目，由于目前我们只学到了 CSS，因此建议你只使用 CSS 完成这个项目，顺便还可以巩固一下之前学到的内容。你也可以使用 Bootstrap 或者是 SASS。在当前的项目中，不推荐使用其他技术如 jQurey、React、Angular 或者是 Vue，因为一旦出现问题，风险自担。但在别的项目中我们仍有机会去使用不同的技术栈比如 React，我们会接受并尽力处理你在使用建议的技术栈过程中遇到的问题，编码愉快！",
         "<strong>需求 1：</strong>我能看见一个 H1 大小<code>id=\"title\"</code>的标题。",
         "<strong>需求 2：</strong>我能看见一个 P 大小<code>id=\"description\"</code>的简述文字。",
@@ -66,7 +66,7 @@
       "title": "Build a Product Landing Page",
       "description": [
         "<strong>目标：</strong>使用 <a href='https://codepen.io' target='_blank'>CodePen.io</a> 搭建一个与这个功能上相似的 app：<a href='https://codepen.io/freeCodeCamp/full/RKRbwL' target='_blank'>https://codepen.io/freeCodeCamp/full/RKRbwL</a>。",
-        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>用户故事</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
+        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>并通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
         "你可以使用 HTML、JavaScript 以及 CSS 来完成项目，由于目前我们只学到了 CSS，因此建议你只使用 CSS 完成这个项目，顺便还可以巩固一下之前学到的内容。你也可以使用 Bootstrap 或者是 SASS。在当前的项目中，不推荐使用其他技术如 jQurey、React、Angular 或者是 Vue，因为一旦出现问题，风险自担。但在别的项目中我们仍有机会去使用不同的技术栈比如 React，我们会接受并尽力处理你在使用建议的技术栈过程中遇到的问题，编码愉快！",
         "<strong>需求 1：</strong>我的产品主页应该有<code>id=\"header\"</code>的<code>header</code>元素。",
         "<strong>需求 2：</strong>在<code>header</code>元素内应该有个<code>id=\"header-img\"</code>的图像。通常是个公司的 logo。",
@@ -97,7 +97,7 @@
       "title": "Build a Technical Documentation Page",
       "description": [
         "<strong>目标：</strong>使用 <a href='https://codepen.io' target='_blank'>CodePen.io</a> 搭建一个与这个功能上相似的 app：<a href='https://codepen.io/freeCodeCamp/full/NdrKKL' target='_blank'>https://codepen.io/freeCodeCamp/full/NdrKKL</a>。",
-        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>用户故事</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
+        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
         "你可以使用 HTML、JavaScript 以及 CSS 来完成项目，由于目前我们只学到了 CSS，因此建议你只使用 CSS 完成这个项目，顺便还可以巩固一下之前学到的内容。你也可以使用 Bootstrap 或者是 SASS。在当前的项目中，不推荐使用其他技术如 jQurey、React、Angular 或者是 Vue，因为一旦出现问题，风险自担。但在别的项目中我们仍有机会去使用不同的技术栈比如 React，我们会接受并尽力处理你在使用建议的技术栈过程中遇到的问题，编码愉快！",
         "<strong>需求 1：</strong>我能看见一个对应<code>id=\"main-doc\"</code>的<code>main</code>元素，它包含页面的主要内容（技术文档）。",
         "<strong>需求 2：</strong>在<code>#main-doc</code>元素内，我能看见至少 5 个<code>section</code>元素，每个元素都有一个<code>main-section</code>类。",
@@ -128,7 +128,7 @@
       "title": "Build a Personal Portfolio Webpage",
       "description": [
         "<strong>目标：</strong>使用 <a href='https://codepen.io' target='_blank'>CodePen.io</a> 搭建一个与这个功能上相似的 app：<a href='https://codepen.io/freeCodeCamp/full/zNBOYG' target='_blank'>https://codepen.io/freeCodeCamp/full/zNBOYG</a>。",
-        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>用户故事</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
+        "在满足以下<a href='https://en.wikipedia.org/wiki/User_story' target='_blank'>需求</a>并能通过所有测试的前提下，你可以根据自己的喜好来美化你的 app。",
         "你可以使用 HTML、JavaScript 以及 CSS 来完成项目，由于目前我们只学到了 CSS，因此建议你只使用 CSS 完成这个项目，顺便还可以巩固一下之前学到的内容。你也可以使用 Bootstrap 或者是 SASS。在当前的项目中，不推荐使用其他技术如 jQurey、React、Angular 或者是 Vue，因为一旦出现问题，风险自担。但在别的项目中我们仍有机会去使用不同的技术栈比如 React，我们会接受并尽力处理你在使用建议的技术栈过程中遇到的问题，编码愉快！",
         "<strong>需求 1：</strong>我的作品集应该有一个 id 为<code>welcome-section</code>的欢迎区。",
         "<strong>需求 2：</strong>欢迎区内应该有一个包含标题的<code>h1</code>元素。",
