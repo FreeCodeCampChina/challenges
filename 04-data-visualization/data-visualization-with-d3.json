@@ -209,51 +209,51 @@
         }
       ],
       "description": [
-        "The last two challenges cover the basics of displaying data dynamically with D3 using the <code>data()</code> and <code>enter()</code> methods. These methods take a data set and, together with the <code>append()</code> method, create a new DOM element for each entry in the data set.",
-        "In the previous challenge, you created a new <code>h2</code> element for each item in the <code>dataset</code> array, but they all contained the same text, \"New Title\". This is because you have not made use of the data that is bound to each of the <code>h2</code> elements.",
-        "The D3 <code>text()</code> method can take a string or a callback function as an argument:",
+        "最后两个基本的关于用 D3 动态显示数据的方式是<code>data()</code>和<code>enter()</code>方法。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
+        "在之前的挑战中，你为<code>dataset</code>数组中的每一个对象创建了一个新的<code>h2</code>元素，但是他们的文本都是相同的 \"New Title\"。 因为你还没有使用和每个<code>h2</code>元素关联的数据。",
+        "<code>text()</code>方法以字符串或者回调函数作为参数：",
         "<code>selection.text((d) => d)</code>",
-        "In the example above, the parameter <code>d</code> refers to a single entry in the dataset that a selection is bound to.",
-        "Using the current example as context, the first <code>h2</code> element is bound to 12, the second <code>h2</code> element is bound to 31, the third <code>h2</code> element is bound to 22, and so on.",
+        "上面这个例子中的参数<code>d</code>指关联数据集的一个对象。",
+        "以当前例子为例，第一个<code>h2</code>元素和 12 关联，第二个<code>h2</code>元素和 31 关联，第三个<code>h2</code>元素和 22 关联，以此类推。",
         "<hr>",
-        "Change the <code>text()</code> method so that each <code>h2</code> element displays the corresponding value from the <code>dataset</code> array with a single space and \"USD\". For example, the first heading should be \"12 USD\"."
+        "改变<code>text()</code>方法那么每个<code>h2</code>元素显示<code>dataset</code>数组中的对应值加上一个空格和 \"USD\"。例如，第一个标题应该为 \"12 USD\"。"
       ],
       "tests": [
         {
-          "text": "The first <code>h2</code> should have the text \"12 USD\".",
-          "testString": "assert($('h2').eq(0).text() == \"12 USD\", 'The first <code>h2</code> should have the text \"12 USD\".');"
+          "text": "第一个<code>h2<code>的文本应该为 \"12 USD\"。",
+          "testString": "assert($('h2').eq(0).text() == \"12 USD\", '第一个<code>h2<code>的文本应该为 \"12 USD\"。');"
         },
         {
-          "text": "The second <code>h2</code> should have the text \"31 USD\".",
-          "testString": "assert($('h2').eq(1).text() == \"31 USD\", 'The second <code>h2</code> should have the text \"31 USD\".');"
+          "text": "第二个<code>h2<code>的文本应该为 \"31 USD\"。",
+          "testString": "assert($('h2').eq(1).text() == \"31 USD\", '第二个<code>h2<code>的文本应该为 \"31 USD\"。');"
         },
         {
-          "text": "The third <code>h2</code> should have the text \"22 USD\".",
-          "testString": "assert($('h2').eq(2).text() == \"22 USD\", 'The third <code>h2</code> should have the text \"22 USD\".');"
+          "text": "第三个<code>h2<code>的文本应该为 \"22 USD\"。",
+          "testString": "assert($('h2').eq(2).text() == \"22 USD\", '第三个<code>h2<code>的文本应该为 \"22 USD\"。');"
         },
         {
-          "text": "The fourth <code>h2</code> should have the text \"17 USD\".",
-          "testString": "assert($('h2').eq(3).text() == \"17 USD\", 'The fourth <code>h2</code> should have the text \"17 USD\".');"
+          "text": "第四个<code>h2<code>的文本应该为 \"17 USD\"。",
+          "testString": "assert($('h2').eq(3).text() == \"17 USD\", '第四个<code>h2<code>的文本应该为 \"17 USD\"。');"
         },
         {
-          "text": "The fifth <code>h2</code> should have the text \"25 USD\".",
-          "testString": "assert($('h2').eq(4).text() == \"25 USD\", 'The fifth <code>h2</code> should have the text \"25 USD\".');"
+          "text": "第五个<code>h2<code>的文本应该为 \"25 USD\"。",
+          "testString": "assert($('h2').eq(4).text() == \"25 USD\", '第五个<code>h2<code>的文本应该为 \"25 USD\"。');"
         },
         {
-          "text": "The sixth <code>h2</code> should have the text \"18 USD\".",
-          "testString": "assert($('h2').eq(5).text() == \"18 USD\", 'The sixth <code>h2</code> should have the text \"18 USD\".');"
+          "text": "第六个<code>h2<code>的文本应该为 \"18 USD\"。",
+          "testString": "assert($('h2').eq(5).text() == \"18 USD\", '第六个<code>h2<code>的文本应该为 \"18 USD\"。');"
         },
         {
-          "text": "The seventh <code>h2</code> should have the text \"29 USD\".",
-          "testString": "assert($('h2').eq(6).text() == \"29 USD\", 'The seventh <code>h2</code> should have the text \"29 USD\".');"
+          "text": "第七个<code>h2<code>的文本应该为 \"29 USD\"。",
+          "testString": "assert($('h2').eq(6).text() == \"29 USD\", '第七个<code>h2<code>的文本应该为 \"29 USD\"。');"
         },
         {
-          "text": "The eighth <code>h2</code> should have the text \"14 USD\".",
-          "testString": "assert($('h2').eq(7).text() == \"14 USD\", 'The eighth <code>h2</code> should have the text \"14 USD\".');"
+          "text": "第八个<code>h2<code>的文本应该为 \"14 USD\"。",
+          "testString": "assert($('h2').eq(7).text() == \"14 USD\", '第八个<code>h2<code>的文本应该为 \"14 USD\"。');"
         },
         {
-          "text": "The ninth <code>h2</code> should have the text \"9 USD\".",
-          "testString": "assert($('h2').eq(8).text() == \"9 USD\", 'The ninth <code>h2</code> should have the text \"9 USD\".');"
+          "text": "第九个<code>h2<code>的文本应该为 \"9 USD\"。",
+          "testString": "assert($('h2').eq(8).text() == \"9 USD\", '第九个<code>h2<code>的文本应该为 \"9 USD\"。');"
         }
       ],
       "solutions": [],
@@ -296,20 +296,20 @@
         }
       ],
       "description": [
-        "D3 lets you add inline CSS styles on dynamic elements with the <code>style()</code> method.",
-        "The <code>style()</code> method takes a comma-separated key-value pair as an argument. Here's an example to set the selection's text color to blue:",
+        "D3 可以使用<code>style()</code>方法为动态元素添加内联 CSS 样式表。",
+        "<code>style()</code>方法以用逗号分隔的键值对作为参数。这里是一个将选中文本的颜色设为蓝色的例子：",
         "<code>selection.style(\"color\",\"blue\");</code>",
         "<hr>",
-        "Add the <code>style()</code> method to the code in the editor to make all the displayed text have a <code>font-family</code> of <code>verdana</code>."
+        "在编辑器中添加<code>style()</code>方法，使所有显示的文本的<code>font-family</code>为<code>verdana</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> elements should have a <code>font-family</code> of verdana.",
-          "testString": "assert($('h2').css('font-family') == 'verdana', 'Your <code>h2</code> elements should have a <code>font-family</code> of verdana.');"
+          "text": "你的<code>h2</code>元素的<code>font-family</code>应该为 verdana。",
+          "testString": "assert($('h2').css('font-family') == 'verdana', '你的<code>h2</code>元素的<code>font-family</code>应该为 verdana。');"
         },
         {
-          "text": "Your code should use the <code>style()</code> method.",
-          "testString": "assert(code.match(/\\.style/g), 'Your code should use the <code>style()</code> method.');"
+          "text": "你的代码应该使用<code>style()</code>方法。",
+          "testString": "assert(code.match(/\\.style/g), '你的代码应该使用<code>style()</code>方法。');"
         }
       ],
       "solutions": [],
@@ -353,50 +353,49 @@
         }
       ],
       "description": [
-        "D3 is about visualization and presentation of data. It's likely you'll want to change the styling of elements based on the data. You can use a callback function in the <code>style()</code> method to change the styling for different elements.",
-        "For example, you may want to color a data point blue if has a value less than 20, and red otherwise. You can use a callback function in the <code>style()</code> method and include the conditional logic. The callback function uses the <code>d</code> parameter to represent the data point:",
-        "<blockquote>selection.style(\"color\", (d) => {<br>&nbsp;&nbsp;/* Logic that returns the color based on a condition */<br>});</blockquote>",
-        "The <code>style()</code> method is not limited to setting the <code>color</code> - it can be used with other CSS properties as well.",
+        "D3 是关于可视化和展示数据的。如果你期望基于数据来改变元素的样式，你可以在<code>style()</code>方法中使用回调函数为不同元素改变样式。",
+        "例如，你想将值小于 20 的数据点设置为蓝色，其余设置为红色。你可以在<code>style()</code>方法中使用包含条件逻辑的回调函数。回调函数以<code>d</code>作为参数来表示一个数据点：",
+        "<blockquote>selection.style(\"color\", (d) => {<br>&nbsp;&nbsp;/* 基于情况返回颜色属性的逻辑表达式 */<br>});</blockquote>",
+        "<code>style()</code>方法不仅仅可以设置<code>color</code>——它也适用于其他 CSS 属性。",
         "<hr>",
-        "Add the <code>style()</code> method to the code in the editor to set the <code>color</code> of the <code>h2</code> elements conditionally. Write the callback function so if the data value is less than 20, it returns \"red\", otherwise it returns \"green\".",
-        "<strong>Note</strong><br>You can use if-else logic, or the ternary operator."
-      ],
+        "在编辑器中添加<code>style()</code>方法，根据条件设置<code>h2</code>元素的<code>color</code>属性。写一个回调函数，如果值小于 20 返回 \"red\"，否则返回 \"green\"。",
+        "<strong>提示</strong><br>你可以使用 if-else 语句或者三目操作符。"      ],
       "tests": [
         {
-          "text": "The first <code>h2</code> should have a <code>color</code> of red.",
-          "testString": "assert($('h2').eq(0).css('color') == \"rgb(255, 0, 0)\", 'The first <code>h2</code> should have a <code>color</code> of red.');"
+          "text": "第一个<code>h2</code>的<code>color</code>应该为 red。",
+          "testString": "assert($('h2').eq(0).css('color') == \"rgb(255, 0, 0)\", '第一个<code>h2</code>的<code>color</code>应该为 red。');"
         },
         {
-          "text": "The second <code>h2</code> should have a <code>color</code> of green.",
-          "testString": "assert($('h2').eq(1).css('color') == \"rgb(0, 128, 0)\", 'The second <code>h2</code> should have a <code>color</code> of green.');"
+          "text": "第二个<code>h2</code>的<code>color</code>应该为 green。",
+          "testString": "assert($('h2').eq(1).css('color') == \"rgb(0, 128, 0)\", '第二个<code>h2</code>的<code>color</code>应该为 green。');"
         },
         {
-          "text": "The third <code>h2</code> should have a <code>color</code> of green.",
-          "testString": "assert($('h2').eq(2).css('color') == \"rgb(0, 128, 0)\", 'The third <code>h2</code> should have a <code>color</code> of green.');"
+          "text": "第三个<code>h2</code>的<code>color</code>应该为 green。",
+          "testString": "assert($('h2').eq(2).css('color') == \"rgb(0, 128, 0)\", '第三个<code>h2</code>的<code>color</code>应该为 green。');"
         },
         {
-          "text": "The fourth <code>h2</code> should have a <code>color</code> of red.",
-          "testString": "assert($('h2').eq(3).css('color') == \"rgb(255, 0, 0)\", 'The fourth <code>h2</code> should have a <code>color</code> of red.');"
+          "text": "第四个<code>h2</code>的<code>color</code>应该为 red。",
+          "testString": "assert($('h2').eq(3).css('color') == \"rgb(255, 0, 0)\", '第四个<code>h2</code>的<code>color</code>应该为 red。');"
         },
         {
-          "text": "The fifth <code>h2</code> should have a <code>color</code> of green.",
-          "testString": "assert($('h2').eq(4).css('color') == \"rgb(0, 128, 0)\", 'The fifth <code>h2</code> should have a <code>color</code> of green.');"
+          "text": "第五个<code>h2</code>的<code>color</code>应该为 green。",
+          "testString": "assert($('h2').eq(4).css('color') == \"rgb(0, 128, 0)\", '第五个<code>h2</code>的<code>color</code>应该为 green。');"
         },
         {
-          "text": "The sixth <code>h2</code> should have a <code>color</code> of red.",
-          "testString": "assert($('h2').eq(5).css('color') == \"rgb(255, 0, 0)\", 'The sixth <code>h2</code> should have a <code>color</code> of red.');"
+          "text": "第六个<code>h2</code>的<code>color</code>应该为 red。",
+          "testString": "assert($('h2').eq(5).css('color') == \"rgb(255, 0, 0)\", '第六个<code>h2</code>的<code>color</code>应该为 red。');"
         },
         {
-          "text": "The seventh <code>h2</code> should have a <code>color</code> of green.",
-          "testString": "assert($('h2').eq(6).css('color') == \"rgb(0, 128, 0)\", 'The seventh <code>h2</code> should have a <code>color</code> of green.');"
+          "text": "第七个<code>h2</code>的<code>color</code>应该为 green。",
+          "testString": "assert($('h2').eq(6).css('color') == \"rgb(0, 128, 0)\", '第七个<code>h2</code>的<code>color</code>应该为 green。');"
         },
         {
-          "text": "The eighth <code>h2</code> should have a <code>color</code> of red.",
-          "testString": "assert($('h2').eq(7).css('color') == \"rgb(255, 0, 0)\", 'The eighth <code>h2</code> should have a <code>color</code> of red.');"
+          "text": "第八个<code>h2</code>的<code>color</code>应该为 red。",
+          "testString": "assert($('h2').eq(7).css('color') == \"rgb(255, 0, 0)\", '第八个<code>h2</code>的<code>color</code>应该为 red。');"
         },
         {
-          "text": "The ninth <code>h2</code> should have a <code>color</code> of red.",
-          "testString": "assert($('h2').eq(8).css('color') == \"rgb(255, 0, 0)\", 'The ninth <code>h2</code> should have a <code>color</code> of red.');"
+          "text": "第九个<code>h2</code>的<code>color</code>应该为 red。",
+          "testString": "assert($('h2').eq(8).css('color') == \"rgb(255, 0, 0)\", '第九个<code>h2</code>的<code>color</code>应该为 red。');"
         }
       ],
       "solutions": [],
@@ -440,20 +439,20 @@
         }
       ],
       "description": [
-        "Using a lot of inline styles on HTML elements gets hard to manage, even for smaller apps. It's easier to add a class to elements and style that class one time using CSS rules. D3 has the <code>attr()</code> method to add any HTML attribute to an element, including a class name.",
-        "The <code>attr()</code> method works the same way that <code>style()</code> does. It takes comma-separated values, and can use a callback function. Here's an example to add a class of \"container\" to a selection:",
+        "即使对小型 app 来说在 HTML 元素中大量使用内联样式表也十分难以管理。更方便的是给元素添加遵守 CSS 规则的类。D3 中的<code>attr()</code>方法可以给元素添加任何 HTML 属性，包括类名称。",
+        "<code>attr()</code>方法和<code>style()</code>的使用方法一样。它以逗号分隔的键值对为参数使用回调函数。这里是一个给选中元素添加类名为 \"container\" 的例子：",
         "<code>selection.attr(\"class\", \"container\");</code>",
         "<hr>",
-        "Add the <code>attr()</code> method to the code in the editor and put a class of <code>bar</code> on the <code>div</code> elements."
+        "在编辑器中添加<code>attr()</code>方法，给<code>div</code>元素添加类名<code>bar</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>div</code> elements should have a class of <code>bar</code>.",
-          "testString": "assert($('div').attr('class') == \"bar\", 'Your <code>div</code> elements should have a class of <code>bar</code>.');"
+          "text": "你的<code>div</code>元素应该有一个<code>bar</code>类。",
+          "testString": "assert($('div').attr('class') == \"bar\", '你的<code>div</code>元素应该有一个<code>bar</code>类。');"
         },
         {
-          "text": "Your code should use the <code>attr()</code> method.",
-          "testString": "assert(code.match(/\\.attr/g), 'Your code should use the <code>attr()</code> method.');"
+          "text": "你的代码应该使用<code>attr()</code>方法。",
+          "testString": "assert(code.match(/\\.attr/g), '你的代码应该使用<code>attr()</code>方法。');"
         }
       ],
       "solutions": [],
