@@ -6,7 +6,7 @@
   "challenges": [
     {
       "id": "587d7dbd367417b2b2512bb4",
-      "title": "Store Data with Sass Variables",
+      "title": "使用 Sass 变量储存数据",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -14,30 +14,30 @@
         }
       ],
       "description": [
-        "One feature of Sass that's different than CSS is it uses variables. They are declared and set to store data, similar to JavaScript.",
-        "In JavaScript, variables are defined using the <code>let</code> and <code>const</code> keywords. In Sass, variables start with a <code>$</code> followed by the variable name.",
-        "Here are a couple examples:",
+        "Sass 不同于 CSS 的一个特点是它使用变量。 类似于 JavaScript，声明变量并赋值存储在内存中。",
+        "在 JavaScript 中， 变量是使用 <code>let</code> 和 <code>const</code> 关键字定义的。 在 Sass 中，变量以 <code>$</code> 开头的，后跟变量名",
+        "这里有几个例子",
         "<blockquote>$main-fonts: Arial, sans-serif;<br>$headings-color: green;<br><br>//To use variables:<br>h1 {<br>&nbsp;&nbsp;font-family: $main-fonts;<br>&nbsp;&nbsp;color: $headings-color;<br>}</blockquote>",
-        "One example where variables are useful is when a number of elements need to be the same color. If that color is changed, the only place to edit the code is the variable value.",
+        "变量有用的一个示例是当多个元素需要设置相同的颜色时，如果要更改颜色，只需要改变变量值",
         "<hr>",
-        "Create a variable <code>$text-color</code> and set it to red. Then change the value of the <code>color</code> property for the <code>.blog-post</code> and <code>h2</code> to the <code>$text-color</code> variable."
+        "创建一个变量 <code>$text-color<code> 并将其设置为红色。然后更改 <code>.blog-post<code> 的 <code>color<code> 属性的值， <code>h2<code> 到 <code>$text-color<code> 变量。"
       ],
       "tests": [
         {
-          "text": "Your code should have a Sass variable declared for <code>$text-color</code> with a value of red.",
-          "testString": "assert(code.match(/\\$text-color:\\s*?red;/g), 'Your code should have a Sass variable declared for <code>$text-color</code> with a value of red.');"
+          "text": "你的代码应该为 <code>$text-color</code> 声明一个值为红色的 Sass 变量。",
+          "testString" "assert(code.match(/\\$text-color:\\s*?red;/g), '你的代码应该为 <code>$text-color</code> 声明一个 Sass 变量，其值为 red。');"
         },
         {
-          "text": "Your code should use the <code>$text-color</code> variable to change the <code>color</code> for the <code>.blog-post</code> and <code>h2</code> items.",
-          "testString": "assert(code.match(/color:\\s*?\\$text-color;/g), 'Your code should use the <code>$text-color</code> variable to change the <code>color</code> for the <code>.blog-post</code> and <code>h2</code> items.');"
+          "text": "你的代码应使用 <code>$text-color</code> 变量来更改 <code>.blog-post</code> 和 <code>h2</code> 的 <code> 颜色 </code>。",
+           "testString" "assert(code.match(/color:\\s*?\\$text-color;/g), '你的代码应使用 <code>$text-color</code> 变量来更改 <code>.blog-post</code> 和 <code>h2</code> 的 <code> 颜色 </code>。');"
         },
         {
-          "text": "Your <code>.blog-post</code> element should have a </code>color</code> of red.",
-          "testString": "assert($('.blog-post').css('color') == 'rgb(255, 0, 0)', 'Your <code>.blog-post</code> element should have a </code>color</code> of red.');"
+          "text": "你的 <code>.blog-post<code> 元素应该具有红色的 </code> 颜色 </code>。",
+           "testString" "assert($('.blog-post').css('color') == 'rgb(255, 0, 0)', '你的代码应使用 <code>$text-color</code> 变量来更改 <code>.blog-post</code> 和 <code>h2</code> 的 <code> 颜色 </code>。');"
         },
         {
-          "text": "Your <code>h2</code> elements should have a </code>color</code> of red.",
-          "testString": "assert($('h2').css('color') == 'rgb(255, 0, 0)', 'Your <code>h2</code> elements should have a </code>color</code> of red.');"
+          "text": "你的 <code>h2</code> 元素应该具有红色的 </code> 颜色 </code>。",
+           "testString" "assert($('h2').css('color') == 'rgb(255, 0, 0)', '你的 <code>h2</code> 元素应该具有红色的 </code> 颜色 </code>。');"
         }
       ],
       "solutions": [],
@@ -82,7 +82,7 @@
     },
     {
       "id": "587d7dbd367417b2b2512bb5",
-      "title": "Nest CSS with Sass",
+      "title": "使用 Sass 嵌套CSS",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -90,18 +90,18 @@
         }
       ],
       "description": [
-        "Sass allows <code>nesting</code> of CSS rules, which is a useful way of organizing a style sheet.",
-        "Normally, each element is targeted on a different line to style it, like so:",
-        "<blockquote>nav {<br>&nbsp;&nbsp;background-color: red;<br>}<br><br>nav ul {<br>&nbsp;&nbsp;list-style: none;<br>}<br><br>nav ul li {<br>&nbsp;&nbsp;display: inline-block;<br>}</blockquote>",
-        "For a large project, the CSS file will have many lines and rules. This is where <code>nesting</code> can help organize your code by placing child style rules within the respective parent elements:",
-        "<blockquote>nav {<br>&nbsp;&nbsp;background-color: red;<br><br>&nbsp;&nbsp;ul {<br>&nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;li {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></blockquote>",
-        "<hr>",
-        "Use the <code>nesting</code> technique shown above to re-organize the CSS rules for both children of <code>.blog-post</code> element. For testing purposes, the <code>h1</code> should come before the <code>p</code> element."
+        "Sass 允许 CSS 规则的 <code> 嵌套 </code>，这是组织样式表的有用方法。",
+        "通常情况下，每个元素都针对不同的线条进行设计，如下所示：",
+        "<blockquote>nav {<br>&nbsp;&nbsp;background-color: red;<br>}<br><br>nav ul {<br>&nbsp;&nbsp;list-style: none;<br>}<br><br>nav ul li {<br>&nbsp;&nbsp;display: inline-block;<br>}</blockquote>",
+        "对于一个大型项目，CSS 文件将有许多行和规则。这就是 <code> 嵌套 </code> 可以通过在相应的父元素中放置子样式规则来帮助组织代码：",
+        "<blockquote>nav {<br>&nbsp;&nbsp;background-color: red;<br><br>&nbsp;&nbsp;ul {<br>&nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;li {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}<br></blockquote>",
+        "<hr>",
+        "使用上面显示的 <code>nesting</code> 技术为 <code>.blog-post<code> 元素的两个子元素重新组织 CSS 规则。出于测试目的，<code>h1</code> 应该出现在 <code>p</code> 元素之前。"
       ],
       "tests": [
         {
-          "text": "Your code should re-organize the CSS rules so the <code>h1</code> and <code>p</code> are nested in the <code>.blog-post</code> parent element.",
-          "testString": "assert(code.match(/\\.blog-post\\s*?{\\s*?h1\\s*?{\\s*?text-align:\\s*?center;\\s*?color:\\s*?blue;\\s*?}\\s*?p\\s*?{\\s*?font-size:\\s*?20px;\\s*?}\\s*?}/gi), 'Your code should re-organize the CSS rules so the <code>h1</code> and <code>p</code> are nested in the <code>.blog-post</code> parent element.');"
+          "text": "你的代码应重新组织 CSS 规则，以便 <code>h1</code> 和 <code>p</code> 嵌套在 <code>.blog-post</code> 父元素中。",
+          "testString": "assert(code.match(/\\.blog-post\\s*?{\\s*?h1\\s*?{\\s*?text-align:\\s*?center;\\s*?color:\\s*?blue;\\s*?}\\s*?p\\s*?{\\s*?font-size:\\s*?20px;\\s*?}\\s*?}/gi), '你的代码应重新组织 CSS 规则，以便 <code>h1</code> 和 <code>p</code> 嵌套在 <code>.blog-post<code> 父元素中。);"
         }
       ],
       "solutions": [],
@@ -139,7 +139,7 @@
     },
     {
       "id": "587d7dbd367417b2b2512bb6",
-      "title": "Create Reusable CSS with Mixins",
+      "title": "使用 Mixins 创建可重用的CSS",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -147,42 +147,42 @@
         }
       ],
       "description": [
-        "In Sass, a <code>mixin</code> is a group of CSS declarations that can be reused throughout the style sheet.",
-        "Newer CSS features take time before they are fully adopted and ready to use in all browsers. As features are added to browsers, CSS rules using them may need vendor prefixes. Consider \"box-shadow\":",
+        "在 Sass 中，<code>mixin</code> 是一组 CSS 声明，可以在整个样式表中重复使用。",
+        "较新的 CSS 功能需要一段时间适配所有浏览器后才能完全使用。随着浏览器的不断升级，使用它们的 CSS 规则可能需要供应商前缀。考虑\"box-shadow\":",
         "<blockquote>div {<br>&nbsp;&nbsp;-webkit-box-shadow: 0px 0px 4px #fff;<br>&nbsp;&nbsp;-moz-box-shadow: 0px 0px 4px #fff;<br>&nbsp;&nbsp;-ms-box-shadow: 0px 0px 4px #fff;<br>&nbsp;&nbsp;box-shadow: 0px 0px 4px #fff;<br>}</blockquote>",
-        "It's a lot of typing to re-write this rule for all the elements that have a <code>box-shadow</code>, or to change each value to test different effects.",
-        "<code>Mixins</code> are like functions for CSS. Here is how to write one:",
+        "对于所有具有 <code>box-shadow</code> 属性的元素重写此规则，或者更改每个值以测试不同的效果，需要进行大量的输入。",
+        "<code>Mixins</code> 就像 CSS 的函数。以下是如何编写一个：",
         "<blockquote>@mixin box-shadow($x, $y, $blur, $c){ <br>&nbsp;&nbsp;-webkit-box-shadow: $x, $y, $blur, $c;<br>&nbsp;&nbsp;-moz-box-shadow: $x, $y, $blur, $c;<br>&nbsp;&nbsp;-ms-box-shadow: $x, $y, $blur, $c;<br>&nbsp;&nbsp;box-shadow: $x, $y, $blur, $c;<br>}</blockquote>",
-        "The definition starts with <code>@mixin</code> followed by a custom name. The parameters (the <code>$x</code>, <code>$y</code>, <code>$blur</code>, and <code>$c</code> in the example above) are optional.",
-        "Now any time a <code>box-shadow</code> rule is needed, only a single line calling the <code>mixin</code> replaces having to type all the vendor prefixes. A <code>mixin</code> is called with the <code>@include</code> directive:",
+        "定义以 <code>@mixin</code> 开头，后跟自定义名称。参数（<code>$x</code>，<code>$y</code>，<code>$blur</code>，以及上例中的 <code>$c</code> 是可选的。",
+        "现在，只要需要 <code>box-shadow</code> 规则，只需要调用 <code>mixin</code> 的一行代替必须输入所有供应商前缀。<code>mixin</code > 使用 <code>@include</code> 指令调用：",
         "<blockquote>div {<br>&nbsp;&nbsp;@include box-shadow(0px, 0px, 4px, #fff);<br>}</blockquote>",
         "<hr>",
-        "Write a <code>mixin</code> for <code>border-radius</code> and give it a <code>$radius</code> parameter. It should use all the vendor prefixes from the example. Then use the <code>border-radius</code> <code>mixin</code> to give the <code>#awesome</code> element a border radius of 15px."
+        "为 <code>border-radius</code> 写一个 <code>mixin</code>，并给它一个 <code>$radius</code> 参数。它应该使用示例中的所有供应商前缀。然后使用 <code>border-radius</code> <code>mixin</code> 为 <code>#awesome</code> 元素提供15px的边框半径。"
       ],
       "tests": [
         {
-          "text": "Your code should declare a <code>mixin</code> named <code>border-radius</code> which has a parameter named <code>$radius</code>.",
-          "testString": "assert(code.match(/@mixin\\s+?border-radius\\s*?\\(\\s*?\\$radius\\s*?\\)\\s*?{/gi), 'Your code should declare a <code>mixin</code> named <code>border-radius</code> which has a parameter named <code>$radius</code>.');"
+          "text": "你的代码应声明名为 <code>border-radius</code> 的 <code>mixin</code>，其中包含名为 <code>$radius</code> 的参数。",
+          "testString": "assert(code.match(/@mixin\\s+?border-radius\\s*?\\(\\s*?\\$radius\\s*?\\)\\s*?{/gi), '你的代码应声明名为 <code>border-radius</code> 的 <code>mixin</code>，其中包含名为 <code>$radius</code> 的参数。');"
         },
         {
-          "text": "Your code should include the <code>-webkit-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.",
-          "testString": "assert(code.match(/-webkit-border-radius:\\s*?\\$radius;/gi), 'Your code should include the <code>-webkit-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.');"
+          "text": "你的代码应包含使用 <code>$radius</code> 参数的 <code>-webkit-border-radius</code> 供应商前缀。",
+          "testString": "assert(code.match(/-webkit-border-radius:\\s*?\\$radius;/gi), '你的代码应包含使用 <code>$radius</code> 参数的 <code>-webkit-border-radius</code> 供应商前缀。');"
         },
         {
-          "text": "Your code should include the <code>-moz-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.",
-          "testString": "assert(code.match(/-moz-border-radius:\\s*?\\$radius;/gi), 'Your code should include the <code>-moz-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.');"
+          "text": "你的代码应包含使用 <code>$radius</code> 参数的 <code>-moz-border-radius</code> 供应商前缀。",
+          "testString": "assert(code.match(/-moz-border-radius:\\s*?\\$radius;/gi), '你的代码应包含使用 <code>$radius</code> 参数的 <code>-moz-border-radius</code> 供应商前缀。');"
         },
         {
-          "text": "Your code should include the <code>-ms-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.",
-          "testString": "assert(code.match(/-ms-border-radius:\\s*?\\$radius;/gi), 'Your code should include the <code>-ms-border-radius</code> vender prefix that uses the <code>$radius</code> parameter.');"
+          "text": "你的代码应包含使用 <code>$radius</code> 参数的 <code>-ms-border-radius</code> 供应商前缀。",
+          "testString": "assert(code.match(/-ms-border-radius:\\s*?\\$radius;/gi), '你的代码应包含使用 <code>$radius</code> 参数的 <code>-ms-border-radius</code> 供应商前缀。');"
         },
         {
-          "text": "Your code should include the general <code>border-radius</code> rule that uses the <code>$radius</code> parameter.",
-          "testString": "assert(code.match(/border-radius:\\s*?\\$radius;/gi).length == 4, 'Your code should include the general <code>border-radius</code> rule that uses the <code>$radius</code> parameter.');"
+          "text": "你的代码应包含使用 <code>$radius</code> 参数的常规 <code>border-radius</code> 规则。",
+          "testString": "assert(code.match(/border-radius:\\s*?\\$radius;/gi).length == 4, '你的代码应包含使用 <code>$radius</code> 参数的常规 <code>border-radius</code> 规则。');"
         },
         {
-          "text": "Your code should call the <code>border-radius mixin</code> using the <code>@include</code> keyword, setting it to 15px.",
-          "testString": "assert(code.match(/@include\\s+?border-radius\\(\\s*?15px\\s*?\\);/gi), 'Your code should call the <code>border-radius mixin</code> using the <code>@include</code> keyword, setting it to 15px.');"
+          "text": "你的代码应使用 <code>@include</code> 关键字调用 <code>border-radius mixin</code>，并将其设置为15px。",
+          "testString": "assert(code.match(/@include\\s+?border-radius\\(\\s*?15px\\s*?\\);/gi), '你的代码应使用 <code>@include</code> 关键字调用 <code>border-radius mixin</code>，并将其设置为15px。');"
         }
       ],
       "solutions": [],
@@ -217,7 +217,7 @@
     },
     {
       "id": "587d7dbe367417b2b2512bb8",
-      "title": "Use @if and @else to Add Logic To Your Styles",
+      "title": "使用@if和@else将逻辑添加到你的样式",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -225,34 +225,34 @@
         }
       ],
       "description": [
-        "The <code>@if</code> directive in Sass is useful to test for a specific case - it works just like the <code>if</code> statement in JavaScript</code>.",
+        "Sass中的 <code>@if</code> 指令对于测试特定情况非常有用 - 它的工作方式与JavaScript</code> 中的 <code>if</code> 语句类似。",
         "<blockquote>@mixin make-bold($bool) {<br>&nbsp;&nbsp;@if $bool == true {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>&nbsp;&nbsp;}<br>}</blockquote>",
-        "And just like in JavaScript, <code>@else if</code> and <code>@else</code> test for more conditions:",
+        "就像在 JavaScript 中一样，<code>@else if</code> 和 <code>@else</code> 测试更多条件：",
         "<blockquote>@mixin text-effect($val) {<br>&nbsp;&nbsp;@if $val == danger {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;@else if $val == alert {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;@else if $val == success {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;@else {<br>&nbsp;&nbsp;&nbsp;&nbsp;color: black;<br>&nbsp;&nbsp;}<br>}</blockquote>",
         "<hr>",
-        "Create a <code>mixin</code> called <code>border-stroke</code> that takes a parameter <code>$val</code>. The <code>mixin</code> should check for the following conditions using <code>@if</code>, <code>@else if</code>, and <code>@else</code>:",
+        "创建一个名为 <code>border-stroke</code> 的 <code>mixin</code>，它接受一个参数 <code>$val</code>。 <code>mixin</code> 应使用 <code>@if</code>，<code>@else if</code> 和 <code>@else</code> 检查以下条件：",
         "<blockquote>light - 1px solid black<br>medium - 3px solid black<br>heavy - 6px solid black<br>none - no border</blockquote>"
       ],
       "tests": [
         {
-          "text": "Your code should declare a <code>mixin</code> named <code>border-stroke</code> which has a parameter named <code>$val</code>.",
-          "testString": "assert(code.match(/@mixin\\s+?border-stroke\\s*?\\(\\s*?\\$val\\s*?\\)\\s*?{/gi), 'Your code should declare a <code>mixin</code> named <code>border-stroke</code> which has a parameter named <code>$val</code>.');"
+          "text": "你的代码应该声明一个名为 <code>border-stroke</code> 的 <code>mixin</code>，它有一个名为 <code>$val</code> 的参数。",
+          "testString": "assert(code.match(/@mixin\\s+?border-stroke\\s*?\\(\\s*?\\$val\\s*?\\)\\s*?{/gi), '你的代码应该声明一个名为 <code>border-stroke</code> 的 <code>mixin</code>，它有一个名为 <code>$val</code> 的参数。');"
         },
         {
-          "text": "Your <code>mixin</code> should have an <code>@if</code> statement to check if <code>$val</code> is light, and to set the <code>border</code> to 1px solid black.",
-          "testString": "assert(code.match(/@if\\s+?\\$val\\s*?===?\\s*?light\\s*?{\\s*?border\\s*?:\\s*?1px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), 'Your <code>mixin</code> should have an <code>@if</code> statement to check if <code>$val</code> is light, and to set the <code>border</code> to 1px solid black.');"
+          "text": "你的 <code>mixin</code> 应该有一个 <code>@if</code> 语句来检查 <code>$val</code> 是否很轻，并将 <code>border</code> 设置为 1px纯黑色。",
+          "testString": "assert(code.match(/@if\\s+?\\$val\\s*?===?\\s*?light\\s*?{\\s*?border\\s*?:\\s*?1px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), '你的 <code>mixin</code> 应该有一个 <code>@if</code> 语句来检查 <code>$val</code> 是否很轻，并将 <code>border</code> 设置为 1px纯黑色。');"
         },
         {
-          "text": "Your <code>mixin</code> should have an <code>@else if</code> statement to check if <code>$val</code> is medium, and to set the <code>border</code> to 3px solid black.",
-          "testString": "assert(code.match(/@else\\s+?if\\s+?\\$val\\s*?===?\\s*?medium\\s*?{\\s*?border\\s*?:\\s*?3px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), 'Your <code>mixin</code> should have an <code>@else if</code> statement to check if <code>$val</code> is medium, and to set the <code>border</code> to 3px solid black.');"
+          "text": "你的 <code>mixin</code> 应该有一个 <code>@else if</code> 语句来检查 <code>$val</code> 是否中等，并设置 <code>border</code> 为3px纯黑色。",
+          "testString": "assert(code.match(/@else\\s+?if\\s+?\\$val\\s*?===?\\s*?medium\\s*?{\\s*?border\\s*?:\\s*?3px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), '你的 <code>mixin</code> 应该有一个 <code>@else if</code> 语句来检查 <code>$val</code> 是否中等，并设置 <code>border</code> 为3px纯黑色。');"
         },
         {
-          "text": "Your <code>mixin</code> should have an <code>@else if</code> statement to check if <code>$val</code> is heavy, and to set the <code>border</code> to 6px solid black.",
-          "testString": "assert(code.match(/@else\\s+?if\\s+?\\$val\\s*?===?\\s*?heavy\\s*?{\\s*?border\\s*?:\\s*?6px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), 'Your <code>mixin</code> should have an <code>@else if</code> statement to check if <code>$val</code> is heavy, and to set the <code>border</code> to 6px solid black.');"
+          "text": "你的 <code>mixin</code> 应该有一个 <code>@else if</code> 语句来检查 <code>$val</code> 是否很重，并设置 <code>border</code> 为6px纯黑色。",
+          "testString": "assert(code.match(/@else\\s+?if\\s+?\\$val\\s*?===?\\s*?heavy\\s*?{\\s*?border\\s*?:\\s*?6px\\s+?solid\\s+?black\\s*?;\\s*?}/gi), '你的 <code>mixin</code> 应该有一个 <code>@else if</code> 语句来检查 <code>$val</code> 是否很重，并设置 <code>border</code> 为6px纯黑色。');"
         },
         {
-          "text": "Your <code>mixin</code> should have an <code>@else</code> statement to set the <code>border</code> to none.",
-          "testString": "assert(code.match(/@else\\s*?{\\s*?border\\s*?:\\s*?none\\s*?;\\s*?}/gi), 'Your <code>mixin</code> should have an <code>@else</code> statement to set the <code>border</code> to none.');"
+          "text": "你的 <code>mixin</code> 应该有一个 <code>@else</code> 语句来将 <code>border</code> 设置为none。",
+          "testString": "assert(code.match(/@else\\s*?{\\s*?border\\s*?:\\s*?none\\s*?;\\s*?}/gi), '你的 <code>mixin</code> 应该有一个 <code>@else</code> 语句来将 <code>border</code> 设置为none。');"
         }
       ],
       "solutions": [],
@@ -286,7 +286,7 @@
     },
     {
       "id": "587d7dbe367417b2b2512bb9",
-      "title": "Use @for to Create a Sass Loop",
+      "title": "使用@for创建Sass循环",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -294,41 +294,41 @@
         }
       ],
       "description": [
-        "The <code>@for</code> directive adds styles in a loop, very similar to a <code>for</code> loop in JavaScript.",
-        "<code>@for</code> is used in two ways: \"start through end\" or \"start to end\". The main difference is that \"start to end\" <em>excludes</em> the end number, and \"start through end\" <em>includes</em> the end number.",
-        "Here's a start <b>through</b> end example:",
+        "非常类似于JavaScript中的 <code>for</code> 循环，<code>@for</code> 指令在循环中添加样式。",
+        "<code>@for</code> 以两种方式使用：\"start through end \"或\"start to end \"。 主要区别在于“开始结束”<em> 排除 </em> 结束号码，而“开始结束”<em> 包括 </em> 结束号码。",
+        "这是一个开始 <b> 到 </ b> 结束示例：",
         "<blockquote>@for $i from 1 through 12 {<br>&nbsp;&nbsp;.col-#{$i} { width: 100%/12 * $i; }<br>}</blockquote>",
-        "The <code>#{$i}</code> part is the syntax to combine a variable (<code>i</code>) with text to make a string. When the Sass file is converted to CSS, it looks like this:",
+        "<code>#{$i}</code> 部分是将变量（<code>i</code>）与文本组合成字符串的语法。 当Sass文件转换为CSS时，它看起来像这样：",
         "<blockquote>.col-1 {<br>&nbsp;&nbsp;width: 8.33333%;<br>}<br><br>.col-2 {<br>&nbsp;&nbsp;width: 16.66667%;<br>}<br><br>...<br><br>.col-12 {<br>&nbsp;&nbsp;width: 100%;<br>}</blockquote>",
-        "This is a powerful way to create a grid layout. Now you have twelve options for column widths available as CSS classes.",
+        "这是创建网格布局的有效方法。 现在，你有12个可用作CSS类的列宽选项。",
         "<hr>",
-        "Write a <code>@for</code> directive that takes a variable <code>$j</code> that goes from 1 <b>to</b> 6.",
-        "It should create 5 classes called <code>.text-1</code> to <code>.text-5</code> where each has a <code>font-size</code> set to 10px multiplied by the index."
+        "编写 <code>@for</code> 指令，该指令采用从 <b> 到 </ b> 6的变量 <code>$j</code>。",
+        "它应该创建5个名为 <code>.text-1</code> 的类到 <code>.text-5</code>，其中每个类的 <code>font-size</code> 设置为10px乘以索引。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>@for</code> directive.",
-          "testString": "assert(code.match(/@for /g), 'Your code should use the <code>@for</code> directive.');"
+          "text": "你的代码应使用 <code>@for</code> 指令。",
+          "testString": "assert(code.match(/@for /g), '你的代码应使用 <code>@for</code> 指令。');"
         },
         {
-          "text": "Your <code>.text-1</code> class should have a <code>font-size</code> of 10px.",
-          "testString": "assert($('.text-1').css('font-size') == '10px', 'Your <code>.text-1</code> class should have a <code>font-size</code> of 10px.');"
+          "text": "你的 <code>.text-1</code> 类的 <code>font-size</code> 应为10px。",
+          "testString": "assert($('.text-1').css('font-size') == '10px', '你的 <code>.text-1</code> 类的 <code>font-size</code> 应为10px。');"
         },
         {
-          "text": "Your <code>.text-2</code> class should have a <code>font-size</code> of 20px.",
-          "testString": "assert($('.text-2').css('font-size') == '20px', 'Your <code>.text-2</code> class should have a <code>font-size</code> of 20px.');"
+          "text": "你的 <code>.text-2</code> 类的 <code>font-size</code> 应为20px。",
+          "testString": "assert($('.text-2').css('font-size') == '20px', '你的 <code>.text-2</code> 类的 <code>font-size</code> 应为20px。');"
         },
         {
-          "text": "Your <code>.text-3</code> class should have a <code>font-size</code> of 30px.",
-          "testString": "assert($('.text-3').css('font-size') == '30px', 'Your <code>.text-3</code> class should have a <code>font-size</code> of 30px.');"
+          "text": "你的 <code>.text-3</code> 类的 <code>font-size</code> 应为30px。",
+          "testString": "assert($('.text-3').css('font-size') == '30px', '你的 <code>.text-3</code> 类的 <code>font-size</code> 应为30px。');"
         },
         {
-          "text": "Your <code>.text-4</code> class should have a <code>font-size</code> of 40px.",
-          "testString": "assert($('.text-4').css('font-size') == '40px', 'Your <code>.text-4</code> class should have a <code>font-size</code> of 40px.');"
+          "text": "你的 <code>.text-4</code> 类的 <code>font-size</code> 应为40px。",
+          "testString": "assert($('.text-4').css('font-size') == '40px', '你的 <code>.text-4</code> 类的 <code>font-size</code> 应为40px。');"
         },
         {
-          "text": "Your <code>.text-5</code> class should have a <code>font-size</code> of 50px.",
-          "testString": "assert($('.text-5').css('font-size') == '50px', 'Your <code>.text-5</code> class should have a <code>font-size</code> of 50px.');"
+          "text": "你的 <code>.text-5</code> 类的 <code>font-size</code> 应为50px。",
+          "testString": "assert($('.text-5').css('font-size') == '50px', '你的 <code>.text-5</code> 类的 <code>font-size</code> 应为50px。');"
         }
       ],
       "solutions": [],
@@ -360,7 +360,7 @@
     },
     {
       "id": "587d7dbf367417b2b2512bba",
-      "title": "Use @each to Map Over Items in a List",
+      "title": "使用@each映射列表中的项目",
       "required": [
         {
           "src": "https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.10.9/sass.sync.min.js",
@@ -368,34 +368,34 @@
         }
       ],
       "description": [
-        "The last challenge showed how the <code>@for</code> directive uses a starting and ending value to loop a certain number of times. Sass also offers the <code>@each</code> directive which loops over each item in a list or map.",
-        "On each iteration, the variable gets assigned to the current value from the list or map.",
+        "最后一个挑战显示了 <code>@for</code> 指令如何使用起始值和结束值循环一定次数。 Sass还提供 <code>@each</code> 指令，该指令循环遍历列表或映射中的每个项目。",
+        "在每次迭代时，变量将从列表或映射分配给当前值。",
         "<blockquote>@each $color in blue, red, green {<br>&nbsp;&nbsp;.#{$color}-text {color: $color;}<br>}</blockquote>",
-        "A map has slightly different syntax. Here's an example:",
+        "map 的语法略有不同。 这是一个例子：",
         "<blockquote>$colors: (color1: blue, color2: red, color3: green);<br><br>@each $key, $color in $colors {<br>&nbsp;&nbsp;.#{$color}-text {color: $color;}<br>}</blockquote>",
-        "Note that the <code>$key</code> variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have <code>color1</code>, <code>color2</code>... in it.",
-        "Both of the above code examples are converted into the following CSS:",
+        "请注意，需要 <code>$key</code> 变量来引用 map 中的键。 否则，编译后的CSS将包含 <code>color1</code>，<code>color2</code> ...",
+        "以上两个代码示例都转换为以下CSS：",
         "<blockquote>.blue-text {<br>&nbsp;&nbsp;color: blue;<br>}<br><br>.red-text {<br>&nbsp;&nbsp;color: red;<br>}<br><br>.green-text {<br>&nbsp;&nbsp;color: green;<br>}</blockquote>",
         "<hr>",
-        "Write an <code>@each</code> directive that goes through a list: <code>blue, black, red</code> and assigns each variable to a <code>.color-bg</code> class, where the \"color\" part changes for each item.",
-        "Each class should set the <code>background-color</code> the respective color."
+        "编写一个 <code>@each</code> 指令，通过一个列表：<code>blue，black，red</code> 并将每个变量分配给 <code>.color-bg</code> 类，其中 每个项目的“颜色”部分都会发生变化。",
+        "每个类都应该将 <code>background-color</code> 设置为相应的颜色。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>@each</code> directive.",
-          "testString": "assert(code.match(/@each /g), 'Your code should use the <code>@each</code> directive.');"
+          "text": "你的代码应使用 <code>@each</code> 指令。",
+          "testString": "assert(code.match(/@each /g), '你的代码应使用 <code>@each</code> 指令。');"
         },
         {
-          "text": "Your <code>.blue-bg</code> class should have a <code>background-color</code> of blue.",
-          "testString": "assert($('.blue-bg').css('background-color') == 'rgb(0, 0, 255)', 'Your <code>.blue-bg</code> class should have a <code>background-color</code> of blue.');"
+          "text": "你的 <code>.blue-bg</code> 类应该具有蓝色的 <code>background-color</code>。",
+          "testString": "assert($('.blue-bg').css('background-color') == 'rgb(0, 0, 255)', '你的 <code>.blue-bg</code> 类应该具有蓝色的 <code>background-color</code>。');"
         },
         {
-          "text": "Your <code>.black-bg</code> class should have a <code>background-color</code> of black.",
-          "testString": "assert($('.black-bg').css('background-color') == 'rgb(0, 0, 0)', 'Your <code>.black-bg</code> class should have a <code>background-color</code> of black.');"
+          "text": "你的 <code>.black-bg</code> 类应该具有黑色的 <code>background-color</code>。",
+          "testString": "assert($('.black-bg').css('background-color') == 'rgb(0, 0, 0)', '你的 <code>.black-bg</code> 类应该具有黑色的 <code>background-color</code>。');"
         },
         {
-          "text": "Your <code>.red-bg</code> class should have a <code>background-color</code> of red.",
-          "testString": "assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)', 'Your <code>.red-bg</code> class should have a <code>background-color</code> of red.');"
+          "text": "你的 <code>.red-bg</code> 类应该具有红色的 <code>background-color</code>。",
+          "testString": "assert($('.red-bg').css('background-color') == 'rgb(255, 0, 0)', '你的 <code>.red-bg</code> 类应该具有红色的 <code>background-color</code>。');"
         }
       ],
       "solutions": [],
