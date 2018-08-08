@@ -5,7 +5,8 @@
   "helpRoom": "Help",
   "required": [
     {
-      "link": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
+      "link":
+        "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
     }
   ],
   "challenges": [
@@ -22,12 +23,15 @@
       ],
       "tests": [
         {
-          "text": "你的代码应该用<code>document.getElementById</code>方法来选择<code>getMessage</code>元素。",
-          "testString": "assert(code.match(/document\\.getElementById\\(\\s*?('|\")getMessage\\1\\s*?\\)/g), '你的代码应该用<code>document.getElementById</code>方法来选择<code>getMessage</code>元素。');"
+          "text":
+            "你的代码应该用<code>document.getElementById</code>方法来选择<code>getMessage</code>元素。",
+          "testString":
+            "assert(code.match(/document\\.getElementById\\(\\s*?('|\")getMessage\\1\\s*?\\)/g), '你的代码应该用<code>document.getElementById</code>方法来选择<code>getMessage</code>元素。');"
         },
         {
           "text": "你的代码应该添加<code>onclick</code>事件处理器。",
-          "testString": "assert(typeof document.getElementById('getMessage').onclick === 'function', '你的代码应该添加<code>onclick</code>事件处理器。');"
+          "testString":
+            "assert(typeof document.getElementById('getMessage').onclick === 'function', '你的代码应该添加<code>onclick</code>事件处理器。');"
         }
       ],
       "solutions": [],
@@ -93,17 +97,19 @@
       "id": "587d7fad367417b2b2512be2",
       "title": "Change Text with click Events",
       "description": [
-        "When the click event happens, you can use JavaScript to update an HTML element.",
-        "For example, when a user clicks the \"Get Message\" button, it changes the text of the element with the class <code>message</code> to say \"Here is the message\".",
-        "This works by adding the following code within the click event:",
+        "当点击事件发生时，你可以使用 JavaScript 更新 HTML 元素。",
+        "例如，当用户点击 \"Get Message\" 按钮时，它将改变类名<code>message</code>元素的文本为 \"Here is the message\"。",
+        "通过在点击事件内添加以下代码实现：",
         "<code>document.getElementsByClassName('message')[0].innerHTML=\"Here is the message\";</code>",
         "<hr>",
-        "Add code inside the <code>onclick</code> event handler to change the text inside the <code>message</code> element to say \"Here is the message\"."
+        "在<code>onclick</code>事件处理器中添加代码，改变<code>message</code>元素内的文字为 \"Here is the message\"。"
       ],
       "tests": [
         {
-          "text": "Your code should use the <code>document.getElementsByClassName</code> method to select the element with class <code>message</code> and set its <code>innerHTML</code> to the given string.",
-          "testString": "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?('|\")Here is the message\\2/g), 'Your code should use the <code>document.getElementsByClassName</code> method to select the element with class <code>message</code> and set its <code>innerHTML</code> to the given string.');"
+          "text":
+            "你的代码应该使用<code>document.getElementsByClassName</code>方法来选择类名为<code>message</code>的元素，然后将其<code>innerHTML</code>改为给定文字。",
+          "testString":
+            "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?('|\")Here is the message\\2/g), '你的代码应该使用<code>document.getElementsByClassName</code>方法来选择类名为<code>message</code>的元素，然后将其<code>innerHTML</code>改为给定文字。');"
         }
       ],
       "solutions": [],
@@ -119,10 +125,10 @@
             "<script>",
             "  document.addEventListener('DOMContentLoaded',function(){",
             "    document.getElementById('getMessage').onclick=function(){",
-            "      // Add your code below this line",
+            "      // 在该行下添加代码",
             "      ",
             "      ",
-            "      // Add your code above this line",
+            "      // 在该行上添加代码",
             "    }",
             "  });",
             "</script>",
@@ -188,27 +194,38 @@
       "tests": [
         {
           "text": "Your code should create a new <code>XMLHttpRequest</code>.",
-          "testString": "assert(code.match(/new\\s+?XMLHttpRequest\\(\\s*?\\)/g), 'Your code should create a new <code>XMLHttpRequest</code>.');"
+          "testString":
+            "assert(code.match(/new\\s+?XMLHttpRequest\\(\\s*?\\)/g), 'Your code should create a new <code>XMLHttpRequest</code>.');"
         },
         {
-          "text": "Your code should use the <code>open</code> method to initialize a \"GET\" request to the freeCodeCamp Cat Photo API.",
-          "testString": "assert(code.match(/\\.open\\(\\s*?('|\")GET\\1\\s*?,\\s*?('|\")\\/json\\/cats\\.json\\2\\s*?,\\s*?true\\s*?\\)/g), 'Your code should use the <code>open</code> method to initialize a \"GET\" request to the freeCodeCamp Cat Photo API.');"
+          "text":
+            "Your code should use the <code>open</code> method to initialize a \"GET\" request to the freeCodeCamp Cat Photo API.",
+          "testString":
+            "assert(code.match(/\\.open\\(\\s*?('|\")GET\\1\\s*?,\\s*?('|\")\\/json\\/cats\\.json\\2\\s*?,\\s*?true\\s*?\\)/g), 'Your code should use the <code>open</code> method to initialize a \"GET\" request to the freeCodeCamp Cat Photo API.');"
         },
         {
-          "text": "Your code should use the <code>send</code> method to send the request.",
-          "testString": "assert(code.match(/\\.send\\(\\s*\\)/g), 'Your code should use the <code>send</code> method to send the request.');"
+          "text":
+            "Your code should use the <code>send</code> method to send the request.",
+          "testString":
+            "assert(code.match(/\\.send\\(\\s*\\)/g), 'Your code should use the <code>send</code> method to send the request.');"
         },
         {
-          "text": "Your code should have an <code>onload</code> event handler set to a function.",
-          "testString": "assert(code.match(/\\.onload\\s*=\\s*function\\(\\s*?\\)\\s*?{/g), 'Your code should have an <code>onload</code> event handler set to a function.');"
+          "text":
+            "Your code should have an <code>onload</code> event handler set to a function.",
+          "testString":
+            "assert(code.match(/\\.onload\\s*=\\s*function\\(\\s*?\\)\\s*?{/g), 'Your code should have an <code>onload</code> event handler set to a function.');"
         },
         {
-          "text": "Your code should use the <code>JSON.parse</code> method to parse the <code>responseText</code>.",
-          "testString": "assert(code.match(/JSON\\.parse\\(.*\\.responseText\\)/g), 'Your code should use the <code>JSON.parse</code> method to parse the <code>responseText</code>.');"
+          "text":
+            "Your code should use the <code>JSON.parse</code> method to parse the <code>responseText</code>.",
+          "testString":
+            "assert(code.match(/JSON\\.parse\\(.*\\.responseText\\)/g), 'Your code should use the <code>JSON.parse</code> method to parse the <code>responseText</code>.');"
         },
         {
-          "text": "Your code should get the element with class <code>message</code> and change its inner HTML to the string of JSON data.",
-          "testString": "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?JSON\\.stringify\\(.+?\\)/g), 'Your code should get the element with class <code>message</code> and change its inner HTML to the string of JSON data.');"
+          "text":
+            "Your code should get the element with class <code>message</code> and change its inner HTML to the string of JSON data.",
+          "testString":
+            "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?JSON\\.stringify\\(.+?\\)/g), 'Your code should get the element with class <code>message</code> and change its inner HTML to the string of JSON data.');"
         }
       ],
       "solutions": [],
@@ -291,8 +308,10 @@
       ],
       "tests": [
         {
-          "text": "Your code should use bracket and dot notation to access the proper code name, and print \"Loki\" to the console.",
-          "testString": "assert(code.match(/(?:json\\[2\\]\\.codeNames\\[1\\]|json\\[2\\]\\[('|\")codeNames\\1\\]\\[1\\])/g), 'Your code should use bracket and dot notation to access the proper code name, and print \"Loki\" to the console.');"
+          "text":
+            "Your code should use bracket and dot notation to access the proper code name, and print \"Loki\" to the console.",
+          "testString":
+            "assert(code.match(/(?:json\\[2\\]\\.codeNames\\[1\\]|json\\[2\\]\\[('|\")codeNames\\1\\]\\[1\\])/g), 'Your code should use bracket and dot notation to access the proper code name, and print \"Loki\" to the console.');"
         }
       ],
       "solutions": [],
@@ -380,16 +399,22 @@
       ],
       "tests": [
         {
-          "text": "Your code should store the data in the <code>html</code> variable",
-          "testString": "assert(code.match(/html\\s+?(\\+=|=\\shtml\\s\\+)/g), 'Your code should store the data in the <code>html</code> variable');"
+          "text":
+            "Your code should store the data in the <code>html</code> variable",
+          "testString":
+            "assert(code.match(/html\\s+?(\\+=|=\\shtml\\s\\+)/g), 'Your code should store the data in the <code>html</code> variable');"
         },
         {
-          "text": "Your code should use a <code>forEach</code> method to loop over the JSON data from the API.",
-          "testString": "assert(code.match(/json\\.forEach/g), 'Your code should use a <code>forEach</code> method to loop over the JSON data from the API.');"
+          "text":
+            "Your code should use a <code>forEach</code> method to loop over the JSON data from the API.",
+          "testString":
+            "assert(code.match(/json\\.forEach/g), 'Your code should use a <code>forEach</code> method to loop over the JSON data from the API.');"
         },
         {
-          "text": "Your code should wrap the key names in <code>strong</code> tags.",
-          "testString": "assert(code.match(/<strong>.+<\\/strong>/g), 'Your code should wrap the key names in <code>strong</code> tags.');"
+          "text":
+            "Your code should wrap the key names in <code>strong</code> tags.",
+          "testString":
+            "assert(code.match(/<strong>.+<\\/strong>/g), 'Your code should wrap the key names in <code>strong</code> tags.');"
         }
       ],
       "solutions": [],
@@ -475,8 +500,10 @@
       ],
       "tests": [
         {
-          "text": "You should use the <code>imageLink</code> property to display the images.",
-          "testString": "assert(code.match(/val\\.imageLink/g), 'You should use the <code>imageLink</code> property to display the images.');"
+          "text":
+            "You should use the <code>imageLink</code> property to display the images.",
+          "testString":
+            "assert(code.match(/val\\.imageLink/g), 'You should use the <code>imageLink</code> property to display the images.');"
         }
       ],
       "solutions": [],
@@ -566,7 +593,8 @@
       "tests": [
         {
           "text": "Your code should use the <code>filter</code> method.",
-          "testString": "assert(code.match(/json\\.filter/g), 'Your code should use the <code>filter</code> method.');"
+          "testString":
+            "assert(code.match(/json\\.filter/g), 'Your code should use the <code>filter</code> method.');"
         }
       ],
       "solutions": [],
@@ -661,20 +689,28 @@
       ],
       "tests": [
         {
-          "text": "Your code should use <code>navigator.geolocation</code> to access the user&#39;s current location.",
-          "testString": "assert(code.match(/navigator\\.geolocation\\.getCurrentPosition/g), 'Your code should use <code>navigator.geolocation</code> to access the user&#39;s current location.');"
+          "text":
+            "Your code should use <code>navigator.geolocation</code> to access the user&#39;s current location.",
+          "testString":
+            "assert(code.match(/navigator\\.geolocation\\.getCurrentPosition/g), 'Your code should use <code>navigator.geolocation</code> to access the user&#39;s current location.');"
         },
         {
-          "text": "Your code should use <code>position.coords.latitude</code> to display the user&#39;s latitudinal location.",
-          "testString": "assert(code.match(/position\\.coords\\.latitude/g), 'Your code should use <code>position.coords.latitude</code> to display the user&#39;s latitudinal location.');"
+          "text":
+            "Your code should use <code>position.coords.latitude</code> to display the user&#39;s latitudinal location.",
+          "testString":
+            "assert(code.match(/position\\.coords\\.latitude/g), 'Your code should use <code>position.coords.latitude</code> to display the user&#39;s latitudinal location.');"
         },
         {
-          "text": "Your code should use <code>position.coords.longitude</code> to display the user&#39;s longitudinal location.",
-          "testString": "assert(code.match(/position\\.coords\\.longitude/g), 'Your code should use <code>position.coords.longitude</code> to display the user&#39;s longitudinal location.');"
+          "text":
+            "Your code should use <code>position.coords.longitude</code> to display the user&#39;s longitudinal location.",
+          "testString":
+            "assert(code.match(/position\\.coords\\.longitude/g), 'Your code should use <code>position.coords.longitude</code> to display the user&#39;s longitudinal location.');"
         },
         {
-          "text": "You should display the user&#39;s position within the <code>data</code> div element.",
-          "testString": "assert(code.match(/document\\.getElementById\\(\\s*?('|\")data\\1\\s*?\\)\\.innerHTML/g), 'You should display the user&#39;s position within the <code>data</code> div element.');"
+          "text":
+            "You should display the user&#39;s position within the <code>data</code> div element.",
+          "testString":
+            "assert(code.match(/document\\.getElementById\\(\\s*?('|\")data\\1\\s*?\\)\\.innerHTML/g), 'You should display the user&#39;s position within the <code>data</code> div element.');"
         }
       ],
       "solutions": [],
@@ -720,27 +756,37 @@
       "tests": [
         {
           "text": "Your code should create a new <code>XMLHttpRequest</code>.",
-          "testString": "assert(code.match(/new\\s+?XMLHttpRequest\\(\\s*?\\)/g), 'Your code should create a new <code>XMLHttpRequest</code>.');"
+          "testString":
+            "assert(code.match(/new\\s+?XMLHttpRequest\\(\\s*?\\)/g), 'Your code should create a new <code>XMLHttpRequest</code>.');"
         },
         {
-          "text": "Your code should use the <code>open</code> method to initialize a \"POST\" request to the server.",
-          "testString": "assert(code.match(/\\.open\\(\\s*?('|\")POST\\1\\s*?,\\s*?url\\s*?,\\s*?true\\s*?\\)/g), 'Your code should use the <code>open</code> method to initialize a \"POST\" request to the server.');"
+          "text":
+            "Your code should use the <code>open</code> method to initialize a \"POST\" request to the server.",
+          "testString":
+            "assert(code.match(/\\.open\\(\\s*?('|\")POST\\1\\s*?,\\s*?url\\s*?,\\s*?true\\s*?\\)/g), 'Your code should use the <code>open</code> method to initialize a \"POST\" request to the server.');"
         },
         {
-          "text": "Your code should use the <code>setRequestHeader</code> method.",
-          "testString": "assert(code.match(/\\.setRequestHeader\\(\\s*?('|\")Content-Type\\1\\s*?,\\s*?('|\")text\\/plain\\2\\s*?\\)/g), 'Your code should use the <code>setRequestHeader</code> method.');"
+          "text":
+            "Your code should use the <code>setRequestHeader</code> method.",
+          "testString":
+            "assert(code.match(/\\.setRequestHeader\\(\\s*?('|\")Content-Type\\1\\s*?,\\s*?('|\")text\\/plain\\2\\s*?\\)/g), 'Your code should use the <code>setRequestHeader</code> method.');"
         },
         {
-          "text": "Your code should have an <code>onreadystatechange</code> event handler set to a function.",
-          "testString": "assert(code.match(/\\.onreadystatechange\\s*?=/g), 'Your code should have an <code>onreadystatechange</code> event handler set to a function.');"
+          "text":
+            "Your code should have an <code>onreadystatechange</code> event handler set to a function.",
+          "testString":
+            "assert(code.match(/\\.onreadystatechange\\s*?=/g), 'Your code should have an <code>onreadystatechange</code> event handler set to a function.');"
         },
         {
-          "text": "Your code should get the element with class <code>message</code> and change its inner HTML to the <code>responseText</code>.",
-          "testString": "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?.+?\\.responseText/g), 'Your code should get the element with class <code>message</code> and change its inner HTML to the <code>responseText</code>.');"
+          "text":
+            "Your code should get the element with class <code>message</code> and change its inner HTML to the <code>responseText</code>.",
+          "testString":
+            "assert(code.match(/document\\.getElementsByClassName\\(\\s*?('|\")message\\1\\s*?\\)\\[0\\]\\.innerHTML\\s*?=\\s*?.+?\\.responseText/g), 'Your code should get the element with class <code>message</code> and change its inner HTML to the <code>responseText</code>.');"
         },
         {
           "text": "Your code should use the <code>send</code> method.",
-          "testString": "assert(code.match(/\\.send\\(\\s*?userName\\s*?\\)/g), 'Your code should use the <code>send</code> method.');"
+          "testString":
+            "assert(code.match(/\\.send\\(\\s*?userName\\s*?\\)/g), 'Your code should use the <code>send</code> method.');"
         }
       ],
       "solutions": [],
