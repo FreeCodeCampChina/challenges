@@ -68,15 +68,15 @@
       "title": "Mitigate the Risk of Cross Site Scripting (XSS) Attacks with helmet.xssFilter()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "Cross-site scripting (XSS) is a frequent type of attack where malicious scripts are injected into vulnerable pages, with the purpose of stealing sensitive data like session cookies, or passwords.",
-        "The basic rule to lower the risk of an XSS attack is simple: “Never trust user’s input”. As a developer you should always sanitize all the input coming from the outside. This includes data coming from forms, GET query urls, and even from POST bodies. Sanitizing means that you should find and encode the characters that may be dangerous e.g. <, >.",
-        "Modern browsers can help mitigating the risk by adopting better software strategies. Often these are configurable via http headers.",
-        "The X-XSS-Protection HTTP header is a basic protection. The browser detects a potential injected script using a heuristic filter. If the header is enabled, the browser changes the script code, neutralizing it.",
-        "It still has limited support."
+        "跨站脚本 (XSS) 是一种常见的攻击手段，可以通过页面上的安全漏洞给页面注入恶意脚本, 从而达到获取用户密码等敏感信息。",
+        "防止跨站脚本的基本原则也非常简单：“永远不要相信用户的输入”。作为一个开发者，你应该对所有用户的输入进行审查。这包括来自表单，GET 请求 URL，以及 POST 请求主体内容的数据。审查就是指你应该查找并给有潜在风险的字符进行编码。 例如 ``<`` ``,`` ``>``",
+        "现代浏览器可以通过更好的软件策略来减低这种风险。通常我们可以通过配置 HTTP 头部来达到这个目的",
+        "``X-XSS-Protection`` 这个 HTTP 头部是最基本的防护措施。 浏览器通过启发式过滤器检测到可能有被注入的恶意脚本，这个时候，如果你的头部有``X-XSS-Protection`` 浏览器就会通过改变这个潜在的恶意注入脚本来抵消风险。",
+        "这个头部目前的支持还不是特别好。"
       ],
       "tests": [
         {
-          "text": "helmet.xssFilter() middleware should be mounted correctly",
+          "text": "helmet.xssFilter() 中间件应该被正确加载",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'xXssProtection'); assert.property(data.headers, 'x-xss-protection'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -90,11 +90,11 @@
       "title": "Avoid Inferring the Response MIME Type with helmet.noSniff()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "Browsers can use content or MIME sniffing to adapt to different datatypes coming from a response. They override the Content-Type headers to guess and process the data. While this can be convenient in some scenarios, it can also lead to some dangerous attacks. This middleware sets the X-Content-Type-Options header to nosniff. This instructs the browser to not bypass the provided Content-Type."
+        "浏览器可以通过探查 ``content`` 或者 ``MIME`` 头部来判断不同的响应内容。这两个的优先级比 ``Content-Type`` 还高，浏览器可以通过这两个头部来猜测并处理响应。这个在某些情况下非常实用，但也会造成一定的潜在风险。我们可以通过中间件来设置 ``X-Content-Type-Options`` 头部为 ``nosniff``。 这样，浏览器就不会绕过 ``Content-Type`` 这个头了。"
       ],
       "tests": [
         {
-          "text": "helmet.noSniff() middleware should be mounted correctly",
+          "text": "helmet.noSniff() 中间件应该被正确加载",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'nosniff'); assert.equal(data.headers['x-content-type-options'], 'nosniff'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -108,11 +108,11 @@
       "title": "Prevent IE from Opening Untrusted HTML with helmet.ieNoOpen()",
       "description": [
         "温馨提醒，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
-        "Some web applications will serve untrusted HTML for download. Some versions of Internet Explorer by default open those HTML files in the context of your site. This means that an untrusted HTML page could start doing bad things in the context of your pages. This middleware sets the X-Download-Options header to noopen. This will prevent IE users from executing downloads in the trusted site’s context."
+        "有些网站会下载不安全的 HTML 文件，某些版本的 IE 默认情况下还会在你网站的作用域下打开这些 HTML 文件。换句话说，这些不安全的 HTML 页面可以在你的网站做恶意行为。我们可以通过中间件来设置 ``X-Download-Options`` 头部为 ``noopen``。这样就可以防治 IE 在不信任的网站下执行下载的文件。"
       ],
       "tests": [
         {
-          "text": "helmet.ieNoOpen() middleware should be mounted correctly",
+          "text": "helmet.ieNoOpen() 中间件应该被正确加载",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/app-info').then(data => { assert.include(data.appStack, 'ienoopen'); assert.equal(data.headers['x-download-options'], 'noopen'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
