@@ -8,34 +8,34 @@
       "id": "587d7b7e367417b2b2512b20",
       "title": "Use an Array to Store a Collection of Data",
       "description": [
-        "The below is an example of the simplest implementation of an array data structure. This is known as a <dfn>one-dimensional array</dfn>, meaning it only has one level, or that it does not have any other arrays nested within it. Notice it contains <dfn>booleans</dfn>, <dfn>strings</dfn>, and <dfn>numbers</dfn>, among other valid JavaScript data types:",
+        "以下是数组（Array）数据结构的最简单的实现的一个例子。这是一个 <dfn>一维数组</dfn>（<dfn>one-dimensional Array</dfn>），它只有一层，或者说它里面没有包含其它的数组。您可以看到它包含了 <dfn>布尔值</dfn>（<dfn>booleans</dfn>）、<dfn>字符串</dfn>（<dfn>strings</dfn>）、<dfn>数字</dfn>（<dfn>numbers</dfn>） 以及 JavaScript 中其他合法的数据类型：",
         "<blockquote>let simpleArray = ['one', 2, 'three’, true, false, undefined, null];<br>console.log(simpleArray.length);<br>// logs 7</blockquote>",
-        "All array's have a length property, which as shown above, can be very easily accessed with the syntax <code>Array.length</code>.",
-        "A more complex implementation of an array can be seen below. This is known as a <dfn>multi-dimensional array</dfn>, or an array that contains other arrays. Notice that this array also contains JavaScript <dfn>objects</dfn>, which we will examine very closely in our next section, but for now, all you need to know is that arrays are also capable of storing complex objects.",
+        "您可以在上述例子中看到，所有数组都有一个长度（length）属性。您可以简单地使用 <code>Array.length</code> 方法来访问它。",
+        "下面是一个更复杂一点的数组的例子。这是一个 <dfn>多维数组</dfn>（<dfn>multi-dimensional Array</dfn>），或者说是一个包含了其他数组的数组。您可以注意到，它还包含了 JavaScript 中的 <dfn>对象</dfn>（<dfn>objects</dfn>）。我们会在接下来的一节中讨论 JavaScript 对象变量，但现在您只需要知道数组能够存储复杂的对象。",
         "<blockquote>let complexArray = [<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;one: 1,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;two: 2<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;three: 3,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;four: 4<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;],<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a: \"a\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b: \"b\"<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c: \"c\",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d: “d”<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]<br>];</blockquote>",
         "<hr>",
-        "We have defined a variable called <code>yourArray</code>. Complete the statement by assigning an array of at least 5 elements in length to the <code>yourArray</code> variable. Your array should contain at least one <dfn>string</dfn>, one <dfn>number</dfn>, and one <dfn>boolean</dfn>."
+        "我们已经定义了一个 <code>yourArray</code> 变量。请修改题目中的语句，将一个含有至少5个元素的数组赋值给 <code>yourArray</code> 变量。您的数组应该包含至少一个 <dfn>string</dfn>、一个 <dfn>number</dfn> 和一个 <dfn>boolean</dfn>。"
       ],
       "tests": [
         {
-          "text": "yourArray is an array",
-          "testString": "assert.strictEqual(Array.isArray(yourArray), true, 'yourArray is an array');"
+          "text": "yourArray 应该是一个数组。",
+          "testString": "assert.strictEqual(Array.isArray(yourArray), true, 'yourArray 应该是一个数组。');"
         },
         {
-          "text": "<code>yourArray</code> is at least 5 elements long",
-          "testString": "assert.isAtLeast(yourArray.length, 5, '<code>yourArray</code> is at least 5 elements long');"
+          "text": "<code>yourArray</code> 至少要包含5个元素。",
+          "testString": "assert.isAtLeast(yourArray.length, 5, '<code>yourArray</code> 至少要包含5个元素。');"
         },
         {
-          "text": "<code>yourArray</code> contains at least one <code>boolean</code>",
-          "testString": "assert(yourArray.filter( el => typeof el === 'boolean').length >= 1, '<code>yourArray</code> contains at least one <code>boolean</code>');"
+          "text": "<code>yourArray</code> 应该包含至少一个 <code>boolean</code>。",
+          "testString": "assert(yourArray.filter( el => typeof el === 'boolean').length >= 1, '<code>yourArray</code> 应该包含至少一个 <code>boolean</code>。');"
         },
         {
-          "text": "<code>yourArray</code> contains at least one <code>number</code>",
-          "testString": "assert(yourArray.filter( el => typeof el === 'number').length >= 1, '<code>yourArray</code> contains at least one <code>number</code>');"
+          "text": "<code>yourArray</code> 应该包含至少一个 <code>number</code>。",
+          "testString": "assert(yourArray.filter( el => typeof el === 'number').length >= 1, '<code>yourArray</code> 应该包含至少一个 <code>number</code>。');"
         },
         {
-          "text": "<code>yourArray</code> contains at least one <code>string</code>",
-          "testString": "assert(yourArray.filter( el => typeof el === 'string').length >= 1, '<code>yourArray</code> contains at least one <code>string</code>');"
+          "text": "<code>yourArray</code> 应该包含至少一个 <code>string</code>。",
+          "testString": "assert(yourArray.filter( el => typeof el === 'string').length >= 1, '<code>yourArray</code> 应该包含至少一个 <code>string</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -58,35 +58,35 @@
       "id": "5a661e0f1068aca922b3ef17",
       "title": "Access an Array's Contents Using Bracket Notation",
       "description": [
-        "The fundamental feature of any data structure is, of course, the ability to not only store data, but to be able to retrieve that data on command. So, now that we've learned how to create an array, let's begin to think about how we can access that array's information.",
-        "When we define a simple array as seen below, there are 3 items in it:",
+        "所有数据结构的基本特性是，不仅能够存储数据，还能够按需从中获取这些数据。我们已经学习了如何创建一个数组，现在让我们开始考虑如何访问数据中的信息。",
+        "我们先定义一个包含 3 个元素的数组：",
         "<blockquote>let ourArray = [\"a\", \"b\", \"c\"];</blockquote>",
-        "In an array, each array item has an <dfn>index</dfn>.  This index doubles as the position of that item in the array, and how you reference it. However, it is important to note, that JavaScript arrays are <dfn>zero-indexed</dfn>, meaning that the first element of an array is actually at the <em><strong>zeroth</strong></em> position, not the first.",
-        "In order to retrieve an element from an array we can enclose an index in brackets and append it to the end of an array, or more commonly, to a variable which references an array object. This is known as <dfn>bracket notation</dfn>.",
-        "For example, if we want to retrieve the <code>\"a\"</code> from <code>ourArray</code> and assign it to a variable, we can do so with the following code:",
+        "在一个数组里，每个元素都有一个 <dfn>索引</dfn>（<dfn>index</dfn>）。索引是该元素在数组中的位置，可被用于引用该元素。但是您要注意，JavaScript 数组的索引是从0开始的（<dfn>zero-indexed</dfn>），即一个数组的第一个元素是在数组中的 <em><strong>第0个</strong></em> 位置而不是第一个位置。",
+        "要从一个数组中获取一个元素，我们可以在一个数组变量名的后面加一个用方括号括起来的索引。这叫做 <dfn>方括号符号</dfn>（<dfn>bracket notation</dfn>）。",
+        "例如我们要从  <code>ourArray</code> 中获取 <code>\"a\"</code> 并将它赋值给一个变量，我们可以编写如下代码：",
         "<blockquote>let ourVariable = ourArray[0];<br>// ourVariable equals \"a\"</blockquote>",
-        "In addition to accessing the value associated with an index, you can also <em>set</em> an index to a value using the same notation:",
+        "除了用索引来获取一个元素的值，您还可以用方括号符号 <em>设置</em> 一个索引对应的元素的值：",
         "<blockquote>ourArray[1] = \"not b anymore\";<br>// ourArray now equals [\"a\", \"not b anymore\", \"c\"];</blockquote>",
-        "Using bracket notation, we have now reset the item at index 1 from <code>\"b\"</code>, to <code>\"not b anymore\"</code>.",
+        "我们现在已经利用方括号将索引为 1 的元素从 <code>\"b\"</code> 设置为了 <code>\"not b anymore\"</code>。",
         "<hr>",
-        "In order to complete this challenge, set the 2nd position (index <code>1</code>) of <code>myArray</code> to anything you want, besides <code>\"b\"</code>."
+        "在本挑战中，请您将 <code>myArray</code> 中第二个元素（索引 <code>1</code>）设置为除了 <code>\"b\"</code> 以外的任意值。"
       ],
       "tests": [
         {
-          "text": "<code>myArray[0]</code> is equal to <code>\"a\"</code>",
-          "testString": "assert.strictEqual(myArray[0], \"a\", '<code>myArray[0]</code> is equal to <code>\"a\"</code>');"
+          "text": "<code>myArray[0]</code> 必须等于 <code>\"a\"</code>。",
+          "testString": "assert.strictEqual(myArray[0], \"a\", '<code>myArray[0]</code> 必须等于 <code>\"a\"</code>。');"
         },
         {
-          "text": "<code>myArray[1]</code> is no longer set to <code>\"b\"</code>",
-          "testString": "assert.notStrictEqual(myArray[1], \"b\", '<code>myArray[1]</code> is no longer set to <code>\"b\"</code>');"
+          "text": "<code>myArray[1]</code> 不能再等于 <code>\"b\"</code>。",
+          "testString": "assert.notStrictEqual(myArray[1], \"b\", '<code>myArray[1]</code> 不能再等于 <code>\"b\"</code>。');"
         },
         {
-          "text": "<code>myArray[2]</code> is equal to <code>\"c\"</code>",
-          "testString": "assert.strictEqual(myArray[2], \"c\", '<code>myArray[2]</code> is equal to <code>\"c\"</code>');"
+          "text": "<code>myArray[2]</code> 必须等于 <code>\"c\"</code>。",
+          "testString": "assert.strictEqual(myArray[2], \"c\", '<code>myArray[2]</code> 必须等于 <code>\"c\"</code>。');"
         },
         {
-          "text": "<code>myArray[3]</code> is equal to <code>\"d\"</code>",
-          "testString": "assert.strictEqual(myArray[3], \"d\", '<code>myArray[3]</code> is equal to <code>\"d\"</code>');"
+          "text": "<code>myArray[3]</code> 必须等于 <code>\"d\"</code>。",
+          "testString": "assert.strictEqual(myArray[3], \"d\", '<code>myArray[3]</code> 必须等于 <code>\"d\"</code>。');"
         }
       ],
       "solutions": [],
@@ -112,25 +112,25 @@
       "id": "587d78b2367417b2b2512b0e",
       "title": "Add Items to an Array with push() and unshift()",
       "description": [
-        "An array's length, like the data types it can contain, is not fixed. Arrays can be defined with a length of any number of elements, and elements can be added or removed over time; in other words, arrays are <dfn>mutable</dfn>. In this challenge, we will look at two methods with which we can programmatically modify an array: <code>Array.push()</code> and <code>Array.unshift()</code>. ",
-        "Both methods take one or more elements as parameters and add those elements to the array the method is being called on; the <code>push()</code> method adds elements to the end of an array, and <code>unshift()</code> adds elements to the beginning. Consider the following:",
+        "一个数组的长度与其包含的数据类型一样，是不固定的。数组可以包含任意数量的元素，您可以不限次数地往数组中添加元素或者从中移除元素，或者说数组是 <dfn>可变的</dfn>（<dfn>mutable</dfn>）。在本挑战中，我们要学习两个以编程方式修改数组的方法： <code>Array.push()</code> 和 <code>Array.unshift()</code>。",
+        "这两个方法的输入参数都可以是一个或多个元素；对一个数组调用这两个方法都可以将输入的元素插入到该数组中；<code>push()</code> 方法将元素插入到一个数组的末尾，而 <code>unshift()</code> 方法将元素插入到一个数组的开头。请看以下例子：",
         "<blockquote>let twentyThree = 'XXIII';<br>let romanNumerals = ['XXI', 'XXII'];<br><br>romanNumerals.unshift('XIX', 'XX');<br>// now equals ['XIX', 'XX', 'XXI', 'XXII']<br><br>romanNumerals.push(twentyThree);<br>// now equals ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']",
-        "Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.",
+        "注意，我们还可以输入变量，这允许我们很灵活地动态改变我们数组中的数据。",
         "<hr>",
-        "We have defined a function, <code>mixedNumbers</code>, which we are passing an array as an argument. Modify the function by using <code>push()</code> and <code>unshift()</code> to add <code>'I', 2, 'three'</code> to the beginning of the array and <code>7, 'VIII', 9</code> to the end so that the returned array contains representations of the numbers 1-9 in order."
+        "我们已经定义了一个 <code>mixedNumbers</code> 函数，它会接受一个数组作为输入参数。请您修改这个函数，使用 <code>push()</code> 和 <code>unshift()</code> 来将 <code>'I', 2, 'three'</code> 插入到输入的数组的开头，将 <code>7, 'VIII', 9</code> 插入到数组的末尾，使得这个函数返回一个依次包含 1-9 的数组。"
       ],
       "tests": [
         {
-          "text": "<code>mixedNumbers([\"IV\", 5, \"six\"])</code> should now return <code>[\"I\", 2, \"three\", \"IV\", 5, \"six\", 7, \"VIII\", 9]</code>",
-          "testString": "assert.deepEqual(mixedNumbers(['IV', 5, 'six']), ['I', 2, 'three', 'IV', 5, 'six', 7, 'VIII', 9], '<code>mixedNumbers([\"IV\", 5, \"six\"])</code> should now return <code>[\"I\", 2, \"three\", \"IV\", 5, \"six\", 7, \"VIII\", 9]</code>');"
+          "text": "<code>mixedNumbers([\"IV\", 5, \"six\"])</code> 现在应该返回 <code>[\"I\", 2, \"three\", \"IV\", 5, \"six\", 7, \"VIII\", 9]</code>。",
+          "testString": "assert.deepEqual(mixedNumbers(['IV', 5, 'six']), ['I', 2, 'three', 'IV', 5, 'six', 7, 'VIII', 9], '<code>mixedNumbers([\"IV\", 5, \"six\"])</code> 现在应该返回 <code>[\"I\", 2, \"three\", \"IV\", 5, \"six\", 7, \"VIII\", 9]</code>。');"
         },
         {
-          "text": "The <code>mixedNumbers</code> function should utilize the <code>push()</code> method",
-          "testString": "assert.notStrictEqual(mixedNumbers.toString().search(/\\.push\\(/), -1, 'The <code>mixedNumbers</code> function should utilize the <code>push()</code> method');"
+          "text": "<code>mixedNumbers</code> 函数中应该用到 <code>push()</code> 方法。",
+          "testString": "assert.notStrictEqual(mixedNumbers.toString().search(/\\.push\\(/), -1, '<code>mixedNumbers</code> 函数中应该用到 <code>push()</code> 方法。');"
         },
         {
-          "text": "The <code>mixedNumbers</code> function should utilize the <code>unshift()</code> method",
-          "testString": "assert.notStrictEqual(mixedNumbers.toString().search(/\\.unshift\\(/), -1, 'The <code>mixedNumbers</code> function should utilize the <code>unshift()</code> method');"
+          "text": "<code>mixedNumbers</code> 函数中应该用到 <code>unshift()</code> 方法。",
+          "testString": "assert.notStrictEqual(mixedNumbers.toString().search(/\\.unshift\\(/), -1, '<code>mixedNumbers</code> 函数中应该用到 <code>unshift()</code> 方法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -161,26 +161,26 @@
       "id": "587d78b2367417b2b2512b0f",
       "title": "Remove Items from an Array with pop() and shift()",
       "description": [
-        "Both <code>push()</code> and <code>unshift()</code> have corresponding methods that are nearly functional opposites: <code>pop()</code> and <code>shift()</code>. As you may have guessed by now, instead of adding, <code>pop()</code> <em>removes</em> an element from the end of an array, while <code>shift()</code> removes an element from the beginning. The key difference between <code>pop()</code> and <code>shift()</code> and their cousins <code>push()</code> and <code>unshift()</code>, is that neither method takes parameters, and each only allows an array to be modified by a single element at a time.",
-        "Let's take a look:",
-        "<blockquote>let greetings = ['whats up?', 'hello', 'see ya!'];<br><br>greetings.pop();<br>// now equals ['whats up?', 'hello']<br><br>greetings.shift();<br>// now equals ['hello']</blockquote>",
-        "We can also return the value of the removed element with either method like this:",
-        "<blockquote>let popped = greetings.pop();<br>// returns 'hello'<br>// greetings now equals []</blockquote>",
+        "<code>push()</code> 和 <code>unshift()</code> 都分别有一个作用基本与之相反的函数：<code>pop()</code> 和 <code>shift()</code>。您现在或许已经猜到，与插入元素相反，<code>pop()</code> 从数组的末尾 <em>移除</em> 一个元素，而 <code>shift()</code> 从数组的开头移除一个元素。<code>pop()</code> 与 <code>shift()</code> 以及对应的 <code>push()</code> 与 <code>unshift()</code> 的关键不同点是，前者不能接受输入参数，而且每次只能修改数组中的一个元素。",
+        "让我们来看如下例子：",
+        "<blockquote>let greetings = ['whats up?', 'hello', 'see ya!'];<br><br>greetings.pop();<br>// 现在等于 ['whats up?', 'hello']<br><br>greetings.shift();<br>// 现在等于 ['hello']</blockquote>",
+        "对于上述两个方法中的任意一个，我们都可以返回被其移除的元素：",
+        "<blockquote>let popped = greetings.pop();<br>// 返回 'hello'<br>// greetings 现在等于 []</blockquote>",
         "<hr>",
-        "We have defined a function, <code>popShift</code>, which takes an array as an argument and returns a new array. Modify the function, using <code>pop()</code> and <code>shift()</code>, to remove the first and last elements of the argument array, and assign the removed elements to their corresponding variables, so that the returned array contains their values."
+        "我们已经定义了一个 <code>popShift</code> 函数，它会接收一个数组作为输入参数并返回一个新的数组。请您修改这个函数，使用 <code>pop()</code> 和 <code>shift()</code> 来移除输入的数组的第一个元素和最后一个元素，并将这两个被移除的元素赋值给对应的变量，使得返回的数组包含它们的值。"
       ],
       "tests": [
         {
-          "text": "<code>popShift([\"challenge\", \"is\", \"not\", \"complete\"])</code> should return <code>[\"challenge\", \"complete\"]</code>",
-          "testString": "assert.deepEqual(popShift(['challenge', 'is', 'not', 'complete']), [\"challenge\", \"complete\"], '<code>popShift([\"challenge\", \"is\", \"not\", \"complete\"])</code> should return <code>[\"challenge\", \"complete\"]</code>');"
+          "text": "<code>popShift([\"challenge\", \"is\", \"not\", \"complete\"])</code> 应该返回 <code>[\"challenge\", \"complete\"]</code>。",
+          "testString": "assert.deepEqual(popShift(['challenge', 'is', 'not', 'complete']), [\"challenge\", \"complete\"], '<code>popShift([\"challenge\", \"is\", \"not\", \"complete\"])</code> 应该返回 <code>[\"challenge\", \"complete\"]</code>。');"
         },
         {
-          "text": "The <code>popShift</code> function should utilize the <code>pop()</code> method",
-          "testString": "assert.notStrictEqual(popShift.toString().search(/\\.pop\\(/), -1, 'The <code>popShift</code> function should utilize the <code>pop()</code> method');"
+          "text": "<code>popShift</code> 函数应该用到 <code>pop()</code> 方法。",
+          "testString": "assert.notStrictEqual(popShift.toString().search(/\\.pop\\(/), -1, '<code>popShift</code> 函数应该用到 <code>pop()</code> 方法。');"
         },
         {
-          "text": "The <code>popShift</code> function should utilize the <code>shift()</code> method",
-          "testString": "assert.notStrictEqual(popShift.toString().search(/\\.shift\\(/), -1, 'The <code>popShift</code> function should utilize the <code>shift()</code> method');"
+          "text": "<code>popShift</code> 函数应该用到 <code>shift()</code> 方法。",
+          "testString": "assert.notStrictEqual(popShift.toString().search(/\\.shift\\(/), -1, '<code>popShift</code> 函数应该用到 <code>shift()</code> 方法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -210,22 +210,22 @@
       "id": "587d78b2367417b2b2512b10",
       "title": "Remove Items Using splice()",
       "description": [
-        "Ok, so we've learned how to remove elements from the beginning and end of arrays using <code>shift()</code> and <code>pop()</code>, but what if we want to remove an element from somewhere in the middle? Or remove more than one element at once? Well, that's where <code>splice()</code> comes in. <code>splice()</code> allows us to do just that: <strong>remove any number of consecutive elements</strong> from anywhere in an array.",
-        "<code>splice()</code> can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of <code>splice()</code> are integers which represent indexes, or positions, of the array that <code>splice()</code> is being called upon. And remember, arrays are <em>zero-indexed</em>, so to indicate the first element of an array, we would use <code>0</code>. <code>splice()</code>'s first parameter represents the index on the array from which to begin removing elements, while the second parameter indicates the number of elements to delete. For example:",
-        "<blockquote>let array = ['today', 'was', 'not', 'so', 'great'];<br><br>array.splice(2, 2);<br>// remove 2 elements beginning with the 3rd element<br>// array now equals ['today', 'was', 'great']</blockquote>",
-        "<code>splice()</code> not only modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:",
-        "<blockquote>let array = ['I', 'am', 'feeling', 'really', 'happy'];<br><br>let newArray = array.splice(3, 2);<br>// newArray equals ['really', 'happy']</blockquote>",
+        "Ok，我们已经学到了如何利用 <code>shift()</code> 和 <code>pop()</code> 从数组的开头或者末尾移除元素，但如果我们想移除数组中间的一个元素呢？或者想一次移除多个元素呢？这时候我们就需要 <code>splice()</code> 了。<code>splice()</code> 让我们可以从数组中的任意位置 <strong>移除任意数量的连续的元素</strong>。",
+        "<code>splice()</code> 最多可以接受 3 个参数，但现在我们先关注前两个。<code>splice()</code> 的前两个参数是代表被调用 <code>splice()</code> 的数组中的索引或者位置的整数。记住，数组的索引是 <em>从0开始的</em>（<em>zero-indexed</em>），所以我们要用 <code>0</code> 来指示数组中的第一个元素。<code>splice()</code> 的第一个参数代表从数组中的哪个索引开始移除元素，而第二个参数指示要从数组中删除多少个元素。例如：",
+        "<blockquote>let array = ['today', 'was', 'not', 'so', 'great'];<br><br>array.splice(2, 2);<br>// 从第 3 个元素开始，删除 2 个元素<br>// 现在该数组等于 ['today', 'was', 'great']</blockquote>",
+        "<code>splice()</code> 不仅从被调用的数组中移除元素，还会返回一个包含被移除元素的数组：",
+        "<blockquote>let array = ['I', 'am', 'feeling', 'really', 'happy'];<br><br>let newArray = array.splice(3, 2);<br>// newArray 等于 ['really', 'happy']</blockquote>",
         "<hr>",
-        "We've defined a function, <code>sumOfTen</code>, which takes an array as an argument and returns the sum of that array's elements. Modify the function, using <code>splice()</code>, so that it returns a value of <code>10</code>."
+        "我们已经定义了一个 <code>sumOfTen</code> 函数，它接受一个数组作为输入参数，并返回数组中所有元素的和。请您修改这个函数，利用 <code>splice()</code>，使得它返回 <code>10</code>。"
       ],
       "tests": [
         {
-          "text": "<code>sumOfTen</code> should return 10",
-          "testString": "assert.strictEqual(sumOfTen([2, 5, 1, 5, 2, 1]), 10, '<code>sumOfTen</code> should return 10');"
+          "text": "<code>sumOfTen</code> 应该返回 10。",
+          "testString": "assert.strictEqual(sumOfTen([2, 5, 1, 5, 2, 1]), 10, '<code>sumOfTen</code> 应该返回 10。');"
         },
         {
-          "text": "The <code>sumOfTen</code> function should utilize the <code>splice()</code> method",
-          "testString": "assert.notStrictEqual(sumOfTen.toString().search(/\\.splice\\(/), -1, 'The <code>sumOfTen</code> function should utilize the <code>splice()</code> method');"
+          "text": "<code>sumOfTen</code> 函数应该用到 <code>splice()</code> 方法。",
+          "testString": "assert.notStrictEqual(sumOfTen.toString().search(/\\.splice\\(/), -1, '<code>sumOfTen</code> 函数应该用到 <code>splice()</code> 方法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -256,28 +256,28 @@
       "id": "587d78b3367417b2b2512b11",
       "title": "Add Items Using splice()",
       "description": [
-        "Remember in the last challenge we mentioned that <code>splice()</code> can take up to three parameters? Well, we can go one step further with <code>splice()</code> &mdash; in addition to removing elements, we can use that third parameter, which represents one or more elements, to <em>add</em> them as well. This can be incredibly useful for quickly switching out an element, or a set of elements, for another. For instance, let's say you're storing a color scheme for a set of DOM elements in an array, and want to dynamically change a color based on some action:",
-        "<blockquote>function colorChange(arr, index, newColor) {<br>&nbsp;&nbsp;arr.splice(index, 1, newColor);<br>&nbsp;&nbsp;return arr;<br>}<br><br>let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf'];<br><br>colorScheme = colorChange(colorScheme, 2, '#332327');<br>// we have removed '#bb7e8c' and added '#332327' in its place<br>// colorScheme now equals ['#878787', '#a08794', '#332327', '#c9b6be', '#d1becf']</blockquote>",
-        "This function takes an array of hex values, an index at which to remove an element, and the new color to replace the removed element with. The return value is an array containing a newly modified color scheme! While this example is a bit oversimplified, we can see the value that utilizing <code>splice()</code> to its maximum potential can have.",
+        "您还记得在上个挑战中我们提到 <code>splice()</code> 方法可以接受最多 3 个参数吗？我们现在可以进一步了解 <code>splice()</code> &mdash;。除了移除元素，我们还可以利用它的第三个参数来向数组中 <em>添加</em> 元素。第三个参数可以是一个或多个元素，这些元素会被添加到数组中。这使我们能够便捷地将数组中的一个或一系列元素换成其他的元素。例如您在一个数组中存储了一系列 DOM 元素的配色，并希望基于某些行为动态地改变一个颜色：",
+        "<blockquote>function colorChange(arr, index, newColor) {<br>&nbsp;&nbsp;arr.splice(index, 1, newColor);<br>&nbsp;&nbsp;return arr;<br>}<br><br>let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf'];<br><br>colorScheme = colorChange(colorScheme, 2, '#332327');<br>// 我们移除了 '#bb7e8c' 并在其位置上添加了 '#332327'<br>// colorScheme 现在等于 ['#878787', '#a08794', '#332327', '#c9b6be', '#d1becf']</blockquote>",
+        "这个函数接受一个十六进制值（hex value）的数组、要被移除的元素的索引以及要替换旧元素的新颜色作为输入参数。它的返回值是一个含有被修改的新的配色的数组。虽然这个例子可能过于简单，但我们还是能从中感受到充分利用 <code>splice()</code> 方法的价值。",
         "<hr>",
-        "We have defined a function, <code>htmlColorNames</code>, which takes an array of HTML colors as an argument. Modify the function using <code>splice()</code> to remove the first two elements of the array and add <code>'DarkSalmon'</code> and <code>'BlanchedAlmond'</code> in their respective places."
+        "我们已经定义了一个 <code>htmlColorNames</code> 函数，它以一个 HTML 颜色的数组作为输入参数。请修改这个函数，利用 <code>splice()</code> 来移除数组中的前两个元素，并在对应的位置上添加 <code>'DarkSalmon'</code> 和 <code>'BlanchedAlmond'</code>。"
       ],
       "tests": [
         {
-          "text": "<code>htmlColorNames</code> should return <code>[\"DarkSalmon\", \"BlanchedAlmond\", \"LavenderBlush\", \"PaleTurqoise\", \"FireBrick\"]</code>",
-          "testString": "assert.deepEqual(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']), ['DarkSalmon', 'BlanchedAlmond', 'LavenderBlush', 'PaleTurqoise', 'FireBrick'], '<code>htmlColorNames</code> should return <code>[\"DarkSalmon\", \"BlanchedAlmond\", \"LavenderBlush\", \"PaleTurqoise\", \"FireBrick\"]</code>');"
+          "text": "<code>htmlColorNames</code> 应该返回 <code>[\"DarkSalmon\", \"BlanchedAlmond\", \"LavenderBlush\", \"PaleTurqoise\", \"FireBrick\"]</code>。",
+          "testString": "assert.deepEqual(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']), ['DarkSalmon', 'BlanchedAlmond', 'LavenderBlush', 'PaleTurqoise', 'FireBrick'], '<code>htmlColorNames</code> 应该返回 <code>[\"DarkSalmon\", \"BlanchedAlmond\", \"LavenderBlush\", \"PaleTurqoise\", \"FireBrick\"]</code>。');"
         },
         {
-          "text": "The <code>htmlColorNames</code> function should utilize the <code>splice()</code> method",
-          "testString": "assert(/.splice/.test(code), 'The <code>htmlColorNames</code> function should utilize the <code>splice()</code> method');"
+          "text": "<code>htmlColorNames</code> 函数中应该用到 <code>splice()</code> 方法。",
+          "testString": "assert(/.splice/.test(code), '<code>htmlColorNames</code> 函数中应该用到 <code>splice()</code> 方法。');"
         },
         {
-          "text": "You should not use <code>shift()</code> or <code>unshift()</code>.",
-          "testString": "assert(!/shift|unshift/.test(code), 'You should not use <code>shift()</code> or <code>unshift()</code>.');"
+          "text": "您不能使用 <code>shift()</code> 或者 <code>unshift()</code>。",
+          "testString": "assert(!/shift|unshift/.test(code), '您不能使用 <code>shift()</code> 或者 <code>unshift()</code>。');"
         },
         {
-          "text": "You should not use array bracket notation.",
-          "testString": "assert(!/\\[\\d\\]\\s*=/.test(code), 'You should not use array bracket notation.');"
+          "text": "您不能使用数组的方括号符号。",
+          "testString": "assert(!/\\[\\d\\]\\s*=/.test(code), '您不能使用数组的方括号符号。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -308,20 +308,20 @@
       "id": "587d7b7a367417b2b2512b12",
       "title": "Copy Array Items Using slice()",
       "description": [
-        "The next method we will cover is <code>slice()</code>. <code>slice()</code>, rather than modifying an array, copies, or <em>extracts</em>, a given number of elements to a new array, leaving the array it is called upon untouched. <code>slice()</code> takes only 2 parameters &mdash; the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:",
-        "<blockquote>let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];<br><br>let todaysWeather = weatherConditions.slice(1, 3);<br>// todaysWeather equals ['snow', 'sleet'];<br>// weatherConditions still equals ['rain', 'snow', 'sleet', 'hail', 'clear']<br></blockquote>",
-        "In effect, we have created a new array by extracting elements from an existing array.",
+        "接下来我们要介绍 <code>slice()</code> 方法。<code>slice()</code> 并不修改数组，而是复制或者说 <em>提取（extract）</em> 给定数量的元素到一个新数组里，而被调用方法的数组则保持不变。<code>slice()</code> 只接受 2 个输入参数 &mdash; 第一个是开始提取元素的位置（索引），第二个是结束提取元素的位置（索引）（slice 方法会提取直到该索引的元素，但被提取的元素不包括该索引对应的元素）。请看以下例子：",
+        "<blockquote>let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];<br><br>let todaysWeather = weatherConditions.slice(1, 3);<br>// todaysWeather 等于 ['snow', 'sleet'];<br>// weatherConditions 仍然等于 ['rain', 'snow', 'sleet', 'hail', 'clear']<br></blockquote>",
+        "现在我们从一个已有的数组中提取了一些元素，并用这些元素创建了一个新数组。",
         "<hr>",
-        "We have defined a function, <code>forecast</code>, that takes an array as an argument. Modify the function using <code>slice()</code> to extract information from the argument array and return a new array that contains the elements <code>'warm'</code> and <code>'sunny'</code>."
+        "我们已经定义了一个 <code>forecast</code> 函数，它接受一个数组作为输入参数。请修改这个函数，利用 <code>slice()</code> 来从输入的数组中提取信息，并返回一个包含元素 <code>'warm'</code> 和 <code>'sunny'</code> 的新数组。"
       ],
       "tests": [
         {
-          "text": "<code>forecast</code> should return <code>[\"warm\", \"sunny\"]",
-          "testString": "assert.deepEqual(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']), ['warm', 'sunny'], '<code>forecast</code> should return <code>[\"warm\", \"sunny\"]');"
+          "text": "<code>forecast</code> 应该返回 <code>[\"warm\", \"sunny\"]。",
+          "testString": "assert.deepEqual(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']), ['warm', 'sunny'], '<code>forecast</code> 应该返回 <code>[\"warm\", \"sunny\"]。');"
         },
         {
-          "text": "The <code>forecast</code> function should utilize the <code>slice()</code> method",
-          "testString": "assert(/\\.slice\\(/.test(code), 'The <code>forecast</code> function should utilize the <code>slice()</code> method');"
+          "text": "<code>forecast</code> 函数中应该用到 <code>slice()</code> 方法。",
+          "testString": "assert(/\\.slice\\(/.test(code), '<code>forecast</code> 函数中应该用到 <code>slice()</code> 方法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -351,32 +351,32 @@
       "id": "587d7b7b367417b2b2512b13",
       "title": "Copy an Array with the Spread Operator",
       "description": [
-        "While <code>slice()</code> allows us to be selective about what elements of an array to copy, among several other useful tasks, ES6's new <dfn>spread operator</dfn> allows us to easily copy <em>all</em> of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: <code>...</code>",
-        "In practice, we can use the spread operator to copy an array like so:",
-        "<blockquote>let thisArray = [true, true, undefined, false, null];<br>let thatArray = [...thisArray];<br>// thatArray equals [true, true, undefined, false, null]<br>// thisArray remains unchanged, and is identical to thatArray</blockquote>",
+        "<code>slice()</code> 已经能让我们从一个数组中选择一些元素来复制到新数组中了，而 ES6 中又新引入了一个简洁且可读性强的语法 <dfn>展开运算符（spread operator）</dfn>，它能让我们方便地复制数组中的 <em>所有</em> 元素。展开语法看起来是这样的：<code>...</code>",
+        "在实践中，我们可以这样用展开运算符来复制一个数组：",
+        "<blockquote>let thisArray = [true, true, undefined, false, null];<br>let thatArray = [...thisArray];<br>// thatArray equals [true, true, undefined, false, null]<br>// thisArray 保持不变，并等于 thatArray</blockquote>",
         "<hr>",
-        "We have defined a function, <code>copyMachine</code> which takes <code>arr</code> (an array) and <code>num</code> (a number) as arguments. The function is supposed to return a new array made up of <code>num</code> copies of <code>arr</code>. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!)."
+        "我们已经定义了一个 <code>copyMachine</code> 函数，它接受 <code>arr</code>（一个数组）和 <code>num</code>（一个数字）作为输入参数。该函数应该返回一个由 <code>num</code> 个 <code>arr</code> 的副本组成的新数组。我们已经为您写好了大部分的代码，但它还不能正确地工作。请修改这个函数，使用展开语法，使该函数正确工作（提示：我们已经学到过的一个方法很适合用在这里！）"
       ],
       "tests": [
         {
-          "text": "<code>copyMachine([true, false, true], 2)</code> should return <code>[[true, false, true], [true, false, true]]</code>",
-          "testString": "assert.deepEqual(copyMachine([true, false, true], 2), [[true, false, true], [true, false, true]], '<code>copyMachine([true, false, true], 2)</code> should return <code>[[true, false, true], [true, false, true]]</code>');"
+          "text": "<code>copyMachine([true, false, true], 2)</code> 应该返回 <code>[[true, false, true], [true, false, true]]</code>。",
+          "testString": "assert.deepEqual(copyMachine([true, false, true], 2), [[true, false, true], [true, false, true]], '<code>copyMachine([true, false, true], 2)</code> 应该返回 <code>[[true, false, true], [true, false, true]]</code>。');"
         },
         {
-          "text": "<code>copyMachine([1, 2, 3], 5)</code> should return <code>[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]</code>",
-          "testString": "assert.deepEqual(copyMachine([1, 2, 3], 5), [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]], '<code>copyMachine([1, 2, 3], 5)</code> should return <code>[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]</code>');"
+          "text": "<code>copyMachine([1, 2, 3], 5)</code> 应该返回 <code>[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]</code>。",
+          "testString": "assert.deepEqual(copyMachine([1, 2, 3], 5), [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]], '<code>copyMachine([1, 2, 3], 5)</code> 应该返回 <code>[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]</code>。');"
         },
         {
-          "text": "<code>copyMachine([true, true, null], 1)</code> should return <code>[[true, true, null]]</code>",
-          "testString": "assert.deepEqual(copyMachine([true, true, null], 1), [[true, true, null]], '<code>copyMachine([true, true, null], 1)</code> should return <code>[[true, true, null]]</code>');"
+          "text": "<code>copyMachine([true, true, null], 1)</code> 应该返回 <code>[[true, true, null]]</code>。",
+          "testString": "assert.deepEqual(copyMachine([true, true, null], 1), [[true, true, null]], '<code>copyMachine([true, true, null], 1)</code> 应该返回 <code>[[true, true, null]]</code>。');"
         },
         {
-          "text": "<code>copyMachine([\"it works\"], 3)</code> should return <code>[[\"it works\"], [\"it works\"], [\"it works\"]]</code>",
-          "testString": "assert.deepEqual(copyMachine(['it works'], 3), [['it works'], ['it works'], ['it works']], '<code>copyMachine([\"it works\"], 3)</code> should return <code>[[\"it works\"], [\"it works\"], [\"it works\"]]</code>');"
+          "text": "<code>copyMachine([\"it works\"], 3)</code> 应该返回 <code>[[\"it works\"], [\"it works\"], [\"it works\"]]</code>。",
+          "testString": "assert.deepEqual(copyMachine(['it works'], 3), [['it works'], ['it works'], ['it works']], '<code>copyMachine([\"it works\"], 3)</code> 应该返回 <code>[[\"it works\"], [\"it works\"], [\"it works\"]]</code>。');"
         },
         {
-          "text": "The <code>copyMachine</code> function should utilize the <code>spread operator</code> with array <code>arr</code>",
-          "testString": "assert.notStrictEqual(copyMachine.toString().indexOf('.concat(_toConsumableArray(arr))'), -1, 'The <code>copyMachine</code> function should utilize the <code>spread operator</code> with array <code>arr</code>');"
+          "text": "<code>copyMachine</code> 函数中应该对数组 <code>arr</code> 使用 <code>spread operator</code>。",
+          "testString": "assert.notStrictEqual(copyMachine.toString().indexOf('.concat(_toConsumableArray(arr))'), -1, '<code>copyMachine</code> 函数中应该对数组 <code>arr</code> 使用 <code>spread operator</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -411,20 +411,20 @@
       "id": "587d7b7b367417b2b2512b17",
       "title": "Combine Arrays with the Spread Operator",
       "description": [
-        "Another huge advantage of the <dfn>spread</dfn> operator, is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. Spread syntax makes the following operation extremely simple:",
-        "<blockquote>let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];<br><br>let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];<br>// thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']</blockquote>",
-        "Using spread syntax, we have just achieved an operation that would have been more more complex and more verbose had we used traditional methods.",
+        "<dfn>展开运算符</dfn> 的另一个大用处是合并数组，或者将某个数组的所有元素插入到另一个数组的任意位置。用传统的语法我们也可以连接两个数组，但只能两个数组首尾相接。而展开语法能使下面的操作变得极其简单：",
+        "<blockquote>let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];<br><br>let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];<br>// thatArray 现在等于 ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']</blockquote>",
+        "使用展开语法，我们这样就实现了一个用传统方法要写得很复杂冗长的操作。",
         "<hr>",
-        "We have defined a function <code>spreadOut</code> that returns the variable <code>sentence</code>, modify the function using the <dfn>spread</dfn> operator so that it returns the array <code>['learning', 'to', 'code', 'is', 'fun']</code>."
+        "我们已经定义了一个返回 <code>sentence</code> 变量的 <code>spreadOut</code> 函数，请修改该函数，利用 <dfn>展开运算符</dfn> 使该函数返回数组 <code>['learning', 'to', 'code', 'is', 'fun']</code>。"
       ],
       "tests": [
         {
-          "text": "<code>spreadOut</code> should return <code>[\"learning\", \"to\", \"code\", \"is\", \"fun\"]</code>",
-          "testString": "assert.deepEqual(spreadOut(), ['learning', 'to', 'code', 'is', 'fun'], '<code>spreadOut</code> should return <code>[\"learning\", \"to\", \"code\", \"is\", \"fun\"]</code>');"
+          "text": "<code>spreadOut</code> 应该返回 <code>[\"learning\", \"to\", \"code\", \"is\", \"fun\"]</code>。",
+          "testString": "assert.deepEqual(spreadOut(), ['learning', 'to', 'code', 'is', 'fun'], '<code>spreadOut</code> 应该返回 <code>[\"learning\", \"to\", \"code\", \"is\", \"fun\"]</code>。');"
         },
         {
-          "text": "The <code>spreadOut</code> function should utilize spread syntax",
-          "testString": "assert.notStrictEqual(spreadOut.toString().search(/[...]/), -1, 'The <code>spreadOut</code> function should utilize spread syntax');"
+          "text": "<code>spreadOut</code> 函数里应该用到展开语法。",
+          "testString": "assert.notStrictEqual(spreadOut.toString().search(/[...]/), -1, '<code>spreadOut</code> 函数里应该用到展开语法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -454,32 +454,32 @@
       "id": "587d7b7b367417b2b2512b14",
       "title": "Check For The Presence of an Element With indexOf()",
       "description": [
-        "Since arrays can be changed, or <em>mutated</em>, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, <code>indexOf()</code>, that allows us to quickly and easily check for the presence of an element on an array. <code>indexOf()</code> takes an element as a parameter, and when called, it returns the position, or index, of that element, or <code>-1</code> if the element does not exist on the array.",
-        "For example:",
-        "<blockquote>let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];<br><br>fruits.indexOf('dates') // returns -1<br>fruits.indexOf('oranges') // returns 2<br>fruits.indexOf('pears') // returns 1, the first index at which the element exists</blockquote>",
+        "由于数组可以在任意时间被修改或者说 <em>被改变（mutated）</em>，我们不能保证某个数据在一个给定数组中的位置，甚至不能保证该元素还存在于该数组中。幸运的是，JavaScript 给我们提供了另一个内置方法 <code>indexOf()</code>。这个方法让我们可以便捷地检查某个元素是否存在于一个数组中。<code>indexOf()</code> 方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 <code>-1</code>。",
+        "例如：",
+        "<blockquote>let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];<br><br>fruits.indexOf('dates') // 返回 -1<br>fruits.indexOf('oranges') // 返回 2<br>fruits.indexOf('pears') // 返回 1，该元素在数组中的第一个索引</blockquote>",
         "<hr>",
-        "<code>indexOf()</code> can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, <code>quickCheck</code>, that takes an array and an element as arguments. Modify the function using <code>indexOf()</code> so that it returns <code>true</code> if the passed element exists on the array, and <code>false</code> if it does not."
+        "<code>indexOf()</code> 在快速检查一个数组中是否有某个元素时非常有用。我们已经定义了一个 <code>quickCheck</code> 函数，它接受一个数组和一个元素作为输入参数。请修改这个函数，利用 <code>indexOf()</code> 方法，使得当输入的数组中含有输入的元素时，函数返回 <code>true</code>；不含有输入的元素时，函数返回 <code>false</code>。"
       ],
       "tests": [
         {
-          "text": "<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"mushrooms\")</code> should return <code>false</code>",
-          "testString": "assert.strictEqual(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'), false, '<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"mushrooms\")</code> should return <code>false</code>');"
+          "text": "<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"mushrooms\")</code> 应该返回 <code>false</code>。",
+          "testString": "assert.strictEqual(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'), false, '<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"mushrooms\")</code> 应该返回 <code>false</code>。');"
         },
         {
-          "text": "<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"onions\")</code> should return <code>true</code>",
-          "testString": "assert.strictEqual(quickCheck(['squash', 'onions', 'shallots'], 'onions'), true, '<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"onions\")</code> should return <code>true</code>');"
+          "text": "<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"onions\")</code> 应该返回 <code>true</code>。",
+          "testString": "assert.strictEqual(quickCheck(['squash', 'onions', 'shallots'], 'onions'), true, '<code>quickCheck([\"squash\", \"onions\", \"shallots\"], \"onions\")</code> 应该返回 <code>true</code>。');"
         },
         {
-          "text": "<code>quickCheck([3, 5, 9, 125, 45, 2], 125)</code> should return <code>true</code>",
-          "testString": "assert.strictEqual(quickCheck([3, 5, 9, 125, 45, 2], 125), true, '<code>quickCheck([3, 5, 9, 125, 45, 2], 125)</code> should return <code>true</code>');"
+          "text": "<code>quickCheck([3, 5, 9, 125, 45, 2], 125)</code> 应该返回 <code>true</code>。",
+          "testString": "assert.strictEqual(quickCheck([3, 5, 9, 125, 45, 2], 125), true, '<code>quickCheck([3, 5, 9, 125, 45, 2], 125)</code> 应该返回 <code>true</code>。');"
         },
         {
-          "text": "<code>quickCheck([true, false, false], undefined)</code> should return <code>false</code>",
-          "testString": "assert.strictEqual(quickCheck([true, false, false], undefined), false, '<code>quickCheck([true, false, false], undefined)</code> should return <code>false</code>');"
+          "text": "<code>quickCheck([true, false, false], undefined)</code> 应该返回 <code>false</code>。",
+          "testString": "assert.strictEqual(quickCheck([true, false, false], undefined), false, '<code>quickCheck([true, false, false], undefined)</code> 应该返回 <code>false</code>。');"
         },
         {
-          "text": "The <code>quickCheck</code> function should utilize the <code>indexOf()</code> method",
-          "testString": "assert.notStrictEqual(quickCheck.toString().search(/\\.indexOf\\(/), -1, 'The <code>quickCheck</code> function should utilize the <code>indexOf()</code> method');"
+          "text": "<code>quickCheck</code> 函数中应该用到 <code>indexOf()</code> 方法。",
+          "testString": "assert.notStrictEqual(quickCheck.toString().search(/\\.indexOf\\(/), -1, '<code>quickCheck</code> 函数中应该用到 <code>indexOf()</code> 方法。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -518,20 +518,20 @@
       ],
       "tests": [
         {
-          "text": "<code>filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)</code> should return <code>[ [10, 8, 3], [14, 6, 23] ]</code>",
-          "testString": "assert.deepEqual(filteredArray([ [10, 8, 3], [14, 6, 23], [3, 18, 6] ], 18), [[10, 8, 3], [14, 6, 23]], '<code>filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)</code> should return <code>[ [10, 8, 3], [14, 6, 23] ]</code>');"
+          "text": "<code>filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)</code> 应该返回 <code>[ [10, 8, 3], [14, 6, 23] ]</code>",
+          "testString": "assert.deepEqual(filteredArray([ [10, 8, 3], [14, 6, 23], [3, 18, 6] ], 18), [[10, 8, 3], [14, 6, 23]], '<code>filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18)</code> 应该返回 <code>[ [10, 8, 3], [14, 6, 23] ]</code>');"
         },
         {
-          "text": "<code>filteredArray([ [\"trumpets\", 2], [\"flutes\", 4], [\"saxophones\", 2] ], 2)</code> should return <code>[ [\"flutes\", 4] ]</code>",
-          "testString": "assert.deepEqual(filteredArray([ ['trumpets', 2], ['flutes', 4], ['saxophones', 2] ], 2), [['flutes', 4]], '<code>filteredArray([ [\"trumpets\", 2], [\"flutes\", 4], [\"saxophones\", 2] ], 2)</code> should return <code>[ [\"flutes\", 4] ]</code>');"
+          "text": "<code>filteredArray([ [\"trumpets\", 2], [\"flutes\", 4], [\"saxophones\", 2] ], 2)</code> 应该返回 <code>[ [\"flutes\", 4] ]</code>",
+          "testString": "assert.deepEqual(filteredArray([ ['trumpets', 2], ['flutes', 4], ['saxophones', 2] ], 2), [['flutes', 4]], '<code>filteredArray([ [\"trumpets\", 2], [\"flutes\", 4], [\"saxophones\", 2] ], 2)</code> 应该返回 <code>[ [\"flutes\", 4] ]</code>');"
         },
         {
-          "text": "<code>filteredArray([ [\"amy\", \"beth\", \"sam\"], [\"dave\", \"sean\", \"peter\"] ], \"peter\")</code> should return <code>[ [\"amy\", \"beth\", \"sam\"] ]</code>",
-          "testString": "assert.deepEqual(filteredArray([['amy', 'beth', 'sam'], ['dave', 'sean', 'peter']], 'peter'), [['amy', 'beth', 'sam']], '<code>filteredArray([ [\"amy\", \"beth\", \"sam\"], [\"dave\", \"sean\", \"peter\"] ], \"peter\")</code> should return <code>[ [\"amy\", \"beth\", \"sam\"] ]</code>');"
+          "text": "<code>filteredArray([ [\"amy\", \"beth\", \"sam\"], [\"dave\", \"sean\", \"peter\"] ], \"peter\")</code> 应该返回 <code>[ [\"amy\", \"beth\", \"sam\"] ]</code>",
+          "testString": "assert.deepEqual(filteredArray([['amy', 'beth', 'sam'], ['dave', 'sean', 'peter']], 'peter'), [['amy', 'beth', 'sam']], '<code>filteredArray([ [\"amy\", \"beth\", \"sam\"], [\"dave\", \"sean\", \"peter\"] ], \"peter\")</code> 应该返回 <code>[ [\"amy\", \"beth\", \"sam\"] ]</code>');"
         },
         {
-          "text": "<code>filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)</code> should return <code>[ ]</code>",
-          "testString": "assert.deepEqual(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3), [], '<code>filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)</code> should return <code>[ ]</code>');"
+          "text": "<code>filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)</code> 应该返回 <code>[ ]</code>",
+          "testString": "assert.deepEqual(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3), [], '<code>filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)</code> 应该返回 <code>[ ]</code>');"
         },
         {
           "text": "The <code>filteredArray</code> function should utilize a <code>for</code> loop",
@@ -567,7 +567,7 @@
       "id": "587d7b7b367417b2b2512b16",
       "title": "Create complex multi-dimensional arrays",
       "description": [
-        "Awesome! You have just learned a ton about arrays! This has been a fairly high level overview, and there is plenty more to learn about working with arrays, much of which you will see in later sections. But before moving on to looking at <dfn>Objects</dfn>, lets take one more look, and see how arrays can become a bit more complex than what we have seen in previous challenges.",
+        "很好！您已经学到很多关于数组的知识了！但这些只是一个大概，您还有很多关于数组的东西要学，您将在接下来的小节中看到很多这些新知识。但在您继续去学习<dfn>对象</dfn>（<dfn>Objects</dfn>）之前，让我们再花一点时间看一看，数组怎样能够变得比之前的挑战中更复杂一点。",
         "One of the most powerful features when thinking of arrays as data structures, is that arrays can contain, or even be completely made up of other arrays. We have seen arrays that contain arrays in previous challenges, but fairly simple ones. However, arrays can contain an infinite depth of arrays that can contain other arrays, each with their own arbitrary levels of depth, and so on. In this way, an array can very quickly become very complex data structure, known as a <dfn>multi-dimensional</dfn>, or nested array. Consider the following example:",
         "<blockquote>let nestedArray = [ // top, or first level - the outer most array<br>&nbsp;&nbsp;['deep'], // an array within an array, 2 levels of depth<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;['deeper'], ['deeper'] // 2 arrays nested 3 levels deep<br>&nbsp;&nbsp;],<br>&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['deepest'], ['deepest'] // 2 arrays nested 4 levels deep<br>&nbsp;&nbsp;&nbsp;&nbsp;],<br>&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['deepest-est?'] // an array nested 5 levels deep<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;]<br>];</blockquote>",
         "While this example may seem convoluted, this level of complexity is not unheard of, or even unusual, when dealing with large amounts of data.",
@@ -763,16 +763,16 @@
           "testString": "assert.deepEqual(foods, {apples: 25, oranges: 32, plums: 28, bananas: 13, grapes: 35, strawberries: 27}, 'The <code>foods</code> object should have only the following key-value pairs: <code>apples: 25</code>, <code>oranges: 32</code>, <code>plums: 28</code>, <code>bananas: 13</code>, <code>grapes: 35</code>, <code>strawberries: 27</code>');"
         },
         {
-          "text": "<code>checkInventory(\"apples\")</code> should return <code>25</code>",
-          "testString": "assert.strictEqual(checkInventory('apples'), 25, '<code>checkInventory(\"apples\")</code> should return <code>25</code>');"
+          "text": "<code>checkInventory(\"apples\")</code> 应该返回 <code>25</code>",
+          "testString": "assert.strictEqual(checkInventory('apples'), 25, '<code>checkInventory(\"apples\")</code> 应该返回 <code>25</code>');"
         },
         {
-          "text": "<code>checkInventory(\"bananas\")</code> should return <code>13</code>",
-          "testString": "assert.strictEqual(checkInventory('bananas'), 13, '<code>checkInventory(\"bananas\")</code> should return <code>13</code>');"
+          "text": "<code>checkInventory(\"bananas\")</code> 应该返回 <code>13</code>",
+          "testString": "assert.strictEqual(checkInventory('bananas'), 13, '<code>checkInventory(\"bananas\")</code> 应该返回 <code>13</code>');"
         },
         {
-          "text": "<code>checkInventory(\"strawberries\")</code> should return <code>27</code>",
-          "testString": "assert.strictEqual(checkInventory('strawberries'), 27, '<code>checkInventory(\"strawberries\")</code> should return <code>27</code>');"
+          "text": "<code>checkInventory(\"strawberries\")</code> 应该返回 <code>27</code>",
+          "testString": "assert.strictEqual(checkInventory('strawberries'), 27, '<code>checkInventory(\"strawberries\")</code> 应该返回 <code>27</code>');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -925,21 +925,21 @@
       "id": "587d7b7d367417b2b2512b1d",
       "title": " Iterate Through the Keys of an Object with a for...in Statement",
       "description": [
-        "Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a <dfn>for...in</dfn> statement. For our <code>users</code> object, this could look like:",
+        "有时候你会需要遍历一个对象中的所有键。这需要 JavaScript 中的一个特殊语法：<dfn>for...in</dfn> 语句。以遍历 <code>users</code> 对象的键为例：",
         "<blockquote>for (let user in users) {<br>&nbsp;&nbsp;console.log(user);<br>};<br><br>// logs:<br>Alan<br>Jeff<br>Sarah<br>Ryan</blockquote>",
-        "In this statement, we defined a variable <code>user</code>, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console.",
-        "<strong>NOTE:</strong><br>Objects do not maintain an ordering to stored keys like arrays do; thus a keys position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.",
+        "在这个语句中，我们定义了一个 <code>user</code> 变量，您可以看到，这个变量在 for...in 语句对对象的每一个键的遍历中都会被重置。",
+        "<strong>注意：</strong><br>跟数组不同，对象不会维持其中的键的顺序，因此一个对象中某个键的位置，或者说它出现的相对顺序，在引用或访问该键时是不确定的。",
         "<hr>",
-        "We've defined a function, <code>countOnline</code>; use a <dfn>for...in</dfn> statement within this function to loop through the users in the <code>users</code> object and return the number of users whose <code>online</code> property is set to <code>true</code>."
+        "我们已经定义了一个 <code>countOnline</code> 函数，请在其中使用一个 <dfn>for...in</dfn> 语句来遍历 <code>users</code> 对象中的用户，并返回 <code>online</code> 属性为 <code>true</code> 的用户的数量。"
       ],
       "tests": [
         {
-          "text": "The <code>users</code> object contains users <code>Jeff</code> and <code>Ryan</code> with <code>online</code> set to <code>true</code> and users <code>Alan</code> and <code>Sarah</code> with <code>online</code> set to <code>false</code>",
-          "testString": "assert(users.Alan.online === false && users.Jeff.online === true &&  users.Sarah.online === false &&  users.Ryan.online === true, 'The <code>users</code> object contains users <code>Jeff</code> and <code>Ryan</code> with <code>online</code> set to <code>true</code> and users <code>Alan</code> and <code>Sarah</code> with <code>online</code> set to <code>false</code>');"
+          "text": "<code>users</code> 对象中应该包含 <code>online</code> 为 <code>true</code> 的用户对象 <code>Jeff</code> 和 <code>Ryan</code> 以及 <code>online</code> 为 <code>false</code> 的用户对象 <code>Alan</code> 和 <code>Sarah</code>。",
+          "testString": "assert(users.Alan.online === false && users.Jeff.online === true &&  users.Sarah.online === false &&  users.Ryan.online === true, '<code>users</code> 对象中应该包含 <code>online</code> 为 <code>true</code> 的用户对象 <code>Jeff</code> 和 <code>Ryan</code> 以及 <code>online</code> 为 <code>false</code> 的用户对象 <code>Alan</code> 和 <code>Sarah</code>。');"
         },
         {
-          "text": "The function <code>countOnline</code> returns the number of users with the <code>online</code> property set to <code>true</code>",
-          "testString": "assert((function() { users.Harry = {online: true}; users.Sam = {online: true}; users.Carl = {online: true}; return countOnline(users) })() === 5, 'The function <code>countOnline</code> returns the number of users with the <code>online</code> property set to <code>true</code>');"
+          "text": "<code>countOnline</code> 函数应该返回 <code>online</code> 属性为 <code>true</code> 的用户的数量。",
+          "testString": "assert((function() { users.Harry = {online: true}; users.Sam = {online: true}; users.Carl = {online: true}; return countOnline(users) })() === 5, '<code>countOnline</code> 函数应该返回 <code>online</code> 属性为 <code>true</code> 的用户的数量。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -987,18 +987,18 @@
       "id": "587d7b7d367417b2b2512b1e",
       "title": "Generate an Array of All Object Keys with Object.keys()",
       "description": [
-        "We can also generate an array which contains all the keys stored in an object using the <code>Object.keys()</code> method and passing in an object as the argument. This will return an array with strings representing each property in the object. Again, there will be no specific order to the entries in the array.",
+        "我们还可以输入一个对象作为参数来调用 <code>Object.keys()</code> 方法，使其生成一个包含对象中所有键的数组。这会返回一个由对象中所有键的名称（字符串）组成的数组。再次说明，这个数组中的项的顺序是不确定的。",
         "<hr>",
-        "Finish writing the <code>getArrayOfUsers</code> function so that it returns an array containing all the properties in the object it receives as an argument."
+        "请您完成 <code>getArrayOfUsers</code> 函数，使其返回一个包含输入的对象的所有属性的数组。"
       ],
       "tests": [
         {
-          "text": "The <code>users</code> object only contains the keys <code>Alan</code>, <code>Jeff</code>, <code>Sarah</code>, and <code>Ryan</code>",
-          "testString": "assert('Alan' in users && 'Jeff' in users && 'Sarah' in users && 'Ryan' in users && Object.keys(users).length === 4, 'The <code>users</code> object only contains the keys <code>Alan</code>, <code>Jeff</code>, <code>Sarah</code>, and <code>Ryan</code>');"
+          "text": "<code>users</code> 对象应该只包含 <code>Alan</code>、<code>Jeff</code>、<code>Sarah</code> 和 <code>Ryan</code> 这 4 个键",
+          "testString": "assert('Alan' in users && 'Jeff' in users && 'Sarah' in users && 'Ryan' in users && Object.keys(users).length === 4, '<code>users</code> 对象应该只包含 <code>Alan</code>、<code>Jeff</code>、<code>Sarah</code> 和 <code>Ryan</code> 这 4 个键。');"
         },
         {
-          "text": "The <code>getArrayOfUsers</code> function returns an array which contains all the keys in the <code>users</code> object",
-          "testString": "assert((function() { users.Sam = {}; users.Lewis = {}; let R = getArrayOfUsers(users); return (R.indexOf('Alan') !== -1 && R.indexOf('Jeff') !== -1 && R.indexOf('Sarah') !== -1 && R.indexOf('Ryan') !== -1 && R.indexOf('Sam') !== -1 && R.indexOf('Lewis') !== -1); })() === true, 'The <code>getArrayOfUsers</code> function returns an array which contains all the keys in the <code>users</code> object');"
+          "text": "<code>getArrayOfUsers</code> 函数应该返回一个包含 <code>users</code> 对象中所有键的数组",
+          "testString": "assert((function() { users.Sam = {}; users.Lewis = {}; let R = getArrayOfUsers(users); return (R.indexOf('Alan') !== -1 && R.indexOf('Jeff') !== -1 && R.indexOf('Sarah') !== -1 && R.indexOf('Ryan') !== -1 && R.indexOf('Sam') !== -1 && R.indexOf('Lewis') !== -1); })() === true, '<code>getArrayOfUsers</code> 函数应该返回一个包含 <code>users</code> 对象中所有键的数组。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -1046,22 +1046,22 @@
       "id": "587d7b7d367417b2b2512b1f",
       "title": "Modify an Array Stored in an Object",
       "description": [
-        "Now you've seen all the basic operations for JavaScript objects. You can add, modify, and remove key-value pairs, check if keys exist, and iterate over all the keys in an object. As you continue learning JavaScript you will see even more versatile applications of objects. Additionally, the optional Advanced Data Structures lessons later in the curriculum also cover the ES6 <dfn>Map</dfn> and <dfn>Set</dfn> objects, both of which are similar to ordinary objects but provide some additional features. Now that you've learned the basics of arrays and objects, you're fully prepared to begin tackling more complex problems using JavaScript!",
+        "现在您已经接触到 JavaScript 对象的所有运算。您可以增加、修改和移除键值对，检查某个键是否存在，并且遍历一个对象中的所有键。在您继续学习 JavaScript 的过程中，您会看到更多种多样的对对象的应用。另外，后续的《高级数据结构》课程还会介绍 ES6 的 <dfn>Map</dfn> 和 <dfn>Set</dfn> 对象。这两种对象都跟一般的对象相似，但它们提供了一些额外的特性。现在您已经学到了数组和对象的基础知识，您已经可以继续用 JavaScript 来解决更加复杂的问题了！",
         "<hr>",
-        "Take a look at the object we've provided in the code editor. The <code>user</code> object contains three keys. The <code>data</code> key contains five keys, one of which contains an array of <code>friends</code>. From this, you can see how flexible objects are as data structures. We've started writing a function <code>addFriend</code>. Finish writing it so that it takes a <code>user</code> object and adds the name of the <code>friend</code> argument to the array stored in <code>user.data.friends</code> and returns that array."
+        "请您看一下代码编辑器中我们提供的对象。<code>user</code> 对象包含 3 个键。<code>data</code> 对象包含 5 个键，其中一个包含一个 <code>friends</code> 数组。从这个例子您可以看到对象作为数据结构是多么的灵活。我们已经写了 <code>addFriend</code> 函数的一部分，请您完成这个函数，使其接受一个 <code>user</code> 对象，将 <code>friend</code> 参数中的名字添加到 <code>user.data.friends</code> 数组中并返回该数组。"
       ],
       "tests": [
         {
-          "text": "The <code>user</code> object has <code>name</code>, <code>age</code>, and <code>data</code> keys",
-          "testString": "assert('name' in user && 'age' in user && 'data' in user, 'The <code>user</code> object has <code>name</code>, <code>age</code>, and <code>data</code> keys');"
+          "text": "<code>user</code> 对象应该包含 <code>name</code>、<code>age</code> 和 <code>data</code> 三个键。",
+          "testString": "assert('name' in user && 'age' in user && 'data' in user, '<code>user</code> 对象应该包含 <code>name</code>、<code>age</code> 和 <code>data</code> 三个键。');"
         },
         {
-          "text": "The <code>addFriend</code> function accepts a <code>user</code> object and a <code>friend</code> string as arguments and adds the friend to the array of <code>friends</code> in the <code>user</code> object",
-          "testString": "assert((function() { let L1 = user.data.friends.length; addFriend(user, 'Sean'); let L2 = user.data.friends.length; return (L2 === L1 + 1); })(), 'The <code>addFriend</code> function accepts a <code>user</code> object and a <code>friend</code> string as arguments and adds the friend to the array of <code>friends</code> in the <code>user</code> object');"
+          "text": "<code>addFriend</code> 函数应该接受一个 <code>user</code> 对象和一个 <code>friend</code> 字符串作为输入参数，并将 friend 插入到 <code>user</code> 对象的 <code>friends</code> 数组中。",
+          "testString": "assert((function() { let L1 = user.data.friends.length; addFriend(user, 'Sean'); let L2 = user.data.friends.length; return (L2 === L1 + 1); })(), '<code>addFriend</code> 函数应该接受一个 <code>user</code> 对象和一个 <code>friend</code> 字符串作为输入参数，并将 friend 插入到 <code>user</code> 对象的 <code>friends</code> 数组中。');"
         },
         {
-          "text": "<code>addFriend(user, \"Pete\")</code> should return <code>[\"Sam\", \"Kira\", \"Tomo\", \"Pete\"]</code>",
-          "testString": "assert.deepEqual((function() { delete user.data.friends; user.data.friends = ['Sam', 'Kira', 'Tomo']; return addFriend(user, 'Pete') })(), ['Sam', 'Kira', 'Tomo', 'Pete'], '<code>addFriend(user, \"Pete\")</code> should return <code>[\"Sam\", \"Kira\", \"Tomo\", \"Pete\"]</code>');"
+          "text": "<code>addFriend(user, \"Pete\")</code> 应该返回 <code>[\"Sam\", \"Kira\", \"Tomo\", \"Pete\"]</code>。",
+          "testString": "assert.deepEqual((function() { delete user.data.friends; user.data.friends = ['Sam', 'Kira', 'Tomo']; return addFriend(user, 'Pete') })(), ['Sam', 'Kira', 'Tomo', 'Pete'], '<code>addFriend(user, \"Pete\")</code> 应该返回 <code>[\"Sam\", \"Kira\", \"Tomo\", \"Pete\"]</code>。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
