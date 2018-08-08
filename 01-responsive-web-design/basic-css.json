@@ -449,15 +449,15 @@
       "title": "Import a Google Font",
       "description": [
         "除了大多数系统提供的默认字体以外，我们也可以在我们的网站上使用自定义的字体。网络上有各种各样的字体，不过在这个例子中，我们将会尝试使用<code>Google</code>字体库。",
-        "<a href='https://fonts.google.com/' target='_blank'>Google 字体</a> 是一个免费的字体库，可以通过在 CSS 里面设置字体的 URL 来引用。",
+        "<a href='https://fonts.google.com/' target='_blank'>Google 字体</a>是一个免费的字体库，可以通过在 CSS 里面设置字体的 URL 来引用。",
         "因此，下一步，我们将引入和使用<code>Google</code>字体（注意：如果你所在国家禁止使用<code>Google</code>，则可以跳过这个挑战）。",
-        "引入<code>Google</code>字体，你需要复制<code>Google</code>字体的 URL，并粘贴到你的 HTML 里面。在这个挑战中，我们需要引入<code>Lobster</code>字体。因此，请复制以下代码段，并粘贴到你的代码编辑器顶部。（在<code>style</code>标签之前）。",
+        "引入<code>Google</code>字体，你需要复制<code>Google</code>字体的 URL，并粘贴到你的 HTML 里面。在这个挑战中，我们需要引入<code>Lobster</code>字体。因此，请复制以下代码段，并粘贴到你的代码编辑器顶部，即放到<code>style</code>标签之前。",
         "<code>&#60;link href=\"https://fonts.googleapis.com/css?family=Lobster\" rel=\"stylesheet\" type=\"text/css\"&#62;</code>",
         "现在你可以设置<code>font-family</code>属性为<code>Lobster</code>，来使用<code>Lobster</code>字体。例子如下：<br><code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.",
         "<code>GENERIC_NAME</code>是可选的，其他字体不可用时便作为后备字体。在下一个挑战中可以得到体现。",
         "字体名区分大小写，并且如果字体名含有空格，需要用引号括起来。例如，使用<code>\"Open Sans\"</code>字体需要添加引号，而<code>Lobster</code>字体则不需要",
         "<hr>",
-        "创建一个CSS规则，<code>font-family</code>属性里设置为<code>Lobster</code>字体，并确保适用于你所有的<code>h2</code>元素。"
+        "创建一个 CSS 规则，<code>font-family</code>属性里设置为<code>Lobster</code>字体，并把这个字体应用到所有的<code>h2</code>元素。"
       ],
       "tests": [
         {
@@ -536,15 +536,15 @@
       "id": "bad87fee1348bd9aedf08808",
       "title": "Specify How Fonts Should Degrade",
       "description": [
-        "所有浏览器都有几种默认字体。这些通用字体包括<code>monospace</code>，<code>serif</code>和<code>sans-serif</code>",
+        "所有浏览器都有几种默认字体。这些通用字体包括<code>monospace</code>，<code>serif</code>和<code>sans-serif</code>。",
         "当字体不可用，你可以告诉浏览器通过 “降级” 去使用其他字体。",
-        "例如，如果你想将一个元素的字体设置成<code>Helvetica</code>，当<code>Helvetica</code>不可用时，降级使用<code>sans-serif</code>字体，可使用以下方法：",
+        "例如，如果你想将一个元素的字体设置成<code>Helvetica</code>，当<code>Helvetica</code>不可用时，降级使用<code>sans-serif</code>字体，那么可以这样写：",
         "<blockquote>p {<br>&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>}</blockquote>",
         "通用字体名字不区分大小写。同时，也不需要使用引号，因为它们是 CSS 关键字。",
         "<hr>",
         "首先，添加<code>monospace</code>字体到<code>h2</code>元素里，它现在拥有着<code>Lobster</code>和 <code>monospace</code>两种字体。",
-        "在上一个挑战里，你通过<code>link</code>标签引入<code>Lobster</code>字体。现在让我们注释掉<code>Lobster</code>谷歌字体的引入（使用我们之前学过的<code>HTML</code>注释）,使字体失效。你会发现你的<code>h2</code>元素降级到了<code>monospace</code>字体。",
-        "<strong>注意</strong><br>如果你的电脑已经安装了<code>Lobster</code>字体，你将看不到这个降级过程，因为你的浏览器会找到该字体。"
+        "在上一个挑战里，你通过<code>link</code>标签引入<code>Lobster</code>字体。现在让我们注释掉<code>Lobster</code>谷歌字体的引入（使用我们之前学过的<code>HTML</code>注释），使字体失效。你会发现你的<code>h2</code>元素降级到了<code>monospace</code>字体。",
+        "<strong>注意：</strong><br>如果你的电脑已经安装了<code>Lobster</code>字体，你将看不到这个降级过程，因为你的浏览器会找到该字体。"
       ],
       "tests": [
         {
@@ -556,8 +556,8 @@
           "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?,\\s*monospace\\s*;\\s*\\}/gi.test(code), '<code>Lobster</code>字体失效时，你的<code>h2</code>元素应该降级为<code>monospace</code>字体。');"
         },
         {
-          "text": "通过添加<code>&#60!--</code>在<code>Lobster</code>引入的前方来注释该字体。",
-          "testString": "assert(new RegExp(\"<!--[^fc]\", \"gi\").test(code), '通过添加<code>&#60!--</code>在<code>Lobster</code>引入的前方来注释该字体。');"
+          "text": "通过添加<code>&#60!--</code>，注释掉对<code>Lobster</code>字体的引入。",
+          "testString": "assert(new RegExp(\"<!--[^fc]\", \"gi\").test(code), '通过添加<code>&#60!--</code>，注释掉对<code>Lobster</code>字体的引入。');"
         },
         {
           "text": "确保注释要以<code>--&#62;</code>结束。",
@@ -629,11 +629,11 @@
       "title": "Size Your Images",
       "description": [
         "CSS 的<code>width</code>属性可以控制元素的宽度。图片的<code>width</code>宽度类似于字体的<code>px</code>（像素)值。",
-        "假如，你想创建一个 CSS class 叫<code>larger-image</code>来控制 HTML 元素的宽度为 500px，我们可以这样：",
+        "假如，你想创建一个叫<code>larger-image</code>的 CSS class 来控制 HTML 元素的宽度为 500px，我们可以这样：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.larger-image {<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 500px;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
         "<hr>",
-        "创建一个CSS class<code>smaller-image</code>，设置图片的宽度为 100px。",
-        "<strong>注意</strong><br>由于不同浏览器的差异性，你可能需要将浏览器缩放到 100% 来通过该挑战。"
+        "创建一个<code>smaller-image</code>的 CSS class，设置图片的宽度为 100px。",
+        "<strong>注意：</strong><br>由于不同浏览器的差异性，你可能需要将浏览器缩放到 100% 来通过该挑战。"
       ],
       "tests": [
         {
@@ -713,7 +713,7 @@
         "假如，我们想要创建一个 5px 的红色实线边框包围一个 HTML 元素，我们可以这样做：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.thin-red-border {<br>&nbsp;&nbsp;&nbsp;&nbsp;border-color: red;<br>&nbsp;&nbsp;&nbsp;&nbsp;border-width: 5px;<br>&nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
         "<hr>",
-        "创建一个<code>thick-green-border</code> CSS class，该 class 应可在 HTML 元素周围添加一个 10px 的绿色实线边框。将它应用在你的猫咪照片上。",
+        "创建一个<code>thick-green-border</code> CSS class，该 class 应在 HTML 元素周围添加一个 10px 的绿色实线边框。将它应用在你的猫咪照片上。",
         "记得，在一个元素上可以同时应用多个<code>class</code>，通过使用空格来分隔。例子如下：",
         "<code>&lt;img class=\"class1 class2\"&gt;</code>"
       ],
@@ -731,12 +731,12 @@
           "testString": "assert($(\"img\").hasClass(\"thick-green-border\") && parseInt($(\"img\").css(\"border-top-width\"), 10) >= 8 && parseInt($(\"img\").css(\"border-top-width\"), 10) <= 12, '设置你的图片边框为<code>10px</code>。');"
         },
         {
-          "text": "设置你的图片样式为<code>solid</code>实线。",
-          "testString": "assert($(\"img\").css(\"border-right-style\") === \"solid\", '设置你的图片样式为<code>solid</code>实线。');"
+          "text": "设置你的图片边框为<code>solid</code>实线。",
+          "testString": "assert($(\"img\").css(\"border-right-style\") === \"solid\", '设置你的图片边框为<code>solid</code>实线。');"
         },
         {
-          "text": "你<code>img</code>元素的边框颜色应该为绿色。",
-          "testString": "assert($(\"img\").css(\"border-left-color\") === \"rgb(0, 128, 0)\", '你<code>img</code>元素的边框颜色应该为绿色。');"
+          "text": "<code>img</code>元素的边框颜色应该为绿色。",
+          "testString": "assert($(\"img\").css(\"border-left-color\") === \"rgb(0, 128, 0)\", '<code>img</code>元素的边框颜色应该为绿色。');"
         }
       ],
       "challengeType": 0,
@@ -810,7 +810,7 @@
       "description": [
         "你的猫咪图片边角很尖锐，我们可以使用<code>border-radius</code>属性来让它变得圆润。",
         "<hr>",
-        "<code>border-radius</code>可以用<code>px</code>像素单位来赋值。 给你的猫咪图片设置 10px 的<code>border-radius</code>。",
+        "<code>border-radius</code>可以用<code>px</code>像素单位来赋值。给你的猫咪图片设置 10px 的<code>border-radius</code>。",
         "注意：这个挑战有多个解决方法。例如，添加<code>border-radius</code>属性到<code>.thick-green-border</code>class 或<code>.smaller-image</code>class 里都是可行的。"
       ],
       "tests": [
@@ -995,8 +995,8 @@
       ],
       "tests": [
         {
-          "text": "给你的<code>div</code>元素添加<code>silver-background</code>class。",
-          "testString": "assert($(\"div\").hasClass(\"silver-background\"), '给你的<code>div</code>元素添加<code>silver-background</code>class。');"
+          "text": "<code>div</code>元素应有<code>silver-background</code>class。",
+          "testString": "assert($(\"div\").hasClass(\"silver-background\"), '<code>div</code>元素应有<code>silver-background</code>class。');"
         },
         {
           "text": "<code>div</code>元素背景颜色应设置为<code>silver</code>。",
@@ -1171,8 +1171,8 @@
       "id": "bad87dee1348bd9aede07836",
       "title": "Use an id Attribute to Style an Element",
       "description": [
-        "通过<code>id</code>属性，你可以做一些很酷的事情，例如，就像 class 一样，你可以使用CSS来设置他们的样式",
-        "可是，<code>id</code>不可以重用，只应用于一个元素上。同时，在 CSS 里，<code>id</code>的优先级要高于 <code>class</code>，如果一个元素同时应用了 <code>class</code> 和 <code>id</code>，并设置样式有冲突，会优先应用 <code>id</code> 的样式。",
+        "通过<code>id</code>属性，你可以做一些很酷的事情，例如，就像 class 一样，你可以使用 CSS 来设置他们的样式",
+        "可是，<code>id</code>不可以重用，只应用于一个元素上。同时，在 CSS 里，<code>id</code>的优先级要高于<code>class</code>，如果一个元素同时应用了<code>class</code>和<code>id</code>，并设置样式有冲突，会优先应用<code>id</code>的样式。",
         "选择<code>id</code>为<code>cat-photo-element</code>的元素，并设置它的背景样式为<code>green</code>，可以在你的<code>style</code>标签里这样写：",
         "<blockquote>#cat-photo-element {<br>&nbsp;&nbsp;background-color: green;<br>}</blockquote>",
         "注意在<code>style</code>标签里，声明 class 的时候必须在名字前插入<code>.</code>符号。同样，在声明 id 的时候，也必须在名字前插入<code>#</code>符号。",
@@ -1560,7 +1560,6 @@
       "title": "Add Different Margins to Each Side of an Element",
       "description": [
         "有时候，你会想给一个元素每个方向的<code>margin</code>都设置成一个特定的值。",
-        "Sometimes you will want to customize an element so that it has a different <code>margin</code> on each of its sides.",
         "CSS 允许你使用<code>margin-top</code>，<code>margin-right</code>，<code>margin-bottom</code>和<code>margin-left</code>属性来设置四个不同方向的<code>margin</code>值。",
         "<hr>",
         "蓝色盒子的顶部和左侧的<code>margin</code>值设置为<code>40px</code>，底部和右侧设置为<code>20px</code>。"
