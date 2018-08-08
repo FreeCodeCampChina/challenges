@@ -100,7 +100,7 @@
       "id": "a56138aff60341a09ed6c480",
       "title": "Inventory Update",
       "description": [
-        "创建一个<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84' target='_blank'>二维数组</a>，比较并更新存储在<code>二维数组</code>中的 ”库存“ 元素，然后并将其与新产生的第二个二维数组进行对比，更新当前的 ”库存“ 项的数量（<code>arr1</code>），如果找不到这个对比对象，那么将新的对象和数量添加到 “库存” 数组中。注意：返回的 “库存” 数组应该是按照数组元素的首字母顺序排序",
+        "创建一个<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84' target='_blank'>二维数组</a>，比较并更新存储在<code>二维数组</code>中的“库存”元素，然后并将其与新产生的第二个二维数组进行对比，更新当前的 ”库存“ 项的数量（<code>arr1</code>），如果找不到这个对比对象，那么将新的对象和数量添加到“库存”数组中。注意：返回的“库存”数组应该是按照数组元素的首字母顺序排序",
         "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人“结对编程“，但不要因此放弃思考。",
       ],
       "solutions": [
@@ -173,9 +173,9 @@
       "id": "a7bf700cd123b9a54eef01d5",
       "title": "No Repeats Please",
       "description": [
-        "把一个字符串中的字符重新排列生成新的字符串，返回新生成的字符串里没有连续重复字符的字符串个数。连续重复只以单个字符为准。",
-        "例如：<code>aab</code>应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（ 字符 a 是本例中的重复字符 ）：<code>aba</code>，<code>aba</code>",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人” 结对编程 “，但不要因此放弃思考。"
+        "把一个字符串中的所有的字符重新排列，然后生成一个新的字符串，返回的新字符串中没有连续重复的字符。连续重复是以单个字符为判断标准。",
+        "例如：<code>aab</code>应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（字符 a 是本例中的重复字符）：<code>aba</code>，<code>aba</code>",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'> 帮助 </a>。你可以找人“结对编程“，但不要因此放弃思考。",
       ],
       "solutions": [
         "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: 全局数组：包含排列的列表 \ n  //usedChars: 全局实用数组，其中一个列表包含 \"currently-in-use\"字符  var permArr = [], usedChars = [];\n  function permute(input) {\n    // 将输入参数转换成一个字符串数组 （每个字符都有一个元素）\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      // 从字符数组中获取并删除索引为\"i\"的字符 \n      ch = chars.splice(i, 1);\n      // 将删除的字符增加的使用字符的末尾 \n      usedChars.push(ch);\n      // 当char数组中没有其他字符添加时，添加使用的chars列表来排列排列 \n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      // 从char数组发送字符（减去上面删除的字符）进行置换 \n      permute(chars.join(\"\"));\n      // 将删除的数组添加回char数组中的原位置 \n      chars.splice(i, 0, ch);\n      //删除使用过的字符数组末尾使用的最后一个字符 \n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
