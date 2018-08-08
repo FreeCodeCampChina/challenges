@@ -1,11 +1,12 @@
 # Introduction to the JSON APIs and AJAX Challenges #
 
-Similar to how User Interfaces help people use programs, Application Programming Interfaces (APIs) help programs interact with other programs. APIs are tools that computers use to communicate with one another, in part to send and receive data. You can use API functionality in your page once you understand how to make requests and process data from it. Programmers often use AJAX technologies when working with APIs.
+用户界面是用来帮助人们如何使用程序，而应用编程接口（APIs）是用来帮助程序与其他程序交互。APIs 是计算机间相互通信的工具，专门用于发送和接受数据。当你理解了如何发送请求和处理数据后，你就可以在页面中使用 API 了，程序员们通常会使用 AJAX 技术来发起 API 请求。
 
-The term AJAX originated as an acronym for Asynchronous JavaScript And XML. It refers to a group of technologies that make asynchronous requests to a server to transfer data, then load any returned data into the page. An asynchronous process has a couple key properties. The browser does not stop loading a page to wait for the server's response. Also, the browser inserts updated data into part of the page without having to refresh the entire page.
+AJAX 术语 是 Asynchronous JavaScript And XML 的首字母缩写，它不是一个单一技术，而是一系列技术的组合。它向服务器发出异步请求以传输数据，然后将返回的数据加载到页面中。正是因为 AJAX 是异步的，所以浏览器不会停止加载页面来等待服务器的响应，也无需刷新整个页面就可以将更新的数据插入页面。
 
-User experience benefits from asynchronous processes in several ways. Pages load faster since the browser isn't waiting for the server to respond in the middle of a page render. Requests and transfers happen in the background, without interrupting what the user is doing. When the browser receives new data, only the necessary area of the page refreshes. These qualities especially enhance the user experience for single page applications.
+异步能在多方面提升用户的体验，由于浏览器不用在渲染页面的时候等待服务器做出响应，因而页面的加载速度更快。请求和传输都在后台进行，不会中断用户当前的操作。当浏览器接受到新的数据的时候，只有特定的区域会刷新，这些特性很大程度上增强了单页应用程序的用户体验。
 
-The data transferred between the browser and server is often in a format called JavaScript Object Notation (JSON). JSON resembles JavaScript object literal syntax, except that it's transferred as a string. Once received, it can be converted into an object and used in a script.
+浏览器和服务器之间传输的数据通常使用一种叫 JSON（JavaScript Object Notation）的格式。JSON 类似于 JavaScript 的对象字面量语法，只是它是以字符串的形式传输，一旦接收，就可以将其转换成对象在脚本中使用。
 
-This section covers how to transfer and use data using AJAX technologies with a freeCodeCamp API.
+本节将通过 freeCodeCamp API 的使用来了解 AJAX 技术的数据传输和使用。
+

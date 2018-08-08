@@ -86,7 +86,7 @@
           "name": "index",
           "contents": [
             "function sym(args) {",
-            "  return args;",
+            "return args;",
             "}",
             "",
             "sym([1, 2, 3], [5, 2, 1, 4]);"
@@ -248,37 +248,37 @@
       "id": "a3f503de51cfab748ff001aa",
       "title": "Pairwise",
       "description": [
-        "Given an array <code>arr</code>, find element pairs whose sum equal the second argument <code>arg</code> and return the sum of their indices.",
-        "You may use multiple pairs that have the same numeric elements but different indices. Each pair should use the lowest possible available indices. Once an element has been used it cannot be reused to pair with another element. For instance, <code>pairwise([1, 1, 2], 3)</code> creates a pair <code>[2, 1]</code> using the 1 at indice 0 rather than the 1 at indice 1, because 0+2 < 1+2.",
-        "For example <code>pairwise([7, 9, 11, 13, 15], 20)</code> returns <code>6</code>. The pairs that sum to 20 are <code>[7, 13]</code> and <code>[9, 11]</code>. We can then write out the array with their indices and values.",
-        "<table class=\"table\"><tr><th><strong>Index</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Value</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
-        "Below we'll take their corresponding indices and add them.",
-        "7 + 13 = 20 &#8594; Indices 0 + 3 = 3<br>9 + 11 = 20 &#8594; Indices 1 + 2 = 3<br>3 + 3 = 6 &#8594 Return <code>6</code>",
-        "Remember to use <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code."
+        "给定一个数组<code>arr</code>，查找其总和等于第二个参数“<code> arg </code>”的元素对，并返回其索引的总和。",
+        "你可以使用多个具有相同数字元素但不同索引的对。每对应该使用尽可能低的可用索引。一旦一个元素被使用，它就不能被重用来与另一个元素配对。例如，<code>pairwise([1, 1, 2], 3)</code>使用索引为 0 的元素 1 而不是索引为 1 的元素 1 创建一对<code>[ 2，1 ]</code>，因为 0 + 2 < 1 + 2。",
+        "例如：<code>pairwise([7, 9, 11, 13, 15], 20)</code>返回<code>6</code>。满足和为 20 的一组数组是：<code>[7, 13]</code>和<code>[9, 11]</code>，然后我们可以写出对应的数组，以及他们的索引与他们的值。",
+        "<table class=\"table\"><tr><th><strong>索引</strong></th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>值</td><td>7</td><td>9</td><td>11</td><td>13</td><td>15</td></tr></table>",
+        "然后我们将对应的索引相加，",
+        "7 + 13 = 20 &#8594；索引 0 + 3 = 3<br>9 + 11 = 20 &#8594； 索引 1 + 2 = 3<br>3 + 3 = 6 &#8594 应该返回<code>6</code>。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "solutions": [
         "function pairwise(arr, arg) {\n  var sum = 0;\n  arr.forEach(function(e, i, a) {\n    if (e != null) {      \n      var diff = arg-e;\n      a[i] = null;\n      var dix = a.indexOf(diff);\n      if (dix !== -1) {\n        sum += dix;\n        sum += i;\n        a[dix] = null;\n      }  \n    }\n  });\n  return sum;\n}\n\npairwise([1,4,2,3,0,5], 7);\n"
       ],
       "tests": [
         {
-          "text": "<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code> should return 11.",
-          "testString": "assert.deepEqual(pairwise([1, 4, 2, 3, 0, 5], 7), 11, '<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code> should return 11.');"
+          "text": "<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code>应该返回 11。",
+          "testString": "assert.deepEqual(pairwise([1, 4, 2, 3, 0, 5], 7), 11,'<code>pairwise([1, 4, 2, 3, 0, 5], 7)</code>应该返回 11。');"
         },
         {
-          "text": "<code>pairwise([1, 3, 2, 4], 4)</code> should return 1.",
-          "testString": "assert.deepEqual(pairwise([1, 3, 2, 4], 4), 1, '<code>pairwise([1, 3, 2, 4], 4)</code> should return 1.');"
+          "text": "<code>pairwise([1, 3, 2, 4], 4)</code>应该返回 1。",
+          "testString": "assert.deepEqual(pairwise([1, 3, 2, 4], 4), 1,'<code>pairwise([1, 3, 2, 4], 4)</code>应该返回 1。');"
         },
         {
-          "text": "<code>pairwise([1, 1, 1], 2)</code> should return 1.",
-          "testString": "assert.deepEqual(pairwise([1, 1, 1], 2), 1, '<code>pairwise([1, 1, 1], 2)</code> should return 1.');"
+          "text": "<code>pairwise([1, 1, 1], 2)</code>应该返回 1。",
+          "testString": "assert.deepEqual(pairwise([1, 1, 1], 2), 1,'<code>pairwise([1, 1, 1], 2)</code>应该返回 1。');"
         },
         {
-          "text": "<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code> should return 10.",
-          "testString": "assert.deepEqual(pairwise([0, 0, 0, 0, 1, 1], 1), 10, '<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code> should return 10.');"
+          "text": "<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code>应该返回 1。.",
+          "testString": "assert.deepEqual(pairwise([0, 0, 0, 0, 1, 1], 1), 10,'<code>pairwise([0, 0, 0, 0, 1, 1], 1)</code>应该返回 1。.');"
         },
         {
-          "text": "<code>pairwise([], 100)</code> should return 0.",
-          "testString": "assert.deepEqual(pairwise([], 100), 0, '<code>pairwise([], 100)</code> should return 0.');"
+          "text": "<code>pairwise([], 100)</code>应该返回 0。",
+          "testString": "assert.deepEqual(pairwise([], 100), 0,'<code>pairwise([], 100)</code>应该返回 0。');"
         }
       ],
       "MDNlinks": [
@@ -306,28 +306,29 @@
       "id": "8d5123c8c441eddfaeb5bdef",
       "title": "Implement Bubble Sort",
       "description": [
-        "This is the first of several challenges on sorting algorithms. Given an array of unsorted items, we want to be able to return a sorted array. We will see several different methods to do this and learn some tradeoffs between these different approaches. While most modern languages have built-in sorting methods for operations like this, it is still important to understand some of the common basic approaches and learn how they can be implemented.",
-        "Here we will see bubble sort. The bubble sort method starts at the beginning of an unsorted array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. It does this by comparing adjacent items and swapping them if they are out of order. The method continues looping through the array until no swaps occur at which point the array is sorted.",
-        "This method requires multiple iterations through the array and for average and worst cases has quadratic time complexity. While simple, it is usually impractical in most situations.",
-        "<strong>Instructions:</strong> Write a function <code>bubbleSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "<a href='https://baike.baidu.com/item/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F' target='_blank'>冒泡排序</code>，将是你遇到的几个排序算法中的第一个。给定一个未排序的数组，我们期望能够返回的是一个有序的数组。我们将采用不同的几种方式来实现这个功能，并且了解到不同方式的优劣之处，找到最适合的方式来实现不同的应用环境。尽管大多数的现代编程语言在内部构建了这种排序方式并提供了相应的 API，但仍然很有必要了解一些基本的方法并且知道他们是如何完成实现的",
+        "现在我们来了解一下冒泡排序。冒泡排序方法从未排序的数组<em>开头</em>开始，并且将未排序的数组元素往后挪移，然后迭代数组，直到所有的数组元素都完全排序后才停止。这种方式是，通过比较相邻的元素然后置换元素完成排序。这种方式就是便利循环数组，直到整个数组没有元素交换为止，这样就完成了冒泡排序。这个算法的名字由来是因为越大的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样，故名“冒泡排序”。",
+        "这种方式通过多次迭代数组来完成操作，不管是平均还是最坏的情况，都是具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。尽管这个方式简单，但是在实际应用中，大多数情况下不切实际的：时间复杂度过高。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>bubbleSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>bubbleSort</code> is a function.",
-          "testString": "assert(typeof bubbleSort == 'function', '<code>bubbleSort</code> is a function.');"
+          "text": "<code>bubbleSort</code>是一个函数。",
+          "testString": "assert(typeof bubbleSort =='function','<code>bubbleSort</code>是一个函数');"
         },
         {
-          "text": "<code>bubbleSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>bubbleSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>bubbleSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])),'<code>bubbleSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>bubbleSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>bubbleSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>bubbleSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(bubbleSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92],'<code>bubbleSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>bubbleSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>bubbleSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>bubbleSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1,'<code>bubbleSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -340,13 +341,13 @@
           "name": "index",
           "contents": [
             "function bubbleSort(array) {",
-            "  // change code below this line",
+            "// 请在下方区域编写代码",
             "",
-            "  // change code above this line",
-            "  return array;",
+            "// 请在上方区域编写代码",
+            "return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试数组：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
@@ -363,26 +364,27 @@
       "id": "587d8259367417b2b2512c85",
       "title": "Implement Selection Sort",
       "description": [
-        "Here we will implement selection sort. Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted. Selection sort has quadratic time complexity in all cases.",
-        "<strong>Instructions</strong>: Write a function <code>selectionSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "现在我们开始实现<a href='https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F' target='_blank'>选择排序</a>。选择排序是通过选择列表中最小值来与列表中的第一个值进行对比交换，然后从第二位置开始逐一对比，选择剩下的列表中最小值与第二个元素交换位置。然后循环遍历列表并交换元素，直到列表最后一个元素，此时的列表就完成了排序。选择排序在所有的情况下都具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>selectionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。"
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>selectionSort</code> is a function.",
-          "testString": "assert(typeof selectionSort == 'function', '<code>selectionSort</code> is a function.');"
+          "text": "<code>selectionSort</code>是一个函数。",
+          "testString": "assert(typeof selectionSort == 'function', '<code>selectionSort</code>是一个函数。');"
         },
         {
-          "text": "<code>selectionSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>selectionSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>selectionSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>selectionSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>selectionSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>selectionSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>selectionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(selectionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>selectionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>selectionSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>selectionSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>selectionSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>selectionSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -395,13 +397,13 @@
           "name": "index",
           "contents": [
             "function selectionSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试数组：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
@@ -418,26 +420,27 @@
       "id": "587d8259367417b2b2512c86",
       "title": "Implement Insertion Sort",
       "description": [
-        "The next sorting method we'll look at is insertion sort. This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element. Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position. It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end. This algorithm has quadratic time complexity in the average and worst cases.",
-        "<strong>Instructions:</strong> Write a function <code>insertionSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "现在我们开始研究<a href='https://baike.baidu.com/item/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F'  target='_blank'>插入排序</a>。这个方法通过在列表的开头见一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的书中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>insertionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>insertionSort</code> is a function.",
-          "testString": "assert(typeof insertionSort == 'function', '<code>insertionSort</code> is a function.');"
+          "text": "<code>insertionSort</code>是一个函数。",
+          "testString": "assert(typeof insertionSort == 'function', '<code>insertionSort</code>是一个函数。');"
         },
         {
-          "text": "<code>insertionSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>insertionSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>insertionSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>insertionSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>insertionSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>insertionSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>insertionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(insertionSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>insertionSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>insertionSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>insertionSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>insertionSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>insertionSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -450,13 +453,13 @@
           "name": "index",
           "contents": [
             "function insertionSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域标写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域标写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试数组：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
@@ -473,27 +476,28 @@
       "id": "587d825a367417b2b2512c89",
       "title": "Implement Quick Sort",
       "description": [
-        "Here we will move on to an intermediate sorting algorithm: quick sort. Quick sort is an efficient, recursive divide-and-conquer approach to sorting an array. In this method, a pivot value is chosen in the original array. The array is then partitioned into two subarrays of values less than and greater than the pivot value. We then combine the result of recursively calling the quick sort algorithm on both sub-arrays. This continues until the base case of an empty or single-item array is reached, which we return. The unwinding of the recursive calls return us the sorted array.",
-        "Quick sort is a very efficient sorting method, providing <i>O(nlog(n))</i> performance on average. It is also relatively easy to implement. These attributes make it a popular and useful sorting method.",
-        "<strong>Instructions:</strong> Write a function <code>quickSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest. While the choice of the pivot value is important, any pivot will do for our purposes here. For simplicity, the first or last element could be used.",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "现在我们开始讨论<a href='https://baike.baidu.com/item/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95?fromtitle=%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F&fromid=2084344' target='_blank'>快速排序</code>。快速排序是一种高效的递归分治方法来排序数组。在这个方法中，需要在原始数组中选择一个枢轴值，然后将数组划分为两个子数组，其值大于或者小于枢轴值，然后我们将递归调用两个子数组上的快速排序算法的结果来配合使用，直到空数组或者单个元素的数组的情况，然后返回结果。递归调用的展开结果将返回的是排序后的数组。",
+        "快速排序是一种非常有效的排序方式，平均<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>为<i>O(nlog(n))</i>，同时它也是相对比较容易实现的方式。这些特性使得快速排序成为了一种流行而有用的排序方式。",
+        "<strong>说明：</strong>创建一个函数并命名为<code>quickSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。虽然选择一个枢轴值很重要，但任何一个枢轴都能满足要求，为了以防万一，我嘛一般选择第一个或者最后一个元素来作为数轴值。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>quickSort</code> is a function.",
-          "testString": "assert(typeof quickSort == 'function', '<code>quickSort</code> is a function.');"
+          "text": "<code>quickSort</code>是一个函数。",
+          "testString": "assert(typeof quickSort == 'function', '<code>quickSort</code>是一个函数。');"
         },
         {
-          "text": "<code>quickSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>quickSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>quickSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>quickSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>quickSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>quickSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>quickSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(quickSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>quickSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>quickSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>quickSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>quickSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>quickSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -506,13 +510,13 @@
           "name": "index",
           "contents": [
             "function quickSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写代码",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写代码",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试函数：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
@@ -529,30 +533,32 @@
       "id": "587d825c367417b2b2512c8f",
       "title": "Implement Merge Sort",
       "description": [
-        "Another intermediate sorting algorithm that is very common is merge sort. Like quick sort, merge sort also uses a divide-and-conquer, recursive methodology to sort an array. It takes advantage of the fact that it is relatively easy to sort two arrays as long as each is sorted in the first place. But we'll start with only one array as input, so how do we get to two sorted arrays from that? Well, we can recursively divide the original input in two until we reach the base case of an array with one item. A single-item array is naturally sorted, so then we can start combining. This combination will unwind the recursive calls that split the original array, eventually producing a final sorted array of all the elements. The steps of merge sort, then, are:",
-        "<strong>1)</strong> Recursively split the input array in half until a sub-array with only one element is produced.",
-        "<strong>2)</strong> Merge each sorted sub-array together to produce the final sorted array.",
-        "Merge sort is an efficient sorting method, with time complexity of <i>O(nlog(n))</i>. This algorithm is popular because it is performant and relatively easy to implement.",
-        "As an aside, this will be the last sorting algorithm we cover here. However, later in the section on tree data structures we will describe heap sort, another efficient sorting method that requires a binary heap in its implementation.",
-        "<strong>Instructions:</strong> Write a function <code>mergeSort</code> which takes an array of integers as input and returns an array of these integers in sorted order from least to greatest. A good way to implement this is to write one function, for instance <code>merge</code>, which is responsible for merging two sorted arrays, and another function, for instance <code>mergeSort</code>, which is responsible for the recursion that produces single-item arrays to feed into merge. Good luck!",
-        "<strong>Note:</strong><br>We are calling this function from behind the scenes; the test array we are using is commented out in the editor. Try logging <code>array</code> to see your sorting algorithm in action!"
+        "另一种非常常见的排序方式是<a href='https://baike.baidu.com/item/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F' target='_blank'>归并排序</code>。如同快速排序一样，归并排序也是采用了分而治之的递归方法来排序数组。它利用了这么一个现象，即只要首先对两个数组进行排序，就比较容易对他们进行排序。但是我们的参数只能一个数组，那么又将如何从这个数组中得到两个排序数组呢？我们可以递归的将原始数组一分为二，直到数组里面只包含一个元素为止。单个元素的数组是自然排序的，所以我们可以开始合并。这种合并方式是将拆分的原始数组进行递归调用，最后将所有的元素生成一个最终的排序数组。",
+        "合并的步骤是：",
+        "<strong>1)</strong>：递归的将输入数组拆分成两个子数组，直到所有的子数组都只包含一个元素。",
+        "<strong>2)</strong>：将每一个排序后的子数组合并到一个数组里面，最后返回一个排序的数组。",
+        "归并排序是一种高效的排序方式，<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>为<i>O(nlog(n))</i>。因为归并排序的性能优良且相对容易实现，所有这种排序方式很受欢迎。",
+        "另外，这将是我们在此章节讨论的最后一种排序算法，但是在后续有关<strong>树型数据结构</strong>的章节中，我们将一起研究<strong>堆排序</strong>，同样它也是一种高效的排序方式，其实现过程需要用到二进制堆的概念。",
+        "<strong>Instructions</strong>：创建一个函数并命名为<code>mergeSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组>。实现这个排序方式可以采用两个函数来实现：<code>merge</code>负责合并两个排序的数组，<code>merge sort</code>负责生成单个数组的用于归并使用。祝你好用！",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
       ],
       "tests": [
         {
-          "text": "<code>mergeSort</code> is a function.",
-          "testString": "assert(typeof mergeSort == 'function', '<code>mergeSort</code> is a function.');"
+          "text": "<code>mergeSort</code>是一个函数。",
+          "testString": "assert(typeof mergeSort == 'function', '<code>mergeSort</code>是一个函数。');"
         },
         {
-          "text": "<code>mergeSort</code> returns a sorted array (least to greatest).",
-          "testString": "assert(isSorted(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>mergeSort</code> returns a sorted array (least to greatest).');"
+          "text": "<code>mergeSort</code>返回的应该是按照从最小到最大的排序的数组。",
+          "testString": "assert(isSorted(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92])), '<code>mergeSort</code>返回的应该是按照从最小到最大的排序的数组。');"
         },
         {
-          "text": "<code>mergeSort</code> returns an array that is unchanged except for order.",
-          "testString": "assert.sameMembers(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>mergeSort</code> returns an array that is unchanged except for order.');"
+          "text": "<code>mergeSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。",
+          "testString": "assert.sameMembers(mergeSort([1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92]), [1,4,2,8,345,123,43,32,5643,63,123,43,2,55,1,234,92], '<code>mergeSort</code>返回的数组除了顺序之后应该是没有任何其他的改变的。');"
         },
         {
-          "text": "<code>mergeSort</code> should not use the built-in <code>.sort()</code> method.",
-          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>mergeSort</code> should not use the built-in <code>.sort()</code> method.');"
+          "text": "<code>mergeSort</code>不要使用内置的排序方式：<code>.sort()</code>。",
+          "testString": "assert.strictEqual(code.search(/\\.sort\\(/), -1, '<code>mergeSort</code>不要使用内置的排序方式：<code>.sort()</code>。');"
         }
       ],
       "solutions": [],
@@ -565,13 +571,13 @@
           "name": "index",
           "contents": [
             "function mergeSort(array) {",
-            "  // change code below this line",
+            "  // 请在下方区域编写函数",
             "",
-            "  // change code above this line",
+            "  // 请在上方区域编写函数",
             "  return array;",
             "}",
             "",
-            "// test array:",
+            "// 测试函数：",
             "// [1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]"
           ],
           "head": [],
