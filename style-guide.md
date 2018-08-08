@@ -220,16 +220,6 @@
 
     </details>
 
-4. 英文中经常出现从句（构成复杂句），翻译的时候可以适当地补充主语或宾语。
-
-    <details><summary>示例</summary>
-    原文：`Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes.`
-
-    :slightly_frowning_face: `媒体查询是 CSS3 中引入的一项可以根据不同的可视窗口大小来显示不同布局的新技术。`  
-    :smiley: `媒体查询是 CSS3 中引入的一项新技术，它可以根据不同的可视窗口大小来调整页面布局。`  
-
-    </details>
-
 5. 英文中的时态有时不必刻意翻译出来。
 
     <details><summary>示例</summary>

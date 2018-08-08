@@ -242,7 +242,7 @@
 
 <details><summary><b>我已经开了 PR，但代码历史记录很乱，而且文件改动包含了不是我改的东西，如何修复？（多见于曾经在这个分支上用过 pull 命令，现在使用 pull --rebase 的情况，见下文分析）</b></summary>
 
-  如果对 git 不是很熟悉（特别是 `git brease -i` 以及 `rebase` 命令的原理），重建一个新的分支，然后把当前这个分支里属于你的 file change 给 apply 过去，再用新的分支开 PR 是最省事的做法。
+  如果对 git 不是很熟悉（特别是 `git rebase -i` 以及 `rebase` 命令的原理），重建一个新的分支，然后把当前这个分支里属于你的 file change 给 apply 过去，再用新的分支开 PR 是最省事的做法。
   
   假设你目前处于 `translate-old` 分支上，你改动了文件 `02-javascript-algorithms/abc.json` 以及 `02-javascript-algorithms/abc.md`，且你已经用当前的 `translate-old` 分支开了 PR：
   
@@ -266,7 +266,7 @@
   # add、commit、push
   git add .
   git commit -m "Finish translation of xxx"
-  git push origin transalte-new
+  git push origin translate-new
 
   # 然后用这个新的 translate-new 分支去开 PR 就好了
   ```
