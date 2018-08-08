@@ -17,13 +17,13 @@
       "title": "Create a Redux Store",
       "releasedOn": "December 25, 2017",
       "description": [
-        "Redux is a state management framework that can be used with a number of different web technologies, including React.",
-        "In Redux, there is a single state object that's responsible for the entire state of your application. This means if you had a React app with ten components, and each component had its own local state, the entire state of your app would be defined by a single state object housed in the Redux <code>store</code>. This is the first important principle to understand when learning Redux: the Redux store is the single source of truth when it comes to application state.",
-        "This also means that any time any piece of your app wants to update state, it <strong>must</strong> do so through the Redux store. The unidirectional data flow makes it easier to track state management in your app.",
-        "<hr>",
-        "The Redux <code>store</code> is an object which holds and manages application <code>state</code>. There is a method called <code>createStore()</code> on the Redux object, which you use to create the Redux <code>store</code>. This method takes a <code>reducer</code> function as a required argument. The <code>reducer</code> function is covered in a later challenge, and is already defined for you in the code editor. It simply takes <code>state</code> as an argument and returns <code>state</code>.",
-        "Declare a <code>store</code> variable and assign it to the <code>createStore()</code> method, passing in the <code>reducer</code> as an argument.",
-        "<strong>Note:</strong>&nbsp;The code in the editor uses ES6 default argument syntax to initialize this state to hold a value of <code>5</code>. If you're not familiar with default arguments, you can refer to the <a target=\"_blank\" href=\"http://beta.freecodecamp.com/en/challenges/es6/set-default-parameters-for-your-functions\">ES6 section in the Beta Curriculum</a> which covers this topic."
+        "Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。",
+        "在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个组件且每个组件都有自己的本地状态的 React 项目，那么这个项目的整个状态将通过 Redux <code>store</code> 被定义为单个状态对象， 这是学习 Redux 时要理解的第一个重要原则：Redux 存储是应用程序状态的唯一真实来源。",
+        "这也意味着，如果你的应用程序想要更新状态，只能通过 Redux store 执行，单向数据流可以更轻松地对应用程序中的状态进行监测管理。",
+
+        "Redux <code>store</code> 是一个保存和管理应用程序状态的 <code>state</code>，你可以使用Redux对象中的 <code>createStore()</code> 来创建一个 redux <code>store</code>，此方法将 <code>reducer</code> 函数作为必需参数，<code>reducer</code> 函数将在后面的挑战中介绍,该函数已在代码编辑器中为您定义，它只需将 <code>state</code> 作为参数并返回一个 <code>state</code> 即可。",
+        "声明一个 <code>store</code> 变量并把它分配给 <code>createStore()</code> 方法，然后把 <code>reducer</code> 作为一个参数传入即可。",
+        "注意: 编辑器中的代码使用ES6默认参数语法初始化 state 以保存 <code>5</ code> 的值， 如果你不熟悉默认参数，你可以参考<a target=\"_blank\" href=\"http://beta.freecodecamp.com/en/challenges/es6/set-default-parameters-for-your-functions\">ES6全部课程</a>，它里面涵盖了这个内容。"
       ],
       "files": {
         "indexjsx": {
@@ -35,9 +35,9 @@
             "  return state;",
             "}",
             "",
-            "// Redux methods are available from a Redux object",
-            "// For example: Redux.createStore()",
-            "// Define the store here:",
+            "// Redux 方法可以从 Redux 对象获得",
+            "// 例如: Redux.createStore()",
+            "// 在这里定义一个 store :",
             "",
             ""
           ],
@@ -47,16 +47,16 @@
       },
       "tests": [
         {
-          "text": "The redux store exists.",
-          "testString": "assert(typeof store.getState === 'function', 'The redux store exists.');"
+          "text": "redux store 已经存在",
+          "testString": "assert(typeof store.getState === 'function', 'redux store 已经存在');"
         },
         {
-          "text": "The redux store has a value of 5 for the state.",
-          "testString": "assert(store.getState()=== 5, 'The redux store has a value of 5 for the state.');"
+          "text": "redux store 的 state 的值为 5",
+          "testString": "assert(store.getState()=== 5, 'redux store 的 state 的值为 5');"
         }
       ],
       "solutions": [
-        "const reducer = (state = 5) => {\n  return state;\n}\n\n// Redux methods are available from a Redux object\n// For example: Redux.createStore()\n// Define the store here:\n\nconst store = Redux.createStore(reducer);"
+        "const reducer = (state = 5) => {\n  return state;\n}\n\n// Redux 方法可以从 Redux 对象获得\n// 例如: Redux.createStore()\n// 在这里定义一个 store:\n\nconst store = Redux.createStore(reducer);"
       ],
       "challengeType": 6,
       "isRequired": false,
