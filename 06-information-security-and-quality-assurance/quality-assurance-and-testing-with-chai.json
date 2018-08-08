@@ -8,21 +8,21 @@
       "id": "587d824a367417b2b2512c46",
       "title": "Learn How JavaScript Assertions Work",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Use assert.isNull() or assert.isNotNull() to make the tests pass."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "使用 assert.isNull() 或 assert.isNotNull() 通过测试。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isNull vs. isNotNull",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[0].method, 'isNull', 'Null is null'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isNull vs. isNotNull",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[0].method, 'isNull', 'Null 是 null'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isNull vs. isNotNull",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[1].method, 'isNotNull', '1 is not null'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isNull vs. isNotNull",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[1].method, 'isNotNull', '1 不是 null'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -34,25 +34,25 @@
       "id": "587d824b367417b2b2512c47",
       "title": "Test if a Variable or Function is Defined",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Use assert.isDefined() or assert.isUndefined() to make the tests pass"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "使用 assert.isDefined() 或 assert.isUndefined() 通过测试。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isDefined vs. isUndefined",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[0].method, 'isDefined', 'Null is not undefined'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[0].method, 'isDefined', 'Null 不是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isDefined vs. isUndefined",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[1].method, 'isUndefined', 'Undefined is undefined'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[1].method, 'isUndefined', 'Undefined 是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isDefined vs. isUndefined",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[2].method, 'isDefined', 'A string is not undefined'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[2].method, 'isDefined', '字符串不是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -64,26 +64,26 @@
       "id": "587d824b367417b2b2512c48",
       "title": "Use Assert.isOK and Assert.isNotOK",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Use assert.isOk() or assert.isNotOk() to make the tests pass.",
-        ".isOk(truthy) and .isNotOk(falsey) will pass."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "使用 assert.isOk() 或 assert.isNotOk() 通过测试。",
+        ".isOk(truthy) 和 .isNotOk(falsey) 可以通过测试。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isOk vs. isNotOk",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[0].method, 'isNotOk', 'Null is falsey'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[0].method, 'isNotOk', 'Null 是假值'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isOk vs. isNotOk",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[1].method, 'isOk','A string is truthy'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[1].method, 'isOk','字符串是真值'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isOk vs. isNotOk",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[2].method, 'isOk', 'true is truthy'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[2].method, 'isOk', 'true 是真值'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -95,27 +95,27 @@
       "id": "587d824b367417b2b2512c49",
       "title": "Test for Truthiness",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Use assert.isTrue() or assert.isNotTrue() to make the tests pass.",
-        ".isTrue(true) and .isNotTrue(everything else) will pass.",
-        ".isFalse() and .isNotFalse() also exist."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "使用 assert.isTrue() 或 assert.isNotTrue() 通过测试。",
+        ".isTrue(true) 和 .isNotTrue(everything else) 可以通过测试。",
+        ".isFalse() 和 .isNotFalse() 断言同样存在。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isTrue vs. isNotTrue",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[0].method, 'isTrue', 'True is true'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[0].method, 'isTrue', 'True 是 true'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isTrue vs. isNotTrue",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[1].method, 'isTrue', 'Double negation of a truthy value is true'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[1].method, 'isTrue', '双重否定的真值是 true'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isTrue vs. isNotTrue",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[2].method, 'isNotTrue', 'A truthy object is not true - neither is a false one'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[2].method, 'isNotTrue', '真值对象不是 true - 也不是 false'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -127,30 +127,30 @@
       "id": "587d824b367417b2b2512c4a",
       "title": "Use the Double Equals to Assert Equality",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        ".equal(), .notEqual()",
-        ".equal() compares objects using '=='"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        ".equal()，.notEqual()",
+        ".equal() 使用 '==' 比较对象"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - equal vs. notEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[0].method, 'equal', 'Numbers are coerced into strings with == '); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - equal vs. notEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[0].method, 'equal', '数字会被 == 强行转换为字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - equal vs. notEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[1].method, 'notEqual', ' == compares object references'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - equal vs. notEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[1].method, 'notEqual', ' == 比较对象引用'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - equal vs. notEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[2].method, 'equal', '6 * \\'2\\' is 12 ! It should be equal to \\'12\\''); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - equal vs. notEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[2].method, 'equal', '6 * \\'2\\' 为 12 ! 它应该等于 \\'12\\''); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - equal vs. notEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[3].method, 'notEqual', '6 + \\'2\\' is \\'62\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - equal vs. notEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[3].method, 'notEqual', '6 + \\'2\\' 为 \\'62\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -162,30 +162,30 @@
       "id": "587d824b367417b2b2512c4b",
       "title": "Use the Triple Equals to Assert Strict Equality",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        ".strictEqual(), .notStrictEqual()",
-        ".strictEqual() compares objects using '==='"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        ".strictEqual()，.notStrictEqual()",
+        ".strictEqual() 使用 '===' 比较对象"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - strictEqual vs. notStrictEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[0].method, 'notStrictEqual', 'with strictEqual the type must match'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[0].method, 'notStrictEqual', '使用 strictEqual，类型必须一样'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - strictEqual vs. notStrictEqual",
+          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[1].method, 'strictEqual', '3*2 = 6...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - strictEqual vs. notStrictEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[2].method, 'strictEqual', '6 * \\'2\\' is 12. Types match !'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[2].method, 'strictEqual', '6 * \\'2\\' 为 12。类型匹配！'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - strictEqual vs. notStrictEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[3].method, 'notStrictEqual', 'Even if they have the same elements, the Arrays are notStrictEqual'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[3].method, 'notStrictEqual', '即使拥有相同的元素，数组也不是严格相等'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -197,22 +197,22 @@
       "id": "587d824c367417b2b2512c4c",
       "title": "Assert Deep Equality with .deepEqual and .notDeepEqual",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        ".deepEqual(), .notDeepEqual()",
-        ".deepEqual() asserts that two object are deep equal"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        ".deepEqual()，.notDeepEqual()",
+        ".deepEqual() 断言两个对象是否 deep equal"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - deepEqual vs. notDeepEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[0].method, 'deepEqual', 'The order of the keys does not matter'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - deepEqual vs. notDeepEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[0].method, 'deepEqual', '键的顺序不影响 deepEqual'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - deepEqual vs. notDeepEqual",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[1].method, 'notDeepEqual', 'The position of elements within an array does matter'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - deepEqual vs. notDeepEqual",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[1].method, 'notDeepEqual', '数组元素顺序影响 deepEqual'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -224,29 +224,29 @@
       "id": "587d824c367417b2b2512c4d",
       "title": "Compare the Properties of Two Elements",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        ".isAbove() => a > b , .isAtMost() => a <= b"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        ".isAbove() => a > b ，.isAtMost() => a <= b"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isAbove vs. isAtMost",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[0].method, 'isAtMost', '5 is at most (<=) 5'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[0].method, 'isAtMost', '5 <= 5'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isAbove vs. isAtMost",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[1].method, 'isAbove', '1 is greater than 0'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[1].method, 'isAbove', '1 大于 0'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isAbove vs. isAtMost",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[2].method, 'isAbove', 'Math.PI = 3.14159265 is greater than 3'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[2].method, 'isAbove', 'Math.PI = 3.14159265 大于 3'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isAbove vs. isAtMost",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[3].method, 'isAtMost', '1 - Math.random() is > 0 and <= 1. It is atMost 1 !'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[3].method, 'isAtMost', '1 - Math.random() is > 0 且 <= 1'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -258,29 +258,29 @@
       "id": "587d824c367417b2b2512c4e",
       "title": "Test if One Value is Below or At Least as Large as Another",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        ".isBelow() => a < b , .isAtLeast =>  a >= b"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        ".isBelow() => a < b ，.isAtLeast =>  a >= b"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isBelow vs. isAtLeast",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[0].method, 'isAtLeast', '5 is at least (>=) 5'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[0].method, 'isAtLeast', '5 >= 5'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isBelow vs. isAtLeast",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[1].method, 'isAtLeast', '2 * Math.random() is at least 0'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[1].method, 'isAtLeast', '2 * Math.random() >= 0'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isBelow vs. isAtLeast",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[2].method, 'isBelow', '1 is smaller than 2'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[2].method, 'isBelow', '1 小于 2'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isBelow vs. isAtLeast",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[3].method, 'isBelow', '2/3 (0.6666) is smaller than 1'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[3].method, 'isBelow', '2/3 (0.6666) 小于 1'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -292,25 +292,25 @@
       "id": "587d824c367417b2b2512c4f",
       "title": "Test if a Value Falls within a Specific Range",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
         ".approximately",
         ".approximately(actual, expected, range, [message])",
         "actual = expected +/- range",
-        "Choose the minimum range (3rd parameter) to make the test always pass",
-        "it should be less than 1"
+        "填写最小的 range（第三个参数）使测试总是通过",
+        "该值应小于 1"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "Use approximately(actual, expected, range) - Chose the correct range",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(data => {  assert.equal(data.assertions[0].method, 'approximately');  assert.equal(data.assertions[0].args[2], 0.5, 'weirdNumbers(0.5) is in the range (0.5, 1.5]. It\\'s within 1 +/- 0.5'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(data => {  assert.equal(data.assertions[0].method, 'approximately');  assert.equal(data.assertions[0].args[2], 0.5, 'weirdNumbers(0.5) 区间为 (0.5, 1.5]，在 1 +/- 0.5 之内'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
           "text": "Use approximately(actual, expected, range) - Chose the correct range",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(data => {  assert.equal(data.assertions[1].method, 'approximately');  assert.equal(data.assertions[1].args[2], 0.8, 'weirdNumbers(0.2) is in the range (0.2, 1.2]. It\\'s within 1 +/- 0.8'); }, xhr => { throw new Error(xhr.responseText); })"
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=9').then(data => {  assert.equal(data.assertions[1].method, 'approximately');  assert.equal(data.assertions[1].args[2], 0.8, 'weirdNumbers(0.2) 区间为 (0.2, 1.2]，在 1 +/- 0.8 之内'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -322,20 +322,20 @@
       "id": "587d824d367417b2b2512c50",
       "title": "Test if a Value is an Array",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isArray vs. isNotArray",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[0].method, 'isArray', 'String.prototype.split() returns an Array'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isArray vs. isNotArray",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[0].method, 'isArray', 'String.prototype.split() 返回数组'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isArray vs. isNotArray",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[1].method, 'isNotArray', 'Array.prototype.indexOf() returns a number'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isArray vs. isNotArray",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[1].method, 'isNotArray', 'Array.prototype.indexOf() 返回数值'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -347,20 +347,20 @@
       "id": "587d824d367417b2b2512c51",
       "title": "Test if an Array Contains an Item",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - include vs. notInclude",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[0].method, 'notInclude', 'It\\'s summer in july...'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - include vs. notInclude",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[0].method, 'notInclude', '七月是夏天...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - include vs. notInclude",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[1].method, 'include', 'JavaScript is a backend language !!'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - include vs. notInclude",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[1].method, 'include', 'JavaScript 是后端语言！'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -372,25 +372,25 @@
       "id": "587d824d367417b2b2512c52",
       "title": "Test if a Value is a String",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#isString asserts that the actual value is a string."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#isString 断言一个值为字符串。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isString vs. isNotString",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[0].method, 'isNotString', 'A float number is not a string'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isString vs. isNotString",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[0].method, 'isNotString', 'float number 不是字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isString vs. isNotString",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[1].method, 'isString', 'environment vars are strings (or undefined)'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isString vs. isNotString",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[1].method, 'isString', '环境变量是 strings（ 或 undefined）'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - isString vs. isNotString",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[2].method, 'isString', 'A JSON is a string'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - isString vs. isNotString",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[2].method, 'isString', 'JSON 是字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -402,22 +402,22 @@
       "id": "587d824d367417b2b2512c53",
       "title": "Test if a String Contains a Substring",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#include (on #notInclude ) works for strings too !!",
-        "It asserts that the actual string contains the expected substring"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#include（相对于 #notInclude）也可用于字符串！",
+        "它断言字符串包含某个子串"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - include vs. notInclude",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[0].method, 'include', '\\'Arrow\\' contains \\'row\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - include vs. notInclude",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[0].method, 'include', '\\'Arrow\\' 包含 \\'row\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - include vs. notInclude",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[1].method, 'notInclude', '... a \\'dart\\' doesn\\'t contain a \\'queue\\''); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - include vs. notInclude",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[1].method, 'notInclude', '... \\'dart\\' 不包含 \\'queue\\''); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -429,22 +429,22 @@
       "id": "587d824d367417b2b2512c54",
       "title": "Use Regular Expressions to Test a String",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#match Asserts that the actual value",
-        "matches the second argument regular expression."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#match 断言一个值匹配一个正则表达式（第二个参数）",
+        ""
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - match vs. notMatch",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[0].method, 'match', '\\'# name: John Doe, age: 35\\' matches the regex'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - match vs. notMatch",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[0].method, 'match', '\\'# name: John Doe, age: 35\\' 匹配正则表达式'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - match vs. notMatch",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[1].method, 'notMatch', '\\'# name: Paul Smith III, age: twenty-four\\' does not match the regex (the age must be numeric)'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - match vs. notMatch",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[1].method, 'notMatch', '\\'# name: Paul Smith III, age: twenty-four\\' 不匹配正则表达式（age 必须是数字）'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -456,26 +456,26 @@
       "id": "587d824e367417b2b2512c55",
       "title": "Test if an Object has a Property",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#property asserts that the actual object has a given property.",
-        "Use #property or #notProperty where appropriate"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#property 断言一个对象含有给定属性。",
+        "在适当的地方使用 #property 或 #notProperty"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - property vs. notProperty",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[0].method, 'notProperty', 'A car has not wings'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - property vs. notProperty",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[0].method, 'notProperty', 'car 没有 wings'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - property vs. notProperty",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[1].method, 'property', 'planes have engines'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - property vs. notProperty",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[1].method, 'property', 'planes 有 engines'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - property vs. notProperty",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[2].method, 'property', 'Cars have wheels'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - property vs. notProperty",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[2].method, 'property', 'Cars 有 wheels'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -487,34 +487,34 @@
       "id": "587d824e367417b2b2512c56",
       "title": "Test if a Value is of a Specific Data Structure Type",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#typeOf asserts that value’s type is the given string, as determined by Object.prototype.toString.",
-        "Use #typeOf or #notTypeOf where appropriate"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#typeOf 断言一个值的类型是给定字符串，这个字符串由 Object.prototype.toString 决定。",
+        "在适当的地方使用 #typeOf 或 #notTypeOf"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - typeOf vs. notTypeOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[0].method, 'typeOf', 'myCar is typeOf Object'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[0].method, 'typeOf', 'myCar 是 Object'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - typeOf vs. notTypeOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[1].method, 'typeOf', 'Car.model is a String'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[1].method, 'typeOf', 'Car.model 是 String'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - typeOf vs. notTypeOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[2].method, 'notTypeOf', 'Plane.wings is a Number (not a String)'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[2].method, 'notTypeOf', 'Plane.wings 是 Number（不是 String）'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - typeOf vs. notTypeOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[3].method, 'typeOf', 'Plane.engines is an Array'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[3].method, 'typeOf', 'Plane.engines 是 Array'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - typeOf vs. notTypeOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[4].method, 'typeOf', 'Car.wheels is a Number'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[4].method, 'typeOf', 'Car.wheels 是 Number'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -526,30 +526,30 @@
       "id": "587d824e367417b2b2512c57",
       "title": "Test if an Object is an Instance of a Constructor",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "#instanceOf asserts that an object is an instance of a constructor.",
-        "Use #instanceOf or #notInstanceOf where appropriate"
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "#instanceOf 断言一个对象是一个构造器的实例",
+        "在适当的地方使用 #instanceOf 或 #notInstanceOf"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - instanceOf vs. notInstanceOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[0].method, 'notInstanceOf', 'myCar is not an instance of Plane'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[0].method, 'notInstanceOf', 'myCar 不是 Plane 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - instanceOf vs. notInstanceOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[1].method, 'instanceOf', 'airlinePlane is an instance of Plane'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[1].method, 'instanceOf', 'airlinePlane 是 Plane 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - instanceOf vs. notInstanceOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[2].method, 'instanceOf', 'everything is an Object in JavaScript...'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[2].method, 'instanceOf', 'JavaScript 中万物都是对象...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "Choose the right assertion - instanceOf vs. notInstanceOf",
-          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[3].method, 'notInstanceOf', 'myCar.wheels is not an instance of String'); }, xhr => { throw new Error(xhr.responseText); })"
+          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[3].method, 'notInstanceOf', 'myCar.wheels 不是 String 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
       "solutions": [],
@@ -561,21 +561,21 @@
       "id": "587d824e367417b2b2512c58",
       "title": "Run Functional Tests on API Endpoints using Chai-HTTP",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Replace assert.fail(). Test the status and the text.response. Make the test pass.",
-        "Don't send a name in the query, the endpoint with responds with 'hello Guest'."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "替换 assert.fail()。测试 status 和 text.response，使测试通过。",
+        "不要在 query 中传入 name，端点将会返回 'hello Guest'."
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.status' == 200",
+          "text": "你需要测试 'res.status' == 200",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(data => { assert.equal(data.assertions[0].method, 'equal'); assert.equal(data.assertions[0].args[0], 'res.status'); assert.equal(data.assertions[0].args[1], '200');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.text' == 'hello Guest'",
+          "text": "你需要测试 'res.text' == 'hello Guest'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=0').then(data => { assert.equal(data.assertions[1].method, 'equal'); assert.equal(data.assertions[1].args[0], 'res.text'); assert.equal(data.assertions[1].args[1], '\\'hello Guest\\'');}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -588,21 +588,21 @@
       "id": "587d824f367417b2b2512c59",
       "title": "Run Functional Tests on API Endpoints using Chai-HTTP II",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "Replace assert.fail(). Test the status and the text.response. Make the test pass.",
-        "Send you name in the query appending ?name=<your_name>, the endpoint with responds with 'hello <your_name>'."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "替换 assert.fail()。测试 status 和 text.response，使测试通过。",
+        "在 query 中传入你的名字 ?name=<your_name>，端点会返回 'hello <your_name>'。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=1').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.status' == 200",
+          "text": "你需要测试 'res.status' == 200",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=1').then(data => { assert.equal(data.assertions[0].method, 'equal'); assert.equal(data.assertions[0].args[0], 'res.status'); assert.equal(data.assertions[0].args[1], '200');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.text' == 'hello Guest'",
+          "text": "你需要测试 'res.text' == 'hello Guest'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=1').then(data => { assert.equal(data.assertions[1].method, 'equal'); assert.equal(data.assertions[1].args[0], 'res.text'); assert.match(data.assertions[1].args[1], /hello [\\w\\d_-]/);}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -615,37 +615,37 @@
       "id": "587d824f367417b2b2512c5a",
       "title": "Run Functional Tests on an API Response using Chai-HTTP III - PUT method",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "In the next example we'll see how to send data in a request payload (body).",
-        "We are going to test a PUT request. The '/travellers' endpoint accepts",
-        "a JSON object taking the structure :",
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "下一个例子我们将了解如何使用 request payload（body）发送数据。",
+        "我们准备测试发送到 '/travellers' 端点的 PUT 请求",
+        "JSON 对象结构如下：",
         " {surname: [last name of a traveller of the past]} ,",
-        "The route responds with :",
+        "route 相应如下：",
         " {name: [first name], surname:[last name], dates: [birth - death years]}",
-        "see the server code for more details.",
-        "Send {surname: 'Colombo'}. Replace assert.fail() and make the test pass.",
-        "Check for 1) status, 2) type, 3) body.name, 4) body.surname",
-        "Follow the assertion order above, We rely on it."
+        "更多细节请查看服务器代码。",
+        "发送 {surname: 'Colombo'}。替换 assert.fail()，使测试通过。",
+        "测试 1) status, 2) type, 3) body.name, 4) body.surname",
+        "请按照以上顺序书写断言，顺序错误会影响系统判定。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.status' to be 200",
+          "text": "你需要测试 'res.status' 是否为 200",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(data => { assert.equal(data.assertions[0].method, 'equal'); assert.equal(data.assertions[0].args[0], 'res.status'); assert.equal(data.assertions[0].args[1], '200');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.type' to be 'application/json'",
+          "text": "你需要测试 'res.type' 是否为 'application/json'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(data => { assert.equal(data.assertions[1].method, 'equal'); assert.equal(data.assertions[1].args[0], 'res.type'); assert.equal(data.assertions[1].args[1], '\\'application/json\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.body.name' to be 'Cristoforo'",
+          "text": "你需要测试 'res.body.name' 是否为 'Cristoforo'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(data => { assert.equal(data.assertions[2].method, 'equal'); assert.equal(data.assertions[2].args[0], 'res.body.name'); assert.equal(data.assertions[2].args[1], '\\'Cristoforo\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.body.surname' to be 'Colombo'",
+          "text": "你需要测试 'res.body.surname' 是否为 'Colombo'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=2').then(data => { assert.equal(data.assertions[3].method, 'equal'); assert.equal(data.assertions[3].args[0], 'res.body.surname'); assert.equal(data.assertions[3].args[1], '\\'Colombo\\'');}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -658,31 +658,31 @@
       "id": "587d824f367417b2b2512c5b",
       "title": "Run Functional Tests on an API Response using Chai-HTTP IV - PUT method",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "This exercise is similar to the preceding. Look at it for the details.",
-        "Send {surname: 'da Verrazzano'}. Replace assert.fail() and make the test pass.",
-        "Check for 1) status, 2) type, 3) body.name, 4) body.surname",
-        "Follow the assertion order above, We rely on it."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "这个练习与上一个类似，我们详细看看。",
+        "发送 {surname: 'da Verrazzano'}。替换 assert.fail()，使测试通过。",
+        "测试 for 1) status, 2) type, 3) body.name, 4) body.surname",
+        "请按照以上顺序书写断言，顺序错误会影响系统判定。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=3').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.status' to be 200",
+          "text": "你需要测试 'res.status' 是否为 200",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=3').then(data => { assert.equal(data.assertions[0].method, 'equal'); assert.equal(data.assertions[0].args[0], 'res.status'); assert.equal(data.assertions[0].args[1], '200');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.type' to be 'application/json'",
+          "text": "你需要测试 'res.type' 是否为 'application/json'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=3').then(data => { assert.equal(data.assertions[1].method, 'equal'); assert.equal(data.assertions[1].args[0], 'res.type'); assert.equal(data.assertions[1].args[1], '\\'application/json\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.body.name' to be 'Giovanni'",
+          "text": "你需要测试 'res.body.name' 是否为 'Giovanni'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=3').then(data => { assert.equal(data.assertions[2].method, 'equal'); assert.equal(data.assertions[2].args[0], 'res.body.name'); assert.equal(data.assertions[2].args[1], '\\'Giovanni\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "You should test for 'res.body.surname' to be 'da Verrazzano'",
+          "text": "你需要测试 'res.body.surname' 是否为 'da Verrazzano'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=3').then(data => { assert.equal(data.assertions[3].method, 'equal'); assert.equal(data.assertions[3].args[0], 'res.body.surname'); assert.equal(data.assertions[3].args[1], '\\'da Verrazzano\\'');}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -695,31 +695,31 @@
       "id": "587d824f367417b2b2512c5c",
       "title": "Run Functional Tests using a Headless Browser",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "In the next challenges we are going to simulate the human interaction with a page using a device called 'Headless Browser'.",
-        "A headless browser is a web browser without a graphical user interface. These kind of tools are particularly useful for testing web pages as they are able to render and understand HTML, CSS, and JavaScript the same way a browser would.",
-        "For these challenges we are using Zombie.JS. It's a lightweight browser which is totally based on JS, without relying on additional binaries to be installed. This feature makes it usable in an environment such as Glitch. There are many other (more powerful) options.<br>",
-        "Look at the examples in the code for the exercise directions Follow the assertions order, We rely on it."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "下一项挑战，我们将会使用无头浏览器模拟人机交互。",
+        "无头浏览器是一种没有图形用户界面的浏览器。这类工具对网页调试特别有效，因为它们可以跟普通浏览器一样理解和渲染 HTML，CSS 和 JavaScript。",
+        "这次挑战我们使用 Zombie.JS。它是一款完全基于 JS 的轻量级浏览器，不需要安装其他二进制文件。这个特性使它可以轻松在如 Glitch 的环境下使用。还有很多（更强大的）选项。<br>",
+        "看看此挑战的给出的代码指引。请按顺序书写断言，顺序错误会影响系统判定。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the headless browser request succeeded",
+          "text": "断言无头浏览器请求成功",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(data => { assert.equal(data.assertions[0].method, 'browser.success'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the text inside the element 'span#name' is 'Cristoforo'",
+          "text": "断言 'span#name' 元素里的文字为 'Cristoforo'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(data => { assert.equal(data.assertions[1].method, 'browser.text'); assert.equal(data.assertions[1].args[0], '\\'span#name\\''); assert.equal(data.assertions[1].args[1], '\\'Cristoforo\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the text inside the element 'span#surname' is 'Colombo'",
+          "text": "断言 'span#surname' 元素里的文字为 'Colombo'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(data => { assert.equal(data.assertions[2].method, 'browser.text'); assert.equal(data.assertions[2].args[0], '\\'span#surname\\''); assert.equal(data.assertions[2].args[1], '\\'Colombo\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the element 'span#dates' exist and its count is 1",
+          "text": "断言 'span#dates' 的存在，并且计数为 1",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=4').then(data => { assert.equal(data.assertions[3].method, 'browser.element'); assert.equal(data.assertions[3].args[0], '\\'span#dates\\''); assert.equal(data.assertions[3].args[1], 1);}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -732,29 +732,29 @@
       "id": "587d8250367417b2b2512c5d",
       "title": "Run Functional Tests using a Headless Browser II",
       "description": [
-        "As a reminder, this project is being built upon the following starter project on <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>, or cloned from <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a>.",
-        "This exercise is similar to the preceding.",
-        "Look at  the code for directions. Follow the assertions order, We rely on it."
+        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "这个练习与上一个类似。",
+        "看看此挑战的给出的代码指引。请按顺序书写断言，顺序错误会影响系统判定。"
       ],
       "tests": [
         {
-          "text": "All tests should pass",
+          "text": "需通过全部测试",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": " assert that the headless browser request succeeded",
+          "text": "断言无头浏览器请求成功",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(data => { assert.equal(data.assertions[0].method, 'browser.success'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the text inside the element 'span#name' is 'Amerigo'",
+          "text": "断言 'span#name' 元素里的文字为 'Amerigo'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(data => { assert.equal(data.assertions[1].method, 'browser.text'); assert.equal(data.assertions[1].args[0], '\\'span#name\\''); assert.equal(data.assertions[1].args[1], '\\'Amerigo\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the text inside the element 'span#surname' is 'Vespucci'",
+          "text": "断言 'span#surname' 元素里的文字为 'Vespucci'",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(data => { assert.equal(data.assertions[2].method, 'browser.text'); assert.equal(data.assertions[2].args[0], '\\'span#surname\\''); assert.equal(data.assertions[2].args[1], '\\'Vespucci\\'');}, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "assert that the element 'span#dates' exist and its count is 1",
+          "text": "断言 'span#dates' 的存在，并且计数为 1",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=5').then(data => { assert.equal(data.assertions[3].method, 'browser.element'); assert.equal(data.assertions[3].args[0], '\\'span#dates\\''); assert.equal(data.assertions[3].args[1], 1);}, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
