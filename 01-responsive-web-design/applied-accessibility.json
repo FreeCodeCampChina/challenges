@@ -8,16 +8,16 @@
       "id": "587d774c367417b2b2512a9c",
       "title": "Add a Text Alternative to Images for Visually Impaired Accessibility",
       "description": [
-        "It's likely you've seen an <code>alt</code> attribute on an <code>img</code> tag in other challenges. <code>Alt</code> text describes the content of the image and provides a text-alternative. This helps in case the image fails to load or can't be seen by a user. It's also used by search engines to understand what an image contains to include it in search results. Here's an example:",
+        "在其他挑战里你应该已经使用过 <code>img</code> 标签的 <code>alt</code> 属性了。<code>Alt</code> 属性中的文本作为备选文字描述了图片的内容，这有助于用户在图片加载失败或者不可见的情况下理解图片内容，也有助于搜索引擎理解图片内容，并将其加入到搜索结果中。例如：",
         "<code>&lt;img src=&quot;importantLogo.jpeg&quot; alt=&quot;Company logo&quot;&gt;</code>",
-        "People with visual impairments rely on screen readers to convert web content to an audio interface. They won't get information if it's only presented visually. For images, screen readers can access the <code>alt</code> attribute and read its contents to deliver key information.",
-        "Good <code>alt</code> text is short but descriptive, and meant to briefly convey the meaning of the image. You should always include an <code>alt</code> attribute on your image. Per HTML5 specification, this is now considered mandatory.",
+        "那些无法通过视觉获取信息的用户，只能通过屏幕阅读器将网页内容转换为音频的方式获取信息，而屏幕阅读器是通过识别并朗读图片 <code>alt</code> 属性中的内容，来传递图片包含的关键信息。",
+        "良好的 <code>alt</code> 文本可以简明扼要地描述图片信息，所以你的图片最好总是包含一个<code>alt</code>属性。HTML5 文档正在考虑强制要求这点。",
         "<hr>",
-        "Camper Cat happens to be both a coding ninja and an actual ninja, and is building a website to share his knowledge. The profile picture he wants to use shows his skills, and should be appreciated by all site visitors. Add an <code>alt</code> attribute in the <code>img</code> tag, that explains Camper Cat is doing karate. (The image <code>src</code> doesn't link to an actual file, so you should see the <code>alt</code> text in the display.)"
+        "碰巧，无论是 Camper 新手还是 Camper 老鸟，正在建立一个可以分享其知识的网站。他要使用一张对所有网站访问者都能有效识别的个人资料图片来展示他的技巧。给 <code>img</code> 标签上添加一个 <code>alt</code> 属性，就是Camper Cat的绝招。（图片的 <code>src</code> 并不指向任何文件，你应该能在显示器上看到 <code>alt</code> 文本。）"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have an <code>alt</code> attribute, and it should not be empty.",
+          "text": "你的 <code>img</code> 应该有一个包含说明性文字的 <code>alt</code> 属性。",
           "testString": "assert($('img').attr('alt'), 'Your <code>img</code> tag should have an <code>alt</code> attribute, and it should not be empty.');"
         }
       ],
@@ -43,21 +43,21 @@
       "id": "587d774c367417b2b2512a9d",
       "title": "Know When Alt Text Should be Left Blank",
       "description": [
-        "In the last challenge, you learned that including an <code>alt</code> attribute on img tags is mandatory. However, sometimes images are grouped with a caption already describing them, or are used for decoration only. In these cases <code>alt</code> text may seem redundant or unnecessary.",
-        "In situations when an image is already explained with text content, or does not add meaning to a page, the <code>img</code> still needs an <code>alt</code> attribute, but it can be set to an empty string. Here's an example:",
+        "在上一个挑战中，我们了解到在 <code>img</code> 标签里必须要包含一个 <code>alt</code> 属性。但是有时候，图片已经有了文字说明，或者仅仅为了美化页面。在这些情况下，<code>alt</code> 属性似乎有些多余。",
+        "但是即使图片已经有文字说明或者对页面来说没有意义，我们仍然需要为 <code>img</code> 标签添加 <code>alt</code> 属性，这种情况下，可以把它设为空，例如：",
         "<code>&lt;img src=&quot;visualDecoration.jpeg&quot; alt=&quot;&quot;&gt;</code>",
-        "Background images usually fall under the 'decorative' label as well. However, they are typically applied with CSS rules, and therefore not part of the markup screen readers process.",
-        "<strong>Note</strong><br>For images with a caption, you may still want to include <code>alt</code> text, since it helps search engines catalog the content of the image.",
+        "对于背景图片，它们通常起装饰作用，而且含有CSS类，所以，背景图片不会被屏幕阅读器处理。",
+        "<strong>Note</strong><br>对于有说明文字的图片，我们依然需要添加 <code>alt</code> 属性，因为这样有助于搜索引擎记录图片内容。",
         "<hr>",
-        "Camper Cat has coded a skeleton page for the blog part of his website. He's planning to add a visual break between his two articles with a decorative image of a samurai sword. Add an <code>alt</code> attribute to the <code>img</code> tag and set it to an empty string. (Note that the image <code>src</code> doesn't link to an actual file - don't worry that there are no swords showing in the display.)"
+        "Camper Cat已经为他的网站中的博客页面编码好了框架。他打算使用武士刀图片作为两篇文章之间的分割线。为 <code>img</code> 标签添加一个空的 <code>alt</code> 属性。（<code>img</code>标签的 <code>src</code> 不需要连接到真实的图片 - 显示器不会显示任何刀剑。）"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> tag should have an <code>alt</code> attribute.",
+          "text": "你的 <code>img</code> 标签需要包含一个 <code>alt</code> 属性",
           "testString": "assert(!($('img').attr('alt') == undefined), 'Your <code>img</code> tag should have an <code>alt</code> attribute.');"
         },
         {
-          "text": "The <code>alt</code> attribute should be set to an empty string.",
+          "text": "<code>alt</code> 属性的值应该为空字符串。",
           "testString": "assert($('img').attr('alt') == '', 'The <code>alt</code> attribute should be set to an empty string.');"
         }
       ],
@@ -93,23 +93,23 @@
       "id": "587d774d367417b2b2512a9e",
       "title": "Use Headings to Show Hierarchical Relationships of Content",
       "description": [
-        "Headings (<code>h1</code> through <code>h6</code> elements) are workhorse tags that help provide structure and labeling to your content. Screen readers can be set to read only the headings on a page so the user gets a summary. This means it is important for the heading tags in your markup to have semantic meaning and relate to each other, not be picked merely for their size values.",
-        "<em>Semantic meaning</em> means that the tag you use around content indicates the type of information it contains.",
-        "If you were writing a paper with an introduction, a body, and a conclusion, it wouldn't make much sense to put the conclusion as a subsection of the body in your outline. It should be its own section. Similarly, the heading tags in a webpage need to go in order and indicate the hierarchical relationships of your content.",
-        "Headings with equal (or higher) rank start new implied sections, headings with lower rank start subsections of the previous one.",
-        "As an example, a page with an <code>h2</code> element followed by several subsections labeled with <code>h4</code> tags would confuse a screen reader user. With six choices, it's tempting to use a tag because it looks better in a browser, but you can use CSS to edit the relative sizing.",
-        "One final point, each page should always have one (and only one) <code>h1</code> element, which is the main subject of your content. This and the other headings are used in part by search engines to understand the topic of the page.",
+        "标题标签（包含从<code>h1</code> 到 <code>h6</code> 的六个不同级别的标签）有很高的使用率，它们有助于为你的内容安排结构并标记内容。屏幕阅读器可以设置为只朗读页面的标题，以使用户获得页面的主题。这意味着一个重要的事实：要使你的标志具有语义化并相互关联，而不要仅仅为了利用它们之间不同的字体大小。",
+        "<em>语义化</em>是说为你的内容所用的标签，能表示出它所含内容的信息类型。",
+        "如果你正在写一篇含有引言、正文、结论的论文，在你的概述中，把结论作为正文的一小节是没有意义的。结论应该作为一个单独部分。类似的，页面中的标题标签应该是有序的，并且能指明内容的层次关系。",
+        "同级别（或者更高级别）的标题应该作为一个新的章节，而低级别的标题作为上一级标题的小节部分。",
+        "例如：一个 <code>h2</code> 标签后紧跟若干用 <code>h4</code> 标签标记的小节的页面，会使屏幕阅读器用户感到疑惑。使用6个标题标签来控制字体的大小是很吸引人的，因为在浏览器中，它们看起来更好，但是你也可以使用CSS来控制字体的相对大小。",
+        "最后一点，每个页面只能有一个 <code>h1</code> 标签，用来说明页面主要内容。这个标签和其他的标题标签一起用于辅助搜索引擎理解页面的主题。",
         "<hr>",
-        "Camper Cat wants a page on his site dedicated to becoming a ninja. Help him fix the headings so his markup gives semantic meaning to the content, and shows the proper parent-child relationships of his sections. Change all the <code>h5</code> tags to the proper heading level to indicate they are subsections of the <code>h2</code> ones."
+        "Camper Cat希望他的网站有个页面，指明如何成为忍者。帮助他修改标题标签，使它们对标题具有语义，并且父子关系正确。将所有的 <code>h5</code> 标题标签修改为恰当的级别，以表示它们是 <code>h2</code> 标题标签的子级。"
       ],
       "tests": [
         {
-          "text": "Your code should have six <code>h3</code> tags.",
-          "testString": "assert($('h3').length === 6, 'Your code should have six <code>h3</code> tags.');"
+          "text": "你的代码需要包含6个 <code>h3</code> 标签。",
+          "testString": "assert($('h3').length === 6, '你的代码需要包含6个 <code>h3</code> 标签。"
         },
         {
-          "text": "Your code should not have any <code>h5</code> tags.",
-          "testString": "assert($('h5').length === 0, 'Your code should not have any <code>h5</code> tags.');"
+          "text": "你的代码不能包含 <code>h5</code> 标签。",
+          "testString": "assert($('h5').length === 0, '你的代码需要包含6个 <code>h3</code> 标签。"
         }
       ],
       "solutions": [],
@@ -148,21 +148,21 @@
       "id": "587d774e367417b2b2512a9f",
       "title": "Jump Straight to the Content Using the main Element",
       "description": [
-        "HTML5 introduced a number of new elements that give developers more options while also incorporating accessibility features. These tags include <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>, among others.",
-        "By default, a browser renders these elements similarly to the humble <code>div</code>. However, using them where appropriate gives additional meaning in your markup. The tag name alone can indicate the type of information it contains, which adds semantic meaning to that content. Assistive technologies can access this information to provide better page summary or navigation options to their users.",
-        "The <code>main</code> element is used to wrap (you guessed it) the main content, and there should be only one per page. It's meant to surround the information that's related to the central topic of your page. It's not meant to include items that repeat across pages, like navigation links or banners.",
-        "The <code>main</code> tag also has an embedded landmark feature that assistive technology can use to quickly navigate to the main content. If you've ever seen a \"Jump to Main Content\" link at the top of a page, using a main tag automatically gives assistive devices that functionality.",
+        "HTML5引入了很多新标签，它们为开发人员提供了更多选择与辅助特性。这些新标签包括 <code>main</code>, <code>header</code>, <code>footer</code>, <code>nav</code>, <code>article</code>, and <code>section</code>等。",
+        "默认情况下，浏览器呈现这些新标签的方式与 <code>div</code> 类似。但是，在适当的地方使用它们，可以为你的标志提供额外的信息。仅标签的名字就能指示其所包含内容的信息类型，这也使内容具有语义化含义。辅助技术可以访问这些信息，以便为其用户提供更好的页面概要或导航选项。",
+        "<code> main </code> 标签用于修饰（你猜对了）主题，且每个页面应该只有一个。它旨在包含与页面中心主题相关的信息。这并不意味着包含那些跨页面重复出现的项目，如导航连接、网页横幅。",
+        "<code>main</code> 标签也具有锚点功能，使辅助技术可以快速定位到主题。如果你曾在页面顶部见到过“跳转到主题”连接的话，使用 <code>main</code> 标签就能使辅助设备自动具备这个功能。",
         "<hr>",
-        "Camper Cat has some big ideas for his ninja weapons page. Help him set up his markup by adding opening and closing <code>main</code> tags between the <code>header</code> and <code>footer</code> (covered in other challenges). Keep the <code>main</code> tags empty for now."
+        "Camper Cat对他的忍者武器页面有一些重要想法。通过在 <code>header</code> 标签和 <code>footer</code> 标签（在其他挑战中会涉及）之间添加起始和闭合 <code>main</code> 标签来帮助他建立标志。现在保持 <code>main</code> 为空。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>main</code> tag.",
-          "testString": "assert($('main').length == 1, 'Your code should have one <code>main</code> tag.');"
+          "text": "你的代码应该有一个 <code>main</code> 标记。",
+          "testString": "assert($('main').length == 1, '你的代码应该有一个 <code>main</code> 标记。');"
         },
         {
-          "text": "The <code>main</code> tags should be between the closing <code>header</code> tag and the opening <code>footer</code> tag.",
-          "testString": "assert(code.match(/<\\/header>\\s*?<main>\\s*?<\\/main>/gi), 'The <code>main</code> tags should be between the closing <code>header</code> tag and the opening <code>footer</code> tag.');"
+          "text": "<code>main</code>标签应该在闭合的 <code>header</code> 标签与起始的 <code>footer</code> 标签之间。",
+          "testString": "assert(code.match(/<\\/header>\\s*?<main>\\s*?<\\/main>/gi), '<code>main</code>标签应该在闭合的 <code>header</code> 标签与起始的 <code>footer</code> 标签之间。');"
         }
       ],
       "solutions": [],
@@ -192,22 +192,22 @@
       "id": "587d774e367417b2b2512aa0",
       "title": "Wrap Content in the article Element",
       "description": [
-        "<code>article</code> is another one of the new HTML5 elements that adds semantic meaning to your markup. <code>Article</code> is a sectioning element, and is used to wrap independent, self-contained content. The tag works well with blog entries, forum posts, or news articles.",
-        "Determining whether content can stand alone is usually a judgement call, but there are a couple simple tests you can use. Ask yourself if you removed all surrounding context, would that content still make sense? Similarly for text, would the content hold up if it were in an RSS feed?",
-        "Remember that folks using assistive technologies rely on organized, semantically meaningful markup to better understand your work.",
-        "<strong>Note about <code>section</code> and <code>div</code></strong><br>The <code>section</code> element is also new with HTML5, and has a slightly different semantic meaning than <code>article</code>. An <code>article</code> is for standalone content, and a <code>section</code> is for grouping thematically related content. They can be used within each other, as needed. For example, if a book is the <code>article</code>, then each chapter is a <code>section</code>. When there's no relationship between groups of content, then use a <code>div</code>.",
-        "<blockquote>&lt;div&gt; - groups content<br>&lt;section&gt; - groups related content<br>&lt;article&gt; - groups independent, self-contained content<br></blockquote>",
+        "<code>article</code>是另一个可以使你的标记语义化的新HTML5标签。<code>Article</code>是一个分段标签，用于修饰独立的、自包含的内容。这个标签适用于博客入口，论坛帖子或者新闻文章。",
+        "这里有些技巧可以用来判断内容是否独立。问自己如果删除了上下文，该内容是否仍然有意义？相似地，对于文本，如果它在RSS提要中，它的意义是否保留。",
+        "请牢记，使用辅助技术的用户依赖于组织良好的、语义化的标志，来更好的理解你的页面。",
+        "<strong>注意<code>section</code>与<code>div</code></strong><br><code>section</code>也是一个新的HTML5标签，与<code>article</code>标签的语义含义略有不同。<code>article</code>用于独立的内容，而<code>section</code>用于对与主题相关的内容进行分组。它们可以根据需要批次之间互相包含着使用。如果一本书是一个<code>article</code>的话，那么每个章节就是<code>section</code>。如果内容组之间没有联系，请使用<code>div</code>。",
+        "<blockquote>&lt;div&gt; - 内容组<br>&lt;section&gt; - 有联系的内容组<br>&lt;article&gt; - 独立的、自包含的内容<br></blockquote>",
         "<hr>",
-        "Camper Cat used <code>article</code> tags to wrap the posts on his blog page, but he forgot to use them around the top one. Change the <code>div</code> tag to use an <code>article</code> tag instead."
+        "Camper Cat使用<code>article</code>标签来修饰他的博客页面里的帖子，但是他忘记在顶部的帖子上使用它。使用<code>article</code>标签来代替<code>div</code>标签。"
       ],
       "tests": [
         {
-          "text": "Your code should have three <code>article</code> tags.",
-          "testString": "assert($('article').length == 3, 'Your code should have three <code>article</code> tags.');"
+          "text": "你的代码中应该有三个 <code>article</code> 标签。",
+          "testString": "assert($('article').length == 3, '你的代码中应该有三个 <code>article</code> 标签。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能含有 <code>div</code> 标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能含有 <code>div</code> 标签。');"
         }
       ],
       "solutions": [],
@@ -251,28 +251,28 @@
       "id": "587d7787367417b2b2512aa1",
       "title": "Make Screen Reader Navigation Easier with the header Landmark",
       "description": [
-        "The next HTML5 element that adds semantic meaning and improves accessibility is the <code>header</code> tag. It's used to wrap introductory information or navigation links for its parent tag, and works well around content that's repeated at the top on multiple pages.",
-        "<code>header</code> shares the embedded landmark feature you saw with <code>main</code>, allowing assistive technologies to quickly navigate to that content.",
-        "<strong>Note</strong><br><code>header</code> is meant for use in the <code>body</code> tag of your HTML document. This is different than the <code>head</code> element, which contains the page's title, meta information, etc.",
+        "下一个可以增加语义化与可访问性的HTML5标签是<code>header</code>。它用于为它的父级标签包装简介信息或者导航链接，也适用于在多个页面顶端重复出现的内容。",
+        "<code>header</code> shares the embedded landmark feature you saw with <code>main</code>, 可以使辅助技术快速导航到它的内容。",
+        "<strong>注意</strong><br><code>header</code>用于HTML文档的<code>body</code>标签中。这点不同于包含页面标题、元信息的<code>head</code>标签。",
         "<hr>",
-        "Camper Cat is writing some great articles about ninja training, and wants to add a page for them to his site. Change the top <code>div</code> that currently contains the <code>h1</code> to a <code>header</code> tag instead."
+        "Camper Cat正在写一些关于忍者训练的精彩文章，他想在他的站点中为这些文章建立一个页面。使用<code>header</code>替代位于页面顶端的包含<code>h1</code>的<code>div</code>标签。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>header</code> tag.",
-          "testString": "assert($('header').length == 1, 'Your code should have one <code>header</code> tag.');"
+          "text": "你的代码因该包含一个<code>header</code>标签。",
+          "testString": "assert($('header').length == 1, '你的代码因该包含一个<code>header</code>标签。');"
         },
         {
-          "text": "Your <code>header</code> tags should wrap around the <code>h1</code>.",
-          "testString": "assert($('header').children('h1').length == 1, 'Your <code>header</code> tags should wrap around the <code>h1</code>.');"
+          "text": "你的<code>header</code>标签应该包含<code>h1</code>。",
+          "testString": "assert($('header').children('h1').length == 1, '你的<code>header</code>标签应该包含<code>h1</code>。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能包含任何<code>div</code>标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能包含任何<code>div</code>标签。');"
         },
         {
-          "text": "Make sure your <code>header</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/header>/g) && code.match(/<\\/header>/g).length === code.match(/<header>/g).length, 'Make sure your <code>header</code> element has a closing tag.');"
+          "text": "确保你的<code>header</code>标签是闭合的。",
+          "testString": "assert(code.match(/<\\/header>/g) && code.match(/<\\/header>/g).length === code.match(/<header>/g).length, '确保你的<code>header</code>标签是闭合的。');"
         }
       ],
       "solutions": [],
@@ -320,27 +320,27 @@
       "id": "587d7788367417b2b2512aa2",
       "title": "Make Screen Reader Navigation Easier with the nav Landmark",
       "description": [
-        "The <code>nav</code> element is another HTML5 item with the embedded landmark feature for easy screen reader navigation. This tag is meant to wrap around the main navigation links in your page.",
-        "If there are repeated site links at the bottom of the page, it isn't necessary to markup those with a <code>nav</code> tag as well. Using a <code>footer</code> (covered in the next challenge) is sufficient.",
+        "<code>nav</code>是另一个具有标识特性的HTML5标签，便于屏幕阅读器快速识别导航内容。它用于包含页面中的主导航链接。",
+        "对于页面底部辅助性质的链接，无需使用<code>nav</code>，用<code>footer</code>（在下个挑战中介绍）就可以了",
         "<hr>",
-        "Camper Cat included navigation links at the top of his training page, but wrapped them in a <code>div</code>. Change the <code>div</code> to a <code>nav</code> tag to improve the accessibility on his page."
+        "Camper Cat在他的忍者训练页面中使用了很多导航链接，但是将它们包含在<code>div</code>中。将<code>div</code>改为<code>nav</code>标签，以提升页面的可访问性。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>nav</code> tag.",
-          "testString": "assert($('nav').length == 1, 'Your code should have one <code>nav</code> tag.');"
+          "text": "你的代码应该有一个<code>nav</code>标签。",
+          "testString": "assert($('nav').length == 1, '你的代码应该有一个<code>nav</code>标签。');"
         },
         {
-          "text": "Your <code>nav</code> tags should wrap around the <code>ul</code> and its list items.",
-          "testString": "assert($('nav').children('ul').length == 1, 'Your <code>nav</code> tags should wrap around the <code>ul</code> and its list items.');"
+          "text": "你的<code>nav</code>标签应该包含<code>ul</code>标签及其列表项。",
+          "testString": "assert($('nav').children('ul').length == 1, '你的<code>nav</code>标签应该包含<code>ul</code>标签及其列表项。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码不能含有<code>div</code>标签。",
+          "testString": "assert($('div').length == 0, '你的代码不能含有<code>div</code>标签。');"
         },
         {
-          "text": "Make sure your <code>nav</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/nav>/g) && code.match(/<\\/nav>/g).length === code.match(/<nav>/g).length, 'Make sure your <code>nav</code> element has a closing tag.');"
+          "text": "确保你的<code>nav</code>标签使闭合的。",
+          "testString": "assert(code.match(/<\\/nav>/g) && code.match(/<\\/nav>/g).length === code.match(/<nav>/g).length, '确保你的<code>nav</code>标签使闭合的。');"
         }
       ],
       "solutions": [],
@@ -394,22 +394,22 @@
       "id": "587d7788367417b2b2512aa3",
       "title": "Make Screen Reader Navigation Easier with the footer Landmark",
       "description": [
-        "Similar to <code>header</code> and <code>nav</code>, the <code>footer</code> element has a built-in landmark feature that allows assistive devices to quickly navigate to it. It's primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page.",
+        "与<code>header</code>和<code>nav</code>类似，<code>footer</code>也具有标识特性，可以使辅助设备快速导航到它。它主要用于包含版权信息或者位于页面底部的相关文档的链接。",
         "<hr>",
-        "Camper Cat's training page is making good progress. Change the <code>div</code> he used to wrap his copyright information at the bottom of the page to a <code>footer</code> element."
+        "Camper Cat的训练页面进展顺利。把他在页面底部包含版权信息的<code>div</code>标签改为<code>footer</code>标签。"
       ],
       "tests": [
         {
-          "text": "Your code should have one <code>footer</code> tag.",
-          "testString": "assert($('footer').length == 1, 'Your code should have one <code>footer</code> tag.');"
+          "text": "你的代码中应该包含一个<code>footer</code>标签。",
+          "testString": "assert($('footer').length == 1, '你的代码中应该包含一个<code>footer</code>标签。');"
         },
         {
-          "text": "Your code should not have any <code>div</code> tags.",
-          "testString": "assert($('div').length == 0, 'Your code should not have any <code>div</code> tags.');"
+          "text": "你的代码中不能包含<code>div</code>标签。",
+          "testString": "assert($('div').length == 0, '你的代码中不能包含<code>div</code>标签。');"
         },
         {
-          "text": "Your code should have an opening and closing <code>footer</code> tag.",
-          "testString": "assert(code.match(/<footer>\\s*&copy; 2016 Camper Cat\\s*<\\/footer>/g), 'Your code should have an opening and closing <code>footer</code> tag.');"
+          "text": "你代码中的<code>footer</code>应该是完整闭合的。",
+          "testString": "assert(code.match(/<footer>\\s*&copy; 2016 Camper Cat\\s*<\\/footer>/g), '你代码中的<code>footer</code>应该是完整闭合的。');"
         }
       ],
       "solutions": [],
