@@ -13,26 +13,26 @@
       "id": "bad87fee1348bd9acde08712",
       "title": "Use Responsive Design with Bootstrap Fluid Containers",
       "description": [
-        "In the HTML5 and CSS section of freeCodeCamp we built a Cat Photo App. Now let's go back to it. This time, we'll style it using the popular Bootstrap responsive CSS framework.",
-        "Bootstrap will figure out how wide your screen is and respond by resizing your HTML elements - hence the name <code>Responsive Design</code>.",
-        "With responsive design, there is no need to design a mobile version of your website. It will look good on devices with screens of any width.",
-        "You can add Bootstrap to any app by adding the following code to the top of your HTML:",
+        "之前，在 freeCodeCamp 的 HTML5 和 CSS 章节中我们构建了一个 Cat Photo App。这次我们将会使用最受欢迎的响应式 CSS 框架 Bootstrap 来美化它。",
+        "Bootstrap 会根据你的屏幕大小来调节 HTML 元素的大小————因此称为 <code>响应式设计( Responsive Design )</code>。",
+        "通过响应式设计，我们将无需额外设计一个手机版的网页，因为它在任何尺寸的屏幕上看起来都还不错。",
+        "无论开发什么应用，你都可以通过将以下代码添加到你的 HTML 顶部来引入 Bootstrap 。",
         "<code>&#60;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\"/&#62;</code>",
-        "In this case, we've already added it for you to this page behind the scenes. Note that using either <code>></code> or <code>/></code> to close the <code>link</code> tag is acceptable.",
-        "To get started, we should nest all of our HTML (except the <code>link</code> tag and the <code>style</code> element) in a <code>div</code> element with the class <code>container-fluid</code>."
+        "在该案例中，我们已经帮你把相应代码添加到页面中。记住使用 <code>></code> 和 <code>/></code> 闭合 <code>link</code> 标签来保证引入成功。",
+        "首先，我们应该把所有 HTML 标签放在 class 为 <code>container-fluid</code> 的 <code>div</code> 元素下（除了 <code>link</code> 标签和 <code>style</code> 标签）。"
       ],
       "tests": [
         {
-          "text": "Your <code>div</code> element should have the class <code>container-fluid</code>.",
-          "testString": "assert($(\"div\").hasClass(\"container-fluid\"), 'Your <code>div</code> element should have the class <code>container-fluid</code>.');"
+          "text": "<code>div</code> 元素的 class 属性应该为 <code>container-fluid</code>。",
+          "testString": "assert($(\"div\").hasClass(\"container-fluid\"), '<code>div</code> 元素的 class 属性应该为 <code>container-fluid</code>。');"
         },
         {
-          "text": "Make sure your <code>div</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure your <code>div</code> element has a closing tag.');"
+          "text": "确保你的 <code>div</code> 元素有闭合标签.",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保你的 <code>div</code> 元素有闭合标签。');"
         },
         {
-          "text": "Make sure you have nested all HTML elements after the closing <code>style</code> tag in <code>.container-fluid</code>.",
-          "testString": "assert($(\".container-fluid\").children().length >= 8, 'Make sure you have nested all HTML elements after the closing <code>style</code> tag in <code>.container-fluid</code>.');"
+          "text": "确保你已经将所有 HTML 元素内嵌在闭合的  <code>style</code> 标签后的 <code>.container-fluid</code> 元素中。",
+          "testString": "assert($(\".container-fluid\").children().length >= 8, '确保你已经将所有 HTML 元素内嵌在闭合的  <code>style</code> 标签后的 <code>.container-fluid</code> 元素中。');"
         }
       ],
       "challengeType": 0,
@@ -106,30 +106,30 @@
       "id": "bad87fee1348bd9acde08812",
       "title": "Make Images Mobile Responsive",
       "description": [
-        "First, add a new image below the existing one. Set its <code>src</code> attribute to <code>https://bit.ly/fcc-running-cats</code>.",
-        "It would be great if this image could be exactly the width of our phone's screen.",
-        "Fortunately, with Bootstrap, all we need to do is add the <code>img-responsive</code> class to your image. Do this, and the image should perfectly fit the width of your page."
+        "首先，在已有的图片下面添加一张新的图片. 设置 <code>src</code> 属性为 <code>https://bit.ly/fcc-running-cats</code>。",
+        "如果图片的大小恰恰和我们手机屏幕尺寸大小一样自然是最好的。",
+        "幸运的是现在通过 Bootstrap，我们仅仅只需要为 image 标签上设置 class 属性为 <code>img-responsive</code> 就可以让它完美的适应你页面的宽度了。"
       ],
       "tests": [
         {
-          "text": "You should have a total of two images.",
-          "testString": "assert($(\"img\").length === 2, 'You should have a total of two images.');"
+          "text": "该页面拥有总计两个图片。",
+          "testString": "assert($(\"img\").length === 2, '该页面拥有总计两个图片。');"
         },
         {
-          "text": "Your new image should be below your old one and have the class <code>img-responsive</code>.",
-          "testString": "assert($(\"img:eq(1)\").hasClass(\"img-responsive\"), 'Your new image should be below your old one and have the class <code>img-responsive</code>.');"
+          "text": "新的图片应该在旧的图片下面并且含有 class 属性 <code>img-responsive</code>。",
+          "testString": "assert($(\"img:eq(1)\").hasClass(\"img-responsive\"), '新的图片应该在旧的图片下面并且含有 class 属性 <code>img-responsive</code>。');"
         },
         {
-          "text": "Your new image should not have the class <code>smaller-image</code>.",
-          "testString": "assert(!$(\"img:eq(1)\").hasClass(\"smaller-image\"), 'Your new image should not have the class <code>smaller-image</code>.');"
+          "text": "新的图片不应该含有 class 属性 <code>smaller-image</code>。",
+          "testString": "assert(!$(\"img:eq(1)\").hasClass(\"smaller-image\"), '你的新图片不应该含有 class 属性 <code>smaller-image</code>。');"
         },
         {
-          "text": "Your new image should have a <code>src</code> of <code>https&#58;//bit.ly/fcc-running-cats</code>.",
-          "testString": "assert($(\"img:eq(1)\").attr(\"src\") === \"https://bit.ly/fcc-running-cats\", 'Your new image should have a <code>src</code> of <code>https&#58;//bit.ly/fcc-running-cats</code>.');"
+          "text": "新图片的 <code>src</code> 属性应该为 <code>https&#58;//bit.ly/fcc-running-cats</code>。",
+          "testString": "assert($(\"img:eq(1)\").attr(\"src\") === \"https://bit.ly/fcc-running-cats\", '你的新图片的 <code>src</code> 属性应该为 <code>https&#58;//bit.ly/fcc-running-cats</code>。');"
         },
         {
-          "text": "Make sure your new <code>img</code> element has a closing angle bracket.",
-          "testString": "assert(code.match(/<img/g) && code.match(/<img[^<]*>/g).length === 2 && code.match(/<img/g).length === 2, 'Make sure your new <code>img</code> element has a closing angle bracket.');"
+          "text": "确保新的 <code>img</code> 元素有一个闭合的右尖括号 “/>”。",
+          "testString": "assert(code.match(/<img/g) && code.match(/<img[^<]*>/g).length === 2 && code.match(/<img/g).length === 2, '确保新的 <code>img</code> 元素有一个闭合的右尖括号 “/>”。');"
         }
       ],
       "challengeType": 0,
@@ -205,18 +205,18 @@
       "id": "bad87fee1348bd8acde08812",
       "title": "Center Text with Bootstrap",
       "description": [
-        "Now that we're using Bootstrap, we can center our heading element to make it look better. All we need to do is add the class <code>text-center</code> to our <code>h2</code> element.",
-        "Remember that you can add several classes to the same element by separating each of them with a space, like this:",
+        "正在使用 Bootstrap 的我们可以将顶部的元素居中来美化页面。而这仅仅只需为 <code>h2</code> 元素设置 class 属性 <code>text-center</code> 就可以做到。",
+        "记住：我们通过空格分隔不同的 class 可以为一个元素添加多个 class ，就像这样：",
         "<code>&#60h2 class=\"red-text text-center\"&#62your text&#60/h2&#62</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> element should be centered by applying the class <code>text-center</code>",
-          "testString": "assert($(\"h2\").hasClass(\"text-center\"), 'Your <code>h2</code> element should be centered by applying the class <code>text-center</code>');"
+          "text": "你的 <code>h2</code> 元素应该居中且有一个 class 为 <code>text-center</code>",
+          "testString": "assert($(\"h2\").hasClass(\"text-center\"), '你的 <code>h2</code> 元素应该居中且有一个 class 为 <code>text-center</code>');"
         },
         {
-          "text": "Your <code>h2</code> element should still have the class <code>red-text</code>",
-          "testString": "assert($(\"h2\").hasClass(\"red-text\"), 'Your <code>h2</code> element should still have the class <code>red-text</code>');"
+          "text": "你的 <code>h2</code> 元素应该还有另一个 class 为 <code>red-text</code>",
+          "testString": "assert($(\"h2\").hasClass(\"red-text\"), '你的 <code>h2</code> 元素应该还有另一个 class 为 <code>red-text</code>');"
         }
       ],
       "challengeType": 0,
@@ -293,21 +293,21 @@
       "id": "bad87fee1348cd8acdf08812",
       "title": "Create a Bootstrap Button",
       "description": [
-        "Bootstrap has its own styles for <code>button</code> elements, which look much better than the plain HTML ones.",
-        "Create a new <code>button</code> element below your large kitten photo. Give it the <code>btn</code> and <code>btn-default</code> classes, as well as the text of \"Like\"."
+        "Bootstrap 的 <code>button</code> 元素有着独有的、比默认 HTML 按钮更好的样式风格。",
+        "在较大的小猫图片下方创建新的 <code>button</code> 元素。 为它添加 <code>btn</code> 与 <code>btn-default</code> 两个 class 和 \"Like\" 文本。"
       ],
       "tests": [
         {
-          "text": "Create a new <code>button</code> element with the text \"Like\".",
-          "testString": "assert(new RegExp(\"like\",\"gi\").test($(\"button\").text()) && ($(\"img.img-responsive + button.btn\").length > 0), 'Create a new <code>button</code> element with the text \"Like\".');"
+          "text": "创建新的 <code>button</code> 元素，设置文本为 \"Like\"。",
+          "testString": "assert(new RegExp(\"like\",\"gi\").test($(\"button\").text()) && ($(\"img.img-responsive + button.btn\").length > 0), '创建新的 <code>button</code> 元素，设置文本为 \"Like\"。');"
         },
         {
-          "text": "Your new button should have two classes: <code>btn</code> and <code>btn-default</code>.",
-          "testString": "assert($(\"button\").hasClass(\"btn\") && $(\"button\").hasClass(\"btn-default\"), 'Your new button should have two classes: <code>btn</code> and <code>btn-default</code>.');"
+          "text": "新的按钮元素应该有两个 class : <code>btn</code> 和 <code>btn-default</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn\") && $(\"button\").hasClass(\"btn-default\"), '新的按钮元素应该有两个 class : <code>btn</code> 和 <code>btn-default</code>。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have a closing tag.');"
+          "text": "保证所有 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '保证所有 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -385,29 +385,29 @@
       "id": "bad87fee1348cd8acef08812",
       "title": "Create a Block Element Bootstrap Button",
       "description": [
-        "Normally, your <code>button</code> elements with the <code>btn</code> and <code>btn-default</code> classes are only as wide as the text that they contain. For example:",
+        "一般情况下，具有 <code>btn</code> 和 <code>btn-default</code> 两个 class 的 <code>button</code> 元素宽度与它包含的文本相同，举个例子：",
         "<code>&lt;button class=\"btn btn-default\"&gt;Submit&lt;/button&gt;</code>",
-        "This button would only be as wide as the word \"Submit\".",
+        "这个按钮的宽度应该和文本 \"Submit\" 相同",
         "<button class='btn btn-default'>Submit</button>",
-        "By making them block elements with the additional class of <code>btn-block</code>, your button will stretch to fill your page's entire horizontal space and any elements following it will flow onto a \"new line\" below the block.",
+        "通过为按钮添加 class 属性 <code>btn-block</code> 使其成为块级元素，按钮会伸展并填满页面整个水平空间，后续的元素会流到这个块级元素的下方，即 \"新开一行\"。",
         "<code>&lt;button class=\"btn btn-default btn-block\"&gt;Submit&lt;/button&gt;</code>",
-        "This button would take up 100% of the available width.",
+        "这个按钮会 100% 占满所有的可用宽度。",
         "<button class='btn btn-default btn-block'>Submit</button>",
-        "Note that these buttons still need the <code>btn</code> class.",
-        "Add Bootstrap's <code>btn-block</code> class to your Bootstrap button."
+        "记住这些按钮仍然需要 <code>btn</code> 这个 class。",
+        "添加 Bootstrap 的 <code>btn-block</code> class 到你 Bootstrap 按钮上吧。"
       ],
       "tests": [
         {
-          "text": "Your button should still have the <code>btn</code> and <code>btn-default</code> classes.",
-          "testString": "assert($(\"button\").hasClass(\"btn\") && $(\"button\").hasClass(\"btn-default\"), 'Your button should still have the <code>btn</code> and <code>btn-default</code> classes.');"
+          "text": "按钮的 class 属性应该仍然具有 <code>btn</code> 和 <code>btn-default</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn\") && $(\"button\").hasClass(\"btn-default\"), '按钮的 class 属性应该仍然具有 <code>btn</code> 和 <code>btn-default</code>。');"
         },
         {
-          "text": "Your button should have the class <code>btn-block</code>.",
-          "testString": "assert($(\"button\").hasClass(\"btn-block\"), 'Your button should have the class <code>btn-block</code>.');"
+          "text": "按钮的 class 属性应该包含 <code>btn-block</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn-block\"), '按钮的 class 属性应该包含 <code>btn-block</code>。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have a closing tag.');"
+          "text": "确保所有的 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保所有的 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -485,22 +485,22 @@
       "id": "bad87fee1348cd8acef08811",
       "title": "Taste the Bootstrap Button Color Rainbow",
       "description": [
-        "The <code>btn-primary</code> class is the main color you'll use in your app. It is useful for highlighting actions you want your user to take.",
-        "Replace Bootstrap's <code>btn-default</code> class by <code>btn-primary</code> in your button.",
-        "Note that this button will still need the <code>btn</code> and <code>btn-block</code> classes."
+        "<code>btn-primary</code> class 的颜色是你在应用中的主题色。这样 “突出显示” 是引导用户按步就班进行操作的有效办法。",
+        "将按钮的 class 从 Bootstrap 的 <code>btn-primary</code> 替换为 <code>btn-default</code>。",
+        "记住：你的按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。"
       ],
       "tests": [
         {
-          "text": "Your button should have the class <code>btn-primary</code>.",
-          "testString": "assert($(\"button\").hasClass(\"btn-primary\"), 'Your button should have the class <code>btn-primary</code>.');"
+          "text": "按钮的 class 属性应该有 <code>btn-primary</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn-primary\"), '按钮的 class 属性应该有 <code>btn-primary</code>。');"
         },
         {
-          "text": "Your button should still have the <code>btn</code> and <code>btn-block</code> classes.",
-          "testString": "assert($(\"button\").hasClass(\"btn-block\") && $(\"button\").hasClass(\"btn\"), 'Your button should still have the <code>btn</code> and <code>btn-block</code> classes.');"
+          "text": "按钮的 class 属性应该仍有 <code>btn</code> 和 <code>btn-block</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn-block\") && $(\"button\").hasClass(\"btn\"), '按钮的 class 属性应该仍有 <code>btn</code> 和 <code>btn-block</code>。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have a closing tag.');"
+          "text": "确保所有 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保所有 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -578,26 +578,26 @@
       "id": "bad87fee1348cd8acef08813",
       "title": "Call out Optional Actions with btn-info",
       "description": [
-        "Bootstrap comes with several pre-defined colors for buttons. The <code>btn-info</code> class is used to call attention to optional actions that the user can take.",
-        "Create a new block-level Bootstrap button below your \"Like\" button with the text \"Info\", and add Bootstrap's <code>btn-info</code> and <code>btn-block</code> classes to it.",
-        "Note that these buttons still need the <code>btn</code> and <code>btn-block</code> classes."
+        "Bootstrap 有着丰富的预定义按钮颜色。浅蓝色 <code>btn-info</code> class 通常用在用户可能采取的操作上。",
+        "在你的 \"Like\" 按钮下方创建包含文本 \"Info\" 的块级 Bootstrap 按钮， 然后为该按钮添加 Bootstrap 的 <code>btn-info</code> 和 <code>btn-block</code> class。",
+        "记住：你的这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。"
       ],
       "tests": [
         {
-          "text": "Create a new <code>button</code> element with the text \"Info\".",
-          "testString": "assert(new RegExp(\"info\",\"gi\").test($(\"button\").text()), 'Create a new <code>button</code> element with the text \"Info\".');"
+          "text": "创建包含文本 \"Info\" 的 <code>button</code> 元素。",
+          "testString": "assert(new RegExp(\"info\",\"gi\").test($(\"button\").text()), '创建包含文本 \"Info\" 的 <code>button</code> 元素。');"
         },
         {
-          "text": "Both of your Bootstrap buttons should have the <code>btn</code> and <code>btn-block</code> classes.",
-          "testString": "assert($(\"button.btn-block.btn\").length > 1, 'Both of your Bootstrap buttons should have the <code>btn</code> and <code>btn-block</code> classes.');"
+          "text": "两个按钮的 class 属性应该仍然具有 <code>btn</code> 和 <code>btn-block</code>。",
+          "testString": "assert($(\"button.btn-block.btn\").length > 1, '两个按钮的 class 属性应该仍然具有 <code>btn</code> 和 <code>btn-block</code>。');"
         },
         {
-          "text": "Your new button should have the class <code>btn-info</code>.",
-          "testString": "assert($(\"button\").hasClass(\"btn-info\"), 'Your new button should have the class <code>btn-info</code>.');"
+          "text": "新按钮的 class 属性应该含有 <code>btn-info</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn-info\"), '新按钮的 class 属性应该含有 <code>btn-info</code>。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have a closing tag.');"
+          "text": "确保你所有的 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保你所有的 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -675,26 +675,26 @@
       "id": "bad87fee1348ce8acef08814",
       "title": "Warn Your Users of a Dangerous Action with btn-danger",
       "description": [
-        "Bootstrap comes with several pre-defined colors for buttons. The <code>btn-danger</code> class is the button color you'll use to notify users that the button performs a destructive action, such as deleting a cat photo.",
-        "Create a button with the text \"Delete\" and give it the class <code>btn-danger</code>.",
-        "Note that these buttons still need the <code>btn</code> and <code>btn-block</code> classes."
+        "Bootstrap 有着丰富的预定义按钮颜色。 红色 <code>btn-danger</code> class 用来提醒用户此行为具有破坏性，比如删除一张猫的图片。",
+        "创建一个包含文本 \"Delete\" 的按钮并为它设置 class 为 <code>btn-danger</code>。",
+        "记住：你的这些按钮仍然需要 <code>btn</code> 和 <code>btn-block</code> class。"
       ],
       "tests": [
         {
-          "text": "Create a new <code>button</code> element with the text \"Delete\".",
-          "testString": "assert(new RegExp(\"Delete\",\"gi\").test($(\"button\").text()), 'Create a new <code>button</code> element with the text \"Delete\".');"
+          "text": "创建一个包含文本 \"Delete\" 的 <code>button</code> 元素。",
+          "testString": "assert(new RegExp(\"Delete\",\"gi\").test($(\"button\").text()), '创建一个包含文本 \"Delete\" 的 <code>button</code> 元素。');"
         },
         {
-          "text": "All of your Bootstrap buttons should have the <code>btn</code> and <code>btn-block</code> classes.",
-          "testString": "assert($(\"button.btn-block.btn\").length > 2, 'All of your Bootstrap buttons should have the <code>btn</code> and <code>btn-block</code> classes.');"
+          "text": "所有 Bootstrap 按钮的 class 属性都应该有 <code>btn</code> 和 <code>btn-block</code>。",
+          "testString": "assert($(\"button.btn-block.btn\").length > 2, '所有 Bootstrap 按钮的 class 属性都应该有 <code>btn</code> 和 <code>btn-block</code>。');"
         },
         {
-          "text": "Your new button should have the class <code>btn-danger</code>.",
-          "testString": "assert($(\"button\").hasClass(\"btn-danger\"), 'Your new button should have the class <code>btn-danger</code>.');"
+          "text": "新创建按钮的 class 属性应该有 <code>btn-danger</code>。",
+          "testString": "assert($(\"button\").hasClass(\"btn-danger\"), '新创建按钮的 class 属性应该有 <code>btn-danger</code>。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have a closing tag.');"
+          "text": "确保你所有的 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保你所有的 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -773,29 +773,29 @@
       "id": "bad88fee1348ce8acef08815",
       "title": "Use the Bootstrap Grid to Put Elements Side By Side",
       "description": [
-        "Bootstrap uses a responsive 12-column grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a <code>div</code> element.",
-        "Bootstrap has different column width attributes that it uses depending on how wide the user's screen is. For example, phones have narrow screens, and laptops have wider screens.",
-        "Take for example Bootstrap's <code>col-md-*</code> class. Here, <code>md</code> means medium, and <code>*</code> is a number specifying how many columns wide the element should be. In this case, the column width of an element on a medium-sized screen, such as a laptop, is being specified.",
-        "In the Cat Photo App that we're building, we'll use <code>col-xs-*</code>, where <code>xs</code> means extra small (like an extra-small mobile phone screen), and <code>*</code> is the number of columns specifying how many columns wide the element should be.",
-        "Put the <code>Like</code>, <code>Info</code> and <code>Delete</code> buttons side-by-side by nesting all three of them within one <code>&#60;div class=\"row\"&#62;</code> element, then each of them within a <code>&#60;div class=\"col-xs-4\"&#62;</code> element.",
-        "The <code>row</code> class is applied to a <code>div</code>, and the buttons themselves can be nested within it."
+        "Bootstrap 具有一套基于 12 列的响应式栅格系统————可以轻松实现将多个元素放入一行并指定它们的相对宽度。 Bootstrap 的大部分 class 属性都可以应用在 <code>div</code> 元素上。",
+        "Bootstrap 的列宽度属性取决于用户的屏幕宽度。 比如，手机有着窄屏幕而笔记本电脑有者更大的屏幕.",
+        "就拿 Bootstrap 的 <code>col-md-*</code> class 来说。 在这里， <code>md</code> 表示 medium （中等的）， 而 <code>*</code> 是一个数字，说明了这个元素占有多少个列宽度。这个例子就是指定了中等大小屏幕（例如笔记本电脑）下元素所占的列宽度。",
+        "在我们创建的 Cat Photo App 中，我们将使用 <code>col-xs-*</code> ， 其中 <code>xs</code> 是 extra small 的缩写 (应用于较小的屏幕，比如手机屏幕)， <code>*</code> 是你填写的数字，代表一行中，你的元素该占多少列宽。",
+        "将我们的 <code>Like</code>, <code>Info</code> 和 <code>Delete</code> 三个按钮并排放入一个 <code>&#60;div class=\"row\"&#62;</code> 元素中，然后每个按钮都各用一个 <code>&#60;div class=\"col-xs-4\"&#62;</code> 元素包裹起来。",
+        "当 <code>div</code> 元素设置了 <code>row</code> class 之后，那几个按钮便会嵌入其中了。"
       ],
       "tests": [
         {
-          "text": "Your buttons should all be nested within the same <code>div</code> element with the class <code>row</code>.",
-          "testString": "assert($(\"div.row:has(button)\").length > 0, 'Your buttons should all be nested within the same <code>div</code> element with the class <code>row</code>.');"
+          "text": "所有按钮都需要嵌入到同一个 <code>div</code> 元素中， 并且该元素包含 class 属性 <code>row</code>。",
+          "testString": "assert($(\"div.row:has(button)\").length > 0, '所有按钮都需要嵌入到同一个 <code>div</code> 元素中， 并且该元素包含 class 属性 <code>row</code>。');"
         },
         {
-          "text": "Each of your Bootstrap buttons should be nested within its own <code>div</code> element with the class <code>col-xs-4</code>.",
-          "testString": "assert($(\"div.col-xs-4:has(button)\").length > 2, 'Each of your Bootstrap buttons should be nested within its own <code>div</code> element with the class <code>col-xs-4</code>.');"
+          "text": "每个 Bootstrap 按钮都需要嵌入各自的 <code>div</code> 元素，并且该元素包含 class 属性 <code>col-xs-4</code>。",
+          "testString": "assert($(\"div.col-xs-4:has(button)\").length > 2, '每个 Bootstrap 按钮都需要嵌入各自的 <code>div</code> 元素，并且该元素包含 class 属性 <code>col-xs-4</code>。');"
         },
         {
-          "text": "Make sure each of your <code>button</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure each of your <code>button</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保每一个 <code>button</code> 元素都有一个闭合标签。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保每一个 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -875,32 +875,32 @@
       "id": "bad87fee1347bd9aedf08845",
       "title": "Ditch Custom CSS for Bootstrap",
       "description": [
-        "We can clean up our code and make our Cat Photo App look more conventional by using Bootstrap's built-in styles instead of the custom styles we created earlier.",
-        "Don't worry - there will be plenty of time to customize our CSS later.",
-        "Delete the <code>.red-text</code>, <code>p</code>, and <code>.smaller-image</code> CSS declarations from your <code>style</code> element so that the only declarations left in your <code>style</code> element are <code>h2</code> and <code>thick-green-border</code>.",
-        "Then delete the <code>p</code> element that contains a dead link. Then remove the <code>red-text</code> class from your <code>h2</code> element and replace it with the <code>text-primary</code> Bootstrap class.",
-        "Finally, remove the \"smaller-image\" class from your first <code>img</code> element and replace it with the <code>img-responsive</code> class."
+        "现在我们可以清理一下之前代码，用 Bootstrap 的内置样式来替换我们之前定义的样式，这样会让我们的 Cat Photo App 看起来更简洁些。",
+        "别担心————以后我们会有大把时间来自定义我们的 CSS 样式的。",
+        "删除 <code>style</code> 元素里的 <code>.red-text</code>, <code>p</code>, 和 <code>.smaller-image</code> CSS 声明，使 <code>style</code> 元素留下的声明只有 <code>h2</code> 和 <code>thick-green-border</code>.",
+        "删除包含死链接的 <code>p</code> 元素。 然后将 <code>h2</code> 的 <code>red-text</code> class 替换为 Bootstrap 的 <code>text-primary</code> class.",
+        "最后, 将你第一个 <code>img</code> 元素的 \"smaller-image\" class 替换为 <code>img-responsive</code> class."
       ],
       "tests": [
         {
-          "text": "Your h2 element should no longer have the class <code>red-text</code>.",
-          "testString": "assert(!$(\"h2\").hasClass(\"red-text\"), 'Your h2 element should no longer have the class <code>red-text</code>.');"
+          "text": "h2 元素的 class 不应为 <code>red-text</code>。",
+          "testString": "assert(!$(\"h2\").hasClass(\"red-text\"), 'h2 元素的 class 不应为 <code>red-text</code>。');"
         },
         {
-          "text": "Your h2 element should now have the class <code>text-primary</code>.",
-          "testString": "assert($(\"h2\").hasClass(\"text-primary\"), 'Your h2 element should now have the class <code>text-primary</code>.');"
+          "text": "h2 元素的 class 应为 <code>text-primary</code>。",
+          "testString": "assert($(\"h2\").hasClass(\"text-primary\"), 'h2 元素的 class 应为 <code>text-primary</code>。');"
         },
         {
-          "text": "Your paragraph elements should no longer use the font <code>Monospace</code>.",
-          "testString": "assert(!$(\"p\").css(\"font-family\").match(/monospace/i), 'Your paragraph elements should no longer use the font <code>Monospace</code>.');"
+          "text": "你的段落元素（p）应该不再使用 <code>Monospace</code> 字体。",
+          "testString": "assert(!$(\"p\").css(\"font-family\").match(/monospace/i), '你的段落元素（p）应该不再使用 <code>Monospace</code> 字体。');"
         },
         {
-          "text": "Remove the <code>smaller-image</code> class from your top image.",
-          "testString": "assert(!$(\"img\").hasClass(\"smaller-image\"), 'Remove the <code>smaller-image</code> class from your top image.');"
+          "text": "移除你第一张图片的 class 属性 <code>smaller-image</code>。",
+          "testString": "assert(!$(\"img\").hasClass(\"smaller-image\"), '移除你第一张图片的 class 属性 <code>smaller-image</code>。');"
         },
         {
-          "text": "Add the <code>img-responsive</code> class to your top image.",
-          "testString": "assert($(\".img-responsive\").length > 1, 'Add the <code>img-responsive</code> class to your top image.');"
+          "text": "给你的第一张图片添加 class 属性 <code>img-responsive</code>。",
+          "testString": "assert($(\".img-responsive\").length > 1, '给你的第一张图片添加 class 属性 <code>img-responsive</code>。');"
         }
       ],
       "challengeType": 0,
@@ -988,31 +988,31 @@
       "id": "bad87fee1348bd9aedf08845",
       "title": "Use a span to Target Inline Elements",
       "description": [
-        "You can use spans to create inline elements. Remember when we used the <code>btn-block</code> class to make the button fill the entire row?",
+        "你可以使用 span 标签来创建行内元素。还记得我们怎么使用 <code>btn-block</code> class 来创建填满整行的按钮吗？",
         "<button class='btn' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>normal button</button>",
         "<button class='btn btn-block' style='background-color: rgb(0, 100, 0);  color: rgb(255, 255, 255);'>btn-block button</button>",
-        "That illustrates the difference between an \"inline\" element and a \"block\" element.",
-        "By using the inline <code>span</code> element, you can put several elements on the same line, and even style different parts of the same line differently.",
-        "Nest the word \"love\" in your \"Things cats love\" element below within a <code>span</code> element. Then give that <code>span</code> the class <code>text-danger</code> to make the text red.",
-        "Here's how you would do this with the \"Top 3 things cats hate\" element:",
+        "上面的例子就是 \"inline\" （行内）元素和 \"block\" （块级）元素的区别。",
+        "通过使用行内元素 <code>span</code>，你可以把不同的元素放在同一行，甚至能为一个的元素不同部分指定样式。",
+        "把 \"Things cats love\" 中的 \"love\" 放入 <code>span</code> 标签。然后为其添加 <code>text-danger</code> class 来使其文字变成红色。",
+        "\"Top 3 things cats hate\" 元素的写法如下：",
         "<code>&#60;p&#62;Top 3 things cats &#60;span class=\"text-danger\"&#62;hate:&#60;/span&#62;&#60;/p&#62;</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>span</code> element should be inside your <code>p</code> element.",
-          "testString": "assert($(\"p span\") && $(\"p span\").length > 0, 'Your <code>span</code> element should be inside your <code>p</code> element.');"
+          "text": "<code>span</code> 元素应该在 <code>p</code> 元素内。",
+          "testString": "assert($(\"p span\") && $(\"p span\").length > 0, '<code>span</code> 元素应该在 <code>p</code> 元素内。');"
         },
         {
-          "text": "Your <code>span</code> element should have just the text <code>love</code>.",
-          "testString": "assert($(\"p span\") && $(\"p span\").text().match(/love/i) && !$(\"p span\").text().match(/Things cats/i), 'Your <code>span</code> element should have just the text <code>love</code>.');"
+          "text": "<code>span</code> 元素应该只含有文本 <code>love</code>。",
+          "testString": "assert($(\"p span\") && $(\"p span\").text().match(/love/i) && !$(\"p span\").text().match(/Things cats/i), '<code>span</code> 元素应该只含有文本 <code>love</code>。');"
         },
         {
-          "text": "Your <code>span</code> element should have class <code>text-danger</code>.",
-          "testString": "assert($(\"span\").hasClass(\"text-danger\"), 'Your <code>span</code> element should have class <code>text-danger</code>.');"
+          "text": "<code>span</code> 元素应该含有 class <code>text-danger</code>。",
+          "testString": "assert($(\"span\").hasClass(\"text-danger\"), '<code>span</code> 元素应该含有 class <code>text-danger</code>。');"
         },
         {
-          "text": "Make sure your <code>span</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/span>/g) && code.match(/<span/g) && code.match(/<\\/span>/g).length === code.match(/<span/g).length, 'Make sure your <code>span</code> element has a closing tag.');"
+          "text": "确保你的 <code>span</code> 元素有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/span>/g) && code.match(/<span/g) && code.match(/<\\/span>/g).length === code.match(/<span/g).length, '确保你的 <code>span</code> 元素有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1087,27 +1087,27 @@
       "id": "bad87fee1348bd9aede08845",
       "title": "Create a Custom Heading",
       "description": [
-        "We will make a simple heading for our Cat Photo App by putting the title and relaxing cat image in the same row.",
-        "Remember, Bootstrap uses a responsive grid system, which makes it easy to put elements into rows and specify each element's relative width. Most of Bootstrap's classes can be applied to a <code>div</code> element.",
-        "Nest your first image and your <code>h2</code> element within a single <code>&#60;div class=\"row\"&#62;</code> element. Nest your <code>h2</code> element within a <code>&#60;div class=\"col-xs-8\"&#62;</code> and your image in a <code>&#60;div class=\"col-xs-4\"&#62;</code> so that they are on the same line.",
-        "Notice how the image is now just the right size to fit along the text?"
+        "让我们来为 Cat Photo App 做一个导航吧，把标题和惬意的猫咪图片放在同一行。",
+        "记住，由于 Bootstrap 使用了响应式栅格系统，使得我们可以很方便的放置元素并为元素指定相对的宽度。大部分的 Bootstrap 的 class 都能用在 <code>div</code> 元素上。",
+        "把我们的第一张图片和 <code>h2</code> 元素用一个简单的 <code>&#60;div class=\"row\"&#62;</code> 元素包裹起来。再用 <code>&#60;div class=\"col-xs-8\"&#62;</code> 包裹我们的 <code>h2</code> 元素，用 <code>&#60;div class=\"col-xs-4\"&#62;</code> 包裹我们的图片，这样它们就能位于同一行了。",
+        "注意现在图片是否与文字大小一致呢？"
       ],
       "tests": [
         {
-          "text": "Your <code>h2</code> element and topmost <code>img</code> element should both be nested together within a <code>div</code> element with the class <code>row</code>.",
-          "testString": "assert($(\"div.row:has(h2)\").length > 0 && $(\"div.row:has(img)\").length > 0, 'Your <code>h2</code> element and topmost <code>img</code> element should both be nested together within a <code>div</code> element with the class <code>row</code>.');"
+          "text": "<code>h2</code> 元素和最上方的 <code>img</code> 元素应该一起内嵌于具有 <code>row</code> class 的 <code>div</code> 元素内。",
+          "testString": "assert($(\"div.row:has(h2)\").length > 0 && $(\"div.row:has(img)\").length > 0, '<code>h2</code> 元素和第一张 <code>img</code> 元素应该一起内嵌于具有 <code>row</code> class 的 <code>div</code> 元素内。');"
         },
         {
-          "text": "Nest your topmost <code>img</code> element within a <code>div</code> with the class <code>col-xs-4</code>.",
-          "testString": "assert($(\"div.col-xs-4:has(img)\").length > 0 && $(\"div.col-xs-4:has(div)\").length === 0, 'Nest your topmost <code>img</code> element within a <code>div</code> with the class <code>col-xs-4</code>.');"
+          "text": "最上方的 <code>img</code> 元素应该内嵌于含有 <code>col-xs-4</code> class 的 <code>div</code> 元素中。",
+          "testString": "assert($(\"div.col-xs-4:has(img)\").length > 0 && $(\"div.col-xs-4:has(div)\").length === 0, '最上方的 <code>img</code> 元素应该内嵌于含有 <code>col-xs-4</code> class 的 <code>div</code> 元素中。');"
         },
         {
-          "text": "Nest your <code>h2</code> element within a <code>div</code> with the class <code>col-xs-8</code>.",
-          "testString": "assert($(\"div.col-xs-8:has(h2)\").length > 0 && $(\"div.col-xs-8:has(div)\").length === 0, 'Nest your <code>h2</code> element within a <code>div</code> with the class <code>col-xs-8</code>.');"
+          "text": "<code>h2</code> 元素应该内嵌于含有 <code>col-xs-8</code> class的 <code>div</code> 元素中。",
+          "testString": "assert($(\"div.col-xs-8:has(h2)\").length > 0 && $(\"div.col-xs-8:has(div)\").length === 0, '<code>h2</code> 元素应该内嵌于含有 <code>col-xs-8</code> class的 <code>div</code> 元素中。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保每一个 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1187,31 +1187,31 @@
         }
       ],
       "description": [
-        "Font Awesome is a convenient library of icons. These icons are vector graphics, stored in the <code>.svg</code> file format. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.",
-        "You can include Font Awesome in any app by adding the following code to the top of your HTML:",
+        "Font Awesome 是一个非常便利的图标库。这些图标都是被保存在 <code>.svg</code> 的文件格式中的矢量图。这些图标就和字体一样，不仅能通过像素单位指定他们的大小，它们也同样会继承父级 HTML 元素的字体大小。",
+        "你可以将 Font Awesome 图标库添加至任何一个 app 中，方法很简单，只需要在你的 HTML 头部增加下列代码即可：",
         "<code>&#60;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css\" integrity=\"sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+\" crossorigin=\"anonymous\"&#62;</code>",
-        "In this case, we've already added it for you to this page behind the scenes.",
-        "The <code>i</code> element was originally used to make other elements italic, but is now commonly used for icons. You can add the Font Awesome classes to the <code>i</code> element to turn it into an icon, for example:",
+        "不过在这里，我们已经预先为此页面添加了上述代码。",
+        "<code>i</code> 元素起初用于让其它元素具有斜体（italic）的效果，不过现在一般用于指代图标。你可以把 Font Awesome 中的 class 属性添加到 i 元素中，让它变成一个图标，比如：",
         "<code>&lt;i class=\"fa fa-info-circle\"&gt;&lt;/i&gt;</code>",
-        "Note that the <code>span</code> element is also acceptable for use with icons.",
-        "Use Font Awesome to add a <code>thumbs-up</code> icon to your like button by giving it an <code>i</code> element with the classes <code>fa</code> and <code>fa-thumbs-up</code>; make sure to keep the text \"Like\" next to the icon."
+        "记住 <code>span</code> 元素也一样可以用于指代图标。",
+        "你可以通过 Font Awesome 库增加一个 <code>thumbs-up</code> 图标到你的 like 按钮上，具体方法是给 i 元素添加 class 属性 <code>fa</code> 和 <code>fa-thumbs-up</code>；确保你的 \"Like\" 文本在图标旁边。"
       ],
       "tests": [
         {
-          "text": "Add an <code>i</code> element with the classes <code>fa</code> and <code>fa-thumbs-up</code>.",
-          "testString": "assert($(\"i\").is(\".fa.fa-thumbs-up\") || $(\"span\").is(\".fa.fa-thumbs-up\"), 'Add an <code>i</code> element with the classes <code>fa</code> and <code>fa-thumbs-up</code>.');"
+          "text": "增加一个 class 为 <code>fa</code> 和 <code>fa-thumbs-up</code> 的 <code>i</code> 元素。",
+          "testString": "assert($(\"i\").is(\".fa.fa-thumbs-up\") || $(\"span\").is(\".fa.fa-thumbs-up\"), '增加一个包含 <code>fa</code> 和 <code>fa-thumbs-up</code> class 的 <code>i</code> 元素。');"
         },
         {
-          "text": "Your <code>fa-thumbs-up</code> icon should be located within the Like button.",
-          "testString": "assert(($(\"i.fa-thumbs-up\").parent().text().match(/Like/gi) && $(\".btn-primary > i\").is(\".fa.fa-thumbs-up\")) || ($(\"span.fa-thumbs-up\").parent().text().match(/Like/gi) && $(\".btn-primary > span\").is(\".fa.fa-thumbs-up\")), 'Your <code>fa-thumbs-up</code> icon should be located within the Like button.');"
+          "text": "<code>fa-thumbs-up</code> 图标应该放在 Like 按钮中。",
+          "testString": "assert(($(\"i.fa-thumbs-up\").parent().text().match(/Like/gi) && $(\".btn-primary > i\").is(\".fa.fa-thumbs-up\")) || ($(\"span.fa-thumbs-up\").parent().text().match(/Like/gi) && $(\".btn-primary > span\").is(\".fa.fa-thumbs-up\")), '<code>fa-thumbs-up</code> 图标应该放在 Like 按钮中。');"
         },
         {
-          "text": "Nest your <code>i</code> element within your <code>button</code> element.",
-          "testString": "assert($(\"button\").children(\"i\").length > 0 || $(\"button\").children(\"span\").length > 0, 'Nest your <code>i</code> element within your <code>button</code> element.');"
+          "text": "将 <code>i</code> 元素放置在你的 <code>button</code> 元素中。",
+          "testString": "assert($(\"button\").children(\"i\").length > 0 || $(\"button\").children(\"span\").length > 0, '将 <code>i</code> 元素放置在你的 <code>button</code> 元素中。');"
         },
         {
-          "text": "Make sure your icon element has a closing tag.",
-          "testString": "assert(code.match(/<\\/i>|<\\/span>/g), 'Make sure your icon element has a closing tag.');"
+          "text": "确保你的图标元素有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/i>|<\\/span>/g), '确保你的图标元素有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1294,22 +1294,22 @@
         }
       ],
       "description": [
-        "Font Awesome is a convenient library of icons. These icons are vector graphics, stored in the <code>.svg</code> file format. These icons are treated just like fonts. You can specify their size using pixels, and they will assume the font size of their parent HTML elements.",
-        "Use Font Awesome to add an <code>info-circle</code> icon to your info button and a <code>trash</code> icon to your delete button.",
-        "Note: The <code>span</code> element is an acceptable alternative to the <code>i</code> element for the directions below."
+        "Font Awesome 是一个非常便利的图标库。这些图标都是被保存在 <code>.svg</code> 的文件格式中的矢量图。这些图标就和字体一样，不仅能通过像素单位指定他们的大小，它们也同样会继承父级 HTML 元素的字体大小。",
+        "使用 Font Awesome 分别为你的 info 按钮添加 <code>info-circle</code> 图标，为你的 delete 按钮添加 <code>trash</code> 图标。",
+        "记住：下述要求中的 <code>i</code> 元素可以用 <code>span</code> 元素代替。"
       ],
       "tests": [
         {
-          "text": "You should add a <code>&#60;i class=\"fa fa-info-circle\"&#62;&#60;/i&#62;</code> within your info button element.",
-          "testString": "assert($(\".btn-info > i\").is(\".fa.fa-info-circle\") || $(\".btn-info > span\").is(\".fa.fa-info-circle\"), 'You should add a <code>&#60;i class=\"fa fa-info-circle\"&#62;&#60;/i&#62;</code> within your info button element.');"
+          "text": "添加一个 <code>&#60;i class=\"fa fa-info-circle\"&#62;&#60;/i&#62;</code> 图标到你的 info 按钮元素中。",
+          "testString": "assert($(\".btn-info > i\").is(\".fa.fa-info-circle\") || $(\".btn-info > span\").is(\".fa.fa-info-circle\"), '添加一个 <code>&#60;i class=\"fa fa-info-circle\"&#62;&#60;/i&#62;</code> 到你的 info 按钮元素中。');"
         },
         {
-          "text": "You should add a <code>&#60;i class=\"fa fa-trash\"&#62;&#60;/i&#62;</code> within your delete button element.",
-          "testString": "assert($(\".btn-danger > i\").is(\".fa.fa-trash\") || $(\".btn-danger > span\").is(\".fa.fa-trash\"), 'You should add a <code>&#60;i class=\"fa fa-trash\"&#62;&#60;/i&#62;</code> within your delete button element.');"
+          "text": "添加一个 <code>&#60;i class=\"fa fa-trash\"&#62;&#60;/i&#62;</code> 图标到你的 delete 按钮元素中。",
+          "testString": "assert($(\".btn-danger > i\").is(\".fa.fa-trash\") || $(\".btn-danger > span\").is(\".fa.fa-trash\"), '添加一个 <code>&#60;i class=\"fa fa-trash\"&#62;&#60;/i&#62;</code> 图标到你的 delete 按钮元素中。');"
         },
         {
-          "text": "Make sure each of your <code>i</code> elements has a closing tag and <code>&#60;i class=\"fa fa-thumbs-up\"&#62;&#60;/i&#62;</code> is in your like button element.",
-          "testString": "assert(code.match(/<\\/i>|<\\/span/g) && code.match(/<\\/i|<\\/span>/g).length > 2 && ($(\".btn-primary > i\").is(\".fa.fa-thumbs-up\") || $(\".btn-primary > span\").is(\".fa.fa-thumbs-up\")), 'Make sure each of your <code>i</code> elements has a closing tag and <code>&#60;i class=\"fa fa-thumbs-up\"&#62;&#60;/i&#62;</code> is in your like button element.');"
+          "text": "确保每一个 <code>i</code> 元素都有一个闭合标签并且 <code>&#60;i class=\"fa fa-thumbs-up\"&#62;&#60;/i&#62;</code> 在 like 按钮元素中。",
+          "testString": "assert(code.match(/<\\/i>|<\\/span/g) && code.match(/<\\/i|<\\/span>/g).length > 2 && ($(\".btn-primary > i\").is(\".fa.fa-thumbs-up\") || $(\".btn-primary > span\").is(\".fa.fa-thumbs-up\")), '确保每一个 <code>i</code> 元素都有一个闭合标签并且 <code>&#60;i class=\"fa fa-thumbs-up\"&#62;&#60;/i&#62;</code> 在 like 按钮元素中。');"
         }
       ],
       "challengeType": 0,
@@ -1392,22 +1392,22 @@
         }
       ],
       "description": [
-        "You can use Bootstrap's <code>col-xs-*</code> classes on <code>form</code> elements, too! This way, our radio buttons will be evenly spread out across the page, regardless of how wide the screen resolution is.",
-        "Nest both your radio buttons within a <code>&#60;div class=\"row\"&#62;</code> element. Then nest each of them within a <code>&#60;div class=\"col-xs-6\"&#62;</code> element.",
-        "<strong>Note:</strong> As a reminder, radio buttons are <code>input</code> elements of type <code>radio</code>."
+        "你还可以将 Bootstrap 的 <code>col-xs-*</code> class 用在 <code>form</code> 元素上！这样我们就可以在不关心屏幕大小的情况下，将我们的单选按钮均匀的放在页面上。",
+        "将你的所有单选按钮放入 <code>&#60;div class=\"row\"&#62;</code> 元素。再用 <code>&#60;div class=\"col-xs-6\"&#62;</code> 元素包裹每一个单选按钮。",
+        "<strong>记住：</strong> 提醒一句，单选按钮是 type 为 <code>radio</code> 的 <code>input</code> 元素。"
       ],
       "tests": [
         {
-          "text": "Nest all of your radio buttons inside one <code>div</code> with the class <code>row</code>.",
-          "testString": "assert($(\"div.row:has(input[type=\\\"radio\\\"])\").length > 0, 'Nest all of your radio buttons inside one <code>div</code> with the class <code>row</code>.');"
+          "text": "把你所有的单选按钮放置于具有 <code>row</code> class 的 <code>div</code> 元素中。",
+          "testString": "assert($(\"div.row:has(input[type=\\\"radio\\\"])\").length > 0, '把你所有的单选按钮放置于具有 <code>row</code> class 的 <code>div</code> 元素中。');"
         },
         {
-          "text": "Nest each of your radio buttons inside its own <code>div</code> with the class <code>col-xs-6</code>.",
-          "testString": "assert($(\"div.col-xs-6:has(input[type=\\\"radio\\\"])\").length > 1, 'Nest each of your radio buttons inside its own <code>div</code> with the class <code>col-xs-6</code>.');"
+          "text": "你的每一个单选按钮应该嵌套于自己的 <code>div</code> 元素中，每个 <code>div</code> 元素都具有 <code>col-xs-6</code> class。",
+          "testString": "assert($(\"div.col-xs-6:has(input[type=\\\"radio\\\"])\").length > 1, '你的每一个单选按钮应该嵌套于自己的 <code>div</code> 元素中，每个 <code>div</code> 元素都具有 <code>col-xs-6</code> class。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保你所有 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保你所有 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1490,21 +1490,21 @@
         }
       ],
       "description": [
-        "You can use Bootstrap's <code>col-xs-*</code> classes on <code>form</code> elements, too! This way, our checkboxes will be evenly spread out across the page, regardless of how wide the screen resolution is.",
-        "Nest all three of your checkboxes in a <code>&#60;div class=\"row\"&#62;</code> element. Then nest each of them in a <code>&#60;div class=\"col-xs-4\"&#62;</code> element."
+        "你还可以将 Bootstrap 的 <code>col-xs-*</code> 用在 <code>form</code> 元素上!这样我们就可以在不关心屏幕大小的情况下，将我们的复选框均匀的放在页面上了。",
+        "将你的所有复选框都放置于一个 <code>&#60;div class=\"row\"&#62;</code> 元素中。然后分别把每个复选框都放置于一个 <code>&#60;div class=\"col-xs-4\"&#62;</code> 元素中。"
       ],
       "tests": [
         {
-          "text": "Nest all of your checkboxes inside one <code>div</code> with the class <code>row</code>.",
-          "testString": "assert($(\"div.row:has(input[type=\\\"checkbox\\\"])\").length > 0, 'Nest all of your checkboxes inside one <code>div</code> with the class <code>row</code>.');"
+          "text": "将你所有的复选框嵌入一个含有 <code>row</code> class 的 <code>div</code> 元素中。",
+          "testString": "assert($(\"div.row:has(input[type=\\\"checkbox\\\"])\").length > 0, '将你所有的复选框嵌入一个含有 <code>row</code> class 的 <code>div</code> 元素中。');"
         },
         {
-          "text": "Nest each of your checkboxes inside its own <code>div</code> with the class <code>col-xs-4</code>.",
-          "testString": "assert($(\"div.col-xs-4:has(input[type=\\\"checkbox\\\"])\").length > 2, 'Nest each of your checkboxes inside its own <code>div</code> with the class <code>col-xs-4</code>.');"
+          "text": "你的每一个复选框应该嵌套于自己的 <code>div</code> 元素中，每个 <code>div</code> 元素都具有 <code>col-xs-4</code> class。",
+          "testString": "assert($(\"div.col-xs-4:has(input[type=\\\"checkbox\\\"])\").length > 2, '你的每一个复选框应该嵌套于自己的 <code>div</code> 元素中，每个 <code>div</code> 元素都具有 <code>col-xs-4</code> class。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保你所有 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保你所有 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1594,26 +1594,27 @@
         }
       ],
       "description": [
-        "You can add the <code>fa-paper-plane</code> Font Awesome icon by adding <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code> within your submit <code>button</code> element.",
-        "Give your form's text input field a class of <code>form-control</code>. Give your form's submit button the classes <code>btn btn-primary</code>. Also give this button the Font Awesome icon of <code>fa-paper-plane</code>.",
-        "All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with the class <code>.form-control</code> have a width of 100%."
+        "你可以在你的 submit <code>button</code> 按钮里面加上 <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code> 来添加 Font Awesome 的 <code>fa-paper-plane</code> 图标。",
+        "为表单的文本输入框（text input）添加一个 <code>form-control</code> class。为表单的提交（submit）按钮添加一个 <code>btn btn-primary</code> class，并为它加上 Font Awesome 的 <code>fa-paper-plane</code> 图标。",
+        "All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with the class <code>.form-control</code> have a width of 100%.",
+        "所有文本输入类的元素如 <code>&lt;input&gt;</code>，<code>&lt;textarea&gt;</code> 和 <code>&lt;select&gt;</code> 只要添加上 <code>.form-control</code> class 就会占满100%的宽度。"
       ],
       "tests": [
         {
-          "text": "Give the submit button in your form the classes <code>btn btn-primary</code>.",
-          "testString": "assert($(\"button[type=\\\"submit\\\"]\").hasClass(\"btn btn-primary\"), 'Give the submit button in your form the classes <code>btn btn-primary</code>.');"
+          "text": "给你的 submit 按钮添加 <code>btn btn-primary</code> class。",
+          "testString": "assert($(\"button[type=\\\"submit\\\"]\").hasClass(\"btn btn-primary\"), '给你的 submit 按钮添加 <code>btn btn-primary</code> class。');"
         },
         {
-          "text": "Add a <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code> within your submit <code>button</code> element.",
-          "testString": "assert($(\"button[type=\\\"submit\\\"]:has(i.fa.fa-paper-plane)\").length > 0, 'Add a <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code> within your submit <code>button</code> element.');"
+          "text": "在你的 submit <code>button</code> 元素嵌入 <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code>。",
+          "testString": "assert($(\"button[type=\\\"submit\\\"]:has(i.fa.fa-paper-plane)\").length > 0, '在你的 submit <code>button</code> 元素嵌入 <code>&#60;i class=\"fa fa-paper-plane\"&#62;&#60;/i&#62;</code>。');"
         },
         {
-          "text": "Give the text <code>input</code> in your form the class <code>form-control</code>.",
-          "testString": "assert($(\"input[type=\\\"text\\\"]\").hasClass(\"form-control\"), 'Give the text <code>input</code> in your form the class <code>form-control</code>.');"
+          "text": "给表单中的 text <code>input</code> 元素添加 <code>form-control</code> class。",
+          "testString": "assert($(\"input[type=\\\"text\\\"]\").hasClass(\"form-control\"), '给表单中的 text <code>input</code> 元素添加 <code>form-control</code> class。');"
         },
         {
-          "text": "Make sure each of your <code>i</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/i>/g) && code.match(/<\\/i/g).length > 3, 'Make sure each of your <code>i</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>i</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/i>/g) && code.match(/<\\/i/g).length > 3, '确保每一个 <code>i</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1711,26 +1712,26 @@
         }
       ],
       "description": [
-        "Now let's get your form <code>input</code> and your submission <code>button</code> on the same line. We'll do this the same way we have previously: by using a <code>div</code> element with the class <code>row</code>, and other <code>div</code> elements within it using the <code>col-xs-*</code> class.",
-        "Nest both your form's text <code>input</code> and submit <code>button</code> within a <code>div</code> with the class <code>row</code>. Nest your form's text <code>input</code> within a div with the class of <code>col-xs-7</code>. Nest your form's submit <code>button</code> in a <code>div</code> with the class <code>col-xs-5</code>.",
-        "This is the last challenge we'll do for our Cat Photo App for now. We hope you've enjoyed learning Font Awesome, Bootstrap, and responsive design!"
+        "现在让我们把你表单里的 <code>input</code> 元素和 submit <code>button</code> （提交按钮）放在同一行。跟着之前的做法来就行：准备好一个具有 <code>row</code> class 的 <code>div</code> 元素还有几个具有 <code>col-xs-*</code> class 的 <code>div</code> 元素。",
+        "先把你表单的 text <code>input</code> （文本输入框）和 submit <code>button</code> （提交按钮）放进具有 <code>row</code> class 的 <code>div</code> 中。再用 <code>col-xs-7</code> class 的 div 包裹表单的 text <code>input</code> （文本输入框），<code>col-xs-5</code> class 的 div 包裹表单的 submit <code>button</code> （提交按钮）。",
+        "这是我们到目前为止 Cat Photo App 的最后一个挑战了。我希望你能喜欢 Font Awesome， Bootstrap，和响应式设计！"
       ],
       "tests": [
         {
-          "text": "Nest your form submission button and text input in a div with class <code>row</code>.",
-          "testString": "assert($(\"div.row:has(input[type=\\\"text\\\"])\").length > 0 &&  $(\"div.row:has(button[type=\\\"submit\\\"])\").length > 0, 'Nest your form submission button and text input in a div with class <code>row</code>.');"
+          "text": "确保你的提交按钮和文本输入框都在同一个具有 <code>row</code> class 的 div 元素中。",
+          "testString": "assert($(\"div.row:has(input[type=\\\"text\\\"])\").length > 0 &&  $(\"div.row:has(button[type=\\\"submit\\\"])\").length > 0, '确保你的提交按钮和文本输入框都在同一个具有 <code>row</code> class 的 div 元素中。');"
         },
         {
-          "text": "Nest your form text input in a div with the class <code>col-xs-7</code>.",
-          "testString": "assert($(\"div.col-xs-7:has(input[type=\\\"text\\\"])\").length > 0, 'Nest your form text input in a div with the class <code>col-xs-7</code>.');"
+          "text": "表单的文本输入框应该嵌入到一个具有 <code>col-xs-7</code> class 的 div 内。",
+          "testString": "assert($(\"div.col-xs-7:has(input[type=\\\"text\\\"])\").length > 0, '表单的文本输入框应该嵌入到一个具有 <code>col-xs-7</code> class 的 div 内。');"
         },
         {
-          "text": "Nest your form submission button in a div with the class <code>col-xs-5</code>.",
-          "testString": "assert($(\"div.col-xs-5:has(button[type=\\\"submit\\\"])\").length > 0, 'Nest your form submission button in a div with the class <code>col-xs-5</code>.');"
+          "text": "表单的提交按钮应该嵌入到一个具有 <code>col-xs-5</code> class 的 div 内。",
+          "testString": "assert($(\"div.col-xs-5:has(button[type=\\\"submit\\\"])\").length > 0, '表单的提交按钮应该嵌入到一个具有 <code>col-xs-5</code> class 的 div 内。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保每一个 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1822,31 +1823,31 @@
       "id": "bad87fee1348bd9aec908846",
       "title": "Create a Bootstrap Headline",
       "description": [
-        "Now let's build something from scratch to practice our HTML, CSS and Bootstrap skills.",
-        "We'll build a jQuery playground, which we'll soon put to use in our jQuery challenges.",
-        "To start with, create an <code>h3</code> element, with the text <code>jQuery Playground</code>.",
-        "Color your <code>h3</code> element with the <code>text-primary</code> Bootstrap class, and center it with the <code>text-center</code> Bootstrap class."
+        "现在，让我们运用 HTML，CSS 和 Bootstrap 从零开始做点东西。",
+        "我们将会搭建一个 jQuery playground，以便在后续的 jQuery 课程中使用它。",
+        "首先，创建一个包含 <code>jQuery Playground</code> 文本内容的 <code>h3</code> 元素。",
+        "通过给你的 <code>h3</code> 元素添加 Bootstrap 的 <code>text-primary</code> class 来为其上色，然后添加 Bootstrap 的 <code>text-center</code> class 使其文本居中显示。"
       ],
       "tests": [
         {
-          "text": "Add a <code>h3</code> element to your page.",
-          "testString": "assert($(\"h3\") && $(\"h3\").length > 0, 'Add a <code>h3</code> element to your page.');"
+          "text": "为你的页面添加一个 <code>h3</code> 元素。",
+          "testString": "assert($(\"h3\") && $(\"h3\").length > 0, '为你的页面添加一个 <code>h3</code> 元素。');"
         },
         {
-          "text": "Make sure your <code>h3</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/h3>/g) && code.match(/<h3/g) && code.match(/<\\/h3>/g).length === code.match(/<h3/g).length, 'Make sure your <code>h3</code> element has a closing tag.');"
+          "text": "确保你的 <code>h3</code> 元素有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/h3>/g) && code.match(/<h3/g) && code.match(/<\\/h3>/g).length === code.match(/<h3/g).length, '确保你的 <code>h3</code> 元素有一个闭合标签。');"
         },
         {
-          "text": "Your <code>h3</code> element should be colored by applying the class <code>text-primary</code>",
-          "testString": "assert($(\"h3\").hasClass(\"text-primary\"), 'Your <code>h3</code> element should be colored by applying the class <code>text-primary</code>');"
+          "text": "为了确保被上色，你的 <code>h3</code> 元素应该具有 <code>text-primary</code> class。",
+          "testString": "assert($(\"h3\").hasClass(\"text-primary\"), '为了确保被上色，你的 <code>h3</code> 元素应该具有 <code>text-primary</code> class。');"
         },
         {
-          "text": "Your <code>h3</code> element should be centered by applying the class <code>text-center</code>",
-          "testString": "assert($(\"h3\").hasClass(\"text-center\"), 'Your <code>h3</code> element should be centered by applying the class <code>text-center</code>');"
+          "text": "为了确保文本居中显示，你的 <code>h3</code> 元素应该具有 <code>text-center</code> class。",
+          "testString": "assert($(\"h3\").hasClass(\"text-center\"), '为了确保文本居中显示，你的 <code>h3</code> 元素应该具有 <code>text-center</code> class。');"
         },
         {
-          "text": "Your <code>h3</code> element should have the text <code>jQuery Playground</code>.",
-          "testString": "assert.isTrue((/jquery(\\s)+playground/gi).test($(\"h3\").text()), 'Your <code>h3</code> element should have the text <code>jQuery Playground</code>.');"
+          "text": "你的 <code>h3</code> 元素需要有文本 <code>jQuery Playground</code>。",
+          "testString": "assert.isTrue((/jquery(\\s)+playground/gi).test($(\"h3\").text()), '你的 <code>h3</code> 元素需要有文本 <code>jQuery Playground</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1865,21 +1866,21 @@
       "id": "bad87fee1348bd9aec908746",
       "title": "House our page within a Bootstrap container-fluid div",
       "description": [
-        "Now let's make sure all the content on your page is mobile-responsive.",
-        "Let's nest your <code>h3</code> element within a <code>div</code> element with the class <code>container-fluid</code>."
+        "现在让我们确保页面所有内容应该都是响应式的。",
+        "将我们的 <code>h3</code> 元素内嵌进一个具有 <code>container-fluid</code> class 的<code>div</code> 元素中。"
       ],
       "tests": [
         {
-          "text": "Your <code>div</code> element should have the class <code>container-fluid</code>.",
-          "testString": "assert($(\"div\").hasClass(\"container-fluid\"), 'Your <code>div</code> element should have the class <code>container-fluid</code>.');"
+          "text": "你的 <code>div</code> 元素应该具有 <code>container-fluid</code> class。",
+          "testString": "assert($(\"div\").hasClass(\"container-fluid\"), '你的 <code>div</code> 元素应该具有 <code>container-fluid</code> class。');"
         },
         {
-          "text": "Make sure each of your <code>div</code> elements has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure each of your <code>div</code> elements has a closing tag.');"
+          "text": "确保每一个 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保每一个 <code>div</code> 元素都有一个闭合标签。');"
         },
         {
-          "text": "Nest your <code>h3</code> element inside a <code>div</code> element.",
-          "testString": "assert($(\"div\").children(\"h3\").length >0, 'Nest your <code>h3</code> element inside a <code>div</code> element.');"
+          "text": "你的 <code>h3</code> 元素应该内嵌于 <code>div</code> 元素。",
+          "testString": "assert($(\"div\").children(\"h3\").length >0, '你的 <code>h3</code> 元素应该内嵌于 <code>div</code> 元素。');"
         }
       ],
       "challengeType": 0,
@@ -1902,25 +1903,25 @@
       "id": "bad87fee1348bd9bec908846",
       "title": "Create a Bootstrap Row",
       "description": [
-        "Now we'll create a Bootstrap row for our inline elements.",
-        "Create a <code>div</code> element below the <code>h3</code> tag, with a class of <code>row</code>."
+        "这次我们会为我们的内联元素创建一个 Bootstrap 栅格系统的行（row）。",
+        "在我们的 <code>h3</code> 标签下方创建一个含有 <code>row</code> class 的 <code>div</code> 元素。"
       ],
       "tests": [
         {
-          "text": "Add a <code>div</code> element below your <code>h3</code> element.",
-          "testString": "assert(($(\"div\").length > 1) && ($(\"div.row h3.text-primary\").length == 0) && ($(\"div.row + h3.text-primary\").length == 0) && ($(\"h3.text-primary + div.row\").length > 0), 'Add a <code>div</code> element below your <code>h3</code> element.');"
+          "text": "<code>h3</code> 元素下增加一个 <code>div</code> 元素。",
+          "testString": "assert(($(\"div\").length > 1) && ($(\"div.row h3.text-primary\").length == 0) && ($(\"div.row + h3.text-primary\").length == 0) && ($(\"h3.text-primary + div.row\").length > 0), '在你的 <code>h3</code> 元素下增加一个 <code>div</code> 元素。');"
         },
         {
-          "text": "Your <code>div</code> element should have the class <code>row</code>",
-          "testString": "assert($(\"div\").hasClass(\"row\"), 'Your <code>div</code> element should have the class <code>row</code>');"
+          "text": "<code>div</code> 元素的 class 应为 <code>row</code>。",
+          "testString": "assert($(\"div\").hasClass(\"row\"), '<code>div</code> 元素的 class 应为 <code>row</code>。');"
         },
         {
-          "text": "Your <code>row div</code> should be nested inside the <code>container-fluid div</code>",
-          "testString": "assert($(\"div.container-fluid div.row\").length > 0, 'Your <code>row div</code> should be nested inside the <code>container-fluid div</code>');"
+          "text": "<code>row div</code> 应该内嵌于 <code>container-fluid div</code>。",
+          "testString": "assert($(\"div.container-fluid div.row\").length > 0, '<code>row div</code>应该内嵌于 <code>container-fluid div</code>。');"
         },
         {
-          "text": "Make sure your <code>div</code> element has a closing tag.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure your <code>div</code> element has a closing tag.');"
+          "text": "确保所有 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保所有 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1945,17 +1946,17 @@
       "id": "bad87fee1348bd9aec908847",
       "title": "Split Your Bootstrap Row",
       "description": [
-        "Now that we have a Bootstrap Row, let's split it into two columns to house our elements.",
-        "Create two <code>div</code> elements within your row, both with the class <code>col-xs-6</code>."
+        "既然我们已经有了一个 Bootstrap 行，就让我们把它分成两列来放置我们的元素。",
+        "在行内创建两个 <code>div</code> 元素，并为它们添加 <code>col-xs-6</code> class。"
       ],
       "tests": [
         {
-          "text": "Nest two <code>div class=\"col-xs-6\"</code> elements within your <code>div class=\"row\"</code> element.",
-          "testString": "assert($(\"div.row > div.col-xs-6\").length > 1, 'Nest two <code>div class=\"col-xs-6\"</code> elements within your <code>div class=\"row\"</code> element.');"
+          "text": "将两个 <code>div class=\"col-xs-6\"</code> 元素内嵌入你的 <code>div class=\"row\"</code> 元素中。",
+          "testString": "assert($(\"div.row > div.col-xs-6\").length > 1, '将两个 <code>div class=\"col-xs-6\"</code> 元素内嵌入你的 <code>div class=\"row\"</code> 元素中。');"
         },
         {
-          "text": "Make sure all your <code>div</code> elements have closing tags.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure all your <code>div</code> elements have closing tags.');"
+          "text": "确保你的 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保你的 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -1982,21 +1983,21 @@
       "id": "bad87fee1348bd9aec908848",
       "title": "Create Bootstrap Wells",
       "description": [
-        "Bootstrap has a class called <code>well</code> that can create a visual sense of depth for your columns.",
-        "Nest one <code>div</code> element with the class <code>well</code> within each of your <code>col-xs-6</code> <code>div</code> elements."
+        "Bootstrap 有一个 class 叫做 <code>well</code>，作用是赋予列一种视觉上的深度感（视觉上的效果）。",
+        "在每一个 class 为 <code>col-xs-6</code> 的 <code>div</code> 元素中都嵌入一个带有 <code>well</code> 的 <code>div</code> 元素。"
       ],
       "tests": [
         {
-          "text": "Add a <code>div</code> element with the class <code>well</code> inside each of your <code>div</code> elements with the class <code>\"col-xs-6\"</code>",
-          "testString": "assert($(\"div.col-xs-6\").not(\":has(>div.well)\").length < 1, 'Add a <code>div</code> element with the class <code>well</code> inside each of your <code>div</code> elements with the class <code>\"col-xs-6\"</code>');"
+          "text": "在每一个 class 为 <code>\"col-xs-6\"</code> 的 <code>div</code> 元素中都嵌入一个带有 <code>well</code> 的 <code>div</code> 元素。",
+          "testString": "assert($(\"div.col-xs-6\").not(\":has(>div.well)\").length < 1, '在每一个 class 为 <code>\"col-xs-6\"</code> 的 <code>div</code> 元素中都嵌入带有 <code>well</code> 的 <code>div</code> 元素。');"
         },
         {
-          "text": "Nest both of your <code>div</code> elements with the class <code>\"col-xs-6\"</code> within your <code>div</code> element with the class <code>\"row\"</code>.",
-          "testString": "assert($(\"div.row > div.col-xs-6\").length > 1, 'Nest both of your <code>div</code> elements with the class <code>\"col-xs-6\"</code> within your <code>div</code> element with the class <code>\"row\"</code>.');"
+          "text": "将你的两个 class 为 <code>\"col-xs-6\"</code> 的 <code>div</code> 元素都内嵌入一个带有 <code>\"row\"</code> 的 <code>div</code> 元素中。",
+          "testString": "assert($(\"div.row > div.col-xs-6\").length > 1, '将你的两个 class 为 <code>\"col-xs-6\"</code> 的 <code>div</code> 元素都内嵌入一个带有 <code>\"row\"</code> 的 <code>div</code> 元素中。');"
         },
         {
-          "text": "Make sure all your <code>div</code> elements have closing tags.",
-          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, 'Make sure all your <code>div</code> elements have closing tags.');"
+          "text": "确保你的 <code>div</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/div>/g) && code.match(/<div/g) && code.match(/<\\/div>/g).length === code.match(/<div/g).length, '确保你的 <code>div</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -2027,21 +2028,21 @@
       "id": "bad87fee1348bd9aec908849",
       "title": "Add Elements within Your Bootstrap Wells",
       "description": [
-        "Now we're several <code>div</code> elements deep on each column of our row. This is as deep as we'll need to go. Now we can add our <code>button</code> elements.",
-        "Nest three <code>button</code> elements within each of your <code>well</code> <code>div</code> elements."
+        "现在我们已经每一行的每一列都有了 <code>div</code> 元素。这已经足够了，现在让我们添加 <code>button</code> 元素吧。",
+        "在每一个 <code>well</code> <code>div</code> 元素下放置三个 <code>button</code> 元素。"
       ],
       "tests": [
         {
-          "text": "Nest three <code>button</code> elements within each of your <code>div</code> elements with class <code>well</code>.",
-          "testString": "assert($(\"div.well:eq(0)\").children(\"button\").length === 3 && $(\"div.well:eq(1)\").children(\"button\").length === 3, 'Nest three <code>button</code> elements within each of your <code>div</code> elements with class <code>well</code>.');"
+          "text": "在每一个 <code>well</code> class 的 <code>div</code> 元素内分别放置三个 <code>button</code> 元素。",
+          "testString": "assert($(\"div.well:eq(0)\").children(\"button\").length === 3 && $(\"div.well:eq(1)\").children(\"button\").length === 3, '在每一个 <code>well</code> class 的 <code>div</code> 元素内分别放置三个 <code>button</code> 元素。');"
         },
         {
-          "text": "You should have a total of 6 <code>button</code> elements.",
-          "testString": "assert($(\"button\") && $(\"button\").length > 5, 'You should have a total of 6 <code>button</code> elements.');"
+          "text": "你应该总共有 6 个 <code>button</code> 元素。",
+          "testString": "assert($(\"button\") && $(\"button\").length > 5, '你应该总共有 6 个 <code>button</code> 元素。');"
         },
         {
-          "text": "Make sure all your <code>button</code> elements have closing tags.",
-          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, 'Make sure all your <code>button</code> elements have closing tags.');"
+          "text": "确保你的 <code>button</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/button>/g) && code.match(/<button/g) && code.match(/<\\/button>/g).length === code.match(/<button/g).length, '确保你的 <code>button</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -2080,17 +2081,17 @@
       "id": "bad87fee1348bd9aec908850",
       "title": "Apply the Default Bootstrap Button Style",
       "description": [
-        "Bootstrap has another button class called <code>btn-default</code>.",
-        "Apply both the <code>btn</code> and <code>btn-default</code> classes to each of your <code>button</code> elements."
+        "Bootstrap 还有另外一种属于按钮的 class 叫做 <code>btn-default</code>。",
+        "为你的 <code>button</code> 元素增加两个 class： <code>btn</code> 和 <code>btn-default</code>。"
       ],
       "tests": [
         {
-          "text": "Apply the <code>btn</code> class to each of your <code>button</code> elements.",
-          "testString": "assert($(\".btn\").length > 5, 'Apply the <code>btn</code> class to each of your <code>button</code> elements.');"
+          "text": "将 <code>btn</code> class 添加到你所有的 <code>button</code> 元素中。",
+          "testString": "assert($(\".btn\").length > 5, '将 <code>btn</code> class 添加到你所有的 <code>button</code> 元素中。');"
         },
         {
-          "text": "Apply the <code>btn-default</code> class to each of your <code>button</code> elements.",
-          "testString": "assert($(\".btn-default\").length > 5, 'Apply the <code>btn-default</code> class to each of your <code>button</code> elements.');"
+          "text": "将 <code>btn-default</code> class 添加到你每一个 <code>button</code> 元素中。",
+          "testString": "assert($(\".btn-default\").length > 5, '将 <code>btn-default</code> class 添加到你每一个 <code>button</code> 元素中。');"
         }
       ],
       "challengeType": 0,
@@ -2130,13 +2131,13 @@
       "id": "bad87fee1348bd9aec908852",
       "title": "Create a Class to Target with jQuery Selectors",
       "description": [
-        "Not every class needs to have corresponding CSS. Sometimes we create classes just for the purpose of selecting these elements more easily using jQuery.",
-        "Give each of your <code>button</code> elements the class <code>target</code>."
+        "并不是所有 class 都需要有对应的 CSS 样式。有时候我们创建 class 只是为了更方便地在 jQuery 中选中这些元素。",
+        "为你的每一个 <code>button</code> 元素添加 <code>target</code> class。"
       ],
       "tests": [
         {
-          "text": "Apply the <code>target</code> class to each of your <code>button</code> elements.",
-          "testString": "assert($(\".target\").length > 5, 'Apply the <code>target</code> class to each of your <code>button</code> elements.');"
+          "text": "给你的每一个 <code>button</code> 元素设置 <code>target</code> class。",
+          "testString": "assert($(\".target\").length > 5, '给你的每一个 <code>button</code> 元素设置 <code>target</code> class。');"
         }
       ],
       "challengeType": 0,
@@ -2175,21 +2176,21 @@
       "id": "bad87fee1348bd9aec908853",
       "title": "Add id Attributes to Bootstrap Elements",
       "description": [
-        "Recall that in addition to class attributes, you can give each of your elements an <code>id</code> attribute.",
-        "Each id must be unique to a specific element and used only once per page.",
-        "Let's give a unique id to each of our <code>div</code> elements of class <code>well</code>.",
-        "Remember that you can give an element an id like this:",
+        "回忆一下，除了可以给元素添加 class 属性，我们还可以给元素设置 <code>id</code> 属性。",
+        "每个指定元素的 id 都是唯一的，并且在每个页面中都只能使用一次。",
+        "让我们为每个 class 为 <code>well</code> 的 <code>div</code> 元素添加一个唯一的 id。",
+        "记住，你可以这样给一个元素设置 ID。",
         "<code>&#60;div class=\"well\" id=\"center-well\"&#62;</code>",
-        "Give the well on the left the id of <code>left-well</code>. Give the well on the right the id of <code>right-well</code>."
+        "把左边 well 的 ID 设置为 <code>left-well</code>。右边的 well 的 ID 设置为 <code>right-well</code>。"
       ],
       "tests": [
         {
-          "text": "Give your left <code>well</code> the id of <code>left-well</code>.",
-          "testString": "assert($(\".col-xs-6\").children(\"#left-well\") && $(\".col-xs-6\").children(\"#left-well\").length > 0, 'Give your left <code>well</code> the id of <code>left-well</code>.');"
+          "text": "把左边的 <code>well</code> 的 ID 设置为 <code>left-well</code>。",
+          "testString": "assert($(\".col-xs-6\").children(\"#left-well\") && $(\".col-xs-6\").children(\"#left-well\").length > 0, '把左边的 <code>well</code> 的 ID 设置为 <code>left-well</code>。');"
         },
         {
-          "text": "Give your right <code>well</code> the id of <code>right-well</code>.",
-          "testString": "assert($(\".col-xs-6\").children(\"#right-well\") && $(\".col-xs-6\").children(\"#right-well\").length > 0, 'Give your right <code>well</code> the id of <code>right-well</code>.');"
+          "text": "把右边的 <code>well</code> 的 ID 设置为 <code>right-well</code>。",
+          "testString": "assert($(\".col-xs-6\").children(\"#right-well\") && $(\".col-xs-6\").children(\"#right-well\").length > 0, '把右边的 <code>well</code> 的 ID 设置为 <code>right-well</code>。');"
         }
       ],
       "challengeType": 0,
@@ -2228,26 +2229,26 @@
       "id": "bad87fee1348bd9aec908854",
       "title": "Label Bootstrap Wells",
       "description": [
-        "For the sake of clarity, let's label both of our wells with their ids.",
-        "Above your left-well, inside its <code>col-xs-6</code> <code>div</code> element, add a <code>h4</code> element with the text <code>#left-well</code>.",
-        "Above your right-well, inside its <code>col-xs-6</code> <code>div</code> element, add a <code>h4</code> element with the text <code>#right-well</code>."
+        "为了让我们页面逻辑更清晰，让我们为我们的 wells 都标上它们的 id 吧。",
+        "在 left-well 的上一层，class 为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#left-well</code> 的 <code>h4</code> 元素。",
+        "在 right-well 的上一层，class 为 <code>col-xs-6</code> 的 <code>div</code> 元素里面，增加一个文本为 <code>#right-well</code> 的 <code>h4</code> 元素。"
       ],
       "tests": [
         {
-          "text": "Add an <code>h4</code> element to each of your <code>&#60;div class=\"col-xs-6\"&#62;</code> elements.",
-          "testString": "assert($(\".col-xs-6\").children(\"h4\") && $(\".col-xs-6\").children(\"h4\").length > 1, 'Add an <code>h4</code> element to each of your <code>&#60;div class=\"col-xs-6\"&#62;</code> elements.');"
+          "text": "为每个 <code>&#60;div class=\"col-xs-6\"&#62;</code> 元素添加一个 <code>h4</code> 元素。",
+          "testString": "assert($(\".col-xs-6\").children(\"h4\") && $(\".col-xs-6\").children(\"h4\").length > 1, '为每个 <code>&#60;div class=\"col-xs-6\"&#62;</code> 元素添加一个 <code>h4</code> 元素。');"
         },
         {
-          "text": "One <code>h4</code> element should have the text <code>#left-well</code>.",
-          "testString": "assert(new RegExp(\"#left-well\",\"gi\").test($(\"h4\").text()), 'One <code>h4</code> element should have the text <code>#left-well</code>.');"
+          "text": "其中一个 <code>h4</code> 元素应该含有文本内容 <code>#left-well</code>。",
+          "testString": "assert(new RegExp(\"#left-well\",\"gi\").test($(\"h4\").text()), '其中一个 <code>h4</code> 元素应该含有文本内容 <code>#left-well</code>。');"
         },
         {
-          "text": "One <code>h4</code> element should have the text <code>#right-well</code>.",
-          "testString": "assert(new RegExp(\"#right-well\",\"gi\").test($(\"h4\").text()), 'One <code>h4</code> element should have the text <code>#right-well</code>.');"
+          "text": "其中一个 <code>h4</code> 元素应该含有文本内容 <code>#right-well</code>。",
+          "testString": "assert(new RegExp(\"#right-well\",\"gi\").test($(\"h4\").text()), '其中一个 <code>h4</code> 元素应该含有文本内容 <code>#right-well</code>。');"
         },
         {
-          "text": "Make sure all your <code>h4</code> elements have closing tags.",
-          "testString": "assert(code.match(/<\\/h4>/g) && code.match(/<h4/g) && code.match(/<\\/h4>/g).length === code.match(/<h4/g).length, 'Make sure all your <code>h4</code> elements have closing tags.');"
+          "text": "确保你的每个 <code>h4</code> 元素都有一个闭合标签。",
+          "testString": "assert(code.match(/<\\/h4>/g) && code.match(/<h4/g) && code.match(/<\\/h4>/g).length === code.match(/<h4/g).length, '确保你的每个 <code>h4</code> 元素都有一个闭合标签。');"
         }
       ],
       "challengeType": 0,
@@ -2288,34 +2289,34 @@
       "id": "bad87fee1348bd9aec908855",
       "title": "Give Each Element a Unique id",
       "description": [
-        "We will also want to be able to use jQuery to target each button by its unique id.",
-        "Give each of your buttons a unique id, starting with <code>target1</code> and ending with <code>target6</code>.",
-        "Make sure that <code>target1</code> to <code>target3</code> are in <code>#left-well</code>, and <code>target4</code> to <code>target6</code> are in <code>#right-well</code>."
+        "我们也可以使用 jQuery 通过每个按钮各自唯一的 id 来标识出它们。We will also want to be able to use jQuery to target each button by its unique id.",
+        "给你的每一个按钮一个唯一的 id，以 <code>target1</code> 开始，<code>target6</code> 结束。",
+        "确保 <code>target1</code> 到 <code>target3</code> 在 <code>#left-well</code> 之中，<code>target4</code> 到 <code>target6</code> 在 <code>#right-well</code> 之中。"
       ],
       "tests": [
         {
-          "text": "One <code>button</code> element should have the id <code>target1</code>.",
-          "testString": "assert($(\"#left-well\").children(\"#target1\") && $(\"#left-well\").children(\"#target1\").length > 0, 'One <code>button</code> element should have the id <code>target1</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target1</code>。",
+          "testString": "assert($(\"#left-well\").children(\"#target1\") && $(\"#left-well\").children(\"#target1\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target1</code>。');"
         },
         {
-          "text": "One <code>button</code> element should have the id <code>target2</code>.",
-          "testString": "assert($(\"#left-well\").children(\"#target2\") && $(\"#left-well\").children(\"#target2\").length > 0, 'One <code>button</code> element should have the id <code>target2</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target2</code>。",
+          "testString": "assert($(\"#left-well\").children(\"#target2\") && $(\"#left-well\").children(\"#target2\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target2</code>。');"
         },
         {
-          "text": "One <code>button</code> element should have the id <code>target3</code>.",
-          "testString": "assert($(\"#left-well\").children(\"#target3\") && $(\"#left-well\").children(\"#target3\").length > 0, 'One <code>button</code> element should have the id <code>target3</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target3</code>。",
+          "testString": "assert($(\"#left-well\").children(\"#target3\") && $(\"#left-well\").children(\"#target3\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target3</code>。');"
         },
         {
-          "text": "One <code>button</code> element should have the id <code>target4</code>.",
-          "testString": "assert($(\"#right-well\").children(\"#target4\") && $(\"#right-well\").children(\"#target4\").length > 0, 'One <code>button</code> element should have the id <code>target4</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target4</code>。",
+          "testString": "assert($(\"#right-well\").children(\"#target4\") && $(\"#right-well\").children(\"#target4\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target4</code>。');"
         },
         {
-          "text": "One <code>button</code> element should have the id <code>target5</code>.",
-          "testString": "assert($(\"#right-well\").children(\"#target5\") && $(\"#right-well\").children(\"#target5\").length > 0, 'One <code>button</code> element should have the id <code>target5</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target5</code>。",
+          "testString": "assert($(\"#right-well\").children(\"#target5\") && $(\"#right-well\").children(\"#target5\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target5</code>。');"
         },
         {
-          "text": "One <code>button</code> element should have the id <code>target6</code>.",
-          "testString": "assert($(\"#right-well\").children(\"#target6\") && $(\"#right-well\").children(\"#target6\").length > 0, 'One <code>button</code> element should have the id <code>target6</code>.');"
+          "text": "其中一个 <code>button</code> 元素应该有 id <code>target6</code>。",
+          "testString": "assert($(\"#right-well\").children(\"#target6\") && $(\"#right-well\").children(\"#target6\").length > 0, '其中一个 <code>button</code> 元素应该有 id <code>target6</code>。');"
         }
       ],
       "challengeType": 0,
@@ -2356,33 +2357,33 @@
       "id": "bad87fee1348bd9aec908856",
       "title": "Label Bootstrap Buttons",
       "description": [
-        "Just like we labeled our wells, we want to label our buttons.",
-        "Give each of your <code>button</code> elements text that corresponds to its <code>id</code>'s selector."
+        "正如我们标注了每个 wells 一样，我们同样想要标注每一个按钮。",
+        "为每一个 <code>button</code> 元素选择与其 <code>id</code> 选择器相同的文本。"
       ],
       "tests": [
         {
-          "text": "Give your <code>button</code> element with the id <code>target1</code> the text <code>#target1</code>.",
-          "testString": "assert(new RegExp(\"#target1\",\"gi\").test($(\"#target1\").text()), 'Give your <code>button</code> element with the id <code>target1</code> the text <code>#target1</code>.');"
+          "text": "给 id 为 <code>target1</code> 的 <code>button</code> 元素设置文本 <code>#target1</code>。",
+          "testString": "assert(new RegExp(\"#target1\",\"gi\").test($(\"#target1\").text()), '给 id 为 <code>target1</code> 的 <code>button</code> 元素设置文本 <code>#target1</code>。');"
         },
         {
-          "text": "Give your <code>button</code> element with the id <code>target2</code> the text <code>#target2</code>.",
-          "testString": "assert(new RegExp(\"#target2\",\"gi\").test($(\"#target2\").text()), 'Give your <code>button</code> element with the id <code>target2</code> the text <code>#target2</code>.');"
+          "text": "给 id 为 <code>target2</code> 的 <code>button</code> 元素设置文本 <code>#target2</code>。",
+          "testString": "assert(new RegExp(\"#target2\",\"gi\").test($(\"#target2\").text()), '给 id 为 <code>target2</code> 的 <code>button</code> 元素设置文本 <code>#target2</code>。');"
         },
         {
-          "text": "Give your <code>button</code> element with the id <code>target3</code> the text <code>#target3</code>.",
-          "testString": "assert(new RegExp(\"#target3\",\"gi\").test($(\"#target3\").text()), 'Give your <code>button</code> element with the id <code>target3</code> the text <code>#target3</code>.');"
+          "text": "给 id 为 <code>target3</code> 的 <code>button</code> 元素设置文本 <code>#target3</code>。",
+          "testString": "assert(new RegExp(\"#target3\",\"gi\").test($(\"#target3\").text()), '给 id 为 <code>target3</code> 的 <code>button</code> 元素设置文本 <code>#target3</code>。');"
         },
         {
-          "text": "Give your <code>button</code> element with the id <code>target4</code> the text <code>#target4</code>.",
-          "testString": "assert(new RegExp(\"#target4\",\"gi\").test($(\"#target4\").text()), 'Give your <code>button</code> element with the id <code>target4</code> the text <code>#target4</code>.');"
+          "text": "给 id 为 <code>target4</code> 的 <code>button</code> 元素设置文本 <code>#target4</code>。",
+          "testString": "assert(new RegExp(\"#target4\",\"gi\").test($(\"#target4\").text()), '给 id 为 <code>target4</code> 的 <code>button</code> 元素设置文本 <code>#target4</code>。');"
         },
         {
-          "text": "Give your <code>button</code> element with the id <code>target5</code> the text <code>#target5</code>.",
-          "testString": "assert(new RegExp(\"#target5\",\"gi\").test($(\"#target5\").text()), 'Give your <code>button</code> element with the id <code>target5</code> the text <code>#target5</code>.');"
+          "text": "给 id 为 <code>target5</code> 的 <code>button</code> 元素设置文本 <code>#target5</code>。",
+          "testString": "assert(new RegExp(\"#target5\",\"gi\").test($(\"#target5\").text()), '给 id 为 <code>target5</code> 的 <code>button</code> 元素设置文本 <code>#target5</code>。');"
         },
         {
-          "text": "Give your <code>button</code> element with the id <code>target6</code> the text <code>#target6</code>.",
-          "testString": "assert(new RegExp(\"#target6\",\"gi\").test($(\"#target6\").text()), 'Give your <code>button</code> element with the id <code>target6</code> the text <code>#target6</code>.');"
+          "text": "给 id 为 <code>target6</code> 的 <code>button</code> 元素设置文本 <code>#target6</code>。",
+          "testString": "assert(new RegExp(\"#target6\",\"gi\").test($(\"#target6\").text()), '给 id 为 <code>target6</code> 的 <code>button</code> 元素设置文本 <code>#target6</code>。');"
         }
       ],
       "challengeType": 0,
@@ -2423,27 +2424,27 @@
       "id": "bad87fee1348bd9aec908857",
       "title": "Use Comments to Clarify Code",
       "description": [
-        "When we start using jQuery, we will modify HTML elements without needing to actually change them in HTML.",
-        "Let's make sure that everyone knows they shouldn't actually modify any of this code directly.",
-        "Remember that you can start a comment with <code>&#60;!--</code> and end a comment with <code>--&#62;</code>",
-        "Add a comment at the top of your HTML that says <code>Only change code above this line.</code>"
+        "当我们开始使用 jQuery，我们将修改HTML元素，但是实际上我们并不是直接在 HTML 文本中修改。",
+        "我们必须确保让每个人都知道，他们不应该直接修改此页面上这些代码。",
+        "记住，你可以在 <code>&#60;!--</code> 为开始，<code>--&#62;</code> 为结束的地方进行评论注释（像这样，<code>&#60;!-- 我是一段注释 --&#62;</code>）。",
+        "请你在你的 HTML 顶部加如下一段注释： <code>Only change code above this line.</code> 。"
       ],
       "tests": [
         {
-          "text": "Start a comment with <code>&#60;!--</code> at the top of your HTML.",
-          "testString": "assert(code.match(/^\\s*<!--/), 'Start a comment with <code>&#60;!--</code> at the top of your HTML.');"
+          "text": "在添加注释前，在你的 HTML 顶部增加此代码 <code>&#60;!--</code>。",
+          "testString": "assert(code.match(/^\\s*<!--/), '在添加注释前，在你的 HTML 顶部增加此代码 <code>&#60;!--</code>。');"
         },
         {
-          "text": "Your comment should have the text <code>Only change code above this line</code>.",
-          "testString": "assert(code.match(/<!--(?!(>|->|.*-->.*this line))\\s*.*this line.*\\s*-->/gi), 'Your comment should have the text <code>Only change code above this line</code>.');"
+          "text": "注释内容应该为 <code>Only change code above this line</code>。",
+          "testString": "assert(code.match(/<!--(?!(>|->|.*-->.*this line))\\s*.*this line.*\\s*-->/gi), '你的注释内容应该为 <code>Only change code above this line</code>。');"
         },
         {
-          "text": "Be sure to close your comment with <code>--&#62;</code>.",
-          "testString": "assert(code.match(/-->.*\\n+.+/g), 'Be sure to close your comment with <code>--&#62;</code>.');"
+          "text": "注释应该用 <code>--&#62;</code> 进行闭合。",
+          "testString": "assert(code.match(/-->.*\\n+.+/g), '注释应该用 <code>--&#62;</code> 进行闭合。');"
         },
         {
-          "text": "You should have the same number of comment openers and closers.",
-          "testString": "assert(code.match(/<!--/g).length === code.match(/-->/g).length, 'You should have the same number of comment openers and closers.');"
+          "text": "注意，注释的开始标签和闭合标签数量应该一一对应，保持数量一致。",
+          "testString": "assert(code.match(/<!--/g).length === code.match(/-->/g).length, '注意，注释的开始标签和闭合标签数量应该一一对应，保持数量一致。');"
         }
       ],
       "challengeType": 0,
