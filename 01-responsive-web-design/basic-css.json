@@ -23,9 +23,9 @@
           "testString": "assert($(\"h2\").css(\"color\") === \"rgb(255, 0, 0)\", '你的<code>h2</code>元素应该为红色。');"
         },
         {
-          "text": "<code>h2</code>元素的<code>style</code> 属性的值应该以<code>;</code>结束。",
-          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code> 元素 <code>style</code> 属性的值应该以 <code>;</code> 结束。');"
-        
+          "text": "<code>h2</code>元素的<code>style</code>属性的值应该以<code>;</code>结束。",
+          "testString": "assert(code.match(/<h2\\s+style\\s*=\\s*(\\'|\")\\s*color\\s*:\\s*(?:rgb\\(\\s*255\\s*,\\s*0\\s*,\\s*0\\s*\\)|rgb\\(\\s*100%\\s*,\\s*0%\\s*,\\s*0%\\s*\\)|red|#ff0000|#f00|hsl\\(\\s*0\\s*,\\s*100%\\s*,\\s*50%\\s*\\))\\s*\\;(\\'|\")>\\s*CatPhotoApp\\s*<\\/h2>/),'<code>h2</code>元素<code>style</code>属性的值应该以<code>;</code>结束。');"
+        }
       ],
       "challengeType": 0,
       "files": {
@@ -76,9 +76,9 @@
       "title": "Use CSS Selectors to Style Elements",
       "description": [
         "在CSS中，有上百种<code>属性</code>可以让你改变页面样式。",
-        "通过输入 <code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code> 的<code>行内样式</code>，修改单一的<code>h2</code>元素的颜色的方式，配置 <code>层叠样式表（CSS）</code> 的方式之一。",
+        "通过输入<code>&#60;h2 style=\"color: red\"&#62;CatPhotoApp&#60;/h2&#62;</code>的<code>行内样式</code>，修改单一的<code>h2</code>元素的颜色的方式，配置<code>层叠样式表（CSS）</code>的方式之一。",
         "这是改变元素样式的一个特别方法，不过存在着更好的方法来设置<code>层叠样式表（CSS</code>。",
-        "在代码的顶部，创建一个 <code>style</code> 声明区域，如下方所示：",
+        "在代码的顶部，创建一个<code>style</code>声明区域，如下方所示：",
         "<blockquote>&#60;style&#62;<br>&#60;/style&#62;</blockquote>",
         "在style样式声明区域内，可以创建一个<code>CSS 选择器</code>的规则来应用于所有的<code>h2</code>元素。例如，如果你想所有<code>h2</code>元素变成红色，可以添加下方的样式规则：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;h2 {color: red;}<br>&#60;/style&#62;</blockquote>",
@@ -158,7 +158,7 @@
         "可以看到，我们在<code>&#60;style&#62;</code>样式声明区域里，创建了一个名为<code>blue-text</code>的<code>class</code>选择器。",
         "你可以将 CSS<code>class</code>选择器应用到一个HTML元素里，如下所示：",
         "<code>&#60;h2 class=\"blue-text\"&#62;CatPhotoApp&#60;/h2&#62;</code>",
-        "注意你的<code>style</code>样式区域声明里，<code>class</code>需以句号开头。而在你的HTML元素里的<code>class</code>属性的类名，不需要包含句号",
+        "注意你的<code>style</code>样式区域声明里，<code>class</code>需以句号开头。而在你的HTML元素里的<code>class</code>属性的类名，不需要包含句号。",
         "<hr>",
         "在<code>style</code>样式声明里，<code>h2</code>元素选择器改为<code>.red-text</code>的 CSS <code>class</code> 择器，同时将颜色<code>blue</code>变为<code>red</code>。",
         "在你的<code>h2</code>元素里，添加一个<code>class</code>属性，且值为<code>'red-text'</code>。"
@@ -177,8 +177,8 @@
           "testString": "assert(code.match(/\\.red-text\\s*\\{\\s*color\\s*:\\s*red;\\s*\\}/g), '你的<code>style</code>样式声明区域里应该包含一个<code>red-text</code> class 选择器，并且它的颜色应为红色。');"
         },
         {
-          "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。",
-          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式 。');"
+          "text": "不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式。",
+          "testString": "assert($(\"h2\").attr(\"style\") === undefined, '不要在<code>h2</code>元素里使用<code>style=\"color&#58; red\"</code>的行内样式。');"
         }
       ],
       "challengeType": 0,
@@ -448,33 +448,33 @@
       "id": "bad87fee1348bd9aedf08807",
       "title": "Import a Google Font",
       "description": [
-        "In addition to specifying common fonts that are found on most operating systems, we can also specify non-standard, custom web fonts for use on our website. There are various sources for web fonts on the internet but, for this example we will focus on the Google Fonts library.",
-        "<a href='https://fonts.google.com/' target='_blank'>Google Fonts</a> is a free library of web fonts that you can use in your CSS by referencing the font's URL.",
-        "So, let's go ahead and import and apply a Google font (note that if Google is blocked in your country, you will need to skip this challenge).",
-        "To import a Google Font, you can copy the font(s) URL from the Google Fonts library and then paste it in your HTML. For this challenge, we'll import the <code>Lobster</code> font. To do this, copy the following code snippet and paste it into the top of your code editor(before the opening <code>style</code> element):",
+        "除了大多数系统提供的默认字体以外，我们也可以在我们的网站上使用自定义的字体。网络上有各种各样的字体，不过在这个例子中，我们将会尝试使用<code>Google</code>字体库。",
+        "<a href='https://fonts.google.com/' target='_blank'>Google 字体</a>是一个免费的字体库，可以通过在 CSS 里面设置字体的 URL 来引用。",
+        "因此，下一步，我们将引入和使用<code>Google</code>字体（注意：如果你所在国家禁止使用<code>Google</code>，则可以跳过这个挑战）。",
+        "引入<code>Google</code>字体，你需要复制<code>Google</code>字体的 URL，并粘贴到你的 HTML 里面。在这个挑战中，我们需要引入<code>Lobster</code>字体。因此，请复制以下代码段，并粘贴到你的代码编辑器顶部，即放到<code>style</code>标签之前。",
         "<code>&#60;link href=\"https://fonts.googleapis.com/css?family=Lobster\" rel=\"stylesheet\" type=\"text/css\"&#62;</code>",
-        "Now you can use the <code>Lobster</code> font in your CSS by using <code>Lobster</code> as the FAMILY_NAME as in the following example:<br><code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.",
-        "The GENERIC_NAME is optional, and is a fallback font in case the other specified font is not available. This is covered in the next challenge.",
-        "Family names are case-sensitive and need to be wrapped in quotes if there is a space in the name. For example, you need quotes to use the <code>\"Open Sans\"</code> font, but not to use the <code>Lobster</code> font.",
+        "现在你可以设置<code>font-family</code>属性为<code>Lobster</code>，来使用<code>Lobster</code>字体。例子如下：<br><code>font-family: FAMILY_NAME, GENERIC_NAME;</code>.",
+        "<code>GENERIC_NAME</code>是可选的，其他字体不可用时便作为后备字体。在下一个挑战中可以得到体现。",
+        "字体名区分大小写，并且如果字体名含有空格，需要用引号括起来。例如，使用<code>\"Open Sans\"</code>字体需要添加引号，而<code>Lobster</code>字体则不需要",
         "<hr>",
-        "Create a <code>font-family</code> CSS rule that uses the <code>Lobster</code> font, and ensure that it will be applied to your <code>h2</code> element."
+        "创建一个 CSS 规则，<code>font-family</code>属性里设置为<code>Lobster</code>字体，并把这个字体应用到所有的<code>h2</code>元素。"
       ],
       "tests": [
         {
-          "text": "Import the <code>Lobster</code> font.",
-          "testString": "assert(new RegExp(\"googleapis\", \"gi\").test(code), 'Import the <code>Lobster</code> font.');"
+          "text": "引入<code>Lobster</code>字体。",
+          "testString": "assert(new RegExp(\"googleapis\", \"gi\").test(code), '引入<code>Lobster</code>字体。');"
         },
         {
-          "text": "Your <code>h2</code> element should use the font <code>Lobster</code>.",
-          "testString": "assert($(\"h2\").css(\"font-family\").match(/lobster/i), 'Your <code>h2</code> element should use the font <code>Lobster</code>.');"
+          "text": "你的<code>h2</code>元素必须适用<code>Lobster</code>字体。",
+          "testString": "assert($(\"h2\").css(\"font-family\").match(/lobster/i), '你的<code>h2</code>元素必须适用<code>Lobster</code>字体。');"
         },
         {
-          "text": "Use an <code>h2</code> CSS selector to change the font.",
-          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?\\s*;\\s*\\}/gi.test(code), 'Use an <code>h2</code> CSS selector to change the font.');"
+          "text": "使用<code>h2</code>选择器去改变字体样式。",
+          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?\\s*;\\s*\\}/gi.test(code), '使用<code>h2</code>选择器去改变字体样式。');"
         },
         {
-          "text": "Your <code>p</code> element should still use the font <code>monospace</code>.",
-          "testString": "assert($(\"p\").css(\"font-family\").match(/monospace/i), 'Your <code>p</code> element should still use the font <code>monospace</code>.');"
+          "text": "你的<code>p</code>元素应该保持使用<code>monospace</code>字体。",
+          "testString": "assert($(\"p\").css(\"font-family\").match(/monospace/i), '你的<code>p</code>元素应该保持使用<code>monospace</code>字体。');"
         }
       ],
       "challengeType": 0,
@@ -536,32 +536,32 @@
       "id": "bad87fee1348bd9aedf08808",
       "title": "Specify How Fonts Should Degrade",
       "description": [
-        "There are several default fonts that are available in all browsers. These generic font families include <code>monospace</code>, <code>serif</code> and <code>sans-serif</code>",
-        "When one font isn't available, you can tell the browser to \"degrade\" to another font.",
-        "For example, if you wanted an element to use the <code>Helvetica</code> font, but degrade to the <code>sans-serif</code> font when <code>Helvetica</code> wasn't available, you will specify it as follows:",
+        "所有浏览器都有几种默认字体。这些通用字体包括<code>monospace</code>，<code>serif</code>和<code>sans-serif</code>。",
+        "当字体不可用，你可以告诉浏览器通过 “降级” 去使用其他字体。",
+        "例如，如果你想将一个元素的字体设置成<code>Helvetica</code>，当<code>Helvetica</code>不可用时，降级使用<code>sans-serif</code>字体，那么可以这样写：",
         "<blockquote>p {<br>&nbsp;&nbsp;font-family: Helvetica, sans-serif;<br>}</blockquote>",
-        "Generic font family names are not case-sensitive. Also, they do not need quotes because they are CSS keywords.",
+        "通用字体名字不区分大小写。同时，也不需要使用引号，因为它们是 CSS 关键字。",
         "<hr>",
-        "To begin with, apply the <code>monospace</code> font to the <code>h2</code> element, so that it now has two fonts - <code>Lobster</code> and <code>monospace</code>.",
-        "In the last challenge, you imported the <code>Lobster</code> font using the <code>link</code> tag. Now comment out that import of the <code>Lobster</code> font(using the HTML comments you learned before) from Google Fonts so that it isn't available anymore. Notice how your <code>h2</code> element degrades to the <code>monospace</code> font.",
-        "<strong>Note</strong><br>If you have the Lobster font installed on your computer, you won't see the degradation because your browser is able to find the font."
+        "首先，添加<code>monospace</code>字体到<code>h2</code>元素里，它现在拥有着<code>Lobster</code>和 <code>monospace</code>两种字体。",
+        "在上一个挑战里，你通过<code>link</code>标签引入<code>Lobster</code>字体。现在让我们注释掉<code>Lobster</code>谷歌字体的引入（使用我们之前学过的<code>HTML</code>注释），使字体失效。你会发现你的<code>h2</code>元素降级到了<code>monospace</code>字体。",
+        "<strong>注意：</strong><br>如果你的电脑已经安装了<code>Lobster</code>字体，你将看不到这个降级过程，因为你的浏览器会找到该字体。"
       ],
       "tests": [
         {
-          "text": "Your h2 element should use the font <code>Lobster</code>.",
-          "testString": "assert($(\"h2\").css(\"font-family\").match(/^\"?lobster/i), 'Your h2 element should use the font <code>Lobster</code>.');"
+          "text": "你的<code>h2</code>元素应该含有<code>Lobster</code>字体。",
+          "testString": "assert($(\"h2\").css(\"font-family\").match(/^\"?lobster/i), '你的<code>h2</code>元素应该含有<code>Lobster</code>字体。');"
         },
         {
-          "text": "Your h2 element should degrade to the font <code>monospace</code> when <code>Lobster</code> is not available.",
-          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?,\\s*monospace\\s*;\\s*\\}/gi.test(code), 'Your h2 element should degrade to the font <code>monospace</code> when <code>Lobster</code> is not available.');"
+          "text": "<code>Lobster</code>字体失效时，你的<code>h2</code>元素应该降级为<code>monospace</code>字体。",
+          "testString": "assert(/\\s*h2\\s*\\{\\s*font-family\\:\\s*(\\'|\")?Lobster(\\'|\")?,\\s*monospace\\s*;\\s*\\}/gi.test(code), '<code>Lobster</code>字体失效时，你的<code>h2</code>元素应该降级为<code>monospace</code>字体。');"
         },
         {
-          "text": "Comment out your call to Google for the <code>Lobster</code> font by putting <code>&#60!--</code> in front of it.",
-          "testString": "assert(new RegExp(\"<!--[^fc]\", \"gi\").test(code), 'Comment out your call to Google for the <code>Lobster</code> font by putting <code>&#60!--</code> in front of it.');"
+          "text": "通过添加<code>&#60!--</code>，注释掉对<code>Lobster</code>字体的引入。",
+          "testString": "assert(new RegExp(\"<!--[^fc]\", \"gi\").test(code), '通过添加<code>&#60!--</code>，注释掉对<code>Lobster</code>字体的引入。');"
         },
         {
-          "text": "Be sure to close your comment by adding <code>--&#62;</code>.",
-          "testString": "assert(new RegExp(\"[^fc]-->\", \"gi\").test(code), 'Be sure to close your comment by adding <code>--&#62;</code>.');"
+          "text": "确保注释要以<code>--&#62;</code>结束。",
+          "testString": "assert(new RegExp(\"[^fc]-->\", \"gi\").test(code), '确保注释要以<code>--&#62;</code>结束。');"
         }
       ],
       "challengeType": 0,
@@ -628,21 +628,21 @@
       "id": "bad87fee1348bd9acdf08812",
       "title": "Size Your Images",
       "description": [
-        "CSS has a property called <code>width</code> that controls an element's width. Just like with fonts, we'll use <code>px</code> (pixels) to specify the image's width.",
-        "For example, if we wanted to create a CSS class called <code>larger-image</code> that gave HTML elements a width of 500 pixels, we'd use:",
+        "CSS 的<code>width</code>属性可以控制元素的宽度。图片的<code>width</code>宽度类似于字体的<code>px</code>（像素)值。",
+        "假如，你想创建一个叫<code>larger-image</code>的 CSS class 来控制 HTML 元素的宽度为 500px，我们可以这样：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.larger-image {<br>&nbsp;&nbsp;&nbsp;&nbsp;width: 500px;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
         "<hr>",
-        "Create a class called <code>smaller-image</code> and use it to resize the image so that it's only 100 pixels wide.",
-        "<strong>Note</strong><br>Due to browser implementation differences, you may need to be at 100% zoom to pass the tests on this challenge."
+        "创建一个<code>smaller-image</code>的 CSS class，设置图片的宽度为 100px。",
+        "<strong>注意：</strong><br>由于不同浏览器的差异性，你可能需要将浏览器缩放到 100% 来通过该挑战。"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> element should have the class <code>smaller-image</code>.",
-          "testString": "assert($(\"img[src='https://bit.ly/fcc-relaxing-cat']\").attr('class') === \"smaller-image\", 'Your <code>img</code> element should have the class <code>smaller-image</code>.');"
+          "text": "你的<code>img</code>元素应该含有<code>smaller-image</code>class。",
+          "testString": "assert($(\"img[src='https://bit.ly/fcc-relaxing-cat']\").attr('class') === \"smaller-image\", '你的<code>img</code>元素应该含有<code>smaller-image</code>class。');"
         },
         {
-          "text": "Your image should be 100 pixels wide. Browser zoom should be at 100%.",
-          "testString": "assert($(\"img\").width() === 100, 'Your image should be 100 pixels wide. Browser zoom should be at 100%.');"
+          "text": "你的图片应为 100px（像素），且浏览器缩放应为 100%。",
+          "testString": "assert($(\"img\").width() === 100, '你的图片应为 100px（像素），且浏览器缩放应为 100%。');"
         }
       ],
       "challengeType": 0,
@@ -709,34 +709,34 @@
       "id": "bad87fee1348bd9bedf08813",
       "title": "Add Borders Around Your Elements",
       "description": [
-        "CSS borders have properties like <code>style</code>, <code>color</code> and <code>width</code>",
-        "For example, if we wanted to create a red, 5 pixel border around an HTML element, we could use this class:",
+        "CSS 边框具有<code>style</code>，<code>color</code>和<code>width</code>属性。",
+        "假如，我们想要创建一个 5px 的红色实线边框包围一个 HTML 元素，我们可以这样做：",
         "<blockquote>&#60;style&#62;<br>&nbsp;&nbsp;.thin-red-border {<br>&nbsp;&nbsp;&nbsp;&nbsp;border-color: red;<br>&nbsp;&nbsp;&nbsp;&nbsp;border-width: 5px;<br>&nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br>&nbsp;&nbsp;}<br>&#60;/style&#62;</blockquote>",
         "<hr>",
-        "Create a class called <code>thick-green-border</code>. This class should add a 10px, solid, green border around an HTML element. Apply the class to your cat photo.",
-        "Remember that you can apply multiple classes to an element using its <code>class</code> attribute, by separating each class name with a space. For example:",
+        "创建一个<code>thick-green-border</code> CSS class，该 class 应在 HTML 元素周围添加一个 10px 的绿色实线边框。将它应用在你的猫咪照片上。",
+        "记得，在一个元素上可以同时应用多个<code>class</code>，通过使用空格来分隔。例子如下：",
         "<code>&lt;img class=\"class1 class2\"&gt;</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>img</code> element should have the class <code>smaller-image</code>.",
-          "testString": "assert($(\"img\").hasClass(\"smaller-image\"), 'Your <code>img</code> element should have the class <code>smaller-image</code>.');"
+          "text": "你的<code>img</code>元素应该含有<code>smaller-image</code>class。",
+          "testString": "assert($(\"img\").hasClass(\"smaller-image\"), '你的<code>img</code>元素应该含有<code>smaller-image</code>class。');"
         },
         {
-          "text": "Your <code>img</code> element should have the class <code>thick-green-border</code>.",
-          "testString": "assert($(\"img\").hasClass(\"thick-green-border\"), 'Your <code>img</code> element should have the class <code>thick-green-border</code>.');"
+          "text": "同时，你的<code>img</code>元素应该含有<code>thick-green-border</code>class。",
+          "testString": "assert($(\"img\").hasClass(\"thick-green-border\"), '同时，你的<code>img</code>元素应该含有<code>thick-green-border</code>class。');"
         },
         {
-          "text": "Give your image a border width of <code>10px</code>.",
-          "testString": "assert($(\"img\").hasClass(\"thick-green-border\") && parseInt($(\"img\").css(\"border-top-width\"), 10) >= 8 && parseInt($(\"img\").css(\"border-top-width\"), 10) <= 12, 'Give your image a border width of <code>10px</code>.');"
+          "text": "设置你的图片边框为<code>10px</code>。",
+          "testString": "assert($(\"img\").hasClass(\"thick-green-border\") && parseInt($(\"img\").css(\"border-top-width\"), 10) >= 8 && parseInt($(\"img\").css(\"border-top-width\"), 10) <= 12, '设置你的图片边框为<code>10px</code>。');"
         },
         {
-          "text": "Give your image a border style of <code>solid</code>.",
-          "testString": "assert($(\"img\").css(\"border-right-style\") === \"solid\", 'Give your image a border style of <code>solid</code>.');"
+          "text": "设置你的图片边框为<code>solid</code>实线。",
+          "testString": "assert($(\"img\").css(\"border-right-style\") === \"solid\", '设置你的图片边框为<code>solid</code>实线。');"
         },
         {
-          "text": "The border around your <code>img</code> element should be green.",
-          "testString": "assert($(\"img\").css(\"border-left-color\") === \"rgb(0, 128, 0)\", 'The border around your <code>img</code> element should be green.');"
+          "text": "<code>img</code>元素的边框颜色应该为绿色。",
+          "testString": "assert($(\"img\").css(\"border-left-color\") === \"rgb(0, 128, 0)\", '<code>img</code>元素的边框颜色应该为绿色。');"
         }
       ],
       "challengeType": 0,
@@ -808,19 +808,19 @@
       "id": "bad87fee1348bd9aedf08814",
       "title": "Add Rounded Corners with border-radius",
       "description": [
-        "Your cat photo currently has sharp corners. We can round out those corners with a CSS property called <code>border-radius</code>.",
+        "你的猫咪图片边角很尖锐，我们可以使用<code>border-radius</code>属性来让它变得圆润。",
         "<hr>",
-        "You can specify a <code>border-radius</code> with pixels. Give your cat photo a <code>border-radius</code> of <code>10px</code>.",
-        "Note: this challenge allows for multiple possible solutions. For example, you may add <code>border-radius</code> to either the <code>.thick-green-border</code> class or the <code>.smaller-image</code> class."
+        "<code>border-radius</code>可以用<code>px</code>像素单位来赋值。给你的猫咪图片设置 10px 的<code>border-radius</code>。",
+        "注意：这个挑战有多个解决方法。例如，添加<code>border-radius</code>属性到<code>.thick-green-border</code>class 或<code>.smaller-image</code>class 里都是可行的。"
       ],
       "tests": [
         {
-          "text": "Your image element should have the class \"thick-green-border\".",
-          "testString": "assert($(\"img\").hasClass(\"thick-green-border\"), 'Your image element should have the class \"thick-green-border\".');"
+          "text": "你的图片元素应具有 \"thick-green-border\" class 属性。",
+          "testString": "assert($(\"img\").hasClass(\"thick-green-border\"), '你的图片元素应具有 \"thick-green-border\" class 属性。');"
         },
         {
-          "text": "Your image should have a border radius of <code>10px</code>",
-          "testString": "assert(parseInt($(\"img\").css(\"border-top-left-radius\")) > 8, 'Your image should have a border radius of <code>10px</code>');"
+          "text": "你的图片应含有<code>10px</code>的边框圆角。",
+          "testString": "assert(parseInt($(\"img\").css(\"border-top-left-radius\")) > 8, '你的图片应含有<code>10px</code>的边框圆角。');"
         }
       ],
       "challengeType": 0,
@@ -898,18 +898,18 @@
       "id": "bad87fee1348bd9aedf08815",
       "title": "Make Circular Images with a border-radius",
       "description": [
-        "In addition to pixels, you can also specify the <code>border-radius</code> using a percentage.",
+        "除像素外，你也可以使用百分比来指定<code>border-radius</code>的值。",
         "<hr>",
-        "Give your cat photo a <code>border-radius</code> of <code>50%</code>."
+        "将<code>border-radius</code>的值设置为<code>50%</code>。"
       ],
       "tests": [
         {
-          "text": "Your image should have a border radius of <code>50%</code>, making it perfectly circular.",
-          "testString": "assert(parseInt($(\"img\").css(\"border-top-left-radius\")) > 48, 'Your image should have a border radius of <code>50%</code>, making it perfectly circular.');"
+          "text": "你图片的边框圆角应设置为<code>50%</code>，让它看起来就像一个完整的圆。",
+          "testString": "assert(parseInt($(\"img\").css(\"border-top-left-radius\")) > 48, '你图片的边框圆角应设置为<code>50%</code>，让它看起来就像一个完整的圆。');"
         },
         {
-          "text": "Be sure to use a percentage value of <code>50%</code>.",
-          "testString": "assert(code.match(/50%/g), 'Be sure to use a percentage value of <code>50%</code>.');"
+          "text": "请确保百分值为<code>50%</code>。",
+          "testString": "assert(code.match(/50%/g), '请确保百分值为<code>50%</code>。');"
         }
       ],
       "challengeType": 0,
@@ -987,20 +987,20 @@
       "id": "bad87fed1348bd9aede07836",
       "title": "Give a Background Color to a div Element",
       "description": [
-        "You can set an element's background color with the <code>background-color</code> property.",
-        "For example, if you wanted an element's background color to be <code>green</code>, you'd put this within your <code>style</code> element:",
+        "<code>background-color</code>属性可以设置元素的背景颜色。",
+        "例如，你想将一个元素的背景颜色改为<code>green</code>，可以在你的<code>style</code>里面这样写：",
         "<blockquote>.green-background {<br>&nbsp;&nbsp;background-color: green;<br>}</blockquote>",
         "<hr>",
-        "Create a class called <code>silver-background</code> with the <code>background-color</code> of silver. Assign this class to your <code>div</code> element."
+        "创建一个<code>silver-background</code>class 并设置<code>background-color</code>为<code>silver</code>。 并用在<code>div</code>元素上。"
       ],
       "tests": [
         {
-          "text": "Give your <code>div</code> element the class <code>silver-background</code>.",
-          "testString": "assert($(\"div\").hasClass(\"silver-background\"), 'Give your <code>div</code> element the class <code>silver-background</code>.');"
+          "text": "<code>div</code>元素应有<code>silver-background</code>class。",
+          "testString": "assert($(\"div\").hasClass(\"silver-background\"), '<code>div</code>元素应有<code>silver-background</code>class。');"
         },
         {
-          "text": "Your <code>div</code> element should have a silver background.",
-          "testString": "assert($(\"div\").css(\"background-color\") === \"rgb(192, 192, 192)\", 'Your <code>div</code> element should have a silver background.');"
+          "text": "<code>div</code>元素背景颜色应设置为<code>silver</code>。",
+          "testString": "assert($(\"div\").css(\"background-color\") === \"rgb(192, 192, 192)\", '<code>div</code>元素背景颜色应设置为<code>silver</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1078,18 +1078,18 @@
       "id": "bad87eee1348bd9aede07836",
       "title": "Set the id of an Element",
       "description": [
-        "In addition to classes, each HTML element can also have an <code>id</code> attribute.",
-        "There are several benefits to using <code>id</code> attributes: You can use an <code>id</code> to style a single element and later you'll learn that you can use them to select and modify specific elements with JavaScript.",
-        "<code>id</code> attributes should be unique. Browsers won't enforce this, but it is a widely agreed upon best practice. So please don't give more than one element the same <code>id</code> attribute.",
-        "Here's an example of how you give your <code>h2</code> element the id of <code>cat-photo-app</code>:",
+        "除了class属性，每一个 HTML 元素也都有<code>id</code>属性。",
+        "使用<code>id</code>有几个好处：你可以通过<code>id</code>选择器来改变单个元素的样式，稍后的课程中，你也会了解到在 JavaScript 里面，可以通过<code>id</code>来选择元素和操作元素。",
+        "<code>id</code>属性应是唯一的。浏览器不强迫执行这规范，但是这是广泛认可的最佳实践。所以，请不要给多个元素设置相同的<code>id</code>属性。",
+        "设置<code>h2</code>元素的 id 为<code>cat-photo-app</code>的方法如下：",
         "<code>&#60;h2 id=\"cat-photo-app\"></code>",
         "<hr>",
-        "Give your <code>form</code> element the id <code>cat-photo-form</code>."
+        "设置<code>form</code>元素的 id 为<code>cat-photo-form</code>。"
       ],
       "tests": [
         {
-          "text": "Give your <code>form</code> element the id of <code>cat-photo-form</code>.",
-          "testString": "assert($(\"form\").attr(\"id\") === \"cat-photo-form\", 'Give your <code>form</code> element the id of <code>cat-photo-form</code>.');"
+          "text": "你的<code>form</code>元素的 id 应为<code>cat-photo-form</code>。",
+          "testString": "assert($(\"form\").attr(\"id\") === \"cat-photo-form\", '你的<code>form</code>元素的 id 应为<code>cat-photo-form</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1171,30 +1171,30 @@
       "id": "bad87dee1348bd9aede07836",
       "title": "Use an id Attribute to Style an Element",
       "description": [
-        "One cool thing about <code>id</code> attributes is that, like classes, you can style them using CSS.",
-        "However, an <code>id</code> is not reusable and should only be applied to one element. An <code>id</code> also has a higher specificity (importance) than a class so if both are applied to the same element and have conflicting styles, the styles of the <code>id</code> will be applied.",
-        "Here's an example of how you can take your element with the <code>id</code> attribute of <code>cat-photo-element</code> and give it the background color of green. In your <code>style</code> element:",
+        "通过<code>id</code>属性，你可以做一些很酷的事情，例如，就像 class 一样，你可以使用 CSS 来设置他们的样式",
+        "可是，<code>id</code>不可以重用，只应用于一个元素上。同时，在 CSS 里，<code>id</code>的优先级要高于<code>class</code>，如果一个元素同时应用了<code>class</code>和<code>id</code>，并设置样式有冲突，会优先应用<code>id</code>的样式。",
+        "选择<code>id</code>为<code>cat-photo-element</code>的元素，并设置它的背景样式为<code>green</code>，可以在你的<code>style</code>标签里这样写：",
         "<blockquote>#cat-photo-element {<br>&nbsp;&nbsp;background-color: green;<br>}</blockquote>",
-        "Note that inside your <code>style</code> element, you always reference classes by putting a <code>.</code> in front of their names. You always reference ids by putting a <code>#</code> in front of their names.",
+        "注意在<code>style</code>标签里，声明 class 的时候必须在名字前插入<code>.</code>符号。同样，在声明 id 的时候，也必须在名字前插入<code>#</code>符号。",
         "<hr>",
-        "Try giving your form, which now has the <code>id</code> attribute of <code>cat-photo-form</code>, a green background."
+        "尝试给含有<code>cat-photo-form</code>id属性的<code>form</code>表单的背景颜色设置为<code>green</code>。"
       ],
       "tests": [
         {
-          "text": "Give your <code>form</code> element the id of <code>cat-photo-form</code>.",
-          "testString": "assert($(\"form\").attr(\"id\") === \"cat-photo-form\", 'Give your <code>form</code> element the id of <code>cat-photo-form</code>.');"
+          "text": "设置<code>form</code>元素的 id 为<code>cat-photo-form</code>。",
+          "testString": "assert($(\"form\").attr(\"id\") === \"cat-photo-form\", '设置<code>form</code>元素的 id 为<code>cat-photo-form</code>。');"
         },
         {
-          "text": "Your <code>form</code> element should have the <code>background-color</code> of green.",
-          "testString": "assert($(\"#cat-photo-form\").css(\"background-color\") === \"rgb(0, 128, 0)\", 'Your <code>form</code> element should have the <code>background-color</code> of green.');"
+          "text": "你的<code>form</code>元素应该含有<code>background-color</code>css 属性并且值为 <code>green</code>。",
+          "testString": "assert($(\"#cat-photo-form\").css(\"background-color\") === \"rgb(0, 128, 0)\", '你的<code>form</code>元素应该含有<code>background-color</code>css 属性并且值为 <code>green</code>。');"
         },
         {
-          "text": "Make sure your <code>form</code> element has an <code>id</code> attribute.",
-          "testString": "assert(code.match(/<form.*cat-photo-form.*>/gi) && code.match(/<form.*cat-photo-form.*>/gi).length > 0, 'Make sure your <code>form</code> element has an <code>id</code> attribute.');"
+          "text": "确保你的<code>form</code>元素含有<code>id</code>属性。",
+          "testString": "assert(code.match(/<form.*cat-photo-form.*>/gi) && code.match(/<form.*cat-photo-form.*>/gi).length > 0, '确保你的<code>form</code>元素含有<code>id</code>属性。');"
         },
         {
-          "text": "Do not give your <code>form</code> any <code>class</code> or <code>style</code> attributes.",
-          "testString": "assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi), 'Do not give your <code>form</code> any <code>class</code> or <code>style</code> attributes.');"
+          "text": "不要在<code>form</code>元素上添加其他<code>class</code>属性或者<code>style</code>行内样式。",
+          "testString": "assert(!code.match(/<form.*style.*>/gi) && !code.match(/<form.*class.*>/gi), '不要在<code>form</code>元素上添加其他<code>class</code>属性或者<code>style</code>行内样式。');"
         }
       ],
       "challengeType": 0,
@@ -1276,19 +1276,19 @@
       "id": "bad88fee1348bd9aedf08825",
       "title": "Adjust the Padding of an Element",
       "description": [
-        "Now let's put our Cat Photo App away for a little while and learn more about styling HTML.",
-        "You may have already noticed this, but all HTML elements are essentially little rectangles.",
-        "Three important properties control the space that surrounds each HTML element: <code>padding</code>, <code>margin</code>, and <code>border</code>.",
-        "An element's <code>padding</code> controls the amount of space between the element's content and its <code>border</code>.",
-        "Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has more <code>padding</code> than the blue box.",
-        "When you increase the blue box's <code>padding</code>, it will increase the distance(<code>padding</code>) between the text and the border around it.",
+        "我们先暂时把猫咪图片放在一边，让我们去学习更多 HTML 相关样式。",
+        "你可能已经注意到了，所有的 HTML 元素基本都是以矩形为基础。",
+        "每个 HTML 元素周围的矩形空间由三个重要的属性来控制：<code>padding（内边距）</code>，<code>margin（外边距）</code>和<code>border（边框）</code>。",
+        "<code>padding</code>控制着元素内容与<code>border</code>之间的空隙大小。",
+        "在这里，我们可以看到蓝色盒子和红色盒子都在黄色盒子里面。可以发现，红色盒子比蓝色盒子有着更多的<code>padding</code>填充空间。",
+        "当你增加蓝色盒子的<code>padding</code>值，文本内容与边框的距离会逐渐拉大。",
         "<hr>",
-        "Change the <code>padding</code> of your blue box to match that of your red box."
+        "蓝色的盒子<code>padding</code>的值要跟红色盒子的一样大小。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give elements <code>20px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"20px\", 'Your <code>blue-box</code> class should give elements <code>20px</code> of <code>padding</code>.');"
+          "text": "你的<code>blue-box</code>class 的<code>padding</code>值应为<code>20px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"20px\", '你的<code>blue-box</code>class 的<code>padding</code>值应为<code>20px</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1345,16 +1345,16 @@
       "id": "bad87fee1348bd9aedf08822",
       "title": "Adjust the Margin of an Element",
       "description": [
-        "An element's <code>margin</code> controls the amount of space between an element's <code>border</code> and surrounding elements.",
-        "Here, we can see that the blue box and the red box are nested within the yellow box. Note that the red box has a bigger <code>margin</code> than the blue box, making it appear smaller.",
-        "When you increase the blue box's <code>margin</code>, it will increase the distance between its border and surrounding elements.",
+        "<code>margin（外边距）</code>控制元素边框与其他元素之间的距离大小。",
+        "在这里，我们可以看到蓝色盒子和红色盒子都在黄色盒子里。请注意，红色盒子的<code>margin</code>值要比蓝色盒子的大，让它看起来比蓝色盒子要小。",
+        "当你增加蓝色的<code>margin</code>值，它会增加元素边框到其他周围元素的距离。",
         "<hr>",
-        "Change the <code>margin</code> of the blue box to match that of the red box."
+        "蓝色的盒子<code>margin</code>的值要跟红色盒子的一样大小。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"20px\", 'Your <code>blue-box</code> class should give elements <code>20px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code>class 的<code>margin</code>值应为<code>20px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"20px\", '你的<code>blue-box</code>class 的<code>margin</code>值应为<code>20px</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1413,16 +1413,16 @@
       "id": "bad87fee1348bd9aedf08823",
       "title": "Add a Negative Margin to an Element",
       "description": [
-        "An element's <code>margin</code> controls the amount of space between an element's <code>border</code> and surrounding elements.",
-        "If you set an element's <code>margin</code> to a negative value, the element will grow larger.",
+        "元素的<code>margin（外边距）</code>控制元素边框与其他周围元素之间的距离大小。",
+        "如果你设置元素<code>margin</code>为负值，元素会变得更大。",
         "<hr>",
-        "Try to set the <code>margin</code> to a negative value like the one for the red box.",
-        "Change the <code>margin</code> of the blue box to <code>-15px</code>, so it fills the entire horizontal width of the yellow box around it."
+        "尝试设置蓝色盒子的<code>margin</code>为负值，跟红色盒子一样大小。",
+        "蓝色盒子的<code>margin</code>设置为<code>-15px</code>，它会填满与黄色盒子之间的距离。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give elements <code>-15px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"-15px\", 'Your <code>blue-box</code> class should give elements <code>-15px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code> class的<code>margin</code>应该设置为<code>-15px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"-15px\", '你的<code>blue-box</code> class的<code>margin</code>应该设置为<code>-15px</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1480,27 +1480,27 @@
       "id": "bad87fee1348bd9aedf08824",
       "title": "Add Different Padding to Each Side of an Element",
       "description": [
-        "Sometimes you will want to customize an element so that it has different amounts of <code>padding</code> on each of its sides.",
-        "CSS allows you to control the <code>padding</code> of all four individual sides of an element with the <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code> properties.",
+        "有时候，你会想给一个元素每个方向的<code>padding</code>都设置成一个特定的值",
+        "CSS 允许你使用<code>padding-top</code>，<code>padding-right</code>， <code>padding-bottom</code>和<code>padding-left</code>属性来设置四个不同方向的<code>padding</code>值。",
         "<hr>",
-        "Give the blue box a <code>padding</code> of <code>40px</code> on its top and left side, but only <code>20px</code> on its bottom and right side."
+        "蓝色盒子的顶部和左侧的<code>padding</code>值设置为<code>40px</code>，底部和右侧设置为<code>20px</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give the top of the elements <code>40px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"40px\", 'Your <code>blue-box</code> class should give the top of the elements <code>40px</code> of <code>padding</code>.');"
+          "text": "你的<code>blue-box</code>class 的顶部<code>padding</code>（上内边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"40px\", '你的<code>blue-box</code>class 的顶部<code>padding</code>（上内边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the right of the elements <code>20px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-right\") === \"20px\", 'Your <code>blue-box</code> class should give the right of the elements <code>20px</code> of <code>padding</code>.');"
+          "text": "你的<code>blue-box</code>class 的右侧<code>padding</code>（右内边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-right\") === \"20px\", '你的<code>blue-box</code>class 的右侧<code>padding</code>（右内边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the bottom of the elements <code>20px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-bottom\") === \"20px\", 'Your <code>blue-box</code> class should give the bottom of the elements <code>20px</code> of <code>padding</code>.');"
+          "text": "你的<code>blue-box</code>class 的底部<code>padding</code>（下内边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-bottom\") === \"20px\", '你的<code>blue-box</code>class 的底部<code>padding</code>（下内边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the left of the elements <code>40px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-left\") === \"40px\", 'Your <code>blue-box</code> class should give the left of the elements <code>40px</code> of <code>padding</code>.');"
+          "text": "你的<code>blue-box</code>class 的左侧<code>padding</code>（左内边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-left\") === \"40px\", '你的<code>blue-box</code>class 的左侧<code>padding</code>（左内边距）值应为<code>40px</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1559,27 +1559,27 @@
       "id": "bad87fee1248bd9aedf08824",
       "title": "Add Different Margins to Each Side of an Element",
       "description": [
-        "Sometimes you will want to customize an element so that it has a different <code>margin</code> on each of its sides.",
-        "CSS allows you to control the <code>margin</code> of all four individual sides of an element with the <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> properties.",
+        "有时候，你会想给一个元素每个方向的<code>margin</code>都设置成一个特定的值。",
+        "CSS 允许你使用<code>margin-top</code>，<code>margin-right</code>，<code>margin-bottom</code>和<code>margin-left</code>属性来设置四个不同方向的<code>margin</code>值。",
         "<hr>",
-        "Give the blue box a <code>margin</code> of <code>40px</code> on its top and left side, but only <code>20px</code> on its bottom and right side."
+        "蓝色盒子的顶部和左侧的<code>margin</code>值设置为<code>40px</code>，底部和右侧设置为<code>20px</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", 'Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code>class 的右侧<code>margin</code>（右外边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", '你的<code>blue-box</code>class 的右侧<code>margin</code>（右外边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", 'Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code>class 的右侧<code>margin</code>（右外边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", '你的<code>blue-box</code>class 的右侧<code>margin</code>（右外边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", 'Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code>class 的底部<code>margin</code>（下外边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", '你的<code>blue-box</code>class 的底部<code>margin</code>（下外边距）值应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", 'Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "你的<code>blue-box</code>class 的左侧<code>margin</code>（左外边距）值应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", '你的<code>blue-box</code>class 的左侧<code>margin</code>（左外边距）值应为<code>40px</code>。');"
         }
       ],
       "challengeType": 0,
@@ -1637,32 +1637,32 @@
       "id": "bad87fee1348bd9aedf08826",
       "title": "Use Clockwise Notation to Specify the Padding of an Element",
       "description": [
-        "Instead of specifying an element's <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code> properties individually, you can specify them all in one line, like this:",
+        "如果不想每次都要分别声明<code>padding-top</code>，<code>padding-right</code>，<code>padding-bottom</code>和<code>padding-left</code>属性，可以把它们汇总在<code>padding</code>属性里面声明，如下：",
         "<code>padding: 10px 20px 10px 20px;</code>",
-        "These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding instructions.",
+        "这四个值按顺时针排序：上，右，下，左，并且设置的效果等同于特定声明每一个方向的<code>padding</code>。",
         "<hr>",
-        "Use Clockwise Notation to give the \".blue-box\" class a <code>padding</code> of <code>40px</code> on its top and left side, but only <code>20px</code> on its bottom and right side."
+        "按照顺时针顺序，给\".blue-box\" class的上内边距以及左内边距设置为<code>40px</code>，右内边距和下内边距则设置为<code>20px</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"40px\", 'Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>padding</code>.');"
+          "text": "<code>blue-box</code>class 的上内边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-top\") === \"40px\", '<code>blue-box</code>class 的上内边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-right\") === \"20px\", 'Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>padding</code>.');"
+          "text": "<code>blue-box</code>class 的右内边距应为<code>20px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-right\") === \"20px\", '<code>blue-box</code>class 的右内边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-bottom\") === \"20px\", 'Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>padding</code>.');"
+          "text": "<code>blue-box</code>class 的下内边距应为<code>20px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-bottom\") === \"20px\", '<code>blue-box</code>class 的下内边距应为<code>20px</code>。);"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>padding</code>.",
-          "testString": "assert($(\".blue-box\").css(\"padding-left\") === \"40px\", 'Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>padding</code>.');"
+          "text": "<code>blue-box</code>class 的左内边距应为<code>20px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"padding-left\") === \"40px\", '<code>blue-box</code>class 的左内边距应为<code>20px</code>。');"
         },
         {
-          "text": "You should use the clockwise notation to set the padding of <code>blue-box</code> class.",
-          "testString": "assert(!/padding-top|padding-right|padding-bottom|padding-left/.test(code), 'You should use the clockwise notation to set the padding of <code>blue-box</code> class.');"
+          "text": "你应该按照顺时针排序，汇总声明的方式来设置<code>blue-box</code>的<code>padding</code>值。",
+          "testString": "assert(!/padding-top|padding-right|padding-bottom|padding-left/.test(code), '你应该按照顺时针排序，汇总声明的方式来设置<code>blue-box</code>的<code>padding</code>值。');"
         }
       ],
       "challengeType": 0,
@@ -1717,29 +1717,29 @@
       "id": "bad87fee1348bd9afdf08726",
       "title": "Use Clockwise Notation to Specify the Margin of an Element",
       "description": [
-        "Let's try this again, but with <code>margin</code> this time.",
-        "Instead of specifying an element's <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, and <code>margin-left</code> properties individually, you can specify them all in one line, like this:",
+        "让我们再试一次，不过这一次轮到<code>margin</code>了。",
+        "同样，每个方向的外边距值可以在<code>margin</code>属性里面汇总声明，来代替分别声明<code>margin-top</code>，<code>margin-right</code>，<code>margin-bottom</code>和<code>margin-left</code>属性的方式，代码如下：",
         "<code>margin: 10px 20px 10px 20px;</code>",
-        "These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific margin instructions.",
+        "这四个值按顺时针排序：上，右，下，左，并且设置的效果等同于特定声明每一个方向的<code>margin</code>。",
         "<hr>",
-        "Use <code>Clockwise Notation</code> to give the element with the <code>blue-box</code> class a margin of <code>40px</code> on its top and left side, but only <code>20px</code> on its bottom and right side."
+        "按照顺时针顺序，给\".blue-box\" class的上外边距以及左外边距设置为<code>40px</code>，右外边距和下外边距则设置为<code>20px</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", 'Your <code>blue-box</code> class should give the top of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的上外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-top\") === \"40px\", '<code>blue-box</code>class 的上外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", 'Your <code>blue-box</code> class should give the right of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的右外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-right\") === \"20px\", 'Y<code>blue-box</code>class 的右外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", 'Your <code>blue-box</code> class should give the bottom of elements <code>20px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的下外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-bottom\") === \"20px\", '<code>blue-box</code>class 的下外边距应为<code>40px</code>。');"
         },
         {
-          "text": "Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.",
-          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", 'Your <code>blue-box</code> class should give the left of elements <code>40px</code> of <code>margin</code>.');"
+          "text": "<code>blue-box</code>class 的左外边距应为<code>40px</code>。",
+          "testString": "assert($(\".blue-box\").css(\"margin-left\") === \"40px\", '<code>blue-box</code>class 的左外边距应为<code>40px</code>。');"
         }
       ],
       "challengeType": 0,
