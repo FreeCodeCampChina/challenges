@@ -1,8 +1,8 @@
-# Introduction to the JavaScript Algorithms and Data Structures Projects #
+# JavaScript 算法和数据结构项目简介 #
 
-Time to put your new JavaScript skills to work! These challenges will be similar to the algorithm scripting challenges but more difficult. This will allow you to prove how much you have learned.
+是时候用上你新学到的 JavaScript 技能了！接下来的挑战和算法脚本的挑战很相近，但是难度会更高。这可以证明你究竟学到了多少。
 
-In this section you will create the following small JavaScript programs:
+在这一章，你将会使用 JavaScript 创建以下项目：
 
 * Roman Numeral Converter
 
@@ -12,6 +12,8 @@ In this section you will create the following small JavaScript programs:
 
 * Cash Register
 
-Have fun and remember to use the Read-Search-Ask method if you get stuck.
+好好享受。遇到问题时，记得先细读问题，然后上网搜索，最后才向其他人提问。
 
-Good Luck!
+祝你好运！
+
+
