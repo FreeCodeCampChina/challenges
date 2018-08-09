@@ -13,4 +13,4 @@ challenges 指的不仅是课程本身，也是每个开源项目贡献者会遇
 
 5、获得 freeCodeCamp 中文社区的认可
 
-感兴趣的小伙伴可以传送到 [Wiki](https://github.com/FreeCodeCampChina/challenges/wiki) 解锁翻译指南。
+感兴趣的小伙伴可以传送到 [Wiki](https://freecodecamp.coding.net/p/challenges/wiki) 解锁翻译指南。
