@@ -566,7 +566,7 @@
       "description": [
         "在上一个挑战中创建的实例对象<code>duck</code>和<code>beagle</code>都有一个特殊的<code>constructor</code>属性：",
         "<blockquote>let duck = new Bird();<br>let beagle = new Dog();<br><br>console.log(duck.constructor === Bird);  //输出 true<br>console.log(beagle.constructor === Dog);  //输出 true</blockquote>",
-        "需要注意到的是这个<code>constructor</code>属性是对创建这个实例的构造函数的一个引用。",
+        "需要注意的是这个<code>constructor</code>属性是对创建这个实例的构造函数的一个引用。",
         "<code>constructor</code>属性存在的一个优势是，我们可以通过检查这个属性来找出它是一个什么样的对象。下面是一个例子，来看看是怎么使用的：",
         "<blockquote>function joinBirdFraternity(candidate) {<br>&nbsp;&nbsp;if (candidate.constructor === Bird) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>&nbsp;&nbsp;}<br>}</blockquote>",
         "<strong>注意：</strong><br>由于<code>constructor</code>属性可以被重写（在下面两节挑战中将会遇到），所以使用<code>instanceof</code>方法来检查对象的类型会更好。",
@@ -675,17 +675,17 @@
       "id": "587d7daf367417b2b2512b80",
       "title": "Remember to Set the Constructor Property when Changing the Prototype",
       "description": [
-        "There is one crucial side effect of manually setting the <code>prototype</code> to a new object. It erased the <code>constructor</code> property! The code in the previous challenge would print the following for <code>duck</code>:",
-        "<blockquote>console.log(duck.constructor)<br>// prints ‘undefined’ - Oops!</blockquote>",
-        "To fix this, whenever a prototype is manually set to a new object, remember to define the <code>constructor</code> property:",
-        "<blockquote>Bird.prototype = {<br>&nbsp;&nbsp;constructor: Bird, // define the constructor property<br>&nbsp;&nbsp;numLegs: 2,<br>&nbsp;&nbsp;eat: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"nom nom nom\");<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name); <br>&nbsp;&nbsp;}<br>};</blockquote>",
+        "手动给新对象重新设置<code>原型</code>对象，会产生一个重要的副作用：删除了<code>constructor</code>属性！我们来看一下，上一个挑战中<code>duck</code>的<code>constructor</code>属性输出到控制台的结果：",
+        "<blockquote>console.log(duck.constructor)<br>// 哎呀，控制台中输出了 ‘undefined’！</blockquote>",
+        "为了解决这个问题，凡是手动给新对象重新设置过原型对象的，都别忘记在原型对象中定义一个<code>constructor</code>属性：",
+        "<blockquote>Bird.prototype = {<br>&nbsp;&nbsp;constructor: Bird, // 定义 constructor 属性<br>&nbsp;&nbsp;numLegs: 2,<br>&nbsp;&nbsp;eat: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"nom nom nom\");<br>&nbsp;&nbsp;},<br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name); <br>&nbsp;&nbsp;}<br>};</blockquote>",
         "<hr>",
-        "Define the <code>constructor</code> property on the <code>Dog</code> <code>prototype</code>."
+        "给<code>Dog 的原型</code>对象定义一个<code>constructor</code>属性。"
       ],
       "tests": [
         {
-          "text": "<code>Dog.prototype</code> should set the <code>constructor</code> property.",
-          "testString": "assert(Dog.prototype.constructor === Dog, '<code>Dog.prototype</code> should set the <code>constructor</code> property.');"
+          "text": "<code>Dog.prototype</code>应该定义一个<code>constructor</code>属性。",
+          "testString": "assert(Dog.prototype.constructor === Dog, '<code>Dog.prototype</code>应该定义一个<code>constructor</code>属性。');"
         }
       ],
       "solutions": [
@@ -704,7 +704,7 @@
             "  this.name = name; ",
             "}",
             "",
-            "// Modify the code below this line",
+            "// 请只修改这条注释以下的代码",
             "Dog.prototype = {",
             "  ",
             "  numLegs: 2, ",
@@ -725,17 +725,17 @@
       "id": "587d7db0367417b2b2512b81",
       "title": "Understand Where an Object’s Prototype Comes From",
       "description": [
-        "Just like people inherit genes from their parents, an object inherits its <code>prototype</code> directly from the constructor function that created it. For example, here the <code>Bird</code> constructor creates the <code>duck</code> object:",
+        "就像人们从父母那里继承基因一样，对象也可直接从创建它的构造函数那里继承其<code>prototype</code>。请看下面的例子：<code>Bird</code>构造函数创建了一个<code>duck</code>对象：",
         "<blockquote>function Bird(name) {<br>&nbsp;&nbsp;this.name = name;<br>}<br><br>let duck = new Bird(\"Donald\");</blockquote>",
-        "<code>duck</code> inherits its <code>prototype</code> from the <code>Bird</code> constructor function. You can show this relationship with the <code>isPrototypeOf</code> method:",
-        "<blockquote>Bird.prototype.isPrototypeOf(duck);<br>// returns true</blockquote>",
+        "<code>duck</code>从<code>Bird</code>构造函数那里继承了它的<code>prototype</code>，你可以使用<code>isPrototypeOf</code>方法来验证他们之间的关系：",
+        "<blockquote>Bird.prototype.isPrototypeOf(duck);<br>// 返回 true</blockquote>",
         "<hr>",
-        "Use <code>isPrototypeOf</code> to check the <code>prototype</code> of <code>beagle</code>."
+        "使用<code>isPrototypeOf</code>方法验证<code>beagle</code>是否继承了<code>Bird</code>构造函数的<code>prototype</code>。"
       ],
       "tests": [
         {
-          "text": "Show that <code>Dog.prototype</code> is the <code>prototype</code> of <code>beagle</code>",
-          "testString": "assert(/Dog\\.prototype\\.isPrototypeOf\\(beagle\\)/.test(code), 'Show that <code>Dog.prototype</code> is the <code>prototype</code> of <code>beagle</code>');"
+          "text": "验证<code>Dog.prototype</code>应该是<code>beagle</code>的<code>原型</code>。",
+          "testString": "assert(/Dog\\.prototype\\.isPrototypeOf\\(beagle\\)/.test(code), '验证<code>Dog.prototype</code>应该是<code>beagle</code>的<code>原型</code>。');"
         }
       ],
       "solutions": [
@@ -756,7 +756,7 @@
             "",
             "let beagle = new Dog(\"Snoopy\");",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             ""
           ],
@@ -769,22 +769,22 @@
       "id": "587d7db0367417b2b2512b82",
       "title": "Understand the Prototype Chain",
       "description": [
-        "All objects in JavaScript (with a few exceptions) have a <code>prototype</code>. Also, an object’s <code>prototype</code> itself is an object.",
+        "JavaScript 中所有的对象（除了少数例外）都有自己的<code>原型</code>。而且，对象的<code>原型</code>本身也是一个对象。",
         "<blockquote>function Bird(name) {<br>&nbsp;&nbsp;this.name = name;<br>}<br><br>typeof Bird.prototype; // => object</blockquote>",
-        "Because a <code>prototype</code> is an object, a <code>prototype</code> can have its own <code>prototype</code>! In this case, the <code>prototype</code> of <code>Bird.prototype</code> is <code>Object.prototype</code>:",
-        "<blockquote>Object.prototype.isPrototypeOf(Bird.prototype);<br>// returns true</blockquote>",
-        "How is this useful? You may recall the <code>hasOwnProperty</code> method from a previous challenge:",
+        "正因为<code>原型</code>是一个对象，所以<code>原型</code>对象也有它自己的<code>原型</code>！这样看来的话，<code>Bird.prototype</code>的<code>原型</code>就是<code>Object.prototype</code>：",
+        "<blockquote>Object.prototype.isPrototypeOf(Bird.prototype);<br>// 返回 true</blockquote>",
+        "这有什么作用呢？你可能还记得我们在上一个挑战中学到的<code>hasOwnProperty</code>方法：",
         "<blockquote>let duck = new Bird(\"Donald\");<br>duck.hasOwnProperty(\"name\"); // => true</blockquote>",
-        "The <code>hasOwnProperty</code> method is defined in <code>Object.prototype</code>, which can be accessed by <code>Bird.prototype</code>, which can then be accessed by <code>duck</code>. This is an example of the <code>prototype</code> chain.",
-        "In this <code>prototype</code> chain, <code>Bird</code> is the <code>supertype</code> for <code>duck</code>, while <code>duck</code> is the <code>subtype</code>. <code>Object</code> is a <code>supertype</code> for both <code>Bird</code> and <code>duck</code>.",
-        "<code>Object</code> is a <code>supertype</code> for all objects in JavaScript. Therefore, any object can use the <code>hasOwnProperty</code> method.",
+        "<code>hasOwnProperty</code>是定义在<code>Object.prototype</code>上的一个方法，但是我们可以同时在<code>Bird.prototype</code>和<code>duck</code>对象上访问到这个方法，尽管这两个对象上并没有定义该方法。这就是一个<code>原型</code>链。",
+        "在这个<code>原型</code>链中，<code>Bird</code>构造函数是<code>父级</code>，<code>duck</code>是<code>子级</code>。<code>Object</code>则是<code>Bird</code>构造函数和<code>duck</code>实例共同的<code>父级</code>。",
+        "<code>Object</code>是 JavaScript 中所有对象的<code>父级</code>，也就是原型链的最顶层。因此，所有对象都可以访问<code>hasOwnProperty</code>方法。",
         "<hr>",
-        "Modify the code to show the correct prototype chain."
+        "修改以下代码使其展示出正确的原型链。"
       ],
       "tests": [
         {
-          "text": "Your code should show that <code>Object.prototype</code> is the prototype of <code>Dog.prototype</code>\")",
-          "testString": "assert(/Object\\.prototype\\.isPrototypeOf/.test(code), \"Your code should show that <code>Object.prototype</code> is the prototype of <code>Dog.prototype</code>\");"
+          "text": "你的代码应该展示<code>Object.prototype</code>是<code>Dog.prototype</code>的原型。",
+          "testString": "assert(/Object\\.prototype\\.isPrototypeOf/.test(code), \"你的代码应该展示<code>Object.prototype</code>是<code>Dog.prototype</code>的原型。\");"
         }
       ],
       "solutions": [
@@ -807,7 +807,7 @@
             "",
             "Dog.prototype.isPrototypeOf(beagle);  // => true",
             "",
-            "// Fix the code below so that it evaluates to true",
+            "// 修改以下代码使其结果返回 true",
             "???.isPrototypeOf(Dog.prototype);",
             ""
           ],
@@ -820,28 +820,28 @@
       "id": "587d7db0367417b2b2512b83",
       "title": "Use Inheritance So You Don't Repeat Yourself",
       "description": [
-        "There's a principle in programming called <code>Don't Repeat Yourself (DRY)</code>. The reason repeated code is a problem is because any change requires fixing code in multiple places. This usually means more work for programmers and more room for errors.",
-        "Notice in the example below that the <code>describe</code> method is shared by <code>Bird</code> and <code>Dog</code>:",
+        "编程中有一条原则叫做：<code>不要重复你自己（简称：DRY ）</code>。编写重复代码会产生的问题是：任何改变都需要去多个地方修复所有重复的代码。这通常意味着我们需要做更多的工作，会产生更高的出错率。",
+        "请观察下面的示例，<code>Bird</code>和<code>Dog</code>共享<code>describe</code>方法：",
         "<blockquote>Bird.prototype = {<br>&nbsp;&nbsp;constructor: Bird,<br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name);<br>&nbsp;&nbsp;}<br>};<br><br>Dog.prototype = {<br>&nbsp;&nbsp;constructor: Dog,<br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name);<br>&nbsp;&nbsp;}<br>};</blockquote>",
-        "The <code>describe</code> method is repeated in two places. The code can be edited to follow the <code>DRY</code> principle by creating a <code>supertype</code> (or parent) called <code>Animal</code>:",
+        "我们可以看到<code>describe</code>方法在两个地方重复定义了。根据以上所说的<code>DRY</code>原则，我们可以通过创建一个<code>Animal 超类</code>（或者父类）来重写这段代码：",
         "<blockquote>function Animal() { };<br><br>Animal.prototype = {<br>&nbsp;&nbsp;constructor: Animal, <br>&nbsp;&nbsp;describe: function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"My name is \" + this.name);<br>&nbsp;&nbsp;}<br>};</blockquote>",
-        "Since <code>Animal</code> includes the <code>describe</code> method, you can remove it from <code>Bird</code> and <code>Dog</code>:",
+        "<code>Animal</code>构造函数中定义了<code>describe</code>方法，可将<code>Bird</code>和<code>Dog</code>这两个构造函数的方法删除掉：",
         "<blockquote>Bird.prototype = {<br>&nbsp;&nbsp;constructor: Bird<br>};<br><br>Dog.prototype = {<br>&nbsp;&nbsp;constructor: Dog<br>};</blockquote>",
         "<hr>",
-        "The <code>eat</code> method is repeated in both <code>Cat</code> and <code>Bear</code>. Edit the code in the spirit of <code>DRY</code> by moving the <code>eat</code> method to the <code>Animal</code> <code>supertype</code>."
+        "<code>Cat</code>和<code>Bear</code>重复定义了<code>eat</code>方法。本着<code>DRY</code>的原则，通过将<code>eat</code>方法移动到<code>Animal 超类</code>中来重写你的代码。"
       ],
       "tests": [
         {
-          "text": "<code>Animal.prototype</code> should have the <code>eat</code> property.",
-          "testString": "assert(Animal.prototype.hasOwnProperty('eat'), '<code>Animal.prototype</code> should have the <code>eat</code> property.');"
+          "text": "<code>Animal.prototype</code>应该有<code>eat</code>属性。",
+          "testString": "assert(Animal.prototype.hasOwnProperty('eat'), '<code>Animal.prototype</code>应该有<code>eat</code>属性。');"
         },
         {
-          "text": "<code>Bear.prototype</code> should not have the <code>eat</code> property.",
-          "testString": "assert(!(Bear.prototype.hasOwnProperty('eat')), '<code>Bear.prototype</code> should not have the <code>eat</code> property.');"
+          "text": "<code>Bear.prototype</code>不应该有<code>eat</code>属性。",
+          "testString": "assert(!(Bear.prototype.hasOwnProperty('eat')), '<code>Bear.prototype</code>不应该有<code>eat</code>属性。');"
         },
         {
-          "text": "<code>Cat.prototype</code> should not have the <code>eat</code> property.",
-          "testString": "assert(!(Cat.prototype.hasOwnProperty('eat')), '<code>Cat.prototype</code> should not have the <code>eat</code> property.');"
+          "text": "<code>Cat.prototype</code>不应该有<code>eat</code>属性。",
+          "testString": "assert(!(Cat.prototype.hasOwnProperty('eat')), '<code>Cat.prototype</code>不应该有<code>eat</code>属性。');"
         }
       ],
       "solutions": [
@@ -894,35 +894,35 @@
       "id": "587d7db0367417b2b2512b84",
       "title": "Inherit Behaviors from a Supertype",
       "description": [
-        "In the previous challenge, you created a <code>supertype</code> called <code>Animal</code> that defined behaviors shared by all animals:",
+        "在上一个挑战中，我们创建了一个<code>Animal 超类</code>，用来定义所有动物共有的行为：",
         "<blockquote>function Animal() { }<br>Animal.prototype.eat = function() {<br>&nbsp;&nbsp;console.log(\"nom nom nom\");<br>};</blockquote>",
-        "This and the next challenge will cover how to reuse <code>Animal's</code> methods inside <code>Bird</code> and <code>Dog</code> without defining them again. It uses a technique called <code>inheritance</code>.",
-        "This challenge covers the first step: make an instance of the <code>supertype</code> (or parent).",
-        "You already know one way to create an instance of <code>Animal</code> using the <code>new</code> operator:",
+        "在这一节以及下一节挑战中我们将学习如何给<code>Bird</code>、<code>Dog</code>重写<code>Animal</code>中的方法，而无需重新定义它们。这里我们会用到构造函数的<code>继承</code>特性。",
+        "这一节挑战中我们学习第一步：创建一个<code>超类</code>（或者叫父类）的实例。",
+        "你已经学会了一种创建<code>Animal</code>实例的方法，即使用<code>new</code>操作符：",
         "<blockquote>let animal = new Animal();</blockquote>",
-        "There are some disadvantages when using this syntax for <code>inheritance</code>, which are too complex for the scope of this challenge. Instead, here's an alternative approach without those disadvantages:",
+        "此语法用于<code>继承</code>时会存在一些缺点，这些缺点对于当前我们这个挑战来说太复杂了。相反，我们学习另外一种没有这些缺点的方法来替代<code>new</code>操作：",
         "<blockquote>let animal = Object.create(Animal.prototype);</blockquote>",
-        "<code>Object.create(obj)</code> creates a new object, and sets <code>obj</code> as the new object's <code>prototype</code>. Recall that the <code>prototype</code> is like the \"recipe\" for creating an object. By setting the <code>prototype</code> of <code>animal</code> to be <code>Animal's</code> <code>prototype</code>, you are effectively giving the <code>animal</code> instance the same \"recipe\" as any other instance of <code>Animal</code>.",
-        "<blockquote>animal.eat(); // prints \"nom nom nom\"<br>animal instanceof Animal; // => true</blockquote>",
+        "<code>Object.create(obj)</code>创建了一个新对象，并指定了<code>obj</code>作为新对象的<code>原型</code>。回忆一下，我们之前说过<code>原型</code>就像是创建对象的 \"配方\"。通过给<code>animal</code>的<code>原型</code>设置为<code>Animal</code>构造函数的<code>原型</code>，就可以有效的给<code>animal</code>对象一个 \"配方\"，与<code>Animal</code>的其他实例一样。",
+        "<blockquote>animal.eat(); // 输出 \"nom nom nom\"<br>animal instanceof Animal; // => true</blockquote>",
         "<hr>",
-        "Use <code>Object.create</code> to make two instances of <code>Animal</code> named <code>duck</code> and <code>beagle</code>."
+        "使用<code>Object.create</code>方法给<code>Animal</code>创建两个实例：<code>duck</code>和<code>beagle</code>。"
       ],
       "tests": [
         {
-          "text": "The <code>duck</code> variable should be defined.",
-          "testString": "assert(typeof duck !== \"undefined\", 'The <code>duck</code> variable should be defined.');"
+          "text": "应该定义一个<code>duck</code>变量。",
+          "testString": "assert(typeof duck !== \"undefined\", '应该定义一个<code>duck</code>变量。');"
         },
         {
-          "text": "The <code>beagle</code> variable should be defined.",
-          "testString": "assert(typeof beagle !== \"undefined\", 'The <code>beagle</code> variable should be defined.');"
+          "text": "应该定义一个<code>beagle</code>变量。",
+          "testString": "assert(typeof beagle !== \"undefined\", '应该定义一个<code>beagle</code>变量。');"
         },
         {
-          "text": "<code>duck</code> should have a <code>prototype</code> of <code>Animal</code>.",
-          "testString": "assert(duck instanceof Animal, '<code>duck</code> should have a <code>prototype</code> of <code>Animal</code>.');"
+          "text": "<code>duck</code>的原型应该被设置为<code>Animal</code>构造函数的<code>原型</code>。",
+          "testString": "assert(duck instanceof Animal, '<code>duck</code>的原型应该被设置为<code>Animal</code>构造函数的<code>原型</code>。');"
         },
         {
-          "text": "<code>beagle</code> should have a <code>prototype</code> of <code>Animal</code>.",
-          "testString": "assert(beagle instanceof Animal, '<code>beagle</code> should have a <code>prototype</code> of <code>Animal</code>.');"
+          "text": "<code>beagle</code>的原型应该被设置为<code>Animal</code>构造函数的<code>原型</code>。",
+          "testString": "assert(beagle instanceof Animal, '<code>beagle</code>的原型应该被设置为<code>Animal</code>构造函数的<code>原型</code>。');"
         }
       ],
       "solutions": [
@@ -946,13 +946,13 @@
             "  }",
             "};",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
-            "let duck; // Change this line",
-            "let beagle; // Change this line",
+            "let duck; // 修改这一行代码",
+            "let beagle; // 修改这一行代码",
             "",
-            "duck.eat(); // Should print \"nom nom nom\"",
-            "beagle.eat(); // Should print \"nom nom nom\" "
+            "duck.eat(); // 应该输出 \"nom nom nom\"",
+            "beagle.eat(); // 应该输出 \"nom nom nom\" "
           ],
           "head": [],
           "tail": []
@@ -963,19 +963,19 @@
       "id": "587d7db1367417b2b2512b85",
       "title": "Set the Child's Prototype to an Instance of the Parent",
       "description": [
-        "In the previous challenge you saw the first step for inheriting behavior from the <code>supertype</code> (or parent) <code>Animal</code>: making a new instance of <code>Animal</code>.",
-        "This challenge covers the next step: set the <code>prototype</code> of the <code>subtype</code> (or child)&mdash;in this case, <code>Bird</code>&mdash;to be an instance of <code>Animal</code>.",
+        "在上一个挑战中，我们学习了从<code>超类 Animal</code>（或者叫父类）继承其行为的第一个步骤：创建一个<code>Animal</code>的实例。",
+        "这一节挑战我们将学习第二个步骤：给<code>子类型</code>（或者子类）设置<code>原型</code>。这样一来，<code>Bird</code>就是<code>Animal</code>的一个实例了。",
         "<blockquote>Bird.prototype = Object.create(Animal.prototype);</blockquote>",
-        "Remember that the <code>prototype</code> is like the \"recipe\" for creating an object. In a way, the recipe for <code>Bird</code> now includes all the key \"ingredients\" from <code>Animal</code>.",
-        "<blockquote>let duck = new Bird(\"Donald\");<br>duck.eat(); // prints \"nom nom nom\"</blockquote>",
-        "<code>duck</code> inherits all of <code>Animal</code>'s properties, including the <code>eat</code> method.",
+        "请记住，<code>原型</code>类似于创建对象的 \"配方\"。从某种意义上来说，<code>Bird</code>对象的配方包含了<code>Animal</code>构造函数的所有关键 \"成分\"。",
+        "<blockquote>let duck = new Bird(\"Donald\");<br>duck.eat(); // 输出 \"nom nom nom\"</blockquote>",
+        "<code>duck</code>继承了<code>Animal</code>构造函数的所有属性，其中包括了<code>eat</code>方法。",
         "<hr>",
-        "Modify the code so that instances of <code>Dog</code> inherit from <code>Animal</code>."
+        "修改你的代码，以实现<code>Dog</code>继承了<code>Animal</code>构造函数。"
       ],
       "tests": [
         {
-          "text": "<code>Dog.prototype</code> should be an instance of <code>Animal</code>.",
-          "testString": "assert(Animal.prototype.isPrototypeOf(Dog.prototype), '<code>Dog.prototype</code> should be an instance of <code>Animal</code>.');"
+          "text": "<code>Dog.prototype</code>应该是<code>Animal</code>的一个实例。",
+          "testString": "assert(Animal.prototype.isPrototypeOf(Dog.prototype), '<code>Dog.prototype</code>应该是<code>Animal</code>的一个实例。');"
         }
       ],
       "solutions": [
@@ -1001,11 +1001,11 @@
             "",
             "function Dog() { }",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "let beagle = new Dog();",
-            "beagle.eat();  // Should print \"nom nom nom\""
+            "beagle.eat();  // 应该输出 \"nom nom nom\""
           ],
           "head": [],
           "tail": []
@@ -1016,30 +1016,30 @@
       "id": "587d7db1367417b2b2512b86",
       "title": "Reset an Inherited Constructor Property",
       "description": [
-        "When an object inherits its <code>prototype</code> from another object, it also inherits the <code>supertype</code>'s constructor property.",
-        "Here's an example:",
+        "当一个对象从另一个对象那里继承了其<code>原型</code>，那它也继承了<code>父类</code>的 constructor 属性。",
+        "请看下面的举例：",
         "<blockquote>function Bird() { }<br>Bird.prototype = Object.create(Animal.prototype);<br>let duck = new Bird();<br>duck.constructor // function Animal(){...}</blockquote>",
-        "But <code>duck</code> and all instances of <code>Bird</code> should show that they were constructed by <code>Bird</code> and not <code>Animal</code>. To do so, you can manually set <code>Bird's</code> constructor property to the <code>Bird</code> object:",
+        "但是<code>duck</code>和其他所有<code>Bird</code>的实例都应该表明它们是由<code>Bird</code>创建的，而不是由<code>Animal</code>创建的。为此，你可以手动把<code>Bird</code>的 constructor 属性设置为<code>Bird</code>对象：",
         "<blockquote>Bird.prototype.constructor = Bird;<br>duck.constructor // function Bird(){...}</blockquote>",
         "<hr>",
-        "Fix the code so <code>duck.constructor</code> and <code>beagle.constructor</code> return their respective constructors."
+        "修改你的代码，使得<code>duck.constructor</code>和<code>beagle.constructor</code>返回各自的构造函数。"
       ],
       "tests": [
         {
-          "text": "<code>Bird.prototype</code> should be an instance of <code>Animal</code>.",
-          "testString": "assert(Animal.prototype.isPrototypeOf(Bird.prototype), '<code>Bird.prototype</code> should be an instance of <code>Animal</code>.');"
+          "text": "<code>Bird.prototype</code>应该是<code>Animal</code>的一个实例。",
+          "testString": "assert(Animal.prototype.isPrototypeOf(Bird.prototype), '<code>Bird.prototype</code>应该是<code>Animal</code>的一个实例。');"
         },
         {
-          "text": "<code>duck.constructor</code> should return <code>Bird</code>.",
-          "testString": "assert(duck.constructor === Bird, '<code>duck.constructor</code> should return <code>Bird</code>.');"
+          "text": "<code>duck.constructor</code>应该返回<code>Bird</code>。",
+          "testString": "assert(duck.constructor === Bird, '<code>duck.constructor</code>应该返回<code>Bird</code>。');"
         },
         {
-          "text": "<code>Dog.prototype</code> should be an instance of <code>Animal</code>.",
-          "testString": "assert(Animal.prototype.isPrototypeOf(Dog.prototype), '<code>Dog.prototype</code> should be an instance of <code>Animal</code>.');"
+          "text": "<code>Dog.prototype</code>应该是<code>Animal</code>的一个实例。",
+          "testString": "assert(Animal.prototype.isPrototypeOf(Dog.prototype), '<code>Dog.prototype</code>应该是<code>Animal</code>的一个实例。');"
         },
         {
-          "text": "<code>beagle.constructor</code> should return <code>Dog</code>.",
-          "testString": "assert(beagle.constructor === Dog, '<code>beagle.constructor</code> should return <code>Dog</code>.');"
+          "text": "<code>beagle.constructor</code>应该返回<code>Dog</code>。",
+          "testString": "assert(beagle.constructor === Dog, '<code>beagle.constructor</code>应该返回<code>Dog</code>。');"
         }
       ],
       "solutions": [
@@ -1061,7 +1061,7 @@
             "Bird.prototype = Object.create(Animal.prototype);",
             "Dog.prototype = Object.create(Animal.prototype);",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "",
@@ -1077,36 +1077,36 @@
       "id": "587d7db1367417b2b2512b87",
       "title": "Add Methods After Inheritance",
       "description": [
-        "A constructor function that inherits its <code>prototype</code> object from a <code>supertype</code> constructor function can still have its own methods in addition to inherited methods.",
-        "For example, <code>Bird</code> is a constructor that inherits its <code>prototype</code> from <code>Animal</code>:",
+        "从<code>父类</code>继承其<code>原型</code>对象的构造函数除了继承的方法之外，还可以有自己的方法。",
+        "请看举例：<code>Bird</code>是一个构造函数，它继承了<code>Animal</code>构造函数的<code>原型</code>：",
         "<blockquote>function Animal() { }<br>Animal.prototype.eat = function() {<br>&nbsp;&nbsp;console.log(\"nom nom nom\");<br>};<br>function Bird() { }<br>Bird.prototype = Object.create(Animal.prototype);<br>Bird.prototype.constructor = Bird;</blockquote>",
-        "In addition to what is inherited from <code>Animal</code>, you want to add behavior that is unique to <code>Bird</code> objects. Here, <code>Bird</code> will get a <code>fly()</code> function. Functions are added to <code>Bird's</code> <code>prototype</code> the same way as any constructor function:",
+        "除了从<code>Animal</code>构造函数继承的行为之外，还需要给<code>Bird</code>对象添加能表示其唯一的行为。这里，我们给<code>Bird</code>对象添加一个<code>fly()</code>函数。函数会以一种与其他构造函数相同的方式添加到<code>Bird</code>的<code>原型</code>中：",
         "<blockquote>Bird.prototype.fly = function() {<br>&nbsp;&nbsp;console.log(\"I'm flying!\");<br>};</blockquote>",
-        "Now instances of <code>Bird</code> will have both <code>eat()</code> and <code>fly()</code> methods:",
-        "<blockquote>let duck = new Bird();<br>duck.eat(); // prints \"nom nom nom\"<br>duck.fly(); // prints \"I'm flying!\"</blockquote>",
+        "现在<code>Bird</code>的实例中就有了<code>eat()</code>和<code>fly()</code>这两个方法：",
+        "<blockquote>let duck = new Bird();<br>duck.eat(); // 输出 \"nom nom nom\"<br>duck.fly(); // 输出 \"I'm flying!\"</blockquote>",
         "<hr>",
-        "Add all necessary code so the <code>Dog</code> object inherits from <code>Animal</code> and the <code>Dog's</code> <code>prototype</code> constructor is set to Dog. Then add a <code>bark()</code> method to the <code>Dog</code> object so that <code>beagle</code> can both <code>eat()</code> and <code>bark()</code>. The <code>bark()</code> method should print \"Woof!\" to the console."
+        "添加必要的代码，使得<code>Dog</code>对象继承<code>Animal</code>构造函数，并且把<code>Dog 原型</code>上的 constructor 属性设置为 Dog。然后给<code>Dog</code>对象添加一个<code>bark()</code>方法，这样的话，<code>beagle</code>将同时拥有<code>eat()</code>和<code>bark()</code>这两个方法。<code>bark()</code>方法中应该输出 \"Woof!\" 到控制台。"
       ],
       "tests": [
         {
-          "text": "<code>Animal</code> should not respond to the <code>bark()</code> method.",
-          "testString": "assert(typeof Animal.prototype.bark == \"undefined\", '<code>Animal</code> should not respond to the <code>bark()</code> method.');"
+          "text": "<code>Animal</code>应该没有<code>bark()</code>方法。",
+          "testString": "assert(typeof Animal.prototype.bark == \"undefined\", '<code>Animal</code>应该没有<code>bark()</code>方法。');"
         },
         {
-          "text": "<code>Dog</code> should inherit the <code>eat()</code> method from <code>Animal</code>.",
-          "testString": "assert(typeof Dog.prototype.eat == \"function\", '<code>Dog</code> should inherit the <code>eat()</code> method from <code>Animal</code>.');"
+          "text": "<code>Dog</code>应该继承了<code>Animal</code>构造函数的<code>eat()</code>方法。",
+          "testString": "assert(typeof Dog.prototype.eat == \"function\", '<code>Dog</code>应该继承了<code>Animal</code>构造函数的<code>eat()</code>方法。');"
         },
         {
-          "text": "<code>Dog</code> should have the <code>bark()</code> method as an <code>own</code> property.",
-          "testString": "assert(Dog.prototype.hasOwnProperty('bark'), '<code>Dog</code> should have the <code>bark()</code> method as an <code>own</code> property.');"
+          "text": "<code>Dog</code>应该有一个<code>bark()</code>方法作为<code>自身</code>属性。",
+          "testString": "assert(Dog.prototype.hasOwnProperty('bark'), '<code>Dog</code>应该有一个<code>bark()</code>方法作为<code>自身</code>属性。');"
         },
         {
-          "text": "<code>beagle</code> should be an <code>instanceof</code> <code>Animal</code>.",
-          "testString": "assert(beagle instanceof Animal, '<code>beagle</code> should be an <code>instanceof</code> <code>Animal</code>.');"
+          "text": "<code>beagle</code>应该是<code>Animal</code>的一个<code>instanceof</code>。",
+          "testString": "assert(beagle instanceof Animal, '<code>beagle</code>应该是<code>Animal</code>的一个<code>instanceof</code>。');"
         },
         {
-          "text": "The constructor for <code>beagle</code> should be set to <code>Dog</code>.",
-          "testString": "assert(beagle.constructor === Dog, 'The constructor for <code>beagle</code> should be set to <code>Dog</code>.');"
+          "text": "<code>beagle</code>的 constructor 属性应该被设置为<code>Dog</code>。",
+          "testString": "assert(beagle.constructor === Dog, '<code>beagle</code>的 constructor 属性应该被设置为<code>Dog</code>。');"
         }
       ],
       "solutions": [
@@ -1128,17 +1128,17 @@
             "",
             "function Dog() { }",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下 ",
             "",
             "",
             "",
             "",
-            "// Add your code above this line",
+            "// 请把你的代码写在这条注释以下 ",
             "",
             "let beagle = new Dog();",
             "",
-            "beagle.eat(); // Should print \"nom nom nom\"",
-            "beagle.bark(); // Should print \"Woof!\""
+            "beagle.eat(); // 应该输出 \"nom nom nom\"",
+            "beagle.bark(); // 应该输出 \"Woof!\""
           ],
           "head": [],
           "tail": []
@@ -1149,29 +1149,29 @@
       "id": "587d7db1367417b2b2512b88",
       "title": "Override Inherited Methods",
       "description": [
-        "In previous lessons, you learned that an object can inherit its behavior (methods) from another object by cloning its <code>prototype</code> object:",
+        "在上一个挑战中，我们学习了一个对象可以通过复制另一个对象的<code>原型</code>来继承其属性和行为（或方法）：",
         "<blockquote>ChildObject.prototype = Object.create(ParentObject.prototype);</blockquote>",
-        "Then the <code>ChildObject</code> received its own methods by chaining them onto its <code>prototype</code>:",
+        "然后，<code>ChildObject</code>将自己的方法链接到它的<code>原型</code>中，这样就可以访问了：",
         "<blockquote>ChildObject.prototype.methodName = function() {...};</blockquote>",
-        "It's possible to override an inherited method. It's done the same way - by adding a method to <code>ChildObject.prototype</code> using the same method name as the one to override.",
-        "Here's an example of <code>Bird</code> overriding the <code>eat()</code> method inherited from <code>Animal</code>:",
-        "<blockquote>function Animal() { }<br>Animal.prototype.eat = function() {<br>&nbsp;&nbsp;return \"nom nom nom\";<br>};<br>function Bird() { }<br><br>// Inherit all methods from Animal<br>Bird.prototype = Object.create(Animal.prototype);<br><br>// Bird.eat() overrides Animal.eat()<br>Bird.prototype.eat = function() {<br>&nbsp;&nbsp;return \"peck peck peck\";<br>};</blockquote>",
-        "If you have an instance <code>let duck = new Bird();</code> and you call <code>duck.eat()</code>, this is how JavaScript looks for the method on <code>duck’s</code> <code>prototype</code> chain:",
-        "1. duck => Is eat() defined here? No.",
-        "2. Bird => Is eat() defined here? => Yes. Execute it and stop searching.",
-        "3. Animal => eat() is also defined, but JavaScript stopped searching before reaching this level.",
-        "4. Object => JavaScript stopped searching before reaching this level.",
+        "我们还可以重写继承的方法。以同样的方式——通过使用一个与需要重写的方法相同的方法名，向<code>ChildObject.prototype</code>中添加方法。",
+        "请看下面的举例：<code>Bird</code>重写了从<code>Animal</code>继承来的<code>eat()</code>方法：",
+        "<blockquote>function Animal() { }<br>Animal.prototype.eat = function() {<br>&nbsp;&nbsp;return \"nom nom nom\";<br>};<br>function Bird() { }<br><br>// 继承了 Animal 的所有方法<br>Bird.prototype = Object.create(Animal.prototype);<br><br>// Bird.eat() 重写了 Animal.eat() 方法<br>Bird.prototype.eat = function() {<br>&nbsp;&nbsp;return \"peck peck peck\";<br>};</blockquote>",
+        "如果你有一个实例：<code>let duck = new Bird();</code>，然后你调用了<code>duck.eat()</code>，以下就是 JavaScript 在<code>duck</code>的<code>原型</code>链上寻找方法的过程：",
+        "1. duck => 这里定义了 eat() 方法吗？没有。",
+        "2. Bird => 这里定义了 eat() 方法吗？=> 是的。执行它并停止往上搜索。",
+        "3. Animal => 这里也定义了 eat() 方法，但是 JavaScript 在到达这层原型链之前已停止了搜索。",
+        "4. Object => JavaScript 在到达这层原型链之前也已经停止了搜索。",
         "<hr>",
-        "Override the <code>fly()</code> method for <code>Penguin</code> so that it returns \"Alas, this is a flightless bird.\""
+        "重写<code>Penguin</code>的<code>fly()</code>方法，使其返回 \"Alas, this is a flightless bird.\""
       ],
       "tests": [
         {
-          "text": "<code>penguin.fly()</code> should return the string \"Alas, this is a flightless bird.\"",
-          "testString": "assert(penguin.fly() === \"Alas, this is a flightless bird.\", '<code>penguin.fly()</code> should return the string \"Alas, this is a flightless bird.\"');"
+          "text": "<code>penguin.fly()</code>方法应该返回字符串：\"Alas, this is a flightless bird.\"",
+          "testString": "assert(penguin.fly() === \"Alas, this is a flightless bird.\", '<code>penguin.fly()</code>方法应该返回字符串：\"Alas, this is a flightless bird.\"');"
         },
         {
-          "text": "The <code>bird.fly()</code> method should return \"I am flying!\"",
-          "testString": "assert((new Bird()).fly() === \"I am flying!\", 'The <code>bird.fly()</code> method should return \"I am flying!\"');"
+          "text": "The <code>bird.fly()</code>方法应该返回 \"I am flying!\"",
+          "testString": "assert((new Bird()).fly() === \"I am flying!\", 'The <code>bird.fly()</code>方法应该返回 \"I am flying!\"');"
         }
       ],
       "solutions": [
@@ -1194,11 +1194,11 @@
             "Penguin.prototype = Object.create(Bird.prototype);",
             "Penguin.prototype.constructor = Penguin;",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "",
-            "// Add your code above this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "let penguin = new Penguin();",
             "console.log(penguin.fly());"
@@ -1212,29 +1212,29 @@
       "id": "587d7db2367417b2b2512b89",
       "title": "Use a Mixin to Add Common Behavior Between Unrelated Objects",
       "description": [
-        "As you have seen, behavior is shared through inheritance. However, there are cases when inheritance is not the best solution. Inheritance does not work well for unrelated objects like <code>Bird</code> and <code>Airplane</code>. They can both fly, but a <code>Bird</code> is not a type of <code>Airplane</code> and vice versa.",
-        "For unrelated objects, it's better to use <code>mixins</code>. A <code>mixin</code> allows other objects to use a collection of functions.",
+        "正如你所见，通过继承可以共享行为。然而，在有些情况下，继承不是最好的解决方案。它不适用于那些不相关的对象，比如<code>Bird</code>和<code>Airplane</code>。虽然它们都可以飞行，但是一只<code>Bird</code>并不是一架<code>Airplane</code>，反之亦然。",
+        "对于不相关的对象，最好使用<code>mixins</code>类。一个<code>mixin</code>类允许其他对象使用函数集合。",
         "<blockquote>let flyMixin = function(obj) {<br>&nbsp;&nbsp;obj.fly = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Flying, wooosh!\");<br>&nbsp;&nbsp;}<br>};</blockquote>",
-        "The <code>flyMixin</code> takes any object and gives it the <code>fly</code> method.",
+        "<code>flyMixin</code>构造器能接受任何对象，并为其提供<code>fly</code>方法。",
         "<blockquote>let bird = {<br>&nbsp;&nbsp;name: \"Donald\",<br>&nbsp;&nbsp;numLegs: 2<br>};<br><br>let plane = {<br>&nbsp;&nbsp;model: \"777\",<br>&nbsp;&nbsp;numPassengers: 524<br>};<br><br>flyMixin(bird);<br>flyMixin(plane);</blockquote>",
-        "Here <code>bird</code> and <code>plane</code> are passed into <code>flyMixin</code>, which then assigns the <code>fly</code> function to each object. Now <code>bird</code> and <code>plane</code> can both fly:",
-        "<blockquote>bird.fly(); // prints \"Flying, wooosh!\"<br>plane.fly(); // prints \"Flying, wooosh!\"</blockquote>",
-        "Note how the <code>mixin</code> allows for the same <code>fly</code> method to be reused by unrelated objects <code>bird</code> and <code>plane</code>.",
+        "这里的<code>flyMixin</code>接收了<code>bird</code>和code>plane</code>对象，然后将<code>fly</code>方法分配给了每一个对象。现在<code>bird</code>和<code>plane</code>都可以飞行了：",
+        "<blockquote>bird.fly(); // 输出 \"Flying, wooosh!\"<br>plane.fly(); // 输出 \"Flying, wooosh!\"</blockquote>",
+        "注意观察<code>mixin</code>是如何允许相同的<code>fly</code>方法被不相关的对象<code>bird</code>和<code>plane</code>重用的。",
         "<hr>",
-        "Create a <code>mixin</code> named <code>glideMixin</code> that defines a method named <code>glide</code>. Then use the <code>glideMixin</code> to give both <code>bird</code> and <code>boat</code> the ability to glide."
+        "创建一个名为<code>glideMixin</code>的<code>mixin</code>类，并定义一个<code>glide</code>方法。然后使用<code>glideMixin</code>来给<code>bird</code>和<code>boat</code>赋予滑行的能力。"
       ],
       "tests": [
         {
-          "text": "Your code should declare a <code>glideMixin</code> variable that is a function.",
-          "testString": "assert(typeof glideMixin === \"function\", 'Your code should declare a <code>glideMixin</code> variable that is a function.');"
+          "text": "你应该声明一个变量名为<code>glideMixin</code>的函数。",
+          "testString": "assert(typeof glideMixin === \"function\", '你应该声明一个变量名为<code>glideMixin</code>的函数。');"
         },
         {
-          "text": "Your code should use the <code>glideMixin</code> on the <code>bird</code> object to give it the <code>glide</code> method.",
-          "testString": "assert(typeof bird.glide === \"function\", 'Your code should use the <code>glideMixin</code> on the <code>bird</code> object to give it the <code>glide</code> method.');"
+          "text": "你应该在<code>bird</code>上使用<code>glideMixin</code>，以提供<code>glide</code>方法。",
+          "testString": "assert(typeof bird.glide === \"function\", '你应该在<code>bird</code>上使用<code>glideMixin</code>，以提供<code>glide</code>方法。');"
         },
         {
-          "text": "Your code should use the <code>glideMixin</code> on the <code>boat</code> object to give it the <code>glide</code> method.",
-          "testString": "assert(typeof boat.glide === \"function\", 'Your code should use the <code>glideMixin</code> on the <code>boat</code> object to give it the <code>glide</code> method.');"
+          "text": "你应该在<code>boat</code>上使用<code>glideMixin</code>，以提供<code>glide</code>方法。",
+          "testString": "assert(typeof boat.glide === \"function\", '你应该在<code>boat</code>上使用<code>glideMixin</code>，以提供<code>glide</code>方法。');"
         }
       ],
       "solutions": [
@@ -1259,7 +1259,7 @@
             "  type: \"race-boat\"",
             "};",
             "",
-            "// Add your code below this line",
+            "// 请把你的代码写在这条注释以下",
             "",
             "",
             "",
@@ -1276,23 +1276,23 @@
       "id": "587d7db2367417b2b2512b8a",
       "title": "Use Closure to Protect Properties Within an Object from Being Modified Externally",
       "description": [
-        "In the previous challenge, <code>bird</code> had a public property <code>name</code>. It is considered public because it can be accessed and changed outside of <code>bird</code>'s definition.",
+        "在上一次挑战中，<code>bird</code>有一个公共属性<code>name</code>。公共属性的定义就是：它可以在<code>bird</code>的定义范围之外被访问和更改。",
         "<blockquote>bird.name = \"Duffy\";</blockquote>",
-        "Therefore, any part of your code can easily change the name of <code>bird</code> to any value. Think about things like passwords and bank accounts being easily changeable by any part of your codebase. That could cause a lot of issues.",
-        "The simplest way to make properties private is by creating a variable within the constructor function. This changes the scope of that variable to be within the constructor function versus available globally. This way, the property can only be accessed and changed by methods also within the constructor function.",
-        "<blockquote>function Bird() {<br>&nbsp;&nbsp;let hatchedEgg = 10; // private property<br><br>&nbsp;&nbsp;this.getHatchedEggCount = function() { // publicly available method that a bird object can use<br>&nbsp;&nbsp;&nbsp;&nbsp;return hatchedEgg;<br>&nbsp;&nbsp;};<br>}<br>let ducky = new Bird();<br>ducky.getHatchedEggCount(); // returns 10</blockquote>",
-        "Here <code>getHachedEggCount</code> is a privileged method, because it has access to the private variable <code>hatchedEgg</code>. This is possible because <code>hatchedEgg</code> is declared in the same context as <code>getHachedEggCount</code>. In JavaScript, a function always has access to the context in which it was created. This is called <code>closure</code>.",
+        "因此，代码的任何地方都可以轻松地将<code>bird</code>的 name 属性更改为任意值。想想密码和银行账户之类的东西，如果代码库的任何部分都可以轻易改变，那么将会引起很多问题。",
+        "使属性私有化最简单的方法就是在构造函数中创建变量。可以将该变量范围限定在构造函数中，而不是全局可用。这样，属性只能由构造函数中的方法访问和更改。",
+        "<blockquote>function Bird() {<br>&nbsp;&nbsp;let hatchedEgg = 10; // 私有属性 <br><br>&nbsp;&nbsp;this.getHatchedEggCount = function() { // bird 对象可以是使用的公有方法 <br>&nbsp;&nbsp;&nbsp;&nbsp;return hatchedEgg;<br>&nbsp;&nbsp;};<br>}<br>let ducky = new Bird();<br>ducky.getHatchedEggCount(); // 返回 10</blockquote>",
+        "这里的<code>getHachedEggCount</code>是一种特权方法，因为它可以访问私有属性<code>hatchedEgg</code>。这是可能的，因为<code>hatchedEgg</code>是在与<code>getHachedEggCount</code>相同的上下文中声明的。在 JavaScript 中，函数总是可以访问创建它的上下文。这就叫做<code>闭包</code>。",
         "<hr>",
-        "Change how <code>weight</code> is declared in the <code>Bird</code> function so it is a private variable. Then, create a method <code>getWeight</code> that returns the value of <code>weight</code>."
+        "更改在<code>Bird</code>函数中声明的<code>weight</code>方法，使其成为私有变量。然后，创建一个返回<code>weight</code>值的<code>getWeight</code>方法。"
       ],
       "tests": [
         {
-          "text": "The <code>weight</code> property should be a private variable.",
-          "testString": "assert(!code.match(/this\\.weight/g), 'The <code>weight</code> property should be a private variable.');"
+          "text": "<code>weight</code>属性应该是一个私有变量。",
+          "testString": "assert(!code.match(/this\\.weight/g), 'The <code>weight</code>属性应该是一个私有变量。');"
         },
         {
-          "text": "Your code should create a method in <code>Bird</code> called <code>getWeight</code> that returns the <code>weight</code>.",
-          "testString": "assert((new Bird()).getWeight() === 15, 'Your code should create a method in <code>Bird</code> called <code>getWeight</code> that returns the <code>weight</code>.');"
+          "text": "你的代码应该在<code>Bird</code>中创建一个名为<code>getWeight</code>方法，该方法返回<code>weight</code>值。",
+          "testString": "assert((new Bird()).getWeight() === 15, '你的代码应该在<code>Bird</code>中创建一个名为<code>getWeight</code>方法，该方法返回<code>weight</code>值。');"
         }
       ],
       "solutions": [
@@ -1323,20 +1323,20 @@
       "id": "587d7db2367417b2b2512b8b",
       "title": "Understand the Immediately Invoked Function Expression (IIFE)",
       "description": [
-        "A common pattern in JavaScript is to execute a function as soon as it is declared:",
-        "<blockquote>(function () {<br>&nbsp;&nbsp;console.log(\"Chirp, chirp!\");<br>})(); // this is an anonymous function expression that executes right away<br>// Outputs \"Chirp, chirp!\" immediately</blockquote>",
-        "Note that the function has no name and is not stored in a variable. The two parentheses () at the end of the function expression cause it to be immediately executed or invoked. This pattern is known as an <code>immediately invoked function expression</code> or <code>IIFE</code>.",
+        "JavaScript 中的一个常见模式就是，函数一被声明就执行：",
+        "<blockquote>(function () {<br>&nbsp;&nbsp;console.log(\"Chirp, chirp!\");<br>})(); // 这是一个立即执行的匿名函数表达式<br>// 立即输出 \"Chirp, chirp!\"</blockquote>",
+        "请注意，函数没有名称，也不存储在变量中。函数表达式末尾的两个括号（）导致它被立即执行或调用。这种模式被叫做<code>自执行函数表达式</code>或者<code>IIFE</code>。",
         "<hr>",
-        "Rewrite the function <code>makeNest</code> and remove its call so instead it's an anonymous <code>immediately invoked function expression</code> (<code>IIFE</code>)."
+        "重写函数<code>makeNest</code>，并删除它的调用，取而代之是一个匿名的<code>自执行函数表达式</code>（<code>IIFE</code>）。"
       ],
       "tests": [
         {
-          "text": "The function should be anonymous.",
-          "testString": "assert(/\\(\\s*?function\\s*?\\(\\s*?\\)\\s*?{/.test(code), 'The function should be anonymous.');"
+          "text": "该函数应该是匿名的。",
+          "testString": "assert(/\\(\\s*?function\\s*?\\(\\s*?\\)\\s*?{/.test(code), '该函数应该是匿名的。');"
         },
         {
-          "text": "Your function should have parentheses at the end of the expression to call it immediately.",
-          "testString": "assert(/}\\s*?\\)\\s*?\\(\\s*?\\)/.test(code), 'Your function should have parentheses at the end of the expression to call it immediately.');"
+          "text": "函数应该在表达式的末尾有括号，以便立即调用它。",
+          "testString": "assert(/}\\s*?\\)\\s*?\\(\\s*?\\)/.test(code), '函数应该在表达式的末尾有括号，以便立即调用它。');"
         }
       ],
       "solutions": [
@@ -1366,28 +1366,28 @@
       "id": "587d7db2367417b2b2512b8c",
       "title": "Use an IIFE to Create a Module",
       "description": [
-        "An <code>immediately invoked function expression</code> (<code>IIFE</code>) is often used to group related functionality into a single object or <code>module</code>. For example, an earlier challenge defined two mixins:",
+        "一个<code>自执行函数表达式</code>（<code>IIFE</code>）通常用于将相关功能分组到单个对象或者是<code>模块</code>中。例如，先前的挑战中定义了一个混合类：",
         "<blockquote>function glideMixin(obj) {<br>&nbsp;&nbsp;obj.glide = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Gliding on the water\");<br>&nbsp;&nbsp;};<br>}<br>function flyMixin(obj) {<br>&nbsp;&nbsp;obj.fly = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Flying, wooosh!\");<br>&nbsp;&nbsp;};<br>}</blockquote>",
-        "We can group these <code>mixins</code> into a module as follows:",
-        "<blockquote>let motionModule = (function () {<br>&nbsp;&nbsp;return {<br>&nbsp;&nbsp;&nbsp;&nbsp;glideMixin: function (obj) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.glide = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Gliding on the water\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;flyMixin: function(obj) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.fly = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Flying, wooosh!\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}) (); // The two parentheses cause the function to be immediately invoked</blockquote>",
-        "Note that you have an <code>immediately invoked function expression</code> (<code>IIFE</code>) that returns an object <code>motionModule</code>. This returned object contains all of the <code>mixin</code> behaviors as properties of the object.",
-        "The advantage of the <code>module</code> pattern is that all of the motion behaviors can be packaged into a single object that can then be used by other parts of your code. Here is an example using it:",
+        "我们可以将这些<code>mixins</code>分成以下模块：",
+        "<blockquote>let motionModule = (function () {<br>&nbsp;&nbsp;return {<br>&nbsp;&nbsp;&nbsp;&nbsp;glideMixin: function (obj) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.glide = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Gliding on the water\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;flyMixin: function(obj) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.fly = function() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(\"Flying, wooosh!\");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}) (); // 末尾的两个括号导致函数被立即调用</blockquote>",
+        "注意：一个<code>自执行函数表达式</code>（<code>IIFE</code>）返回了一个<code>motionModule</code>对象。返回的这个对象包含了作为对象属性的所有<code>mixin</code>行为。",
+        "<code>模块</code>模式的优点是，所有的运动行为都可以打包成一个对象，然后由代码的其他部分使用。下面是一个使用它的例子：",
         "<blockquote>motionModule.glideMixin(duck);<br>duck.glide();</blockquote>",
         "<hr>",
-        "Create a <code>module</code> named <code>funModule</code> to wrap the two <code>mixins</code> <code>isCuteMixin</code> and <code>singMixin</code>. <code>funModule</code> should return an object."
+        "创建一个名为<code>funModule</code>的<code>模块</code>，将这两个<code>mixins</code>：<code>isCuteMixin</code>和<code>singMixin</code>包装起来。<code>funModule</code>应该返回一个对象。"
       ],
       "tests": [
         {
-          "text": "<code>funModule</code> should be defined and return an object.",
-          "testString": "assert(typeof funModule === \"object\", '<code>funModule</code> should be defined and return an object.');"
+          "text": "<code>funModule</code>应该被定义并返回一个对象。",
+          "testString": "assert(typeof funModule === \"object\", '<code>funModule</code>应该被定义并返回一个对象。');"
         },
         {
-          "text": "<code>funModule.isCuteMixin</code> should access a function.",
-          "testString": "assert(typeof funModule.isCuteMixin === \"function\", '<code>funModule.isCuteMixin</code> should access a function.');"
+          "text": "<code>funModule.isCuteMixin</code>应该访问一个函数。",
+          "testString": "assert(typeof funModule.isCuteMixin === \"function\", '<code>funModule.isCuteMixin</code>应该访问一个函数。');"
         },
         {
-          "text": "<code>funModule.singMixin</code> should access a function.",
-          "testString": "assert(typeof funModule.singMixin === \"function\", '<code>funModule.singMixin</code> should access a function.');"
+          "text": "<code>funModule.singMixin</code>应该访问一个函数。",
+          "testString": "assert(typeof funModule.singMixin === \"function\", '<code>funModule.singMixin</code>应该访问一个函数。');"
         }
       ],
       "solutions": [

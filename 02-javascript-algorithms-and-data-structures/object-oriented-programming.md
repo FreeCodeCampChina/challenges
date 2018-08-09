@@ -1,9 +1,9 @@
-# Introduction to the Object Oriented Programming Challenges #
+# 面向对象编程挑战简介 #
 
-At its core, software development solves a problem or achieves a result with computation. The software development process first defines a problem, then presents a solution. Object oriented programming is one of several major approaches to the software development process.
+软件开发的核心是解决问题或通过计算获得结果。软件开发过程首先定义一个问题，然后提出一个解决方案。面向对象编程是软件开发过程的几种主要方法之一。
 
-As its name implies, object oriented programming organizes code into object definitions. These are sometimes called classes, and they group together data with related behavior. The data is an object's attributes, and the behavior (or functions) are methods.
+顾名思义，面向对象编程将代码组织成对象定义。这些有时被称为类，它们将数据和相关行为组合在一起。数据是对象的属性，行为(或函数)是方法。
 
-The object structure makes it flexible within a program. Objects can transfer information by calling and passing data to another object's methods. Also, new classes can receive, or inherit, all the features from a base or parent class. This helps to reduce repeated code.
+对象结构能够在程序中灵活使用，比如对象可以通过调用数据并将数据传递给另一个对象的方法来传递信息。此外，新对象可以从基类（或父类）接收或继承所有功能，这有助于减少重复代码。
 
-Your choice of programming approach depends on a few factors. These include the type of problem, as well as how you want to structure your data and algorithms. This section covers object oriented programming principles in JavaScript.
+对于编程方法的选择取决于几个因素，其中包括问题的类型、如何构造数据以及算法等。本节将介绍 JavaScript 中面向对象的编程原则。
