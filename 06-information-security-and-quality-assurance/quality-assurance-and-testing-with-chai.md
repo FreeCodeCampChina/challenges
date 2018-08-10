@@ -1,7 +1,7 @@
 # Introduction to Quality Assurance with Chai Challenges #
 
-As your programs become more complex, you need to test them often to make sure any new code you add doesn't break the program's original functionality. Chai is a JavaScript testing library that helps you check that your program still behaves the way you expect it to after you make changes. Using Chai, you can write tests that describe your program's requirements and see if your program meets them.
+随着你的程序越来越复杂，你经常需要测试新增代码是否会破坏原先的功能。Chai 是一个 JavaScript 测试库，它可以帮助你检查程序在更新后是否如你所期望的运行。通过Chai，你可以用测试驱动开发的方式来编写代码。
 
-Working on these challenges will involve you writing your code on Glitch on our starter project. After completing each challenge you can copy your public glitch url (to the homepage of your app) into the challenge screen to test it! Optionally you may choose to write your project on another platform but it must be publicaly visible for our testing.
+这个挑战需要你在 Glitch 上给出的代码的基础上进行。在完成每项挑战后，把你的公共 glitch url（应用的主页）复制到挑战页面，然后点击测试！另外你也可以选择在其他平台书写测试代码，但必须是公开可见的，这样我们才能测试你的代码。
 
-Start this project on Glitch using this link or clone this repository on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!
+使用 Glitch 或在 GitHub clone 此项目，即可开始此挑战！如果使用 Glitch，记得保存你的项目链接，这样更方便更安全！
