@@ -8,7 +8,7 @@
       "id": "587d824a367417b2b2512c46",
       "title": "Learn How JavaScript Assertions Work",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "使用 assert.isNull() 或 assert.isNotNull() 通过测试。"
       ],
       "tests": [
@@ -17,11 +17,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isNull vs. isNotNull",
+          "text": "请选择正确的断言--isNull 或 isNotNull",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[0].method, 'isNull', 'Null 是 null'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isNull vs. isNotNull",
+          "text": "请选择正确的断言--isNull 或 isNotNull",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=0').then(data => {  assert.equal(data.assertions[1].method, 'isNotNull', '1 不是 null'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -34,7 +34,7 @@
       "id": "587d824b367417b2b2512c47",
       "title": "Test if a Variable or Function is Defined",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "使用 assert.isDefined() 或 assert.isUndefined() 通过测试。"
       ],
       "tests": [
@@ -43,15 +43,15 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "text": "请选择正确的断言--isDefined 或 isUndefined",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[0].method, 'isDefined', 'Null 不是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "text": "请选择正确的断言--isDefined 或 isUndefined",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[1].method, 'isUndefined', 'Undefined 是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isDefined vs. isUndefined",
+          "text": "请选择正确的断言--isDefined 或 isUndefined",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=1').then(data => {  assert.equal(data.assertions[2].method, 'isDefined', '字符串不是 undefined'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -64,9 +64,9 @@
       "id": "587d824b367417b2b2512c48",
       "title": "Use Assert.isOK and Assert.isNotOK",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "使用 assert.isOk() 或 assert.isNotOk() 通过测试。",
-        ".isOk(truthy) 和 .isNotOk(falsey) 可以通过测试。"
+        ".isOk(truthy) 或 .isNotOk(falsey) 可以通过测试。"
       ],
       "tests": [
         {
@@ -74,15 +74,15 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "text": "请选择正确的断言--isOk 或 isNotOk",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[0].method, 'isNotOk', 'Null 是假值'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "text": "请选择正确的断言--isOk 或 isNotOk",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[1].method, 'isOk','字符串是真值'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isOk vs. isNotOk",
+          "text": "请选择正确的断言--isOk 或 isNotOk",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=2').then(data => {  assert.equal(data.assertions[2].method, 'isOk', 'true 是真值'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -95,7 +95,7 @@
       "id": "587d824b367417b2b2512c49",
       "title": "Test for Truthiness",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "使用 assert.isTrue() 或 assert.isNotTrue() 通过测试。",
         ".isTrue(true) 和 .isNotTrue(everything else) 可以通过测试。",
         ".isFalse() 和 .isNotFalse() 断言同样存在。"
@@ -106,15 +106,15 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "text": "请选择正确的断言--isTrue 或 isNotTrue",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[0].method, 'isTrue', 'True 是 true'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "text": "请选择正确的断言--isTrue 或 isNotTrue",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[1].method, 'isTrue', '双重否定的真值是 true'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isTrue vs. isNotTrue",
+          "text": "请选择正确的断言--isTrue 或 isNotTrue",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=3').then(data => {  assert.equal(data.assertions[2].method, 'isNotTrue', '真值对象不是 true - 也不是 false'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -127,7 +127,7 @@
       "id": "587d824b367417b2b2512c4a",
       "title": "Use the Double Equals to Assert Equality",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".equal()，.notEqual()",
         ".equal() 使用 '==' 比较对象"
       ],
@@ -137,19 +137,19 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - equal vs. notEqual",
+          "text": "请选择正确的断言--equal 或 notEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[0].method, 'equal', '数字会被 == 强行转换为字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - equal vs. notEqual",
+          "text": "请选择正确的断言--equal 或 notEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[1].method, 'notEqual', ' == 比较对象引用'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - equal vs. notEqual",
+          "text": "请选择正确的断言--equal 或 notEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[2].method, 'equal', '6 * \\'2\\' 为 12 ! 它应该等于 \\'12\\''); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - equal vs. notEqual",
+          "text": "请选择正确的断言--equal 或 notEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=4').then(data => {  assert.equal(data.assertions[3].method, 'notEqual', '6 + \\'2\\' 为 \\'62\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -162,7 +162,7 @@
       "id": "587d824b367417b2b2512c4b",
       "title": "Use the Triple Equals to Assert Strict Equality",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".strictEqual()，.notStrictEqual()",
         ".strictEqual() 使用 '===' 比较对象"
       ],
@@ -172,19 +172,19 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "text": "请选择正确的断言--strictEqual 或 notStrictEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[0].method, 'notStrictEqual', '使用 strictEqual，类型必须一样'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "text": "请选择正确的断言--strictEqual 或 notStrictEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[1].method, 'strictEqual', '3*2 = 6...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "text": "请选择正确的断言--strictEqual 或 notStrictEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[2].method, 'strictEqual', '6 * \\'2\\' 为 12。类型匹配！'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - strictEqual vs. notStrictEqual",
+          "text": "请选择正确的断言--strictEqual 或 notStrictEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=5').then(data => {  assert.equal(data.assertions[3].method, 'notStrictEqual', '即使拥有相同的元素，数组也不是严格相等'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -197,7 +197,7 @@
       "id": "587d824c367417b2b2512c4c",
       "title": "Assert Deep Equality with .deepEqual and .notDeepEqual",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".deepEqual()，.notDeepEqual()",
         ".deepEqual() 断言两个对象是否 deep equal"
       ],
@@ -207,11 +207,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - deepEqual vs. notDeepEqual",
+          "text": "请选择正确的断言--deepEqual 或 notDeepEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[0].method, 'deepEqual', '键的顺序不影响 deepEqual'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - deepEqual vs. notDeepEqual",
+          "text": "请选择正确的断言--deepEqual 或 notDeepEqual",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=6').then(data => {  assert.equal(data.assertions[1].method, 'notDeepEqual', '数组元素顺序影响 deepEqual'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -224,7 +224,7 @@
       "id": "587d824c367417b2b2512c4d",
       "title": "Compare the Properties of Two Elements",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".isAbove() => a > b ，.isAtMost() => a <= b"
       ],
       "tests": [
@@ -233,19 +233,19 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "text": "请选择正确的断言--isAbove 或 isAtMost",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[0].method, 'isAtMost', '5 <= 5'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "text": "请选择正确的断言--isAbove 或 isAtMost",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[1].method, 'isAbove', '1 大于 0'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "text": "请选择正确的断言--isAbove 或 isAtMost",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[2].method, 'isAbove', 'Math.PI = 3.14159265 大于 3'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isAbove vs. isAtMost",
+          "text": "请选择正确的断言--isAbove 或 isAtMost",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=7').then(data => {  assert.equal(data.assertions[3].method, 'isAtMost', '1 - Math.random() is > 0 且 <= 1'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -258,7 +258,7 @@
       "id": "587d824c367417b2b2512c4e",
       "title": "Test if One Value is Below or At Least as Large as Another",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".isBelow() => a < b ，.isAtLeast =>  a >= b"
       ],
       "tests": [
@@ -267,19 +267,19 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "text": "请选择正确的断言--isBelow 或 isAtLeast",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[0].method, 'isAtLeast', '5 >= 5'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "text": "请选择正确的断言--isBelow 或 isAtLeast",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[1].method, 'isAtLeast', '2 * Math.random() >= 0'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "text": "请选择正确的断言--isBelow 或 isAtLeast",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[2].method, 'isBelow', '1 小于 2'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isBelow vs. isAtLeast",
+          "text": "请选择正确的断言--isBelow 或 isAtLeast",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=8').then(data => {  assert.equal(data.assertions[3].method, 'isBelow', '2/3 (0.6666) 小于 1'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -292,7 +292,7 @@
       "id": "587d824c367417b2b2512c4f",
       "title": "Test if a Value Falls within a Specific Range",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         ".approximately",
         ".approximately(actual, expected, range, [message])",
         "actual = expected +/- range",
@@ -322,7 +322,7 @@
       "id": "587d824d367417b2b2512c50",
       "title": "Test if a Value is an Array",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。"
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。"
       ],
       "tests": [
         {
@@ -330,11 +330,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isArray vs. isNotArray",
+          "text": "请选择正确的断言--isArray 或 isNotArray",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[0].method, 'isArray', 'String.prototype.split() 返回数组'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isArray vs. isNotArray",
+          "text": "请选择正确的断言--isArray 或 isNotArray",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=10').then(data => {  assert.equal(data.assertions[1].method, 'isNotArray', 'Array.prototype.indexOf() 返回数值'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -347,7 +347,7 @@
       "id": "587d824d367417b2b2512c51",
       "title": "Test if an Array Contains an Item",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。"
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。"
       ],
       "tests": [
         {
@@ -355,11 +355,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - include vs. notInclude",
+          "text": "请选择正确的断言--include 或 notInclude",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[0].method, 'notInclude', '七月是夏天...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - include vs. notInclude",
+          "text": "请选择正确的断言--include 或 notInclude",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=11').then(data => {  assert.equal(data.assertions[1].method, 'include', 'JavaScript 是后端语言！'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -372,7 +372,7 @@
       "id": "587d824d367417b2b2512c52",
       "title": "Test if a Value is a String",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#isString 断言一个值为字符串。"
       ],
       "tests": [
@@ -381,15 +381,15 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isString vs. isNotString",
+          "text": "请选择正确的断言--isString 或 isNotString",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[0].method, 'isNotString', 'float number 不是字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isString vs. isNotString",
+          "text": "请选择正确的断言--isString 或 isNotString",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[1].method, 'isString', '环境变量是 strings（ 或 undefined）'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - isString vs. isNotString",
+          "text": "请选择正确的断言--isString 或 isNotString",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=12').then(data => {  assert.equal(data.assertions[2].method, 'isString', 'JSON 是字符串'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -402,7 +402,7 @@
       "id": "587d824d367417b2b2512c53",
       "title": "Test if a String Contains a Substring",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#include（相对于 #notInclude）也可用于字符串！",
         "它断言字符串包含某个子串"
       ],
@@ -412,11 +412,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - include vs. notInclude",
+          "text": "请选择正确的断言--include 或 notInclude",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[0].method, 'include', '\\'Arrow\\' 包含 \\'row\\'...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - include vs. notInclude",
+          "text": "请选择正确的断言--include 或 notInclude",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=13').then(data => {  assert.equal(data.assertions[1].method, 'notInclude', '... \\'dart\\' 不包含 \\'queue\\''); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -429,7 +429,7 @@
       "id": "587d824d367417b2b2512c54",
       "title": "Use Regular Expressions to Test a String",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#match 断言一个值匹配一个正则表达式（第二个参数）",
         ""
       ],
@@ -439,11 +439,11 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - match vs. notMatch",
+          "text": "请选择正确的断言--match 或 notMatch",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[0].method, 'match', '\\'# name: John Doe, age: 35\\' 匹配正则表达式'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - match vs. notMatch",
+          "text": "请选择正确的断言--match 或 notMatch",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=14').then(data => {  assert.equal(data.assertions[1].method, 'notMatch', '\\'# name: Paul Smith III, age: twenty-four\\' 不匹配正则表达式（age 必须是数字）'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -456,7 +456,7 @@
       "id": "587d824e367417b2b2512c55",
       "title": "Test if an Object has a Property",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#property 断言一个对象含有给定属性。",
         "在适当的地方使用 #property 或 #notProperty"
       ],
@@ -466,15 +466,15 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - property vs. notProperty",
+          "text": "请选择正确的断言--property 或 notProperty",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[0].method, 'notProperty', 'car 没有 wings'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - property vs. notProperty",
+          "text": "请选择正确的断言--property 或 notProperty",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[1].method, 'property', 'planes 有 engines'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - property vs. notProperty",
+          "text": "请选择正确的断言--property 或 notProperty",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=15').then(data => { assert.equal(data.assertions[2].method, 'property', 'Cars 有 wheels'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -487,7 +487,7 @@
       "id": "587d824e367417b2b2512c56",
       "title": "Test if a Value is of a Specific Data Structure Type",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#typeOf 断言一个值的类型是给定字符串，这个字符串由 Object.prototype.toString 决定。",
         "在适当的地方使用 #typeOf 或 #notTypeOf"
       ],
@@ -497,23 +497,23 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "text": "请选择正确的断言--typeOf 或 notTypeOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[0].method, 'typeOf', 'myCar 是 Object'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "text": "请选择正确的断言--typeOf 或 notTypeOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[1].method, 'typeOf', 'Car.model 是 String'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "text": "请选择正确的断言--typeOf 或 notTypeOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[2].method, 'notTypeOf', 'Plane.wings 是 Number（不是 String）'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "text": "请选择正确的断言--typeOf 或 notTypeOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[3].method, 'typeOf', 'Plane.engines 是 Array'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - typeOf vs. notTypeOf",
+          "text": "请选择正确的断言--typeOf 或 notTypeOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=16').then(data => { assert.equal(data.assertions[4].method, 'typeOf', 'Car.wheels 是 Number'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -526,7 +526,7 @@
       "id": "587d824e367417b2b2512c57",
       "title": "Test if an Object is an Instance of a Constructor",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "#instanceOf 断言一个对象是一个构造器的实例",
         "在适当的地方使用 #instanceOf 或 #notInstanceOf"
       ],
@@ -536,19 +536,19 @@
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.state,'passed'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "text": "请选择正确的断言--instanceOf 或 notInstanceOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[0].method, 'notInstanceOf', 'myCar 不是 Plane 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "text": "请选择正确的断言--instanceOf 或 notInstanceOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[1].method, 'instanceOf', 'airlinePlane 是 Plane 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "text": "请选择正确的断言--instanceOf 或 notInstanceOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[2].method, 'instanceOf', 'JavaScript 中万物都是对象...'); }, xhr => { throw new Error(xhr.responseText); })"
         },
         {
-          "text": "请选择正确的断言 - instanceOf vs. notInstanceOf",
+          "text": "请选择正确的断言--instanceOf 或 notInstanceOf",
           "testString": "getUserInput => $.get(getUserInput('url') + '/_api/get-tests?type=unit&n=17').then(data => { assert.equal(data.assertions[3].method, 'notInstanceOf', 'myCar.wheels 不是 String 的实例'); }, xhr => { throw new Error(xhr.responseText); })"
         }
       ],
@@ -561,7 +561,7 @@
       "id": "587d824e367417b2b2512c58",
       "title": "Run Functional Tests on API Endpoints using Chai-HTTP",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "替换 assert.fail()。测试 status 和 text.response，使测试通过。",
         "不要在 query 中传入 name，端点将会返回 'hello Guest'."
       ],
@@ -588,7 +588,7 @@
       "id": "587d824f367417b2b2512c59",
       "title": "Run Functional Tests on API Endpoints using Chai-HTTP II",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "替换 assert.fail()。测试 status 和 text.response，使测试通过。",
         "在 query 中传入你的名字 ?name=<your_name>，端点会返回 'hello <your_name>'。"
       ],
@@ -615,7 +615,7 @@
       "id": "587d824f367417b2b2512c5a",
       "title": "Run Functional Tests on an API Response using Chai-HTTP III - PUT method",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "下一个例子我们将了解如何使用 request payload（body）发送数据。",
         "我们准备测试发送到 '/travellers' 端点的 PUT 请求",
         "JSON 对象结构如下：",
@@ -658,7 +658,7 @@
       "id": "587d824f367417b2b2512c5b",
       "title": "Run Functional Tests on an API Response using Chai-HTTP IV - PUT method",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "这个练习与上一个类似，我们详细看看。",
         "发送 {surname: 'da Verrazzano'}。替换 assert.fail()，使测试通过。",
         "测试 for 1) status, 2) type, 3) body.name, 4) body.surname",
@@ -695,7 +695,7 @@
       "id": "587d824f367417b2b2512c5c",
       "title": "Run Functional Tests using a Headless Browser",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "下一项挑战，我们将会使用无头浏览器模拟人机交互。",
         "无头浏览器是一种没有图形用户界面的浏览器。这类工具对网页调试特别有效，因为它们可以跟普通浏览器一样理解和渲染 HTML，CSS 和 JavaScript。",
         "这次挑战我们使用 Zombie.JS。它是一款完全基于 JS 的轻量级浏览器，不需要安装其他二进制文件。这个特性使它可以轻松在如 Glitch 的环境下使用。还有很多（更强大的）选项。<br>",
@@ -732,7 +732,7 @@
       "id": "587d8250367417b2b2512c5d",
       "title": "Run Functional Tests using a Headless Browser II",
       "description": [
-        "再次提醒，本项目基于初始项目 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-mochachai/'>Glitch</a>，或从 <a href='https://github.com/freeCodeCamp/boilerplate-mochachai/'>GitHub</a> clone。",
+        "注意，本项目在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-infosec/'>这个 Glitch 项目</a> 的基础上进行开发。你也可以从 <a href='https://github.com/freeCodeCamp/boilerplate-infosec/'>GitHub</a> 上克隆。",
         "这个练习与上一个类似。",
         "看看此挑战的给出的代码指引。请按顺序书写断言，顺序错误会影响系统判定。"
       ],
