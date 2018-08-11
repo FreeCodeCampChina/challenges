@@ -9,8 +9,8 @@ challenges 指的不仅是课程本身，也是每个开源项目贡献者会遇
 
 3、快速提高你的 Git 操作熟练度
 
-4、收获 GitHub 认可的 contributions
+4、掌握一门前所未有的新技能：翻译
 
 5、获得 freeCodeCamp 中文社区的认可
 
-感兴趣的小伙伴可以传送到 [Wiki](https://github.com/FreeCodeCampChina/challenges/wiki) 解锁翻译指南。
+感兴趣的小伙伴可以传送到 [Wiki](https://freecodecamp.coding.net/p/challenges/wiki) 解锁翻译指南。
