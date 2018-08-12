@@ -964,23 +964,23 @@
       "id": "587d8254367417b2b2512c70",
       "title": "Create and Add to Sets in ES6",
       "description": [
-        "Now that you have worked through ES5, you are going to perform something similar in ES6. This will be considerably easier. ES6 contains a built-in data structure <code>Set</code> so many of the operations you wrote by hand are now included for you. Let's take a look:",
-        "To create a new empty set:",
+        "现在我们已经通关了ES5，接下来我们要在ES6当中做一些类似的操作。这些操作会更加的简单。ES6当中的<code>Set</code>数据结构内置了很多以前需要自己主动编写方法。现在我们一起来看看这些方法：",
+        "创建一个空 set ",
         "<code>var set = new Set();</code>",
-        "You can create a set with a value:",
+        "创建带有一个值的 set ",
         "<code>var set = new Set(1);</code>",
-        "You can create a set with an array:",
+        "通过数组参数来创建一个 set ",
         "<code>var set = new Set([1, 2, 3]);</code>",
-        "Once you have created a set, you can add the values you wish using the <code>add</code> method:",
+        "创建好数组之后可以通过<code>add</code>方法添加元素：",
         "<blockquote>var set = new Set([1, 2, 3]);<br>set.add([4, 5, 6]);</blockquote>",
-        "As a reminder, a set is a data structure that cannot contain duplicate values:",
+        "提醒一下，set 这种数据结构当中不允许出现重复元素：",
         "<blockquote>var set = new Set([1, 2, 3, 1, 2, 3]);<br>// set contains [1, 2, 3] only</blockquote>",
         "<hr>",
-        "For this exercise, return a set with the following values: <code>1, 2, 3, 'Taco', 'Cat', 'Awesome'</code>"
+        "本次练习的返回结果应该是：<code>1, 2, 3, 'Taco', 'Cat', 'Awesome'</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> should only contain the values <code>1, 2, 3, Taco, Cat, Awesome</code>.",
+          "text": "<code>Set</code>应该只包含<code>1, 2, 3, Taco, Cat, Awesome</code>这些元素。",
           "testString": "assert(function(){var test = checkSet(); return (test.size == 6) && test.has(1) && test.has(2) && test.has(3) && test.has('Taco') && test.has('Cat') && test.has('Awesome');}, 'Your <code>Set</code> should only contain the values <code>1, 2, 3, Taco, Cat, Awesome</code>.');"
         }
       ],
@@ -1015,17 +1015,17 @@
       "id": "587d8254367417b2b2512c71",
       "title": "Remove items from a set in ES6",
       "description": [
-        "Let's practice removimg items from an ES6 Set using the <code>delete</code> method.",
-        "First, create an ES6 Set",
+        "现在练习使用code>delete</code>方法从 ES6 Set 当中移除元素。",
+        "首先，创建一个 ES6 Set",
         "<code>var set = new Set([1,2,3]);</code>",
-        "Now remove an item from your Set with the <code>delete</code> method.",
+        "使用<code>delete</code>方法从 Set 当中移除一个元素。",
         "<blockquote>set.delete(1);<br>console.log([...set]) // should return [ 2, 3 ]<blockquote>",
         "<hr>",
-        "Now, create a set with the integers 1, 2, 3, 4, & 5. \n Remove the values 2 and 5, and then return the set."
+        "现在创建一个拥有 1, 2, 3, 4, & 5 这些整数的 set 。移除元素 2 和 5 并返回该 set 。"
       ],
       "tests": [
         {
-          "text": "Your Set should contain the values 1, 3, & 4",
+          "text": "Set 应该返回1, 3, & 4 。",
           "testString": "assert(function(){var test = checkSet(); return test.has(1) && test.has(3) && test.has(4) && test.size === 3}, 'Your Set should contain the values 1, 3, & 4');"
         }
       ],
@@ -1041,10 +1041,10 @@
           "name": "index",
           "contents": [
             "function checkSet(){",
-            "   var set = //Create a set with values 1, 2, 3, 4, & 5",
-            "   //Remove the value 2",
-            "   //Remove the value 5",
-            "   //Return the set",
+            "   var set = //创建带有 1, 2, 3, 4, & 5 这 5 个整数的 set ",
+            "   //移除 2 这个值",
+            "   //移除 5 这个值",
+            "   //返回 set ",
             "   return set;",
             "}"
           ],
@@ -1057,19 +1057,19 @@
       "id": "587d8255367417b2b2512c72",
       "title": "Use .has and .size on an ES6 Set",
       "description": [
-        "Let's look at the .has and .size methods available on the ES6 Set object.",
-        "First, create an ES6 Set",
+        "现在我们来学习 ES6 Set 对象的 .has 和 .size 方法。",
+        "首先，创建一个 ES6 Set ",
         "<code>var set = new Set([1,2,3]);</code>",
-        "The .has method will check if the value is contained within the set.",
+        " .has 方法会检查 set 当中是否有某个值。",
         "<code>var hasTwo = set.has(2);</code>",
-        "The .size method will return an integer representing the size of the Set",
+        " .size 会返回 Set 的长度。",
         "<code>var howBig = set.size;</code>",
         "<hr>",
-        "In this exercise we will pass an array and a value to the checkSet() function. Your function should create an ES6 set from the array argument. Find if the set contains the value argument. Find the size of the set. And return those two values in an array."
+        "在本次练习当中我们会给 checkSet() 函数一个 array 和一个 value 。该函数应该根据传入的参数创建一个 ES6 set 。函数会检查该 set 中是否存在该 value 值，同时检测该 set 的长度。函数会以数组形式返回这两个检查结果。"
       ],
       "tests": [
         {
-          "text": "<code>checkSet([4, 5, 6], 3)</code> should return [ false, 3 ]",
+          "text": "<code>checkSet([4, 5, 6], 3)</code>应该返回 [ false, 3 ]",
           "testString": "assert(function(){var test = checkSet([4,5,6], 3); test === [ false, 3 ]}, '<code>checkSet([4, 5, 6], 3)</code> should return [ false, 3 ]');"
         }
       ],
