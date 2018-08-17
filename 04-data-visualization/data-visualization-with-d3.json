@@ -36,20 +36,20 @@
 					"testString": "assert($('h1').text() == \"Learning D3\", '你的<code>h1</code>元素应该包含文本 \"Learning D3\"。');"
 				},
 				{
-					"text": "你的代码应该能访问<code>d3</code>的对象。",
-					"testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
+					"text": "你应该能访问<code>d3</code>的对象。",
+					"testString": "assert(code.match(/d3/g), '你应该能访问<code>d3</code>的对象。');"
 				},
 				{
-					"text": "你的代码应该使用<code>select</code>方法。",
-					"testString": "assert(code.match(/\\.select/g), '你的代码应该使用<code>select</code>方法。');"
+					"text": "你应该使用<code>select</code>方法。",
+					"testString": "assert(code.match(/\\.select/g), '你应该使用<code>select</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用<code>append</code>方法。",
-					"testString": "assert(code.match(/\\.append/g), '你的代码应该使用<code>append</code>方法。');"
+					"text": "你应该使用<code>append</code>方法。",
+					"testString": "assert(code.match(/\\.append/g), '你应该使用<code>append</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用<code>text</code>方法。",
-					"testString": "assert(code.match(/\\.text/g), '你的代码应该使用<code>text</code>方法。');"
+					"text": "你应该使用<code>text</code>方法。",
+					"testString": "assert(code.match(/\\.text/g), '你应该使用<code>text</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -86,7 +86,7 @@
 				}
 			],
 			"description": [
-			 "<code>selectAll()</code>方法选择一组元素。它以 HTML 节点数组的形式返回该文本中所有匹配所输入字符串的对象。一下是一个选择文本中所有锚标签的例子：",
+			 "<code>selectAll()</code>方法选择一组元素。它以 HTML 节点数组的形式返回该文本中所有匹配所输入字符串的对象。以下是一个选择文本中所有锚标签的例子：",
 				"<code>const anchors = d3.selectAll(\"a\");</code>",
 				"像<code>select()</code>方法一样，<code>selectAll()</code>也支持链式调用，你可以在它之后调用其他方法。",
 				"<hr>",
@@ -98,12 +98,12 @@
 					"testString": "assert($('li').text().match(/list item/g).length == 3, '页面上应该有3个<code>li</code>元素，每个元素的文本内容应为 \"list item\"。大小写和空格必须一致。');"
 				},
 				{
-					"text": "你的代码应该能访问<code>d3</code>的对象。",
-					"testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
+					"text": "你应该能访问<code>d3</code>的对象。",
+					"testString": "assert(code.match(/d3/g), '你应该能访问<code>d3</code>的对象。');"
 				},
 				{
-					"text": "你的代码应该使用<code>selectAll</code>方法。",
-					"testString": "assert(code.match(/\\.selectAll/g), '你的代码应该使用<code>selectAll</code>方法。');"
+					"text": "你应该使用<code>selectAll</code>方法。",
+					"testString": "assert(code.match(/\\.selectAll/g), '你应该使用<code>selectAll</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -145,13 +145,13 @@
 				}
 			],
 			"description": [
-				"D3 是数据驱动的库。可以使用 D3 的方法将数组形式的数据显示在页面上。",
-				"第一步是让 D3 知道数据。<code>data</code>方法选择连接着数据的 DOM 元素。数据集作为参数传递给该方法。",
+				"D3 是数据驱动的库,可以使用 D3 的方法将数组形式的数据显示在页面上。",
+				"第一步是让 D3 知道数据。<code>data</code>方法选择连接着数据的 DOM 元素,数据集作为参数传递给该方法。",
 				"常见的方法是在文档中为数据集中的每一个数据创建一个元素，为此，你可以使用 D3 的<code>enter()</code>方法",
 				"当<code>enter()</code>和<code>data()</code>方法一起使用时，它把从页面中选择的元素和数据集中的元素作比较。如果页面中选择的元素较少则创建缺少的元素。",
 				"以下是一个选择<code>ul</code>元素并根据添加的数组创建新的列表项的例子。",
 				"<blockquote>&lt;body&gt;<br>&nbsp;&nbsp;&lt;ul&gt;&lt;/ul&gt;<br>&nbsp;&nbsp;&lt;script&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;const dataset = [\"a\", \"b\", \"c\"];<br>&nbsp;&nbsp;&nbsp;&nbsp;d3.select(\"ul\").selectAll(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.data(dataset)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.enter()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(\"New item\");<br>&nbsp;&nbsp;&lt;/script&gt;<br>&lt;/body&gt;</blockquote>",
-				"选择不存在的 li 元素似乎有些难以理解。事实上，这段代码先选择页面上的 ul 元素，再选择所有的列表项——li，它将返回空。然后data()方法接收数组作为参数，并运行三次后面的代码，每次对应数组中的一个对象。enter()方法发现页面中没有 li 元素，但是需要 3 个（每个对应dataset中的一个对象）。它将在 ul 中添加带有文本 "New item" 的 li 元素。",
+				"选择不存在的 li 元素似乎有些难以理解。事实上，这段代码先选择页面上的 ul 元素，再选择所有的列表项——li，它将返回空。然后data()方法接收数组作为参数，并运行三次后面的代码，每次对应数组中的一个对象。enter()方法发现页面中没有 li 元素，但是需要 3 个（每个对应dataset中的一个对象）。它将在 ul 中添加带有文本 \"New item\" 的 li 元素。",
 				"<hr>",
 				"选择<code>body</code>节点，然后选择所有的<code>h2</code>元素。让 D3 为<code>dataset</code>数组中的每一个对象创建并添加文本为 \"New Title\" 的<code>h2</code>标签。你应该使用<code>data()</code>和<code>enter()</code>方法。"
 			],
@@ -165,12 +165,12 @@
 					"testString": "assert($('h2').text().match(/New Title/g).length == 9, '<code>h2</code>元素中的文本应为 \"New Title\"。大小写和空格必须一致。');"
 				},
 				{
-					"text": "你的代码应该使用使用<code>data()</code>方法。",
-					"testString": "assert(code.match(/\\.data/g), '你的代码应该使用使用<code>data()</code>方法。');"
+					"text": "你应该使用<code>data()</code>方法。",
+					"testString": "assert(code.match(/\\.data/g), '你应该使用<code>data()</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用使用<code>enter()</code>方法。",
-					"testString": "assert(code.match(/\\.enter/g), '你的代码应该使用使用<code>enter()</code>方法。');"
+					"text": "你应该使用<code>enter()</code>方法。",
+					"testString": "assert(code.match(/\\.enter/g), '你应该使用<code>enter()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -209,7 +209,7 @@
 				}
 			],
 			"description": [
-				"最后两个基本的关于用 D3 动态显示数据的方式是<code>data()</code>和<code>enter()</code>方法。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
+				"最后两个挑战涉及到使用 D3 的<code>data()</code>和<code>enter()</code>方法来动态展示数据。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
 				"在之前的挑战中，你为<code>dataset</code>数组中的每一个对象创建了一个新的<code>h2</code>元素，但是他们的文本都是相同的 \"New Title\"。 这是因为你还没有使用和每个<code>h2</code>元素关联的数据。",
 				"<code>text()</code>方法以字符串或者回调函数作为参数：",
 				"<code>selection.text((d) => d)</code>",
@@ -308,8 +308,8 @@
 					"testString": "assert($('h2').css('font-family') == 'verdana', '你的<code>h2</code>元素的<code>font-family</code>应该为 verdana。');"
 				},
 				{
-					"text": "你的代码应该使用<code>style()</code>方法。",
-					"testString": "assert(code.match(/\\.style/g), '你的代码应该使用<code>style()</code>方法。');"
+					"text": "你应该使用<code>style()</code>方法。",
+					"testString": "assert(code.match(/\\.style/g), '你应该使用<code>style()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -359,7 +359,8 @@
 				"<code>style()</code>方法不仅仅可以设置<code>color</code>——它也适用于其他 CSS 属性。",
 				"<hr>",
 				"在编辑器中添加<code>style()</code>方法，根据条件设置<code>h2</code>元素的<code>color</code>属性。写一个回调函数，如果值小于 20 返回 \"red\"，否则返回 \"green\"。",
-				"<strong>提示</strong><br>你可以使用 if-else 语句或者三目操作符。"      ],
+				"<strong>提示</strong><br>你可以使用 if-else 语句或者三目操作符。"      
+      ],
 			"tests": [
 				{
 					"text": "第一个<code>h2</code>的<code>color</code>应该为 red。",
@@ -451,8 +452,8 @@
 					"testString": "assert($('div').attr('class') == \"bar\", '你的<code>div</code>元素应该有一个<code>bar</code>类。');"
 				},
 				{
-					"text": "你的代码应该使用<code>attr()</code>方法。",
-					"testString": "assert(code.match(/\\.attr/g), '你的代码应该使用<code>attr()</code>方法。');"
+					"text": "你应该使用<code>attr()</code>方法。",
+					"testString": "assert(code.match(/\\.attr/g), '你应该使用<code>attr()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -503,52 +504,52 @@
 				}
 			],
 			"description": [
-				"The previous challenges covered how to display data from an array and how to add CSS classes. You can combine these lessons to create a simple bar chart. There are two steps to this:",
-				"1) Create a <code>div</code> for each data point in the array",
-				"2) Give each <code>div</code> a dynamic height, using a callback function in the <code>style()</code> method that sets height equal to the data value",
-				"Recall the format to set a style using a callback function:",
-				"<code>selection.style(\"cssProperty\", (d) => d)</code>",
-				"<hr>",
-				"Add the <code>style()</code> method to the code in the editor to set the <code>height</code> property for each element. Use a callback function to return the value of the data point with the string \"px\" added to it."
-			],
+        "The previous challenges covered how to display data from an array and how to add CSS classes. You can combine these lessons to create a simple bar chart. There are two steps to this:",
+        "1) Create a <code>div</code> for each data point in the array",
+        "2) Give each <code>div</code> a dynamic height, using a callback function in the <code>style()</code> method that sets height equal to the data value",
+        "Recall the format to set a style using a callback function:",
+        "<code>selection.style(\"cssProperty\", (d) => d)</code>",
+        "<hr>",
+        "Add the <code>style()</code> method to the code in the editor to set the <code>height</code> property for each element. Use a callback function to return the value of the data point with the string \"px\" added to it."
+      ],
 			"tests": [
-				{
-					"text": "The first <code>div</code> should have a <code>height</code> of 12 pixels.",
-					"testString": "assert($('div').eq(0).css('height') == '12px', 'The first <code>div</code> should have a <code>height</code> of 12 pixels.');"
-				},
-				{
-					"text": "The second <code>div</code> should have a <code>height</code> of 31 pixels.",
-					"testString": "assert($('div').eq(1).css('height') == '31px', 'The second <code>div</code> should have a <code>height</code> of 31 pixels.');"
-				},
-				{
-					"text": "The third <code>div</code> should have a <code>height</code> of 22 pixels.",
-					"testString": "assert($('div').eq(2).css('height') == '22px', 'The third <code>div</code> should have a <code>height</code> of 22 pixels.');"
-				},
-				{
-					"text": "The fourth <code>div</code> should have a <code>height</code> of 17 pixels.",
-					"testString": "assert($('div').eq(3).css('height') == '17px', 'The fourth <code>div</code> should have a <code>height</code> of 17 pixels.');"
-				},
-				{
-					"text": "The fifth <code>div</code> should have a <code>height</code> of 25 pixels.",
-					"testString": "assert($('div').eq(4).css('height') == '25px', 'The fifth <code>div</code> should have a <code>height</code> of 25 pixels.');"
-				},
-				{
-					"text": "The sixth <code>div</code> should have a <code>height</code> of 18 pixels.",
-					"testString": "assert($('div').eq(5).css('height') == '18px', 'The sixth <code>div</code> should have a <code>height</code> of 18 pixels.');"
-				},
-				{
-					"text": "The seventh <code>div</code> should have a <code>height</code> of 29 pixels.",
-					"testString": "assert($('div').eq(6).css('height') == '29px', 'The seventh <code>div</code> should have a <code>height</code> of 29 pixels.');"
-				},
-				{
-					"text": "The eighth <code>div</code> should have a <code>height</code> of 14 pixels.",
-					"testString": "assert($('div').eq(7).css('height') == '14px', 'The eighth <code>div</code> should have a <code>height</code> of 14 pixels.');"
-				},
-				{
-					"text": "The ninth <code>div</code> should have a <code>height</code> of 9 pixels.",
-					"testString": "assert($('div').eq(8).css('height') == '9px', 'The ninth <code>div</code> should have a <code>height</code> of 9 pixels.');"
-				}
-			],
+        {
+          "text": "The first <code>div</code> should have a <code>height</code> of 12 pixels.",
+          "testString": "assert($('div').eq(0).css('height') == '12px', 'The first <code>div</code> should have a <code>height</code> of 12 pixels.');"
+        },
+        {
+          "text": "The second <code>div</code> should have a <code>height</code> of 31 pixels.",
+          "testString": "assert($('div').eq(1).css('height') == '31px', 'The second <code>div</code> should have a <code>height</code> of 31 pixels.');"
+        },
+        {
+          "text": "The third <code>div</code> should have a <code>height</code> of 22 pixels.",
+          "testString": "assert($('div').eq(2).css('height') == '22px', 'The third <code>div</code> should have a <code>height</code> of 22 pixels.');"
+        },
+        {
+          "text": "The fourth <code>div</code> should have a <code>height</code> of 17 pixels.",
+          "testString": "assert($('div').eq(3).css('height') == '17px', 'The fourth <code>div</code> should have a <code>height</code> of 17 pixels.');"
+        },
+        {
+          "text": "The fifth <code>div</code> should have a <code>height</code> of 25 pixels.",
+          "testString": "assert($('div').eq(4).css('height') == '25px', 'The fifth <code>div</code> should have a <code>height</code> of 25 pixels.');"
+        },
+        {
+          "text": "The sixth <code>div</code> should have a <code>height</code> of 18 pixels.",
+          "testString": "assert($('div').eq(5).css('height') == '18px', 'The sixth <code>div</code> should have a <code>height</code> of 18 pixels.');"
+        },
+        {
+          "text": "The seventh <code>div</code> should have a <code>height</code> of 29 pixels.",
+          "testString": "assert($('div').eq(6).css('height') == '29px', 'The seventh <code>div</code> should have a <code>height</code> of 29 pixels.');"
+        },
+        {
+          "text": "The eighth <code>div</code> should have a <code>height</code> of 14 pixels.",
+          "testString": "assert($('div').eq(7).css('height') == '14px', 'The eighth <code>div</code> should have a <code>height</code> of 14 pixels.');"
+        },
+        {
+          "text": "The ninth <code>div</code> should have a <code>height</code> of 9 pixels.",
+          "testString": "assert($('div').eq(8).css('height') == '9px', 'The ninth <code>div</code> should have a <code>height</code> of 9 pixels.');"
+        }
+      ],
 			"solutions": [],
 			"hints": [],
 			"releasedOn": "Feb 17, 2017",
@@ -598,51 +599,51 @@
 				}
 			],
 			"description": [
-				"The last challenge created a bar chart, but there are a couple of formatting changes that could improve it:",
-				"1) Add space between each bar to visually separate them, which is done by adding a margin to the CSS for the <code>bar</code> class",
-				"2) Increase the height of the bars to better show the difference in values, which is done by multiplying the value by a number to scale the height",
-				"<hr>",
-				"First, add a <code>margin</code> of 2px to the <code>bar</code> class in the <code>style</code> tag. Next, change the callback function in the <code>style()</code> method so it returns a value 10 times the original data value (plus the \"px\").",
-				"<strong>Note</strong><br>Multiplying each data point by the <em>same</em> constant only alters the scale. It's like zooming in, and it doesn't change the meaning of the underlying data."
-			],
-			"tests": [
-				{
-					"text": "The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(0).css('height') == '120px' && $('div').eq(0).css('margin-right') == '2px', 'The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(1).css('height') == '310px' && $('div').eq(1).css('margin-right') == '2px', 'The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(2).css('height') == '220px' && $('div').eq(2).css('margin-right') == '2px', 'The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(3).css('height') == '170px' && $('div').eq(3).css('margin-right') == '2px', 'The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(4).css('height') == '250px' && $('div').eq(4).css('margin-right') == '2px', 'The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(5).css('height') == '180px' && $('div').eq(5).css('margin-right') == '2px', 'The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(6).css('height') == '290px' && $('div').eq(6).css('margin-right') == '2px', 'The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(7).css('height') == '140px' && $('div').eq(7).css('margin-right') == '2px', 'The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.');"
-				},
-				{
-					"text": "The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(8).css('height') == '90px' && $('div').eq(8).css('margin-right') == '2px', 'The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.');"
-				}
-			],
+        "The last challenge created a bar chart, but there are a couple of formatting changes that could improve it:",
+        "1) Add space between each bar to visually separate them, which is done by adding a margin to the CSS for the <code>bar</code> class",
+        "2) Increase the height of the bars to better show the difference in values, which is done by multiplying the value by a number to scale the height",
+        "<hr>",
+        "First, add a <code>margin</code> of 2px to the <code>bar</code> class in the <code>style</code> tag. Next, change the callback function in the <code>style()</code> method so it returns a value 10 times the original data value (plus the \"px\").",
+        "<strong>Note</strong><br>Multiplying each data point by the <em>same</em> constant only alters the scale. It's like zooming in, and it doesn't change the meaning of the underlying data."
+      ],
+      "tests": [
+        {
+          "text": "The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(0).css('height') == '120px' && $('div').eq(0).css('margin-right') == '2px', 'The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(1).css('height') == '310px' && $('div').eq(1).css('margin-right') == '2px', 'The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(2).css('height') == '220px' && $('div').eq(2).css('margin-right') == '2px', 'The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(3).css('height') == '170px' && $('div').eq(3).css('margin-right') == '2px', 'The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(4).css('height') == '250px' && $('div').eq(4).css('margin-right') == '2px', 'The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(5).css('height') == '180px' && $('div').eq(5).css('margin-right') == '2px', 'The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(6).css('height') == '290px' && $('div').eq(6).css('margin-right') == '2px', 'The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(7).css('height') == '140px' && $('div').eq(7).css('margin-right') == '2px', 'The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.');"
+        },
+        {
+          "text": "The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.",
+          "testString": "assert($('div').eq(8).css('height') == '90px' && $('div').eq(8).css('margin-right') == '2px', 'The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.');"
+        }
+      ],
 			"solutions": [],
 			"hints": [],
 			"releasedOn": "Feb 17, 2017",
@@ -694,14 +695,14 @@
 				}
 			],
 			"description": [
-				"SVG stands for <code>Scalable Vector Graphics</code>.",
-				"Here \"scalable\" means that, if you zoom in or out on an object, it would not appear pixelated. It scales with the display system, whether it's on a small mobile screen or a large TV monitor.",
-				"SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML <code>svg</code> tag.",
-				"CSS can be scalable when styles use relative units (such as <code>vh</code>, <code>vw</code>, or percentages), but using SVG is more flexible to build data visualizations.",
-				"<hr>",
-				"Add an <code>svg</code> node to the <code>body</code> using <code>append()</code>. Give it a <code>width</code> attribute set to the provided <code>w</code> constant and a <code>height</code> attribute set to the provided <code>h</code> constant using the <code>attr()</code> method for each. You'll see it in the output because there's a <code>background-color</code> of pink applied to it in the <code>style</code> tag.",
-				"<strong>Note</strong><br>Width and height attributes do not have units. This is the building block of scaling - the element will always have a 5:1 width to height ratio, no matter what the zoom level is."
-			],
+        "SVG stands for <code>Scalable Vector Graphics</code>.",
+        "Here \"scalable\" means that, if you zoom in or out on an object, it would not appear pixelated. It scales with the display system, whether it's on a small mobile screen or a large TV monitor.",
+        "SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML <code>svg</code> tag.",
+        "CSS can be scalable when styles use relative units (such as <code>vh</code>, <code>vw</code>, or percentages), but using SVG is more flexible to build data visualizations.",
+        "<hr>",
+        "Add an <code>svg</code> node to the <code>body</code> using <code>append()</code>. Give it a <code>width</code> attribute set to the provided <code>w</code> constant and a <code>height</code> attribute set to the provided <code>h</code> constant using the <code>attr()</code> method for each. You'll see it in the output because there's a <code>background-color</code> of pink applied to it in the <code>style</code> tag.",
+        "<strong>Note</strong><br>Width and height attributes do not have units. This is the building block of scaling - the element will always have a 5:1 width to height ratio, no matter what the zoom level is."
+      ],
 			"tests": [
 				{
 					"text": "Your document should have 1 <code>svg</code> element.",
