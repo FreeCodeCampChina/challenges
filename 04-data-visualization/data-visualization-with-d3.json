@@ -36,20 +36,20 @@
 					"testString": "assert($('h1').text() == \"Learning D3\", '你的<code>h1</code>元素应该包含文本 \"Learning D3\"。');"
 				},
 				{
-					"text": "你的代码应该能访问<code>d3</code>的对象。",
-					"testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
+					"text": "你应该能访问<code>d3</code>的对象。",
+					"testString": "assert(code.match(/d3/g), '你应该能访问<code>d3</code>的对象。');"
 				},
 				{
-					"text": "你的代码应该使用<code>select</code>方法。",
-					"testString": "assert(code.match(/\\.select/g), '你的代码应该使用<code>select</code>方法。');"
+					"text": "你应该使用<code>select</code>方法。",
+					"testString": "assert(code.match(/\\.select/g), '你应该使用<code>select</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用<code>append</code>方法。",
-					"testString": "assert(code.match(/\\.append/g), '你的代码应该使用<code>append</code>方法。');"
+					"text": "你应该使用<code>append</code>方法。",
+					"testString": "assert(code.match(/\\.append/g), '你应该使用<code>append</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用<code>text</code>方法。",
-					"testString": "assert(code.match(/\\.text/g), '你的代码应该使用<code>text</code>方法。');"
+					"text": "你应该使用<code>text</code>方法。",
+					"testString": "assert(code.match(/\\.text/g), '你应该使用<code>text</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -86,7 +86,7 @@
 				}
 			],
 			"description": [
-			 "<code>selectAll()</code>方法选择一组元素。它以 HTML 节点数组的形式返回该文本中所有匹配所输入字符串的对象。一下是一个选择文本中所有锚标签的例子：",
+			 "<code>selectAll()</code>方法选择一组元素。它以 HTML 节点数组的形式返回该文本中所有匹配所输入字符串的对象。以下是一个选择文本中所有锚标签的例子：",
 				"<code>const anchors = d3.selectAll(\"a\");</code>",
 				"像<code>select()</code>方法一样，<code>selectAll()</code>也支持链式调用，你可以在它之后调用其他方法。",
 				"<hr>",
@@ -98,12 +98,12 @@
 					"testString": "assert($('li').text().match(/list item/g).length == 3, '页面上应该有3个<code>li</code>元素，每个元素的文本内容应为 \"list item\"。大小写和空格必须一致。');"
 				},
 				{
-					"text": "你的代码应该能访问<code>d3</code>的对象。",
-					"testString": "assert(code.match(/d3/g), '你的代码应该能访问<code>d3</code>的对象。');"
+					"text": "你应该能访问<code>d3</code>的对象。",
+					"testString": "assert(code.match(/d3/g), '你应该能访问<code>d3</code>的对象。');"
 				},
 				{
-					"text": "你的代码应该使用<code>selectAll</code>方法。",
-					"testString": "assert(code.match(/\\.selectAll/g), '你的代码应该使用<code>selectAll</code>方法。');"
+					"text": "你应该使用<code>selectAll</code>方法。",
+					"testString": "assert(code.match(/\\.selectAll/g), '你应该使用<code>selectAll</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -145,13 +145,13 @@
 				}
 			],
 			"description": [
-				"D3 是数据驱动的库。可以使用 D3 的方法将数组形式的数据显示在页面上。",
-				"第一步是让 D3 知道数据。<code>data</code>方法选择连接着数据的 DOM 元素。数据集作为参数传递给该方法。",
+				"D3 是数据驱动的库,可以使用 D3 的方法将数组形式的数据显示在页面上。",
+				"第一步是让 D3 知道数据。<code>data</code>方法选择连接着数据的 DOM 元素,数据集作为参数传递给该方法。",
 				"常见的方法是在文档中为数据集中的每一个数据创建一个元素，为此，你可以使用 D3 的<code>enter()</code>方法",
 				"当<code>enter()</code>和<code>data()</code>方法一起使用时，它把从页面中选择的元素和数据集中的元素作比较。如果页面中选择的元素较少则创建缺少的元素。",
 				"以下是一个选择<code>ul</code>元素并根据添加的数组创建新的列表项的例子。",
 				"<blockquote>&lt;body&gt;<br>&nbsp;&nbsp;&lt;ul&gt;&lt;/ul&gt;<br>&nbsp;&nbsp;&lt;script&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;const dataset = [\"a\", \"b\", \"c\"];<br>&nbsp;&nbsp;&nbsp;&nbsp;d3.select(\"ul\").selectAll(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.data(dataset)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.enter()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append(\"li\")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(\"New item\");<br>&nbsp;&nbsp;&lt;/script&gt;<br>&lt;/body&gt;</blockquote>",
-				"选择不存在的 li 元素似乎有些难以理解。事实上，这段代码先选择页面上的 ul 元素，再选择所有的列表项——li，它将返回空。然后data()方法接收数组作为参数，并运行三次后面的代码，每次对应数组中的一个对象。enter()方法发现页面中没有 li 元素，但是需要 3 个（每个对应dataset中的一个对象）。它将在 ul 中添加带有文本 "New item" 的 li 元素。",
+				"选择不存在的 li 元素似乎有些难以理解。事实上，这段代码先选择页面上的 ul 元素，再选择所有的列表项——li，它将返回空。然后data()方法接收数组作为参数，并运行三次后面的代码，每次对应数组中的一个对象。enter()方法发现页面中没有 li 元素，但是需要 3 个（每个对应dataset中的一个对象）。它将在 ul 中添加带有文本 \"New item\" 的 li 元素。",
 				"<hr>",
 				"选择<code>body</code>节点，然后选择所有的<code>h2</code>元素。让 D3 为<code>dataset</code>数组中的每一个对象创建并添加文本为 \"New Title\" 的<code>h2</code>标签。你应该使用<code>data()</code>和<code>enter()</code>方法。"
 			],
@@ -165,12 +165,12 @@
 					"testString": "assert($('h2').text().match(/New Title/g).length == 9, '<code>h2</code>元素中的文本应为 \"New Title\"。大小写和空格必须一致。');"
 				},
 				{
-					"text": "你的代码应该使用使用<code>data()</code>方法。",
-					"testString": "assert(code.match(/\\.data/g), '你的代码应该使用使用<code>data()</code>方法。');"
+					"text": "你应该使用<code>data()</code>方法。",
+					"testString": "assert(code.match(/\\.data/g), '你应该使用<code>data()</code>方法。');"
 				},
 				{
-					"text": "你的代码应该使用使用<code>enter()</code>方法。",
-					"testString": "assert(code.match(/\\.enter/g), '你的代码应该使用使用<code>enter()</code>方法。');"
+					"text": "你应该使用<code>enter()</code>方法。",
+					"testString": "assert(code.match(/\\.enter/g), '你应该使用<code>enter()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -209,7 +209,7 @@
 				}
 			],
 			"description": [
-				"最后两个基本的关于用 D3 动态显示数据的方式是<code>data()</code>和<code>enter()</code>方法。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
+				"最后两个挑战涉及到使用 D3 的<code>data()</code>和<code>enter()</code>方法来动态展示数据。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
 				"在之前的挑战中，你为<code>dataset</code>数组中的每一个对象创建了一个新的<code>h2</code>元素，但是他们的文本都是相同的 \"New Title\"。 这是因为你还没有使用和每个<code>h2</code>元素关联的数据。",
 				"<code>text()</code>方法以字符串或者回调函数作为参数：",
 				"<code>selection.text((d) => d)</code>",
@@ -308,8 +308,8 @@
 					"testString": "assert($('h2').css('font-family') == 'verdana', '你的<code>h2</code>元素的<code>font-family</code>应该为 verdana。');"
 				},
 				{
-					"text": "你的代码应该使用<code>style()</code>方法。",
-					"testString": "assert(code.match(/\\.style/g), '你的代码应该使用<code>style()</code>方法。');"
+					"text": "你应该使用<code>style()</code>方法。",
+					"testString": "assert(code.match(/\\.style/g), '你应该使用<code>style()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -451,8 +451,8 @@
 					"testString": "assert($('div').attr('class') == \"bar\", '你的<code>div</code>元素应该有一个<code>bar</code>类。');"
 				},
 				{
-					"text": "你的代码应该使用<code>attr()</code>方法。",
-					"testString": "assert(code.match(/\\.attr/g), '你的代码应该使用<code>attr()</code>方法。');"
+					"text": "你应该使用<code>attr()</code>方法。",
+					"testString": "assert(code.match(/\\.attr/g), '你应该使用<code>attr()</code>方法。');"
 				}
 			],
 			"solutions": [],
@@ -503,50 +503,50 @@
 				}
 			],
 			"description": [
-				"The previous challenges covered how to display data from an array and how to add CSS classes. You can combine these lessons to create a simple bar chart. There are two steps to this:",
-				"1) Create a <code>div</code> for each data point in the array",
-				"2) Give each <code>div</code> a dynamic height, using a callback function in the <code>style()</code> method that sets height equal to the data value",
-				"Recall the format to set a style using a callback function:",
-				"<code>selection.style(\"cssProperty\", (d) => d)</code>",
-				"<hr>",
-				"Add the <code>style()</code> method to the code in the editor to set the <code>height</code> property for each element. Use a callback function to return the value of the data point with the string \"px\" added to it."
-			],
+        "之前的挑战包括如何从数组中显示数据和如何添加 CSS 类。将这些课程的内容结合起来只需两步你就能创建出一个简单的条形图：",
+        "1) 为每一个数组中的数据点都创建一个<code>div</code>",
+        "2) 为每个<code>div</code>动态分配高度值，在<code>style()</code>方法中使用回调函数将高度值设置为数据大小",
+        "回想使用回调函数设置样式的格式：",
+        "<code>selection.style(\"cssProperty\", (d) => d)</code>",
+        "<hr>",
+        "在编辑器中添加<code>style()</code>方法给每个元素设置<code>height</code>属性。使用回调函数返回数据点的值加上字符串 \"px\"。"
+				],
 			"tests": [
 				{
-					"text": "The first <code>div</code> should have a <code>height</code> of 12 pixels.",
-					"testString": "assert($('div').eq(0).css('height') == '12px', 'The first <code>div</code> should have a <code>height</code> of 12 pixels.');"
+					"text": "第一个<code>div</code>的<code>height</code>应该为 12 个像素。",
+					"testString": "assert($('div').eq(0).css('height') == '12px', '第一个<code>div</code>的<code>height</code>应该为 12 个像素。');"
 				},
 				{
-					"text": "The second <code>div</code> should have a <code>height</code> of 31 pixels.",
-					"testString": "assert($('div').eq(1).css('height') == '31px', 'The second <code>div</code> should have a <code>height</code> of 31 pixels.');"
+					"text": "第二个<code>div</code>的<code>height</code>应该为 31 个像素。",
+					"testString": "assert($('div').eq(1).css('height') == '31px', '第二个<code>div</code>的<code>height</code>应该为 31 个像素。');"
 				},
 				{
-					"text": "The third <code>div</code> should have a <code>height</code> of 22 pixels.",
-					"testString": "assert($('div').eq(2).css('height') == '22px', 'The third <code>div</code> should have a <code>height</code> of 22 pixels.');"
+					"text": "第三个<code>div</code>的<code>height</code>应该为 22 个像素。",
+					"testString": "assert($('div').eq(2).css('height') == '22px', '第三个<code>div</code>的<code>height</code>应该为 22 个像素。');"
 				},
 				{
-					"text": "The fourth <code>div</code> should have a <code>height</code> of 17 pixels.",
-					"testString": "assert($('div').eq(3).css('height') == '17px', 'The fourth <code>div</code> should have a <code>height</code> of 17 pixels.');"
+					"text": "第四个<code>div</code>的<code>height</code>应该为 17 个像素。",
+					"testString": "assert($('div').eq(3).css('height') == '17px', '第四个<code>div</code>的<code>height</code>应该为 17 个像素。');"
 				},
 				{
-					"text": "The fifth <code>div</code> should have a <code>height</code> of 25 pixels.",
-					"testString": "assert($('div').eq(4).css('height') == '25px', 'The fifth <code>div</code> should have a <code>height</code> of 25 pixels.');"
+					"text": "第五个<code>div</code>的<code>height</code>应该为 25 个像素。",
+					"testString": "assert($('div').eq(4).css('height') == '25px', '第五个<code>div</code>的<code>height</code>应该为 25 个像素。');"
 				},
 				{
-					"text": "The sixth <code>div</code> should have a <code>height</code> of 18 pixels.",
-					"testString": "assert($('div').eq(5).css('height') == '18px', 'The sixth <code>div</code> should have a <code>height</code> of 18 pixels.');"
+					"text": "第六个<code>div</code>的<code>height</code>应该为 18 个像素。",
+					"testString": "assert($('div').eq(5).css('height') == '18px', '第六个<code>div</code>的<code>height</code>应该为 18 个像素。');"
 				},
 				{
-					"text": "The seventh <code>div</code> should have a <code>height</code> of 29 pixels.",
-					"testString": "assert($('div').eq(6).css('height') == '29px', 'The seventh <code>div</code> should have a <code>height</code> of 29 pixels.');"
+					"text": "第七个<code>div</code>的<code>height</code>应该为 29 个像素。",
+					"testString": "assert($('div').eq(6).css('height') == '29px', '第七个<code>div</code>的<code>height</code>应该为 29 个像素。');"
 				},
 				{
-					"text": "The eighth <code>div</code> should have a <code>height</code> of 14 pixels.",
-					"testString": "assert($('div').eq(7).css('height') == '14px', 'The eighth <code>div</code> should have a <code>height</code> of 14 pixels.');"
+					"text": "第八个<code>div</code>的<code>height</code>应该为 14 个像素。",
+					"testString": "assert($('div').eq(7).css('height') == '14px', '第八个<code>div</code>的<code>height</code>应该为 14 个像素。');"
 				},
 				{
-					"text": "The ninth <code>div</code> should have a <code>height</code> of 9 pixels.",
-					"testString": "assert($('div').eq(8).css('height') == '9px', 'The ninth <code>div</code> should have a <code>height</code> of 9 pixels.');"
+					"text": "第九个<code>div</code>的<code>height</code>应该为 9 个像素。",
+					"testString": "assert($('div').eq(8).css('height') == '9px', '第九个<code>div</code>的<code>height</code>应该为 9 个像素。');"
 				}
 			],
 			"solutions": [],
@@ -598,49 +598,49 @@
 				}
 			],
 			"description": [
-				"The last challenge created a bar chart, but there are a couple of formatting changes that could improve it:",
-				"1) Add space between each bar to visually separate them, which is done by adding a margin to the CSS for the <code>bar</code> class",
-				"2) Increase the height of the bars to better show the difference in values, which is done by multiplying the value by a number to scale the height",
-				"<hr>",
-				"First, add a <code>margin</code> of 2px to the <code>bar</code> class in the <code>style</code> tag. Next, change the callback function in the <code>style()</code> method so it returns a value 10 times the original data value (plus the \"px\").",
-				"<strong>Note</strong><br>Multiplying each data point by the <em>same</em> constant only alters the scale. It's like zooming in, and it doesn't change the meaning of the underlying data."
+        "这里有一些格式的改变可以美化上个挑战中创建的条形图：",
+        "1) 通过在 CSS 中为<code>bar</code>的类添加 margin 属性，为每一组之间添加空格以直观的将它们分开",
+        "2) 通过给每个值乘以一个数来缩放高度，增加高度以更好地显示值的差异",
+        "<hr>",
+        "首先，在<code>style</code>标签中为<code>bar</code>类添加 2px 的<code>margin</code>属性。然后，在<code>style()</code>方法中修改回调函数，使它返回 10 倍原数值的值（在后面加上 \"px\"）。",
+        "<strong>提示</strong><br>通过给每一个数值点乘以<em>相同的</em>常量值仅仅改变比例。这就像放大，它不会改变底层数据的含义。"
 			],
 			"tests": [
 				{
-					"text": "The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(0).css('height') == '120px' && $('div').eq(0).css('margin-right') == '2px', 'The first <code>div</code> should have a <code>height</code> of 120 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第一个<code>div</code>的<code>height</code>应该为 120 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(0).css('height') == '120px' && $('div').eq(0).css('margin-right') == '2px', '第一个<code>div</code>的<code>height</code>应该为 120 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(1).css('height') == '310px' && $('div').eq(1).css('margin-right') == '2px', 'The second <code>div</code> should have a <code>height</code> of 310 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第二个<code>div</code>的<code>height</code>应该为 310 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(1).css('height') == '310px' && $('div').eq(1).css('margin-right') == '2px', '第二个<code>div</code>的<code>height</code>应该为 310 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(2).css('height') == '220px' && $('div').eq(2).css('margin-right') == '2px', 'The third <code>div</code> should have a <code>height</code> of 220 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第三个<code>div</code>的<code>height</code>应该为 220 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(2).css('height') == '220px' && $('div').eq(2).css('margin-right') == '2px', '第三个<code>div</code>的<code>height</code>应该为 220 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(3).css('height') == '170px' && $('div').eq(3).css('margin-right') == '2px', 'The fourth <code>div</code> should have a <code>height</code> of 170 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第四个<code>div</code>的<code>height</code>应该为 170 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(3).css('height') == '170px' && $('div').eq(3).css('margin-right') == '2px', '第四个<code>div</code>的<code>height</code>应该为 170 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(4).css('height') == '250px' && $('div').eq(4).css('margin-right') == '2px', 'The fifth <code>div</code> should have a <code>height</code> of 250 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第五个<code>div</code>的<code>height</code>应该为 250 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(4).css('height') == '250px' && $('div').eq(4).css('margin-right') == '2px', '第五个<code>div</code>的<code>height</code>应该为 250 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(5).css('height') == '180px' && $('div').eq(5).css('margin-right') == '2px', 'The sixth <code>div</code> should have a <code>height</code> of 180 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第六个<code>div</code>的<code>height</code>应该为 180 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(5).css('height') == '180px' && $('div').eq(5).css('margin-right') == '2px', '第六个<code>div</code>的<code>height</code>应该为 180 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(6).css('height') == '290px' && $('div').eq(6).css('margin-right') == '2px', 'The seventh <code>div</code> should have a <code>height</code> of 290 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第七个<code>div</code>的<code>height</code>应该为 290 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(6).css('height') == '290px' && $('div').eq(6).css('margin-right') == '2px', '第七个<code>div</code>的<code>height</code>应该为 290 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(7).css('height') == '140px' && $('div').eq(7).css('margin-right') == '2px', 'The eighth <code>div</code> should have a <code>height</code> of 140 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第八个<code>div</code>的<code>height</code>应该为 140 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(7).css('height') == '140px' && $('div').eq(7).css('margin-right') == '2px', '第八个<code>div</code>的<code>height</code>应该为 140 个像素，<code>margin</code>应该为 2 个像素。');"
 				},
 				{
-					"text": "The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.",
-					"testString": "assert($('div').eq(8).css('height') == '90px' && $('div').eq(8).css('margin-right') == '2px', 'The ninth <code>div</code> should have a <code>height</code> of 90 pixels and a <code>margin</code> of 2 pixels.');"
+					"text": "第九个<code>div</code>的<code>height</code>应该为 90 个像素，<code>margin</code>应该为 2 个像素。",
+					"testString": "assert($('div').eq(8).css('height') == '90px' && $('div').eq(8).css('margin-right') == '2px', '第九个<code>div</code>的<code>height</code>应该为 90 个像素，<code>margin</code>应该为 2 个像素。');"
 				}
 			],
 			"solutions": [],
@@ -694,26 +694,26 @@
 				}
 			],
 			"description": [
-				"SVG stands for <code>Scalable Vector Graphics</code>.",
-				"Here \"scalable\" means that, if you zoom in or out on an object, it would not appear pixelated. It scales with the display system, whether it's on a small mobile screen or a large TV monitor.",
-				"SVG is used to make common geometric shapes. Since D3 maps data into a visual representation, it uses SVG to create the shapes for the visualization. SVG shapes for a web page must go within an HTML <code>svg</code> tag.",
-				"CSS can be scalable when styles use relative units (such as <code>vh</code>, <code>vw</code>, or percentages), but using SVG is more flexible to build data visualizations.",
-				"<hr>",
-				"Add an <code>svg</code> node to the <code>body</code> using <code>append()</code>. Give it a <code>width</code> attribute set to the provided <code>w</code> constant and a <code>height</code> attribute set to the provided <code>h</code> constant using the <code>attr()</code> method for each. You'll see it in the output because there's a <code>background-color</code> of pink applied to it in the <code>style</code> tag.",
-				"<strong>Note</strong><br>Width and height attributes do not have units. This is the building block of scaling - the element will always have a 5:1 width to height ratio, no matter what the zoom level is."
-			],
+        "SVG 是<code>Scalable Vector Graphics</code>的缩写。",
+        "\"scalable\" 的意思是如果放大或缩小一个对象，它不会像素化。不管是在小的移动手机屏幕上还是在大的电视显示器上它都会随着显示系统缩放。",
+        "SVG 用于制作常见的几何图形。由于 D3 将数据映射成可视化表达，它用 SVG 来创建可视化的形状。网页上的 SVG 形状必须在 HTML 的<code>svg</code>标签中。",
+        "当使用相对单位（例如<code>vh</code>、<code>vw</code>或者百分比）时，CSS 是可伸缩的。但是在实现数据可视化的时候 SVG 更加的灵活。",
+        "<hr>",
+        "用<code>append()</code>给<code>body</code>加一个<code>svg</code>节点。分别使用<code>attr()</code>给这个<code>svg</code>一个<code>width</code>属性和一个<code>height</code>属性，并分别将它们设置为给定的常量<code>w</code>和给定的常量<code>h</code>。你可以在输出中看见它，因为在<code>style</code>标签中它的<code>background-color</code>设置为 pink。",
+        "<strong>提示</strong><br><code>width</code>和<code>height</code>属性没有单位，他们是来定义缩放的。但无论怎么缩放，这个<code>svg</code>元素的宽高比永远是 5:1 。"
+      ],
 			"tests": [
 				{
-					"text": "Your document should have 1 <code>svg</code> element.",
-					"testString": "assert($('svg').length == 1, 'Your document should have 1 <code>svg</code> element.');"
+					"text": "你的文档应该有 1 个<code>svg</code>元素。",
+					"testString": "assert($('svg').length == 1, '你的文档应该有 1 个<code>svg</code>元素。');"
 				},
 				{
-					"text": "The <code>svg</code> element should have a <code>width</code> attribute set to 500.",
+					"text": "<code>svg</code>元素的<code>width</code>属性应该为 500。",
 					"testString": "assert($('svg').attr('width') == '500', 'The <code>svg</code> element should have a <code>width</code> attribute set to 500.');"
 				},
 				{
-					"text": "The <code>svg</code> element should have a <code>height</code> attribute set to 100.",
-					"testString": "assert($('svg').attr('height') == '100', 'The <code>svg</code> element should have a <code>height</code> attribute set to 100.');"
+					"text": "<code>svg</code>元素的<code>height</code>属性应该为 100。",
+					"testString": "assert($('svg').attr('height') == '100', '<code>svg</code>元素的<code>height</code>属性应该为 100。');"
 				}
 			],
 			"solutions": [],
