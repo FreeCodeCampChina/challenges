@@ -210,7 +210,7 @@
 			],
 			"description": [
 				"最后两个挑战涉及到使用 D3 的<code>data()</code>和<code>enter()</code>方法来动态展示数据。它们以数据集为参数，和<code>append()</code>方法一起使用，为数据集中的每一个元素对象创建一个 DOM 元素。",
-				"在之前的挑战中，你为<code>dataset</code>数组中的每一个对象创建了一个新的<code>h2</code>元素，但是他们的文本都是相同的 \"New Title\"。 这是因为你还没有使用和每个<code>h2</code>元素关联的数据。",
+				"在之前的挑战中，你为<code>dataset</code>数组中的每一个对象创建了一个新的<code>h2</code>元素，但是它们的文本都是相同的 \"New Title\"。 这是因为你还没有使用和每个<code>h2</code>元素关联的数据。",
 				"<code>text()</code>方法以字符串或者回调函数作为参数：",
 				"<code>selection.text((d) => d)</code>",
 				"上面这个例子中的参数<code>d</code>指关联数据集的一个对象。",
@@ -359,7 +359,8 @@
 				"<code>style()</code>方法不仅仅可以设置<code>color</code>——它也适用于其他 CSS 属性。",
 				"<hr>",
 				"在编辑器中添加<code>style()</code>方法，根据条件设置<code>h2</code>元素的<code>color</code>属性。写一个回调函数，如果值小于 20 返回 \"red\"，否则返回 \"green\"。",
-				"<strong>提示</strong><br>你可以使用 if-else 语句或者三目操作符。"      ],
+				"<strong>提示</strong><br>你可以使用 if-else 语句或者三目操作符。"      
+      ],
 			"tests": [
 				{
 					"text": "第一个<code>h2</code>的<code>color</code>应该为 red。",
@@ -696,11 +697,11 @@
 			"description": [
         "SVG 是<code>Scalable Vector Graphics</code>的缩写。",
         "\"scalable\" 的意思是如果放大或缩小一个对象，它不会像素化。不管是在小的移动手机屏幕上还是在大的电视显示器上它都会随着显示系统缩放。",
-        "SVG 用于制作常见的几何图形。由于 D3 将数据映射成可视化表达，它用 SVG 来创建可视化的形状。网页上的 SVG 形状必须在 HTML 的<code>svg</code>标签中。",
+        "SVG 用于制作常见的几何图形。由于 D3 将数据映射成可视化表达，它用 SVG 来创建可视化的图形。网页上的 SVG 图形必须在 HTML 的<code>svg</code>标签中。",
         "当使用相对单位（例如<code>vh</code>、<code>vw</code>或者百分比）时，CSS 是可伸缩的。但是在实现数据可视化的时候 SVG 更加的灵活。",
         "<hr>",
         "用<code>append()</code>给<code>body</code>加一个<code>svg</code>节点。分别使用<code>attr()</code>给这个<code>svg</code>一个<code>width</code>属性和一个<code>height</code>属性，并分别将它们设置为给定的常量<code>w</code>和给定的常量<code>h</code>。你可以在输出中看见它，因为在<code>style</code>标签中它的<code>background-color</code>设置为 pink。",
-        "<strong>提示</strong><br><code>width</code>和<code>height</code>属性没有单位，他们是来定义缩放的。但无论怎么缩放，这个<code>svg</code>元素的宽高比永远是 5:1 。"
+        "<strong>提示</strong><br><code>width</code>和<code>height</code>属性没有单位，它们是来定义缩放的。但无论怎么缩放，这个<code>svg</code>元素的宽高比永远是 5:1 。"
       ],
 			"tests": [
 				{
@@ -761,14 +762,14 @@
 				}
 			],
 			"description": [
-				"The last challenge created an <code>svg</code> element with a given width and height, which was visible because it had a <code>background-color</code> applied to it in the <code>style</code> tag. The code made space for the given width and height.",
-				"The next step is to create a shape to put in the <code>svg</code> area. There are a number of supported shapes in SVG, such as rectangles and circles. They are used to display data. For example, a rectangle (<code>&lt;rect&gt;</code>) SVG shape could create a bar in a bar chart.",
-				"When you place a shape into the <code>svg</code> area, you can specify where it goes with <code>x</code> and <code>y</code> coordinates. The origin point of (0, 0) is in the upper-left corner. Positive vales for <code>x</code> push the shape to the right, and positive values for <code>y</code> push the shape down from the origin point.",
-				"To place a shape in the middle of the 500 (width) x 100 (height) <code>svg</code> from last challenge, the <code>x</code> coordinate would be 250 and the <code>y</code> coordinate would be 50.",
-				"An SVG <code>rect</code> has four attributes. There are the <code>x</code> and <code>y</code> coordinates for where it is placed in the <code>svg</code> area. It also has a <code>height</code> and <code>width</code> to specify the size.",
-				"<hr>",
-				"Add a <code>rect</code> shape to the <code>svg</code> using <code>append()</code>, and give it a <code>width</code> attribute of 25 and <code>height</code> attribute of 100. Also, give the <code>rect</code> <code>x</code> and <code>y</code> attributes each set to 0."
-			],
+        "上个挑战用给定的宽和高创建了一个<code>svg</code>元素，因为在它的<code>style</code>标签中有<code>background-color</code>，所以它是可见的。这一段代码为给定的宽和高腾出空间。",
+        "下一步是在<code>svg</code>区域中创建图形。SVG 支持多种图形，比如长方形和圆形，并用它们来显示数据。例如，在条形图中一个长方形（<code>&lt;rect&gt;</code>）SVG 图形可以创建一个组。",
+        "当把图形放入<code>svg</code>区域中时，你可以用<code>x</code>和<code>y</code>坐标来指定它的位置。起始点 (0,0) 是在左上角。<code>x</code>正值将图形右移，<code>y</code>正值将图形从原点下移",
+        "若要把一个图形放在上个挑战的 500（宽）x 100（高）的<code>svg</code>中心，可将<code>x</code>坐标设置为 250，<code>y</code>坐标设置为 50。",
+        "SVG 的<code>rect</code>有四个属性。<code>x</code>和<code>y</code>坐标指定图形放在<code>svg</svg>区域的位置，<code>height</code>和<code>width</code>指定图形大小。",
+        "<hr>",
+        "用<code>append()</code>方法给<code>svg</code>添加一个<code>rect</code>图形。将它的<code>width</code>属性设置为 25，<code>height</code>属性设置为 100，<code>x</code>和<code>y</code>属性都设置为 0。"
+      ],
 			"tests": [
 				{
 					"text": "Your document should have 1 <code>rect</code> element.",
