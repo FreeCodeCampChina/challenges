@@ -1,5 +1,5 @@
-# Introduction to the Coding Interview Algorithms #
+# 算法面试简介 #
 
-This introduction is a stub
+简介存根
 
-Help us make it real on [GitHub](https://github.com/freeCodeCamp/learn/tree/master/src/introductions).
+帮助我们在[GitHub](https://github.com/freeCodeCamp/learn/tree/master/src/introductions)完成这一项目。

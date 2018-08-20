@@ -11,7 +11,7 @@
         "知识提要：<a href='https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E5%B7%AE'target='_blank'>对称差 (Symmetric Difference)</a>，数学上，两个<a href='https://baike.baidu.com/item/%E9%9B%86%E5%90%88/2908117'target='_blank'>集合</a>的对称差分是只属于其中一个集合，而不属于另一个集合的元素组成的集合，例如：集合<code>let A = [ 1, 2, 3]</code>和<code>let B = [ 2, 3, 4]</code>的对称差分为<code>A &xutri; B = C = [ 1, 4]</code>。 集合论中的这个运算相当于布尔逻辑中的异或运算。",
         "创建一个函数 sym，输入两个或两个以上的数组作为参数，然后返回值为<em>对称差分</em>的数组",
         "思路：设定两个数组 (例如：<code>let A = [1, 2, 3]</code>，<code>let B = [2, 3, 4]</code>)作为参数传入，返回对称差分数组（<code>A &xutri; B = C = [1, 4]</code>），且数组中没有重复项。",
-        "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'>帮助</a>。你可以找人“结对编程”，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'>帮助</a>。你可以找人“结对编程”，但不要因此放弃思考。"
       ],
       "solutions": [
         "function sym() {\n  var arrays = [].slice.call(arguments);\n  return arrays.reduce(function (symDiff, arr) {\n    return symDiff.concat(arr).filter(function (val, idx, theArr) {\n      return theArr.indexOf(val) === idx \n        && (symDiff.indexOf(val) === -1 || arr.indexOf(val) === -1);\n    });\n  });\n}\nsym([1, 2, 3], [5, 2, 1, 4]);\n"
@@ -100,8 +100,8 @@
       "id": "a56138aff60341a09ed6c480",
       "title": "Inventory Update",
       "description": [
-        "创建一个<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84' target='_blank'>二维数组</a>，比较并更新存储在<code>二维数组</code>中的 ”库存“ 元素，然后并将其与新产生的第二个二维数组进行对比，更新当前的 ”库存“ 项的数量（<code>arr1</code>），如果找不到这个对比对象，那么将新的对象和数量添加到 “库存” 数组中。注意：返回的 “库存” 数组应该是按照数组元素的首字母顺序排序",
-        "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人“结对编程“，但不要因此放弃思考。",
+        "创建一个<a href='https://baike.baidu.com/item/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84' target='_blank'>二维数组</a>，比较并更新存储在<code>二维数组</code>中的“库存”元素，然后并将其与新产生的第二个二维数组进行对比，更新当前的 ”库存“ 项的数量（<code>arr1</code>），如果找不到这个对比对象，那么将新的对象和数量添加到“库存”数组中。注意：返回的“库存”数组应该是按照数组元素的首字母顺序排序",
+        "如果你遇到了困难，请点击<a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人“结对编程“，但不要因此放弃思考。"
       ],
       "solutions": [
         "function updateInventory(arr1, arr2) {\n  arr2.forEach(function(item) {\n    createOrUpdate(arr1, item);\n  });\n  // 所有的存货都必须记帐，否则你将被解雇！\n  return arr1;\n}\n\nfunction createOrUpdate(arr1, item) {\n  var index = -1;\n  while (++index < arr1.length) {\n    if (arr1[index][1] === item[1]) {\n      arr1[index][0] += item[0];\n      return;\n    }\n    if (arr1[index][1] > item[1]) {\n      break;\n    }\n  }\n  arr1.splice(index, 0, item);\n}\n\n// 示例库存列表 \nvar curInv = [\n    [21,'Bowling Ball'],\n    [2,'Dirty Sock'],\n    [1,'Hair Pin'],\n    [5,'Microphone']\n];\n\nvar newInv = [\n    [2,'Hair Pin'],\n    [3,'Half-Eaten Apple'],\n    [67,'Bowling Ball'],\n    [7,'Toothpaste']\n];\n\nupdateInventory(curInv, newInv);\n"
@@ -173,9 +173,9 @@
       "id": "a7bf700cd123b9a54eef01d5",
       "title": "No Repeats Please",
       "description": [
-        "把一个字符串中的字符重新排列生成新的字符串，返回新生成的字符串里没有连续重复字符的字符串个数。连续重复只以单个字符为准。",
-        "例如：<code>aab</code>应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（ 字符 a 是本例中的重复字符 ）：<code>aba</code>，<code>aba</code>",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人” 结对编程 “，但不要因此放弃思考。"
+        "把一个字符串中的所有的字符重新排列，然后生成一个新的字符串，返回的新字符串中没有连续重复的字符。连续重复是以单个字符为判断标准。",
+        "例如：<code>aab</code>应该返回 2， 因为它总共有 6 种排列方式： <code>aab</code>， <code>aab</code>， <code>aba</code>， <code>aba</code>， <code>baa</code>， <code>baa</code>，但是其中只有 2 个没有连续重复的字符（字符 a 是本例中的重复字符）：<code>aba</code>，<code>aba</code>",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'> 帮助 </a>。你可以找人“结对编程“，但不要因此放弃思考。"
       ],
       "solutions": [
         "function permAlone(str) {\n  return permutor(str).filter(function(perm) {\n    return !perm.match(/(.)\\1/g);\n  }).length;\n}\n\nfunction permutor(str) {\n  // http://staff.roguecc.edu/JMiller/JavaScript/permute.html\n  //permArr: 全局数组：包含排列的列表 \ n  //usedChars: 全局实用数组，其中一个列表包含 \"currently-in-use\"字符  var permArr = [], usedChars = [];\n  function permute(input) {\n    // 将输入参数转换成一个字符串数组 （每个字符都有一个元素）\n    var i, ch, chars = input.split(\"\");\n    for (i = 0; i < chars.length; i++) {\n      // 从字符数组中获取并删除索引为\"i\"的字符 \n      ch = chars.splice(i, 1);\n      // 将删除的字符增加的使用字符的末尾 \n      usedChars.push(ch);\n      // 当char数组中没有其他字符添加时，添加使用的chars列表来排列排列 \n      if (chars.length === 0) permArr[permArr.length] = usedChars.join(\"\");\n      // 从char数组发送字符（减去上面删除的字符）进行置换 \n      permute(chars.join(\"\"));\n      // 将删除的数组添加回char数组中的原位置 \n      chars.splice(i, 0, ch);\n      //删除使用过的字符数组末尾使用的最后一个字符 \n      usedChars.pop();\n    }\n  }\n  permute(str);\n  return permArr;\n}\n\npermAlone('aab');\n"
@@ -311,7 +311,7 @@
         "这种方式通过多次迭代数组来完成操作，不管是平均还是最坏的情况，都是具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。尽管这个方式简单，但是在实际应用中，大多数情况下不切实际的：时间复杂度过高。",
         "<strong>说明：</strong>创建一个函数并命名为<code>bubbleSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
         "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。"
       ],
       "tests": [
         {
@@ -366,8 +366,8 @@
       "description": [
         "现在我们开始实现<a href='https://baike.baidu.com/item/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F' target='_blank'>选择排序</a>。选择排序是通过选择列表中最小值来与列表中的第一个值进行对比交换，然后从第二位置开始逐一对比，选择剩下的列表中最小值与第二个元素交换位置。然后循环遍历列表并交换元素，直到列表最后一个元素，此时的列表就完成了排序。选择排序在所有的情况下都具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
         "<strong>说明：</strong>创建一个函数并命名为<code>selectionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
-        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。"
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'>帮助</a>。你可以找人 “结对编程”，但不要因此放弃思考。",
+        "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。"
       ],
       "tests": [
         {
@@ -423,7 +423,7 @@
         "现在我们开始研究<a href='https://baike.baidu.com/item/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F'  target='_blank'>插入排序</a>。这个方法通过在列表的开头见一个排序的数组来实现整个排序，它以第一个元素开始排序数组，然后检查对比下一个元素，并将其向后交换到排序的书中，直到它处在排序的位置。循环迭代整个列表，将新产生的元素交换到排序部分，直到整个列表处于排序状态。该算法在平均和最坏的情况下具有二次<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>。",
         "<strong>说明：</strong>创建一个函数并命名为<code>insertionSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。",
         "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。"
       ],
       "tests": [
         {
@@ -480,7 +480,7 @@
         "快速排序是一种非常有效的排序方式，平均<a href='https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6' target='_blank'>时间复杂度</a>为<i>O(nlog(n))</i>，同时它也是相对比较容易实现的方式。这些特性使得快速排序成为了一种流行而有用的排序方式。",
         "<strong>说明：</strong>创建一个函数并命名为<code>quickSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组。虽然选择一个枢轴值很重要，但任何一个枢轴都能满足要求，为了以防万一，我嘛一般选择第一个或者最后一个元素来作为数轴值。",
         "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514' target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。"
       ],
       "tests": [
         {
@@ -541,7 +541,7 @@
         "另外，这将是我们在此章节讨论的最后一种排序算法，但是在后续有关<strong>树型数据结构</strong>的章节中，我们将一起研究<strong>堆排序</strong>，同样它也是一种高效的排序方式，其实现过程需要用到二进制堆的概念。",
         "<strong>Instructions</strong>：创建一个函数并命名为<code>mergeSort</code>，输入参数是一个数组，且数组元素全部都是整数类型，然后按照从最小到最大的顺序返回整个数组>。实现这个排序方式可以采用两个函数来实现：<code>merge</code>负责合并两个排序的数组，<code>merge sort</code>负责生成单个数组的用于归并使用。祝你好用！",
         "<strong>注意：</strong><br>我们将在后台调用这些函数，测试数组在编辑器中也是被注释掉了的。尝试记录输入<code>array</code>来确认你的冒泡排序算法是否正确。",
-        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。",
+        "如果你遇到了困难，请点击 <a href='http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514'target='_blank'> 帮助 </a>。你可以找人 “结对编程”，但不要因此放弃思考。"
       ],
       "tests": [
         {
