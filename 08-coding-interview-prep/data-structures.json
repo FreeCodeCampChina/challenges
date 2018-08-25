@@ -1103,17 +1103,17 @@
       "id": "587d8255367417b2b2512c73",
       "title": "Use Spread and Notes for ES5 Set() Integration",
       "description": [
-        "Do you remember the ES6 spread operator <code>...</code>?",
-        "<code>...</code> can take iterable objects in ES6 and turn them into arrays.",
-        "Let's create a Set, and check out the spread function.",
+        "是否记得 ES6 当中的<code>...</code>操作符？",
+        "<code>...</code>接收 ES6 当中的可迭代对象并将其转换为数组返回。",
+        "现在我们来创建一个 Set并检验<code>...</code>操作符。",
         "<blockquote>var set = new Set([1,2,3]);<br>var setToArr = [...set]<br>console.log(setToArr) // returns [ 1, 2, 3 ]</blockquote>",
         "<hr>",
-        "In this exercise we will pass a set object to the <code>checkSet</code> function. It should return an array containing the values of the Set.",
-        "Now you've successfully learned how to use the ES6 <code>Set()</code> object, good job!"
+        "在本次练习当中我们给<code>checkSet</code>传递一个 set 对象。函数返回一个数组，该数组当中包含 Set 集合中所有值。",
+        "现在我们已经学会了如何运用 ES6 <code>Set()</code>对象，继续加油！"
       ],
       "tests": [
         {
-          "text": "Your Set was returned correctly!",
+          "text": " Set 内的值正确返回了！",
           "testString": "assert(function(){var test = checkSet(new Set([1,2,3,4,5,6,7])); test === [ 1, 2, 3, 4, 5, 6, 7 ]}, 'Your Set was returned correctly!');"
         }
       ],
@@ -1143,44 +1143,44 @@
       "id": "8d5823c8c441eddfaeb5bdef",
       "title": "Create a Map Data Structure",
       "description": [
-        "The next few challenges will cover maps and hash tables. Maps are data structures that store key-value pairs. In JavaScript, these are available to us as objects. Maps provide rapid lookup of stored items based on key values and are very common and useful data structures.",
-        "Instructions: Let's get some practice creating our own map. Because JavaScript objects provide a much more efficient map structure than anything we could write here, this is intended primarily as a learning exercise. However, JavaScript objects only provide us with certain operations. What if we wanted to define custom operations?",
-        "Use the <code>Map</code> object provided here as a wrapper around a JavaScript <code>object</code>. Create the following methods and operations on the Map object:",
-        "<code>add</code> accepts a <code>key, value</code> pair to add to the map",
-        "<code>remove</code> accepts a key and removes the associated <code>key, value</code> pair",
-        "<code>get</code> accepts a <code>key</code> and returns the stored <code>value</code>",
-        "<code>has</code> returns a <code>boolean</code> for the presence or absence of an item",
-        "<code>values</code> returns an array of all the values in the map",
-        "<code>size</code> returns the number of items in the map",
+        "在接下来的几个挑战会涉及到 map 和 hash 表这些知识点。Maps 是一种存储键值对的数据结构。map 也是一种 JavaScript 对象。Maps 是一种十分通用和有效的数据结构，我们在 Maps 当中通过 key 值能够很快速地获取对应的 value 值。",
+        "提示：现在我们练习创建 map。JavaScript 对象本身提供了十分高效的 map 数据结构，我们在本次挑战当中写的一些方法只是作为提升练习。然而，JavaScript 对象本身只为我们提供了少量操作方法，如果我们想要自己定制一些方法该怎么办呢？",
+        "现在我们使用 JavaScript 对象来模拟<code>Map</code>对象。现在我们在 Map 对象当中创建下列方法：",
+        "<code>add</code>方法接收<code>key, value</code>作为参数并添加进 map 当中",
+        "<code>remove</code>方法接收一个 key 值并移除对应的<code>key, value</code>",
+        "<code>get</code>接收<code>key</code>值并返回对应的<code>value</code>值",
+        "<code>has</code>方法根据某个值的存在情况返回相应的<code>boolean</code>值",
+        "<code>values</code>方法以数组形式返回 map 当中所有的 value 值",
+        "<code>size</code>方法返回 map 当中元素的个数",
         "<code>clear</code> empties the map"
       ],
       "tests": [
         {
-          "text": "The Map data structure exists.",
+          "text": "Map 数据结构存在。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; return (typeof test == 'object')})(), 'The Map data structure exists.');"
         },
         {
-          "text": "The Map object has the following methods: add, remove, get, has, values, clear, and size.",
+          "text": "Map 对象拥有 add, remove, get, has, values, clear, and size 这些方法。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; return (typeof test.add == 'function' && typeof test.remove == 'function' && typeof test.get == 'function' && typeof test.has == 'function' && typeof test.values == 'function' && typeof test.clear == 'function' && typeof test.size == 'function')})(), 'The Map object has the following methods: add, remove, get, has, values, clear, and size.');"
         },
         {
-          "text": "The add method adds items to the map.",
+          "text": "add 方法添加元素到 map 当中。 ",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add(5,6); test.add(2,3); test.add(2,5); return (test.size() == 2)})(), 'The add method adds items to the map.');"
         },
         {
-          "text": "The has method returns true for added items and false for absent items.",
+          "text": "当存在某个元素时 has 方法会返回 true 否则返回 false。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('test','value'); return (test.has('test') && !test.has('false'))})(), 'The has method returns true for added items and false for absent items.');"
         },
         {
-          "text": "The get method accepts keys as input and returns the associated values.",
+          "text": "get 方法接收 key 值作为参数并返回对应的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('abc','def'); return (test.get('abc') == 'def')})(), 'The get method accepts keys as input and returns the associated values.');"
         },
         {
-          "text": "The values method returns all the values stored in the map as strings in an array.",
+          "text": "values 方法以数组形式返回 map 当中所有的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('a','b'); test.add('c','d'); test.add('e','f'); var vals = test.values(); return (vals.indexOf('b') != -1 && vals.indexOf('d') != -1 && vals.indexOf('f') != -1)})(), 'The values method returns all the values stored in the map as strings in an array.');"
         },
         {
-          "text": "The clear method empties the map and the size method returns the number of items present in the map.",
+          "text": "clear 方法清空 map 当中的元素，size 方法返回 map 当中元素的个数。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('b','b'); test.add('c','d'); test.remove('asdfas'); var init = test.size(); test.clear(); return (init == 2 && test.size() == 0)})(), 'The clear method empties the map and the size method returns the number of items present in the map.');"
         }
       ],
@@ -1208,23 +1208,23 @@
       "id": "587d825b367417b2b2512c8d",
       "title": "Create an ES6 JavaScript Map",
       "description": [
-        "The new version of JavaScript provides us with a built-in Map object which provides much of the functionality we wrote by hand in the last challenge. This Map object, although similar to regular JavaScript objects, provides some useful functionality that normal objects lack. For example, an ES6 Map tracks the insertion order of items that are added to it. Here is a more complete overview of its methods:",
-        "<code>.has(key)</code> returns true or false based on the presence of a key",
-        "<code>.get(key)</code> returns the value associated with a key",
-        "<code>.set(key, value)</code> sets a new key, value pair",
-        "<code>.delete(key)</code> removes a key, value pair",
-        "<code>.clear()</code> removes all key, value pairs",
-        "<code>.entries()</code> returns an array of all the keys in insertion order",
-        "<code>.values()</code> returns an array of all the values in insertion order",
-        "Instructions: Define a JavaScript Map object and assign to it a variable called myMap. Add the key, value pair <code>freeCodeCamp</code>, <code>Awesome!</code> to it."
+        "新版JavaScript给我们提供了内置的 Map 对象，该 Map 对象提供了大部分在上一次挑战中需要我们手动书写的内容。虽然与一般的 JavaScript 对象很类似，但是 Map 对象也提供了一些普通对象没有的方法。例如，ES6 Map 追溯刚刚添加进 Map 的元素顺序。下面是 Map 内置方法的一个概览：",
+        "<code>.has(key)</code>根据 key 值存在与否返回 true 或 false ",
+        "<code>.get(key)</code>返回 key 值对应的 value 值",
+        "<code>.set(key, value)</code>设置一对新的 key,value 对",
+        "<code>.delete(key)</code>移除一个 key,value 对",
+        "<code>.clear()</code>移除所有的 key,value 对",
+        "<code>.entries()</code>以数组形式返回所有 key 值，数组中元素的顺序以插入时的顺序为准",
+        "<code>.values()</code>i以数组形式返回所有 value 值，数组中元素的顺序以插入时的顺序为准",
+        "任务：定义一个 Map 对象并将其赋值给一个名称为 myMap 的变量。往 Map 对象当中添加键值对<code>freeCodeCamp</code>, <code>Awesome!</code>。"
       ],
       "tests": [
         {
-          "text": "The myMap object exists.",
+          "text": "myMap 对象存在。",
           "testString": "assert(typeof myMap === 'object', 'The myMap object exists.');"
         },
         {
-          "text": "myMap contains the key value pair <code>freeCodeCamp</code>, <code>Awesome!</code>.",
+          "text": "myMap 包含键值对<code>freeCodeCamp</code>, <code>Awesome!</code>。",
           "testString": "assert(myMap.get('freeCodeCamp') === 'Awesome!', 'myMap contains the key value pair <code>freeCodeCamp</code>, <code>Awesome!</code>.');"
         }
       ],
@@ -1248,43 +1248,43 @@
       "id": "587d825b367417b2b2512c8e",
       "title": "Create a Hash Table",
       "description": [
-        "In this challenge we will learn about hash tables. A Hash table is used to implement associative arrays, or mappings of key-value pairs, like the objects and Maps we have just been studying. A JavaScript object could be implemented as a hash table, for instance (its actual implementation will depend on the environment it's running in). The way a hash table works is that it takes a key input and hashes this key in a deterministic way to some numerical value. This numerical value is then used as the actual key the associated value is stored by. Then, if you try to access the same key again, the hashing function will process the key, return the same numerical result, which will then be used to look up the associated value. This provides very efficient O(n) lookup time on average.",
-        "Hash tables can be implemented as arrays with hash functions producing array indices within a specified range. In this method, the choice of the array size is important, as is the hashing function. For instance, what if the hashing function produces the same value for two different keys? This is called a collision. One way to handle collisions is to just store both key-value pairs at that index. Then, upon lookup of either, you would have to iterate through the bucket of items to find the key you are looking for. A good hashing function will minimize collisions to maintain efficient search time.",
-        "Here, we won't be concerned with the details of hashing or hash table implementation, we will just try to get a general sense of how they work.",
-        "Instructions: Let's create the basic functionality of a hash table. We've created a naive hashing function for you to use. You can pass a string value to the function hash and it will return a hashed value you can use as a key for storage. Store items based on this hashed value in the this.collection object. Create these three methods: add, remove, and lookup. The first should accept a key value pair to add to the hash table. The second should remove a key-value pair when passed a key. The third should accept a key and return the associated value or null if the key is not present.",
-        "Be sure to write your code to account for collisions!"
+        "在本次挑战中我们会学习 hash 表。就像我们之前学习的对象和 Map 一样，hash 通常用来实现关联数组或者匹配键值对。比如，可以用 JavaScript 对象来实现 hash 表（具体实现方式依赖于运行环境）。hash 表接收一个 key 值作为参数并将其数字化为一个确定的数字。该数字被当作与 value 值对应的 key 值存储到表当中。如果你想取得该 key 值的话，hashing 函数会接收 key 值作为参数经过运算之后返回同样的数字（该数字被用来取得关联的 value 值）。这种方式非常高效，平均时间复杂度为 O(n)。",
+        "可以用数组来实现 hash 表，该数组拥有一个 hash 函数，该函数在指定的区间内生成一系列索引。在本方法中，数组的大小以及 hash 函数的选择很关键。例如，假如两个不同的 key 值通过 hash 函数产生了相同的值怎么办？这种情况我们叫做冲突。解决冲突的一种方式是将两对 key-value 都存储进该 index 当中。之后在存储元素的单元格当中逐个寻找。好的 hash 函数能够最小化冲突以保证查询效率。",
+        "本课程我们不关注 hash 化或者 hash 表的实现细节，只是熟悉一下他们怎么运作。",
+        "任务：现在我们来创建一个拥有基本功能的 hash 表。我们已经为你创建了一个简单的 hash 函数，当你传递一个值给该函数时它会返回一个 hash 化的值让你当作 key 值使用。将元素存储到 this.collection 对象当中，在其中创建 add,remove 以及 lookup 这三个方法。add 方法接收一个键值对参数并存储进 hash 表当中；remove 方法接收一个 key 值并移除对应的键值对；lookup 方法接收一个 key 值并返回对应的 value 值，如果 key 值不存在的话就返回 null。",
+        "确保你的代码能处理发生冲突的情况！"
       ],
       "tests": [
         {
-          "text": "The HashTable data structure exists.",
+          "text": "该 HashTable 数据结构存在。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return (typeof test === 'object')})(), 'The HashTable data structure exists.');"
         },
         {
-          "text": "The HashTable has an add method.",
+          "text": "该 HashTable 拥有 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.add) === 'function')})(), 'The HashTable has an add method.');"
         },
         {
-          "text": "The HashTable has an remove method.",
+          "text": "该 HashTable 拥有 remove 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.remove) === 'function')})(), 'The HashTable has an remove method.');"
         },
         {
-          "text": "The HashTable has an lookup method.",
+          "text": "该 HashTable 拥有 lookup 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.lookup) === 'function')})(), 'The HashTable has an lookup method.');"
         },
         {
-          "text": "The add method adds key value pairs and the lookup method returns the values associated with a given key.",
+          "text": "add 方法添加 键值对到 HashTable 当中，lookup 方法根据传入 key 值返回对应的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; test.add('key', 'value'); return (test.lookup('key') === 'value')})(), 'The add method adds key value pairs and the lookup method returns the values associated with a given key.');"
         },
         {
-          "text": "The remove method accepts a key as input and removes the associated key value pair.",
+          "text": "remove 方法接收 key 值为参数并删除对应的键值对。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; test.add('key', 'value'); test.remove('key'); return (test.lookup('key') === null)})(), 'The remove method accepts a key as input and removes the associated key value pair.');"
         },
         {
-          "text": "Items are added using the hash function.",
+          "text": "使用 hash 函数把元素添加进 HashTable。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; called = 0; test.add('key1','value1'); test.add('key2','value2'); test.add('key3','value3'); return (called === 3)})(), 'Items are added using the hash function.');"
         },
         {
-          "text": "The hash table handles collisions.",
+          "text": "该 HashTable 解决了冲突。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; called = 0; test.add('key1','value1'); test.add('1key','value2'); test.add('ke1y','value3'); return (test.lookup('key1') === 'value1' && test.lookup('1key') == 'value2' && test.lookup('ke1y') == 'value3')})(), 'The hash table handles collisions.');"
         }
       ],
@@ -1327,19 +1327,19 @@
       "id": "587d8251367417b2b2512c61",
       "title": "Work with Nodes in a Linked List",
       "description": [
-        "Another common data structure you'll run into in computer science is the <dfn>linked list</dfn>. A linked list is a linear collection of data elements, called 'nodes', each of which points to the next. Each <dfn>node</dfn> in a linked list contains two key pieces of information: the <code>element</code> itself, and a reference to the next <code>node</code>.",
-        "Imagine that you are in a conga line. You have your hands on the next person in the line, and the person behind you has their hands on you. You can see the person straight ahead of you, but they are blocking the view of the other people ahead in line. A node is just like a person in a conga line: they know who they are and they can only see the next person in line, but they are not aware of the other people ahead or behind them.",
+        "另一个计算机科学当中比较常见的数据结构是链表。链表是一系列数据元素的线性集合，每个节点有一个指针指向下一个节点。链表中的每个节点由两部分组成：一个是<code>element</code>本身，还有一个指向下一个<code>node</code>的引用。",
+        "想象你在一个舞队当中，你的手搭在下一个人身上，你后面人的手搭在你的身上。你可以看到你前面的人是谁，但是看不到再之前的人。一个节点就如同一个舞队当中的一个人：他们能够掌握行列当中自己和下一个人的信息，但是他们无法知道他们之前或者之后的人是谁。",
         "<hr>",
-        "In our code editor, we've created two nodes, <code>Kitten</code> and <code>Puppy</code>, and we've manually connected the <code>Kitten</code> node to the <code>Puppy</code> node.",
-        "Create a <code>Cat</code> and <code>Dog</code> node and manually add them to the line."
+        "在代码编辑器当中我们已经创建了<code>Kitten</code>和<code>Puppy</code>两个节点，现在我们已经将<code>Kitten</code>节点和<code>Puppy</code>节点连接起来了。",
+        "创建<code>Cat</code>和<code>Dog</code>两个节点并将他们连接到链表当中。"
       ],
       "tests": [
         {
-          "text": "Your <code>Puppy</code> node should have a reference to a <code>Cat</code> node.",
+          "text": "<code>Puppy</code>节点应该有指向<code>Cat</code>节点的引用。",
           "testString": "assert(Puppy.next.element === \"Cat\", 'Your <code>Puppy</code> node should have a reference to a <code>Cat</code> node.');"
         },
         {
-          "text": "Your <code>Cat</code> node should have a reference to a <code>Dog</code> node.",
+          "text": "<code>Cat</code>节点应该有指向<code>Dog</code>节点的引用。",
           "testString": "assert(Cat.next.element === \"Dog\", 'Your <code>Cat</code> node should have a reference to a <code>Dog</code> node.');"
         }
       ],
@@ -1361,9 +1361,9 @@
             "var Puppy = new Node(\"Puppy\");",
             "",
             "Kitten.next = Puppy;",
-            "// only add code below this line",
+            "// 请在本行下方输入代码",
             "",
-            "// test your code",
+            "// 测试代码",
             "console.log(Kitten.next);"
           ],
           "head": [],
@@ -1375,30 +1375,30 @@
       "id": "587d8251367417b2b2512c62",
       "title": "Create a Linked List Class",
       "description": [
-        "Let's create a <code>linked list</code> class. Every linked list should start out with a few basic properties: a <code>head</code> (the first item in your list) and a <code>length</code> (number of items in your list). Sometimes you'll see implementations of linked lists that incorporate a <code>tail</code> for the last element of the list, but for now we'll just stick with these two. Whenever we add an element to the linked list, our <code>length</code> property should be incremented by one.",
-        "We'll want to have a way to add items to our linked list, so the first method we'll want to create is the <code>add</code> method.",
-        "If our list is empty, adding an element to our linked list is straightforward enough: we just wrap that element in a <code>Node</code> class, and we assign that node to the <code>head</code> of our linked list.",
-        "But what if our list already has one or more members? How do we add an element to the list? Recall that each node in a linked list has a <code>next</code> property. To add a node to the list, find the last node in the list, and point that last node's <code>next</code> property at our new node. (Hint: you know you've reached the end of a linked list when a node's <code>next</code> property is <code>null</code>.)",
+        "现在我们来创建一个<code>linked list</code>类。每个链表都应该有<code>head</code>（表中第一个元素）和<code>length</code>（表中元素的个数）这样的基本属性。有时链表有<code>tail</code>这样表示表中最后一个元素的标识，但是本次练习我们只关注 head 和 length 这两个属性。无论何时我们往链表中添加了元素，<code>length</code>属性的数值都会加一。",
+        "我们需要有一个能够添加元素进链表的操作，因此我们首先创建一个<code>add</code>方法。",
+        "如果表为空，添加元素进链表会很简单：我们只需用<code>Node</code>类来创建一个元素，同时让<code>head</code>指向该元素。",
+        "但是如果表中已经有元素了会是如何呢？如何添加元素到非空链表当中？回想一下，链表当中的每个元素都有一个<code>next</code>属性。为了添加新节点到表中我们需要找到表中最后一个节点，并让该节点的<code>next</code>指针指向新节点。（提示：链表当中最后一个元素的 next 指针指向 null。）",
         "<hr>",
-        "Write an add method that assigns the first node you push to the linked list to the <code>head</code>; after that, whenever adding a node, every node should be referenced by the previous node's <code>next</code> property.",
-        "Note",
-        "Your list's <code>length</code> should increase by one every time an element is added to the linked list."
+        "写一个 add 方法，当添加第一个元素时让<code>head</code>指针指向该元素；之后，当在添加新元素时前一个节点的<code>next</code>属性都应该指向下一个元素。",
+        "提示",
+        "每当链表添加进新元素的时候<code>length</code>的数值都应该加一。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>add</code> method.",
+          "text": "<code>LinkedList</code>应该有<code>add</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.add === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>add</code> method.');"
         },
         {
-          "text": "Your <code>LinkedList</code> class should assign <code>head</code> to the first node added.",
+          "text": "<code>LinkedList</code>当中的<code>head</code>指针应该指向表中第一个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); return test.head().element === 'cat'}()), 'Your <code>LinkedList</code> class should assign <code>head</code> to the first node added.');"
         },
         {
-          "text": "The previous <code>node</code> in your <code>LinkedList</code> class should have reference to the newest node created.",
+          "text": "LinkedList</code>当中的节点应该有指针指向最新创建的节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return test.head().next.element === 'dog'}()), 'The previous <code>node</code> in your <code>LinkedList</code> class should have reference to the newest node created.');"
         },
         {
-          "text": "The  <code>size</code> of your <code>LinkedList</code> class should equal the amount of nodes in the linked list.",
+          "text": "<code>size</code>代表<code>LinkedList</code>当中节点的数量。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return test.size() === 2}()), 'The  <code>size</code> of your <code>LinkedList</code> class should equal the amount of nodes in the linked list.');"
         }
       ],
@@ -1445,30 +1445,30 @@
       "id": "587d8251367417b2b2512c63",
       "title": "Remove Elements from a Linked List",
       "description": [
-        "The next important method that any implementation of a linked list will need is a <code>remove</code> method. This method should take the element we want to remove as an argument, and then search the list to find and remove the node that contains that element.",
-        "Whenever we remove a node from a linked list, it's important that we don't accidentally orphan the rest of the list in doing so. Recall that every node's <code>next</code> property points to the node that follows it in the list. If we're removing the middle element, say, we'll want to make sure that we have a connection from that element's previous node's <code>next</code> property to the middle element's <code>next</code> property (which is the next node in the list!)",
-        "This might sound really confusing, so let's return to the conga line example so we have a good conceptual model. Picture yourself in a conga line, and the person directly in front of you leaves the line. The person who just left the line no longer has her hands on anyone in line--and you no longer have your hands on the person that left. You step forward and put your hands on next person you see.",
-        "If the element we wish to remove is the <code>head</code> element, we reassign the <code>head</code> to the second node of the linked list.",
+        "链表当中下一个重要的方法是<code>remove</code>方法。该方法接收一个元素作为参数，随后在链表当中找到并移除该元素。",
+        "当从链表当中移除掉一个节点之后，需要注意到我们并不只是从链表当中删除了一个元素。每个节点的<code>next</code>指针都会指向表中的下一个节点。当我们从链表当中移除了一个元素时，我们需要确保这个被移除节点的前一个节点的<code>next</code>指针指向被移除节点的下一个元素。",
+        "这样解释可能比较抽象，因此我们再拿之前的康茄舞队的例子来说明。想象一下，康茄舞队当中在你正前方的人离开了队伍。这个离队的人也就不再会把手搭在他前一个人的身上，同时你的手也不可能搭在离队的那个人身上。接下来你需要向前走一步把你的手搭在前一个人的身上。",
+        "如果我们移除的是头部元素，那么我们需要让<code>head</code>指针指向链表当中的第二个元素。",
         "<hr>",
-        "Write a <code>remove</code> method that takes an element and removes it from the linked list.",
-        "Note",
-        "The <code>length</code> of the list should decrease by one every time an element is removed from the linked list."
+        "编写<code>remove</code>方法，该方法接收一个元素作为参数并从链表当中移除该元素。",
+        "提示",
+        "每当<code>length</code> of the list should decrease by one every time an element is removed from the linked list."
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>remove</code> method.",
+          "text": "<code>LinkedList</code>应该又一个<code>remove</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.remove === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>remove</code> method.');"
         },
         {
-          "text": "Your <code>remove</code> method should reassign <code>head</code> to the second node when the first node is removed.",
+          "text": "当链表头部元素被移除时<code>remove</code>方法应该让<code>head</code>指针指向表中的第二个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.remove('cat'); return test.head().element === 'dog'}()), 'Your <code>remove</code> method should reassign <code>head</code> to the second node when the first node is removed.');"
         },
         {
-          "text": "Your <code>remove</code> method should decrease the <code>length</code> of the linked list by one for every node removed.",
+          "text": "每当元素被移除时<code>remove</code>方法应该让<code>length</code>减 1 。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.remove('cat'); return test.size() === 1})(), 'Your <code>remove</code> method should decrease the <code>length</code> of the linked list by one for every node removed.');"
         },
         {
-          "text": "Your <code>remove</code> method should reassign the reference of the previous node of the removed node to the removed node&apos;s <code>next</code> reference.",
+          "text": "当一个元素被移除时<code>remove</code>方法应该让被移除元素的前一个元素的<code>next</code>指针指向被移除元素的下一个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog');test.add('kitten'); test.remove('dog'); return test.head().next.element === 'kitten'})(), 'Your <code>remove</code> method should reassign the reference of the previous node of the removed node to the removed node&apos;s <code>next</code> reference.');"
         }
       ],
@@ -1534,31 +1534,31 @@
       "id": "587d8251367417b2b2512c64",
       "title": "Search within a Linked List",
       "description": [
-        "Let's add a few more useful methods to our linked list class. Wouldn't it be useful if we could tell if our list was empty or not, as with our <code>Stack</code> and <code>Queue</code> classes?",
-        "We should also be able to find specific elements in our linked list. Traversing through data structures is something you'll want to get a lot of practice with! Let's create an <code>indexOf</code> method that takes an <code>element</code> as an argument, and returns that element's <code>index</code> in the linked list. If the element is not found in the linked list, return <code>-1</code>.",
-        "Let's also implement a method that does the opposite: an <code>elementAt</code> method that takes an <code>index</code> as an argument and returns the <code>element</code> at the given <code>index</code>. If no <code>element</code> is found, return <code>undefined</code>.",
+        "现在我们往链表当中添加一些更加实用的方法。例如我们可以像<code>Stack</code>和<code>Queue</code>一样设计一个判断链表是否为空的方法。",
+        "我们也应该能够找到链表当中某一个具体的元素。通过学习这些数据结构我们能够积累很多经验。现在我们来创建一个<code>indexOf</code>方法，该方法接收一个<code>element</code>作为参数并返回该元素在链表当中的索引值。如果该元素不存在就返回<code>-1</code>。",
+        "我们也可以编写一个方法来实现相反的功能：<code>elementAt</code>方法接收一个<code>index</code>作为索引值并返回对应位置的<code>element</code>。如果<code>element</code>没找到就返回<code>undefined</code>。",
         "<hr>",
-        "Write an <code>isEmpty</code> method that checks if the linked list is empty, an <code>indexOf</code> method that returns the <code>index</code> of a given element, and an <code>elementAt</code> that returns an <code>element</code> at a given <code>index."
+        "编写<code>isEmpty</code>方法来判断链表是否为空，<code>indexOf</code>方法返回给定元素的<code>index</code>值，<code>elementAt</code>方法返回给定位置的<code>element</code>值。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>indexOf</code> method.",
+          "text": "、<code>LinkedList</code>应该有<code>indexOf</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.indexOf === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>indexOf</code> method.');"
         },
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>elementAt</code> method.",
+          "text": "<code>LinkedList</code>应该有<code>elementAt</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.elementAt === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>elementAt</code> method.');"
         },
         {
-          "text": "Your <code>size</code> method should return the length of the linked list",
+          "text": "<code>size</code>方法应该返回链表的长度。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.size() === 3}()), 'Your <code>size</code> method should return the length of the linked list');"
         },
         {
-          "text": "Your <code>indexOf</code> method should return the index of the given element.",
+          "text": "<code>indexOf</code>方法应该返回给定元素的索引值。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.indexOf('kitten') === 2}()), 'Your <code>indexOf</code> method should return the index of the given element.');"
         },
         {
-          "text": "Your <code>elementAt</code> method should return at element at a given index.",
+          "text": "<code>elementAt</code>方法应该返回对应位置的元素值。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.elementAt(1) === 'dog'}()), 'Your <code>elementAt</code> method should return at element at a given index.');"
         }
       ],
@@ -1623,9 +1623,9 @@
             "    length --;",
             "  };",
             "",
-            "  // Only 请在本行下方输入代码",
+            "  // 请在本行下方输入代码",
             "",
-            "  // Only 请在本行上方输入代码",
+            "  // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1637,34 +1637,34 @@
       "id": "587d8251367417b2b2512c65",
       "title": "Remove Elements from a Linked List by Index",
       "description": [
-        "Before we move on to another data structure, let's get a couple of last bits of practice with linked lists.",
-        "Let's write a <code>removeAt</code> method that removes the <code>element</code> at a given <code>index</code>. The method should be called <code>removeAt(index)</code>. To remove an <code>element</code> at a certain <code>index</code>, we'll need to keep a running count of each node as we move along the linked list.",
-        "A common technique used to iterate through the elements of a linked list involves a <dfn>'runner'</dfn>, or sentinel, that 'points' at the nodes that your code is comparing. In our case, starting at the <code>head</code> of our list, we start with a <code>currentIndex</code> variable that starts at <code>0</code>. The <code>currentIndex</code> should increment by one for each node we pass.",
-        "Just like our <code>remove(element)</code> method, we need to be careful not to orphan the rest of our list when we remove the node in our removeAt(index) method. We keep our nodes contiguous by making sure that the node that has reference to the removed node has a reference to the next node.",
+        "在学习其他数据结构之前，我们再在链表里面做两个练习。",
+        "我们来编写一个<code>removeAt</code>方法，该方法根据给定的<code>index</code>删除对应位置上的<code>element</code>。我们把这个方法命名为<code>removeAt(index)</code>。为了移除给定位置上的<code>element</code>，我们需要用一个数来记录在链表当中的移动位置。",
+        "当遍历链表当中元素时，我们通常使用“哨兵”来指向代码当中正在进行比较的元素。在本例当中，我们从表的头部开始，设置<code>currentIndex</code>的初始值为<code>0</code>，当遍历过一个元素之后<code>currentIndex</code>的值增加一位。",
+        "就像<code>remove(element)</code>方法一样，我们并不仅仅是使用 removeAt(index) 方法移除表中的元素。同时我们需要保证被移除元素的前一个元素的 next 指针需要指向被移除元素的下一个元素。",
         "<hr>",
-        "Write a <code>removeAt(index)</code> method that removes and returns a node at a given <code>index</code>. The method should return <code>null</code> if the given <code>index</code> is either negative, or greater than or equal to the <code>length</code> of the linked list.",
-        "Note",
-        "Remember to keep count of the <code>currentIndex</code>."
+        "编写<code>removeAt(index)</code>方法移除指定位置的节点，同时该方法需要返回被移除的节点。如果<code>index</code>的值为负数或者大于等于链表的长度，该方法应该返回<code>null</code>。",
+        "提示",
+        "记得跟踪<code>currentIndex</code>的数值变化。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>removeAt</code> method.",
+          "text": "链表应该拥有<code>removeAt</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.removeAt === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>removeAt</code> method.');"
         },
         {
-          "text": "Your <code>removeAt</code> method should reduce the <code>length</code> of the linked list",
+          "text": "使用<code>removeAt</code>方法之后链表的长度应该减短。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); test.removeAt(1); return test.size() === 2}()), 'Your <code>removeAt</code> method should reduce the <code>length</code> of the linked list');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return the element of the removed node.",
+          "text": "<code>removeAt</code>应该返回被移除的那个节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return test.removeAt(1) === 'dog'}()), 'Your <code>removeAt</code> method should also return the element of the removed node.');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return <code>null</code> if the given index is less than <code>0</code>",
+          "text": "如果 index 的值小于<code>0</code>，<code>removeAt</code>方法应该返回<code>null</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return (test.removeAt(-1) === null)}()), 'Your <code>removeAt</code> method should also return <code>null</code> if the given index is less than <code>0</code>');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return <code>null</code> if the given index is equal or more than the <code>length</code> of the linked list.",
+          "text": "如果 index 的值大于等于链表长度，<code>removeAt</code>方法应该返回<code>null</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return (test.removeAt(3) === null)}()), 'Your <code>removeAt</code> method should also return <code>null</code> if the given index is equal or more than the <code>length</code> of the linked list.');"
         }
       ],
@@ -1743,25 +1743,25 @@
       "id": "587d8252367417b2b2512c67",
       "title": "Add Elements at a Specific Index in a Linked List",
       "description": [
-        "Let's create a addAt(index,element) method that adds an element at a given index.",
-        "Just like how we remove elements at a given index, we need to keep track of the currentIndex as we traverse the linked list. When the currentIndex matches the given index, we would need to reassign the previous node's next property to reference the new added node. And the new node should reference the next node in the currentIndex.",
-        "Returning to the conga line example, a new person wants to join the line, but he wants to join in the middle. You are in the middle of the line, so you take your hands off of the person ahead of you. The new person walks over and puts his hands on the person you once had hands on, and you now have your hands on the new person.",
-        "Instructions",
-        "Create an addAt(index,element) method that adds an element at a given index. Return false if an element was unable to be added.",
-        "Note",
-        "Remember to check if the given index is a negative or is longer than the length of the linked list."
+        "现在我们来创建一个 addAt(index,element) 方法，该方法在指定的位置添加一个元素。",
+        "就像我们移除指定位置的元素一样，当我们遍历链表时需要跟踪 currentIndex 的数值变化。当 currentIndex 匹配到给定的 index 值时，我们需要让指定节点的前一个节点指向新添加的节点，之后我们需要让新添加的节点指向指定的节点。",
+        "再拿康茄舞举例子，有一个新队员想加入舞队正中的位置。恰巧你就在队伍中央，因此你将手从前一个人的身上拿开了。而新加入的人则将他的手搭到了你先前搭的那个人的身上，之后你需要将你的手搭在新加入队伍的这个人身上。",
+        "任务",
+        "创建一个 addAt(index,element) 方法，该方法往指定位置添加元素。如果元素未能成功添加则返回 false 。",
+        "提示",
+        "记得检查 index 的值小于 0 以及大于等于链表长度的情况。"
       ],
       "tests": [
         {
-          "text": "Your <code>addAt</code> method should reassign <code>head</code> to the new node when the given index is 0.",
+          "text": "当传入的 index 的值为 0 时，<code>addAt</code>方法应该让<code>head</code>指针指向新加入的节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.addAt(0,'cat'); return test.head().element === 'cat'}()), 'Your <code>addAt</code> method should reassign <code>head</code> to the new node when the given index is 0.');"
         },
         {
-          "text": "Your <code>addAt</code> method should increase the length of the linked list by one for each new node added to the linked list.",
+          "text": "每新添加一个元素到链表当中时，<code>addAt</code>方法应该让链表的长度加 1 。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.addAt(0,'cat'); return test.size() === 3}()), 'Your <code>addAt</code> method should increase the length of the linked list by one for each new node added to the linked list.');"
         },
         {
-          "text": "Your <code>addAt</code> method should return <code>false</code> if a node was unable to be added.",
+          "text": "如果节点未能成功添加到链表当中，<code>addAt</code>方法应该返回<code>false</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return (test.addAt(4,'cat') === false); }()), 'Your <code>addAt</code> method should return <code>false</code> if a node was unable to be added.');"
         }
       ],
@@ -1824,43 +1824,43 @@
       "id": "587d825a367417b2b2512c87",
       "title": "Create a Doubly Linked List",
       "description": [
-        "All of the linked lists we've created so far are singly linked lists. Here, we'll create a <dfn>doubly linked list</dfn>. As the name implies, nodes in a doubly linked list have references to the next and previous node in the list.",
-        "This allows us to traverse the list in both directions but it also requires more memory to be used because every node must contain an additional reference to the previous node in the list.",
+        "之前我们创建的都是单向链表。现在我们来创建双向链表。就像名字所暗示的那样，双向链表拥有两个指针，一个指向前一个元素一个指向后一个元素。",
+        "这种链表可以从两个方向遍历元素，但是因为每个节点都有两个指针所以这种链表会占据更多的空间。",
         "<hr>",
-        "We've provided a <code>Node</code> object and started our <code>DoublyLinkedList</code>. Let's add two methods to our doubly linked list called <code>add</code> and <code>remove</code>. The <code>add</code> method should add the given element to the list while the <code>remove</code> method should remove all occurrences of a given element in the list.",
-        "Be careful to handle any possible edge cases when writing these methods, such as deletions for the first or last element. Also, removing any item on an empty list should return <code>null</code>."
+        "我们提供了一个<code>Node</code>来开始学习<code>DoublyLinkedList</code>。现在我们来给我们的双向链表添加<code>add</code>和<code>remove</code>方法。<code>add</code>方法应该添加指定元素到列表当中，而<code>remove</code>方法移除表中指定元素。",
+        "当我们处理表中的边界元素时，比如移除移除表中头部或者尾部的元素时需要谨慎。而当试图从空表当中移除元素时应该返回<code>null</code>。"
       ],
       "tests": [
         {
-          "text": "The DoublyLinkedList data structure exists.",
+          "text": "该双向链表存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (typeof test == 'object')})(), 'The DoublyLinkedList data structure exists.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called add.",
+          "text": "该双向链表有一个 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.add == undefined) { return false; }; return (typeof test.add == 'function')})(), 'The DoublyLinkedList has a method called add.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called remove.",
+          "text": "该双向链表有一个 remove 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.remove == undefined) { return false; }; return (typeof test.remove == 'function')})(), 'The DoublyLinkedList has a method called remove.');"
         },
         {
-          "text": "Removing an item from an empty list returns null.",
+          "text": "试图从空表当中移除元素时应该返回 null 。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (test.remove(100) == null); })(), 'Removing an item from an empty list returns null.');"
         },
         {
-          "text": "The add method adds items to the list.",
+          "text": "add 方法添加元素当表当中。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(5); test.add(6); test.add(723); return (test.print().join('') == '56723'); })(), 'The add method adds items to the list.');"
         },
         {
-          "text": "Each node keeps track of the previous node.",
+          "text": "每个节点应该能指向前一个节点。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(50); test.add(68); test.add(73); return (test.printReverse().join('') == '736850'); })(), 'Each node keeps track of the previous node.');"
         },
         {
-          "text": "The first item can be removed from the list.",
+          "text": "表中第一个元素能够被移除。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(25); test.add(35); test.add(60); test.remove(25); return ( test.print().join('') == '3560' ) })(), 'The first item can be removed from the list.');"
         },
         {
-          "text": "The last item can be removed from the list.",
+          "text": "表中最后一个元素能够被移除。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(25); test.add(35); test.add(60); test.remove(60); return ( test.print().join('') == '2535' ) })(), 'The last item can be removed from the list.');"
         }
       ],
@@ -1925,31 +1925,31 @@
       "id": "587d825a367417b2b2512c88",
       "title": "Reverse a Doubly Linked List",
       "description": [
-        "Let's create one more method for our doubly linked list called reverse which reverses the list in place. Once the method is executed the head should point to the previous tail and the tail should point to the previous head. Now, if we traverse the list from head to tail we should meet the nodes in a reverse order compared to the original list. Trying to reverse an empty list should return null."
+        "现在我们来为双向链表创建一个 reverse 方法，该方法反转列表当中的元素。一旦该方法执行之后 head 指针应该指向表尾部，tail 指针则指向表头部。如果我们从头到尾反转了一个链表的话，则新的链表的顺序和原表应该完全相反。当试图反转一个空表时，该方法应该返回 null 。"
       ],
       "tests": [
         {
-          "text": "The DoublyLinkedList data structure exists.",
+          "text": "该双向链表存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (typeof test == 'object')})(), 'The DoublyLinkedList data structure exists.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called add.",
+          "text": "该双向链表有 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.add == undefined) { return false; }; return (typeof test.add == 'function')})(), 'The DoublyLinkedList has a method called add.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called reverse.",
+          "text": "该双向链表有 reverse 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.reverse == undefined) { return false; }; return (typeof test.reverse == 'function')})(), 'The DoublyLinkedList has a method called reverse.');"
         },
         {
-          "text": "Reversing an empty list returns null.",
+          "text": "试图反转一个空表时会返回 null 。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (test.reverse() == null); })(), 'Reversing an empty list returns null.');"
         },
         {
-          "text": "The reverse method reverses the list.",
+          "text": "reverse 方法翻转整个表。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(58); test.add(61); test.add(32); test.reverse(); return (test.print().join('') == '326158'); })(), 'The reverse method reverses the list.');"
         },
         {
-          "text": "The next and previous references are correctly maintained when a list is reversed.",
+          "text": "当整个表被翻转之后，表中每个元素的 next 和 previous 指针都应该存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(11); test.add(22); test.add(33); test.reverse(); return (test.printReverse().join('') == '112233'); })(), 'The next and previous references are correctly maintained when a list is reversed.');"
         }
       ],
