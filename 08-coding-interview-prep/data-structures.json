@@ -8,34 +8,34 @@
       "id": "587d8253367417b2b2512c6a",
       "title": "Typed Arrays",
       "description": [
-        "Arrays are JavaScript objects that can hold a lot of different elements.",
+        "数组是一种 JavaScript 对象，它能存储各种数据类型的元素。",
         "<code>var complexArr = [1, 5, \"2\", \"Word\", {\"name\": \"James\"}];</code>",
-        "Basically what happens in the background is that your browser will automatically give the right amount of memory space for that array. It will also change as needed if you add or remove data.",
-        "However, in the world of high performance and different element types, sometimes you need to be more specific on how much memory is given to an array.",
-        "<dfn>Typed arrays</dfn> are the answer to this problem. You are now able to say how much memory you want to give an array. Below is a basic overview of the different types of arrays available and the size in bytes for each element in that array.",
-        "<table class='table table-striped'><tr><th>Type</th><th>Each element size in bytes</th></tr><tr><td><code>Int8Array</code></td><td>1</td></tr><tr><td><code>Uint8Array</code></td><td>1</td></tr><tr><td><code>Uint8ClampedArray</code></td><td>1</td></tr><tr><td><code>Int16Array</code></td><td>2</td></tr><tr><td><code>Uint16Array</code></td><td>2</td></tr><tr><td><code>Int32Array</code></td><td>4</td></tr><tr><td><code>Uint32Array</code></td><td>4</td></tr><tr><td><code>Float32Array</code></td><td>4</td></tr><tr><td><code>Float64Array</code></td><td>8</td></tr></table>",
-        "There are two ways in creating these kind of arrays. One way is to create it directly. Below is how to create a 3 length <code>Int16Array</code>.",
+        "通常浏览器会自动地为数组分配合适的内存空间，同时内存大小也会随着你增删元素而发生变化。",
+        "然而，在一些对高性能有要求以及有不同数据类型的情况下，有时需要更精确地给一个数组分配内存空间。",
+        "<dfn>Typed arrays</dfn>就是解决这类问题的一种方案。我们可以精确地给一个数组分配内存空间。如下列表说明了这种数组能够存放的数据类型以及不同数据类型所占据的字节数。",
+        "<table class='table table-striped'><tr><th>类型</th><th>元素所占字节数</th></tr><tr><td><code>Int8Array</code></td><td>1</td></tr><tr><td><code>Uint8Array</code></td><td>1</td></tr><tr><td><code>Uint8ClampedArray</code></td><td>1</td></tr><tr><td><code>Int16Array</code></td><td>2</td></tr><tr><td><code>Uint16Array</code></td><td>2</td></tr><tr><td><code>Int32Array</code></td><td>4</td></tr><tr><td><code>Uint32Array</code></td><td>4</td></tr><tr><td><code>Float32Array</code></td><td>4</td></tr><tr><td><code>Float64Array</code></td><td>8</td></tr></table>",
+        "有两种方式可以创这类数组。其中一种是直接创建，如下代码创建了一个长度为 3 的 <code>Int16Array</code>.",
         "<blockquote>var i8 = new Int16Array(3);<br>console.log(i8);<br>// Returns [0, 0, 0]</blockquote>",
-        "You can also create a <dfn>buffer</dfn> to assign how much data (in bytes) you want the array to take up.",
-        "<strong>Note</strong><br>To create typed arrays using buffers, you need to assign the number of bytes to be a multiple of the bytes listed above.",
+        "我们也可以通过创建<dfn>buffer</dfn>的方式来决定一个数组要容纳多少元素。",
+        "<strong>注意</strong><br>我们可以通过分配上面列出的多个 bytes 的倍数来创建一个和上方代码中一样的类型数组。",
         "<blockquote>// Create same Int16Array array differently<br>var byteSize = 6; // Needs to be multiple of 2<br>var buffer = new ArrayBuffer(byteSize);<br>var i8View = new Int16Array(buffer);<br>buffer.byteLength; // Returns 6<br>i8View.byteLength; // Returns 6<br>console.log(i8View); // Returns [0, 0, 0]</blockquote>",
-        "<dfn>Buffers</dfn> are general purpose objects that just carry data. You cannot access them normally. To access them, you need to first create a <dfn>view</dfn>.",
+        "<dfn>Buffers</dfn>是一类存储数据的特定类型对象。我们需要通过创建视图来访问这类对象，不能直接访问。",
         "<blockquote>i8View[0] = 42;<br>console.log(i8View); // Returns [42, 0, 0]</blockquote>",
-        "<strong>Note</strong><br>Typed arrays do not have some of the methods traditional arrays have such as <code>.pop()</code> or <code>.push()</code>. Typed arrays also fail <code>Array.isArray()</code> that checks if something is an array. Although simpler, this can be an advantage for less-sophisticated JavaScript engines to implement them.",
+        "<strong>注意</strong><br>Typed Arrays 并没有像<code>.pop()</code>或<code>.push()</code>这些一般数组拥有的方法。使用<code>Array.isArray()</code>方法对 Typed Arrays 做判断返回的是 fail ，而非 true。因为更加简洁，所以更便于简化 JavaScript 引擎去实现这类数组。",
         "<hr>",
-        "First create a <code>buffer</code> that is 64-bytes. Then create a <code>Int32Array</code> typed array with a view of it called <code>i32View</code>."
+        "先创建一个64个字节的<code>buffer</code>，再创建一个类型是<code>Int32Array</code>名称叫做<code>i32View</code>的视图。"
       ],
       "tests": [
         {
-          "text": "Your <code>buffer</code> should be 64 bytes large.",
+          "text": "<code>buffer</code>应该有 64 个字节的长度。",
           "testString": "assert(buffer.byteLength === 64, 'Your <code>buffer</code> should be 64 bytes large.');"
         },
         {
-          "text": "Your <code>i32View</code> view of your buffer should be 64 bytes large.",
+          "text": "<code>i32View</code>视图应该有 64 个字节的长度。",
           "testString": "assert(i32View.byteLength === 64, 'Your <code>i32View</code> view of your buffer should be 64 bytes large.');"
         },
         {
-          "text": "Your <code>i32View</code> view of your buffer should be 16 elements long.",
+          "text": "<code>i32View</code>视图应该能容纳 16 个元素。",
           "testString": "assert(i32View.length === 16, 'Your <code>i32View</code> view of your buffer should be 16 elements long.');"
         }
       ],
@@ -62,30 +62,30 @@
       "id": "587d8250367417b2b2512c5e",
       "title": "Learn how a Stack Works",
       "description": [
-        "You are probably familiar with stack of books on your table. You have likely used the undo feature of a text editor. You are also probably used to hitting the back button on your phone to go back to the previous view in your app.",
-        "You know what they all have in common? They all store the data in a way so that you can traverse backwards.",
-        "The topmost book in the stack was the one that was put there last. If you remove that book from your stack's top, you would expose the book that was put there before the last book and so on.",
-        "If you think about it, in all the above examples, you are getting <dfn>Last-In-First-Out</dfn> type of service. We will try to mimic this with our code.",
-        "This data storage scheme is called a <dfn>Stack</dfn>. In particular, we would have to implement the <code>push()</code> method that pushes JavaScript objects at the top of the stack; and <code>pop()</code> method, that removes the JavaScript object that's at the top of the stack at the current moment.",
+        "我们应该都熟悉桌上摆着一堆书的场景，也可能应该使用过文本编辑器的撤销功能，同样我们也点击过手机应用里面的返回键来回到上一个操作页面。",
+        "这些场景是否有什么共同之处呢？他们都以某种方式存储了数据，我们都可以通过一些操作返回到之前的状态。",
+        "最上层的书总是最后放上去的。如果我们拿走了最上面的书，我们看到的总是倒数第二本放上去的书。",
+        "我们会发现上述例子都遵循“后进先出”这个原则。而我们会在代码中实现这种原则。",
+        "我们将这种类型的数据存储方式称为“栈”。需要特别注意的是我们通常使用<code>push()</code>方法将 JavaScript 对象压入栈中，同时使用<code>pop()</code>方法将 JavaScript 对象弹出栈。",
         "<hr>",
-        "Here we have a stack of homework assignments represented as an array: <code>\"BIO12\"</code> is at the base, and <code>\"PSY44\"</code> is at the top of the stack.",
-        "Modify the given array and treat it like a <code>stack</code> using the JavaScript methods mentioned above. Remove the top element <code>\"PSY44\"</code> from the stack. Then add <code>\"CS50\"</code> to be the new top element of the stack."
+        "现在我们以数组形式存储一些作业信息，<code>\"BIO12\"</code>位于栈底，而<code>\"PSY44\"</code>则处于栈顶。",
+        "现在用上文提到的 JavaScript 方法来对这个数组做栈操作。移除栈顶元素<code>\"PSY44\"</code>，然后再往栈顶添加<code>\"CS50\"</code>元素。"
       ],
       "tests": [
         {
-          "text": "<code>homeworkStack</code> should only contain 4 elements.",
+          "text": "<code>homeworkStack</code>应该包含4个元素。",
           "testString": "assert(homeworkStack.length === 4, '<code>homeworkStack</code> should only contain 4 elements.');"
         },
         {
-          "text": "The last element in <code>homeworkStack</code> should be <code>\"CS50\"</code>.",
+          "text": "<code>homeworkStack</code>当中最后一个元素应该是<code>\"CS50\"</code>。",
           "testString": "assert(homeworkStack[3] === 'CS50', 'The last element in <code>homeworkStack</code> should be <code>\"CS50\"</code>.');"
         },
         {
-          "text": "<code>homeworkStack</code> should not contain <code>\"PSY44\"</code>.",
+          "text": "<code>homeworkStack</code>当中不存在<code>\"PSY44\"</code>元素。",
           "testString": "assert(homeworkStack.indexOf('PSY44') === -1, '<code>homeworkStack</code> should not contain <code>\"PSY44\"</code>.');"
         },
         {
-          "text": "The initial declaration of the <code>homeworkStack</code> should not be changed.",
+          "text": "对于<code>homeworkStack</code>的命名不能有变动。",
           "testString": "assert(code.match(/=/g).length === 1 && /homeworkStack\\s*=\\s*\\[\"BIO12\"\\s*,\\s*\"HIS80\"\\s*,\\s*\"MAT122\"\\s*,\\s*\"PSY44\"\\]/.test(code), 'The initial declaration of the <code>homeworkStack</code> should not be changed.');"
         }
       ],
@@ -100,7 +100,7 @@
           "name": "index",
           "contents": [
             "var homeworkStack = [\"BIO12\",\"HIS80\",\"MAT122\",\"PSY44\"];",
-            "// Only change code below this line",
+            "// 请在本行下方输入代码",
             ""
           ],
           "head": [],
@@ -112,48 +112,48 @@
       "id": "587d8250367417b2b2512c5f",
       "title": "Create a Stack Class",
       "description": [
-        "In the last section, we talked about what a stack is and how we can use an array to represent a stack. In this section, we will be creating our own stack class.",
-        "Although you can use arrays to create stacks, sometimes it is best to limit the amount of control we have with our stacks.",
-        "Apart from the <code>push</code> and <code>pop</code> method, stacks have other useful methods. Let's add a <code>peek</code>, <code>isEmpty</code>, and <code>clear</code> method to our stack class.",
-        "Instructions",
-        "Write a <code>push</code> method that pushes an element to the top of the stack, a <code>pop</code> method that removes the element on the top of the stack, a <code>peek</code> method that looks at the first element in the stack, an <code>isEmpty</code> method that checks if the stack is empty, and a <code>clear</code> method that removes all elements from the stack.",
-        "Normally stacks don't have this, but we've added a <code>print</code> helper method that console logs the collection."
+        "通过上一章内容我们了解了栈的概念，同时也学习了如何使用数组去表示一个栈。本章内容我们学习如何创建一个栈类。",
+        "虽然我们可以使用数组来创建栈，但是有时我们需要控制栈拥有哪些方法。",
+        "除了<code>push</code>和<code>pop</code>两个方法，栈还拥有其它一些很有效的方法。现在我们来给栈类添加<code>peek</code>, <code>isEmpty</code>以及<code>clear</code>这些方法。",
+        "提示",
+        "编写能够将元素压入栈顶的<code>push</code>方法，移除栈顶元素的<code>pop</code>方法，查看栈中第一个元素的<code>peek</code>方法，判断栈是否为空的<code>isEmpty</code>方法，以及清空栈内容所有元素的<code>clear</code>方法。",
+        "通常栈类当中并没有这些方法，但是我们在右侧代码区为栈类添加了一个<code>print</code>方法，该方法会打印出集合。"
       ],
       "tests": [
         {
-          "text": "Your <code>Stack</code> class should have a <code>push</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>push</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.push === 'function')}()), 'Your <code>Stack</code> class should have a <code>push</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>pop</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>pop</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.pop === 'function')}()), 'Your <code>Stack</code> class should have a <code>pop</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>peek</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>peek</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.peek === 'function')}()), 'Your <code>Stack</code> class should have a <code>peek</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>isEmpty</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.isEmpty === 'function')}()), 'Your <code>Stack</code> class should have a <code>isEmpty</code> method.');"
         },
         {
-          "text": "Your <code>Stack</code> class should have a <code>clear</code> method.",
+          "text": "你的<code>Stack</code>类应有<code>clear</code>方法。",
           "testString": "assert((function(){var test = new Stack(); return (typeof test.clear === 'function')}()), 'Your <code>Stack</code> class should have a <code>clear</code> method.');"
         },
         {
-          "text": "The <code>peek</code> method should return the top element of the stack",
+          "text": "<code>peek</code>方法应该返回栈顶元素。",
           "testString": "assert((function(){var test = new Stack();  test.push('CS50'); return (test.peek() === 'CS50')}()), 'The <code>peek</code> method should return the top element of the stack');"
         },
         {
-          "text": "The <code>pop</code> method should remove and return the top element of the stack",
+          "text": "<code>pop</code>方法应该移除栈顶元素并返回该元素。",
           "testString": "assert((function(){var test = new Stack(); test.push('CS50'); return (test.pop() === 'CS50');}()), 'The <code>pop</code> method should remove and return the top element of the stack');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return true if a stack does not contain any elements",
+          "text": "当栈内没有元素时<code>isEmpty</code>方法返回true。",
           "testString": "assert((function(){var test = new Stack(); return test.isEmpty()}()), 'The <code>isEmpty</code> method should return true if a stack does not contain any elements');"
         },
         {
-          "text": "The <code>clear</code> method should remove all element from the stack",
+          "text": "<code>clear</code>移除栈内所有元素。",
           "testString": "assert((function(){var test = new Stack();  test.push('CS50'); test.clear(); return (test.isEmpty())}()), 'The <code>clear</code> method should remove all element from the stack');"
         }
       ],
@@ -172,9 +172,9 @@
             "    this.print = function() {",
             "        console.log(collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -186,47 +186,47 @@
       "id": "587d8250367417b2b2512c60",
       "title": "Create a Queue Class",
       "description": [
-        "Like stacks, queues are a collection of elements. But unlike stacks, queues follow the FIFO (First-In First-Out) principle. Elements added to a queue are pushed to the tail, or the end, of the queue, and only the element at the front of the queue is allowed to be removed.",
-        "We could use an array to represent a queue, but just like stacks, we want to limit the amount of control we have over our queues.",
-        "The two main methods of a queue class is the enqueue and the dequeue method. The enqueue method pushes an element to the tail of the queue, and the dequeue method removes and returns the element at the front of the queue. Other useful methods are the front, size, and isEmpty methods.",
-        "Instructions",
-        "Write an enqueue method that pushes an element to the tail of the queue, a dequeue method that removes and returns the front element, a front method that lets us see the front element, a size method that shows the length, and an isEmpty method to check if the queue is empty."
+        "如同栈一样，队列也是一系列元素的集合。但是与栈不同的是队列遵循的是 FIFO (First-In First-Out 先进先出) 原则。新增元素会被添加进队列尾部，队列中元素的移除是头部操作。",
+        "我们可以使用数组像创建栈那样来创建队列，同时我们也希望控制队列中拥有哪些操作方法。",
+        " enqueue 和 dequeue 是队列类当中两个最主要的方法。入队方法将元素推入队尾，而出队方法将队首元素移动并返回该元素。其它比较实用的方法有 front,size 以及 isEmpty 方法。",
+        "提示",
+        "编写 enqueue 方法，该方法将新元素推入队尾；编写 dequeue 方法，该方法移除并返回队首元素；编写 front 方法，该方法返回队首元素；编写 size 方法，该方法返回队列长度；编写 isEmpty 方法，该方法判断队列是否为空。"
       ],
       "tests": [
         {
-          "text": "Your <code>Queue</code> class should have a <code>enqueue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>enqueue</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.enqueue === 'function')}()), 'Your <code>Queue</code> class should have a <code>enqueue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>dequeue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>dequeue</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.dequeue === 'function')}()), 'Your <code>Queue</code> class should have a <code>dequeue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>front</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>front</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.front === 'function')}()), 'Your <code>Queue</code> class should have a <code>front</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>size</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.size === 'function')}()), 'Your <code>Queue</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have an <code>isEmpty</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new Queue();  return (typeof test.isEmpty === 'function')}()), 'Your <code>Queue</code> class should have an <code>isEmpty</code> method.');"
         },
         {
-          "text": "The <code>dequeue</code> method should remove and return the front element of the queue",
+          "text": "<code>dequeue</code>方法应该移除并返回队首元素",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return (test.dequeue() === 'Smith')}()), 'The <code>dequeue</code> method should remove and return the front element of the queue');"
         },
         {
-          "text": "The <code>front</code> method should return value of the front element of the queue",
+          "text": "<code>front</code>方法应该返回队首元素",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); test.enqueue('John'); return (test.front() === 'Smith')}()), 'The <code>front</code> method should return value of the front element of the queue');"
         },
         {
-          "text": "The <code>size</code> method should return the length of the queue",
+          "text": "<code>size</code>方法应该返回队列长度。",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return (test.size() === 1)}()), 'The <code>size</code> method should return the length of the queue');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return <code>false</code> if there are elements in the queue",
+          "text": "当队列当中有元素时<code>isEmpty</code>方法应该返回<code>false</code>",
           "testString": "assert((function(){var test = new Queue();  test.enqueue('Smith'); return !(test.isEmpty())}()), 'The <code>isEmpty</code> method should return <code>false</code> if there are elements in the queue');"
         }
       ],
@@ -245,9 +245,9 @@
             "    this.print = function() {",
             "        console.log(collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -259,41 +259,41 @@
       "id": "587d8255367417b2b2512c74",
       "title": "Create a Priority Queue Class",
       "description": [
-        "In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue in which items may have additional information which specifies their priority. This could be simply represented with an integer. Item priority will override placement order in determining the sequence items are dequeued. If an item with a higher priority is enqueued after items with lower priority, the higher priority item will be dequeued before all the others.",
-        "For instance, let’s imagine we have a priority queue with three items:",
+        "在这次挑战中我们来创建优先队列。优先队列是一种特殊类型的队列，这种队列中会有额外的信息来说明队列中元素的优先次序。这种优先次序可以使用整型数据来表示。元素的优先级会直接影响到元素的出队顺序。如果一个优先级较高的元素比较低优先级的元素后入队，但是高优先级的元素会先出队列。",
+        "举个栗子，现在有一个拥有 3 个元素的优先队列：",
         "<code>[[’kitten’, 2], [‘dog’, 2], [‘rabbit’, 2]]</code>",
-        "Here the second value (an integer) represents item priority. If we enqueue <code>[‘human’, 1]</code> with a priority of <code>1</code> (assuming lower priorities are given precedence) it would then be the first item to be dequeued. The collection would like this:",
+        "元素当中的第二个值（一个整型数字）代表它的优先级。如果我们入队<code>[‘human’, 1]</code>这个优先级为<code>1</code>的元素（这里规定数字越小优先级越高），那么这个元素在本优先队列当中会第一个出队。新的集合如下：",
         "<code>[[‘human’, 1], [’kitten’, 2], [‘dog’, 2], [‘rabbit’, 2]]</code>.",
-        "We’ve started writing a <code>PriorityQueue</code> in the code editor. You will need to add an <code>enqueue</code> method for adding items with a priority, a <code>dequeue</code> method for removing items, a <code>size</code> method to return the number of items in the queue, a <code>front</code> method to return the element at the front of the queue, and finally an <code>isEmpty</code> method that will return <code>true</code> if the queue is empty or <code>false</code> if it is not.",
-        "The <code>enqueue</code> should accept items with the format shown above (<code>['human', 1]</code>) where <code>1</code> represents the priority. The <code>dequeue</code> should return only the current item, not its priority."
+        "我们已经在代码编辑器当中编写了<code>PriorityQueue</code>。你需要添加一个<code>enqueue</code>方法，使用该方法入队的元素都带有优先级；添加一个移除元素的<code>dequeue</code>方法；添加能够返回队列中元素总数的<code>size</code>方法；添加能够返回队列头部元素的<code>front</code>方法；最后需要添加<code>isEmpty</code>方法，当队列为空时<code>isEmpty</code>方法返回<code>true</code>否则返回<code>false</code>。",
+        "<code>enqueue</code>方法接收如上 (<code>['human', 1]</code>) 这种元素，其中数字<code>1</code>表示元素优先级。<code>dequeue</code>方法应该返回的是当前元素，无需返回它的优先级。"
       ],
       "tests": [
         {
-          "text": "Your <code>Queue</code> class should have a <code>enqueue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>enqueue</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.enqueue === 'function')}()), 'Your <code>Queue</code> class should have a <code>enqueue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>dequeue</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>dequeue</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.dequeue === 'function')}()), 'Your <code>Queue</code> class should have a <code>dequeue</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have a <code>size</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.size === 'function')}()), 'Your <code>Queue</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "Your <code>Queue</code> class should have an <code>isEmpty</code> method.",
+          "text": "你的<code>Queue</code>类应该有<code>isEmpty</code>方法。",
           "testString": "assert((function(){var test = new PriorityQueue();  return (typeof test.isEmpty === 'function')}()), 'Your <code>Queue</code> class should have an <code>isEmpty</code> method.');"
         },
         {
-          "text": "Your PriorityQueue should correctly keep track of the current number of items using the <code>size</code> method as items are enqueued and dequeued.",
+          "text": "当元素出队和入队时你的优先队列应该使用<code>size</code>方法实时跟踪队列当中元素的数量。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['David Brown', 2]); test.enqueue(['Jon Snow', 1]); var size1 = test.size(); test.dequeue(); var size2 = test.size(); test.enqueue(['A', 3]); test.enqueue(['B', 3]); test.enqueue(['C', 3]); return (size1 === 2 && size2 === 1 && test.size() === 4)}()), 'Your PriorityQueue should correctly keep track of the current number of items using the <code>size</code> method as items are enqueued and dequeued.');"
         },
         {
-          "text": "The <code>isEmpty</code> method should return <code>true</code> when the queue is empty.",
+          "text": "当队列为空时<code>isEmpty</code>方法应该返回<code>true</code>。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['A', 1]); test.enqueue(['B', 1]); test.dequeue(); var first = test.isEmpty(); test.dequeue(); return (!first && test.isEmpty()); }()), 'The <code>isEmpty</code> method should return <code>true</code> when the queue is empty.');"
         },
         {
-          "text": "The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.",
+          "text": "优先队列当中高优先级的元素应该先于低优先级的元素出队，同一优先级的元素则遵循先进先出的原则。",
           "testString": "assert((function(){var test = new PriorityQueue(); test.enqueue(['A', 5]); test.enqueue(['B', 5]); test.enqueue(['C', 5]); test.enqueue(['D', 3]); test.enqueue(['E', 1]); test.enqueue(['F', 7]); var result = []; result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); result.push(test.dequeue()); return result.join('') === 'EDABCF';}()), 'The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.');"
         }
       ],
@@ -313,9 +313,9 @@
             "    this.printCollection = function() {",
             "      console.log(this.collection);",
             "    };",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -327,39 +327,39 @@
       "id": "587d8255367417b2b2512c75",
       "title": "Create a Circular Queue",
       "description": [
-        "In this challenge you will be creating a Circular Queue. A circular queue is basically a queue that writes to the end of a collection then begins over writing itself at the beginning of the collection. This is type of data structure has some useful applications in certain situations. For example, a circular queue can be used for streaming media. Once the queue is full, new media data simply begins to overwrite old data.",
-        "A good way to illustrate this concept is with an array:",
+        "在本次挑战中我们来创建一个循环队列。当往循环队列的尾部添加元素时新增的元素会覆盖队列当中起始位置的元素。这种数据结构在某些特定场合会有一些实际应用。比如循环队列可以用于流媒体服务，当队列满了以后新的媒体数据会从头部直接覆盖原有的数据。",
+        "下面我们用数组来给你说明循环数组这个概念：",
         "<blockquote>[1, 2, 3, 4, 5]<br> ^Read @ 0<br> ^Write @ 0</blockquote>",
-        "Here the read and write are both at position <code>0</code>. Now the queue gets 3 new records <code>a</code>, <code>b</code>, and <code>c</code>. Our queue now looks like:",
+        "读和写两个操作都从<code>0</code>这个位置开始。现在队列获取了<code>a</code>, <code>b</code>, 以及<code>c</code>这 3 个数据。新队列显示如下：",
         "<blockquote>[a, b, c, 4, 5]<br> ^Read @ 0<br>       ^Write @ 3</blockquote>",
-        "As the read head reads, it can remove values or keep them:",
+        "当读取头读取数据时，我们可以选择移除或者保留数据：",
         "<blockquote>[null, null, null, 4, 5]<br>                   ^Read @ 3<br>                   ^Write @ 3</blockquote>",
-        "Once the write reaches the end of the array it loops back to the beginning:",
+        "一旦写操作到达队列末尾时会从队列开头从新开始写入数据：",
         "<blockquote>[f, null, null, d, e]<br>                ^Read @ 3<br> ^Write @ 1</blockquote>",
-        "This approach requires a constant amount of memory but allows files of a much larger size to be processed.",
-        "Instructions:",
-        "In this challenge we will implement a circular queue. The circular queue should provide <code>enqueue</code> and <code>dequeue</code> methods which allow you to read from and write to the queue. The class itself should also accept an integer which you can use to specify the size of the queue when you create it. We've written the starting version of this class for you in the code editor. When you enqueue items to the queue, the write pointer should advance forward and loop back to the beginning once it reaches the end of the queue. Likewise, the read pointer should advance forward as you dequeue items. The write pointer should not be allowed to move past the read pointer (our class won't let you overwrite data you haven't read yet) and the read pointer should not be able to advance past data you have written.",
-        "In addition, the <code>enqueue</code> method should return the item you enqueued if it is successfully and otherwise return <code>null</code>. Similarly, when you dequeue an item it should be returned and if you cannot dequeue you should return <code>null</code>."
+        "虽然这种数据结构有着固定的内存空间，但是却能够处理空间大于该内存大小的文件。",
+        "提示：",
+        "在本次挑战中我们来实现一个循环队列。该循环队列应该有<code>enqueue</code>和<code>dequeue</code>这两个方法，通过这两个方法我们从队列中读取以及写入数据。这个类当中应该含有一个整型数据，我们通过这个数据来定义队列的长度。我们已经在编辑器当中为你写好了这个循环队列的初始版本。当你往队列当中插入数据时书写头需要前移一个位置，而如果书写头到达队列的末尾的话则需要回到队列头部重新开始写入操作。类似的，在进行出队操作时读取头也应该向前移动。书写头的位置不应该越过读取头（我们的类当中不允许发生一个数据未经读取就已经被覆盖的情况发生），同时读取头也不能越过已经写入的数据。",
+        "此外，当成功入队一个元素时<code>enqueue</code>方法应该返回该入队元素，否则就要返回<code>null</code>。同样，当出队一个元素时该元素应该被返回，否则就应该返回<code>null</code>。"
       ],
       "tests": [
         {
-          "text": "The <code>enqueue</code> method adds items to the circular queue.",
+          "text": "<code>enqueue</code>方法将元素添加进循环队列。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); var print = test.print(); return print[0] === 17 && print[1] === 32 && print[2] === 591; })(), 'The <code>enqueue</code> method adds items to the circular queue.');"
         },
         {
-          "text": "You cannot enqueue items past the read pointer.",
+          "text": "入队元素不能越过读取头。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); test.enqueue(13); test.enqueue(25); test.enqueue(59); var print = test.print(); return print[0] === 17 && print[1] === 32 && print[2] === 591; })(), 'You cannot enqueue items past the read pointer.');"
         },
         {
-          "text": "The <code>dequeue</code> method dequeues items from the queue.",
+          "text": "<code>dequeue</code>方法让元素出队。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); return test.dequeue() === 17 && test.dequeue() === 32 && test.dequeue() === 591; })(), 'The <code>dequeue</code> method dequeues items from the queue.');"
         },
         {
-          "text": "After an item is dequeued its position in the queue should be reset to <code>null</code>.",
+          "text": "一个元素出队之后该位置应该被重置为<code>null</code>。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(672); test.dequeue(); test.dequeue(); var print = test.print(); return print[0] === null && print[1] === null && print[2] === 672; })(), 'After an item is dequeued its position in the queue should be reset to <code>null</code>.');"
         },
         {
-          "text": "Trying to dequeue past the write pointer returns <code>null</code> and does not advance the write pointer.",
+          "text": "尝试出队书写头时会返回<code>null</code>，同时不要越过书写头。",
           "testString": "assert((function(){ var test = new CircularQueue(3); test.enqueue(17); test.enqueue(32); test.enqueue(591); return test.dequeue() === 17 && test.dequeue() === 32 && test.dequeue() === 591 && test.dequeue() === null && test.dequeue() === null && test.dequeue() === null && test.dequeue() === null && test.enqueue(100) === 100 && test.dequeue() === 100; })(), 'Trying to dequeue past the write pointer returns <code>null</code> and does not advance the write pointer.');"
         }
       ],
@@ -395,15 +395,15 @@
             "",
             "",
             "   enqueue(item) {",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "   }",
             "",
             "   dequeue() {",
-            "    // Only change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // 请在本行上方输入代码",
             "   }",
             "}"
           ],
@@ -416,28 +416,28 @@
       "id": "8d1323c8c441eddfaeb5bdef",
       "title": "Create a Set Class",
       "description": [
-        "In the next few exercises we are going to create a function to emulate a data structure called a \"Set\". A Set is like an array, but it cannot contain duplicate values. The typical use for a Set is to simply check for the presence of an item. This can be implemented with an object, for instance:",
+        "在接下来的几个章节里面我们会通过创建一个函数来模拟 “集合” 这种数据结构。集合跟数组很类似，但是集合中元素具有唯一性。集合的典型应用是检查其中是否存在某一元素。这种应用可以通过对象来实现，举例如下：",
         "<blockquote>var set = new Object();<br>set.foo = true;<br>// See if foo exists in our set:<br>console.log(set.foo) // true</blockquote>",
-        "In the next few exercises, we will build a full featured Set from scratch.",
-        "For this exercise, create a function that will add a value to our set collection as long as the value does not already exist in the set. For example:",
+        "在接下来的几个联系当中，我们会从零开始创建一个拥有完整特性的集合。",
+        "在本次联系中，当中集合不存在某个元素时我们会将该元素添加进 set 集合当中，例子如下：",
         "<blockquote>this.add = function(element) {<br>  //some code to add value to the set<br>}</blockquote>",
-        "The function should return <code>true</code> if the value is successfully added and <code>false</code> otherwise."
+        "当成功添加元素时函数会返回<code>true</code>，否则会返回<code>false</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have an <code>add</code> method.",
+          "text": "<code>Set</code>类应该具有<code>add</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.add === 'function')}()), 'Your <code>Set</code> class should have an <code>add</code> method.');"
         },
         {
-          "text": "Your <code>add</code> method should not add duplicate values.",
+          "text": "<code>add</code>方法不能添加重复值。",
           "testString": "assert((function(){var test = new Set(); test.add('a'); test.add('b'); test.add('a'); var vals = test.values(); return (vals[0] === 'a' && vals[1] === 'b' && vals.length === 2)}()), 'Your <code>add</code> method should not add duplicate values.');"
         },
         {
-          "text": "Your <code>add</code> method should return <code>true</code> when a value has been successfully added.",
+          "text": "当成功添加元素时<code>add</code>方法应该返回<code>true</code>。",
           "testString": "assert((function(){var test = new Set(); var result = test.add('a'); return (result != undefined) && (result === true);}()), 'Your <code>add</code> method should return <code>true</code> when a value has been successfully added.');"
         },
         {
-          "text": "Your <code>add</code> method should return <code>false</code> when a duplicate value is added.",
+          "text": "当添加重复元素时<code>add</code>方法应该返回<code>false</code>。",
           "testString": "assert((function(){var test = new Set(); test.add('a'); var result = test.add('a'); return (result != undefined) && (result === false);}()), 'Your <code>add</code> method should return <code>false</code> when a duplicate value is added.');"
         }
       ],
@@ -453,18 +453,18 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold our set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -476,19 +476,19 @@
       "id": "587d8253367417b2b2512c6b",
       "title": "Remove from a Set",
       "description": [
-        "In this exercises we are going to create a delete function for our set. The function should be named <code>this.remove</code>. This function should accept a value and check if it exists in the set. If it does, remove that value from the set, and return true. Otherwise, return false."
+        "在本次练习当中我们来为 set 集合创建一个 delete 函数。该函数应该被命名为<code>this.remove</code>。该函数接收一个值并判断该值在集合中是否存在，如何存在就从集合中移除该元素并返回 true 否则就返回 false 。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>remove</code> method.",
+          "text": "<code>Set</code>类应该有<code>remove</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.remove === 'function')}()), 'Your <code>Set</code> class should have a <code>remove</code> method.');"
         },
         {
-          "text": "Your <code>remove</code> method should only remove items that are present in the set.",
+          "text": "<code>remove</code>方法应该只移除集合中存在的元素。",
           "testString": "assert.deepEqual((function(){var test = new Set(); test.add('a');test.add('b');test.remove('c'); return test.values(); })(), ['a', 'b'], 'Your <code>remove</code> method should only remove items that are present in the set.');"
         },
         {
-          "text": "Your <code>remove</code> method should remove the given item from the set.",
+          "text": "<code>remove</code>方法应该移除集合中的指定值。",
           "testString": "assert((function(){var test = new Set(); test.add('a');test.add('b');test.remove('a'); var vals = test.values(); return (vals[0] === 'b' && vals.length === 1)}()), 'Your <code>remove</code> method should remove the given item from the set.');"
         }
       ],
@@ -504,17 +504,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -522,8 +522,8 @@
             "        }",
             "        return false;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -535,15 +535,15 @@
       "id": "8d1923c8c441eddfaeb5bdef",
       "title": "Size of the Set",
       "description": [
-        "In this exercise we are going to create a size function for our Set. This function should be named <code>this.size</code> and it should return the size of the collection."
+        "在本次练习当中我们会为 Set 集合创建一个 size 函数。该函数应该被命名为<code>this.size</code>并该函数会返回集合的长度。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>size</code> method.",
+          "text": "<code>Set</code>类应该有<code>size</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.size === 'function')}()), 'Your <code>Set</code> class should have a <code>size</code> method.');"
         },
         {
-          "text": "The <code>size</code> method should return the number of elements in the collection.",
+          "text": "<code>size</code>应该返回集合中元素的个数。",
           "testString": "assert((function(){var test = new Set(); test.add('a');test.add('b');test.remove('a');return (test.size() === 1)}()), 'The <code>size</code> method should return the number of elements in the collection.');"
         }
       ],
@@ -559,17 +559,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false ",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -577,7 +577,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -586,8 +586,8 @@
             "        }",
             "        return false;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -599,17 +599,17 @@
       "id": "587d8253367417b2b2512c6c",
       "title": "Perform a Union on Two Sets",
       "description": [
-        "In this exercise we are going to perform a union on two sets of data. We will create a method on our <code>Set</code> data structure called <code>union</code>. This method should take another <code>Set</code> as an argument and return the <code>union</code> of the two sets, excluding any duplicate values.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the union of setA and setB is: <code>setA.union(setB) = ['a', 'b', 'c', 'd', 'e']</code>."
+        "在本次练习当中我们来合并两个集合当中的元素。我们会在<code>Set</code>数据结构当中创建<code>union</code>方法。该方法将<code>Set</code>作为参数并返回两个集合的合集，并且其中的元素具有唯一性。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>和集合<code>setB = ['a','b','d','e']</code>合并之后的集合为：<code>setA.union(setB) = ['a', 'b', 'c', 'd', 'e']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>union</code> method.",
+          "text": "<code>Set</code>类应该有<code>union</code>方法。",
           "testString": "assert((function(){var test = new Set(); return (typeof test.union === 'function')})(), 'Your <code>Set</code> class should have a <code>union</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert((function(){var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var unionSetAB = setA.union(setB); var final = unionSetAB.values(); return (final.indexOf('a') !== -1 && final.indexOf('b') !== -1 && final.indexOf('c') !== -1 && final.indexOf('d') !== -1 && final.length === 4)})(), 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert((function(){var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var unionSetAB = setA.union(setB); var final = unionSetAB.values(); return (final.indexOf('a') !== -1 && final.indexOf('b') !== -1 && final.indexOf('c') !== -1 && final.indexOf('d') !== -1 && final.length === 4)})(), '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -624,17 +624,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -642,7 +642,7 @@
             "        }",
             "        return false;",
             "    };",
-            "   // this method will remove an element from a set",
+            "   // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -651,13 +651,13 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the set",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // change code below this line",
+            "    // 请在本行下方输入代码",
             "",
-            "    // change code above this line",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -669,17 +669,17 @@
       "id": "587d8253367417b2b2512c6d",
       "title": "Perform an Intersection on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform an intersection on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>intersection</code>. An intersection of sets represents all values that are common to two or more sets. This method should take another <code>Set</code> as an argument and return the <code>intersection</code> of the two sets.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the intersection of setA and setB is: <code>setA.intersection(setB) = ['a', 'b']</code>."
+        "在本次练习当中我们要计算出两个的并集。我们会在<code>Set</code>数据结构中写一个<code>intersection</code>方法。并集是两个或者多个 set 共同拥有的元素的集合。该方法应该接收<code>Set</code>作为参数并返回两个集合的并集。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>和集合<code>setB = ['a','b','d','e']</code>的并集计算结果为：<code>setA.intersection(setB) = ['a', 'b']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>intersection</code> method.",
+          "text": "<code>Set</code>类应该有<code>intersection</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.intersection === 'function')}, 'Your <code>Set</code> class should have a <code>intersection</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert(function(){  var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var intersectionSetAB = setA.intersection(setB); return (intersectionSetAB.size() === 1 && intersectionSetAB.values()[0] === 'c')}, 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert(function(){  var setA = new Set();  var setB = new Set();  setA.add('a');  setA.add('b');  setA.add('c');  setB.add('c');  setB.add('d');  var intersectionSetAB = setA.intersection(setB); return (intersectionSetAB.size() === 1 && intersectionSetAB.values()[0] === 'c')}, '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -694,17 +694,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "   // this method will add an element to the set",
+            "   // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -712,7 +712,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -721,11 +721,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -738,8 +738,8 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -751,17 +751,17 @@
       "id": "587d8254367417b2b2512c6e",
       "title": "Perform a Difference on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform a difference on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>difference</code>. A difference of sets should compare two sets and return the items present in the first set that are absent in the second. This method should take another <code>Set</code> as an argument and return the <code>difference</code> of the two sets.",
-        "For example, if <code>setA = ['a','b','c']</code> and <code>setB = ['a','b','d','e']</code>, then the difference of setA and setB is: <code>setA.difference(setB) = ['c']</code>."
+        "在本次练习当中我们来比较两个集合中元素的不同。我们在<code>Set</code>数据结构当中创建<code>difference</code>方法。两个集合差集的概念为：在第一个集合中存在而第二个集合不存在的元素的集合。该方法应该接收<code>Set</code>作为参数并且返回两个集合的差集。",
+        "举个栗子，集合<code>setA = ['a','b','c']</code>与<code>setB = ['a','b','d','e']</code>的差集比较结果为：<code>setA.difference(setB) = ['c']</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>difference</code> method.",
+          "text": "<code>Set</code>类应该有<code>difference</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.difference === 'function')}, 'Your <code>Set</code> class should have a <code>difference</code> method.');"
         },
         {
-          "text": "The proper collection was returned",
-          "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('c'); setB.add('d'); var differenceSetAB = setA.difference(setB); return (differenceSetAB.size() === 2) && (differenceSetAB.values() === [ 'a', 'b' ])}, 'The proper collection was returned');"
+          "text": "返回了正确的集合结果。",
+          "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('c'); setB.add('d'); var differenceSetAB = setA.difference(setB); return (differenceSetAB.size() === 2) && (differenceSetAB.values() === [ 'a', 'b' ])}, '返回了正确的集合结果。');"
         }
       ],
       "releasedOn": "Feb 17, 2017",
@@ -776,17 +776,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -794,7 +794,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -803,11 +803,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法会返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -820,7 +820,7 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // this method will return the intersection of two sets as a new set",
+            "    // 该方法会返回两个集合的交集",
             "    this.intersection = function(otherSet) {",
             "        var intersectionSet = new Set();",
             "        var firstSet = this.values();",
@@ -831,8 +831,8 @@
             "        });",
             "        return intersectionSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -844,32 +844,32 @@
       "id": "587d8254367417b2b2512c6f",
       "title": "Perform a Subset Check on Two Sets of Data",
       "description": [
-        "In this exercise we are going to perform a subset test on 2 sets of data. We will create a method on our <code>Set</code> data structure called <code>subset</code>. This will compare the first set, against the second and if the first set is fully contained within the Second then it will return true.",
-        "For example, if <code>setA = ['a','b']</code> and <code>setB = ['a','b','c','d']</code>, then the subset of setA and setB is: <code>setA.subset(setB)</code> should be <code>true</code>."
+        "在本次练习中我们将对两个集合元素做子集测试。我们会为<code>Set</code>数据结构创建<code>subset</code>方法。第一个集合会与第二个集合做对比，如何第二个集合完全包含第一个集合该方法会返回 true 。",
+        "举个栗子，假设有集合<code>setA = ['a','b']</code>与<code>setB = ['a','b','c','d']</code>，那么<code>setA.subset(setB)</code>的运算结果应该为<code>true</code>。"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> class should have a <code>union</code> method.",
+          "text": "<code>Set</code>类应该有<code>union</code>方法。",
           "testString": "assert(function(){var test = new Set(); return (typeof test.subset === 'function')}, 'Your <code>Set</code> class should have a <code>union</code> method.');"
         },
         {
-          "text": "The first Set() was contained in the second Set",
+          "text": "第二个集合完全包含第一个集合。",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setB.add('b'); setB.add('c'); setB.add('a'); setB.add('d'); var subsetSetAB = setA.subset(setB);return (subsetSetAB === true)}, 'The first Set() was contained in the second Set');"
         },
         {
-          "text": "<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code> should return <code>true</code>\")",
+          "text": "<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code>运算应该返回<code>true</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setB.add('a'); setB.add('b'); setB.add('c'); setB.add('d'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === true)}, \"<code>['a', 'b'].subset(['a', 'b', 'c', 'd'])</code> should return <code>true</code>\");"
         },
         {
-          "text": "<code>['a', 'b', 'c'].subset(['a', 'b'])</code> should return <code>false</code>\")",
+          "text": "<code>['a', 'b', 'c'].subset(['a', 'b'])</code>运算应该返回<code>false</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setA.add('c'); setB.add('a'); setB.add('b'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === false)}, \"<code>['a', 'b', 'c'].subset(['a', 'b'])</code> should return <code>false</code>\");"
         },
         {
-          "text": "<code>[].subset([])</code> should return <code>true</code>",
+          "text": "<code>[].subset([])</code>运算应该返回<code>true</code>",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); var subsetSetAB = setA.subset(setB); return (subsetSetAB === true)}, '<code>[].subset([])</code> should return <code>true</code>');"
         },
         {
-          "text": "<code>['a', 'b'].subset(['c', 'd'])</code> should return <code>false</code>\")",
+          "text": "<code>['a', 'b'].subset(['c', 'd'])</code>运算应该返回<code>false</code>\")",
           "testString": "assert(function(){var setA = new Set(); var setB = new Set(); setA.add('a'); setA.add('b'); setB.add('c'); setB.add('d'); var subsetSetAB = setA.subset(setB); return (subsetSetAB === false)}, \"<code>['a', 'b'].subset(['c', 'd'])</code> should return <code>false</code>\");"
         }
       ],
@@ -885,17 +885,17 @@
           "name": "index",
           "contents": [
             "function Set() {",
-            "    // the var collection will hold the set",
+            "    // collection 变量用来存储集合中元素",
             "    var collection = [];",
-            "    // this method will check for the presence of an element and return true or false",
+            "    // 当集合中存在 element 元素时返回 true 否则返回 false",
             "    this.has = function(element) {",
             "        return (collection.indexOf(element) !== -1);",
             "    };",
-            "    // this method will return all the values in the set",
+            "    // 该方法会返回集合内所有元素",
             "    this.values = function() {",
             "        return collection;",
             "    };",
-            "    // this method will add an element to the set",
+            "    // 该方法会添加 element 元素到集合当中",
             "    this.add = function(element) {",
             "        if(!this.has(element)){",
             "            collection.push(element);",
@@ -903,7 +903,7 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will remove an element from a set",
+            "    // 该方法从集合中移除 element 元素",
             "    this.remove = function(element) {",
             "        if(this.has(element)){",
             "           var index = collection.indexOf(element);",
@@ -912,11 +912,11 @@
             "        }",
             "        return false;",
             "    };",
-            "    // this method will return the size of the collection",
+            "    // 该方法返回集合长度",
             "    this.size = function() {",
             "        return collection.length;",
             "    };",
-            "    // this method will return the union of two sets",
+            "    // 该方法会返回两个集合的并集",
             "    this.union = function(otherSet) {",
             "        var unionSet = new Set();",
             "        var firstSet = this.values();",
@@ -929,7 +929,7 @@
             "        });",
             "        return unionSet;",
             "    };",
-            "    // this method will return the intersection of two sets as a new set",
+            "    // 该方法会返回两个集合的交集",
             "    this.intersection = function(otherSet) {",
             "        var intersectionSet = new Set();",
             "        var firstSet = this.values();",
@@ -940,7 +940,7 @@
             "        });",
             "        return intersectionSet;",
             "    };",
-            "    // this method will return the difference of two sets as a new set",
+            "    // 该方法会返回两个集合的差集",
             "    this.difference = function(otherSet) {",
             "        var differenceSet = new Set();",
             "        var firstSet = this.values();",
@@ -951,8 +951,8 @@
             "        });",
             "        return differenceSet;",
             "    };",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -964,23 +964,23 @@
       "id": "587d8254367417b2b2512c70",
       "title": "Create and Add to Sets in ES6",
       "description": [
-        "Now that you have worked through ES5, you are going to perform something similar in ES6. This will be considerably easier. ES6 contains a built-in data structure <code>Set</code> so many of the operations you wrote by hand are now included for you. Let's take a look:",
-        "To create a new empty set:",
+        "现在我们已经通关了ES5，接下来我们要在ES6当中做一些类似的操作。这些操作会更加的简单。ES6当中的<code>Set</code>数据结构内置了很多以前需要自己主动编写方法。现在我们一起来看看这些方法：",
+        "创建一个空 set ",
         "<code>var set = new Set();</code>",
-        "You can create a set with a value:",
+        "创建带有一个值的 set ",
         "<code>var set = new Set(1);</code>",
-        "You can create a set with an array:",
+        "通过数组参数来创建一个 set ",
         "<code>var set = new Set([1, 2, 3]);</code>",
-        "Once you have created a set, you can add the values you wish using the <code>add</code> method:",
+        "创建好数组之后可以通过<code>add</code>方法添加元素：",
         "<blockquote>var set = new Set([1, 2, 3]);<br>set.add([4, 5, 6]);</blockquote>",
-        "As a reminder, a set is a data structure that cannot contain duplicate values:",
+        "提醒一下，set 这种数据结构当中不允许出现重复元素：",
         "<blockquote>var set = new Set([1, 2, 3, 1, 2, 3]);<br>// set contains [1, 2, 3] only</blockquote>",
         "<hr>",
-        "For this exercise, return a set with the following values: <code>1, 2, 3, 'Taco', 'Cat', 'Awesome'</code>"
+        "本次练习的返回结果应该是：<code>1, 2, 3, 'Taco', 'Cat', 'Awesome'</code>"
       ],
       "tests": [
         {
-          "text": "Your <code>Set</code> should only contain the values <code>1, 2, 3, Taco, Cat, Awesome</code>.",
+          "text": "<code>Set</code>应该只包含<code>1, 2, 3, Taco, Cat, Awesome</code>这些元素。",
           "testString": "assert(function(){var test = checkSet(); return (test.size == 6) && test.has(1) && test.has(2) && test.has(3) && test.has('Taco') && test.has('Cat') && test.has('Awesome');}, 'Your <code>Set</code> should only contain the values <code>1, 2, 3, Taco, Cat, Awesome</code>.');"
         }
       ],
@@ -997,9 +997,9 @@
           "contents": [
             "function checkSet() {",
             "  var set = new Set([1, 2, 3, 3, 2, 1, 2, 3, 1]);",
-            "  // change code below this line",
+            "  // 请在本行下方输入代码",
             "  ",
-            "  // change code above this line",
+            "  // 请在本行上方输入代码",
             "  console.log(set);",
             "  return set;",
             "}",
@@ -1015,17 +1015,17 @@
       "id": "587d8254367417b2b2512c71",
       "title": "Remove items from a set in ES6",
       "description": [
-        "Let's practice removimg items from an ES6 Set using the <code>delete</code> method.",
-        "First, create an ES6 Set",
+        "现在练习使用code>delete</code>方法从 ES6 Set 当中移除元素。",
+        "首先，创建一个 ES6 Set",
         "<code>var set = new Set([1,2,3]);</code>",
-        "Now remove an item from your Set with the <code>delete</code> method.",
+        "使用<code>delete</code>方法从 Set 当中移除一个元素。",
         "<blockquote>set.delete(1);<br>console.log([...set]) // should return [ 2, 3 ]<blockquote>",
         "<hr>",
-        "Now, create a set with the integers 1, 2, 3, 4, & 5. \n Remove the values 2 and 5, and then return the set."
+        "现在创建一个拥有 1, 2, 3, 4, & 5 这些整数的 set 。移除元素 2 和 5 并返回该 set 。"
       ],
       "tests": [
         {
-          "text": "Your Set should contain the values 1, 3, & 4",
+          "text": "Set 应该返回1, 3, & 4 。",
           "testString": "assert(function(){var test = checkSet(); return test.has(1) && test.has(3) && test.has(4) && test.size === 3}, 'Your Set should contain the values 1, 3, & 4');"
         }
       ],
@@ -1041,10 +1041,10 @@
           "name": "index",
           "contents": [
             "function checkSet(){",
-            "   var set = //Create a set with values 1, 2, 3, 4, & 5",
-            "   //Remove the value 2",
-            "   //Remove the value 5",
-            "   //Return the set",
+            "   var set = //创建带有 1, 2, 3, 4, & 5 这 5 个整数的 set ",
+            "   //移除 2 这个值",
+            "   //移除 5 这个值",
+            "   //返回 set ",
             "   return set;",
             "}"
           ],
@@ -1057,19 +1057,19 @@
       "id": "587d8255367417b2b2512c72",
       "title": "Use .has and .size on an ES6 Set",
       "description": [
-        "Let's look at the .has and .size methods available on the ES6 Set object.",
-        "First, create an ES6 Set",
+        "现在我们来学习 ES6 Set 对象的 .has 和 .size 方法。",
+        "首先，创建一个 ES6 Set ",
         "<code>var set = new Set([1,2,3]);</code>",
-        "The .has method will check if the value is contained within the set.",
+        " .has 方法会检查 set 当中是否有某个值。",
         "<code>var hasTwo = set.has(2);</code>",
-        "The .size method will return an integer representing the size of the Set",
+        " .size 会返回 Set 的长度。",
         "<code>var howBig = set.size;</code>",
         "<hr>",
-        "In this exercise we will pass an array and a value to the checkSet() function. Your function should create an ES6 set from the array argument. Find if the set contains the value argument. Find the size of the set. And return those two values in an array."
+        "在本次练习当中我们会给 checkSet() 函数一个 array 和一个 value 。该函数应该根据传入的参数创建一个 ES6 set 。函数会检查该 set 中是否存在该 value 值，同时检测该 set 的长度。函数会以数组形式返回这两个检查结果。"
       ],
       "tests": [
         {
-          "text": "<code>checkSet([4, 5, 6], 3)</code> should return [ false, 3 ]",
+          "text": "<code>checkSet([4, 5, 6], 3)</code>应该返回 [ false, 3 ]",
           "testString": "assert(function(){var test = checkSet([4,5,6], 3); test === [ false, 3 ]}, '<code>checkSet([4, 5, 6], 3)</code> should return [ false, 3 ]');"
         }
       ],
@@ -1086,9 +1086,9 @@
           "contents": [
             "function checkSet(arrToBeSet, checkValue){",
             "",
-            "   // change code below this line",
+            "   // 请在本行下方输入代码",
             "",
-            "   // change code above this line",
+            "   // 请在本行上方输入代码",
             "",
             "}",
             "",
@@ -1103,17 +1103,17 @@
       "id": "587d8255367417b2b2512c73",
       "title": "Use Spread and Notes for ES5 Set() Integration",
       "description": [
-        "Do you remember the ES6 spread operator <code>...</code>?",
-        "<code>...</code> can take iterable objects in ES6 and turn them into arrays.",
-        "Let's create a Set, and check out the spread function.",
+        "是否记得 ES6 当中的<code>...</code>操作符？",
+        "<code>...</code>接收 ES6 当中的可迭代对象并将其转换为数组返回。",
+        "现在我们来创建一个 Set并检验<code>...</code>操作符。",
         "<blockquote>var set = new Set([1,2,3]);<br>var setToArr = [...set]<br>console.log(setToArr) // returns [ 1, 2, 3 ]</blockquote>",
         "<hr>",
-        "In this exercise we will pass a set object to the <code>checkSet</code> function. It should return an array containing the values of the Set.",
-        "Now you've successfully learned how to use the ES6 <code>Set()</code> object, good job!"
+        "在本次练习当中我们给<code>checkSet</code>传递一个 set 对象。函数返回一个数组，该数组当中包含 Set 集合中所有值。",
+        "现在我们已经学会了如何运用 ES6 <code>Set()</code>对象，继续加油！"
       ],
       "tests": [
         {
-          "text": "Your Set was returned correctly!",
+          "text": " Set 内的值正确返回了！",
           "testString": "assert(function(){var test = checkSet(new Set([1,2,3,4,5,6,7])); test === [ 1, 2, 3, 4, 5, 6, 7 ]}, 'Your Set was returned correctly!');"
         }
       ],
@@ -1129,9 +1129,9 @@
           "name": "index",
           "contents": [
             "function checkSet(set){",
-            "   // change code below this line",
+            "   // 请在本行下方输入代码",
             "",
-            "   // change code above this line",
+            "   // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1143,44 +1143,44 @@
       "id": "8d5823c8c441eddfaeb5bdef",
       "title": "Create a Map Data Structure",
       "description": [
-        "The next few challenges will cover maps and hash tables. Maps are data structures that store key-value pairs. In JavaScript, these are available to us as objects. Maps provide rapid lookup of stored items based on key values and are very common and useful data structures.",
-        "Instructions: Let's get some practice creating our own map. Because JavaScript objects provide a much more efficient map structure than anything we could write here, this is intended primarily as a learning exercise. However, JavaScript objects only provide us with certain operations. What if we wanted to define custom operations?",
-        "Use the <code>Map</code> object provided here as a wrapper around a JavaScript <code>object</code>. Create the following methods and operations on the Map object:",
-        "<code>add</code> accepts a <code>key, value</code> pair to add to the map",
-        "<code>remove</code> accepts a key and removes the associated <code>key, value</code> pair",
-        "<code>get</code> accepts a <code>key</code> and returns the stored <code>value</code>",
-        "<code>has</code> returns a <code>boolean</code> for the presence or absence of an item",
-        "<code>values</code> returns an array of all the values in the map",
-        "<code>size</code> returns the number of items in the map",
+        "在接下来的几个挑战会涉及到 map 和 hash 表这些知识点。Maps 是一种存储键值对的数据结构。map 也是一种 JavaScript 对象。Maps 是一种十分通用和有效的数据结构，我们在 Maps 当中通过 key 值能够很快速地获取对应的 value 值。",
+        "提示：现在我们练习创建 map。JavaScript 对象本身提供了十分高效的 map 数据结构，我们在本次挑战当中写的一些方法只是作为提升练习。然而，JavaScript 对象本身只为我们提供了少量操作方法，如果我们想要自己定制一些方法该怎么办呢？",
+        "现在我们使用 JavaScript 对象来模拟<code>Map</code>对象。现在我们在 Map 对象当中创建下列方法：",
+        "<code>add</code>方法接收<code>key, value</code>作为参数并添加进 map 当中",
+        "<code>remove</code>方法接收一个 key 值并移除对应的<code>key, value</code>",
+        "<code>get</code>接收<code>key</code>值并返回对应的<code>value</code>值",
+        "<code>has</code>方法根据某个值的存在情况返回相应的<code>boolean</code>值",
+        "<code>values</code>方法以数组形式返回 map 当中所有的 value 值",
+        "<code>size</code>方法返回 map 当中元素的个数",
         "<code>clear</code> empties the map"
       ],
       "tests": [
         {
-          "text": "The Map data structure exists.",
+          "text": "Map 数据结构存在。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; return (typeof test == 'object')})(), 'The Map data structure exists.');"
         },
         {
-          "text": "The Map object has the following methods: add, remove, get, has, values, clear, and size.",
+          "text": "Map 对象拥有 add, remove, get, has, values, clear, and size 这些方法。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; return (typeof test.add == 'function' && typeof test.remove == 'function' && typeof test.get == 'function' && typeof test.has == 'function' && typeof test.values == 'function' && typeof test.clear == 'function' && typeof test.size == 'function')})(), 'The Map object has the following methods: add, remove, get, has, values, clear, and size.');"
         },
         {
-          "text": "The add method adds items to the map.",
+          "text": "add 方法添加元素到 map 当中。 ",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add(5,6); test.add(2,3); test.add(2,5); return (test.size() == 2)})(), 'The add method adds items to the map.');"
         },
         {
-          "text": "The has method returns true for added items and false for absent items.",
+          "text": "当存在某个元素时 has 方法会返回 true 否则返回 false。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('test','value'); return (test.has('test') && !test.has('false'))})(), 'The has method returns true for added items and false for absent items.');"
         },
         {
-          "text": "The get method accepts keys as input and returns the associated values.",
+          "text": "get 方法接收 key 值作为参数并返回对应的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('abc','def'); return (test.get('abc') == 'def')})(), 'The get method accepts keys as input and returns the associated values.');"
         },
         {
-          "text": "The values method returns all the values stored in the map as strings in an array.",
+          "text": "values 方法以数组形式返回 map 当中所有的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('a','b'); test.add('c','d'); test.add('e','f'); var vals = test.values(); return (vals.indexOf('b') != -1 && vals.indexOf('d') != -1 && vals.indexOf('f') != -1)})(), 'The values method returns all the values stored in the map as strings in an array.');"
         },
         {
-          "text": "The clear method empties the map and the size method returns the number of items present in the map.",
+          "text": "clear 方法清空 map 当中的元素，size 方法返回 map 当中元素的个数。",
           "testString": "assert((function() { var test = false; if (typeof Map !== 'undefined') { test = new Map() }; test.add('b','b'); test.add('c','d'); test.remove('asdfas'); var init = test.size(); test.clear(); return (init == 2 && test.size() == 0)})(), 'The clear method empties the map and the size method returns the number of items present in the map.');"
         }
       ],
@@ -1195,8 +1195,8 @@
           "contents": [
             "var Map = function() {",
             "  this.collection = {};",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -1208,23 +1208,23 @@
       "id": "587d825b367417b2b2512c8d",
       "title": "Create an ES6 JavaScript Map",
       "description": [
-        "The new version of JavaScript provides us with a built-in Map object which provides much of the functionality we wrote by hand in the last challenge. This Map object, although similar to regular JavaScript objects, provides some useful functionality that normal objects lack. For example, an ES6 Map tracks the insertion order of items that are added to it. Here is a more complete overview of its methods:",
-        "<code>.has(key)</code> returns true or false based on the presence of a key",
-        "<code>.get(key)</code> returns the value associated with a key",
-        "<code>.set(key, value)</code> sets a new key, value pair",
-        "<code>.delete(key)</code> removes a key, value pair",
-        "<code>.clear()</code> removes all key, value pairs",
-        "<code>.entries()</code> returns an array of all the keys in insertion order",
-        "<code>.values()</code> returns an array of all the values in insertion order",
-        "Instructions: Define a JavaScript Map object and assign to it a variable called myMap. Add the key, value pair <code>freeCodeCamp</code>, <code>Awesome!</code> to it."
+        "新版JavaScript给我们提供了内置的 Map 对象，该 Map 对象提供了大部分在上一次挑战中需要我们手动书写的内容。虽然与一般的 JavaScript 对象很类似，但是 Map 对象也提供了一些普通对象没有的方法。例如，ES6 Map 追溯刚刚添加进 Map 的元素顺序。下面是 Map 内置方法的一个概览：",
+        "<code>.has(key)</code>根据 key 值存在与否返回 true 或 false ",
+        "<code>.get(key)</code>返回 key 值对应的 value 值",
+        "<code>.set(key, value)</code>设置一对新的 key,value 对",
+        "<code>.delete(key)</code>移除一个 key,value 对",
+        "<code>.clear()</code>移除所有的 key,value 对",
+        "<code>.entries()</code>以数组形式返回所有 key 值，数组中元素的顺序以插入时的顺序为准",
+        "<code>.values()</code>i以数组形式返回所有 value 值，数组中元素的顺序以插入时的顺序为准",
+        "任务：定义一个 Map 对象并将其赋值给一个名称为 myMap 的变量。往 Map 对象当中添加键值对<code>freeCodeCamp</code>, <code>Awesome!</code>。"
       ],
       "tests": [
         {
-          "text": "The myMap object exists.",
+          "text": "myMap 对象存在。",
           "testString": "assert(typeof myMap === 'object', 'The myMap object exists.');"
         },
         {
-          "text": "myMap contains the key value pair <code>freeCodeCamp</code>, <code>Awesome!</code>.",
+          "text": "myMap 包含键值对<code>freeCodeCamp</code>, <code>Awesome!</code>。",
           "testString": "assert(myMap.get('freeCodeCamp') === 'Awesome!', 'myMap contains the key value pair <code>freeCodeCamp</code>, <code>Awesome!</code>.');"
         }
       ],
@@ -1237,7 +1237,7 @@
           "ext": "js",
           "name": "index",
           "contents": [
-            "// change code below this line"
+            "// 请在本行下方输入代码"
           ],
           "head": [],
           "tail": []
@@ -1248,43 +1248,43 @@
       "id": "587d825b367417b2b2512c8e",
       "title": "Create a Hash Table",
       "description": [
-        "In this challenge we will learn about hash tables. A Hash table is used to implement associative arrays, or mappings of key-value pairs, like the objects and Maps we have just been studying. A JavaScript object could be implemented as a hash table, for instance (its actual implementation will depend on the environment it's running in). The way a hash table works is that it takes a key input and hashes this key in a deterministic way to some numerical value. This numerical value is then used as the actual key the associated value is stored by. Then, if you try to access the same key again, the hashing function will process the key, return the same numerical result, which will then be used to look up the associated value. This provides very efficient O(n) lookup time on average.",
-        "Hash tables can be implemented as arrays with hash functions producing array indices within a specified range. In this method, the choice of the array size is important, as is the hashing function. For instance, what if the hashing function produces the same value for two different keys? This is called a collision. One way to handle collisions is to just store both key-value pairs at that index. Then, upon lookup of either, you would have to iterate through the bucket of items to find the key you are looking for. A good hashing function will minimize collisions to maintain efficient search time.",
-        "Here, we won't be concerned with the details of hashing or hash table implementation, we will just try to get a general sense of how they work.",
-        "Instructions: Let's create the basic functionality of a hash table. We've created a naive hashing function for you to use. You can pass a string value to the function hash and it will return a hashed value you can use as a key for storage. Store items based on this hashed value in the this.collection object. Create these three methods: add, remove, and lookup. The first should accept a key value pair to add to the hash table. The second should remove a key-value pair when passed a key. The third should accept a key and return the associated value or null if the key is not present.",
-        "Be sure to write your code to account for collisions!"
+        "在本次挑战中我们会学习 hash 表。就像我们之前学习的对象和 Map 一样，hash 通常用来实现关联数组或者匹配键值对。比如，可以用 JavaScript 对象来实现 hash 表（具体实现方式依赖于运行环境）。hash 表接收一个 key 值作为参数并将其数字化为一个确定的数字。该数字被当作与 value 值对应的 key 值存储到表当中。如果你想取得该 key 值的话，hashing 函数会接收 key 值作为参数经过运算之后返回同样的数字（该数字被用来取得关联的 value 值）。这种方式非常高效，平均时间复杂度为 O(n)。",
+        "可以用数组来实现 hash 表，该数组拥有一个 hash 函数，该函数在指定的区间内生成一系列索引。在本方法中，数组的大小以及 hash 函数的选择很关键。例如，假如两个不同的 key 值通过 hash 函数产生了相同的值怎么办？这种情况我们叫做冲突。解决冲突的一种方式是将两对 key-value 都存储进该 index 当中。之后在存储元素的单元格当中逐个寻找。好的 hash 函数能够最小化冲突以保证查询效率。",
+        "本课程我们不关注 hash 化或者 hash 表的实现细节，只是熟悉一下他们怎么运作。",
+        "任务：现在我们来创建一个拥有基本功能的 hash 表。我们已经为你创建了一个简单的 hash 函数，当你传递一个值给该函数时它会返回一个 hash 化的值让你当作 key 值使用。将元素存储到 this.collection 对象当中，在其中创建 add,remove 以及 lookup 这三个方法。add 方法接收一个键值对参数并存储进 hash 表当中；remove 方法接收一个 key 值并移除对应的键值对；lookup 方法接收一个 key 值并返回对应的 value 值，如果 key 值不存在的话就返回 null。",
+        "确保你的代码能处理发生冲突的情况！"
       ],
       "tests": [
         {
-          "text": "The HashTable data structure exists.",
+          "text": "该 HashTable 数据结构存在。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return (typeof test === 'object')})(), 'The HashTable data structure exists.');"
         },
         {
-          "text": "The HashTable has an add method.",
+          "text": "该 HashTable 拥有 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.add) === 'function')})(), 'The HashTable has an add method.');"
         },
         {
-          "text": "The HashTable has an remove method.",
+          "text": "该 HashTable 拥有 remove 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.remove) === 'function')})(), 'The HashTable has an remove method.');"
         },
         {
-          "text": "The HashTable has an lookup method.",
+          "text": "该 HashTable 拥有 lookup 方法。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; return ((typeof test.lookup) === 'function')})(), 'The HashTable has an lookup method.');"
         },
         {
-          "text": "The add method adds key value pairs and the lookup method returns the values associated with a given key.",
+          "text": "add 方法添加 键值对到 HashTable 当中，lookup 方法根据传入 key 值返回对应的 value 值。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; test.add('key', 'value'); return (test.lookup('key') === 'value')})(), 'The add method adds key value pairs and the lookup method returns the values associated with a given key.');"
         },
         {
-          "text": "The remove method accepts a key as input and removes the associated key value pair.",
+          "text": "remove 方法接收 key 值为参数并删除对应的键值对。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; test.add('key', 'value'); test.remove('key'); return (test.lookup('key') === null)})(), 'The remove method accepts a key as input and removes the associated key value pair.');"
         },
         {
-          "text": "Items are added using the hash function.",
+          "text": "使用 hash 函数把元素添加进 HashTable。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; called = 0; test.add('key1','value1'); test.add('key2','value2'); test.add('key3','value3'); return (called === 3)})(), 'Items are added using the hash function.');"
         },
         {
-          "text": "The hash table handles collisions.",
+          "text": "该 HashTable 解决了冲突。",
           "testString": "assert((function() { var test = false; if (typeof HashTable !== 'undefined') { test = new HashTable() }; called = 0; test.add('key1','value1'); test.add('1key','value2'); test.add('ke1y','value3'); return (test.lookup('key1') === 'value1' && test.lookup('1key') == 'value2' && test.lookup('ke1y') == 'value3')})(), 'The hash table handles collisions.');"
         }
       ],
@@ -1306,8 +1306,8 @@
             "};",
             "var HashTable = function() {",
             "  this.collection = {};",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [
@@ -1327,19 +1327,19 @@
       "id": "587d8251367417b2b2512c61",
       "title": "Work with Nodes in a Linked List",
       "description": [
-        "Another common data structure you'll run into in computer science is the <dfn>linked list</dfn>. A linked list is a linear collection of data elements, called 'nodes', each of which points to the next. Each <dfn>node</dfn> in a linked list contains two key pieces of information: the <code>element</code> itself, and a reference to the next <code>node</code>.",
-        "Imagine that you are in a conga line. You have your hands on the next person in the line, and the person behind you has their hands on you. You can see the person straight ahead of you, but they are blocking the view of the other people ahead in line. A node is just like a person in a conga line: they know who they are and they can only see the next person in line, but they are not aware of the other people ahead or behind them.",
+        "另一个计算机科学当中比较常见的数据结构是链表。链表是一系列数据元素的线性集合，每个节点有一个指针指向下一个节点。链表中的每个节点由两部分组成：一个是<code>element</code>本身，还有一个指向下一个<code>node</code>的引用。",
+        "想象你在一个舞队当中，你的手搭在下一个人身上，你后面人的手搭在你的身上。你可以看到你前面的人是谁，但是看不到再之前的人。一个节点就如同一个舞队当中的一个人：他们能够掌握行列当中自己和下一个人的信息，但是他们无法知道他们之前或者之后的人是谁。",
         "<hr>",
-        "In our code editor, we've created two nodes, <code>Kitten</code> and <code>Puppy</code>, and we've manually connected the <code>Kitten</code> node to the <code>Puppy</code> node.",
-        "Create a <code>Cat</code> and <code>Dog</code> node and manually add them to the line."
+        "在代码编辑器当中我们已经创建了<code>Kitten</code>和<code>Puppy</code>两个节点，现在我们已经将<code>Kitten</code>节点和<code>Puppy</code>节点连接起来了。",
+        "创建<code>Cat</code>和<code>Dog</code>两个节点并将他们连接到链表当中。"
       ],
       "tests": [
         {
-          "text": "Your <code>Puppy</code> node should have a reference to a <code>Cat</code> node.",
+          "text": "<code>Puppy</code>节点应该有指向<code>Cat</code>节点的引用。",
           "testString": "assert(Puppy.next.element === \"Cat\", 'Your <code>Puppy</code> node should have a reference to a <code>Cat</code> node.');"
         },
         {
-          "text": "Your <code>Cat</code> node should have a reference to a <code>Dog</code> node.",
+          "text": "<code>Cat</code>节点应该有指向<code>Dog</code>节点的引用。",
           "testString": "assert(Cat.next.element === \"Dog\", 'Your <code>Cat</code> node should have a reference to a <code>Dog</code> node.');"
         }
       ],
@@ -1361,9 +1361,9 @@
             "var Puppy = new Node(\"Puppy\");",
             "",
             "Kitten.next = Puppy;",
-            "// only add code below this line",
+            "// 请在本行下方输入代码",
             "",
-            "// test your code",
+            "// 测试代码",
             "console.log(Kitten.next);"
           ],
           "head": [],
@@ -1375,30 +1375,30 @@
       "id": "587d8251367417b2b2512c62",
       "title": "Create a Linked List Class",
       "description": [
-        "Let's create a <code>linked list</code> class. Every linked list should start out with a few basic properties: a <code>head</code> (the first item in your list) and a <code>length</code> (number of items in your list). Sometimes you'll see implementations of linked lists that incorporate a <code>tail</code> for the last element of the list, but for now we'll just stick with these two. Whenever we add an element to the linked list, our <code>length</code> property should be incremented by one.",
-        "We'll want to have a way to add items to our linked list, so the first method we'll want to create is the <code>add</code> method.",
-        "If our list is empty, adding an element to our linked list is straightforward enough: we just wrap that element in a <code>Node</code> class, and we assign that node to the <code>head</code> of our linked list.",
-        "But what if our list already has one or more members? How do we add an element to the list? Recall that each node in a linked list has a <code>next</code> property. To add a node to the list, find the last node in the list, and point that last node's <code>next</code> property at our new node. (Hint: you know you've reached the end of a linked list when a node's <code>next</code> property is <code>null</code>.)",
+        "现在我们来创建一个<code>linked list</code>类。每个链表都应该有<code>head</code>（表中第一个元素）和<code>length</code>（表中元素的个数）这样的基本属性。有时链表有<code>tail</code>这样表示表中最后一个元素的标识，但是本次练习我们只关注 head 和 length 这两个属性。无论何时我们往链表中添加了元素，<code>length</code>属性的数值都会加一。",
+        "我们需要有一个能够添加元素进链表的操作，因此我们首先创建一个<code>add</code>方法。",
+        "如果表为空，添加元素进链表会很简单：我们只需用<code>Node</code>类来创建一个元素，同时让<code>head</code>指向该元素。",
+        "但是如果表中已经有元素了会是如何呢？如何添加元素到非空链表当中？回想一下，链表当中的每个元素都有一个<code>next</code>属性。为了添加新节点到表中我们需要找到表中最后一个节点，并让该节点的<code>next</code>指针指向新节点。（提示：链表当中最后一个元素的 next 指针指向 null。）",
         "<hr>",
-        "Write an add method that assigns the first node you push to the linked list to the <code>head</code>; after that, whenever adding a node, every node should be referenced by the previous node's <code>next</code> property.",
-        "Note",
-        "Your list's <code>length</code> should increase by one every time an element is added to the linked list."
+        "写一个 add 方法，当添加第一个元素时让<code>head</code>指针指向该元素；之后，当在添加新元素时前一个节点的<code>next</code>属性都应该指向下一个元素。",
+        "提示",
+        "每当链表添加进新元素的时候<code>length</code>的数值都应该加一。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>add</code> method.",
+          "text": "<code>LinkedList</code>应该有<code>add</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.add === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>add</code> method.');"
         },
         {
-          "text": "Your <code>LinkedList</code> class should assign <code>head</code> to the first node added.",
+          "text": "<code>LinkedList</code>当中的<code>head</code>指针应该指向表中第一个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); return test.head().element === 'cat'}()), 'Your <code>LinkedList</code> class should assign <code>head</code> to the first node added.');"
         },
         {
-          "text": "The previous <code>node</code> in your <code>LinkedList</code> class should have reference to the newest node created.",
+          "text": "LinkedList</code>当中的节点应该有指针指向最新创建的节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return test.head().next.element === 'dog'}()), 'The previous <code>node</code> in your <code>LinkedList</code> class should have reference to the newest node created.');"
         },
         {
-          "text": "The  <code>size</code> of your <code>LinkedList</code> class should equal the amount of nodes in the linked list.",
+          "text": "<code>size</code>代表<code>LinkedList</code>当中节点的数量。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return test.size() === 2}()), 'The  <code>size</code> of your <code>LinkedList</code> class should equal the amount of nodes in the linked list.');"
         }
       ],
@@ -1430,9 +1430,9 @@
             "  };",
             "",
             "  this.add = function(element){",
-            "    // Only change code below this line",
+            "    // Only 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // Only 请在本行上方输入代码",
             "  };",
             "}"
           ],
@@ -1445,30 +1445,30 @@
       "id": "587d8251367417b2b2512c63",
       "title": "Remove Elements from a Linked List",
       "description": [
-        "The next important method that any implementation of a linked list will need is a <code>remove</code> method. This method should take the element we want to remove as an argument, and then search the list to find and remove the node that contains that element.",
-        "Whenever we remove a node from a linked list, it's important that we don't accidentally orphan the rest of the list in doing so. Recall that every node's <code>next</code> property points to the node that follows it in the list. If we're removing the middle element, say, we'll want to make sure that we have a connection from that element's previous node's <code>next</code> property to the middle element's <code>next</code> property (which is the next node in the list!)",
-        "This might sound really confusing, so let's return to the conga line example so we have a good conceptual model. Picture yourself in a conga line, and the person directly in front of you leaves the line. The person who just left the line no longer has her hands on anyone in line--and you no longer have your hands on the person that left. You step forward and put your hands on next person you see.",
-        "If the element we wish to remove is the <code>head</code> element, we reassign the <code>head</code> to the second node of the linked list.",
+        "链表当中下一个重要的方法是<code>remove</code>方法。该方法接收一个元素作为参数，随后在链表当中找到并移除该元素。",
+        "当从链表当中移除掉一个节点之后，需要注意到我们并不只是从链表当中删除了一个元素。每个节点的<code>next</code>指针都会指向表中的下一个节点。当我们从链表当中移除了一个元素时，我们需要确保这个被移除节点的前一个节点的<code>next</code>指针指向被移除节点的下一个元素。",
+        "这样解释可能比较抽象，因此我们再拿之前的康茄舞队的例子来说明。想象一下，康茄舞队当中在你正前方的人离开了队伍。这个离队的人也就不再会把手搭在他前一个人的身上，同时你的手也不可能搭在离队的那个人身上。接下来你需要向前走一步把你的手搭在前一个人的身上。",
+        "如果我们移除的是头部元素，那么我们需要让<code>head</code>指针指向链表当中的第二个元素。",
         "<hr>",
-        "Write a <code>remove</code> method that takes an element and removes it from the linked list.",
-        "Note",
-        "The <code>length</code> of the list should decrease by one every time an element is removed from the linked list."
+        "编写<code>remove</code>方法，该方法接收一个元素作为参数并从链表当中移除该元素。",
+        "提示",
+        "每当<code>length</code> of the list should decrease by one every time an element is removed from the linked list."
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>remove</code> method.",
+          "text": "<code>LinkedList</code>应该又一个<code>remove</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.remove === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>remove</code> method.');"
         },
         {
-          "text": "Your <code>remove</code> method should reassign <code>head</code> to the second node when the first node is removed.",
+          "text": "当链表头部元素被移除时<code>remove</code>方法应该让<code>head</code>指针指向表中的第二个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.remove('cat'); return test.head().element === 'dog'}()), 'Your <code>remove</code> method should reassign <code>head</code> to the second node when the first node is removed.');"
         },
         {
-          "text": "Your <code>remove</code> method should decrease the <code>length</code> of the linked list by one for every node removed.",
+          "text": "每当元素被移除时<code>remove</code>方法应该让<code>length</code>减 1 。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.remove('cat'); return test.size() === 1})(), 'Your <code>remove</code> method should decrease the <code>length</code> of the linked list by one for every node removed.');"
         },
         {
-          "text": "Your <code>remove</code> method should reassign the reference of the previous node of the removed node to the removed node&apos;s <code>next</code> reference.",
+          "text": "当一个元素被移除时<code>remove</code>方法应该让被移除元素的前一个元素的<code>next</code>指针指向被移除元素的下一个元素。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog');test.add('kitten'); test.remove('dog'); return test.head().next.element === 'kitten'})(), 'Your <code>remove</code> method should reassign the reference of the previous node of the removed node to the removed node&apos;s <code>next</code> reference.');"
         }
       ],
@@ -1519,9 +1519,9 @@
             "  }; ",
             "",
             "  this.remove = function(element){",
-            "    // Only change code below this line",
+            "    // Only 请在本行下方输入代码",
             "",
-            "    // Only change code above this line",
+            "    // Only 请在本行上方输入代码",
             "  };",
             "}"
           ],
@@ -1534,31 +1534,31 @@
       "id": "587d8251367417b2b2512c64",
       "title": "Search within a Linked List",
       "description": [
-        "Let's add a few more useful methods to our linked list class. Wouldn't it be useful if we could tell if our list was empty or not, as with our <code>Stack</code> and <code>Queue</code> classes?",
-        "We should also be able to find specific elements in our linked list. Traversing through data structures is something you'll want to get a lot of practice with! Let's create an <code>indexOf</code> method that takes an <code>element</code> as an argument, and returns that element's <code>index</code> in the linked list. If the element is not found in the linked list, return <code>-1</code>.",
-        "Let's also implement a method that does the opposite: an <code>elementAt</code> method that takes an <code>index</code> as an argument and returns the <code>element</code> at the given <code>index</code>. If no <code>element</code> is found, return <code>undefined</code>.",
+        "现在我们往链表当中添加一些更加实用的方法。例如我们可以像<code>Stack</code>和<code>Queue</code>一样设计一个判断链表是否为空的方法。",
+        "我们也应该能够找到链表当中某一个具体的元素。通过学习这些数据结构我们能够积累很多经验。现在我们来创建一个<code>indexOf</code>方法，该方法接收一个<code>element</code>作为参数并返回该元素在链表当中的索引值。如果该元素不存在就返回<code>-1</code>。",
+        "我们也可以编写一个方法来实现相反的功能：<code>elementAt</code>方法接收一个<code>index</code>作为索引值并返回对应位置的<code>element</code>。如果<code>element</code>没找到就返回<code>undefined</code>。",
         "<hr>",
-        "Write an <code>isEmpty</code> method that checks if the linked list is empty, an <code>indexOf</code> method that returns the <code>index</code> of a given element, and an <code>elementAt</code> that returns an <code>element</code> at a given <code>index."
+        "编写<code>isEmpty</code>方法来判断链表是否为空，<code>indexOf</code>方法返回给定元素的<code>index</code>值，<code>elementAt</code>方法返回给定位置的<code>element</code>值。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>indexOf</code> method.",
+          "text": "、<code>LinkedList</code>应该有<code>indexOf</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.indexOf === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>indexOf</code> method.');"
         },
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>elementAt</code> method.",
+          "text": "<code>LinkedList</code>应该有<code>elementAt</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.elementAt === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>elementAt</code> method.');"
         },
         {
-          "text": "Your <code>size</code> method should return the length of the linked list",
+          "text": "<code>size</code>方法应该返回链表的长度。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.size() === 3}()), 'Your <code>size</code> method should return the length of the linked list');"
         },
         {
-          "text": "Your <code>indexOf</code> method should return the index of the given element.",
+          "text": "<code>indexOf</code>方法应该返回给定元素的索引值。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.indexOf('kitten') === 2}()), 'Your <code>indexOf</code> method should return the index of the given element.');"
         },
         {
-          "text": "Your <code>elementAt</code> method should return at element at a given index.",
+          "text": "<code>elementAt</code>方法应该返回对应位置的元素值。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); return test.elementAt(1) === 'dog'}()), 'Your <code>elementAt</code> method should return at element at a given index.');"
         }
       ],
@@ -1623,9 +1623,9 @@
             "    length --;",
             "  };",
             "",
-            "  // Only change code below this line",
+            "  // 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1637,34 +1637,34 @@
       "id": "587d8251367417b2b2512c65",
       "title": "Remove Elements from a Linked List by Index",
       "description": [
-        "Before we move on to another data structure, let's get a couple of last bits of practice with linked lists.",
-        "Let's write a <code>removeAt</code> method that removes the <code>element</code> at a given <code>index</code>. The method should be called <code>removeAt(index)</code>. To remove an <code>element</code> at a certain <code>index</code>, we'll need to keep a running count of each node as we move along the linked list.",
-        "A common technique used to iterate through the elements of a linked list involves a <dfn>'runner'</dfn>, or sentinel, that 'points' at the nodes that your code is comparing. In our case, starting at the <code>head</code> of our list, we start with a <code>currentIndex</code> variable that starts at <code>0</code>. The <code>currentIndex</code> should increment by one for each node we pass.",
-        "Just like our <code>remove(element)</code> method, we need to be careful not to orphan the rest of our list when we remove the node in our removeAt(index) method. We keep our nodes contiguous by making sure that the node that has reference to the removed node has a reference to the next node.",
+        "在学习其他数据结构之前，我们再在链表里面做两个练习。",
+        "我们来编写一个<code>removeAt</code>方法，该方法根据给定的<code>index</code>删除对应位置上的<code>element</code>。我们把这个方法命名为<code>removeAt(index)</code>。为了移除给定位置上的<code>element</code>，我们需要用一个数来记录在链表当中的移动位置。",
+        "当遍历链表当中元素时，我们通常使用“哨兵”来指向代码当中正在进行比较的元素。在本例当中，我们从表的头部开始，设置<code>currentIndex</code>的初始值为<code>0</code>，当遍历过一个元素之后<code>currentIndex</code>的值增加一位。",
+        "就像<code>remove(element)</code>方法一样，我们并不仅仅是使用 removeAt(index) 方法移除表中的元素。同时我们需要保证被移除元素的前一个元素的 next 指针需要指向被移除元素的下一个元素。",
         "<hr>",
-        "Write a <code>removeAt(index)</code> method that removes and returns a node at a given <code>index</code>. The method should return <code>null</code> if the given <code>index</code> is either negative, or greater than or equal to the <code>length</code> of the linked list.",
-        "Note",
-        "Remember to keep count of the <code>currentIndex</code>."
+        "编写<code>removeAt(index)</code>方法移除指定位置的节点，同时该方法需要返回被移除的节点。如果<code>index</code>的值为负数或者大于等于链表的长度，该方法应该返回<code>null</code>。",
+        "提示",
+        "记得跟踪<code>currentIndex</code>的数值变化。"
       ],
       "tests": [
         {
-          "text": "Your <code>LinkedList</code> class should have a <code>removeAt</code> method.",
+          "text": "链表应该拥有<code>removeAt</code>方法。",
           "testString": "assert((function(){var test = new LinkedList(); return (typeof test.removeAt === 'function')}()), 'Your <code>LinkedList</code> class should have a <code>removeAt</code> method.');"
         },
         {
-          "text": "Your <code>removeAt</code> method should reduce the <code>length</code> of the linked list",
+          "text": "使用<code>removeAt</code>方法之后链表的长度应该减短。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten'); test.removeAt(1); return test.size() === 2}()), 'Your <code>removeAt</code> method should reduce the <code>length</code> of the linked list');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return the element of the removed node.",
+          "text": "<code>removeAt</code>应该返回被移除的那个节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return test.removeAt(1) === 'dog'}()), 'Your <code>removeAt</code> method should also return the element of the removed node.');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return <code>null</code> if the given index is less than <code>0</code>",
+          "text": "如果 index 的值小于<code>0</code>，<code>removeAt</code>方法应该返回<code>null</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return (test.removeAt(-1) === null)}()), 'Your <code>removeAt</code> method should also return <code>null</code> if the given index is less than <code>0</code>');"
         },
         {
-          "text": "Your <code>removeAt</code> method should also return <code>null</code> if the given index is equal or more than the <code>length</code> of the linked list.",
+          "text": "如果 index 的值大于等于链表长度，<code>removeAt</code>方法应该返回<code>null</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.add('kitten');  return (test.removeAt(3) === null)}()), 'Your <code>removeAt</code> method should also return <code>null</code> if the given index is equal or more than the <code>length</code> of the linked list.');"
         }
       ],
@@ -1729,9 +1729,9 @@
             "    length --;",
             "  };",
             "",
-            "  // Only change code below this line",
+            "  // Only 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // Only 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -1743,25 +1743,25 @@
       "id": "587d8252367417b2b2512c67",
       "title": "Add Elements at a Specific Index in a Linked List",
       "description": [
-        "Let's create a addAt(index,element) method that adds an element at a given index.",
-        "Just like how we remove elements at a given index, we need to keep track of the currentIndex as we traverse the linked list. When the currentIndex matches the given index, we would need to reassign the previous node's next property to reference the new added node. And the new node should reference the next node in the currentIndex.",
-        "Returning to the conga line example, a new person wants to join the line, but he wants to join in the middle. You are in the middle of the line, so you take your hands off of the person ahead of you. The new person walks over and puts his hands on the person you once had hands on, and you now have your hands on the new person.",
-        "Instructions",
-        "Create an addAt(index,element) method that adds an element at a given index. Return false if an element was unable to be added.",
-        "Note",
-        "Remember to check if the given index is a negative or is longer than the length of the linked list."
+        "现在我们来创建一个 addAt(index,element) 方法，该方法在指定的位置添加一个元素。",
+        "就像我们移除指定位置的元素一样，当我们遍历链表时需要跟踪 currentIndex 的数值变化。当 currentIndex 匹配到给定的 index 值时，我们需要让指定节点的前一个节点指向新添加的节点，之后我们需要让新添加的节点指向指定的节点。",
+        "再拿康茄舞举例子，有一个新队员想加入舞队正中的位置。恰巧你就在队伍中央，因此你将手从前一个人的身上拿开了。而新加入的人则将他的手搭到了你先前搭的那个人的身上，之后你需要将你的手搭在新加入队伍的这个人身上。",
+        "任务",
+        "创建一个 addAt(index,element) 方法，该方法往指定位置添加元素。如果元素未能成功添加则返回 false 。",
+        "提示",
+        "记得检查 index 的值小于 0 以及大于等于链表长度的情况。"
       ],
       "tests": [
         {
-          "text": "Your <code>addAt</code> method should reassign <code>head</code> to the new node when the given index is 0.",
+          "text": "当传入的 index 的值为 0 时，<code>addAt</code>方法应该让<code>head</code>指针指向新加入的节点。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.addAt(0,'cat'); return test.head().element === 'cat'}()), 'Your <code>addAt</code> method should reassign <code>head</code> to the new node when the given index is 0.');"
         },
         {
-          "text": "Your <code>addAt</code> method should increase the length of the linked list by one for each new node added to the linked list.",
+          "text": "每新添加一个元素到链表当中时，<code>addAt</code>方法应该让链表的长度加 1 。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); test.addAt(0,'cat'); return test.size() === 3}()), 'Your <code>addAt</code> method should increase the length of the linked list by one for each new node added to the linked list.');"
         },
         {
-          "text": "Your <code>addAt</code> method should return <code>false</code> if a node was unable to be added.",
+          "text": "如果节点未能成功添加到链表当中，<code>addAt</code>方法应该返回<code>false</code>。",
           "testString": "assert((function(){var test = new LinkedList(); test.add('cat'); test.add('dog'); return (test.addAt(4,'cat') === false); }()), 'Your <code>addAt</code> method should return <code>false</code> if a node was unable to be added.');"
         }
       ],
@@ -1809,9 +1809,9 @@
             "    length++;",
             "  }; ",
             "",
-            "  // Only change code below this line",
+            "  // Only 请在本行下方输入代码",
             "",
-            "  // Only change code above this line",
+            "  // Only 请在本行上方输入代码",
             "",
             "}"
           ],
@@ -1824,43 +1824,43 @@
       "id": "587d825a367417b2b2512c87",
       "title": "Create a Doubly Linked List",
       "description": [
-        "All of the linked lists we've created so far are singly linked lists. Here, we'll create a <dfn>doubly linked list</dfn>. As the name implies, nodes in a doubly linked list have references to the next and previous node in the list.",
-        "This allows us to traverse the list in both directions but it also requires more memory to be used because every node must contain an additional reference to the previous node in the list.",
+        "之前我们创建的都是单向链表。现在我们来创建双向链表。就像名字所暗示的那样，双向链表拥有两个指针，一个指向前一个元素一个指向后一个元素。",
+        "这种链表可以从两个方向遍历元素，但是因为每个节点都有两个指针所以这种链表会占据更多的空间。",
         "<hr>",
-        "We've provided a <code>Node</code> object and started our <code>DoublyLinkedList</code>. Let's add two methods to our doubly linked list called <code>add</code> and <code>remove</code>. The <code>add</code> method should add the given element to the list while the <code>remove</code> method should remove all occurrences of a given element in the list.",
-        "Be careful to handle any possible edge cases when writing these methods, such as deletions for the first or last element. Also, removing any item on an empty list should return <code>null</code>."
+        "我们提供了一个<code>Node</code>来开始学习<code>DoublyLinkedList</code>。现在我们来给我们的双向链表添加<code>add</code>和<code>remove</code>方法。<code>add</code>方法应该添加指定元素到列表当中，而<code>remove</code>方法移除表中指定元素。",
+        "当我们处理表中的边界元素时，比如移除移除表中头部或者尾部的元素时需要谨慎。而当试图从空表当中移除元素时应该返回<code>null</code>。"
       ],
       "tests": [
         {
-          "text": "The DoublyLinkedList data structure exists.",
+          "text": "该双向链表存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (typeof test == 'object')})(), 'The DoublyLinkedList data structure exists.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called add.",
+          "text": "该双向链表有一个 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.add == undefined) { return false; }; return (typeof test.add == 'function')})(), 'The DoublyLinkedList has a method called add.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called remove.",
+          "text": "该双向链表有一个 remove 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.remove == undefined) { return false; }; return (typeof test.remove == 'function')})(), 'The DoublyLinkedList has a method called remove.');"
         },
         {
-          "text": "Removing an item from an empty list returns null.",
+          "text": "试图从空表当中移除元素时应该返回 null 。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (test.remove(100) == null); })(), 'Removing an item from an empty list returns null.');"
         },
         {
-          "text": "The add method adds items to the list.",
+          "text": "add 方法添加元素当表当中。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(5); test.add(6); test.add(723); return (test.print().join('') == '56723'); })(), 'The add method adds items to the list.');"
         },
         {
-          "text": "Each node keeps track of the previous node.",
+          "text": "每个节点应该能指向前一个节点。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(50); test.add(68); test.add(73); return (test.printReverse().join('') == '736850'); })(), 'Each node keeps track of the previous node.');"
         },
         {
-          "text": "The first item can be removed from the list.",
+          "text": "表中第一个元素能够被移除。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(25); test.add(35); test.add(60); test.remove(25); return ( test.print().join('') == '3560' ) })(), 'The first item can be removed from the list.');"
         },
         {
-          "text": "The last item can be removed from the list.",
+          "text": "表中最后一个元素能够被移除。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(25); test.add(35); test.add(60); test.remove(60); return ( test.print().join('') == '2535' ) })(), 'The last item can be removed from the list.');"
         }
       ],
@@ -1881,8 +1881,8 @@
             "var DoublyLinkedList = function() {",
             "  this.head = null;",
             "  this.tail = null;",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -1925,31 +1925,31 @@
       "id": "587d825a367417b2b2512c88",
       "title": "Reverse a Doubly Linked List",
       "description": [
-        "Let's create one more method for our doubly linked list called reverse which reverses the list in place. Once the method is executed the head should point to the previous tail and the tail should point to the previous head. Now, if we traverse the list from head to tail we should meet the nodes in a reverse order compared to the original list. Trying to reverse an empty list should return null."
+        "现在我们来为双向链表创建一个 reverse 方法，该方法反转列表当中的元素。一旦该方法执行之后 head 指针应该指向表尾部，tail 指针则指向表头部。如果我们从头到尾反转了一个链表的话，则新的链表的顺序和原表应该完全相反。当试图反转一个空表时，该方法应该返回 null 。"
       ],
       "tests": [
         {
-          "text": "The DoublyLinkedList data structure exists.",
+          "text": "该双向链表存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (typeof test == 'object')})(), 'The DoublyLinkedList data structure exists.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called add.",
+          "text": "该双向链表有 add 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.add == undefined) { return false; }; return (typeof test.add == 'function')})(), 'The DoublyLinkedList has a method called add.');"
         },
         {
-          "text": "The DoublyLinkedList has a method called reverse.",
+          "text": "该双向链表有 reverse 方法。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; if (test.reverse == undefined) { return false; }; return (typeof test.reverse == 'function')})(), 'The DoublyLinkedList has a method called reverse.');"
         },
         {
-          "text": "Reversing an empty list returns null.",
+          "text": "试图反转一个空表时会返回 null 。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; return (test.reverse() == null); })(), 'Reversing an empty list returns null.');"
         },
         {
-          "text": "The reverse method reverses the list.",
+          "text": "reverse 方法翻转整个表。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(58); test.add(61); test.add(32); test.reverse(); return (test.print().join('') == '326158'); })(), 'The reverse method reverses the list.');"
         },
         {
-          "text": "The next and previous references are correctly maintained when a list is reversed.",
+          "text": "当整个表被翻转之后，表中每个元素的 next 和 previous 指针都应该存在。",
           "testString": "assert((function() { var test = false; if (typeof DoublyLinkedList !== 'undefined') { test = new DoublyLinkedList() }; test.add(11); test.add(22); test.add(33); test.reverse(); return (test.printReverse().join('') == '112233'); })(), 'The next and previous references are correctly maintained when a list is reversed.');"
         }
       ],
@@ -1970,8 +1970,8 @@
             "var DoublyLinkedList = function() {",
             "  this.head = null;",
             "  this.tail = null;",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -2081,8 +2081,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2164,8 +2164,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2246,8 +2246,8 @@
             "}",
             "function BinarySearchTree() {    ",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2346,8 +2346,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2457,8 +2457,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2552,8 +2552,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -2644,7 +2644,7 @@
             "",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // case 1: target has no children, change code below this line",
+            "    // case 1: target has no children, 请在本行下方输入代码",
             "}"
           ],
           "head": [],
@@ -2823,7 +2823,7 @@
             "        }",
             "      }",
             "    }",
-            "    // case 2: target has one child, change code below this line",
+            "    // case 2: target has one child, 请在本行下方输入代码",
             "  };",
             "}"
           ],
@@ -3026,7 +3026,7 @@
             "      }",
             "      target = null;",
             "    }",
-            "    // case 3: target has two children, change code below this line",
+            "    // case 3: target has two children, 请在本行下方输入代码",
             "  };",
             "}"
           ],
@@ -3152,8 +3152,8 @@
             "}",
             "function BinarySearchTree() {",
             "    this.root = null;",
-            "    // change code below this line",
-            "    // change code above this line",
+            "    // 请在本行下方输入代码",
+            "    // 请在本行上方输入代码",
             "}"
           ],
           "head": [],
@@ -3263,8 +3263,8 @@
             "  };",
             "};",
             "var Trie = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3321,8 +3321,8 @@
           "name": "index",
           "contents": [
             "var MaxHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3372,8 +3372,8 @@
           "name": "index",
           "contents": [
             "var MaxHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],
@@ -3432,8 +3432,8 @@
             "  return (size > 1) ? createArray(size - 1) : undefined;",
             "})(25);",
             "var MinHeap = function() {",
-            "  // change code below this line",
-            "  // change code above this line",
+            "  // 请在本行下方输入代码",
+            "  // 请在本行上方输入代码",
             "};"
           ],
           "head": [],

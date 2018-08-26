@@ -1,0 +1,21 @@
+function Set() {
+    // the var collection will hold our set
+    var collection = [];
+    // this method will check for the presence of an element and return true or false
+    this.has = function(element) {
+        return (collection.indexOf(element) !== -1);
+    };
+    // this method will return all the values in the set
+    this.values = function() {
+        return collection;
+    };
+    // change code below this line
+    this.add = function(e) {
+        if (collection.indexOf(e) < 0) {
+            collection.push(e);
+            return true;
+        }
+        return false;
+    }
+    // change code above this line
+}{"index.js":"function Set() {\n    // the var collection will hold our set\n    var collection = [];\n    // this method will check for the presence of an element and return true or false\n    this.has = function(element) {\n        return (collection.indexOf(element) !== -1);\n    };\n    // this method will return all the values in the set\n    this.values = function() {\n        return collection;\n    };\n    // change code below this line\n    this.add = function(e) {\n        if (collection.indexOf(e) < 0) {\n            collection.push(e);\n            return true;\n        }\n        return false;\n    }\n    // change code above this line\n}"}
