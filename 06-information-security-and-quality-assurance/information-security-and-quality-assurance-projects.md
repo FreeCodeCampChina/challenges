@@ -1,6 +1,6 @@
 # Introduction to the Information Security and Quality Assurance Projects #
 
-This introduction is a stub
+待完善
 
-Help us make it real on [GitHub](https://github.com/freeCodeCamp/learn/tree/master/src/introductions).
+在 [GitHub](https://github.com/freeCodeCamp/learn/tree/master/src/introductions) 一起改进此项目。
 
