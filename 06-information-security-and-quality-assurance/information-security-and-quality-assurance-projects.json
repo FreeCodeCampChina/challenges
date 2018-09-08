@@ -8,49 +8,49 @@
       "id": "587d8249367417b2b2512c41",
       "title": "Metric-Imperial Converter",
       "description": [
-        "Build a full stack JavaScript app that is functionally similar to this: <a href='https://hard-twilight.glitch.me/' target='_blank'>https://hard-twilight.glitch.me/</a>.",
-        "Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but it must be publicly visible for our testing.",
-        "Start this project on Glitch using <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-metricimpconverter/'>this link</a> or clone <a href='https://github.com/freeCodeCamp/boilerplate-project-metricimpconverter/'>this repository</a> on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!"
+        "构建功能与 <a href='https://hard-twilight.glitch.me/' target='_blank'>https://hard-twilight.glitch.me/</a> 类似的全栈 JavaScript 应用。",
+        "你可以在 Glitch 以我们的 starter project 为基础完成此次挑战。完成挑战后请把公共 glitch url（你的应用主页）复制到下面输入框并进行测试！当然你也可以选择 glitch 以外的平台，但请保证项目是公共可访问的，这样我们才能正确测试。",
+        "Glitch 地址在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-metricimpconverter/'>这里</a>你也可以选择在 GitHub clone <a href='https://github.com/freeCodeCamp/boilerplate-project-metricimpconverter/'>这个仓库</a>！如果你使用 Glitch，请记得保存你的项目地址防止丢失！"
       ],
       "tests": [
         {
-          "text": "I will prevent the client from trying to guess(sniff) the MIME type.",
+          "text": "防止 MIME 嗅探。",
           "testString": ""
         },
         {
-          "text": "I will prevent cross-site scripting (XSS) attacks.",
+          "text": "防止跨站脚本（XSS）攻击。",
           "testString": ""
         },
         {
-          "text": "I can GET /api/convert with a single parameter containing an accepted number and unit and have it converted. (Hint: Split the input by looking for the index of the first character which will mark the start of the unit)",
+          "text": "GET /api/convert 参数只有一个，其包含数字和单位，返回转换后结果。（提示：查找第一个字母的位置，那是单位的开始位置）",
           "testString": ""
         },
         {
-          "text": "I can convert 'gal' to 'L' and vice versa. (1 gal to 3.78541 L)",
+          "text": "实现 gal 到 L 的相互转换。（1 gal 转换为 3.78541 L）",
           "testString": ""
         },
         {
-          "text": "I can convert 'lbs' to 'kg' and vice versa. (1 lbs to 0.453592 kg)",
+          "text": "实现 lbs 到 kg 的相互转换。（1 lbs 转换为 0.453592 kg）",
           "testString": ""
         },
         {
-          "text": "I can convert 'mi' to 'km' and vice versa. (1 mi to 1.60934 km)",
+          "text": "实现 mi 到 km 的相互转换。（1 mi 转换为 1.60934 km）",
           "testString": ""
         },
         {
-          "text": "If my unit of measurement is invalid, returned will be 'invalid unit'.",
+          "text": "计量单位错误将返回 'invalid unit'。",
           "testString": ""
         },
         {
-          "text": "If my number is invalid, returned with will 'invalid number'.",
+          "text": "数量错误将返回 'invalid number'。",
           "testString": ""
         },
         {
-          "text": "If both are invalid, return will be 'invalid number and unit'.",
+          "text": "两者都错误将返回 'invalid number and unit'。",
           "testString": ""
         },
         {
-          "text": "I can use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.",
+          "text": "可在参数中使用分数和小数（如 5、1/2、2.5/6），没有提供数值时默认值为 1.",
           "testString": ""
         },
         {
@@ -58,11 +58,11 @@
           "testString": ""
         },
         {
-          "text": "All 16 unit tests are complete and passing.",
+          "text": "通过 16 个单元测试。",
           "testString": ""
         },
         {
-          "text": "All 5 functional tests are complete and passing.",
+          "text": "通过 5 个功能测试。",
           "testString": ""
         }
       ],
@@ -76,41 +76,41 @@
       "id": "587d8249367417b2b2512c42",
       "title": "Issue Tracker",
       "description": [
-        "Build a full stack JavaScript app that is functionally similar to this: <a href='https://protective-garage.glitch.me/' target='_blank'>https://protective-garage.glitch.me/</a>.",
-        "Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but it must be publicly visible for our testing.",
-        "Start this project on Glitch using <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-issuetracker/'>this link</a> or clone <a href='https://github.com/freeCodeCamp/boilerplate-project-issuetracker/'>this repository</a> on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!"
+        "构建功能与 <a href='https://protective-garage.glitch.me/' target='_blank'>https://protective-garage.glitch.me/</a> 类似的全栈 JavaScript 应用。",
+        "你可以在 Glitch 以我们的 starter project 为基础完成此次挑战。完成挑战后请把公共 glitch url（你的应用主页）复制到下面输入框并进行测试！当然你也可以选择 glitch 以外的平台，但请保证项目是公共可访问的，这样我们才能正确测试。",
+        "Glitch 地址在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-issuetracker/'>这里</a>你也可以选择在 GitHub clone <a href='https://github.com/freeCodeCamp/boilerplate-project-issuetracker/'>这个仓库</a>！如果你使用 Glitch，请记得保存你的项目地址防止丢失！"
       ],
       "tests": [
         {
-          "text": "Prevent cross site scripting (XSS) attacks.",
+          "text": "防止跨站脚本（XSS）攻击。",
           "testString": ""
         },
         {
-          "text": "I can POST /api/issues/{projectname} with form data containing required issue_title, issue_text, created_by, and optional assigned_to and status_text.",
+          "text": "POST /api/issues/{projectname} 参数必须包括 issue_title，issue_text，created_by，可选参数有 assigned_to 和 status_text。",
           "testString": ""
         },
         {
-          "text": "The object saved (and returned) will include all of those fields (blank for optional no input) and also include created_on(date/time), updated_on(date/time), open(boolean, true for open, false for closed), and _id.",
+          "text": "对象保存并返回上述字段（无输入时返回空），附加 created_on（date/time），updated_on（date/time），open（boolean，true 代表 open，false 代表 closed），_id。",
           "testString": ""
         },
         {
-          "text": "I can PUT /api/issues/{projectname} with a id and any fields in the object with a value to object said object. Returned will be 'successfully updated' or 'could not update '+id. This should always update updated_on. If no fields are sent return 'no updated field sent'.",
+          "text": "PUT /api/issues/{projectname} 参数为 id 和其所含任何字段的对象。可能返回值为 'successfully updated' 或 'could not update '+id。此操作需更新 updated_on。如果没有接受到任何字段则返回 'no updated field sent'。",
           "testString": ""
         },
         {
-          "text": "I can DELETE /api/issues/{projectname} with a id to completely delete an issue. If no _id is sent return 'id error', success: 'deleted '+id, failed: 'could not delete '+id.",
+          "text": "DELETE /api/issues/{projectname} 参数为 id，用于删除整个 issue。如接收不到 id，返回 'id error'，操作成功返回 'deleted '+id，操作失败返回 'could not delete '+id。",
           "testString": ""
         },
         {
-          "text": "I can GET /api/issues/{projectname} for an array of all issues on that specific project with all the information for each issue as was returned when posted.",
+          "text": "GET /api/issues/{projectname} 获取特定项目的全部 issues 信息数组。",
           "testString": ""
         },
         {
-          "text": "I can filter my get request by also passing along any field and value in the query(ie. /api/issues/{project}?open=false). I can pass along as many fields/values as I want.",
+          "text": "请求可以通过传参筛选返回内容（例 /api/issues/{project}?open=false），并且支持同时使用多个参数。",
           "testString": ""
         },
         {
-          "text": "All 11 functional tests are complete and passing.",
+          "text": "完成并通过 11 个功能测试。",
           "testString": ""
         }
       ],
@@ -124,49 +124,49 @@
       "id": "587d824a367417b2b2512c43",
       "title": "Personal Library",
       "description": [
-        "Build a full stack JavaScript app that is functionally similar to this: <a href='https://spark-cathedral.glitch.me/' target='_blank'>https://spark-cathedral.glitch.me/</a>.",
-        "Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but must be publicly visible for our testing.",
-        "Start this project on Glitch using <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-library/'>this link</a> or clone <a href='https://github.com/freeCodeCamp/boilerplate-project-library/'>this repository</a> on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!"
+        "构建功能与 <a href='https://spark-cathedral.glitch.me/' target='_blank'>https://spark-cathedral.glitch.me/</a> 类似的全栈 JavaScript 应用。",
+        "你可以在 Glitch 以我们的 starter project 为基础完成此次挑战。完成挑战后请把公共 glitch url（你的应用主页）复制到下面输入框并进行测试！Optionally you may choose to write your project on another platform but must be publicly visible for our testing.",
+        "Glitch 地址在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-library/'>这里</a>你也可以选择在 GitHub clone <a href='https://github.com/freeCodeCamp/boilerplate-project-library/'>这个仓库</a>！如果你使用 Glitch，请记得保存你的项目地址防止丢失！"
       ],
       "tests": [
         {
-          "text": "Nothing from my website will be cached in my client.",
+          "text": "客户端不会缓存网站任何内容。",
           "testString": ""
         },
         {
-          "text": "The headers will say that the site is powered by 'PHP 4.2.0' even though it isn't (as a security measure).",
+          "text": "headers 总是显示技术支持为 'PHP 4.2.0'（作为安全策略）。",
           "testString": ""
         },
         {
-          "text": "I can post a title to /api/books to add a book and returned will be the object with the title and a unique _id.",
+          "text": "post /api/books 传入 title 作参数即可添加书籍，将会返回包含 title 和一个唯一 _id 的对象。",
           "testString": ""
         },
         {
-          "text": "I can get /api/books to retrieve an array of all books containing title, _id, and commentcount.",
+          "text": "get /api/books 检索所有书籍，返回包含所有书籍的数组，每个对象带有 title，_id 和评论数。",
           "testString": ""
         },
         {
-          "text": "I can get /api/books/{id} to retrieve a single object of a book containing _title, _id, & an array of comments (empty array if no comments present).",
+          "text": "get /api/books/{id} 检索特定书籍，返回单个对象，包含 _title，_id 和评论列表数组（无评论返回空数组）。",
           "testString": ""
         },
         {
-          "text": "I can post a comment to /api/books/{id} to add a comment to a book and returned will be the books object similar to get /api/books/{id} including the new comment.",
+          "text": "post /api/books/{id} 传入 comment 作参数即可添加书评，返回与 get /api/books/{id} 接口相似，并包含最新评论。",
           "testString": ""
         },
         {
-          "text": "I can delete /api/books/{_id} to delete a book from the collection. Returned will be 'delete successful' if successful.",
+          "text": "delete /api/books/{_id} 删除特定书籍，操作成功返回 'delete successful'。",
           "testString": ""
         },
         {
-          "text": "If I try to request a book that doesn't exist I will be returned 'no book exists'.",
+          "text": "请求不存在的书籍时返回 'no book exists'。",
           "testString": ""
         },
         {
-          "text": "I can send a delete request to /api/books to delete all books in the database. Returned will be 'complete delete successful' if successful.",
+          "text": "delete /api/books 删除数据库中所有书籍，操作成功返回 'complete delete successful'。",
           "testString": ""
         },
         {
-          "text": "All 6 functional tests required are complete and passing.",
+          "text": "完成并通过 6 个功能测试。",
           "testString": ""
         }
       ],
@@ -180,37 +180,37 @@
       "id": "587d824a367417b2b2512c44",
       "title": "Stock Price Checker",
       "description": [
-        "Build a full stack JavaScript app that is functionally similar to this: <a href='https://giant-chronometer.glitch.me/' target='_blank'>https://giant-chronometer.glitch.me/</a>.",
-        "Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but must be publicly visible for our testing.",
-        "Start this project on Glitch using <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-stockchecker/'>this link</a> or clone <a href='https://github.com/freeCodeCamp/boilerplate-project-stockchecker/'>this repository</a> on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!"
+        "构建功能与 <a href='https://giant-chronometer.glitch.me/' target='_blank'>https://giant-chronometer.glitch.me/</a> 类似的全栈 JavaScript 应用。",
+        "你可以在 Glitch 以我们的 starter project 为基础完成此次挑战。完成挑战后请把公共 glitch url（你的应用主页）复制到下面输入框并进行测试！Optionally you may choose to write your project on another platform but must be publicly visible for our testing.",
+        "Glitch 地址在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-stockchecker/'>这里</a>你也可以选择在 GitHub clone <a href='https://github.com/freeCodeCamp/boilerplate-project-stockchecker/'>这个仓库</a>！如果你使用 Glitch，请记得保存你的项目地址防止丢失！"
       ],
       "tests": [
         {
-          "text": "Set the content security policies to only allow loading of scripts and css from your server.",
+          "text": "设置网页安全政策（Content Security Policy），只允许加载指定服务器的脚本和样式文件。",
           "testString": ""
         },
         {
-          "text": "I can GET /api/stock-prices with form data containing a Nasdaq stock ticker and receive back an object stockData.",
+          "text": "GET /api/stock-prices 发送纳斯达克报价参数，返回 stockData 对象。",
           "testString": ""
         },
         {
-          "text": "In stockData, I can see the stock(string, the ticker), price(decimal in string format), and likes(int).",
+          "text": "stockData 中包括以下字段 stock（string，股票名），price（十进制数字符串），likes（int）。",
           "testString": ""
         },
         {
-          "text": "I can also pass along field like as true(boolean) to have my like added to the stock(s). Only 1 like per ip should be accepted.",
+          "text": "like 字段传入 true，stock 的 like + 1，这个请求每个 ip 应只能接受一次。",
           "testString": ""
         },
         {
-          "text": "If I pass along 2 stocks, the return object will be an array with both stock's info. Instead of likes, it will display rel_likes(the difference between the likes on both stocks) on both.",
+          "text": "如果传入两个股票代码，应返回包含两支股票对应信息的数组。但是 like 字段改为 rel_likes（两支股票的 like 数之差）。",
           "testString": ""
         },
         {
-          "text": "A good way to receive current price is the following external API(replacing 'GOOG' with your stock): https://finance.google.com/finance/info?q=NASDAQ%3aGOOG",
+          "text": "获取股票现价的好方法：使用第三方 API（把 'GOOG' 改为你需要查询的股票）：https://finance.google.com/finance/info?q=NASDAQ%3aGOOG",
           "testString": ""
         },
         {
-          "text": "All 5 functional tests are complete and passing.",
+          "text": "完成并通过 5 个功能测试。",
           "testString": ""
         }
       ],
@@ -224,57 +224,57 @@
       "id": "587d824a367417b2b2512c45",
       "title": "Anonymous Message Board",
       "description": [
-        "Build a full stack JavaScript app that is functionally similar to this: <a href='https://horn-celery.glitch.me/' target='_blank'>https://horn-celery.glitch.me/</a>.",
-        "Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but it must be publicly visible for our testing.",
-        "Start this project on Glitch using <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-messageboard/'>this link</a> or clone <a href='https://github.com/freeCodeCamp/boilerplate-project-messageboard/'>this repository</a> on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!"
+        "构建功能与 <a href='https://horn-celery.glitch.me/' target='_blank'>https://horn-celery.glitch.me/</a> 类似的全栈 JavaScript 应用。",
+        "你可以在 Glitch 以我们的 starter project 为基础完成此次挑战。完成挑战后请把公共 glitch url（你的应用主页）复制到下面输入框并进行测试！当然你也可以选择 glitch 以外的平台，但请保证项目是公共可访问的，这样我们才能正确测试。",
+        "Glitch 地址在 <a href='https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-messageboard/'>这里</a>你也可以选择在 GitHub clone <a href='https://github.com/freeCodeCamp/boilerplate-project-messageboard/'>这个仓库</a>！如果你使用 Glitch，请记得保存你的项目地址防止丢失！"
       ],
       "tests": [
         {
-          "text": "Only allow your site to be loading in an iFrame on your own pages.",
+          "text": "只允许网站在自己的 iFrame 加载。",
           "testString": ""
         },
         {
-          "text": "Do not allow DNS prefetching.",
+          "text": "不允许 DNS 预读取",
           "testString": ""
         },
         {
-          "text": "Only allow your site to send the referrer for your own pages.",
+          "text": "允许网站为自己的页面发送 referrer。",
           "testString": ""
         },
         {
-          "text": "I can POST a thread to a specific message board by passing form data text and deletepassword_ to /api/threads/{board}.(Recommend res.redirect to board page /b/{board}) Saved will be at least _id, text, createdon_(date&time), bumpedon_(date&time, starts same as created_on), reported(boolean), deletepassword_, & replies(array).",
+          "text": "POST /api/threads/{board} 向某个版发布讨论串，参数为 form data text 和 deletepassword_。（建议重定向到对应版 /b/{board}）保存至少 least _id，text，createdon_(date&time)，bumpedon_(date&time，starts same as created_on)，reported(boolean)，deletepassword_，& replies(array)。",
           "testString": ""
         },
         {
-          "text": "I can POST a reply to a thread on a specific board by passing form data text, deletepassword_, & threadid_ to /api/replies/{board} and it will also update the bumped_on date to the comments date.(Recommend res.redirect to thread page /b/{board}/{thread_id}) In the thread's replies array will be saved _id, text, createdon_, deletepassword_, & reported.",
+          "text": "POST /api/replies/{board} 回复一个讨论串，参数为 form data text，deletepassword_ 和 threadid_，此操作也会更新 bumped_on 为回复时间。（建议重定向到对应讨论串页面 /b/{board}/{thread_id}）回复对象包含以下字段 saved _id，text，createdon_，deletepassword_ 和 reported。",
           "testString": ""
         },
         {
-          "text": "I can GET an array of the most recent 10 bumped threads on the board with only the most recent 3 replies each from /api/threads/{board}. The reported and deletepasswords_ fields will not be sent to the client.",
+          "text": "GET /api/threads/{board} 获取最新的 10 个讨论串。reported 和 deletepasswords_ 字段不会传到客户端。",
           "testString": ""
         },
         {
-          "text": "I can GET an entire thread with all its replies from /api/replies/{board}?thread_id={thread_id}. Also hiding the same fields the client should be see.",
+          "text": "GET /api/replies/{board}?thread_id={thread_id} 获取整个讨论串的全部回复。对客户端隐藏 reported 和 deletepasswords_ 字段。",
           "testString": ""
         },
         {
-          "text": "I can delete a thread completely if I send a DELETE request to /api/threads/{board} and pass along the threadid_ & deletepassword_. (Text response will be 'incorrect password' or 'success')",
+          "text": "DELETE /api/threads/{board} 删除某个讨论串，需传入参数 threadid_ 和 deletepassword_。（返回信息是 'incorrect password' 或 'success'）",
           "testString": ""
         },
         {
-          "text": "I can delete a post(just changing the text to '[deleted]' instead of removing completely like a thread) if I send a DELETE request to /api/replies/{board} and pass along the threadid_, replyid_, & deletepassword_. (Text response will be 'incorrect password' or 'success')",
+          "text": "DELETE /api/replies/{board} 删除一个回复（只把 text 改为 '[deleted]'，不会像讨论串一样完全删除），需传入参数 threadid_，replyid_，和 deletepassword_。（返回信息是 'incorrect password' 或 'success'）",
           "testString": ""
         },
         {
-          "text": "I can report a thread and change its reported value to true by sending a PUT request to /api/threads/{board} and pass along the threadid_. (Text response will be 'success')",
+          "text": "PUT /api/threads/{board} 传入 reported 为 true 举报一个讨论串，你还需要传入 threadid_。（返回信息是 'success'）",
           "testString": ""
         },
         {
-          "text": "I can report a reply and change its reported value to true by sending a PUT request to /api/replies/{board} and pass along the threadid_ & replyid_. (Text response will be 'success')",
+          "text": "PUT /api/replies/{board}  传入 reported 为 true 举报一个讨论串，你还需要传入 threadid_ 和 replyid_。（返回信息是 'success'）",
           "testString": ""
         },
         {
-          "text": "Complete functional tests that wholly test routes and pass.",
+          "text": "完成所有功能测试，所有接口可用。",
           "testString": ""
         }
       ],
